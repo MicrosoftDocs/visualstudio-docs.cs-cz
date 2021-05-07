@@ -415,7 +415,7 @@
         - name: Ladění živé aplikace Azure Kubernetes
           href: debug-live-azure-kubernetes.md
         - name: Nejčastější dotazy k ladění snímků
-          href: debug-live-azure-apps-faq.md
+          href: debug-live-azure-apps-faq.yml
         - name: Řešení potíží při ladění snímků
           href: debug-live-azure-apps-troubleshooting.md
         - name: Ladění živé aplikace na virtuálním počítači Azure s pohybem v čase
@@ -949,6 +949,6 @@
 - name: Prostředky
   items:
     - name: Nejčastější dotazy – vyhledání funkce ladění
-      href: find-your-debugging-task.md
+      href: find-your-debugging-task.yml
     - name: Novinky v ladicím programu sady Visual Studio
       href: what-s-new-for-the-debugger-in-visual-studio.md

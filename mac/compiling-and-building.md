@@ -4,14 +4,14 @@ description: Tento článek popisuje, jak kompilovat a sestavovat projekty a ře
 ms.topic: overview
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 08/29/2019
+ms.date: 05/03/2021
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: b4f1cfc3dfdffcc3dd4cb90cd7d29d4333578b9a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a24c57907afedb4f02068a071d2c9f81eb8962bb
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71128410"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108640971"
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Kompilace a sestavování v Visual Studio pro Mac
 
@@ -23,11 +23,11 @@ Na Macu můžete k sestavení aplikace použít kteroukoli z následujících me
 
 | Metoda sestavení | Výhody |
 | --- |--- | --- |
-| Visual Studio for Mac |– Vytvářejte sestavení hned a otestujte je v ladicím programu.<br />-Spustit sestavení s více procesory pro projekty v jazyce C#.<br />-Přizpůsobení různých aspektů systému sestavení. |
+| Visual Studio pro Mac |– Vytvářejte sestavení hned a otestujte je v ladicím programu.<br />-Spustit sestavení s více procesory pro projekty v jazyce C#.<br />-Přizpůsobení různých aspektů systému sestavení. |
 | Příkazový řádek nástroje MSBuild| -Sestavit projekty bez instalace Visual Studio pro Mac.<br />-Spustit sestavení s více procesory pro všechny typy projektů.<br />-Přizpůsobit většinu oblastí systému sestavení.|
 | Azure Pipelines | – Automatizujte proces sestavení jako součást kanálu průběžné integrace nebo průběžného doručování.<br />– Použít automatizované testy u každého sestavení.<br />– Využívat prakticky neomezené cloudové prostředky pro procesy sestavení.<br />– Upravte pracovní postup sestavení a vytvořte aktivity sestavení, abyste mohli provádět hluboko přizpůsobené úkoly.|
 
-Dokumentace v této části se podrobněji popisuje procesu sestavení založeného na rozhraní IDE. Další informace o vytváření aplikací prostřednictvím příkazového řádku naleznete v tématu [MSBuild](/visualstudio/msbuild/msbuild). Podrobnosti o sestavování aplikací pomocí Azure Pipelines najdete v tématu [Azure Pipelines](/azure/devops/pipelines).
+Dokumentace v této části se podrobněji popisuje procesu sestavení založeného na rozhraní IDE. Pokud chcete vytvářet aplikace z příkazového řádku bez instalace Visual Studio pro Mac, můžete nainstalovat nejnovější [.NET Core SDK](https://dotnet.microsoft.com/download). Další informace o vytváření aplikací prostřednictvím příkazového řádku naleznete v tématu [MSBuild](/visualstudio/msbuild/msbuild). Podrobnosti o sestavování aplikací pomocí Azure Pipelines najdete v tématu [Azure Pipelines](/azure/devops/pipelines).
 
 
 > [!NOTE]

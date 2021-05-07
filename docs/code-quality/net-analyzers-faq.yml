@@ -1,0 +1,75 @@
+### YamlMime:FAQ
+metadata:
+  title: Analýza kódu FxCop (binární analýza) a analyzátory .NET (analýza zdroje)
+  ms.date: 09/06/2018
+  description: Pochopte rozdíl mezi starší verzí analyzátorů FxCop (binární analýza) a .NET (analýza zdroje) v Visual Studio. Podívejte se na odpovědi na dotazy týkající se používání těchto analyzátorů.
+  ms.custom: SEO-VS-2020
+  ms.topic: conceptual
+  helpviewer_keywords:
+  - code analysis FAQ
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jmartens
+  ms.workload:
+  - dotnet
+  ms.openlocfilehash: 4ce56b8485cca9897396f05145ffea92c0bd2cd8
+  ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 05/06/2021
+  ms.locfileid: "108800339"
+title: Nejčastější dotazy ke starším analyzátorům FxCop a .NET
+summary: Může být trochu matoucí porozumět rozdílům mezi staršími analyzátory FxCop (binární analýza) a .NET (analýza zdroje). Cílem tohoto článku je odpovědět na některé otázky, které byste mohli mít.
+sections:
+- name: Ignorováno
+  questions:
+  - question: >
+      Jaký je rozdíl mezi staršími analyzátory FxCop a .NET?
+    answer: >
+      Starší verze FxCop spouští analýzu po sestavení na zkompilované sestavení. Běží jako samostatný spustitelný soubor s názvem **FxCopCmd.exe**. FxCopCmd.exe načte zkompilované sestavení, spustí analýzu kódu a pak hlásí výsledky *(nebo diagnostiku).*
+
+
+      Analyzátory .NET jsou založené na .NET Compiler Platform (Roslyn). Povolíte je ze sady .NET SDK nebo je nainstalujete jako [balíček NuGet,](install-net-analyzers.md) na který odkazuje projekt nebo řešení. Analyzátory spouštěly analýzu založenou na zdrojovém kódu během provádění kompilátoru. Analyzátory jsou hostovány v rámci procesu kompilátoru, **csc.exe** nebo **vbc.exe**, a při sestavení projektu se spustí analýza. Výsledky analyzátoru se hlásí spolu s výsledky kompilátoru.
+  - question: >
+      Jaký je rozdíl mezi analyzátory FxCop a analyzátory .NET?
+    answer: >
+      Analyzátory FxCop i analyzátory .NET se vztahují k implementacím analyzátoru .NET Compiler Platform (Roslyn) pravidel certifikační autority FxCop. Před Visual Studio 2019 16.8 a .NET 5.0 se tyto analyzátory dodaly `Microsoft.CodeAnalysis.FxCopAnalyzers` [jako balíček NuGet.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) Počínaje Visual Studio 2019 16.8 a .NET 5.0 jsou tyto analyzátory součástí [sady .NET SDK.](/dotnet/fundamentals/code-analysis/overview) Jsou také k dispozici jako `Microsoft.CodeAnalysis.NetAnalyzers` [balíček NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Zvažte prosím možnost [migrace z analyzátorů FxCop na analyzátory .NET](migrate-from-fxcop-analyzers-to-net-analyzers.md).
+  - question: >
+      Spouští příkaz run Code Analysis rutiny .NET Analyzer?
+    answer: >
+      Před vydáním sady Visual Studio 2019 16,5 vydaná při výběru **analyzovat**  >  **kód spustit analýzu** provede starší analýzu. Spuštění sady Visual Studio 2019 16,5, možnost **Spustit příkaz Analýza kódu** spustí analyzátory založené na Roslyn pro vybraný projekt nebo řešení. Pokud jste nainstalovali analyzátory .NET, budou také provedeny. Další informace najdete v tématu [Postupy: ruční spuštění analýzy kódu pro spravovaný kód](how-to-run-code-analysis-manually-for-managed-code.md).
+  - question: >
+      Spouští se v nástroji RunCodeAnalysis MSBuild rutiny analyzátorů?
+    answer: >
+      No. Vlastnost **RunCodeAnalysis** v souboru projektu (například *. csproj*) se používá pouze ke spuštění starší verze FxCop. Spustí úlohu MSBuild po sestavení, která vyvolá **FxCopCmd.exe**.
+  - question: >
+      Jak tedy spustím analyzátory .NET?
+    answer: >
+      Chcete-li spustit analyzátory .NET, nejprve [je povolte ze sady .NET SDK nebo je nainstalujte jako balíček NuGet](install-net-analyzers.md). Pak Sestavte projekt nebo řešení ze sady Visual Studio nebo pomocí nástroje MSBuild. Upozornění a chyby, které generují analyzátory Roslyn, se zobrazí v okně **Seznam chyb** nebo v příkazovém okně.
+  - question: >
+      Zobrazí se upozornění CA0507 i po instalaci balíčku NuGet pro analyzátory .NET
+    answer: >
+      Pokud jste nainstalovali analyzátory .NET, ale nadále získáte upozornění CA0507 " **" spuštění analýzy kódu ", je vystaralá od analyzátorů FxCop, které běží během sestavení"**, možná budete muset nastavit vlastnost **RunCodeAnalysis** MSBuild v [souboru projektu](../ide/solutions-and-projects-in-visual-studio.md#project-file) na **hodnotu false**. V opačném případě se starší verze analýzy spustí po každém sestavení.
+
+
+      ```xml
+
+      <RunCodeAnalysis>false</RunCodeAnalysis>
+
+      ```
+  - question: >
+      Která pravidla se přepravují na analyzátory .NET?
+    answer: >
+      Informace o tom, která pravidla analýzy starší verze byly předaná do analyzátorů .NET, najdete v tématu [stav portu pravidla FxCop](fxcop-rule-port-status.md).
+  - question: >
+      Upozornění analýzy kódu jsou považována za chyby.
+    answer: >
+      Pokud váš projekt používá možnost sestavení k ponechání upozornění jako chyb, může se zobrazit upozornění analyzátoru jako chyby. Pokud chcete zabránit tomu, aby se s upozorněními analýzy kódu zacházelo jako s chybami, postupujte podle kroků v nejčastějších [dotazech k analýze kódu.](/visualstudio/code-quality/analyzers-faq#treat-warnings-as-errors)
+  - question: >
+      Viz také
+    answer: >-
+      - [Přehled .NET Compiler Platform analyzátorů](roslyn-analyzers-overview.md)
+
+      - [Migrace na analyzátory .NET](migrate-from-legacy-analysis-to-net-analyzers.md)
+
+      - [Instalace analyzátorů .NET](install-net-analyzers.md)

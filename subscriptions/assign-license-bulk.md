@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/21/2021
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
-ms.openlocfilehash: 4744f689e9b03e4a6cf8c804409abddfde16c527
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+ms.openlocfilehash: 389eb3a578b0b025995c0cd60613d5bcce2e1a9f
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776893"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108640996"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál pro správu předplatných umožňuje přidat uživatele v jednom okamžiku nebo ve velkých skupinách.  Chcete-li přidat jednotlivé uživatele, přečtěte si téma [přidání jednotlivých uživatelů](assign-license.md).
@@ -84,7 +84,6 @@ Díky této funkci se můžete snadno soustředit na přiřazení předplatného
 > Následující omezení se vztahují na použití skupin Azure AD pro přidávání předplatitelů:
 > - Správce musí být členem tenanta AAD, když se poprvé přidá skupina na portál pro správu.  Po přidání skupiny nebudou změny členství ve skupinách vyžadovat zapojení správce. 
 > - Skupiny musí obsahovat alespoň jeden člen.  Prázdné skupiny se nepodporují.
-> - Skupiny musí mít méně než 1 000 uživatelů. 
 > - Všichni uživatelé musí být na nejvyšší úrovni skupiny.  Vnořené skupiny se nepodporují.
 > - Podporovány jsou pouze důvěryhodné smlouvy. (Pouze smlouvy, které mohou být u předplatného přetížení, jsou důvěryhodné.)
 > - Všichni členové skupiny musí mít e-mailovou adresu přidruženou ke svému účtu Azure AD.

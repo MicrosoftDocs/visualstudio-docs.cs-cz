@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: e435502587e65bd694567f4100516a91fa97cc0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6f9c36b1b64abe648c3aa9014c633e4e4949b1a
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867864"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798255"
 ---
 # <a name="migrate-from-fxcop-analyzers-to-net-analyzers"></a>Migrace z analyzátorů FxCop na analyzátory .NET
 
@@ -49,8 +49,8 @@ Od verze `3.3.2` se `Microsoft.CodeAnalysis.FxCopAnalyzers` balíček NuGet už 
 
 ## <a name="see-also"></a>Viz také
 
-- [Analýza zdrojového kódu oproti starší analýze](net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers)
+- [Analýza zdrojového kódu oproti starší analýze](net-analyzers-faq.yml#what-s-the-difference-between-legacy-fxcop-and--net-analyzers-)
 - [Migrace ze starší verze analýzy na analyzátory .NET](migrate-from-legacy-analysis-to-net-analyzers.md)
-- [Povolit nebo nainstalovat analyzátory .NET](install-net-analyzers.md)
-- [Nejčastější dotazy týkající se analyzátorů .NET](net-analyzers-faq.md)
-- [Konfigurovat analyzátory .NET](/dotnet/fundamentals/code-analysis/code-quality-rule-options)
+- [Povolení nebo instalace analyzátorů .NET](install-net-analyzers.md)
+- [Nejčastější dotazy k analyzátorům .NET](net-analyzers-faq.yml)
+- [Konfigurace analyzátorů .NET](/dotnet/fundamentals/code-analysis/code-quality-rule-options)

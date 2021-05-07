@@ -13,12 +13,12 @@ manager: jmartens
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 53a7d00548e6d273e2afa2da48669b3d1f3cf827
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 94c65814572c99f95d7a6edc6769e5af0ea6e748
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873321"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798372"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Ladění živých ASP.NET aplikací Azure pomocí Snapshot Debugger
 
@@ -47,44 +47,44 @@ V tomto kurzu:
 * Plán Azure App Service Basic nebo vyšší
 
 * Kolekce snímků je k dispozici pro následující webové aplikace, které jsou spuštěny v Azure App Service:
-  * ASP.NET aplikace spuštěné v .NET Framework 4.6.1 nebo novějším.
-  * ASP.NET Core aplikace běžící na rozhraní .NET Core 2,0 nebo novějším ve Windows.
+  * ASP.NET aplikace běžící na .NET Framework verze 4.6.1 nebo novější.
+  * ASP.NET Core běžící na .NET Core 2.0 nebo novějším ve Windows.
 
 ## <a name="open-your-project-and-start-the-snapshot-debugger"></a>Otevřete projekt a spusťte Snapshot Debugger
 
-1. Otevřete projekt, pro který chcete vytvořit snímek ladění.
+1. Otevřete projekt, který chcete ladit snímkem.
 
    > [!IMPORTANT]
-   > Chcete-li ladit snímky, je nutné otevřít *stejnou verzi zdrojového kódu* , která je publikována v Azure App Service.
+   > Pokud chcete ladit snímky, musíte otevřít stejnou *verzi zdrojového* kódu, která je publikovaná ve vašem Azure App Service.
 
 ::: moniker range="<=vs-2017"
 
-2. V Průzkumníku cloudu (**zobrazit > Průzkumník cloudu**) klikněte pravým tlačítkem na Azure App Service je projekt nasazený a vyberte **připojit Snapshot Debugger**.
+2. V Průzkumníku cloudu **(Zobrazit > Průzkumník cloudu)** klikněte pravým tlačítkem na Azure App Service, do které je váš projekt nasazený, a vyberte **Attach Snapshot Debugger**.
 
-   ![Spustit ladicí program snímků](../debugger/media/snapshot-launch.png)
+   ![Spuštění ladicího programu snímků](../debugger/media/snapshot-launch.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Zvolit **ladění > připojit Snapshot Debugger...**. Vyberte Azure App Service projekt je nasazený a účet úložiště Azure a pak klikněte na **připojit**. Snapshot Debugger také podporuje [službu Azure Kubernetes](debug-live-azure-kubernetes.md) a [& Virtual Machine Scale Sets Azure Virtual Machines (VM)](debug-live-azure-virtual-machines.md).
+2. Zvolte **Ladit > Připojit Snapshot Debugger...**. Vyberte Azure App Service, do které je váš projekt nasazený, a účet úložiště Azure, a potom klikněte na **Připojit.** Snapshot Debugger podporuje také [Azure Kubernetes Service](debug-live-azure-kubernetes.md) [a azure Virtual Machines (VM) & Virtual Machine Scale Sets](debug-live-azure-virtual-machines.md).
 
-   ![Spuštění Snapshot debuggeru z nabídky ladění](../debugger/media/snapshot-debug-menu-attach.png)
+   ![Spuštění ladicího programu snímků z nabídky Ladit](../debugger/media/snapshot-debug-menu-attach.png)
 
-   ![Vybrat prostředek Azure](../debugger/media/snapshot-select-azure-resource-appservices.png)
+   ![Výběr prostředku Azure](../debugger/media/snapshot-select-azure-resource-appservices.png)
 
 ::: moniker-end
 
    > [!IMPORTANT]
-   > Při prvním výběru **připojit Snapshot Debugger** budete vyzváni k instalaci rozšíření Snapshot Debugger webu na Azure App Service. Tato instalace vyžaduje restartování Azure App Service.
+   > Při prvním výběru možnosti **Připojit Snapshot Debugger** se zobrazí výzva k instalaci rozšíření Snapshot Debugger lokality na Azure App Service. Tato instalace vyžaduje restartování Azure App Service.
 
    ::: moniker range="<=vs-2017"
    > [!NOTE]
-   > Rozšíření Application Insights lokality také podporuje ladění snímků. Pokud se vám zobrazí chybová zpráva "rozšíření webu je zastaralé", přečtěte si téma [tipy pro řešení potíží a známé problémy ladění snímků](../debugger/debug-live-azure-apps-troubleshooting.md) pro upgrade podrobností.
+   > Rozšíření Application Insights lokality podporuje také ladění snímků. Pokud se zobrazí chybová zpráva Rozšíření webu je [](../debugger/debug-live-azure-apps-troubleshooting.md) zastaralé, podrobnosti o upgradu najdete v tématu tipy pro řešení potíží a známé problémy s laděním snímků.
    ::: moniker-end
    ::: moniker range=">=vs-2019"
    > [!NOTE]
-   > (Visual Studio 2019 verze 16,2 a vyšší) Snapshot Debugger povolili podporu cloudu Azure. Ujistěte se, že se Váš účet Azure Resource i Azure Storage, který vyberete, nachází ve stejném cloudu. Pokud máte dotazy týkající se konfigurace [dodržování předpisů Azure](https://azure.microsoft.com/overview/trusted-cloud/) v rámci vaší organizace, obraťte se prosím na správce Azure.
+   > (Visual Studio 2019 verze 16.2 a novější) Snapshot Debugger podporu cloudu Azure. Ujistěte se, že prostředky Azure i Azure Storage, které vyberete, ze stejného cloudu. Pokud máte dotazy ohledně konfigurací dodržování předpisů Azure ve vašem podniku, obraťte se na správce [Azure.](https://azure.microsoft.com/overview/trusted-cloud/)
    ::: moniker-end
 
    Visual Studio je teď v režimu ladění snímků.
@@ -123,37 +123,37 @@ Jakmile je snímkovací bod nastaveno, můžete buď ručně vygenerovat snímek
 
    Z tohoto zobrazení můžete na proměnné umístit ukazatel myši a zobrazit tak tipy, použít **místní** okna, **kukátka** a **zásobník volání** a také vyhodnotit výrazy.
 
-   Samotný web je stále živý a koncoví uživatelé to neovlivní. Ve výchozím nastavení je zachycen pouze jeden snímek na snímkovací bod: po zachycení snímku se snímkovací bod vypne. Pokud chcete zachytit jiný snímek na snímkovací bod, můžete snímkovací bod znovu zapnout kliknutím na **aktualizovat kolekci**.
+   Samotný web je stále živý a koncoví uživatelé to neovlivní. Ve výchozím nastavení se pro každý bod snímku zachytá jenom jeden snímek: po zachycení snímku se modul snappoint vypne. Pokud chcete na snímku snímku zapnout další snímek, můžete ho znovu zapnout kliknutím na **Aktualizovat kolekci.**
 
-Do své aplikace můžete také přidat další snímkovací body a zapnout je pomocí tlačítka **aktualizovat kolekci** .
+Do aplikace můžete také přidat další snappointy a zapnout je pomocí **tlačítka Aktualizovat** kolekci.
 
-**Potřebujete pomoc?** Podívejte se na téma [řešení potíží a známé problémy](../debugger/debug-live-azure-apps-troubleshooting.md) a [Nejčastější dotazy ke stránkám ladění snímků](../debugger/debug-live-azure-apps-faq.md) .
+**Potřebujete pomoc?** Podívejte se na [stránky Řešení potíží a známé problémy](../debugger/debug-live-azure-apps-troubleshooting.md) a Nejčastější dotazy k [ladění](../debugger/debug-live-azure-apps-faq.yml) snímků.
 
-## <a name="set-a-conditional-snappoint"></a>Nastavení podmíněného snímkovací bod
+## <a name="set-a-conditional-snappoint"></a>Nastavení podmíněného bodu snappointu
 
-Pokud je obtížné znovu vytvořit konkrétní stav ve vaší aplikaci, zvažte použití podmíněného snímkovací bod. Podmíněný snímkovací body vám umožňuje řídit, kdy se má pořídit snímek, například když proměnná obsahuje určitou hodnotu, kterou chcete zkontrolovat. Podmínky můžete nastavit pomocí výrazů, filtrů nebo počtu volání.
+Pokud je obtížné v aplikaci znovu vytvořit konkrétní stav, zvažte použití podmíněného bodu snappoint. Podmíněné moduly snappoint vám pomůžou určit, kdy se má pořaovat snímek, například když proměnná obsahuje konkrétní hodnotu, kterou chcete zkontrolovat. Podmínky můžete nastavit pomocí výrazů, filtrů nebo počtu přístupů.
 
-#### <a name="to-create-a-conditional-snappoint"></a>Vytvoření podmíněného snímkovací bod
+#### <a name="to-create-a-conditional-snappoint"></a>Vytvoření podmíněného modulu snappoint
 
-1. Klikněte pravým tlačítkem myši na ikonu snímkovací bod (prázdná koule) a vyberte **Nastavení**.
+1. Klikněte pravým tlačítkem na ikonu bodu snappoint (prázdný míč) a zvolte **Nastavení**.
 
    ![Vyberte Nastavení](../debugger/media/snapshot-snappoint-settings.png)
 
-1. V okně nastavení snímkovací bod zadejte výraz.
+1. V okně nastavení snappointu zadejte výraz.
 
-   ![Zadejte výraz.](../debugger/media/snapshot-snappoint-conditions.png)
+   ![Zadání výrazu](../debugger/media/snapshot-snappoint-conditions.png)
 
-   Na předchozím obrázku se snímek bere pouze pro snímkovací bod, kdy `visitor.FirstName == "Dan"` .
+   Na předchozím obrázku je snímek pořízen pouze pro bod snappoint, když `visitor.FirstName == "Dan"` .
 
-## <a name="set-a-logpoint"></a>Nastavení protokolovací bod
+## <a name="set-a-logpoint"></a>Nastavení protokolového bodu
 
-Kromě pořizování snímku, když se snímkovací bod, můžete také nakonfigurovat snímkovací bod tak, aby protokoloval zprávu (to znamená vytvořit protokolovací bod). Můžete nastavit protokolovacích bodů bez nutnosti opětovného nasazení aplikace. Protokolovacích bodů se spouští prakticky a nezpůsobí žádný vliv ani vedlejší účinky na spuštěnou aplikaci.
+Kromě pořízení snímku při použití snímku můžete také nakonfigurovat modul snappoint pro protokolování zprávy (to znamená vytvořit protokolový bod). Můžete nastavit protokolové body, aniž byste museli aplikaci znovu nasazovat. Logpointy se spouštěly prakticky a nemají žádný vliv ani vedlejší účinky na běžící aplikaci.
 
-#### <a name="to-create-a-logpoint"></a>Vytvoření protokolovací bod
+#### <a name="to-create-a-logpoint"></a>Vytvoření protokolového bodu
 
-1. Klikněte pravým tlačítkem myši na ikonu snímkovací bod (modrý šestiúhelník) a vyberte **Nastavení**.
+1. Klikněte pravým tlačítkem na ikonu bodu snappoint (modrý šestiúhelník) a zvolte **Nastavení**.
 
-1. V okně nastavení snímkovací bod vyberte **Akce**.
+1. V okně nastavení snappointu vyberte **Actions (Akce).**
 
    ![Vytvoření protokolovací bod](../debugger/media/snapshot-logpoint.png)
 
@@ -170,4 +170,4 @@ Kromě pořizování snímku, když se snímkovací bod, můžete také nakonfig
 V tomto kurzu jste se naučili, jak používat Snapshot Debugger pro App Services. Možná budete chtít přečíst si další podrobnosti o této funkci.
 
 > [!div class="nextstepaction"]
-> [Nejčastější dotazy k ladění snímků](../debugger/debug-live-azure-apps-faq.md)
+> [Nejčastější dotazy k ladění snímků](../debugger/debug-live-azure-apps-faq.yml)

@@ -1,6 +1,6 @@
 ---
-title: Naučte se testovat kód pomocí živého testování částí
-description: Naučte se používat Live Unit Testing vytvořením jednoduché knihovny tříd, která cílí na .NET Standard a vytvoření projektu MSTest, který cílí na .NET Core pro otestování.
+title: Naučte se testovat kód pomocí Live Unit Test.
+description: Naučte se používat Live Unit Testing vytvořením jednoduché knihovny tříd, která cílí na .NET Standard, a vytvořením projektu MSTest, který cílí na .NET Core a otestuje ho.
 ms.custom: SEO-VS-2020
 ms.date: 04/03/2020
 ms.topic: how-to
@@ -11,46 +11,46 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c965fd73f63906f7a1e055ae5ff051eebab19d5
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 2270216e7245f20d26df580ad90dc627319adcc1
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828810"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798632"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Začínáme s funkcí Live Unit Testing
 
-Pokud povolíte Live Unit Testing v řešení sady Visual Studio, vizuálně znázorňuje pokrytí testu a stav testů. Live Unit Testing také dynamicky spouští testy vždy, když upravíte kód a okamžitě vás upozorní, když vaše změny způsobí selhání testů.
+Když povolíte Live Unit Testing v Visual Studio řešení, vizuálně znázorňuje pokrytí testu a stav testů. Live Unit Testing také dynamicky provádí testy při každé úpravě kódu a okamžitě vás upozorní, když vaše změny způsobí selhání testů.
 
-Live Unit Testing lze použít k testování řešení, která cílí na .NET Framework nebo .NET Core. V tomto kurzu se naučíte používat Live Unit Testing vytvořením jednoduché knihovny tříd, která cílí na .NET Standard a vytvoříte projekt MSTest, který cílí na .NET Core pro otestování.
+Live Unit Testing můžete použít k testování řešení, která cílí na .NET Framework nebo .NET Core. V tomto kurzu se naučíte používat Live Unit Testing vytvořením jednoduché knihovny tříd, která cílí na .NET Standard, a vytvoříte projekt MSTest, který cílí na .NET Core a otestuje ho.
 
-Kompletní řešení C# se dá stáhnout z úložiště [MicrosoftDocs/VisualStudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/csharp/UtilityLibraries/) na GitHubu.
+Kompletní řešení v jazyce C# si můžete stáhnout z [úložiště MicrosoftDocs/visualstudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/csharp/UtilityLibraries/) na GitHubu.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Tento kurz vyžaduje, abyste nainstalovali edici Visual Studio Enterprise s využitím úlohy **vývoje .NET Core pro různé platformy** .
+Tento kurz vyžaduje, že jste nainstalovali Visual Studio Enterprise edici s úlohou vývoj pro **různé platformy v .NET Core.**
 
-## <a name="create-the-solution-and-the-class-library-project"></a>Vytvořit řešení a projekt knihovny tříd
+## <a name="create-the-solution-and-the-class-library-project"></a>Vytvoření řešení a projektu knihovny tříd
 
-Začněte vytvořením řešení sady Visual Studio s názvem UtilityLibraries, které se skládá z jednoho .NET Standard projektu knihovny tříd StringLibrary.
+Začněte vytvořením nového Visual Studio s názvem UtilityLibraries, které se skládá z jednoho .NET Standard knihovny tříd StringLibrary.
 
-Řešení je pouze kontejner pro jeden nebo více projektů. Chcete-li vytvořit prázdné řešení, otevřete aplikaci Visual Studio a proveďte následující kroky:
+Řešení je jen kontejner pro jeden nebo více projektů. Pokud chcete vytvořit prázdné řešení, otevřete Visual Studio a proveďte následující:
 
-1.   >    >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte soubor nový **projekt** .
+1. V **nabídce** nejvyšší úrovně vyberte File  >  **New**  >  **Project** (Soubor Visual Studio projekt).
 
-1. Do vyhledávacího pole šablony zadejte **řešení** a pak vyberte šablonu **prázdného řešení** . Pojmenujte projekt **UtilityLibraries**.
+1. Do **vyhledávacího** pole šablony zadejte solution a pak vyberte **šablonu Prázdné** řešení. Projekt **pojmenováte UtilityLibraries**.
 
    ::: moniker range="vs-2017"
 
-   ![Dialog * * Nový projekt * *](./media/lut-start/new-solution.png)
+   ![Dialogové okno **Nový projekt**](./media/lut-start/new-solution.png)
 
    ::: moniker-end
 
 1. Dokončete vytváření řešení.
 
-Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem StringLibrary, která obsahuje řadu metod rozšíření pro práci s řetězci.
+Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem StringLibrary, která obsahuje řadu rozšiřujících metod pro práci s řetězci.
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení UtilityLibraries a vyberte **Přidat**  >  **Nový projekt**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení Utility (Nástroje) a vyberte Add New Project **(Přidat**  >  **nový projekt).**
 
 ::: moniker range="vs-2017"
 
@@ -132,47 +132,47 @@ Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem Str
 
 Dalším krokem je vytvoření projektu testu jednotek pro otestování knihovny StringLibrary. Testy jednotek vytvoříte provedením následujících kroků:
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení UtilityLibraries a vyberte **Přidat**  >  **Nový projekt**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení Utility (Nástroje) a vyberte Add New Project **(Přidat**  >  **nový projekt).**
 
 ::: moniker range="vs-2017"
 
-2. V dialogovém okně **Přidat nový projekt** vyberte uzel C# a pak vyberte **.NET Core**.
+2. V dialogovém **okně Přidat nový** projekt vyberte uzel C# a pak vyberte **.NET Core.**
 
    > [!NOTE]
-   > Testy jednotek nemusíte psát ve stejném jazyce jako vaše knihovna tříd.
+   > Testy jednotek není možné psát ve stejném jazyce jako knihovna tříd.
 
-3. V pravém podokně vyberte šablonu **projekt testů jednotek (.NET Core)** a do textového pole **název** zadejte **StringLibraryTests** , jak ukazuje následující obrázek:
+3. V pravém podokně vyberte šablonu Projekt testu jednotek **(.NET Core)** a  do textového pole Název zadejte **StringLibraryTests,** jak je znázorněno na následujícím obrázku:
 
-   ![Dialog * * Přidat nový projekt * * pro projekt testování částí](./media/lut-start/add-unit-test-cs.png)
+   ![Dialogové okno **Přidat nový projekt** pro projekt testů jednotek](./media/lut-start/add-unit-test-cs.png)
 
 4. Vyberte **OK** a vytvořte projekt.
 
    > [!NOTE]
-   > Tento kurz Začínáme používá Live Unit Testing s testovacím rozhraním MSTest. Můžete také použít testovací architektury xUnit a NUnit.
+   > Tento kurz Začínáme používá Live Unit Testing s testovací architekturou MSTest. Můžete také použít testovací architektury xUnit a NUnit.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Do pole hledání šablony zadejte **test jednotek** , jako jazyk vyberte **C#** a potom vyberte **projekt testování částí** pro šablonu .NET Core. Klikněte na **Next** (Další).
+2. Do **vyhledávacího** pole šablony zadejte test jednotek, jako jazyk vyberte **C#** a pak vyberte šablonu **Projekt** testování jednotek pro .NET Core. Klikněte na **Next** (Další).
 
    > [!NOTE]
-   > Počínaje verzí Visual Studio 2019 verze 16,9 se název šablony projektu MSTest změnil z **projektu testu jednotek MSTest (.NET Core)** na **test jednotek projektu**.
+   > Od verze Visual Studio 2019 verze 16.9 se název šablony projektu MSTest změnil z **projektu MSTest Unit Test (.NET Core)** na **Unit Test Project**.
 
-3. Pojmenujte projekt **StringLibraryTests** a klikněte na **Další**.
+3. Pojmete projekt **StringLibraryTests** a klikněte na **Další.**
 
-4. Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
+4. Zvolte doporučené cílové rozhraní (.NET Core 3.1) nebo .NET 5 a pak zvolte **Vytvořit.**
 
    > [!NOTE]
-   > Tento kurz Začínáme používá Live Unit Testing s testovacím rozhraním MSTest. Můžete také použít testovací architektury xUnit a NUnit.
+   > Tento kurz Začínáme používá Live Unit Testing s testovací architekturou MSTest. Můžete také použít testovací architektury xUnit a NUnit.
 
 ::: moniker-end
 
-5. Projekt testu jednotek nemůže automaticky přistupovat ke knihovně tříd, kterou testuje. Přístup ke knihovně testů udělíte přidáním odkazu na projekt knihovny tříd. Chcete-li to provést, klikněte pravým tlačítkem myši na `StringLibraryTests` projekt a vyberte možnost **Přidat**  >  **odkaz**. V dialogovém okně **Správce odkazů** se ujistěte, že je vybraná karta **řešení** , a vyberte projekt StringLibrary, jak je znázorněno na následujícím obrázku.
+5. Projekt testování částí nemůže automaticky přistupovat ke knihovně tříd, kterou testuje. Přístup ke knihovně testů můžete poskytnout přidáním odkazu na projekt knihovny tříd. To můžete udělat tak, že kliknete pravým tlačítkem na projekt a `StringLibraryTests` **vyberete Přidat**  >  **odkaz.** V dialogovém **okně Správce** odkazů  se ujistěte, že je vybraná karta Řešení, a vyberte projekt StringLibrary, jak je znázorněno na následujícím obrázku.
 
-   ![Dialogové okno * * Správce odkazů * *](./media/lut-start/add-reference.png)
+   ![Dialogové okno **Správce odkazů**](./media/lut-start/add-reference.png)
 
-6. Nahraďte kód pro standardní testování částí poskytovaný šablonou následujícím kódem:
+6. Nahraďte často používaný kód testu jednotek poskytovaný šablonou následujícím kódem:
 
    ```csharp
    using System;
@@ -228,7 +228,7 @@ Dalším krokem je vytvoření projektu testu jednotek pro otestování knihovny
    }
    ```
 
-7. Uložte projekt výběrem ikony **Uložit** na panelu nástrojů.
+7. Uložte projekt výběrem **ikony Uložit** na panelu nástrojů.
 
    Vzhledem k tomu, že kód testu jednotek obsahuje několik znaků, které nejsou ASCII, zobrazí se následující dialogové okno s upozorněním, že některé znaky budou ztraceny, pokud soubor uložíte ve výchozím formátu ASCII.
 
@@ -255,29 +255,29 @@ Zatím i když jste napsali testy pro knihovnu tříd StringLibrary, neudělali 
 1. Visual Studio spustí živý test jednotek, který automaticky spustí všechny testy.
 
 ::: moniker range="vs-2017"
-Po dokončení testů v **Průzkumníku testů** se zobrazí celkové výsledky a výsledek jednotlivých testů. Kromě toho okno editoru kódu graficky zobrazuje jak pokrytí testovacího kódu, tak i výsledek pro vaše testy. Jak ukazuje následující obrázek, všechny tři testy byly úspěšně provedeny. Ukazuje také, že naše testy pokryly všechny cesty kódu v `StartsWithUpper` metodě a že všechny testy byly úspěšně spuštěny (což je označeno zelenou značkou zaškrtnutí "✓"). Nakonec ukazuje, že žádná z ostatních metod v StringLibrary nemá pokrytí kódu (což je označeno modrou čárou "➖").
+Po dokončení testů v **Průzkumníku testů** se zobrazí celkové výsledky a výsledek jednotlivých testů. Kromě toho okno editoru kódu graficky zobrazuje jak pokrytí testovacího kódu, tak i výsledek pro vaše testy. Jak ukazuje následující obrázek, všechny tři testy byly úspěšně provedeny. Ukazuje také, že naše testy pokryly všechny cesty kódu v metodě a všechny testy byly úspěšně provedeny (což je označeno zelenou `StartsWithUpper` značkou zaškrtnutí """").. Nakonec ukazuje, že žádná z ostatních metod v Řetězcové knihovna nemá pokrytí kódu (což je označeno modrým řádkem "➖").
 
-![Průzkumník testů a okno editoru kódu po spuštění služby Live Unit Testing](media/lut-start/lut-results-cs.png)
+![Průzkumník testů a okno editoru kódu po spuštění live unit testing](media/lut-start/lut-results-cs.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019&quot;
-Když nástroj dokončí testy, **Live Unit Testing** zobrazí celkové výsledky a výsledek jednotlivých testů. Kromě toho okno editoru kódu graficky zobrazuje jak pokrytí testovacího kódu, tak i výsledek pro vaše testy. Jak ukazuje následující obrázek, všechny tři testy byly úspěšně provedeny. Ukazuje také, že naše testy pokryly všechny cesty kódu v `StartsWithUpper` metodě a že všechny testy byly úspěšně spuštěny (což je označeno zelenou značkou zaškrtnutí &quot;✓"). Nakonec ukazuje, že žádná z ostatních metod v StringLibrary nemá pokrytí kódu (což je označeno modrou čárou "➖").
+Po dokončení testů zobrazí Live Unit Testing **výsledky** i výsledky jednotlivých testů. Kromě toho okno editoru kódu graficky zobrazuje pokrytí testovacího kódu i výsledek pro vaše testy. Jak je vidět na následujícím obrázku, všechny tři testy byly úspěšně provedeny. Ukazuje také, že naše testy pokryly všechny cesty kódu v metodě a všechny testy byly úspěšně provedeny (což je označeno zelenou `StartsWithUpper` značkou zaškrtnutí &quot;&quot;&quot;").. Nakonec ukazuje, že žádná z ostatních metod v Řetězcové knihovna nemá pokrytí kódu (což je označeno modrým řádkem "➖").
 
-![Okno Live Test Exploreru a editoru kódu po spuštění služby Live Unit Testing](media/lut-start/vs-2019/lut-results-cs.png)
+![Live Test Explorer a okno editoru kódu po spuštění Live Unit Testing](media/lut-start/vs-2019/lut-results-cs.png)
 ::: moniker-end
 
-Můžete také získat podrobnější informace o pokrytí testu a výsledcích testů výběrem určité ikony pokrytí kódu v okně Editor kódu. Chcete-li prostudovat tuto podrobnost, postupujte následovně:
+Můžete také získat podrobnější informace o pokrytí testu a výsledcích testu výběrem konkrétní ikony pokrytí kódu v okně editoru kódu. Pokud chcete prozkoumat tyto podrobnosti, proveďte následující:
 
-1. Klikněte na zelenou značku zaškrtnutí na řádku, který čte `if (String.IsNullOrWhiteSpace(s))` do `StartsWithUpper` metody. Jak ukazuje následující obrázek, Live Unit Testing uvádí, že tři testy pokrývají tento řádek kódu a všechny byly úspěšně provedeny.
+1. Klikněte na zelenou značku zaškrtnutí na řádku, který `if (String.IsNullOrWhiteSpace(s))` čte v `StartsWithUpper` metodě . Jak je vidět na následujícím obrázku, Live Unit Testing, že tento řádek kódu pokrývají tři testy a že všechny byly úspěšně provedeny.
 
-   ![Pokrytí kódu pro podmíněný příkaz if](media/lut-start/code-coverage-cs1.png)
+   ![Pokrytí kódu pro podmíněný příkaz "if"](media/lut-start/code-coverage-cs1.png)
 
-1. Klikněte na zelenou značku zaškrtnutí na řádku, který čte `return Char.IsUpper(s[0])` do `StartsWithUpper` metody. Jak ukazuje následující obrázek, Live Unit Testing označuje, že pouze dva testy pokrývají tento řádek kódu a všechny byly úspěšně provedeny.
+1. Klikněte na zelenou značku zaškrtnutí na řádku, který `return Char.IsUpper(s[0])` čte v `StartsWithUpper` metodě . Jak je vidět na následujícím obrázku, Live Unit Testing, že tento řádek kódu pokrývají pouze dva testy a že všechny byly úspěšně provedeny.
 
    ![Pokrytí kódu pro příkaz return](media/lut-start/code-coverage-cs2.png)
 
-Hlavní problém, který Live Unit Testing identifikuje, není úplným pokrytím kódu. Vyřešíte ho v další části.
+Hlavní problém, který Live Unit Testing identifikuje, je neúplné pokrytí kódu. Budete ho řešit v další části.
 
-## <a name="expand-test-coverage"></a>Rozbalit pokrytí testu
+## <a name="expand-test-coverage"></a>Rozšíření pokrytí testu
 
 V této části rozšíříte testování částí do `StartsWithLower` metody. I když to uděláte, Live Unit Testing bude dynamicky pokračovat v testování kódu.
 
@@ -370,4 +370,4 @@ To poskytuje dostatek informací pro předběžné šetření chyby. Buď `TestH
 ## <a name="see-also"></a>Viz také
 
 - [Live Unit Testing v aplikaci Visual Studio](live-unit-testing.md)
-- [Live Unit Testing nejčastějších dotazech](live-unit-testing-faq.md)
+- [Live Unit Testing nejčastějších dotazech](live-unit-testing-faq.yml)

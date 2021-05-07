@@ -1,0 +1,95 @@
+### YamlMime:FAQ
+metadata:
+  title: Nejčastější dotazy – vyhledání funkce ladění
+  description: Nejčastější dotazy, které vám pomůžou identifikovat funkci ladicího programu, která vám pomůže s laděním aplikace
+  ms.custom: ''
+  ms.date: 10/01/2019
+  ms.topic: conceptual
+  helpviewer_keywords:
+  - debugging [Visual Studio], find your feature
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jmartens
+  ms.workload:
+  - multiple
+  ms.openlocfilehash: be2f8aa5e625015aec444a76d71433d02da578df
+  ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 05/06/2021
+  ms.locfileid: "108800345"
+title: Nejčastější dotazy – v aplikaci Visual Studio najdete funkci ladění, kterou potřebujete.
+summary: >
+  Pokud potřebujete pomáhat při mapování úlohy ladění na správnou funkci ladicího programu sady Visual Studio, který je relevantní, použijte odkazy uvedené v tomto článku. Seznam úkolů zde zahrnuje běžné úkoly, jako je například pozastavení kódu pro ladění, kontrolu proměnných a odesílání zpráv do okna **výstup** . Pokud potřebujete přehled funkcí ladicího programu, podívejte se na místo toho v [ladicím programu](debugger-feature-tour.md) .
+sections:
+- name: Ignorováno
+  questions:
+  - question: >
+      Opravit výjimku
+    answer: >
+      - Viz [Oprava výjimky](write-better-code-with-visual-studio.md#fix-an-exception).
+  - question: >
+      Pozastavit běh kódu
+    answer: "- **Pozastavení spuštěného kódu pro kontrolu řádku kódu, který může obsahovat chybu**\n\n  Nastavte zarážku. Další informace najdete v tématu [použití zarážek](using-breakpoints.md).\n\n- **Pozastavení a kontrola aplikace, když dosáhnou určitého stavu**\n\n  Vyzkoušejte podmíněný bod přerušení pro řízení, kde a kdy se zarážka aktivuje pomocí podmíněné logiky. Další informace najdete v tématu [podmínky zarážky](using-breakpoints.md#breakpoint-conditions).\n\n- **Pozastavit kód pouze v případě, že dojde ke změně vlastnosti nebo hodnoty konkrétního objektu**\n\n  V jazyce C++ nastavte [datovou zarážku](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus). \n  ::: moniker range=\">= vs-2019\"\n  Pro aplikace využívající .NET Core 3 můžete také nastavit [datovou zarážku](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed).\n  ::: moniker-end\n\n  V opačném případě pro C# a F # můžete [sledovat ID objektu s podmíněnou zarážkou](using-breakpoints.md#using-object-ids-in-breakpoint-conditions-c-and-f).\n\n- **Pozastavení kódu uvnitř smyčky v určité iteraci**\n\n  Nastavte zarážku pomocí **čítače přístupů** jako podmínky. Další informace najdete v tématu [Počet přístupů.](using-breakpoints.md#set-a-hit-count-condition)\n\n- **Pozastavení kódu na začátku funkce, pokud znáte název funkce, ale ne její umístění**\n\n  Můžete to provést pomocí zarážky funkce. Další informace najdete v tématu [Nastavení zarážek funkcí.](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)\n\n- **Pozastavení kódu na začátku více funkcí se stejným názvem**\n\n  Pokud máte více funkcí se stejným názvem (přetížené funkce nebo funkce v různých projektech), můžete použít [zarážku funkce](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file).\n\n- **Správa a sledování zarážek**\n\n  Použijte **okno Breakpoints (Zarážky).** Další informace najdete v tématu [Správa zarážek](using-breakpoints.md#BKMK_Specify_advanced_properties_of_a_breakpoint_).\n\n- **Pozastavení kódu a ladění při vyvolání konkrétní zpracované nebo neošetřené výjimky**\n\n  I když vám pomocník výjimky ukazuje, kde došlo k chybě, pokud chcete konkrétní chybu pozastavit a ladit, můžete ladicímu programu říct, aby při vyvolání [výjimky přerušil .](managing-exceptions-with-the-debugger.md#tell-the-debugger-to-break-when-an-exception-is-thrown)\n\n- **Nastavení zarážky ze zásobníku volání**\n\n  Pokud chcete pozastavit a ladit kód při zkoumání  toku provádění nebo zobrazení funkcí v oknech Zásobník volání, podívejte se na nastavení zarážky [v okně Zásobník volání](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows).\n\n- **Pozastavení kódu na konkrétní instrukci sestavení**\n\n  Můžete to provést nastavením [zarážky z okna Zpětný překlad.](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)\n"
+  - question: >
+      Spuštění kódu
+    answer: >
+      - **Naučte se příkazy procházet kód při ladění.**
+
+        Další informace najdete v tématu [Navigace v kódu pomocí ladicího programu.](navigating-through-code-with-the-debugger.md)
+  - question: >
+      Kontrola dat
+    answer: >
+      - **Kontrola hodnoty proměnných při spuštění aplikace**
+
+        Najeďte myší na proměnné [pomocí datových tipů](view-data-values-in-data-tips-in-the-code-editor.md) nebo zkontrolujte proměnné v okně Automatické hodnoty a [Místní hodnoty.](autos-and-locals-windows.md)
+
+      - **Sledovat měnící se hodnotu konkrétní proměnné**
+
+        Nastavte kukátko pro proměnnou. Další informace najdete v tématu [Nastavení kukátka pro proměnné](watch-and-quickwatch-windows.md).
+
+      - **Zobrazit řetězce, které jsou pro okno ladicího programu příliš dlouhé**
+
+        Při ladění otevřete vestavěný [Vizualizér řetězců](view-strings-visualizer.md) .
+  - question: >
+      Ladění aplikace, která je již spuštěna
+    answer: >
+      - Viz [připojit ke spuštěným procesům](attach-to-running-processes-with-the-visual-studio-debugger.md).
+  - question: >
+      Ladění vícevláknových aplikací
+    answer: >
+      - Viz [Ladění vícevláknových aplikací](debug-multithreaded-applications-in-visual-studio.md).
+  - question: >
+      Konfigurace ladění
+    answer: >
+      - **Konfigurovat nastavení ladicího programu**
+
+        Konfigurace možností ladicího programu a nastavení projektu ladicího programu naleznete v tématu [nastavení a příprava ladicího](debugger-settings-and-preparation.md)programu.
+
+      - **Přizpůsobení informací zobrazených v ladicím programu**
+
+        Můžete chtít zobrazit jiné informace než typ objektu jako hodnotu v různých oknech ladicího programu. Pro kód C#, Visual Basic, F # a C++/CLI, použijte atribut [DebuggerDisplay](using-the-debuggerdisplay-attribute.md) . Pro pokročilejší možnosti můžete uživatelské rozhraní přizpůsobit také vytvořením [vlastního Vizualizátoru](create-custom-visualizers-of-data.md).
+
+        V případě nativního kódu C++ použijte [architekturu NatVis](create-custom-views-of-native-objects.md).
+  - question: >
+      Další úlohy
+    answer: >-
+      - **Úprava kódu během relace ladění**
+
+        Použijte [Upravit a pokračovat](edit-and-continue.md). Pro XAML použijte [Hot reloading XAML](../xaml-tools/xaml-hot-reload.md).
+
+      - **Odeslat zprávy do okna výstupu beze změny kódu**
+
+        Nastavte zarážka s trasováním. Další informace najdete v tématu [Použití trasovacích bodů](using-tracepoints.md).
+
+      - **Zobrazení pořadí, ve kterém jsou volány funkce**
+
+        Viz [Zobrazení zásobníku volání](how-to-use-the-call-stack-window.md).
+
+      - **Ladění na vzdálených počítačích**
+
+        Viz [Vzdálené ladění.](remote-debugging.md)
+
+      - **Řešení problémů s výkonem**
+
+        Viz [První pohled na nástroje pro profilaci.](../profiling/profiling-feature-tour.md)

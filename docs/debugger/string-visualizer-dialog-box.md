@@ -2,7 +2,7 @@
 title: Dialogové okno Vizualizér řetězců | Microsoft Docs
 description: Při ladění v aplikaci Visual Studio můžete zobrazit řetězce s integrovaným dialogovým oknem Vizualizér řetězců.
 ms.date: 10/10/2018
-ms.custom: seoapril2019, SEO-VS-2020
+ms.custom: contperf-fy21q4
 ms.topic: reference
 f1_keywords:
 - vs.debug.stringviewer
@@ -21,18 +21,18 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3084db99226ab268bb6ce70611628dcafcf1753b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 85092f6a339fdaaa3ddaa56112cc351d8b8e9bdc
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904285"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108640837"
 ---
 # <a name="string-visualizer-dialog-box"></a>Dialogové okno vizualizéru řetězce
 
 Při ladění v aplikaci Visual Studio můžete zobrazit řetězce s integrovaným vizualizérm řetězců. Vizualizér řetězců zobrazuje řetězce, které jsou příliš dlouhé pro datový Tip nebo okno ladicího programu. Může vám také usnadnit identifikaci chybných řetězců.
 
-Vestavěný Vizualizér řetězců obsahuje možnosti pro prostý text, XML, HTML a JSON. Můžete také otevřít předdefinované vizualizace pro několik dalších typů, například [datovou sadu, DataTable a objekty DataView](../debugger/dataset-visualizer-dialog-box.md) , z okna **Automatické** hodnoty nebo jiného ladicího programu.
+Předdefinované řetězcové vizualizace obsahují možnosti pro [text](#text-string-data), [XML](#xml-string-data), [HTML](#html-string-data)a [JSON](#json-string-data) . Můžete také otevřít předdefinované vizualizace pro několik dalších typů, například [datovou sadu, DataTable a objekty DataView](../debugger/dataset-visualizer-dialog-box.md) , z okna **Automatické** hodnoty nebo jiného ladicího programu.
 
 > [!NOTE]
 > Pokud potřebujete zkontrolovat prvky uživatelského rozhraní XAML nebo WPF v vizualizér, přečtěte si nebo [Zkontrolujte vlastnosti XAML během ladění](../xaml-tools/inspect-xaml-properties-while-debugging.md) nebo [použijte Vizualizér stromu WPF](../debugger/how-to-use-the-wpf-tree-visualizer.md).
@@ -44,6 +44,12 @@ Chcete-li otevřít Vizualizér řetězců, je nutné pozastavit během ladění
 V poli **výrazu** se zobrazuje proměnná nebo výraz, na který ukazatel nahráváte.
 
 **Hodnota** pole zobrazuje hodnotu řetězce. Prázdná **hodnota** znamená, že zvolený Vizualizér nemůže rozpoznat řetězec. Například **Vizualizér XML** zobrazuje prázdnou **hodnotu** pro textový řetězec bez značek XML nebo řetězec JSON. Pokud chcete zobrazit řetězce, které vybraný Vizualizér nemůže rozpoznat, vyberte místo toho **Vizualizér textu** . **Vizualizér textu** zobrazuje prostý text.
+
+### <a name="text-string-data"></a>Textová řetězcová data
+
+**Vizualizér textu** zobrazuje prostý text. Pokud potřebujete vlastní formátování řetězce jazyka C++, vytvořte [vizualizaci Natvis](../debugger/create-custom-views-of-native-objects.md).
+
+![Vizualizér textových řetězců](../debugger/media/dbg-string-visualizer-text.png "Vizualizér textových řetězců")
 
 ### <a name="json-string-data"></a>Data řetězce JSON
 
