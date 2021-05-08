@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jmartens
-ms.openlocfilehash: a1e0f998b5fff45a8fee9ac6f9cc6a0ce2268907
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22ac969ba2ad918fcbeb7c53e04cd3f2b03a0431
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894462"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798567"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Explorer – Nejčastější dotazy
 
@@ -52,38 +52,38 @@ Symbol plus (+) označuje, že další testy mohou být zjištěny po sestavení
 
 Přejít na  > **Možnosti** nástroje > **test** a zaškrtněte políčko pro další **zjišťování testů z sestavených sestavení po sestaveních.**
 
-![Možnost založenou na sestavení](media/testex-toolsoptions.png)
+![Možnost založená na sestavení](media/testex-toolsoptions.png)
 ::: moniker-end
 
 ## <a name="real-time-test-discovery"></a>Zjišťování testů v reálném čase
 
-**Testy se nyní zobrazí v Průzkumníku testu při psaní, aniž by bylo nutné sestavit projekt. Co se změnilo?**
+**Testy se teď během psaní zobrazují v Průzkumníku testů, aniž byste museli sestavovat projekt. Co se změnilo?**
 
-Tato funkce se nazývá [zjišťování testů v reálném čase](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/). Pomocí analyzátoru Roslyn vyhledá testy a naplní Průzkumník testů v reálném čase, aniž by bylo nutné sestavit projekt. Další informace o chování zjišťování testů pro dynamicky definované testy, jako jsou teorie nebo vlastní vlastnosti, naleznete v tématu [dynamické zjišťování testů](#dynamic-test-discovery).
+Tato funkce se nazývá [zjišťování testů v reálném čase.](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) Používá analyzátor Roslyn k vyhledání testů a naplnění Průzkumníka testů v reálném čase, aniž by bylo nutné sestavovat projekt. Další informace o chování zjišťování testů pro dynamicky definované testy, jako jsou teorie nebo vlastní vlastnosti, najdete v tématu [Dynamické zjišťování testů.](#dynamic-test-discovery)
 
 ## <a name="real-time-test-discovery-compatibility"></a>Kompatibilita zjišťování testů v reálném čase
 
-**Jaké jazyky a testovací architektury můžou použít zjišťování testů v reálném čase?**
+**Které jazyky a testovací architektury mohou používat zjišťování testů v reálném čase?**
 
-[Zjišťování testů v reálném čase](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) funguje pouze pro spravované jazyky (C# a Visual Basic), protože je vytvořeno pomocí kompilátoru Roslyn. V současné době zjišťování testů v reálném čase funguje pouze pro xUnit, NUnit a MSTest architektury.
+[Zjišťování testů v reálném čase](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) funguje pouze pro spravované jazyky (C# a Visual Basic), protože je sestavené pomocí kompilátoru Roslyn. Zjišťování testů v reálném čase teď funguje jenom pro architektury xUnit, NUnit a MSTest.
 
 ## <a name="test-explorer-logs"></a>Protokoly Průzkumníka testů
 
 **Jak můžu zapnout protokoly pro Průzkumníka testů?**
 
-Přejděte k   >  **Možnosti** nástroje  >  **test** a vyhledejte část protokolování.
+Přejděte na **Nástroje**  >  **Možnosti**  >  **Test a** vyhledejte část Protokolování.
 
-## <a name="uwp-test-discovery"></a>Zjišťování testů UWP
+## <a name="uwp-test-discovery"></a>Zjišťování testů UPW
 
-**Proč se moje testy v projektech UWP nezjistily, dokud nasadím aplikaci?**
+**Proč se moje testy v projektech UPW neobjeví, dokud nenasadím aplikaci?**
 
-Testy UWP cílí na jiný modul runtime při nasazení aplikace. To znamená, že k nalezení testů přesně pro projekty UWP nemusíte sestavovat projekt, ale také nasadit.
+Testy UPW cílí při nasazení aplikace na jiný modul runtime. To znamená, že k přesnému vyhledání testů pro projekty UPW potřebujete nejen sestavit projekt, ale také ho nasadit.
 
 ## <a name="test-explorer-sorting"></a>Řazení Průzkumníka testů
 
-**Jak funguje řazení výsledků testů v zobrazení hierarchie?**
+**Jak funguje řazení výsledků testů v hierarchickém zobrazení?**
 
-Zobrazení hierarchie seřadí testy abecedně na rozdíl od výsledku. Předchozí skupina podle nastavení seřadily výsledky testů podle výsledku a pak podle abecedy. Můžete přesto Povolit řazení podle výsledku tak, že v Průzkumníku testů kliknete pravým tlačítkem na záhlaví sloupce, zapnete sloupec stav a potom kliknutím na záhlaví sloupce stav použijete řazení tohoto sloupce. Můžete poskytnout zpětnou vazbu k návrhu v tomto [problému GitHubu](https://github.com/Microsoft/vstest/issues/1425).
+Hierarchické zobrazení seřadí testy abecedně, nikoli podle výsledku. Předchozí skupina podle nastavení seřadily výsledky testů podle výsledku a pak podle abecedy. Můžete přesto Povolit řazení podle výsledku tak, že v Průzkumníku testů kliknete pravým tlačítkem na záhlaví sloupce, zapnete sloupec stav a potom kliknutím na záhlaví sloupce stav použijete řazení tohoto sloupce. Můžete poskytnout zpětnou vazbu k návrhu v tomto [problému GitHubu](https://github.com/Microsoft/vstest/issues/1425).
 
 ## <a name="test-explorer-hierarchy-view"></a>Hierarchické zobrazení Průzkumníka testů
 
@@ -107,44 +107,44 @@ V aplikaci Visual Studio 2019 se odeberou některá rozhraní API testovacího o
 
 ## <a name="test-adapter-nuget-reference"></a>Reference k NuGetu testovacího adaptéru
 
-**V aplikaci Visual Studio 2017 verze 15,8 jsou zjištěny testy, ale nespustí se.**
+**V Visual Studio 2017 verze 15.8 se moje testy získejte, ale neschováte je.**
 
-Všechny projekty testů musí zahrnovat svůj odkaz na NuGet rozhraní .NET test Adapter v souboru. csproj. Pokud ne, zobrazí se v projektu následující výstup testu, pokud je zjišťování pomocí rozšíření testovacího adaptéru po sestavení spuštěno nebo pokud se uživatel pokusí spustit vybrané testy:
+Všechny projekty testů musí v souboru .csproj obsahovat odkaz NuGet adaptéru testu .NET. Pokud ne, zobrazí se v projektu následující výstup testu, pokud se zjišťování rozšířením testovacího adaptéru spustí po sestavení nebo když se uživatel pokusí spustit vybrané testy:
 
-**Projekt testů {} neodkazuje na žádný adaptér rozhraní .NET NuGet. Zjišťování nebo provádění testů nemusí pro tento projekt fungovat. Doporučuje se odkazovat na testovací adaptéry NuGet v každém projektu .NET test v řešení.**
+**Projekt testů {} neodkašuje na žádný adaptér NuGet .NET. Zjišťování nebo spouštění testů nemusí pro tento projekt fungovat. V každém projektu testů .NET v řešení doporučujeme odkazovat na adaptéry testů NuGet.**
 
-Místo používání rozšíření testovacího adaptéru se projekty vyžadují pro použití balíčků NuGet pro testovací adaptéry. Tento požadavek významně zvyšuje výkon a způsobuje méně problémů se kontinuální integrací. Další informace o vyřazení rozšíření testovacího adaptéru .NET najdete v [poznámkách k verzi](/visualstudio/releasenotes/vs2017-relnotes-v15.8#testadapterextension).
+Místo použití rozšíření testovacího adaptéru se u projektů vyžaduje použití balíčků NuGet testovacího adaptéru. Tento požadavek výrazně zlepšuje výkon a způsobuje méně problémů s kontinuální integrací. Další informace o zahozování rozšíření testovacího adaptéru .NET najdete v [poznámkách k verzi.](/visualstudio/releasenotes/vs2017-relnotes-v15.8#testadapterextension)
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Pokud používáte testovací adaptér nunit 2 a nemůžete migrovat na testovací adaptér nunit 3, můžete toto nové chování zjišťování vypnout v aplikaci Visual Studio verze 15,8 v části **nástroje**  >    >  **test** možností.
+> Pokud používáte adaptér testů NUnit 2 a nemůžete migrovat na testovací adaptér NUnit 3, můžete toto nové chování zjišťování vypnout v nástroji Visual Studio verze 15.8 v části **Nástroje**  >  **Možnosti**  >  **Test.**
 
 ![Chování adaptéru Průzkumníka testů v možnostech nástrojů](media/testex-adapterbehavior.png)
 ::: moniker-end
 
-## <a name="uwp-testcontainer-was-not-found"></a>Nenašlo se TestContainer UWP.
+## <a name="uwp-testcontainer-was-not-found"></a>TestContainer pro UPW se nenašel
 
-**Moje testy UWP již nejsou spouštěny v aplikaci Visual Studio 2017 verze 15,7 a novější.**
+**Testy UPW se už nebudou provádět v Visual Studio 2017 verze 15.7 a novější.**
 
-Poslední projekty testů UWP určují vlastnost sestavení testovací platformy, která umožňuje lepší výkon pro identifikaci testovacích aplikací. Pokud máte projekt testů UWP, který byl inicializován před verzí sady Visual Studio verze 15,7, může se tato chyba zobrazit ve **výstupních**  >  **testech**:
+Nedávné projekty testů UPW určují vlastnost sestavení testovací platformy, která umožňuje lepší výkon pro identifikaci testovacích aplikací. Pokud máte projekt testů UPW, který byl inicializován před Visual Studio verze 15.7, může se tato chyba zobrazit ve **výstupních**  >  **testech:**
 
-**System. AggregateException: došlo k jedné nebo více chybám. ---> System. InvalidOperationException: následující TestContainer nebyl nalezen {} v Microsoft. VisualStudio. TestWindow. Controller. TestContainerProvider \<GetTestContainerAsync> D__61. MoveNext ()**
+**System.AggregateException: Došlo k jedné nebo více chybám. ---> System.InvalidOperationException: Následující testcontainer nebyl nalezen v {} Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider \<GetTestContainerAsync> d__61.MoveNext()**
 
-Oprava této chyby:
+Pokud chcete tuto chybu vyřešit:
 
-- Aktualizujte vlastnost Build projektu testu pomocí následujícího kódu:
+- Aktualizujte vlastnost sestavení projektu testů pomocí následujícího kódu:
 
 ```XML
 <UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">$(VisualStudioVersion)</UnitTestPlatformVersion>
 ```
 
-- Aktualizujte verzi sady SDK TestPlatform pomocí následujícího kódu:
+- Aktualizujte verzi sady TestPlatform SDK pomocí následujícího kódu:
 
 ```XML
 <SDKReference Include="TestPlatform.Universal, Version=$(UnitTestPlatformVersion)" />
 ```
 ::: moniker range=">=vs-2019"
-## <a name="using-preview-features"></a>Používání funkcí verze Preview
+## <a name="using-preview-features"></a>Použití funkcí Preview
 
 V aplikaci Visual Studio 2019 se můžete vyjádřit k funkcím ve verzi Preview v **nástrojích > možnosti > prostředí > funkce ve verzi Preview**.
 ::: moniker-end
@@ -171,4 +171,4 @@ vsregedit set “C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterpri
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=fullName>
 - [Vytvoření a spuštění testů jednotek pro existující kód](/previous-versions/dd293546(v=vs.110))
 - [Testování částí kódu](unit-test-your-code.md)
-- [Nejčastější dotazy ke službě Live Unit Testing](live-unit-testing-faq.md)
+- [Nejčastější dotazy ke službě Live Unit Testing](live-unit-testing-faq.yml)

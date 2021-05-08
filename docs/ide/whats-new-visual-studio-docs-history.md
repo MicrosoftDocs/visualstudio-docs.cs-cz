@@ -1,5 +1,5 @@
 ---
-title: 'Visual Studio dokumentace: Historie novinek '
+title: 'Dokumentace k Visual Studiu: historie novinek '
 titleSuffix: ''
 description: Historie novinek v dokumentaci k sadě Visual Studio
 ms.date: 05/03/2021
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: bb78ce04f57f537a6e595fe55d41b220c4476a7b
-ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
+ms.openlocfilehash: b45b67f03c7f95fe12c0f4322e682588a7f50714
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/06/2021
-ms.locfileid: "108798242"
+ms.locfileid: "108640984"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Historie novinek v dokumentaci k sadě Visual Studio
 
-Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje hlavní změny dokumentace před dubnem 2021 (od července 2020). Nejnovější informace o novince najdete v [Visual Studio docs:](whats-new-visual-studio-docs.md)Co je nového v tomto dokumentu.
+Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obsahuje hlavní změny v dokumentaci před dubna 2021 (od července 2020). Nejnovější novinky najdete v tématu [dokumentace k Visual Studiu: co je nového v dokumentaci](whats-new-visual-studio-docs.md).
 
 ## <a name="march-2021"></a>Březen 2021
 
@@ -32,29 +32,29 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 
 **Aktualizované články**
 
-- [Povolení nebo instalace analyzátorů .NET](../code-quality/install-net-analyzers.md) od microsoftu – Opravy problémů Na GitHubu
+- [Povolení nebo instalace analyzátorů .NET pro první stranu](../code-quality/install-net-analyzers.md) – opravy problémů GitHubu
 
 ### <a name="containers"></a>Kontejnery
 
 **Aktualizované články**
 
-- [Použití Bridge to Kubernetes](../containers/bridge-to-kubernetes.md) – Bridge to Kubernetes: Použití ukázky todo-app v .NET
-- [Docker Compose sestavení –](../containers/docker-compose-properties.md) přidání názvu projektu ComposeProjectName
-- [Jak Bridge to Kubernetes funguje –](../containers/overview-bridge-to-kubernetes.md) Bridge to Kubernetes: Aktualizace omezení
-- [Kurz: Vytvoření vícekontejnerové aplikace pomocí Docker Compose](../containers/tutorial-multicontainer.md) – Kurz k vícekontejnerové aplikaci Container Tools: Oprava odkazu na obrázek
+- [Použití mostu pro Kubernetes](../containers/bridge-to-kubernetes.md) -most na Kubernetes: použití .NET TODO-App Sample
+- [Docker Compose vlastnosti buildu](../containers/docker-compose-properties.md) – přidání ComposeProjectName
+- [Jak přemostění do Kubernetes funguje](../containers/overview-bridge-to-kubernetes.md) – most do Kubernetes: oddíl omezení aktualizací
+- [Kurz: Vytvoření aplikace s více kontejnery pomocí nástroje Docker Compose](../containers/tutorial-multicontainer.md) -Container Tools s více kontejnery: opravit odkaz na obrázek
 
 ### <a name="debugger"></a>Ladicí program
 
 **Aktualizované články**
 
-- [Postupy: Ladění z projektu knihovny DLL v Visual Studio (C#, C++, Visual Basic, F#) –](../debugger/how-to-debug-from-a-dll-project.md) Aktualizace způsobu ladění z knihovny DLL
-- Zadání symbolu (.pdb) a zdrojových souborů v ladicím programu [Visual Studio (C#, C++, Visual Basic, F#) –](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) Aktualizace způsobu ladění z knihovny DLL
+- [Postupy: ladění z projektu knihovny DLL v aplikaci Visual Studio (C#, C++, Visual Basic, F #)](../debugger/how-to-debug-from-a-dll-project.md) – aktualizace způsobu ladění z knihovny DLL
+- [Určení symbolu (. pdb) a zdrojových souborů v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) – aktualizace způsobu ladění z knihovny DLL
 - [Kontrolní výrazy jazyka C/C++](../debugger/c-cpp-assertions.md) – opravy problémů GitHubu
-- [IDiaDataSource::loadDataForExe –](../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) Problémy s GitHubem fungují
-- [Specifikátory formátu pro C++ v ladicím programu Visual Studio –](../debugger/format-specifiers-in-cpp.md) Problémy GitHubu fungují
-- [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md) – Opravy problémů GitHubu
-- [Vzdálené ladění ASP.NET na vzdáleném počítači se službou IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) – Aktualizace dokumentace ke vzdálenému ladění služby IIS a Azure
-- [Vzdálené ladění ASP.NET core na vzdáleném](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) počítači se službou IIS v Visual Studio – aktualizace dokumentace ke vzdálenému ladění pro IIS a Azure
+- [IDiaDataSource:: loadDataForExe](../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) – problémy s GitHubem
+- [Specifikátory formátu pro C++ v ladicím programu sady Visual Studio](../debugger/format-specifiers-in-cpp.md) – problémy GitHubu
+- [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md) – opravy problémů na GitHubu
+- [Vzdálené ladění ASP.NET na vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) – aktualizace pro vzdálené ladění dokumentů pro IIS a Azure
+- [Vzdálené ladění ASP.NET Core na vzdáleném počítači IIS v aplikaci Visual Studio](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) – aktualizace pro vzdálené ladění dokumentů pro službu IIS a Azure
 - [Vzdálené ladění ASP.NET Core ve službě IIS v Azure v aplikaci Visual Studio](../debugger/remote-debugging-azure.md) – aktualizace pro vzdálené ladění dokumentů pro službu IIS a Azure
 
 ### <a name="deployment"></a>Nasazení
@@ -93,80 +93,80 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 - [Visual Studio program Zlepšování softwaru a služeb na základě zkušeností uživatelů](./visual-studio-experience-improvement-program.md) – aktualizace Visual-Studio-Experience-Improvement-Program.MD
 - [Přizpůsobení šablon projektů a položek](./customizing-project-and-item-templates.md) – přidání odkazů o přizpůsobení šablon a používání příkazového řádku
 - [Postupy: vytváření šablon projektů](./how-to-create-project-templates.md) – přidání odkazů o přizpůsobení šablon a používání příkazového řádku
-- [Nápověda k editoru kódu F1](./not-in-toc/default-f1-text-editor.md) – Aktualizace odkazů na výchozí stránky F1
-- [Nápověda k F1](./not-in-toc/default.md) – Aktualizace odkazů pro výchozí stránky F1
-- [Rychlý start: Použití Visual Studio k vytvoření první aplikace Node.js](./quickstart-nodejs.md) – aktualizace AngularJS
-- [Extrahování refaktoringu metody](./reference/extract-method.md) – aktualizace extract-method.md
-- [Návrhář XAML možností –](./reference/xaml-designer.md) Přidání informací o nově přidaných možnostech v návrháři XAML
-- [Co je nového v Visual Studio 2019](./whats-new-visual-studio-2019.md)
-  - Přidání informací o službě Intelligent Search Service
-  - přidání nového odkazu na CSharp 9 do části Zobrazit také
-- [Developer Command Prompt a Developer PowerShell](./reference/command-prompt-powershell.md)
-  - Aktualizace názvů funkcí a odebrání oddílu s nejčastějšími dotazy
-  - Aktualizace hierarchie nadpisů
-  - Developer Command Prompt a Developer PowerShell
-- [Připojení k projektům Team Explorer](./connect-team-project.md) – aktualizace témat s porovnáním odkazů na & Team Explorer Gitu
-- [Prostředí Gitu v Visual Studio](./git-with-visual-studio.md)
-  - přidání Azure DevOps do existujícího vzdáleného příkazu
-  - Přidání nové stránky porovnání vedle sebe pro Team Explorer a nové funkce Gitu
-  - V souboru chybí argument -b git-with-visual-studio.md
-- [Výchozí klávesové zkratky v Visual Studio](./default-keyboard-shortcuts-in-visual-studio.md) – přidejte chybějící klávesovou zkratku Set Breakpoint Conditions (Nastavit podmínky zarážky).
-- [Uživatelská oprávnění a Visual Studio](./user-permissions-and-visual-studio.md) – přidáním postupu pro nastavení oprávnění správce na zástupce
-- [Generování přepisů metod Equals a GetHashCode v Visual Studio](./reference/generate-equals-gethashcode-methods.md)
-  - Zmenšete velikost snímku obrazovky a přidejte k instrukci menší úpravy.
-  - Přidání kódu pro spárování se snímky obrazovky
-- [Použití regulárních výrazů v Visual Studio](./using-regular-expressions-in-visual-studio.md) – oprava nesprávného regulárního výrazu
-- [Přizpůsobení úloh sestavení a ladění pro vývoj pro otevřenou složku](./customize-build-and-debug-tasks-in-visual-studio.md) – Developer Command Prompt a Developer PowerShell
-- [Visual Studio produktivity pro vývojáře v jazyce C#](./csharp-developer-productivity.md) – aktualizace seznamu rozšíření kontroly kódu pro VS2019
+- [Editor kódu F1 Nápověda](./not-in-toc/default-f1-text-editor.md) – aktualizace odkazů pro výchozí stránky F1
+- [F1 Nápověda](./not-in-toc/default.md) – aktualizace odkazů pro výchozí stránky F1
+- [Rychlý Start: použití sady Visual Studio k vytvoření první aktualizace Node.js App](./quickstart-nodejs.md) -AngularJS
+- [Extrakce refaktoringu metod](./reference/extract-method.md) – aktualizace Extract-Method.MD
+- [Stránka možností Návrhář XAML](./reference/xaml-designer.md) – přidání informací o nově přidaných možnostech v Návrháři XAML
+- [Co je nového v aplikaci Visual Studio 2019](./whats-new-visual-studio-2019.md)
+  - Přidat inteligentní informace o Search Service
+  - Přidat nový odkaz na CSharp 9 pro viz také
+- [PowerShell Developer Command Prompt a vývojář](./reference/command-prompt-powershell.md)
+  - Aktualizace názvů funkcí a odebrání oddílu požadavků
+  - Aktualizovat hierarchii nadpisů
+  - PowerShell Developer Command Prompt a vývojář
+- [Připojení k projektům v Team Explorer](./connect-team-project.md) – aktualizovat témata s souběžným porovnáním & Git Team Explorer odkazem
+- [Prostředí Git v aplikaci Visual Studio](./git-with-visual-studio.md)
+  - Přidat Azure DevOps do existujícího vzdáleného příkazu
+  - Přidání nové stránky porovnání vedle sebe Team Explorer a nových funkcí Git
+  - v git-with-visual-studio.md chybí argument-b.
+- [Výchozí klávesové zkratky v sadě Visual Studio](./default-keyboard-shortcuts-in-visual-studio.md) – přidání chybějících nastavených klávesových zkratek pro podmínky zarážek
+- [Uživatelská oprávnění a sada Visual Studio](./user-permissions-and-visual-studio.md) – Přidejte proceduru pro nastavení oprávnění správce na zástupce.
+- [Generování přepisů metod Equals a GetHashCode v aplikaci Visual Studio](./reference/generate-equals-gethashcode-methods.md)
+  - zmenšení velikosti obrazovky a přidání menších úprav do instrukce
+  - Přidání kódu ke spárování s snímky obrazovky
+- [Použití regulárních výrazů v sadě Visual Studio](./using-regular-expressions-in-visual-studio.md) – oprava chybného regulárního výrazu
+- [Přizpůsobení úloh sestavování a ladění pro vývoj otevřených složek](./customize-build-and-debug-tasks-in-visual-studio.md) – Developer Command Prompt a vývojové prostředí PowerShell
+- [Průvodce produktivitou pro Visual Studio pro vývojáře v jazyce C#](./csharp-developer-productivity.md) – aktualizace seznamu rozšíření pro kontrolu kódu pro VS2019
 
 ### <a name="install"></a>Instalace
 
 **Nové články**
-- [Instalace aktualizací správce, které používají Microsoft Endpoint Configuration Manager](../install/applying-administrator-updates.md) – Vytvoření nového obsahu o instalaci aktualizací pro správce
-- [Povolení aktualizací správce pro Visual Studio s Microsoft Endpoint Configuration Manager](../install/enabling-administrator-updates.md) – Vytvoření nového obsahu o povolení aktualizací pro správce
+- [Použití aktualizací správců, které používají Microsoft Endpoint Configuration Manager](../install/applying-administrator-updates.md) – byl vytvořen nový obsah o použití aktualizací správců
+- [Povolení aktualizací správců v aplikaci Visual Studio s Microsoft Endpoint Configuration Manager](../install/enabling-administrator-updates.md) – byl vytvořen nový obsah o povolení aktualizací správců.
 
 **Aktualizované články**
 
 - [Čísla sestavení a data vydání sady Visual Studio](../install/visual-studio-build-numbers-and-release-dates.md)
-  - Aktualizace visual-studio-build-numbers-and-release-dates.md
-  - přidání dat verze 16.9.2
-  - Aktualizace patch tuesday
-  - Aktualizace data stránky s čísly sestavení
-  - čísla buildů pro 16.9 GA a 16.10 Preview 1
+  - Aktualizovat visual-studio-build-numbers-and-release-dates.md
+  - přidat data verze 16.9.2
+  - Aktualizace úterý
+  - Stránka aktualizace data čísel buildu
+  - čísla buildu pro 16,9 GA a 16,10 Preview 1
   - Aktualizace pro nové verze
-- [Vytvoření offline instalace aplikace Visual Studio](../install/create-an-offline-installation-of-visual-studio.md) – úpravy dokumentace k aktualizaci správce
-- [Instalace certifikátů požadovaných pro Visual Studio offline instalace](../install/install-certificates-for-visual-studio-offline.md) – Úpravy dokumentace k aktualizaci správce
-- [Instalace Visual Studio verzí vedle sebe](../install/install-visual-studio-versions-side-by-side.md) – úpravy dokumentace k aktualizacím pro správce
-- [Instalace a používání Visual Studio a služeb Azure za bránou firewall](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md) nebo proxy server – aktualizovaný článek.
+- [Vytvoření offline instalace sady Visual Studio](../install/create-an-offline-installation-of-visual-studio.md) – úpravy dokumentů aktualizace pro správce
+- [Instalace certifikátů vyžadovaných pro instalaci sady Visual Studio offline](../install/install-certificates-for-visual-studio-offline.md) – úpravy dokumentu aktualizace pro správce
+- [Instalace verzí sady Visual Studio vedle sebe](../install/install-visual-studio-versions-side-by-side.md) – aktualizace dokumentu aktualizace pro správu
+- [Nainstalujte a použijte Visual Studio a služby Azure za bránou firewall nebo proxy server](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md) aktualizovaným článkem.
 
 ### <a name="javascript"></a>JavaScript
 
 **Aktualizované články**
 
-- [JavaScript a TypeScript v Visual Studio # Required; Název stránky zobrazený ve výsledcích hledání. Zahr te značku. < 60 znaků.](../javascript/index.yml) – Aktualizace AngularJS
-- [Rychlý start: Použití Visual Studio k vytvoření první aplikace Vue.js](../javascript/quickstart-vuejs-with-nodejs.md) – aktualizace AngularJS
-- [Kurz: Vytvoření aplikace ASP.NET Core s TypeScriptem v Visual Studio](../javascript/tutorial-aspnet-with-typescript.md)
+- [JavaScript a TypeScript v aplikaci Visual Studio # požadováno; nadpis stránky zobrazený ve výsledcích hledání Uveďte značku. < znaků 60.](../javascript/index.yml) – Aktualizace AngularJS
+- [Rychlý Start: použití sady Visual Studio k vytvoření první aktualizace Vue.js App](../javascript/quickstart-vuejs-with-nodejs.md) -AngularJS
+- [Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v aplikaci Visual Studio](../javascript/tutorial-aspnet-with-typescript.md)
   - Aktualizace AngularJS
-  - visualstudio-docs/issues/6457 – chybějící verze
-- [Kurz: Vytvoření aplikace Node.js Express v Visual Studio](../javascript/tutorial-nodejs.md) – aktualizace AngularJS
-- [Naučte se používat editor kódu pro JavaScript](../javascript/write-and-edit-code.md) – aktualizace AngularJS
-- [Testování částí JavaScriptu a TypeScriptu v Visual Studio](../javascript/unit-testing-javascript-with-visual-studio.md)
-  - Testy jednotek pro ASP.NET Core a TypeScript
-  - Developer Command Prompt a Developer PowerShell
+  - VisualStudio-docs/problémy/6457-chybějící verze
+- [Kurz: Vytvoření aplikace Node.js a Express v aplikaci Visual Studio](../javascript/tutorial-nodejs.md) – aktualizace AngularJS
+- [Naučte se používat editor kódu pro aktualizace pro JavaScript](../javascript/write-and-edit-code.md) – AngularJS
+- [Testování částí JavaScriptu a TypeScript v aplikaci Visual Studio](../javascript/unit-testing-javascript-with-visual-studio.md)
+  - Testování částí pro ASP.NET Core a TypeScript
+  - PowerShell Developer Command Prompt a vývojář
   - Opravy problémů GitHubu
-- [Správa balíčků npm v Visual Studio](../javascript/npm-package-management.md) – opravy problémů GitHubu
+- [Správa balíčků npm ve Visual Studiu](../javascript/npm-package-management.md) – opravy problémů na GitHubu
 
 ### <a name="msbuild"></a>MSBuild
 
 **Aktualizované články**
 
-- [Jak MSBuild sestavuje projekty](../msbuild/build-process-overview.md) – oprava špatného názvu elementu
-- [CreateCSharpManifestResourceName –](../msbuild/createcsharpmanifestresourcename-task.md) oprava nesprávného překlepu křížového odkazu
-- [Postupy: Rozšíření procesu Visual Studio sestavení](../msbuild/how-to-extend-the-visual-studio-build-process.md) – Oprava odsazení XML
-- [Úloha MIDL](../msbuild/midl-task.md) – aktualizace midl-task.md
-- [Běžné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md) – Přidání doplňku v článku a vylepšení formátování
-- [Item – element (MSBuild)](../msbuild/item-element-msbuild.md) – přidání funkce toc v článku a vylepšení formátování
-- [Úloha Exec](../msbuild/exec-task.md) – přidání dokumentace pro parametr Utf8Encoding
+- [Jak MSBuild sestavení projektů](../msbuild/build-process-overview.md) – oprava chybného názvu elementu.
+- [CreateCSharpManifestResourceName – úkol](../msbuild/createcsharpmanifestresourcename-task.md) – oprava chybného překlepu mezi odkazy
+- [Postupy: rozšiřování procesu sestavení sady Visual Studio](../msbuild/how-to-extend-the-visual-studio-build-process.md) – oprava odsazení XML
+- [Úkol MIDL](../msbuild/midl-task.md) – aktualizace MIDL-Task.MD
+- [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md) – přidání obsahu v článku a vylepšení formátování
+- [Item – Element (MSBuild)](../msbuild/item-element-msbuild.md) – přidání obsahu v článku a vylepšení formátování
+- [Úloha Exec](../msbuild/exec-task.md) – přidání dokumentu pro parametr Utf8Encoding
 
 ### <a name="profiling"></a>Profilace
 
@@ -202,10 +202,10 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 
 - [Vytvoření testovacích zástupných procedur v metodě testování částí z kódu](../test/create-unit-tests-menu.md) -VisualStudio-docs/problémy/6484--aktualizovat odkaz
 - [První pohled na testovací nástroje v aplikaci Visual Studio](../test/improve-code-quality.md) – VisualStudio – docs/problémy/6429--aktualizovat propojení testovacího prostředí
-- [Konfigurace testů jednotek pomocí *souboru .runsettings*](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
-  - Developer Command Prompt a Developer PowerShell
+- [Konfigurace testů jednotek pomocí souboru *. runsettings*](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+  - PowerShell Developer Command Prompt a vývojář
   - Opravené překlepy
-- [VSTest.Console.exe příkazového řádku –](../test/vstest-console-options.md) Developer Command Prompt a Developer PowerShell
+- [ Možnosti příkazového řádkuVSTest.Console.exe](../test/vstest-console-options.md) – Developer Command Prompt a vývojář PowerShell
 
 ## <a name="february-2021"></a>Únor 2021
 
@@ -213,43 +213,43 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 
 **Aktualizované články**
 
-- [Použití zarážek v ladicím programu Visual Studio –](../debugger/using-breakpoints.md) Aktualizace pro usnadnění přístupu
+- [Použití zarážek v ladicím programu sady Visual Studio](../debugger/using-breakpoints.md) – aktualizace pro usnadnění
 
 ### <a name="get-started"></a>Začínáme
 
 **Aktualizované články**
 
-- Kurz: Otevření projektu z Visual Studio [2017](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) – aktualizace Viz také odkazy v open projectu VS2017 z repo
-- [Kurz: Otevření projektu](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md) z repo – Přidání odkazu na verzi VS2017 stránky Otevřít projekt z repo
+- [Kurz: otevření projektu z úložiště v aplikaci Visual Studio 2017](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) – aktualizace viz také odkazy v VS2017 otevření projektu z úložiště
+- [Kurz: otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md) – přidat odkaz na VS2017 verzi na stránce otevřít projekt ze úložiště
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
 **Aktualizované články**
 
-- [Řešení potíží s nástroji MSBuild](./msbuild-logs.md) a jejich vytváření – Přidání pokynů k používání rozšíření project system tools
+- [Odstraňování potíží a vytváření protokolů pro problémy nástroje MSBuild](./msbuild-logs.md) – Přidání pokynů k používání rozšíření Project System Tools
 
 ### <a name="install"></a>Instalace
 
 **Aktualizované články**
 
 - [Aktualizace sady Visual Studio s minimálním offline rozložením](../install/update-minimal-layout.md)
-  - Přidání příkladu z roku 2017 do tabulky možností
-  - Přidání příkladů pro VS2017
+  - Přidat příklad 2017 v tabulce možností
+  - Přidat příklady pro VS2017
 
 ### <a name="msbuild"></a>MSBuild
 
 **Nové články**
 
-- [MSB3644: Referenční sestavení pro FrameworkVersion se nenašla](../msbuild/errors/msb3644.md) – chyby MSBuild
-- [MSB8036: Windows SDK verze se nenašla](../msbuild/errors/msb8036.md) – chyby MSBuild
+- [MSB3644: referenční sestavení pro ' FrameworkVersion ' nebyla nalezena](../msbuild/errors/msb3644.md) – chyby nástroje MSBuild
+- [MSB8036: Nepodařilo se najít Windows SDK ' Version '](../msbuild/errors/msb8036.md) – chyby nástroje MSBuild
 
 ### <a name="test"></a>Test
 
 **Aktualizované články**
 
-- [Použití rozhraní Microsoft Unit Testing Framework pro C++ v Visual Studio](../test/how-to-use-microsoft-test-framework-for-cpp.md) – aktualizace a úpravy malého obsahu
-- [Zápis testů jednotek pro knihovny DLL jazyka C++ v Visual Studio](../test/how-to-write-unit-tests-for-cpp-dlls.md) – malá aktualizace a úpravy obsahu
-- [Spouštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md) – Aktualizace pro usnadnění přístupu
+- [Použití architektury Microsoft Unit Testing Framework pro C++ v aplikaci Visual Studio](../test/how-to-use-microsoft-test-framework-for-cpp.md) – malé aktualizace obsahu a úpravy
+- [Zápis testů jednotek pro knihovny DLL C++ v aplikaci Visual Studio](../test/how-to-write-unit-tests-for-cpp-dlls.md) – malé aktualizace obsahu a úpravy
+- [Spuštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md) – aktualizace pro usnadnění
 - [Návod: vytvoření a spuštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) – aktualizace pro usnadnění
 - [Izolaci testovaného kódu Microsoftem napodobeninami](../test/isolating-code-under-test-with-microsoft-fakes.md) – výslovně zmíněné rozhraní .NET 5,0 v dokumentech napodobenin
 
@@ -315,60 +315,60 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 
 **Aktualizované články**
 
-- [Visual Studio čísla sestavení a data vydání –](../install/visual-studio-build-numbers-and-release-dates.md) aktualizace Patch Tuesday
+- [Čísla buildu a data verze sady Visual Studio](../install/visual-studio-build-numbers-and-release-dates.md) – oprava úterý aktualizace
 
 ### <a name="msbuild"></a>MSBuild
 
 **Aktualizované články**
 
-- [Glosář NÁSTROJE MSBuild](../msbuild/msbuild-glossary.md) – Zvýšení podpory klíčů glosáře na H2
+- [Glosář nástroje MSBuild](../msbuild/msbuild-glossary.md) – povýšení klíčů glosáře na H2
 
 ### <a name="profiling"></a>Profilace
 
 **Nové články**
 
-- [Vizualizace čítačů dotnet z Visual Studio profileru](../profiling/dotnet-counters-tool.md) – dokumentace k nástroji Pro přidání čítačů .NET
+- [Vizualizace čítačů dotnet z programu Visual Studio Profiler](../profiling/dotnet-counters-tool.md) – přidání dokumentu nástroje čítače .NET
 
 ### <a name="test"></a>Test
 
 **Aktualizované články**
 
-- [Spuštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md) – přidání testovacího zvukového podnětu do dokumentace
+- [Spustit testy jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md) – přidat zkušební dokument startovací zvukové nahrávky
 
 ## <a name="december-2020"></a>Prosinec 2020
 ### <a name="azure"></a>Azure
 
 **Nové články**
 
-- [Kurz Azure App Configuration konfigurace aplikací pomocí Visual Studio připojených služeb](../azure/vs-azure-tools-connected-services-app-configuration.md) – App Config Connected Services
+- [Přidání konfigurace aplikace Azure pomocí připojených služeb sady Visual Studio](../azure/vs-azure-tools-connected-services-app-configuration.md) – kurz pro připojené služby konfigurace aplikace
 
 ### <a name="code-quality"></a>Kvalita kódu
 
 **Aktualizované články**
 
-- [Přehled](../code-quality/use-roslyn-analyzers.md) – sestavování z příkazového řádku pomocí editoru editorconfig
-- [Povolení nebo instalace analyzátorů .NET první strany](../code-quality/install-net-analyzers.md)
-  - Přidání přehlednější dokumentace k migraci pro FxCopAnalyzers do NetAnalyzers
-  - Opětovné uspořádání obsahu pro analyzátory .NET
-- [Migrace z analyzátorů FxCop](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) na analyzátory .NET – Přidání přehlednější dokumentace k migraci pro FxCopAnalyzers na NetAnalyzers
+- [Přehled](../code-quality/use-roslyn-analyzers.md) – sestavování z příkazového řádku pomocí editorconfig
+- [Povolit nebo nainstalovat analyzátory .NET First stran](../code-quality/install-net-analyzers.md)
+  - Přidání větší srozumitelnosti do migračních dokumentů pro FxCopAnalyzers do NetAnalyzers
+  - Znovu uspořádat obsah pro analyzátory .NET
+- [Migrace z analyzátorů FxCop na analyzátory .NET](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) – přidání větší srozumitelnosti do migračních dokumentů pro FxCopAnalyzers a NetAnalyzers
 
 ### <a name="containers"></a>Kontejnery
 
 **Aktualizované články**
 
-- [Řešení Visual Studio potíží s vývojem pomocí Dockeru](../containers/troubleshooting-docker-errors.md) – Aktualizace Dockeru pro Visual Studio průvodce odstraňováním potíží
+- [Řešení potíží s vývojem pro Visual Studio pomocí Docker](../containers/troubleshooting-docker-errors.md) – aktualizace Docker pro Visual Studio – příručka pro odstraňování potíží
 
 ### <a name="debugger"></a>Ladicí program
 
 **Aktualizované články**
 
-- [Nejčastější dotazy – Vyhledání funkce ladění, kterou potřebujete v Visual Studio](../debugger/find-your-debugging-task.yml) – Práce zjišťování pro hledání úloh ladění a témat s přehledem
+- [Nejčastější dotazy – funkce ladění, kterou potřebujete, najdete v tématu Visual Studio](../debugger/find-your-debugging-task.md) – zjišťování práce pro hledání úlohy ladění a témata s přehledem.
 
 ### <a name="get-started"></a>Začínáme
 
 **Aktualizované články**
 
-- [Kurz: Vytvoření jednoduché konzolové aplikace v jazyce C# v Visual Studio](../get-started/csharp/tutorial-console.md) – Kurz konzoly C#: Část 2 se vztahuje pouze na VS 2019
+- [Kurz: Vytvoření jednoduché konzolové aplikace v jazyce c# v sadě Visual Studio](../get-started/csharp/tutorial-console.md) – kurz konzoly C#: část 2 se vztahuje pouze na vs 2019
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
@@ -396,50 +396,50 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 - [Začínáme s testováním částí](../test/getting-started-with-unit-testing.md) – zjišťování práce a další vylepšení testovacích nástrojů
 - [První pohled na testovací nástroje v aplikaci Visual Studio](../test/improve-code-quality.md) – zjišťování práce a další vylepšení testovacích nástrojů
 - [Jsou vyžadovány testovací nástroje v aplikaci Visual Studio #; nadpis stránky zobrazený ve výsledcích hledání Uveďte značku. < znaků 60.](../test/index.yml) – Zjišťování práce a další vylepšení pro testovací nástroje
-- [Spuštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md) – Přidání souboru XML dynamického seznamu testů pro rozdílová rozhraní
+- [Spuštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md) – přidat dynamický seznam testů XML pro rozdílové architektury
 
 ## <a name="november-2020"></a>Listopad 2020
 ### <a name="code-quality"></a>Kvalita kódu
 
 **Nové články**
 
-- [Povolení nebo instalace analyzátorů .NET](../code-quality/install-net-analyzers.md) – Přidání dokumentace pro migraci z analyzátorů FxCop na analyzátory .NET
-- [Migrace z analyzátorů FxCop na analyzátory .NET](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) – Přidání dokumentace pro migraci z analyzátorů FxCop na analyzátory .NET
-- [Migrace ze starší verze analýzy (FxCop)](../code-quality/migrate-from-legacy-analysis-to-net-analyzers.md) na zdrojovou analýzu (analyzátory .NET) – Přidání dokumentace pro migraci z analyzátorů FxCop na analyzátory .NET
-- [Nejčastější dotazy ke starším analyzátorům FxCop](../code-quality/net-analyzers-faq.yml) a .NET – Přidání dokumentace k migraci z analyzátorů FxCop na analyzátory .NET
+- [Povolit nebo nainstalovat analyzátory .NET](../code-quality/install-net-analyzers.md) – přidání dokumentace pro migraci z analyzátorů FxCop do analyzátorů .NET
+- [Migrace z analyzátorů FxCop do analyzátorů .NET](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) – přidání dokumentace pro migraci z analyzátorů FxCop do analyzátorů .NET
+- [Migrace ze starší verze Analysis (FxCop) do analýzy zdrojového kódu (analyzátory .NET)](../code-quality/migrate-from-legacy-analysis-to-net-analyzers.md) – přidání dokumentace pro migraci z analyzátorů FxCop do analyzátorů .NET
+- [Nejčastější dotazy týkající se starších FxCop a analyzátorů .NET](../code-quality/net-analyzers-faq.md) – přidání dokumentace pro migraci z analyzátorů FxCop do analyzátorů .NET
 
 **Aktualizované články**
 
-- [Nejčastější dotazy k analýze](../code-quality/analyzers-faq.yml) kódu – Přidání dokumentace pro migraci z analyzátorů FxCop na analyzátory .NET
-- [Stav portu pravidla Fxcop –](../code-quality/fxcop-rule-port-status.md) Přidání dokumentace pro migraci z analyzátorů FxCop do analyzátorů .NET
-- [Zastaralá pravidla –](../code-quality/fxcop-unported-deprecated-rules.md) Přidání dokumentace pro migraci z analyzátorů FxCop na analyzátory .NET
-- [Nepřinesená pravidla, která je možné přenést](../code-quality/fxcop-unported-rules-may-get-ported.md) – Přidání dokumentace pro migraci z analyzátorů FxCop na analyzátory .NET
-- [Nepřidaná pravidla –](../code-quality/fxcop-unported-rules.md) Přidání dokumentace pro migraci z analyzátorů FxCop na analyzátory .NET
-- [Instalace analyzátorů třetích stran](../code-quality/install-roslyn-analyzers.md) – Přidání dokumentace pro migraci z analyzátorů FxCop na analyzátory .NET
-- [Přehled](../code-quality/use-roslyn-analyzers.md) – přidání dokumentace pro migraci z analyzátorů FxCop na analyzátory .NET
+- [Nejčastější dotazy k analýze kódu](../code-quality/analyzers-faq.md) – přidání dokumentace k migraci z analyzátorů FxCop do analyzátorů .NET
+- [Stav portu pravidla FxCop](../code-quality/fxcop-rule-port-status.md) – přidání dokumentace k migraci z analyzátorů FxCop do analyzátorů .NET
+- [Zastaralá pravidla](../code-quality/fxcop-unported-deprecated-rules.md) – přidaná dokumentace pro migraci z analyzátorů FxCop do analyzátorů .NET
+- [Neportovaná pravidla, která mohou být](../code-quality/fxcop-unported-rules-may-get-ported.md) přidaná k migraci z analyzátorů FxCop do analyzátorů .NET
+- [Neportovaná pravidla](../code-quality/fxcop-unported-rules.md) – přidání dokumentace k migraci z analyzátorů FxCop do analyzátorů .NET
+- [Instalace analyzátorů třetích stran](../code-quality/install-roslyn-analyzers.md) – přidání dokumentace k migraci z analyzátorů FxCop do analyzátorů .NET
+- [Přehled](../code-quality/use-roslyn-analyzers.md) – přidání dokumentace k migraci z analyzátorů FxCop do analyzátorů .NET
 
 ### <a name="containers"></a>Kontejnery
 
 **Aktualizované články**
 
-- [Jak Bridge to Kubernetes funguje –](../containers/overview-bridge-to-kubernetes.md) oddíl oprávnění Kubernetes
+- [Jak přemostění na Kubernetes funguje](../containers/overview-bridge-to-kubernetes.md) – Kubernetes – oddíl oprávnění
 
 ### <a name="debugger"></a>Ladicí program
 
 **Nové články**
 
-- [Připojení k procesu spuštěném v kontejneru Dockeru](../debugger/attach-to-process-running-in-docker-container.md) – Refaktorování připojení ke zpracování dokumentace pro scénáře s Linuxem
+- [Připojení k procesu běžícímu na kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md) – refaktorující připojení ke zpracování dokumentů pro scénáře Linux
 
 **Aktualizované články**
 
-- [Připojení ke spuštěných procesům pomocí ladicího programu Visual Studio –](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) Refaktorování připojení k procesním dokumentům pro scénáře s Linuxem
-- [Ladění .NET Core v Linuxu pomocí SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md) připojením k procesu – Refaktorování připojení ke zpracování dokumentace pro scénáře s Linuxem
+- [Připojení ke spuštěným procesům pomocí ladicího programu sady Visual Studio](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) – refaktorující připojení ke zpracování dokumentů pro scénáře platformy Linux
+- [Ladění .NET Core v systému Linux pomocí SSH připojením k procesu](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md) – refaktorující připojení ke zpracování dokumentů pro scénáře Linux
 
 ### <a name="deployment"></a>Nasazení
 
 **Nové články**
 
-- [Nasazení desktopové aplikace .NET pro Windows pomocí Technologie ClickOnce](../deployment/quickstart-deploy-using-clickonce-folder.md) – Přidání rychlého startu ClickOnce pro projekty .NET pro Windows
+- [Nasazení desktopové aplikace Windows v prostředí .NET pomocí ClickOnce](../deployment/quickstart-deploy-using-clickonce-folder.md) – přidání rychlého startu ClickOnce pro projekty Windows pro .NET
 
 **Aktualizované články**
 
@@ -477,18 +477,18 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 
 **Aktualizované články**
 
-- [Prostředí Gitu v Visual Studio](../version-control/git-with-visual-studio.md)
-  - Aktualizace metadat alternativního & textu
-  - Aktualizace obsahu nového prostředí Git pro 16.8 GA
-- [Co je nového v Visual Studio 2019](./whats-new-visual-studio-2019.md)
-  - Aktualizace metadat alternativního & textu
-  - Aktualizace stránky Co je nového ve verzi Visual Studio 2019 pro verzi 16.8 GA
-- [Připojení k projektům v Team Explorer](./connect-team-project.md) – aktualizace Team Explorer stránky o nové prostředí Gitu. Poznámka: & odkaz
-- [Práce s více uživatelskými účty](./work-with-multiple-user-accounts.md) – Přidání informací o přihlašování z GitHubu na jiné stránky
+- [Prostředí Git v aplikaci Visual Studio](../version-control/git-with-visual-studio.md)
+  - Aktualizované & metadat alternativního textu
+  - Aktualizace nového obsahu v prostředí Git pro 16,8 GA
+- [Co je nového v aplikaci Visual Studio 2019](./whats-new-visual-studio-2019.md)
+  - Aktualizované & metadat alternativního textu
+  - Aktualizace stránky novinky v aplikaci Visual Studio 2019 pro 16,8 GA
+- [Připojení k projektům v Team Explorer](./connect-team-project.md) – aktualizace stránky Team Explorer pomocí nové poznámky k prostředí Git & odkaz
+- [Práce s několika uživatelskými účty](./work-with-multiple-user-accounts.md) – přidané informace o přihlášení GitHubu k ostatním stránkám
 - [Konvence formátování C++ EditorConfig](./cpp-editorconfig-properties.md)
-  - Předpona je cpp_, nikoli _cpp_ _ pro nastavení .editorconfig jazyka C++
-  - Odebrání nesprávného znaku v příkladu .editorconfig jazyka C++
-- [Převod `typeof` `nameof` na](./reference/convert-typeof-to-nameof.md) – přidání funkcí produktivity dotnet
+  - Prefix je cpp_, ne _cpp_ _ pro nastavení C++. editorconfig
+  - Příklad odebrání nesprávného znaku v jazyce C++. editorconfig
+- [Převod `typeof` na `nameof` ](./reference/convert-typeof-to-nameof.md) přidané funkce dotnet pro produktivitu
 
 ### <a name="install"></a>Instalace
 
@@ -496,12 +496,12 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 
 - [Čísla sestavení a data vydání sady Visual Studio](../install/visual-studio-build-numbers-and-release-dates.md)
   - Přidání dat 16.8.2
-  - Přidáno 16.8.1
-  - Aktualizace čísel sestavení pro verzi 16.8 GA a další
-- [Visual Studio image v Azure](../install/using-visual-studio-vm.md) – Změna publikovaného data a aktualizovaných dílčích verzí revizí
-- [Visual Studio ID úloh](../install/workload-and-component-ids.md) a komponent – Aktualizovaná dokumentace komponent pro verzi 16.8
-- [Visual Studio Build Tools adresář komponenty –](../install/workload-component-id-vs-build-tools.md) aktualizace dokumentace komponent pro verzi 16.8
-- [Visual Studio Community adresáře komponenty –](../install/workload-component-id-vs-community.md) aktualizace dokumentace komponent pro verzi 16.8
+  - Přidání 16.8.1
+  - Aktualizované číslo buildu pro 16,8 GA a dalších
+- [Image sady Visual Studio v Azure](../install/using-visual-studio-vm.md) – změněné datum publikování a aktualizace menších verzí Revize
+- [ID úloh a komponent sady Visual Studio](../install/workload-and-component-ids.md) – aktualizace dokumentace k součástem pro 16,8
+- Dokumentace k součásti [Visual Studio Build Tools adresářem součásti](../install/workload-component-id-vs-build-tools.md) – aktualizace pro 16,8
+- [Adresář komponent sady Visual Studio Community](../install/workload-component-id-vs-community.md) – aktualizace dokumentace k součástem pro 16,8
 - Dokumentace k součásti [Visual Studio Enterprise adresářem součásti](../install/workload-component-id-vs-enterprise.md) – aktualizace pro 16,8
 - Dokumentace k [adresáři komponent sady Visual Studio Team Explorer](../install/workload-component-id-vs-team-explorer.md) – aktualizované dokumentace k součásti 16,8
 - [Adresář komponenty Visual Studio Test Agent](../install/workload-component-id-vs-test-agent.md) – aktualizace dokumentace k součásti pro 16,8
@@ -540,45 +540,45 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 - [Použití dat pro čas návrhu s Návrhář XAML v aplikaci Visual Studio](../xaml-tools/xaml-designtime-data.md)
   - Aktualizace oddílu požadavků pro 16,8 GA
   - Změnili jste oddíl požadavky.
-  - Komentář k aktualizaci 16.8 Preview a odkaz na GA
+  - Update 16,8 – komentář + odkaz na GA
 
 ## <a name="october-2020"></a>Říjen 2020
 ### <a name="code-quality"></a>Kvalita kódu
 
 **Aktualizované články**
-- [Analyzátory kódu –](../code-quality/index.yml) refaktoring certifikační autority pro .NET 5
+- [Analyzátory kódu](../code-quality/index.yml) – refaktorace CA pro .NET 5
 
 ### <a name="containers"></a>Kontejnery
 
 **Aktualizované články**
 
-- [Rychlý start: Použití Dockeru s jedno stránkovou aplikací React v Visual Studio](../containers/container-tools-react.md)
-  - Nástroje kontejneru: Odebrání odkazů na staré úložiště i image
-  - Kurz Update Containers React pro .NET 3.1 a VS 16.7
-- [Jak Bridge to Kubernetes funguje –](../containers/overview-bridge-to-kubernetes.md) Bridge to Kubernetes: přidání omezení
-- [Ladění aplikací v místním kontejneru Dockeru](../containers/edit-and-refresh.md) – Sada nástrojů Dockeru
+- [Rychlý Start: použití Docker s nareagující jednostránkové aplikace v aplikaci Visual Studio](../containers/container-tools-react.md)
+  - Nástroje kontejneru: odebrat odkazy na staré úložiště imagí
+  - Kurz reakce na aktualizaci kontejnerů pro .NET 3,1 a VS 16,7
+- [Jak přemostění na Kubernetes funguje](../containers/overview-bridge-to-kubernetes.md) – most na Kubernetes: Přidání omezení
+- [Ladění aplikací v místní](../containers/edit-and-refresh.md) sadě nástrojů Docker kontejneru
 
 ### <a name="debugger"></a>Ladicí program
 
 **Nové články**
 
-- [Podpora DirectX 12 v Visual Studio](../debugger/graphics/visual-studio-graphics-diagnostics-directx-12.md) – Vsdg dx12
+- [Podpora rozhraní DirectX 12 v aplikaci Visual Studio](../debugger/graphics/visual-studio-graphics-diagnostics-directx-12.md) – Vsdg DX12
 
 **Aktualizované články**
 
-- [Ladění ASP.NET nebo ASP.NET Core v Visual Studio](../debugger/how-to-enable-debugging-for-aspnet-applications.md) – Opravy obsahu ladicího programu pro problémy GitHubu
-- [Použití zarážek v ladicím Visual Studio ladicího programu](../debugger/using-breakpoints.md) – Opravy obsahu ladicího programu pro problémy GitHubu
-- [Ladění služeb Azure v Visual Studio](../debugger/debug-azure-apps.md) – SEO a aktualizace odkazů pro ladicí program snímků
-- [Ladění živých ASP.NET Azure pomocí Snapshot Debugger](../debugger/debug-live-azure-applications.md) – SEO a aktualizace odkazů pro ladicí program snímků
-- [Vzdálené ladění –](../debugger/remote-debugging.md) SEO a aktualizace odkazů pro ladicí program snímků
-- [Přehled Visual Studio Diagnostika grafiky](../debugger/graphics/overview-of-visual-studio-graphics-diagnostics.md) – Vsdg dx12
-- [Visual Studio Diagnostika grafiky](../debugger/graphics/visual-studio-graphics-diagnostics.md) – Vsdg dx12
+- [Ladění aplikací ASP.NET nebo ASP.NET Core v aplikaci Visual Studio](../debugger/how-to-enable-debugging-for-aspnet-applications.md) – opravy obsahu ladicího programu pro problémy GitHubu
+- [Použití zarážek v ladicím programu sady Visual Studio](../debugger/using-breakpoints.md) – opravy obsahu ladicího programu pro problémy GitHubu
+- [Ladění služeb Azure v aplikaci Visual Studio](../debugger/debug-azure-apps.md) – SEO a aktualizace propojení pro program Snapshot Debugger
+- [Ladění živých aplikací Azure pomocí Snapshot Debugger](../debugger/debug-live-azure-applications.md) – SEO a aktualizace propojení pro program Snapshot Debugger
+- [Vzdálené ladění](../debugger/remote-debugging.md) – SEO a aktualizace odkazů pro ladicí program snímků
+- [Přehled sady Visual Studio Diagnostika grafiky](../debugger/graphics/overview-of-visual-studio-graphics-diagnostics.md) – Vsdg DX12
+- [Visual Studio Diagnostika grafiky](../debugger/graphics/visual-studio-graphics-diagnostics.md) – Vsdg DX12
 
 ### <a name="get-started"></a>Začínáme
 
 **Aktualizované články**
 
-- [Kurz: Rozšíření jednoduché konzolové aplikace v jazyce C#](../get-started/csharp/tutorial-console-part-2.md) – Kurz ladění přidání pro rozšířený jazyk C#
+- [Kurz: rozšíření jednoduché konzolové aplikace v jazyce c#](../get-started/csharp/tutorial-console-part-2.md) – přidání ladicího programu k rozšířenému c# – kurz
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
@@ -628,47 +628,47 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 
 **Nové články**
 
-- [Použití dat doby návrhu s Návrhář XAML v Visual Studio](../xaml-tools/xaml-designtime-data.md)
-  - Přidání oddílu rozšiřitelnosti do dokumentace k návrhu XAML
-  - Nový článek o XAML při návrhu
+- [Použití dat pro čas návrhu s Návrhář XAML v aplikaci Visual Studio](../xaml-tools/xaml-designtime-data.md)
+  - Přidání oddílu rozšiřitelnosti do dokumentace k době návrhu jazyka XAML
+  - Nový článek jazyka XAML v době návrhu
 
 ## <a name="september-2020"></a>Září 2020
 ### <a name="code-quality"></a>Kvalita kódu
 
 **Nové články**
 
-- [CA1416: Ověření kompatibility platformy](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) – Dokumentace CA1416 Ověření kompatibility platformy
-- [CA1834: Použijte StringBuilder.Append(char) pro](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) řetězce s jedním znakem – Docs pro CA1834
+- [CA1416: ověření kompatibility platforem](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) – dokumentování CA1416 ověření kompatibility platforem
+- [CA1834: použijte StringBuilder. Append (Char) pro řetězce s jedním znakem](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) -docs pro CA1834.
 
-**Aktualizovány**
+**Aktualizuj**
 
-- [Přehled analýzy zdrojového kódu –](../code-quality/roslyn-analyzers-overview.md) aktualizace analýzy kódu pro refaktoring .NET
-- [Konfigurace analýzy kvality kódu –](../code-quality/use-roslyn-analyzers.md) Aktualizace analýzy kódu pro refaktoring .NET
+- [Přehled analýzy zdrojového kódu](../code-quality/roslyn-analyzers-overview.md) – aktualizace pro analýzu kódu pro refaktoru .NET
+- [Konfigurovat analýzu kvality kódu](../code-quality/use-roslyn-analyzers.md) – aktualizace analýzy kódu pro refaktoru .NET
 
 ### <a name="containers"></a>Kontejnery
 
 **Nové články**
 
-- [Use Bridge to Kubernetes –](../containers/bridge-to-kubernetes.md) Local Process with Kubernetes rebranding to Bridge to Kubernetes
-- [Jak Bridge to Kubernetes funguje –](../containers/overview-bridge-to-kubernetes.md) místní proces s rebrandingem Kubernetes na Bridge to Kubernetes
+- [Použití mostu k Kubernetes](../containers/bridge-to-kubernetes.md) – místní proces s Kubernetesem, který umožňuje přemostění na Kubernetes
+- [Jak přemostění na Kubernetes funguje](../containers/overview-bridge-to-kubernetes.md) – místní proces s Kubernetesem, který umožňuje přemostění na Kubernetes
 
 ### <a name="deployment"></a>Nasazení
 
 **Aktualizované články**
 
-- [Nasazení aplikace do složky, služby IIS, Azure nebo jiného cíle](../deployment/deploying-applications-services-and-components-resources.md) – Aktualizace nasazení
-- [Nasazení aplikace do složky pomocí Visual Studio](../deployment/quickstart-deploy-to-local-folder.md) – Aktualizace nasazení
+- [Nasazení aplikace do složky, služby IIS, Azure nebo jiných](../deployment/deploying-applications-services-and-components-resources.md) aktualizací pro nasazení v cíli
+- [Nasazení aplikace do složky pomocí sady Visual Studio](../deployment/quickstart-deploy-to-local-folder.md) – aktualizace nasazení
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
 **Nové články**
 
-- [Nové prostředí Gitu v Visual Studio (Preview) –](../version-control/git-with-visual-studio.md) přidání nového obsahu prostředí Git (Preview)
+- [Nové prostředí Git v aplikaci Visual Studio (Preview)](../version-control/git-with-visual-studio.md) – přidání nového obsahu pro prostředí Git (Preview)
 - [Konvence formátování C++ EditorConfig](./cpp-editorconfig-properties.md) – nový článek
-- [Co je GitHub Codespaces? (Preview)](./codespaces/codespaces-overview.md) – přidání obsahu Codespaces (Preview)
-- [Jak přizpůsobit codespace (Preview) –](./codespaces/customize-codespaces.md) přidání obsahu Codespaces (Preview)
-- [Podporované Visual Studio (Preview) –](./codespaces/supported-features-codespaces.md) přidání obsahu Codespaces (Preview)
-- [Jak používat Visual Studio s codespace (Preview) –](./codespaces/use-visual-studio-with-codespaces.md) přidání obsahu Codespaces (Preview)
+- [Co je GitHub Codespaces? (Preview)](./codespaces/codespaces-overview.md) -přidat obsah Codespaces (Preview)
+- [Postup přizpůsobení codespace (Preview)](./codespaces/customize-codespaces.md) – přidání obsahu Codespaces (Preview)
+- [Podporované funkce sady Visual Studio (Preview)](./codespaces/supported-features-codespaces.md) – přidání obsahu Codespaces (Preview)
+- [Jak používat Visual Studio s codespace (Preview)](./codespaces/use-visual-studio-with-codespaces.md) – přidání obsahu Codespaces (Preview)
 
 **Aktualizované články**
 
@@ -717,26 +717,26 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 
 **Nové články**
 
-- [CA1310: Pro správnost zadejte StringComparison](/dotnet/fundamentals/code-analysis/quality-rules/ca1310) – Přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307
-- [CA1837: Místo Process.GetCurrentProcess() použijte Environment.ProcessId. Id](/dotnet/fundamentals/code-analysis/quality-rules/ca1837) – Docs for CA1837
-- [CA1838: Vyhněte se `StringBuilder` parametrům volání nespravování –](/dotnet/fundamentals/code-analysis/quality-rules/ca1838) Přidání dokumentace pro CA1838
-- [CA2008: Nevytvářejte úlohy bez předání TaskScheduler](/dotnet/fundamentals/code-analysis/quality-rules/ca2008) – Přidání dokumentace pro CA2008
-- [CA2249: Zvažte použití string.Contains místo String.IndexOf](/dotnet/fundamentals/code-analysis/quality-rules/ca2249) – Docs pro CA2249
-- [CA2361: Zajistěte,](/dotnet/fundamentals/code-analysis/quality-rules/ca2361) aby se automaticky vygenerovaná třída obsahující DataSet.ReadXml() nepoužíla s nedůvěryhodnými daty – Další pravidla DataSet/DataTable
-- [CA2362: Nezabezpečená](/dotnet/fundamentals/code-analysis/quality-rules/ca2362) datová sada nebo datová tabulka v automaticky vygenerovaných serializovatelných typech může být zranitelná vůči útokům vzdáleného spuštění kódu – další pravidla datové sady nebo datové tabulky
-- [IL3000: Při](/dotnet/fundamentals/code-analysis/quality-rules/il3000) publikování jako jednoho souboru nepoužívejte přístup k cestě k souboru sestavení – přidání dokumentace pro IL3000
-- [IL3001: Při](/dotnet/fundamentals/code-analysis/quality-rules/il3001) publikování jako jednoho souboru se vyhněte přístupu k cestě k souboru sestavení – Přidání dokumentace pro IL3001
+- [CA1310: zadejte StringComparison pro správnou správnost](/dotnet/fundamentals/code-analysis/quality-rules/ca1310) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307.
+- [CA1837: místo procesu. GetCurrentProcess () použijte Environment. ProcessID. ID](/dotnet/fundamentals/code-analysis/quality-rules/ca1837) – docs pro CA1837
+- [CA1838: Vyhněte se `StringBuilder` parametrům pro volání nespravovaného volání](/dotnet/fundamentals/code-analysis/quality-rules/ca1838) – přidání dokumentace pro CA1838
+- [CA2008: Nevytvářejte úlohy bez předávání TaskScheduler](/dotnet/fundamentals/code-analysis/quality-rules/ca2008) – přidejte dokumentaci pro CA2008
+- [CA2249: Zvažte použití řetězce. obsahuje místo řetězce. IndexOf](/dotnet/fundamentals/code-analysis/quality-rules/ca2249) – docs pro CA2249
+- [CA2361: Ujistěte se, že automaticky vygenerovaná třída obsahující datovou sadu. ReadXml () se nepoužívá s nedůvěryhodnými daty](/dotnet/fundamentals/code-analysis/quality-rules/ca2361) – další pravidla DataSet/DataTable
+- [CA2362: nebezpečná datová sada nebo DataTable v automaticky generovaném serializovatelným typu může být zranitelná proti útokům při vzdáleném spuštění kódu](/dotnet/fundamentals/code-analysis/quality-rules/ca2362) – další pravidla DataSet a DataTable.
+- [IL3000: Nepoužívejte přístup k cestě k souboru sestavení při publikování jako Souborová dokumentace pro přidání do jediného souboru](/dotnet/fundamentals/code-analysis/quality-rules/il3000) pro IL3000
+- [IL3001: Vyhněte se přístupu k cestě k souboru sestavení při publikování jako jeden soubor](/dotnet/fundamentals/code-analysis/quality-rules/il3001) – přidání dokumentů pro IL3001
 
-**Aktualizovány**
+**Aktualizuj**
 
-- [CA1002: Nezpřístupňuje obecné seznamy –](/dotnet/fundamentals/code-analysis/quality-rules/ca1002) Přidání konfigurovatelnosti – Rozhraní API Surface
-- [CA1046: Nepřetěžujte operátor rovnosti](/dotnet/fundamentals/code-analysis/quality-rules/ca1046) u odkazových typů – Přidání konfigurovatelnosti – část Surface rozhraní API
-- [CA1307: Pro](/dotnet/fundamentals/code-analysis/quality-rules/ca1307) přehlednost zadejte StringComparison – Přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307
-- [CA1700: ](/dotnet/fundamentals/code-analysis/quality-rules/ca1700) Nepocházte výčtové hodnoty &#39;vyhrazené&#39;– Přidání konfigurovatelnosti – Část Rozhraní API Surface
-- [CA1707: Identifikátory by neměly obsahovat podtržítka](/dotnet/fundamentals/code-analysis/quality-rules/ca1707) – Přidání konfigurovatelnosti – část Rozhraní API Surface
-- [CA1822: Označte členy jako statické](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) – přidání konfigurovatelnosti – část Rozhraní API Surface
-- [CA2351: Ujistěte se, že vstup pro DataSet.ReadXml()](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) je důvěryhodný – další pravidla datové sady nebo datové tabulky
-- [Instalace analyzátorů třetích stran](../code-quality/install-roslyn-analyzers.md) – změněná struktura a názvy pro dokumentaci k analýze kódu
+- [CA1002: nezveřejňujte obecné seznamy – přidání nepodporovaného](/dotnet/fundamentals/code-analysis/quality-rules/ca1002) prostoru – oddíl rozhraní API
+- [CA1046: nepřetížení operátoru rovnosti na odkazových typech](/dotnet/fundamentals/code-analysis/quality-rules/ca1046) – přidání nenáročného – oddíl rozhraní API
+- [CA1307: zadejte StringComparison pro přehlednost](/dotnet/fundamentals/code-analysis/quality-rules/ca1307) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307
+- [CA1700: Nejmenujte hodnoty výčtu &#39;vyhrazené&#39;](/dotnet/fundamentals/code-analysis/quality-rules/ca1700) -přidat nenáročné – oddíl rozhraní API.
+- [CA1707: identifikátory by neměly obsahovat podtržítka](/dotnet/fundamentals/code-analysis/quality-rules/ca1707) – přidání části s omezením – plocha rozhraní API
+- [CA1822: označte členy jako statické](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) a přídávající se v sekci rozhraní API.
+- [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) – další pravidla DataSet/DataTable
+- [Instalace analyzátorů třetích stran](../code-quality/install-roslyn-analyzers.md) – změna struktury a názvů pro dokumentaci k analýze kódu
 
 ### <a name="containers"></a>Kontejnery
 
@@ -783,34 +783,34 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 - [Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio](./how-to-report-a-problem-with-visual-studio.md)
   - Přidání dalších informací do NMI
   - Redid celou sestavu problému stránky
-- [Nápověda k F1](./not-in-toc/default.md) – Refaktorování výchozí stránky nápovědy F1
-- [Dialogové okno Automatické obnovení, Prostředí, Možnosti](./reference/autorecover-environment-options-dialog-box.md) – přidání informací o aktualizovaných umístěních souborů automatického ukládání
-- [Možnosti, Textový editor, Základní (Visual Basic), Upřesnit](./reference/options-text-editor-basic-visual-basic.md) – Přidání základní dokumentace pro nápovědy k názvům vdaných parametrů
-- [Možnosti, Textový editor, C#, Upřesnit](./reference/options-text-editor-csharp-advanced.md) – Přidání základní dokumentace pro nápovědy k názvům vdaných parametrů
-- [Visual Studio tipy a triky ke](./visual-studio-performance-tips-and-tricks.md) zvýšení výkonu – přidání informací o zákazu režimu mapování a zakázání zalamování řádků
-- [Co je nového v Visual Studio 2019](./whats-new-visual-studio-2019.md) – aktualizace novinek v Visual Studio 2019 s informacemi o 16.7 GA
+- [Nápověda F1](./not-in-toc/default.md) – výchozí stránka s nápovědu F1
+- [Automatické obnovení, prostředí, dialogové okno Možnosti](./reference/autorecover-environment-options-dialog-box.md) – přidání informací o aktualizovaných umístěních souborů automatického ukládání
+- [Možnosti, textový editor, Basic (Visual Basic), pokročilá](./reference/options-text-editor-basic-visual-basic.md) základní dokumentace pro vložené parametry název parametru
+- [Možnosti, textový editor, C#, pokročilá](./reference/options-text-editor-csharp-advanced.md) základní dokumentace pro názvy vložených parametrů
+- [Tipy a triky pro výkon sady Visual Studio](./visual-studio-performance-tips-and-tricks.md) – přidat informace o zakázání režimu mapy a zakázat zalamování slov
+- [Co je nového ve Visual studiu 2019](./whats-new-visual-studio-2019.md) – aktualizace novinky v nástroji visual Studio 2019 s 16,7 informace GA
 
 ### <a name="rtvs"></a>RTVS
 
 **Aktualizované články**
 
-- [Práce s SQL Server a R](../rtvs/integrating-sql-server-with-r.md) – opravené tabulky tak, aby zahrnovaly záhlaví sloupců
+- Práce s tabulkami opravenými [SQL Server a R](../rtvs/integrating-sql-server-with-r.md) pro zahrnutí záhlaví sloupců
 
 ## <a name="july-2020"></a>Červenec 2020
 ### <a name="code-quality"></a>Kvalita kódu
 
 **Nové články**
 
-- [CA1417: Nepoužívejte `OutAttribute` pro](/dotnet/fundamentals/code-analysis/quality-rules/ca1417) parametry řetězce pro volání nespravování – Přidání dokumentace pro CA1417
-- [CA1805: Neiniciallizovat zbytečně.](/dotnet/fundamentals/code-analysis/quality-rules/ca1805) – Přidání dokumentace pro CA1805
-- [CA1836: Preferovat IsEmpty před Count,](/dotnet/fundamentals/code-analysis/quality-rules/ca1836) pokud je k dispozici – Přidání dokumentace pro CA1836 (preferovat IsEmpty před Count)
-- [CA2016: Přeposílání parametru CancellationToken](/dotnet/fundamentals/code-analysis/quality-rules/ca2016) metodám, které jeden přepoštou – Dokument CA2016 – Předání parametru CancellationToken metodám, které ho převezme
-- [CA2350: Ujistěte se, že vstup pro DataTable.ReadXml()](/dotnet/fundamentals/code-analysis/quality-rules/ca2350) je důvěryhodný – Dokumentace k počáteční datové sady nebo pravidlům deserializace datové tabulky
-- [CA2351: Ujistěte se, že vstup pro DataSet.ReadXml()](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) je důvěryhodný – Dokumentace k počáteční datové sady nebo pravidlům deserializace datové tabulky
-- [CA2352: Nezabezpečenou](/dotnet/fundamentals/code-analysis/quality-rules/ca2352) datovou sadu nebo tabulku DataTable v serializovatelném typu může být zranitelná vůči útokům vzdáleného spuštění kódu – dokumentace k počáteční datové sady nebo pravidlům deserializace datové tabulky
-- [CA2353: Nezabezpečenou](/dotnet/fundamentals/code-analysis/quality-rules/ca2353) datovou sadu nebo tabulku DataTable v serializovatelném typu – dokumentace k pravidlům deserializace počáteční datové sady nebo datové tabulky
-- [CA2354: Nezabezpečenou](/dotnet/fundamentals/code-analysis/quality-rules/ca2354) datovou sadu nebo tabulku DataTable v grafu deserializovaných objektů může být zranitelná vůči útoku vzdáleného spuštění kódu – dokumentace k pravidlům deserializace počáteční datové sady nebo datové tabulky
-- [CA2355: Nezabezpečená](/dotnet/fundamentals/code-analysis/quality-rules/ca2355) datová sada nebo datová tabulka v grafu deserializovaných objektů – dokumentace k počáteční datové sady nebo pravidlům deserializace datové tabulky
+- [CA1417: Nepoužívejte `OutAttribute` u řetězcových parametrů pro volání nespravovaného volání](/dotnet/fundamentals/code-analysis/quality-rules/ca1417) – přidání dokumentace pro CA1417
+- [CA1805: neinicializujte zbytečně.](/dotnet/fundamentals/code-analysis/quality-rules/ca1805) – Přidání dokumentů pro CA1805
+- [CA1836: preferovat v počtu, pokud je k dispozici](/dotnet/fundamentals/code-analysis/quality-rules/ca1836) – přidat dokumentaci pro CA1836 (preferovat nezadatelné přes počet)
+- [CA2016: předejte parametr cancellationToken do metod, které přijímají CA2016 jednoho](/dotnet/fundamentals/code-analysis/quality-rules/ca2016) dokumentu – předejte parametr cancellationToken do metod, které jednu z nich přebírají.
+- [CA2350: Ujistěte se, že vstup DataTable. ReadXml () je důvěryhodný](/dotnet/fundamentals/code-analysis/quality-rules/ca2350) – počáteční počáteční datová sada/tabulka – pravidla deserializace
+- [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) – počáteční počáteční datová sada/tabulka – pravidla deserializace
+- [CA2352: nebezpečná datová sada nebo DataTable v serializovatelným typu může být zranitelná proti útokům při vzdáleném spuštění kódu](/dotnet/fundamentals/code-analysis/quality-rules/ca2352) – počáteční sada dat/DataTable – pravidla deserializace dokumentace
+- [CA2353: nezabezpečená datová sada nebo DataTable v serializovatelných typech](/dotnet/fundamentals/code-analysis/quality-rules/ca2353) – počáteční datová sada nebo deserializace – pravidla deserializace
+- [CA2354: nebezpečná datová sada nebo DataTable v deserializovaném objektovém grafu může být zranitelná proti vzdálenému spuštění kódu](/dotnet/fundamentals/code-analysis/quality-rules/ca2354) – počáteční datová sada nebo rekonstrukce pravidel deserializace dokumentů.
+- [CA2355: nezabezpečená datová sada nebo DataTable v deserializovaném objektu Graph](/dotnet/fundamentals/code-analysis/quality-rules/ca2355) – počáteční datová sada nebo deserializace – pravidla deserializace dokumentů
 - [CA2356: nezabezpečená datová sada nebo typ DataTable v objektu web deserializovatelné objekty](/dotnet/fundamentals/code-analysis/quality-rules/ca2356) – počáteční datová sada/tabulka – pravidla deserializace dokumentů
 
 ### <a name="containers"></a>Kontejnery
@@ -872,6 +872,6 @@ Vítá vás historie novinek v Visual Studio dokumentů. Tento článek obsahuje
 
 **Aktualizované články**
 
-- [Konfigurace testů jednotek pomocí *souboru .runsettings*](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
-  - Aktualizace konfigurace testů jednotek pomocí souboru runsettings
-  - Změnil se popis možnosti blame a byl přidán příklad.
+- [Konfigurace testů jednotek pomocí souboru *. runsettings*](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+  - Aktualizace pro konfiguraci testů jednotek pomocí souboru runsettings
+  - Popis možnosti viny byl změněn a byl přidán příklad.
