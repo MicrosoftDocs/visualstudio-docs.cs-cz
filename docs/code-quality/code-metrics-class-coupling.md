@@ -1,33 +1,33 @@
 ---
-title: Metriky kódu – párování tříd
+title: Metriky kódu – Párování tříd
 ms.date: 1/8/2021
-description: Přečtěte si o metrikě párování tříd pro metriky kódu v aplikaci Visual Studio.
+description: Přečtěte si o metrikách párování tříd pro metriky kódu v Visual Studio.
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f8320c460faf7532887364693080d38c0ff6baa6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0853b807d3287eb584e76d9640ac98f930edb1a7
+ms.sourcegitcommit: cc66c898ce82f9f1159bd505647f315792cac9fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860513"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "109666806"
 ---
-# <a name="code-metrics---class-coupling"></a>Metriky kódu – párování tříd
+# <a name="code-metrics---class-coupling"></a>Metriky kódu – Párování tříd
 
-Párování tříd také přechází název spojovacího bodu mezi objekty (CBO), jak je původně definováno v [CK94](#ck94). V podstatě je přebírání tříd měřítko, kolik tříd používá jedna třída. Vysoké číslo je chybné a pro tuto metriku je obvykle dobré mít nízké číslo. Překládání tříd se ukázalo jako přesné prediktivní selhání softwaru a nedávné studie ukázaly, že hodnota horní meze 9 je nejúčinnější [S2010](#s2010).
+Párování tříd také prochází názvem Párování mezi objekty (CBO), jak bylo původně definováno společností [CK94](#ck94). V podstatě je párování tříd měřítkem toho, kolik tříd používá jedna třída. Vysoké číslo je špatné a s touto metrikou je obvykle dobré nízké číslo. Ukázalo se, že párování tříd je přesným předpovědí selhání softwaru, a nedávné studie ukázaly, že horní limitní hodnota 9 je nejefektivnější hodnotou [S2010.](#s2010)
 
-Podle dokumentace Microsoftu, párování tříd "měří spojení s jedinečnými třídami prostřednictvím parametrů, místních proměnných, návratových typů, volání metod, obecných instancí nebo instancí šablon, základních tříd, implementací rozhraní, polí definovaných pro externí typy a dekorace atributů. Dobrý návrh softwaru určuje, že typy a metody by měly mít vysokou soudržnost a malý spoj. Vysoké spojení indikuje návrh, který se obtížně opakovaně používá a udržuje z důvodu jejich nejrůznějších závislostí na jiných typech. "
+Podle dokumentace Microsoftu párování tříd "měří párování s jedinečnými třídami prostřednictvím parametrů, místních proměnných, návratových typů, volání metod, obecných nebo šablonových instancí, základních tříd, implementací rozhraní, polí definovaných u externích typů a dekorování atributů. Dobrý návrh softwaru určuje, že typy a metody by měly mít vysokou a nízká párování. Vysoká párování indikuje návrh, který se obtížně opakovaně používá a udržuje kvůli mnoha vzájemným závislostem na jiných typech."
 
-Koncepce propojení a soudržnosti se jasně vztahují. Abychom tuto diskuzi na téma ponechali, nebudeme se dodávat do hloubky s využitím soudržnosti, která není [KKLS2000](#kkls2000):
+Koncepty párování a souviset jsou jasně spojené. V této diskuzi o tomto tématu se nebudeme podrobně seznamovat s jinými než stručnou definicí z [KKLS2000:](#kkls2000)
 
-"Služba Yourdon a Constantine byla představena jako" způsob, jakým jsou vnitřně vázané nebo související interní prvky modulu navzájem jiné " [YC79](#yc79). Modul má silnou soudržnost, pokud reprezentuje právě jeden úkol [...], a všechny jeho prvky přispívají k této jediné úloze. Popisují soudržnost jako atribut návrhu, nikoli kód, a atribut, který lze použít k předpovědi opětovné použitelnosti, udržovatelnosti a možnosti změny. "
+"Module modulem se vám a Yourdone představil jako "jak pevně vázané nebo související vnitřní prvky modulu jsou mezi sebou" [YC79](#yc79). Modul má silnou podchytu, pokud představuje právě jeden úkol a všechny jeho prvky přispívají k tomuto jedinému úkolu. Popisují popis popisování jako atributu návrhu, nikoli kódu, a atribut, který lze použít k předpovídání opětovné použitelnosti, udržovatelnosti a měnitelnosti.
 
 ## <a name="class-coupling-example"></a>Příklad párování tříd
 
-Pojďme se podívat na spojení třídy v akci. Nejdřív vytvořte novou konzolovou aplikaci a vytvořte novou třídu s názvem Person s některými vlastnostmi a pak hned Vypočítejte metriky kódu:
+Podívejme se na párování tříd v akci. Nejprve vytvořte novou konzolovou aplikaci a vytvořte novou třídu Person s některými vlastnostmi a pak okamžitě vypočítejte metriky kódu:
 
 ![Párování tříd – příklad 1](media/class-coupling-example-1.png)
 
@@ -51,33 +51,31 @@ Nyní spotřebujte třídu v naší `DoSomething()` metodě v rámci `PersonStuf
 
 ![Párování tříd – příklad 4](media/class-coupling-example-4.png)
 
-Jak vidíte, párování tříd pro třídu PersonStuff má až 2 a pokud přejdete na třídu, vidíte, že v ní je k této metodě nejvíce přihlašování, `DoSomething()` ale konstruktor stále používá pouze 1 třídu.  Pomocí těchto metrik můžete zobrazit celkové maximální číslo pro danou třídu a přejít k podrobnostem na základě jednotlivých členů.
+Jak vidíte, párování tříd pro třídu PersonStuff má až 2 a pokud přejdete na třídu, vidíte, že v ní je k této metodě nejvíce přihlašování, `DoSomething()` ale konstruktor stále používá pouze 1 třídu.  Pomocí těchto metrik můžete zobrazit celkový maximální počet pro danou třídu a přejít k podrobnostem jednotlivých členů.
 
-## <a name="the-magic-number"></a>Magic Number
+## <a name="the-magic-number"></a>Magické číslo
 
-Stejně jako u cyklomatická složitosti neexistuje žádné omezení, které vyhovuje všem organizacím. [S2010](#s2010) však indikuje, že je optimální limit 9:
+Stejně jako u cyclomaticky složité složitosti neexistuje žádný limit, který by byl vhodný pro všechny organizace. [S2010](#s2010) ale značí, že limit 9 je optimální:
 
-"Proto považujeme za prahové hodnoty [...] jako nejúčinnější. Tyto prahové hodnoty (pro jeden člen) jsou CBO = 9 [...]. (přidáno zdůrazněno)
+"Proto uvažujeme prahové hodnoty jako nejúčinnější. Tyto prahové hodnoty (pro jednoho člena) jsou CBO = 9". (zvýraznění přidáno)
 
 ## <a name="code-analysis"></a>analýza kódu
 
-Analýza kódu zahrnuje kategorii pravidel udržovatelnosti. Další informace najdete v tématu [pravidla udržovatelnosti](/dotnet/fundamentals/code-analysis/quality-rules/maintainability-warnings). Pokud používáte starší verzi analýzy kódu, sada pravidel rozšířená návrhová pravidla obsahuje oblast udržovatelnosti:
+Analýza kódu zahrnuje kategorii Pravidla udržovatelnosti. Další informace najdete v tématu [Pravidla udržovatelnosti.](/dotnet/fundamentals/code-analysis/quality-rules/maintainability-warnings) Při použití starší verze analýzy kódu obsahuje sada pravidel Rozšířené pokyny k návrhu oblast udržovatelnosti:
 
-![Rozšířená pravidla obecných zásad návrhu pro párování tříd](media/class-coupling-extended-design-guideline-rules.png)
+![Pravidla rozšířených obecných pokynů pro návrh párování tříd](media/class-coupling-extended-design-guideline-rules.png)
 
-V oblasti udržovatelnosti je pravidlo pro párování tříd:
+Uvnitř oblasti udržovatelnosti je pravidlo pro párování tříd:
 
 ![Pravidlo párování tříd](media/class-coupling-maintainability-area-rules.png)
 
-Toto pravidlo vystavuje upozornění, když je přeřazení tříd nadměrné. Další informace najdete v tématu [CA1506: Vyhněte se nadměrnému párování tříd](/dotnet/fundamentals/code-analysis/quality-rules/ca1506).
+Toto pravidlo zobrazí upozornění, když je párování tříd nadměrné. Další informace najdete v tématu [CA1506: Vyhněte se nadměrnému párování tříd](/dotnet/fundamentals/code-analysis/quality-rules/ca1506).
 
-Popis tohoto pravidla najdete v blogovém příspěvku o archivu archivovaného kódu: [metriky kódu jako zásady vrácení se změnami](/archive/blogs/codeanalysis/code-metrics-as-check-in-policy) a upozornění na popis prahové hodnoty *nad 80 pro třídu a vyšší než 30 pro metodu*.  Tyto hodnoty se zdají být neobvykle vysoké, ale nejméně poskytují krajní horní limit. Pokud se zobrazí toto upozornění, je něco skoro jistě špatné.
-
-## <a name="citations"></a>Citací konkrétního
+## <a name="citations"></a>Citace
 
 ### <a name="ck94"></a>CK94
 
-Chidamber, S. R. & Kemerer, C. F. (1994). Sada metrik pro objektově orientovaný návrh (transakce IEEE na Software Engineering, obj. 20, ne. 6). Získáno 14. května 2011 na webu University of pensylvánském: [http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf](http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf)
+Chida jejich, S. R. & Seymer, C. F. (1994). Sada metrik pro objektově orientovaný návrh (transakce IEEE na Software Engineering, obj. 20, ne. 6). Získáno 14. května 2011 na webu University of pensylvánském: [http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf](http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf)
 
 ### <a name="kkls2000"></a>KKLS2000
 
