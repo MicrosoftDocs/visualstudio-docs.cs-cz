@@ -1,6 +1,6 @@
 ---
 title: Ladění pomocí ladicího programu za běhu | Microsoft Docs
-description: Ladění pomocí ladicího programu za běhu v aplikaci Visual Studio. Ladění za běhu může Visual Studio spouštět automaticky, když dojde k chybám nebo selháním aplikace.
+description: Ladění pomocí ladicího programu za běhu v Visual Studio. Ladění za běhu se může spustit automaticky Visual Studio, když dojde k chybám nebo chybám aplikace.
 ms.custom: SEO-VS-2020
 ms.date: 09/24/2018
 ms.topic: how-to
@@ -12,36 +12,36 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e082f5346d22fd574b7f9b725f8ec88b8a3b08f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3bdd35056706491ace6e5e6b2f7c3f6a45464d2e
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873194"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729244"
 ---
-# <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Ladění pomocí ladicího programu za běhu v aplikaci Visual Studio
+# <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Ladění pomocí ladicího programu za běhu v Visual Studio
 
-Ladění za běhu může Visual Studio spouštět automaticky, když aplikace běží mimo Visual Studio chyby nebo selhání. S laděním za běhu můžete testovat aplikace mimo sadu Visual Studio a otevřít Visual Studio a začít ladit, když dojde k problému.
+Ladění za běhu se může spustit automaticky Visual Studio, když aplikace běží mimo Visual Studio nebo dojde k chybě. S laděním za běhu můžete testovat aplikace mimo Visual Studio a otevřít Visual Studio a zahájit ladění, když dojde k problému.
 
-Ladění za běhu funguje pro desktopové aplikace pro Windows. Nefunguje pro univerzální aplikace pro Windows ani pro spravovaný kód, který je hostovaný v nativní aplikaci, jako jsou například nástroje pro vizualizace.
+Ladění za běhu funguje u desktopových aplikací pro Windows. Nefunguje pro univerzální aplikace pro Windows ani pro spravovaný kód hostovaný v nativní aplikaci, jako jsou vizualizéry.
 
 > [!TIP]
-> Pokud chcete pouze zastavit dialogové okno ladicí program za běhu, ale nemáte nainstalovanou aplikaci Visual Studio, přečtěte si téma [zakázání ladicího programu za běhu](../debugger/just-in-time-debugging-in-visual-studio.md). Pokud jste nainstalovali aplikaci Visual Studio, může být nutné [Zakázat ladění za běhu z registru systému Windows](#disable-just-in-time-debugging-from-the-windows-registry).
+> Pokud chcete jenom zabránit zobrazení dialogového okna Ladicí program za běhu, ale nemáte nainstalované Visual Studio, podívejte se na zakázání ladicího programu za [běhu.](../debugger/just-in-time-debugging-in-visual-studio.md) Pokud jste už Visual Studio nainstalovali, možná budete muset zakázat ladění za běhu [z registru Systému Windows.](#disable-just-in-time-debugging-from-the-windows-registry)
 
-## <a name="enable-or-disable-just-in-time-debugging-in-visual-studio"></a><a name="BKMK_Enabling"></a> Povolení nebo zakázání ladění za běhu v aplikaci Visual Studio
+## <a name="enable-or-disable-just-in-time-debugging-in-visual-studio"></a><a name="BKMK_Enabling"></a> Povolení nebo zakázání ladění za běhu v Visual Studio
 
 >[!NOTE]
->Pokud chcete povolit nebo zakázat ladění za běhu, musíte spustit aplikaci Visual Studio jako správce. Povolení nebo zakázání ladění za běhu nastaví klíč registru a oprávnění správce se může vyžadovat ke změně tohoto klíče. Chcete-li otevřít aplikaci Visual Studio jako správce, klikněte pravým tlačítkem myši na aplikaci Visual Studio a vyberte možnost **Spustit jako správce**.
+>Pokud chcete povolit nebo zakázat ladění za běhu, musíte Visual Studio jako správce. Povolením nebo zakázáním ladění za běhu se nastaví klíč registru a ke změně tohoto klíče se mohou potřebná oprávnění správce. Pokud chcete Visual Studio jako správce, klikněte pravým tlačítkem na aplikaci Visual Studio a zvolte **Spustit jako správce.**
 
-Ladění za běhu můžete nakonfigurovat z dialogového okna možnosti **nástrojů** sady Visual Studio  >   (nebo   >  **Možnosti** ladění).
+Ladění za běhu můžete nakonfigurovat v dialogovém Visual Studio  >  **Nástroje** (nebo  >  Možnosti ladění).
 
-**Chcete-li povolit nebo zakázat ladění za běhu:**
+**Povolení nebo zakázání ladění za běhu:**
 
-1. V nabídce **nástroje** nebo **ladění** vyberte **Možnosti**  >  **ladění**  >  **za běhu**.
+1. V nabídce **Nástroje** **nebo Ladit** vyberte **Možnosti**  >  **Ladění**  >  **za běhu**.
 
-   ![Povolit nebo zakázat ladění JIT](../debugger/media/dbg-jit-enable-or-disable.png "Povolit nebo zakázat ladění JIT")
+   ![Povolení nebo zakázání ladění JIT](../debugger/media/dbg-jit-enable-or-disable.png "Povolit nebo zakázat ladění JIT")
 
-1. V poli **Povolit ladění za běhu pro tyto typy kódu** vyberte typy kódu, které chcete ladit za běhu, pro ladění: **spravované**, **nativní** a **/nebo.**
+1. V poli **Povolit** ladění za běhu pro tyto typy kódu vyberte typy kódu, které má ladění za běhu ladit: **Spravované,** Nativní nebo **Skript**.
 
 1. Vyberte **OK**.
 
@@ -81,7 +81,7 @@ Ve výchozím nastavení mají aplikace Windows Form obslužné rutiny výjimky 
 
 Pokud chcete povolit ladění za běhu místo standardního zpracování chyb Windows Form, přidejte tato nastavení:
 
-- V `system.windows.forms` části *machine.config* nebo *\<app name>.exe.config* souboru nastavte `jitDebugging` hodnotu na `true` :
+- V `system.windows.forms` části souboru *machine.config* *\<app name> nebo.exe.config* nastavte hodnotu `jitDebugging` na `true` :
 
     ```xml
     <configuration>
@@ -89,7 +89,7 @@ Pokud chcete povolit ladění za běhu místo standardního zpracování chyb Wi
     </configuration>
     ```
 
-- Ve formulářové aplikaci C++ Windows také nastavte `DebuggableAttribute` na hodnotu `true` v souboru *. config* nebo ve vašem kódu. Pokud kompilujete pomocí [/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format) a bez [/og](/cpp/build/reference/og-global-optimizations), kompilátor tento atribut nastaví za vás. Pokud chcete ladit neoptimalizované sestavení pro vydání, je však nutné nastavit `DebuggableAttribute` přidáním následujícího řádku do souboru *AssemblyInfo. cpp* vaší aplikace:
+- V aplikaci C++ Windows Form také nastavte na `DebuggableAttribute` v `true` souboru *.config* nebo ve vašem kódu. Pokud kompilujete [s /Zi](/cpp/build/reference/z7-zi-zi-debug-information-format) a bez [/Og](/cpp/build/reference/og-global-optimizations), kompilátor nastaví tento atribut za vás. Pokud ale chcete ladit ne optimalizované sestavení verze, musíte ho nastavit přidáním následujícího řádku do souboru `DebuggableAttribute` *AssemblyInfo.cpp* vaší aplikace:
 
    ```cpp
    [assembly:System::Diagnostics::DebuggableAttribute(true, true)];
@@ -97,18 +97,18 @@ Pokud chcete povolit ladění za běhu místo standardního zpracování chyb Wi
 
    Další informace naleznete v tématu <xref:System.Diagnostics.DebuggableAttribute>.
 
-## <a name="use-just-in-time-debugging"></a><a name="BKMK_Using_JIT"></a>Použít ladění za běhu
+## <a name="use-just-in-time-debugging"></a><a name="BKMK_Using_JIT"></a>Použití ladění za běhu
 Tento příklad vás provede laděním za běhu, když aplikace vyvolá chybu.
 
-- Abyste mohli postupovat podle těchto kroků, musíte mít nainstalovanou aplikaci Visual Studio. Pokud nemáte Visual Studio, můžete si stáhnout bezplatnou [edici Visual Studio Community Edition](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15).
+- Pokud chcete postupovat Visual Studio, musíte mít nainstalovanou instalaci. Pokud nemáte verzi Visual Studio, můžete si stáhnout [bezplatnou verzi Visual Studio Community Edition.](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
 
-- Ujistěte se, že je [povoleno](#BKMK_Enabling) ladění za běhu v **nástrojích**  >  **Možnosti**  >  **ladění** za  >  **běhu**.
+- Ujistěte se, že je [](#BKMK_Enabling) v části Nástroje Možnosti Ladění za běhu povolené  >    >    >  **ladění za běhu.**
 
-V tomto příkladu vytvoříte konzolovou aplikaci v jazyce C# v aplikaci Visual Studio, která vyvolá [NullReferenceException](/dotnet/api/system.nullreferenceexception).
+V tomto příkladu vytvoříme konzolovou aplikaci v jazyce C# v Visual Studio která vyvolá [výjimku NullReferenceException](/dotnet/api/system.nullreferenceexception).
 
-1. V aplikaci Visual Studio vytvořte konzolovou aplikaci v jazyce C# (**soubor**  >  **Nový**  >  **projekt**  >  **Visual C#**  >  **Konzolová aplikace**) s názvem *ThrowsNullException*. Další informace o vytváření projektů v aplikaci Visual Studio naleznete v tématu [Návod: Vytvoření jednoduché aplikace](../get-started/csharp/tutorial-wpf.md).
+1. V Visual Studio konzolovou aplikaci C# (**Soubor** nový projekt  >    >    >  **Konzolová aplikace Visual C#**) s názvem  >   *ThrowsNullException*. Další informace o vytváření projektů v Visual Studio tématu [Návod: Vytvoření jednoduché aplikace](../get-started/csharp/tutorial-wpf.md).
 
-1. Po otevření projektu v aplikaci Visual Studio otevřete soubor *program.cs* . Metodu Main () nahraďte následujícím kódem, který vytiskne čáru do konzoly a poté vyvolá výjimku NullReferenceException:
+1. Když se projekt otevře v Visual Studio, otevřete *soubor Program.cs.* Nahraďte metodu Main() následujícím kódem, který vytiskne řádek do konzoly a potom vyvolá výjimku NullReferenceException:
 
    ```csharp
    static void Main(string[] args)
@@ -118,11 +118,11 @@ V tomto příkladu vytvoříte konzolovou aplikaci v jazyce C# v aplikaci Visual
    }
    ```
 
-1. Chcete-li sestavit řešení, zvolte buď **ladění** (výchozí) nebo konfigurace **verze** , a pak vyberte **sestavení znovu**  >  **Sestavit řešení**.
+1. Pokud chcete sestavit řešení, zvolte konfiguraci **Ladit** (výchozí) nebo **Vypustit** a pak vyberte **Sestavit**  >  **znovu sestavit řešení.**
 
    > [!NOTE]
-   > - Pro úplné ladění vyberte možnost konfigurace **ladění** .
-   > - Pokud vyberete možnost konfigurace [vydané verze](../debugger/how-to-set-debug-and-release-configurations.md) , je nutné vypnout [pouze můj kód](../debugger/just-my-code.md) , aby tento postup fungoval. V části **nástroje**  >    >  **ladění** možností vyberte možnost **Povolit pouze můj kód**.
+   > - Pro **úplné ladění** zvolte Konfigurace ladění.
+   > - Pokud vyberete [možnost Konfigurace](../debugger/how-to-set-debug-and-release-configurations.md) verze, je nutné vypnout [Pouze můj kód](../debugger/just-my-code.md) tento postup fungovat. V **části Nástroje**  >  **Možnosti**  >  **Ladění** zrušte výběr možnosti Povolit **Pouze můj kód**.
 
    Další informace o konfiguracích sestavení naleznete v tématu [Principy konfigurací sestavení](../ide/understanding-build-configurations.md).
 
@@ -153,37 +153,37 @@ V tomto okamžiku můžete spustit ladění. Pokud jste ladění reálné aplika
 
 Pokud se ladění za běhu nespustí, když aplikace selže, i když je povolená v aplikaci Visual Studio:
 
-- Zasílání zpráv o chybách systému Windows mohl převzít zpracování chyb v počítači.
+- Zasílání zpráv o chybách systému Windows může na vašem počítači převezme zpracování chyb.
 
-  Chcete-li tento problém vyřešit, použijte Editor registru a přidejte **hodnotu DWORD** **disabled** s **hodnotou data** **1** do následujících klíčů registru:
+  Pokud chcete tento problém vyřešit, pomocí Editoru registru  přidejte hodnotu **DWORD** **Disabled** s hodnotou **1** do následujících klíčů registru:
 
   - **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Windows Error Reporting**
 
-  - (Pro 64 počítače): **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\Windows Error Reporting**
+  - (Pro 64bitové počítače): **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\Windows Error Reporting**
 
   Další informace najdete v tématu [. Nastavení WER](/windows/desktop/wer/wer-settings).
 
-- Známý problém se systémem Windows může způsobit selhání ladicího programu za běhu.
+- Známý problém s Windows může způsobit selhání ladicího programu za běhu.
 
-  Opravou je přidání **hodnoty DWORD** **auto**, s **hodnotou data** **1**, do následujících klíčů registru:
+  Opravou je přidání **hodnoty DWORD** **Auto** s daty **hodnoty** **1** do následujících klíčů registru:
 
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug**
 
-  - (Pro 64 počítače): **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug**
+  - (Pro 64bitové počítače): **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug**
 
-Během ladění za běhu se může zobrazit tato chybová zpráva:
+Během ladění za běhu se můžou zobrazit následující chybové zprávy:
 
-- **Nepovedlo se připojit k procesu selhání. Zadaný program není program systému Windows nebo MS-DOS.**
+- **Nelze se připojit k procesu, který havaruje. Zadaný program není program systému Windows ani MS-DOS.**
 
-    Ladicí program se pokusil připojit k procesu spuštěnému v rámci jiného uživatele.
+    Ladicí program se pokusil připojit k procesu spuštěnému pod jiným uživatelem.
 
-    Pokud chcete tento problém obejít, otevřete v aplikaci Visual Studio příkaz **ladit**  >  **připojit k procesu** a v seznamu **procesy k dispozici** vyhledejte proces, který chcete ladit. Pokud neznáte název procesu, vyhledejte ID procesu v dialogovém okně **ladicí program pro dobu běhu sady Visual Studio** . Vyberte proces v seznamu **procesy k dispozici** a vyberte **připojit**. Pokud chcete zavřít dialogové okno ladicí program za běhu, vyberte **ne** .
+    Pokud chcete tento problém vyřešit, otevřete v Visual Studio připojit k procesu ladění (nebo stiskněte  >   **Ctrl**  +  **Alt**  +  **P)** a v seznamu Dostupné procesy vyhledejte proces, který **chcete ladit.** Pokud název procesu neznáme, vyhledejte ID procesu v dialogovém **Visual Studio ladicího** programu za běhu. V seznamu Dostupné procesy **vyberte** proces a vyberte **Připojit.** Výběrem **ne** zavřete dialogové okno ladicího programu za běhu.
 
-- **Ladicí program nemohl být spuštěn, protože není přihlášen žádný uživatel.**
+- **Ladicí program se nepokusil spustit, protože není přihlášený žádný uživatel.**
 
-    K konzole není přihlášený žádný uživatel, takže není k dispozici žádná uživatelská relace pro zobrazení dialogového okna pro ladění za běhu.
+    Ke konzole není přihlášený žádný uživatel, takže neexistuje žádná uživatelská relace pro zobrazení dialogového okna ladění za běhu.
 
-    Pokud chcete tento problém vyřešit, přihlaste se do počítače.
+    Pokud chcete tento problém vyřešit, přihlaste se k počítači.
 
 - **Třída není zaregistrovaná.**
 

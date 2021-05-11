@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 852bfad102c4ae34bee9528009e3d4b2dd8c7384
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 80516adffcb058d6ce28751e7a9f30002ca3a640
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925726"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729296"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a React v sadě Visual Studio
 
@@ -68,15 +68,15 @@ sada Webpack rozbalí soubory JavaScriptu tak, aby mohly běžet v prohlížeči
 
     Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
 
-    ![Node.js úlohy v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
+    ![Node.js úlohy v instalačním programu sady Visual Studio](../ide/media/quickstart-nodejs-workload.png)
 
 * Je nutné mít nainstalovaný modul runtime Node.js.
 
-    Tento kurz byl testován pomocí 12.6.2 verze.
+    Tento kurz byl testován s verzí 12.6.2.
 
-    Pokud ho nemáte nainstalovaný, doporučujeme, abyste si nainstalovali verzi LTS z webu [Node.js](https://nodejs.org/en/download/) , abyste dosáhli nejlepší kompatibility s externími architekturami a knihovnami. Node.js je sestavená pro 32 bitové a 64 architektury. Nástroje Node.js v aplikaci Visual Studio, které jsou součástí úlohy Node.js, podporují obě verze. Je vyžadována pouze jedna a instalační služba Node.js podporuje pouze instalaci v jednom okamžiku.
-    
-    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nezjistí nainstalovaný modul runtime, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný modul runtime na stránce vlastnosti (po vytvoření projektu klikněte pravým tlačítkem myši na uzel projektu, vyberte možnost **vlastnosti** a nastavte **cestuNode.exe**). Můžete použít globální instalaci Node.js nebo můžete zadat cestu k místnímu interpretu v každém z vašich Node.jsch projektů. 
+    Pokud ji nemáte nainstalovanou, doporučujeme nainstalovat verzi LTS z webu [Node.js](https://nodejs.org/en/download/) pro zajištění nejlepší kompatibility s externími rozhraními a knihovnami. Node.js je sestavená pro 32bitovou a 64bitovou architekturu. Nástroje Node.js v Visual Studio, které jsou součástí úlohy Node.js, podporují obě verze. Vyžaduje se jenom jeden z nich a Node.js podporuje jenom jednu instalaci najednou.
+
+    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nainstalovaný modul runtime nezjistí, můžete projekt nakonfigurovat tak, aby odkazovat na nainstalovaný modul runtime na stránce vlastností (po vytvoření projektu klikněte pravým tlačítkem na uzel projektu, zvolte Vlastnosti **(nebo** stiskněte **Klávesu Alt**  +  **Enter)** a **nastavte cestuNode.exe ).** Můžete použít globální instalaci Node.js nebo můžete zadat cestu k místnímu interpretu v každém z vašich Node.js projektů. 
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
@@ -87,20 +87,20 @@ Nejprve vytvoříte projekt webové aplikace Node.js.
 1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Node.js** a pak zvolte **prázdné Node.js webová aplikace – JavaScript**. (I když tento kurz používá kompilátor TypeScript, postup vyžaduje, abyste začali s šablonou **JavaScriptu** .)
+    Stisknutím **klávesy Esc** zavřete úvodní okno. Zadejte **Ctrl + Q** a otevřete vyhledávací pole, zadejte **Node.js** a pak zvolte Blank (Prázdná) Node.js Web Application - JavaScript (Webová aplikace **– JavaScript).** (I když tento kurz používá kompilátor TypeScriptu, kroky vyžadují, aby se začalo s **šablonou JavaScriptu.)**
     
-    V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    V dialogovém okně, které se zobrazí, zvolte **Vytvořit.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **JavaScript** a pak zvolte možnost **Node.js**. V prostředním podokně zvolte **prázdné Node.js webová aplikace**, zadejte název **NodejsWebAppBlank** a pak zvolte **OK**.
+    V horním řádku nabídek zvolte **File** New Project  >  **(Soubor nového**  >  **projektu).** V levém podokně dialogového okna **Nový** projekt rozbalte **JavaScript** a pak **zvolteNode.js**. V prostředním podokně zvolte **Prázdná Node.js aplikace,** zadejte název **NodejsWebAppBlank** a pak zvolte **OK.**
     ::: moniker-end
-    Pokud nevidíte šablonu projektu **prázdná Node.js webové aplikace** , je nutné přidat úlohu **vývojeNode.js** . Podrobné pokyny najdete v části [požadavky](#prerequisites).
+    Pokud nevidíte šablonu projektu **Prázdná Node.js webové** aplikace, musíte přidat úlohu **Node.js vývoj.** Podrobné pokyny najdete v tématu [Požadavky.](#prerequisites)
 
     Visual Studio vytvoří nové řešení a otevře příslušný projekt.
 
     ![Projekt Node.js v Průzkumníku řešení](../javascript/media/tutorial-nodejs-react-project-structure.png)
 
-    (1) zvýrazněná **tučně** je váš projekt pomocí názvu, který jste zadali v dialogovém okně **Nový projekt** . V systému souborů je tento projekt reprezentovaný souborem *.njsproj* ve složce projektu. Vlastnosti a proměnné prostředí přidružené k projektu můžete nastavit tak, že kliknete pravým tlačítkem na projekt a zvolíte **Vlastnosti**. Můžete provést operaci round-trip s jinými nástroji pro vývoj, protože soubor projektu neprovádí vlastní změny ve zdroji projektu Node.js.
+    (1) Projekt  je zvýrazněný tučně s použitím názvu, který jste dali v **dialogovém okně Nový** projekt. V systému souborů je tento projekt reprezentovaný souborem *.njsproj* ve složce projektu. Vlastnosti a proměnné prostředí přidružené k projektu můžete nastavit tak, že kliknete pravým tlačítkem na projekt a zvolíte **vlastnosti** (nebo stisknete klávesu **ALT**  +  **ENTER**). Můžete provést operaci round-trip s jinými nástroji pro vývoj, protože soubor projektu neprovádí vlastní změny ve zdroji projektu Node.js.
 
     (2) na nejvyšší úrovni je řešení, které ve výchozím nastavení má stejný název jako projekt. Řešení, reprezentované na disku souborem *.sln*, je kontejner pro jeden nebo více souvisejících projektů.
 
@@ -154,11 +154,11 @@ Tato aplikace vyžaduje ke správnému fungování řadu modulů npm.
 
 1. Uložte změny.
 
-1. V projektu klikněte pravým tlačítkem na uzel **npm** a vyberte **instalovat balíčky npm**.
+1. Klikněte pravým **tlačítkem na uzel npm** ve vašem projektu a zvolte **Nainstalovat balíčky npm**.
 
-    Tento příkaz spustí přímo příkaz pro instalaci npm.
+    Tento příkaz spustí příkaz npm install přímo.
 
-    V dolním podokně vyberte okno **výstup** , abyste viděli pokrok při instalaci balíčků. Instalace může trvat několik minut a okamžitě se výsledky neprojeví. Chcete-li zobrazit výstup, ujistěte se, že jste vybrali možnost **npm** v poli **Zobrazit výstup z** v okně **výstup** .
+    V dolním podokně vyberte okno **Výstup,** abyste viděli průběh instalace balíčků. Instalace může trvat několik minut a výsledky se nemusí zobrazit okamžitě. Pokud chcete zobrazit výstup, ujistěte se, že v okně Výstup v poli **Zobrazit výstup z** **vyberete** **Npm.** (Pokud chcete otevřít okno, zvolte **Zobrazit.**  >  **Výstup** nebo stiskněte **Ctrl**  +  **Alt**  +  **O**.)
 
     Tady jsou moduly npm, které se po instalaci zobrazí v Průzkumníku řešení.
 
@@ -178,11 +178,11 @@ V tomto postupu do projektu přidáte čtyři nové soubory.
 
 Nové soubory projektu pro tuto jednoduchou aplikaci přidáte do kořenu projektu. (U většiny aplikací se soubory obvykle přidávají do podsložek a odkazy s relativní cestou se podle toho upraví.)
 
-1. V Průzkumníku řešení klikněte pravým tlačítkem na projekt **NodejsWebAppBlank** a zvolte **Přidat** > **Nová položka**.
+1. V Průzkumník řešení klikněte pravým tlačítkem na projekt **NodejsWebAppBlank** a zvolte **Přidat**  >  **novou položku** (nebo stiskněte **Ctrl**  +  **SHIFT**  +  **A).**
 
-1. V dialogovém okně **Přidat novou položku** zvolte **soubor TypeScript JSX**, zadejte název *App. TSX* a vyberte **Přidat** nebo **OK**.
+1. V dialogovém **okně Přidat** novou položku zvolte Soubor **TypeScript JSX,** zadejte název *app.tsx* a vyberte **Přidat** nebo **OK**.
 
-1. Opakováním tohoto postupu přidejte *webpack config.js*. Místo souboru TypeScript JSX vyberte **soubor JavaScriptu**.
+1. Opakováním tohoto postupu přidejte *webpack config.js*. Místo souboru JSX TypeScriptu zvolte **javascriptový soubor**.
 
 1. Opakováním stejného postupu do projektu přidejte *index.html*. Místo souboru JavaScript zvolte **Soubor HTML**.
 
@@ -276,9 +276,9 @@ V předchozím postupu jste do projektu přidali *webpack-config.js*. Dále při
     }
     ```
 
-    Konfigurační kód pro sadu Webpack instruuje sadu Webpack, aby používala zavaděč TypeScript k JSXí.
+    Konfigurační kód webpacku instruuje webpack, aby k transpilaci JSX použít zavaděč TypeScriptu.
 
-1. Otevřete *tsconfig.js* a nahraďte výchozí kód následujícím kódem, který určuje možnosti kompilátoru TypeScript:
+1. Otevřete *tsconfig.json a* nahraďte výchozí kód následujícím kódem, který určuje možnosti kompilátoru TypeScriptu:
 
     ```json
     {
@@ -314,25 +314,25 @@ V předchozím postupu jste do projektu přidali *webpack-config.js*. Dále při
 
     ![Spuštění webpacku](../javascript/media/tutorial-nodejs-react-run-webpack-cmd.png)
 
-    Pokud se místo uvedeného výstupu zobrazují nějaké chyby, je potřeba je před použitím aplikace odstranit. Příčinou těchto chyb může být skutečnost, že se vaše verze balíčků npm liší od verzí používaných v tomto kurzu. Jednou možností, jak chyby odstranit, je použití přesně těch verzí, které jsou uvedené v dřívějším postupu. Pokud jsou některé z těchto verzí balíčků zastaralé a způsobují chyby, může být k odstranění chyb potřeba nainstalovat novější verze. Informace o použití *package.js* k řízení verzí balíčku npm naleznete v části [package.jsv konfiguraci](../javascript/configure-packages-with-package-json.md).
+    Pokud se místo uvedeného výstupu zobrazují nějaké chyby, je potřeba je před použitím aplikace odstranit. Příčinou těchto chyb může být skutečnost, že se vaše verze balíčků npm liší od verzí používaných v tomto kurzu. Jednou možností, jak chyby odstranit, je použití přesně těch verzí, které jsou uvedené v dřívějším postupu. Pokud jsou některé z těchto verzí balíčků zastaralé a způsobují chyby, může být k odstranění chyb potřeba nainstalovat novější verze. Informace o použití nástroje *package.json* k řízení verzí balíčků npm najdete vpackage.js [ o konfiguraci](../javascript/configure-packages-with-package-json.md).
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a zvolte možnost **Přidat**  >  **existující složku**, zvolte složku *DIST* a zvolte **možnost vybrat složku**.
+1. V Průzkumník řešení klikněte pravým tlačítkem na uzel projektu, zvolte Přidat existující složku, zvolte složku  >   *dist* a zvolte **Vybrat složku**.
 
     Visual Studio přidá do projektu složku *dist*, která obsahuje *app-bundle.js* a *app-bundle.js.map*.
 
 1. Otevřete *app-bundle.js* a zobrazte transpilovaný kód jazyka JavaScript.
 
-1. Pokud se zobrazí výzva k opětovnému načtení externě upravených souborů, vyberte **Ano pro všechny**.
+1. Pokud se zobrazí výzva k opětovnému načtení externě upravených souborů, **vyberte Ano všem**.
 
     ![Načtení změněných souborů](../javascript/media/tutorial-nodejs-react-reload-files.png)
 
-Vždycky, když provedete změny v *app.tsx*, je nutné znovu spustit příkaz webpack. Chcete-li tento krok automatizovat, přidejte skript sestavení pro JSX.
+Vždycky, když provedete změny v *app.tsx*, je nutné znovu spustit příkaz webpack. Pokud chcete tento krok automatizovat, přidejte skript sestavení pro transpilaci JSX.
 
-## <a name="add-a-build-script-to-transpile-the-jsx"></a>Přidání skriptu sestavení pro přebudování JSX
+## <a name="add-a-build-script-to-transpile-the-jsx"></a>Přidání skriptu sestavení pro transpilaci JSX
 
-Počínaje verzí Visual Studio 2019 je vyžadován skript sestavení. Namísto transpiling JSX na příkazovém řádku (jak je znázorněno v předchozí části), můžete přepracovat JSX při sestavování ze sady Visual Studio.
+Od Visual Studio 2019 se vyžaduje skript sestavení. Místo transpilace JSX na příkazovém řádku (jak je znázorněno v předchozí části) můžete při sestavování z příkazového řádku transpilovat JSX Visual Studio.
 
-* Otevřete *package.js* a přidejte následující část za `dependencies` oddíl:
+* Otevřete *package.json a* za část přidejte následující `dependencies` část:
 
    ```json
    "scripts": {
@@ -426,25 +426,25 @@ V tomto scénáři použijte Chrome.
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
 
-    Spustí se prohlížeč s povoleným laděním.
+    Tím se spustí prohlížeč s povoleným laděním.
 
-    Aplikace ještě není spuštěná, takže získáte prázdnou stránku prohlížeče.
+    Aplikace ještě není spuštěná, takže se zobrazí prázdná stránka prohlížeče.
 
 ### <a name="attach-the-debugger-to-client-side-script"></a>Připojení ladicího programu ke skriptu na straně klienta
 
-1. Přepněte do sady Visual Studio a pak nastavte zarážku ve zdrojovém kódu, buď *app-bundle.js*  , nebo *App. TSX*.
+1. Přepněte Visual Studio a nastavte zarážku ve zdrojovém kódu, a to buď *app-bundle.js,*  nebo *app.tsx*.
 
-    Pro *app-bundle.js* nastavte zarážku ve funkci, `render()` jak je znázorněno na následujícím obrázku:
+    Například *app-bundle.js* nastavte zarážku ve funkci , `render()` jak je znázorněno na následujícím obrázku:
 
-    ![Snímek obrazovky okna Visual Studio Code pro app-bundle.js. Červená tečka na levém hřbetu indikuje, že ve funkci rendering je nastavená zarážka.](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
+    ![Snímek obrazovky s Visual Studio kódu pro app-bundle.js Červená tečka v levé okapové oblasti indikuje, že je ve funkci vykreslování nastavena zarážka.](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
-    Chcete-li najít `render()` funkci v souboru předaného *app-bundle.js* , použijte **CTRL** + **F** (**Upravit**  >  **hledání a nahradit**  >  **Rychlé hledání**).
+    Pokud chcete funkci `render()` najít v  transpilovanéapp-bundle.jssouboru, použijte **Ctrl** + **F** (**Rychlé** hledání a  >  **nahrazení** pro  >  úpravy).
 
-    Pro *App. TSX* nastavte zarážku uvnitř `render()` funkce v `return` příkazu.
+    Pro *app.tsx* nastavte zarážku uvnitř `render()` funkce na příkaz `return` .
 
-    ![Snímek obrazovky okna Visual Studio Code pro App. TSX Červená tečka na levém hřbetu indikuje, že je nastavená zarážka u příkazu return funkce Render.](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
+    ![Snímek obrazovky Visual Studio kódu pro app.tsx Červená tečka v levém okapu značí, že je u příkazu return funkce render nastavena zarážka.](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
 
-2. Pokud nastavujete zarážku v souboru *. TSX* (místo *app-bundle.js*), je nutné aktualizovat *webpack-config.js*. Nahraďte následující kód:
+2. Pokud nastavíte zarážku v *souboru .tsx* (app-bundle.js *),* musíte aktualizovat *webpack-config.js*. Nahraďte následující kód:
 
     ```javascript
     output: {
@@ -461,20 +461,20 @@ V tomto scénáři použijte Chrome.
     },
     ```
 
-    Toto je nastavení jenom pro vývoj, které umožňuje ladění v aplikaci Visual Studio. Toto nastavení umožňuje při sestavování aplikace přepsat vygenerované odkazy v souboru zdrojového mapování, *app-bundle.js. map*. Ve výchozím nastavení odkazy na sadu Webpack v souboru zdrojového mapování zahrnují předponu *Webpack:///* , která brání sadě Visual Studio najít zdrojový soubor *App. TSX*. Konkrétně při provedení této změny se odkaz na zdrojový soubor *App. TSX* změní z *Webpack:///./app.TSX* na *./app.TSX*, který umožňuje ladění.
+    Toto je nastavení pouze pro vývoj, které umožňuje ladění v Visual Studio. Toto nastavení umožňuje přepsat vygenerované odkazy ve zdrojovém souboru mapy *app-bundle.js.map* při sestavování aplikace. Ve výchozím nastavení obsahují odkazy webpacku ve zdrojovém souboru mapy předponu *webpack:///,* která brání Visual Studio zdrojovému souboru *app.tsx.* Konkrétně se při této změně změní odkaz na zdrojový soubor *app.tsx* *z webpack:///./app.tsx* *na ./app.tsx*, což umožňuje ladění.
 
-3. Vyberte cílový prohlížeč jako cíl ladění v aplikaci Visual Studio a potom stisknutím klávesy **CTRL** + **F5** (**ladění**  >  **Spusťte bez ladění**) spusťte aplikaci v prohlížeči.
+3. Vyberte cílový prohlížeč jako cíl ladění v Visual Studio a potom stiskněte **Ctrl** + **F5** **(Spustit** ladění bez ladění) a spusťte aplikaci v  >  prohlížeči.
 
     ::: moniker range=">=vs-2019"
-    Pokud jste vytvořili konfiguraci prohlížeče s popisným názvem, vyberte jako cíl ladění.
+    Pokud jste vytvořili konfiguraci prohlížeče s popisný název, zvolte tuto možnost jako cíl ladění.
     ::: moniker-end
 
     Aplikace se otevře na nové kartě prohlížeče.
 
-4. Vyberte **ladit**  >  **připojit k procesu**.
+4. Zvolte **ladit**  >  **připojit k procesu** (nebo stiskněte klávesovou **zkratku CTRL**  +  **+**  +  **P**).
 
     > [!TIP]
-    > Od sady Visual Studio 2017 se po prvním připojení k procesu pomocí následujícího postupu můžete rychle připojit ke stejnému procesu výběrem možnosti **ladění** znovu  >  **připojit k procesu**.
+    > Od sady Visual Studio 2017 se po prvním připojení k procesu pomocí následujícího postupu můžete rychle připojit ke stejnému procesu tak, že zvolíte možnost **ladění** znovu  >  **připojit k procesu** (nebo stiskněte klávesu **SHIFT**  +  **ALT**  +  **P**).
 
 5. V dialogovém okně **připojit k procesu** Získejte filtrovaný seznam instancí prohlížeče, ke kterým se můžete připojit.
 
@@ -511,14 +511,14 @@ V tomto scénáři použijte Chrome.
 
    * Pokud potřebujete proniknout do kódu v *app.tsx* a nedaří se vám to, připojte ladicí program pomocí dialogového okna **Připojit k procesu**, jak bylo popsáno v předchozím postupu. Ujistěte se, že je prostředí správně nastavené:
 
-      * Zavřeli jste všechny instance prohlížeče, včetně rozšíření Chrome (pomocí Správce úloh), abyste mohli spustit prohlížeč v režimu ladění. Ujistěte se, že jste spustili prohlížeč v režimu ladění.
+      * Zavřeli jste všechny instance prohlížeče, včetně rozšíření chromu (pomocí Správce úloh), abyste mohli prohlížeč spustit v režimu ladění. Ujistěte se, že prohlížeč spustíte v režimu ladění.
 
-      * Ujistěte se, že váš zdrojový soubor mapování obsahuje odkaz na *./app.TSX* a ne *Webpack:///./app.TSX*, což brání ladicímu programu sady Visual Studio v umístění *App. TSX*.
-       Případně, pokud potřebujete přerušit kód v souboru *App. TSX* a nemůžete to provést, zkuste použít `debugger;` příkaz v *App. TSX* nebo nastavit zarážky v vývojářské nástroje Chrome (nebo v nástrojích F12 pro Microsoft Edge) místo.
+      * Ujistěte se, že zdrojový soubor mapy obsahuje odkaz na *./app.tsx* a ne *na webpack:///./app.tsx*, což ladicímu programu Visual Studio brání v vyhledání *souboru app.tsx.*
+       Případně pokud potřebujete prolomit kód v *app.tsx* a nemůžete to udělat, zkuste místo toho použít příkaz v app.tsx nebo nastavit zarážky v Chrome `debugger;` Vývojářské nástroje (nebo F12 Tools for Microsoft Edge). 
 
-   * Pokud potřebujete přerušit kód v *app-bundle.js* a nemůžete to provést, odeberte zdrojový soubor mapování *app-bundle.js. map*.
+   * Pokud potřebujete rozdělit kód  doapp-bundle.jsa nemůžete to udělat, odeberte zdrojový soubor mapy *app-bundle.js.map*.
 
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)
+> [Nasazení aplikace do Linuxu App Service](../javascript/publish-nodejs-app-azure.md)

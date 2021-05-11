@@ -1,34 +1,36 @@
 ---
-title: Jak Visual Studio usnadňuje správu zdrojového kódu
+title: Jak Visual Studio usnadňuje řízení zdrojového kódu
 titleSuffix: ''
-description: Naučte se, jak pomocí Gitu & GitHubu v aplikaci Visual Studio sledovat změny kódu a vracet je, pokud potřebujete.
+description: Naučte se používat Git & GitHubu v Visual Studio ke sledování změn kódu a jejich vrácení v případě potřeby.
 ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jmartens
-ms.openlocfilehash: f6213174bbef5c4d5976e410f92b771b34ae6f23
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.openlocfilehash: 982eea07b6668678669ac73678f6a0460a4ebff0
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107917788"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729235"
 ---
-# <a name="how-visual-studio-makes-source-control-easy"></a>Jak Visual Studio usnadňuje správu zdrojového kódu
+# <a name="how-visual-studio-makes-source-control-easy"></a>Jak Visual Studio usnadňuje řízení zdrojového kódu
 
-Měli byste někdy chtít přejít zpět na dříve funkční verzi kódu? Najdete ruční ukládání kopií kódu do různých umístění jako zálohu? Správa zdrojového kódu umožňuje sledovat změny provedené v kódu v průběhu času, abyste mohli sledovat průběh a vracet se na konkrétní verze. Visual Studio usnadňuje práci s Git, což je nejpoužívanější systém pro řízení verzí.
+Už jste někdy chtěli, abyste se mohli vrátit k dříve funkční verzi kódu? Ukládáte kopie kódu ručně v různých umístěních jako zálohu? Source control makes it possible to track changes you make to your code over time so you can both track your progress and revert to specific versions. Visual Studio usnadňuje práci s Gitem, což je nejpoužívanější moderní systém pro řízení verzí.
 
-## <a name="a-great-place-to-start-with-git--github"></a>Skvělé místo, kde můžete začít s Git & GitHubem
+## <a name="a-great-place-to-start-with-git--github"></a>Skvělé místo, kde začít s Git & GitHubu
 
-GitHub nabízí bezplatné a zabezpečené úložiště kódu v cloudu, kde můžete svůj kód uložit a přistupovat k němu z libovolného zařízení, kdekoli. Visual Studio přináší prvotřídní funkce Gitu a GitHubu, které usnadňují používání správy zdrojového kódu ke správě kódu a spolupráci s ostatními. Začněte přidáním kódu do Gitu & GitHubu pomocí následujícího dialogového okna **vytvořit úložiště Git** . Provedete to tak ,  >  že v řádku nabídek zvolíte Git **vytvořit úložiště Git** .
+GitHub nabízí bezplatné a zabezpečené cloudové úložiště kódu, kam můžete ukládat kód a přistupovat k něj z libovolného zařízení kdekoli. Visual Studio obsahuje prvotřídní funkce Gitu a GitHubu, které usnadňuje použití správy zdrojového kódu ke správě kódu a spolupráci s ostatními. Začínáme přidáním kódu do Gitu & GitHubu pomocí následujícího dialogového **okna Create a Git repository (Vytvoření** úložiště Git). Pokud to chcete udělat, **zvolte**  >  **na řádku nabídek Git** Create a Git repository (Vytvořit úložiště Git).
 
-:::image type="content" source="media/git-source-control-create-repository.png" alt-text="Dialogové okno vytvořit úložiště Git v aplikaci Visual Studio.":::
+:::image type="content" source="media/git-source-control-create-repository.png" alt-text="Dialogové okno Create a Git Repository (Vytvořit úložiště Git) v Visual Studio.":::
 
-Pomocí GitHubu můžete také prozkoumat velký počet Open-Source úložišť a seznámit se s nimi. Visual Studio usnadňuje klonování a procházení stávajících úložišť GitHubu, takže se jedná o skvělé výukové prostředí.
+Pomocí GitHubu můžete také zkoumat velký počet úložišť open source a učit se z něj. Visual Studio usnadňuje klonování a procházení existujících úložišť GitHub, takže se jedná o skvělé výukové prostředí.
 
-## <a name="streamlined-and-intuitive-inner-loop-git-experience"></a>Zjednodušené a intuitivní prostředí Git ve vnitřních smyčkách
+## <a name="streamlined-and-intuitive-inner-loop-git-experience"></a>Zjednodušené a intuitivní prostředí Gitu s vnitřní smyčkou
 
-Visual Studio poskytuje zjistitelné a intuitivní funkce Gitu zaměřené na maximalizaci produktivity denního pracovního postupu (vnitřní smyčka). Už nemusíte opustit svůj kód, abyste mohli potvrdit změny. Mezi tyto funkce patří nabídka Git nejvyšší úrovně, okno změn Git a stavový řádek Git s fokusem. Git se integruje se sadou Visual Studio jako holistickýé prostředí. například Průzkumník řešení a Editor kódu mají první třídu integrace Gitu.
+Visual Studio poskytuje zjistitelné a intuitivní funkce Gitu zaměřené na maximalizaci produktivity každodenního pracovního postupu (vnitřní smyčka). K potvrzení změn už se od kódu nebudete muset přesouvat. Mezi tyto funkce patří nabídka Git nejvyšší úrovně, okno Git Changes (Změny Gitu) a stavový řádek zaměřený na Git. Git se integruje s Visual Studio jako ucelené prostředí. Například rozhraní Průzkumník řešení i Editor kódu mají prvotřídní integraci s Gitem.
 
 :::image type="content" source="media/git-source-control-inner-loop.png" alt-text="Integrované vývojové prostředí (IDE) sady Visual Studio s nabídkou Git a na kartě změny Git v Průzkumník řešení zobrazuje.":::
 
