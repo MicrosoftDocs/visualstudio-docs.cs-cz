@@ -1,6 +1,6 @@
 ---
 title: Začínáme s Visual Studio Tools for Unity | Microsoft Docs
-description: Naučte se instalovat a nastavovat Visual Studio pro vývoj Unity.
+description: Zjistěte, jak nainstalovat a nastavit Visual Studio pro vývoj pro Unity.
 ms.custom: ''
 ms.date: 01/27/2021
 ms.technology: vs-unity-tools
@@ -13,42 +13,42 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: e05a94ecf9cf690f46299684c82f2b3961a783c8
-ms.sourcegitcommit: 585547ea7363ab1b6bb9d41f6d008cbe478d1a3b
+ms.openlocfilehash: 791f25b61c86f0115c225d505bdb1edb07869961
+ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98912565"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109782605"
 ---
-# <a name="get-started-with-visual-studio-and-unity"></a>Začínáme se sadou Visual Studio a Unity
+# <a name="get-started-with-visual-studio-and-unity"></a>Začínáme s Visual Studio a Unity
 
 > [!NOTE]
-> V tomto průvodci se předpokládá, že už máte nainstalovanou Unity pomocí programu centrum Unity. Pokud s Unity začínáte, doporučujeme, abyste se seznámili s Unity a nejprve dokončili [výukovou cestu Unity Essentials](https://learn.unity.com/pathway/unity-essentials) .
+> V této příručce se předpokládá, že už máte Unity nainstalovanou pomocí programu Unity Hub. Pokud je pro vás Unity novinka, doporučujeme navštívit Unity Learn a nejprve dokončit studijní [postup Unity Essentials.](https://learn.unity.com/pathway/unity-essentials)
 
 ## <a name="install-unity-support-for-visual-studio"></a>Instalace podpory Unity pro Visual Studio
 
-Visual Studio Tools for Unity je bezplatné rozšíření, které poskytuje podporu pro psaní a ladění C# a dalších. Úplný seznam toho, co rozšíření obsahují, najdete v [přehledu nástrojů pro Unity](./visual-studio-tools-for-unity.md) .
+Visual Studio Tools for Unity je bezplatné rozšíření, které poskytuje podporu pro psaní a ladění jazyka C# a další. Úplný [seznam toho,](./visual-studio-tools-for-unity.md) co rozšíření zahrnují, najdete v přehledu nástrojů pro Unity.
 
 :::zone pivot="windows"
 
 > [!NOTE]
-> Tato instalační příručka je určena pro Visual Studio. Pokud používáte Visual Studio Code, navštivte prosím [vývoj Unity s vs Code dokumentaci](https://code.visualstudio.com/docs/other/unity).
+> Tento průvodce instalací je pro Visual Studio. Pokud používáte aplikaci Visual Studio Code, navštivte stránku [Unity Development with VS Code dokumentaci.](https://code.visualstudio.com/docs/other/unity)
 
-1. [Stáhněte si instalační program sady Visual Studio](/visualstudio/docs/install/install-visual-studio.md)nebo ho spusťte, pokud už je nainstalovaný.
-2. Klikněte na **Upravit** (Pokud je už nainstalovaný) nebo **nainstalujte** (pro nové instalace) pro požadovanou verzi sady Visual Studio.
-3. Na kartě **úlohy** přejděte do části **hry** a vyberte úlohu **vývoj her pomocí Unity** .
+1. [Stáhněte si Visual Studio nebo](/visualstudio/install/install-visual-studio.md)ho spusťte, pokud je už nainstalovaný.
+2. Klikněte **na Upravit** (pokud už máte nainstalovanou) nebo Nainstalovat (pro nové instalace) pro požadovanou verzi Visual Studio. 
+3. Na kartě **Úlohy se** posuňte do části **Hry** a vyberte úlohu Vývoj her **pomocí Unity.**
 
-    ![V instalačním programu v okně vývoj her s využitím úlohy Unity](../media/vs/unity-workload.png)
+    ![Pole pro vývoj her pomocí úloh Unity v instalačním programu](../media/vs/unity-workload.png)
 
 :::zone-end
 :::zone pivot="macos"
 
 > [!NOTE]
-> Tato instalační příručka je určena pro Visual Studio pro Mac. Pokud používáte Visual Studio Code, navštivte prosím [vývoj Unity s vs Code dokumentaci](https://code.visualstudio.com/docs/other/unity).
+> Tento průvodce instalací je pro Visual Studio pro Mac. Pokud používáte aplikaci Visual Studio Code, navštivte stránku [Unity Development with VS Code dokumentaci.](https://code.visualstudio.com/docs/other/unity)
 
-Nástroje pro Unity jsou součástí instalace Visual Studio pro Mac a nevyžadují se žádné samostatné kroky instalace. To můžete ověřit v nabídce **rozšíření Visual Studio pro Mac > > nabídce vývoj her** . Měla by být povolená **Visual Studio pro Mac nástroje pro Unity** .
+Nástroje pro Unity jsou součástí instalace Visual Studio pro Mac a nejsou vyžadovány žádné samostatné kroky instalace. Můžete to ověřit v nabídce **Visual Studio pro Mac > rozšíření > Game Development.** **Visual Studio pro Mac by měly být povolené nástroje pro Unity.**
 
-![Zobrazení Správce rozšíření zobrazující Visual Studio pro Mac nástrojů pro Unity povoleno](../media/vsm/unity-workload.png)
+![Zobrazení Správce rozšíření s povolenými Visual Studio pro Mac Tools for Unity](../media/vsm/unity-workload.png)
 
 :::zone-end
 
@@ -91,16 +91,16 @@ Ve výchozím nastavení by Unity měla být nakonfigurovaná tak, aby používa
 :::zone-end
 :::zone pivot="macos"
 
-1. V editoru Unity vyberte nabídku **předvolby > Unity** .
-2. Na levé straně vyberte kartu **externí nástroje** .
-3. Rozevírací seznam **editoru externích skriptů** nabízí způsob, jak zvolit různé instalace aplikace Visual Studio. Můžete také kliknout na **Procházet...** v rozevíracím seznamu a přidat tak verzi, která není v seznamu.
+1. V Editoru Unity vyberte nabídku **Unity > Předvolby.**
+2. Na levé **straně vyberte** kartu Externí nástroje.
+3. Rozevírací **seznam Editor externích** skriptů poskytuje způsob, jak zvolit různé instalace Visual Studio. Můžete také **kliknout na Procházet...** z rozevíracího seznamu a přidat neuvedené verze.
 
-    ![Nabídka předvolby externích nástrojů v editoru Unity v macOS](../media/vsm/preferences-external-tools.png)
+    ![Nabídka předvoleb Externí nástroje v Editoru Unity v macOS](../media/vsm/preferences-external-tools.png)
 
-4. Zavřete dialogové okno **Předvolby** a dokončete proces konfigurace.
+4. Zavřete **dialogové okno** Předvolby a dokončete proces konfigurace.
 
 :::zone-end
 
 ## <a name="next-steps"></a>Další kroky
 
- Informace o tom, jak pracovat s a ladit projekt Unity v aplikaci Visual Studio, najdete v tématu [použití Visual Studio Tools for Unity](using-visual-studio-tools-for-unity.md).
+ Informace o tom, jak pracovat s projektem Unity a ladit ho v Visual Studio, najdete v tématu Používání [Visual Studio Tools for Unity](using-visual-studio-tools-for-unity.md).

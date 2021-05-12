@@ -1,23 +1,23 @@
 ---
 title: Čísla sestavení a data vydání sady Visual Studio
 titleSuffix: ''
-description: Seznam vydaných verzí a čísel sestavení pro sadu Visual Studio seřazený podle data
+description: Seznam vydaných verzí a čísel sestavení pro Visual Studio seřazených podle data.
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.date: 04/22/2021
+ms.date: 05/11/2021
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 9407d6dcb8a56d4c6844008cfc8cf6ac6fb8384c
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.openlocfilehash: a88e114b664ebf239c375c48536753da3574da11
+ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107913017"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109782618"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -25,11 +25,15 @@ ms.locfileid: "107913017"
 
 ## <a name="visual-studio-2019"></a>Visual Studio 2019
 
-V následující tabulce jsou uvedena čísla sestavení a datum vydání sady Visual Studio 2019.
+Následující tabulka uvádí čísla sestavení a data vydání od Visual Studio 2019.
 
-| **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
+| **Verze**| **Kanál** | **Datum vydání** | **Verze sestavení** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
-| 16.10.0 | Verze Preview 2,1 | 22. dubna 2021 | 16.10.31220.234 |
+| 16.10.0 | Preview 3 | 11. května 2021 | 16.10.31306.274 |
+| 16.9.5 | Vydat | 11. května 2021 | 16.9.31229.75 |
+| 16.7.15 | Vydat | 11. května 2021 | 16.7.31229.181 |
+| 16.4.22| Vydat | 11. května 2021 | 16.4.31229.387 |
+| 16.10.0 | Preview 2.1 | 22. dubna 2021 | 16.10.31220.234 |
 | 16.10.0 | Preview 2 | 14. dubna 2021 | 16.10.31213.239 |
 | 16.9.4 | Vydat | 13. dubna 2021 | 16.9.31205.134 |
 | 16.7.14 | Vydat | 13. dubna 2021 | 16.7.31205.176 |
@@ -97,7 +101,7 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 | 16.4.11 | Vydat | 14. července 2020 | 16.4.30308.118 |
 | 16.0.16 | Vydat | 14. července 2020 | 16.0.28803.791 |
 | 16.6.3 | Vydat | 30. června 2020 | 16.6.30225.117 |
-| 16.7.0 | Verze Preview 3,1 | 25. června 2020 | 16.7.30223.230 |
+| 16.7.0 | Preview 3.1 | 25. června 2020 | 16.7.30223.230 |
 | 16.7.0 | Preview 3 | 23. června 2020 | 16.7.30218.91 |
 | 16.0.15 | Vydat | 9\. června 2020 | 16.0.28803.753 |
 | 16.6.2 | Vydat | 9\. června 2020 | 16.6.30204.135 |
@@ -199,20 +203,20 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 | 16.0.0 | Verze Release Candidate 2 (RC. 2) | 12. března 2019 | 16.0.28711.60 |
 | 16.0.0 | Verze Preview 4,2 | 12. března 2019 | 16.0.28711.60 |
 | 16.0.0 | Release Candidate 1 Svc1 (RC. 1 Svc1) | 6. března 2019 | 16.0.28705.295 |
-| 16.0.0 | Preview 4,1 Svc1 | 6. března 2019 | 16.0.28705.295 |
-| 16.0.0 | Release Candidate 1 (RC. 1) | 5. března 2019 | 16.0.28701.123 |
-| 16.0.0 | Verze Preview 4,1 | 5. března 2019 | 16.0.28701.123 |
+| 16.0.0 | Preview 4.1 Svc1 | 6. března 2019 | 16.0.28705.295 |
+| 16.0.0 | Release Candidate 1 (RC.1) | 5. března 2019 | 16.0.28701.123 |
+| 16.0.0 | Preview 4.1 | 5. března 2019 | 16.0.28701.123 |
 | 16.0.0 | Release Candidate (RC) | 27. února 2019 | 16.0.28625.133 |
 | 16.0.0 | Preview 4 | 27. února 2019 | 16.0.28625.133 |
 | 16.0.0 | Preview 3 | 13. února 2019 | 16.0.28608.199 |
-| 16.0.0 | Verze Preview 2,2 | 5. února 2019 | 16.0.28602.52 |
-| 16.0.0 | Verze Preview 2,1 | 31. ledna 2019 | 16.0.28529.54 |
+| 16.0.0 | Preview 2.2 | 5. února 2019 | 16.0.28602.52 |
+| 16.0.0 | Preview 2.1 | 31. ledna 2019 | 16.0.28529.54 |
 | 16.0.0 | Preview 2 | 23. ledna 2019 | 16.0.28522.59 |
-| 16.0.0 | Verze Preview 1,1 | 10. prosince 2018 | 16.0.28408.50 |
+| 16.0.0 | Preview 1.1 | 10. prosince 2018 | 16.0.28408.50 |
 | 16.0.0 | Preview 1 | 4. prosince 2018 | 16.0.28329.73 |
 
 > [!NOTE]
-> Seznam čísel buildů a data vydání pro předchozí verzi najdete v tématu [čísla sestavení a data verzí sady Visual Studio 2017](visual-studio-build-numbers-and-release-dates.md?view=vs-2017&preserve-view=true) .
+> Seznam čísel sestavení a kalendářních dat vydání pro předchozí verzi najdete v tématu čísla sestavení [Visual Studio 2017](visual-studio-build-numbers-and-release-dates.md?view=vs-2017&preserve-view=true) a data vydání.
 
 ::: moniker-end
 
@@ -220,10 +224,11 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-V následující tabulce jsou uvedena čísla sestavení a datum vydání sady Visual Studio 2017.
+Následující tabulka uvádí čísla sestavení a data vydání od Visual Studio 2017.
 
-| **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
+| **Verze**| **Kanál** | **Datum vydání** | **Verze sestavení** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.36 | Vydat | 11. května 2021 | 15.9.28307.1525 |
 | 15.9.35 | Vydat | 13. dubna 2021 | 15.9.28307.1500 |
 | 15.9.34 | Vydat | 9. března 2021 | 15.9.28307.1440 |
 | 15.9.33 | Vydat | 10. února 2021 | 15.9.28307.1401 |
@@ -370,18 +375,18 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 | 15.3.1  | Vydat | 18. srpna 2017 | 15.0.26730.08 |
 | 15,4 Preview 1 | Preview | 24. srpna 2017 | 15.0.26823.1 |
 | 15.3.0 | Vydat | 14. srpna 2017 | 15.0.26730.3 |
-| 15,3 Preview 7,1 | Preview | 11. srpna 2017 | 15.0.26730.3 |
-| 15,3 Preview 7 | Preview | Od 1. srpna 2017 | 15.0.26730.0 |
-| 15,3 Preview 6 | Preview | 26. července 2017 | 15.0.26724.1 |
-| 15,3 Preview 5 | Preview | 24. července 2017 | 15.0.26720.02 |
+| 15.3 Preview 7.1 | Preview | 11. srpna 2017 | 15.0.26730.3 |
+| 15.3 Preview 7 | Preview | 1. srpna 2017 | 15.0.26730.0 |
+| 15.3 Preview 6 | Preview | 26. července 2017 | 15.0.26724.1 |
+| 15.3 Preview 5 | Preview | 24. července 2017 | 15.0.26720.02 |
 | 15.2.6  | Vydat | 17. července 2017 | 15.0.26430.16 |
-| 15,3 Preview 4 | Preview | 12. července 2017 | 15.0.26711.1 |
+| 15.3 Preview 4 | Preview | 12. července 2017 | 15.0.26711.1 |
 | 15.2.5  | Vydat | 6. července 2017 | 15.0.26430.15 |
-| 15,3 Preview 3 | Preview | 26. června 2017 | 15.0.26621.2 |
+| 15.3 Preview 3 | Preview | 26. června 2017 | 15.0.26621.2 |
 | 15.2.4  | Vydat | 21. června 2017 | 15.0.26430.14 |
-| 15,3 Preview 2,1 | Preview | 20. června 2017 | 15.0.26608.5 |
+| 15.3 Preview 2.1 | Preview | 20. června 2017 | 15.0.26608.5 |
 | 15.2.3  | Vydat | 9. června 2017 | 15.0.26430.13 |
-| 15,3 Preview 2 | Preview | 8. června 2017 | 15.0.26606.0 |
+| 15.3 Preview 2 | Preview | 8. června 2017 | 15.0.26606.0 |
 | 15.2.2  | Vydat | 30. května 2017 | 15.0.26430.12 |
 | 15.0.4  | Vydat | 23. května 2017 | 15.0.26228.13 |
 | 15.2.1  | Vydat | 12. května 2017 | 15.0.26430.6 |
@@ -398,13 +403,13 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 | 15.0.3  | Vydat | 31. března 2017 | 15.0.26228.12 |
 | 15.0.2 | Vydat | 28. března 2017 | 15.0.26228.10 |
 | 15,1 Preview 3 | Preview | 27. března 2017 | 15.0.26323.1 |
-| 15,1 Preview 2 | Preview | 16. března 2017 | 15.0.26315.0 |
+| 15.1 Preview 2 | Preview | 16. března 2017 | 15.0.26315.0 |
 | 15.0.1  | Vydat | 14. března 2017 | 15.0.26228.9 |
-| 15,1 Preview 1 | Preview | 7. března 2017 | 15.0.26304.0 |
+| 15.1 Preview 1 | Preview | 7. března 2017 | 15.0.26304.0 |
 | 15.0.0 | Vydat | 7. března 2017 | 15.0.26228.4 |
 
 > [!NOTE]
-> Další informace o číslech sestavení a datech vydání pro další verzi sady Visual Studio naleznete na stránce [čísla sestavení sady Visual studio 2019 a data verzí](?preserve-view=true&view=vs-2019) .
+> Další informace o číslech sestavení a datech vydání pro další verzi Visual Studio najdete na stránce s čísly sestavení a daty vydání Visual Studio [2019.](?preserve-view=true&view=vs-2019)
 
 ::: moniker-end
 
