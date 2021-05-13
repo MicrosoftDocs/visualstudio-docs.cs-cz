@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 286d5f2c316379316b1a1cf55334cab39cdc247c
-ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
+ms.openlocfilehash: 866b588b8b46477b397cda92076780d1955cfa83
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109782631"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848302"
 ---
 # <a name="create-a-c-extension-for-python"></a>Vytvoření rozšíření C++ pro Python
 
@@ -120,12 +120,12 @@ Postupujte podle pokynů v této části a vytvořte dva identické projekty C++
     ::: moniker range=">=vs-2019"
     | Karta | Vlastnost | Hodnota |
     | --- | --- | --- |
-    | **Obecné** | **Cílový název** | Zadejte název modulu, na který chcete odkazovat z Pythonu v `from...import` příkazech. Stejný název použijete v jazyce C++ při definování modulu pro Python. Pokud chcete jako název modulu použít název projektu, ponechte výchozí hodnotu **$(ProjectName)**. Pro `python_d.exe` `_d` přidejte na konec názvu . |
-    | | **Typ konfigurace** | **Dynamická knihovna (.dll)** |
-    | **Pokročilý** | **Přípona cílového souboru** | **.pyd** |
+    | **Obecné** | **Obecné** > **Název cíle** | Zadejte název modulu, na který chcete odkazovat z Pythonu v `from...import` příkazech. Stejný název použijete v jazyce C++ při definování modulu pro Python. Pokud chcete jako název modulu použít název projektu, ponechte výchozí hodnotu **$(ProjectName)**. |
+    | | **Upřesnit** > **Přípona cílového souboru** | **.pyd** |
+    | | **Výchozí nastavení projektu** > **Typ konfigurace** | **Dynamická knihovna (.dll)** |
     | **C/C++** > **Obecné** | **Další adresáře k zahrnutí** | Přidejte složku *zahrnutí* Pythonu podle potřeby pro vaši instalaci, například `c:\Python36\include` .  |
-    | **C/C++** > **Preprocesor** | **Definice preprocesoru** | Pokud je k dispozici, **změňte _DEBUG** na **NDEBUG** tak, aby odpovídala ladicí verzi `CPython` . (Při použití `python_d.exe` ponechte toto beze změny.) |
-    | **C/C++** > **Generování kódu** | **Knihovna runtime** | **Knihovna DLL s více vlákny (/MD)** tak, aby odpovídala ladicí `CPython` verzi . (Při použití `python_d.exe` ponechte toto beze změny.) |
+    | **C/C++** > **Preprocesor** | **Definice preprocesoru** | **Pouze CPython:** přidá na začátek řetězce `Py_LIMITED_API;` (včetně středníku). Tato definice omezuje některé funkce, které můžete volat z Pythonu, a umožňuje přenosnější kód mezi různými verzemi Pythonu. Pokud pracujete s PyBind11, tuto definici přidejte, jinak se zobrazí chyby sestavení. |
+    | **C/C++** > **Generování kódu** | **Knihovna runtime** | **Knihovna DLL s více vlákny (/MD)** (viz upozornění níže) |
     | **Linker** > **Obecné** | **Další adresáře knihoven** | Podle potřeby *přidejte* složku knihovny Python obsahující *soubory .lib* pro vaši instalaci, například `c:\Python36\libs` . (Nezapomeňte odkazovat na složku *knihovny* , která obsahuje soubory *. lib* , a *ne* na složku *lib* , která obsahuje soubory *. py* .) |
     ::: moniker-end
     ::: moniker range="=vs-2017"
@@ -136,16 +136,16 @@ Postupujte podle pokynů v této části a vytvořte dva identické projekty C++
     | | **Výchozí nastavení projektu** > **Typ konfigurace** | **Dynamická knihovna (. dll)** |
     | **C/C++** > **Obecné** | **Další adresáře k zahrnutí** | Přidejte složku pro *zahrnutí* Pythonu, která je vhodná pro vaši instalaci, například `c:\Python36\include` .  |
     | **C/C++** > **Preprocesor** | **Definice preprocesoru** | Pokud je k dispozici, změňte **_DEBUG** hodnotu na **NDEBUG**, aby odpovídala neladitelné verzi `CPython` . (Při použití `python_d.exe` , nechte to beze změny.) |
-    | **C/C++** > **Generování kódu** | **Běhová knihovna** | **Vícevláknová knihovna DLL (/MD)** tak, aby odpovídala verzi bez ladění `CPython` . (Při použití `python_d.exe` ponechte toto beze změny.) |
-    | **Linker** > **Obecné** | **Další adresáře knihoven** | Podle potřeby *přidejte* složku knihovny Python obsahující *soubory .lib* pro vaši instalaci, například `c:\Python36\libs` . (Nezapomeňte odkazovat na složku *libs,* která obsahuje  *soubory .lib,* a ne na složku *Lib,* která obsahuje *soubory .py.)* |
+    | **C/C++** > **Generování kódu** | **Běhová knihovna** | **Vícevláknová knihovna DLL (/MD)** tak, aby odpovídala verzi bez ladění `CPython` . (Při použití `python_d.exe` , nechte to beze změny.) |
+    | **Linker** > **Obecné** | **Další adresáře knihoven** | Přidejte složku Python *knihovny* obsahující soubory *. lib* , jak je to vhodné pro vaši instalaci, například `c:\Python36\libs` . (Nezapomeňte odkazovat na složku *knihovny* , která obsahuje soubory *. lib* , a *ne* na složku *lib* , která obsahuje soubory *. py* .) |
     ::: moniker-end
     
     > [!Tip]
-    > Pokud ve vlastnostech projektu nevidíte kartu C/C++, je to proto, že projekt neobsahuje žádné soubory, které identifikuje jako zdrojové soubory C/C++. K tomuto stavu může dojít, pokud vytvoříte zdrojový soubor bez *přípony .c* nebo *.cpp.* Pokud jste například omylem zadali místo v dialogovém okně nové položky dříve, nástroj Visual Studio vytvoří soubor, ale nenastaví typ souboru na `module.coo` "C/C+ Code", což aktivuje kartu vlastností `module.cpp` C/C++. Taková mylná identifikace zůstane případem i v případě, že soubor přejmenujete pomocí `.cpp` . Pokud chcete typ souboru správně nastavit, klikněte pravým tlačítkem na soubor **v Průzkumník řešení,** vyberte Vlastnosti a pak nastavte **Typ** souboru na **Kód C/C++.** 
+    > Pokud nevidíte kartu C/C++ ve vlastnostech projektu, je to proto, že projekt neobsahuje žádné soubory, které identifikuje jako zdrojové soubory jazyka C/C++. K tomuto stavu může dojít, pokud vytvoříte zdrojový soubor bez přípony *. c* nebo *. cpp* . Pokud jste například omylem zadali `module.coo` místo `module.cpp` v dialogovém okně Nová položka dříve, pak sada Visual Studio vytvoří soubor, ale nenastaví typ souboru na "C/C + Code", což znamená, že aktivuje kartu vlastnosti jazyka c/C++. Taková identifikace zůstane případ i v případě, že soubor přejmenujete pomocí `.cpp` . Chcete-li správně nastavit typ souboru, klikněte pravým tlačítkem na soubor v **Průzkumník řešení**, vyberte **vlastnosti** a pak nastavte  **typ souboru** na **kód C/C++**.
 
-1. Klikněte pravým tlačítkem na projekt C++ a vyberte **Build (Sestavit)** a otestujte konfiguraci **(ladění i** **vydání).** Soubory *.pyd* jsou umístěné ve složce **řešení** v **části Ladění** a vydání, nikoli ve složce projektu C++. 
+1. Klikněte pravým tlačítkem na projekt C++ a vyberte **sestavení** pro otestování konfigurace ( **ladění** i **vydání**). Soubory *. PYD* jsou umístěny ve složce **řešení** v části **ladění** a **vydání**, nikoli v samotné složce projektu C++.
 
-1. Do souboru *module.cpp* projektu C++ přidejte následující kód:
+1. Přidejte následující kód do souboru *. cpp modulu* C++ projektu:
 
     ```cpp
     #include <Windows.h>
@@ -166,27 +166,27 @@ Postupujte podle pokynů v této části a vytvořte dva identické projekty C++
     }
     ```
 
-1. Znovu sestavte projekt C++, abyste potvrdili, že je váš kód správný.
+1. Sestavte projekt C++ znovu a potvrďte, že je váš kód správný.
 
-1. Pokud jste to ještě neudělali, opakujte výše uvedené kroky a vytvořte druhý projekt s názvem "superfastcode2" se stejným obsahem.
+1. Pokud jste to ještě neudělali, opakujte výše uvedené kroky a vytvořte druhý projekt s názvem "superfastcode2" s identickým obsahem.
 
 ## <a name="convert-the-c-projects-to-extensions-for-python"></a>Převod projektů C++ na rozšíření pro Python
 
-Pokud chcete, aby knihovna DLL jazyka C++ byla rozšířením pro Python, musíte nejprve upravit exportované metody pro interakci s typy Pythonu. Pak přidáte funkci, která exportuje modul spolu s definicemi metod modulu.
+Chcete-li vytvořit knihovnu DLL C++ do rozšíření pro Python, nejprve upravíte exportované metody pro interakci s typy Pythonu. Pak můžete přidat funkci, která exportuje modul, spolu s definicemi metod modulu.
 
-Následující části popisují, jak provést tyto kroky pomocí `CPython` rozšíření i PyBind11.
+Následující části vysvětlují, jak provést tyto kroky s použitím rozšíření i `CPython` PyBind11.
 
 ### <a name="cpython-extensions"></a>Rozšíření CPython
 
-Další informace o tom, co je uvedeno v této části, naleznete v [Referenční příručce k rozhraní API Python/C](https://docs.python.org/3/c-api/index.html) a hlavně [objekty modulů](https://docs.python.org/3/c-api/module.html) v Python.org (Nezapomeňte vybrat svou verzi Pythonu z rozevíracího seznamu v pravém horním rohu pro zobrazení správné dokumentace).
+Další informace o tom, co je vidět v této části, najdete [](https://docs.python.org/3/c-api/module.html) v referenční příručce k rozhraní [Python/C API](https://docs.python.org/3/c-api/index.html) a zejména k objektům modulů v python.org (nezapomeňte vybrat verzi Pythonu z rozevíracího ovládacího prvku v pravém horním rohu a zobrazit správnou dokumentaci).
 
-1. V horní části *modulu. cpp* zahrňte *Python. h*:
+1. V horní části *souboru module.cpp zahrnte* *soubor Python.h:*
 
     ```cpp
     #include <Python.h>
     ```
 
-1. Upravte `tanh_impl` metodu tak, aby přijímala a vracela typy Pythonu (a `PyObject*` , tj.):
+1. Upravte `tanh_impl` metodu tak, aby přijíma schytá a vracel typy Pythonu `PyObject*` (, to znamená):
 
     ```cpp
     PyObject* tanh_impl(PyObject* /* unused module reference */, PyObject* o) {
@@ -196,7 +196,7 @@ Další informace o tom, co je uvedeno v této části, naleznete v [Referenčn�
     }
     ```
 
-1. Přidejte strukturu definující způsob, jakým `tanh_impl` se funkce jazyka C++ prezentuje Pythonu:
+1. Přidejte strukturu, která definuje, jak se funkce jazyka C++ `tanh_impl` prezentuje do Pythonu:
 
     ```cpp
     static PyMethodDef superfastcode_methods[] = {
@@ -210,7 +210,7 @@ Další informace o tom, co je uvedeno v této části, naleznete v [Referenčn�
     };
     ```
 
-1. Přidejte strukturu definující modul, na který chcete odkazovat v kódu Pythonu, konkrétně při použití `from...import` příkazu. (Toto nastavení odpovídá hodnotě ve vlastnostech projektu v části **Vlastnosti konfigurace**  >  **Obecné**  >  **Název cíle**.) V následujícím příkladu název modulu "superfastcode" znamená, že můžete použít `from superfastcode import fast_tanh` v Pythonu, protože `fast_tanh` je definován v rámci `superfastcode_methods` . (Názvy souborů interní pro projekt C++, jako je *modul. cpp*, jsou bezvýznamnými.)
+1. Přidejte strukturu, která definuje modul tak, jak na něj chcete odkazovat v kódu Pythonu, konkrétně při použití `from...import` příkazu . (Napište, aby odpovídal hodnotě ve vlastnostech projektu v části **Vlastnosti konfigurace.**  >  **Obecné**  >  **Název cíle**.) V následujícím příkladu název modulu "superfastcode" znamená, že můžete použít v Pythonu, protože je `from superfastcode import fast_tanh` `fast_tanh` definovaný v `superfastcode_methods` . (Názvy souborů interních v projektu C++, jako *je module.cpp,* jsou neúmyslné.)
 
     ```cpp
     static PyModuleDef superfastcode_module = {
@@ -222,7 +222,7 @@ Další informace o tom, co je uvedeno v této části, naleznete v [Referenčn�
     };
     ```
 
-1. Přidejte metodu, kterou Python volá při načtení modulu, který musí být pojmenován `PyInit_<module-name>` , kde &lt; název modulu &gt; přesně odpovídá vlastnosti **Obecné**  >  **cílové jméno** projektu C++ (to znamená, že odpovídá názvu souboru *. PYD* sestaveného projektem).
+1. Přidejte metodu, kterou Python volá při načtení modulu, který musí mít název , kde název_modulu přesně odpovídá vlastnosti General Target Name projektu C++ (to znamená, že odpovídá názvu souboru `PyInit_<module-name>` &lt; souboru &gt;   >   *.pyd* vytvořeného projektem).
 
     ```cpp
     PyMODINIT_FUNC PyInit_superfastcode() {
@@ -230,23 +230,23 @@ Další informace o tom, co je uvedeno v této části, naleznete v [Referenčn�
     }
     ```
 
-1. Sestavte projekt C++ znovu a ověřte kód. Pokud narazíte na chyby, podívejte se do části [řešení potíží](#troubleshooting) níže.
+1. Znovu sestavte projekt C++, abyste ověřili svůj kód. Pokud dojde k chybám, podívejte se [do části Řešení](#troubleshooting) potíží níže.
 
 ### <a name="pybind11"></a>PyBind11
 
-Pokud jste dokončili kroky v předchozí části, určitě jste si všimli, že jste použili spoustu často používaného kódu k vytvoření potřebných struktur modulu pro kód jazyka C++. PyBind11 zjednodušuje proces prostřednictvím maker v hlavičkovém souboru C++, které dosahují stejného výsledku s mnohem menším kódem. Základní informace o tom, co se zobrazuje v této části, najdete v tématu [základy PyBind11](https://github.com/pybind/pybind11/blob/master/docs/basics.rst) (GitHub.com).
+Pokud jste dokončili kroky v předchozí části, určitě jste si všimli, že jste použili velké množství často používaného kódu k vytvoření potřebných struktur modulů pro kód C++. PyBind11 zjednodušuje proces prostřednictvím maker v souboru hlaviček jazyka C++, která dosápnou stejného výsledku s mnohem menším kódem. Základní informace o tom, co je zobrazeno v této části, najdete v tématu [Základy PyBind11](https://github.com/pybind/pybind11/blob/master/docs/basics.rst) (github.com).
 
-1. Nainstalujte PyBind11 pomocí PIP: `pip install pybind11` nebo `py -m pip install pybind11` . (Případně můžete instalaci nainstalovat pomocí okna Prostředí Pythonu a pak v dalším kroku použít jeho příkaz Otevřít v PowerShellu.)
+1. Nainstalujte PyBind11 pomocí pip: `pip install pybind11` nebo `py -m pip install pybind11` . (Případně můžete nainstalovat pomocí okna prostředí Pythonu a potom použít jeho příkaz "otevřít v prostředí PowerShell" pro další krok.)
 
-1. Ve stejném terminálu spusťte `python -m pybind11 --includes` příkaz nebo `py -m pybind11 --includes` . Zobrazí se seznam cest, které byste měli přidat do vlastnosti **C/C++**  >  **General**  >  **Additional Include Directories** vašeho projektu (pokud je k dispozici, odebere se `-I` předpona ).
+1. Ve stejném terminálu spusťte `python -m pybind11 --includes` nebo `py -m pybind11 --includes` . Tato akce vytiskne seznam cest, které byste měli přidat do   >  **Obecné**  >  **Další vlastnosti adresáře include** (pokud jsou k dispozici) projektu jazyka C/C++ (odebrání `-I` předpony).
 
-1. V horní části souboru *fresh module.cpp,* který neobsahuje žádné změny z předchozí části, zahrnte *pybind11.h*:
+1. V horní části nového *modulu. cpp*, který neobsahuje žádné změny z předchozí části, přidejte *pybind11. h*:
 
     ```cpp
     #include <pybind11/pybind11.h>
     ```
 
-1. V dolní části *souboru module.cpp* pomocí makra definujte `PYBIND11_MODULE` vstupní bod funkce C++:
+1. V dolní části *modulu. cpp* použijte `PYBIND11_MODULE` makro k definování vstupního bodu pro funkci jazyka C++:
 
     ```cpp
     namespace py = pybind11;
@@ -264,35 +264,35 @@ Pokud jste dokončili kroky v předchozí části, určitě jste si všimli, že
     }
     ```
 
-1. Sestavte projekt C++, abyste ověřili svůj kód. Pokud dojde k chybám, podívejte se na další část o řešení potíží.
+1. Sestavte projekt C++ pro ověření kódu. Pokud dojde k chybám, přečtěte si další část při odstraňování potíží.
 
 ### <a name="troubleshooting"></a>Řešení potíží
 
-Kompilaci modulu C++ může selhat z následujících důvodů:
+Modul C++ se nemusí podařit zkompilovat z následujících důvodů:
 
-- Nepodařilo se najít *Soubor Python.h* (**E1696: Soubor Python.h open source/nebo** C1083: Nelze otevřít soubor k **zahrnutí: "Python.h":** Takový soubor nebo adresář neexistuje): Ověřte, že cesta v adresáři **C/C++** General Additional Include Directories ve vlastnostech projektu odkazuje na složku include vaší instalace  >    >   Pythonu.  Viz krok 6 [v části Vytvoření základního projektu C++.](#create-the-core-c-projects)
+- Nejde najít *Python. h* (**E1696: nejde otevřít zdrojový soubor "Python. h"** a/nebo **C1083: nejde otevřít soubor include: "Python. h": žádný takový soubor nebo adresář**): Ověřte, že cesta v obecných dalších adresářích **C/C++**  >    >  **obsahuje adresáře** *include* pro instalaci Pythonu. Viz krok 6 v části [Vytvoření základního projektu C++](#create-the-core-c-projects).
 
-- Nepodařilo se najít knihovny Pythonu: Ověřte, že cesta v adresářích **linkeru** Obecné další knihovny ve vlastnostech projektu odkazuje na složku  >    >   *libs instalace Pythonu.* Viz krok 6 [v části Vytvoření základního projektu C++.](#create-the-core-c-projects)
+- Nejde najít knihovny Pythonu: Ověřte, že cesta v **linkeru**  >  **Obecné**  >  **Další adresáře knihoven** ve vlastnostech projektu odkazuje na složku *knihovny* Instalace Pythonu. Viz krok 6 v části [Vytvoření základního projektu C++](#create-the-core-c-projects).
 
-- Chyby linkeru související s cílovou architekturou: Změňte architekturu projektu cíle C++ tak, aby odpovídala architektuře instalace Pythonu. Pokud například cílíte na **Win32** pomocí projektu C++, ale instalace Pythonu je 64bitová, změňte projekt C++ na **x64**.
+- Chyby linkeru související s cílovou architekturou: Změňte architekturu projektu cíle C++ tak, aby odpovídala vaší instalaci Pythonu. Například pokud cílíte na **Win32** s projektem C++, ale instalace Pythonu je 64-bit, změňte projekt C++ na **x64**.
 
-## <a name="test-the-code-and-compare-the-results"></a>Otestování kódu a porovnání výsledků
+## <a name="test-the-code-and-compare-the-results"></a>Testování kódu a porovnání výsledků
 
-Teď, když máte knihovny DLL strukturované jako rozšíření Pythonu, můžete na ně odkazovat z projektu Pythonu, importovat moduly a používat jejich metody.
+Teď, když máte knihovny DLL strukturované jako rozšíření Pythonu, je můžete odkazovat z projektu Pythonu, importovat moduly a použít jejich metody.
 
-### <a name="make-the-dll-available-to-python"></a>Z dostupných knihoven DLL pro Python
+### <a name="make-the-dll-available-to-python"></a>Zpřístupnění knihovny DLL pro Python
 
-Existují dva způsoby, jak knihovnu DLL zpřístupnit pro Python.
+Existují dva způsoby, jak knihovnu DLL z dostupných pro Python.
 
-První metoda funguje, pokud se projekt Pythonu a projekt C++ nacházejí ve stejném řešení. Přejděte na **Průzkumník řešení**, klikněte pravým tlačítkem myši na uzel **odkazy** v projektu Python a pak vyberte **Přidat odkaz**. V dialogovém okně, které se zobrazí, vyberte kartu **projekty** , vyberte projekty **superfastcode** a **superfastcode2** a pak vyberte **OK**.
+První metoda funguje, pokud projekt Pythonu a projekt C++ jsou ve stejném řešení. Přejděte na **Průzkumník řešení,** klikněte pravým tlačítkem **na uzel Odkazy** v projektu Pythonu a pak vyberte Přidat **odkaz.** V dialogovém okně, které se zobrazí, vyberte kartu **Projekty,** vyberte **oba projekty superfastcode** a **superfastcode2** a pak vyberte **OK**.
 
 ![Přidání odkazu na projekt superfastcode](media/cpp-add-reference.png)
 
-Alternativní metoda, která je popsaná v následujících krocích, nainstaluje modul do prostředí Pythonu a zpřístupní ho i pro ostatní projekty Pythonu. Kompletní dokumentaci najdete v [projektu **setuptools**](https://setuptools.readthedocs.io/) .
+Alternativní metoda popsaná v následujících krocích nainstaluje modul do vašeho prostředí Pythonu, aby byl dostupný i pro další projekty Pythonu. Úplnou dokumentaci najdete v projektu [ **setuptools.**](https://setuptools.readthedocs.io/)
 
-1. Vytvořte soubor s názvem *Setup.py* v projektu C++ tak, že kliknete pravým tlačítkem na projekt a vyberete **Přidat**  >  **novou položku**. Pak vyberte **soubor C++ (. cpp)**, pojmenujte soubor `setup.py` a vyberte **OK** (pojmenování souboru s příponou *. py* způsobí, že Visual Studio ho rozpozná jako Python navzdory použití šablony souboru C++). Po zobrazení souboru v editoru vložte do něj následující kód, který je vhodný pro metodu rozšíření:
+1. Vytvořte soubor s názvem *setup.py* v projektu C++, a to tak, že kliknete pravým tlačítkem na projekt a **vyberete Přidat novou**  >  **položku.** Pak vyberte **Soubor C++ (.cpp),** pojmenuje soubor a vyberte OK (pojmenování souboru příponou `setup.py` *.py* zajistí, že ho Visual Studio rozpozná jako Python, i když se používá šablona souboru C++).  Jakmile se soubor zobrazí v editoru, vložte do něj podle potřeby následující kód pro metodu rozšíření:
 
-    **`CPython` rozšíření (projekt superfastcode):**
+    **`CPython` extensions (superfastcode project):**
 
     ```python
     from setuptools import setup, Extension
@@ -331,7 +331,7 @@ Alternativní metoda, která je popsaná v následujících krocích, nainstaluj
     )
     ```
 
-1. Vytvořte druhý soubor s názvem *pyproject. toml* v projektu C++ a vložte do něj následující kód.
+1. V projektu C++ vytvořte druhý soubor *pyproject.toml* a vložte do něj následující kód.
 
     ```toml
     [build-system]
@@ -339,24 +339,24 @@ Alternativní metoda, která je popsaná v následujících krocích, nainstaluj
     build-backend = "setuptools.build_meta"
     ```
 
-1. Rozšíření sestavíte tak, že kliknete pravým tlačítkem na kartu otevřít *pyproject. toml* a vyberete Kopírovat úplnou cestu (název *pyproject. toml* odstraníme z cesty, abyste ho mohli použít).
+1. Rozšíření sestavíte tak, že kliknete pravým tlačítkem na otevřenou kartu *pyproject.toml* a vyberete Kopírovat úplnou cestu (název *pyproject.toml* odstraníme z cesty předtím, než ho budeme používat).
 
-1. V Průzkumník řešení klikněte pravým tlačítkem na aktivní prostředí Pythonu a vyberte *Spravovat balíčky Pythonu*.
-
-    > [!Tip]
-    > Pokud jste balíček již nainstalovali, zobrazí se zde. Před pokračováním ji odinstalujte kliknutím na X.
-
-1. Vložte zkopírovanou cestu do vyhledávacího pole a odstraňte ji `pyproject.toml` z konce. Pak stiskněte klávesu ENTER pro instalaci z tohoto adresáře.
+1. V Průzkumník řešení klikněte pravým tlačítkem na aktivní prostředí Pythonu a vyberte *Spravovat balíčky Pythonu.*
 
     > [!Tip]
-    > Pokud instalace selže kvůli chybě oprávnění, přidejte a `--user` zkuste příkaz spustit znovu.
+    > Pokud jste už balíček nainstalovali, uvidíte ho tady. Než budete pokračovat, klikněte na X a odinstalujte ho.
+
+1. Vložte zkopírované cesty do vyhledávacího pole a `pyproject.toml` odstraňte z konce. Potom stiskněte Enter a nainstalujte ho z tohoto adresáře.
+
+    > [!Tip]
+    > Pokud se instalace z důvodu chyby oprávnění nezdařila, přidejte `--user` a zkuste příkaz zopakovat.
 
 
 ### <a name="call-the-dll-from-python"></a>Volání knihovny DLL z Pythonu
 
-Po zmenšování knihovny DLL pro Python, jak je popsáno v předchozí části, teď můžete volat funkce a z kódu Pythonu a porovnat jejich výkon s `superfastcode.fast_tanh` `superfastcode2.fast_tanh2` implementací Pythonu:
+Po zpřístupnění knihovny k Pythonu, jak je popsáno v předchozí části, nyní můžete volat `superfastcode.fast_tanh` `superfastcode2.fast_tanh2` funkce a z kódu Pythonu a porovnat jejich výkon s implementací v Pythonu:
 
-1. Do souboru *.py* přidejte následující řádky, které zavolá metody exportované z knihoven DLL a zobrazí jejich výstupy:
+1. Přidejte následující řádky do souboru *. py* pro volání metod exportovaných z knihoven DLL a zobrazení jejich výstupů:
 
     ```python
     from superfastcode import fast_tanh
@@ -366,7 +366,7 @@ Po zmenšování knihovny DLL pro Python, jak je popsáno v předchozí části,
     test(lambda d: [fast_tanh2(x) for x in d], '[fast_tanh2(x) for x in d] (PyBind11 C++ extension)')
     ```
 
-1. Spusťte program Pythonu (**Spustit** ladění bez ladění nebo Ctrl F5 ) a všimněte si, že rutiny jazyka C++ běží přibližně pět až  >   dvacetkrát rychleji než  + implementace Pythonu. Typický výstup vypadá takto:
+1. Spusťte program v Pythonu (**ladění**  >  **Spusťte bez ladění** nebo **CTRL** + **F5**) a sledujte, že rutiny jazyka C++ běží přibližně pět až dvaceti rychleji než implementace Pythonu. Typický výstup se zobrazí takto:
 
     ```output
     Running benchmarks with COUNT = 500000
@@ -377,52 +377,52 @@ Po zmenšování knihovny DLL pro Python, jak je popsáno v předchozí části,
     [fast_tanh2(x) for x in d] (PyBind11 C++ extension) took 0.204 seconds
     ```
 
-    Pokud je **příkaz Spustit bez ladění** zakázaný, klikněte  pravým tlačítkem na projekt Python v Průzkumník řešení a vyberte Nastavit **jako spouštěný projekt**.
+    Pokud je příkaz **Spustit bez ladění** zakázán, klikněte pravým tlačítkem myši na projekt v Pythonu v **Průzkumník řešení** a vyberte **nastavit jako spouštěný projekt**.
 
-1. Zkuste `COUNT` proměnnou zvýšit, aby byly rozdíly výraznější. Ladicí **sestavení** modulu C++ je také pomalejší než sestavení  pro vydání, protože sestavení pro ladění je méně optimalizované **a** obsahuje různé kontroly chyb. Pro porovnání můžete mezi těmito konfiguracemi přepínat (nezapomeňte se ale vrátit a aktualizovat vlastnosti z dřívějších verzí pro **konfiguraci verze).**
+1. Zkuste zvýšit `COUNT` proměnnou tak, aby rozdíly byly výraznější. **Ladicí** sestavení modulu C++ běží také pomaleji než sestavení pro **vydání** , protože **ladění** sestavení je méně optimalizované a obsahuje různé kontroly chyb. Můžete si klidně přepínat mezi těmito konfiguracemi (ale nezapomeňte se vrátit zpátky a aktualizovat vlastnosti z předchozích verzí pro konfiguraci **vydané verze** ).
 
-Ve výstupu můžete vidět, že rozšíření PyBind11 není tak rychlé jako rozšíření, i když by mělo být výrazně rychlejší než čistě `CPython` implementace Pythonu. Tento rozdíl je z velké části proto, že jsme použili volání , které nepodporuje více parametrů, názvů parametrů `METH_O` ani argumentů klíčových slov. PyBind11 generuje o něco složitější kód, který volajícím poskytuje rozhraní více jako Python, ale vzhledem k tomu, že testovací kód volá funkci 500 000krát, mohou výsledky tuto režii velmi zesílit.
+Ve výstupu se může zobrazit, že rozšíření PyBind11 není stejně rychlé jako `CPython` rozšíření, i když by mělo být výrazně rychlejší než čistě implementace v Pythonu. Tento rozdíl je z velké části vzhledem k tomu, že jsme použili `METH_O` volání, které nepodporuje víc parametrů, názvů parametrů nebo argumentů klíčových slov. PyBind11 generuje mírně komplexnější kód pro poskytování více rozhraní typu Pythonu pro volající, ale vzhledem k tomu, že kód testu volá funkci 500 000, výsledky můžou významně rozšířit o tuto režii!
 
-Mohli bychom režii dále snížit přesunutím `for` smyčky do nativního kódu. To by vyžadovalo použití [protokolu iterátoru](https://docs.python.org/c-api/iter.html) (nebo PyBind11's `py::iterable` typu pro [parametr funkce](https://pybind11.readthedocs.io/en/stable/advanced/functions.html#python-objects-as-args)) ke zpracování každého elementu. Odebrání opakovaných přechodů mezi Pythonem a C++ je účinný způsob, jak zkrátit čas potřebný ke zpracování sekvence.
+Můžeme ještě snížit režii přesunutím `for` smyčky do nativního kódu. To zahrnuje použití protokolu [iterátoru](https://docs.python.org/c-api/iter.html) (nebo typu PyBind11 pro parametr funkce ) ke `py::iterable` zpracování jednotlivých prvků. [](https://pybind11.readthedocs.io/en/stable/advanced/functions.html#python-objects-as-args) Odebrání opakovaných přechodů mezi Pythonem a C++ je efektivní způsob, jak zkrátit dobu zpracování sekvence.
 
 ### <a name="troubleshooting"></a>Řešení potíží
 
-Pokud `ImportError` při pokusu o import modulu dojde k nějakému problému, může to být způsobeno jedním z následujících problémů:
+Pokud se vám při pokusu o import modulu zobrazí chyba , je pravděpodobné, že příčinou je jeden z `ImportError` následujících problémů:
 
-* Při sestavování prostřednictvím odkazu na projekt Ujistěte se, že vlastnosti projektu C++ odpovídají prostředí Pythonu aktivovanému pro váš projekt v jazyce Python, zejména k adresářům include a Library.
+* Při sestavování prostřednictvím odkazu na projekt se ujistěte, že vlastnosti projektu C++ odpovídají prostředí Pythonu aktivované pro váš projekt Pythonu, zejména adresáře Include a Library.
 
-* Zajistěte, aby byl výstupní soubor pojmenován `superfastcode.pyd` . Jiný název nebo rozšíření zabrání v jeho importu.
+* Ujistěte se, že výstupní soubor má název `superfastcode.pyd` . Jiný název nebo rozšíření zabrání importu.
 
-* Pokud jste modul nainstalovali pomocí souboru *Setup.py* , ověřte, že jste spustili příkaz *PIP* v prostředí Pythonu aktivovaném pro váš projekt v Pythonu. Rozšiřování prostředí Pythonu v Průzkumník řešení by mělo zobrazit položku pro `superfastcode` .
+* Pokud jste modul nainstalovali pomocí *souboru setup.py,* zkontrolujte, že jste spustili příkaz *pip* v prostředí Pythonu aktivovaném pro váš projekt Pythonu. Rozbalením prostředí Pythonu v Průzkumník řešení by se měla zobrazit položka `superfastcode` pro .
 
 ## <a name="debug-the-c-code"></a>Ladění kódu C++
 
-Visual Studio podporuje ladění kódu Python a C++ společně. Tato část vás provede procesem použití projektu **superfastcode** . Tyto kroky jsou pro projekt **superfastcode2** stejné.
+Visual Studio podporuje ladění kódu Pythonu a C++. Tato část vás provede procesem pomocí **projektu superfastcode.** Postup je stejný pro **projekt superfastcode2.**
 
-1. Klikněte pravým tlačítkem myši na projekt v jazyce Python v **Průzkumník řešení**, vyberte možnost **vlastnosti**, vyberte kartu **ladění** a poté vyberte možnost **ladit**  >  **Povolit ladění nativního kódu** .
+1. Klikněte pravým tlačítkem na projekt Python **v Průzkumník řešení,** vyberte **Vlastnosti,** vyberte kartu Ladit a pak vyberte možnost Ladit Povolit ladění   >  **nativního** kódu.
 
     > [!Tip]
-    > Pokud povolíte ladění nativního kódu, okno výstupu Pythonu se může okamžitě po dokončení programu zmizet, aniž by to mělo za normální **stisknutí klávesy pro pokračování** . Chcete-li vynutit pozastavení, přidejte `-i` možnost do   >  pole **argumenty Run interpretu** na kartě **ladění** , když povolíte ladění nativního kódu. Tento argument vloží interpret Pythonu do interaktivního režimu po dokončení kódu, a v takovém případě počká na stisknutí klávesy **CTRL** + **Z** klávesy  >  **ENTER** k ukončení. (Pokud vám nevadí úprava kódu Pythonu, můžete na konec programu přidat příkazy `import os` `os.system("pause")` a . Tento kód duplikuje původní výzvu k pozastavení.)
+    > Když povolíte ladění nativního kódu, může okno výstupu Pythonu zmizet okamžitě po dokončení programu, aniž byste dáváte obvyklým stisknutím libovolné klávesy pokračovat **v** pozastavení. Pokud chcete pozastavení vynutit, přidejte při povolení ladění nativního kódu možnost do pole `-i`   >  **Run Interpreter Arguments (Spustit argumenty interpreta)**  na kartě Debug (Ladění). Tento argument přetáhnutí interpretu Pythonu do interaktivního režimu po dokončení kódu, ve kterém čeká na ukončení stisknutím **kláves Ctrl** + **Z**  >  **Enter.** (Pokud si nejste vědomi změny kódu Pythonu, můžete `import os` `os.system("pause")` na konci programu přidat příkazy a. Tento kód duplikuje původní výzvu k pozastavení.)
 
-1. Vyberte **Uložit**  >  **soubor a** uložte změny vlastností.
+1. Výběrem   >  **Uložit** soubor uložte změny vlastností.
 
-1. Nastavte konfiguraci sestavení na **Ladit** na panelu Visual Studio panelu nástrojů.
+1. Nastavte konfiguraci sestavení pro **ladění** na panelu nástrojů sady Visual Studio.
 
-    ![Nastavení konfigurace sestavení na Ladění](media/cpp-set-debug.png)
+    ![Nastavení konfigurace sestavení pro ladění](media/cpp-set-debug.png)
 
-1. Vzhledem k tomu, že spuštění kódu v ladicím programu obvykle trvá déle, můžete změnit proměnnou v souboru .py na hodnotu, která je přibližně `COUNT` pětkrát menší (například ji změňte z na  `500000` `100000` ).
+1. Vzhledem k tomu, že kód obvykle trvá běhu v ladicím programu, můžete chtít změnit `COUNT` proměnnou v souboru *. py* na hodnotu, která je přibližně pětkrát menší (například změňte z `500000` na `100000` ).
 
-1. V kódu C++ nastavte zarážku na prvním řádku metody a pak spusťte ladicí `tanh_impl` program (**F5** **nebo Ladění spustit**  >  **ladění**). Ladicí program se zastaví při volání tohoto kódu. Pokud se zarážka nenarazí, zkontrolujte,  že je konfigurace nastavená na Ladit a že jste projekt uložili (což se při spuštění ladicího programu automaticky nestane).
+1. V kódu jazyka C++ nastavte zarážku na prvním řádku `tanh_impl` metody a potom spusťte ladicí program (**F5** nebo **ladění**  >  **Spustit ladění**). Ladicí program se zastaví při volání tohoto kódu. Pokud zarážka není dosaženo, ověřte, zda je konfigurace nastavena na hodnotu **ladit** a zda jste projekt uložili (což se při spuštění ladicího programu automaticky nestane.)
 
-    ![Zastavení na zarážce v kódu C++](media/cpp-debugging.png)
+    ![Zastavování na zarážce v kódu C++](media/cpp-debugging.png)
 
-1. V tomto okamžiku můžete procházet kód jazyka C++, zkoumat proměnné atd. Tyto funkce jsou podrobně uvedeny [v tématu Ladění jazyka C++ a Pythonu společně.](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
+1. V tomto okamžiku můžete krokovat kód jazyka C++, prozkoumávat proměnné a tak dále. Tyto funkce jsou popsány v [ladění C++ a Python společně](debugging-mixed-mode-c-cpp-python-in-visual-studio.md).
 
 ## <a name="alternative-approaches"></a>Alternativní přístupy
 
-Rozšíření Pythonu je možné vytvářet různými způsoby, jak je popsáno v následující tabulce. První dvě položky pro a jsou to, co už bylo `CPython` `PyBind11` probíráno v tomto článku.
+Existují různé způsoby, jak vytvořit rozšíření Pythonu, jak je popsáno v následující tabulce. První dvě položky pro `CPython` a `PyBind11` jsou již v tomto článku popsány.
 
-| Přístup | Vintage | Reprezentativní uživatel(é) | 
+| Přístup | Roční | Zástupci uživatelů | 
 | --- | --- | --- |
 | Moduly rozšíření C/C++ pro `CPython` | 1991 | Standardní knihovna | 
 | [PyBind11](https://github.com/pybind/pybind11) (doporučeno pro C++) | 2015 |  |
@@ -430,11 +430,11 @@ Rozšíření Pythonu je možné vytvářet různými způsoby, jak je popsáno 
 | [HPy](https://hpyproject.org/) | 2019 | |
 | [mypyc](https://mypyc.readthedocs.io/) | 2017 | |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | 
-| cffi | 2013 | [kryptografie](https://cryptography.io/), [PyPy](https://pypy.org/) |
-| SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 
-| [Zvýšení úrovně Pythonu](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | |
+| cffi (cffi) | 2013 | [kryptografie,](https://cryptography.io/) [pypy](https://pypy.org/) |
+| S ZASÍL | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 
+| [Boost.Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | |
 | [cppyy](https://cppyy.readthedocs.io/) | 2017 | |
 
 ## <a name="see-also"></a>Viz také
 
-Hotový vzorek z tohoto Názorného postupu najdete v [Pythonu-Samples-vs-cpp-Extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub).
+Dokončenou ukázku z tohoto návodu najdete na [webu python-samples-vs-cpp-extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub).

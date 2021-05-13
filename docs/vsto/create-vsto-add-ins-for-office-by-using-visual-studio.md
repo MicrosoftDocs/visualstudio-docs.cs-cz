@@ -3,7 +3,7 @@ title: Vytváření doplňků VSTO pro Office s použitím sady Visual Studio
 description: Přečtěte si, jak můžete pomocí nástrojů systém Microsoft Office Developer Tools v sadě Visual Studio vytvářet .NET Framework aplikace, které rozšíří Office.
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
-ms.date: 08/14/2019
+ms.date: 04/28/2021
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,14 +13,17 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 611feb69dc4c5ebdd340a61c49e76e0d7c33e713
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 990caeec642a745bec5b6e0f2d29ff5d6213d095
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947955"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848315"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Vytváření doplňků VSTO pro Office s použitím sady Visual Studio
+> [!IMPORTANT]
+> VSTO spoléhá na [.NET Framework](https://docs.microsoft.com/dotnet/framework/get-started/overview). Doplňky modelu COM lze také zapsat pomocí .NET Framework. Doplňky Office se nedají vytvářet pomocí [.NET Core a .NET 5 +](https://docs.microsoft.com/dotnet/core/dotnet-five), nejnovější verze .NET. Důvodem je to, že .NET Core/. NET 5 + nemůže spolupracovat s .NET Framework ve stejném procesu a může vést k chybám načtení doplňku. Můžete dál používat .NET Framework k psaní VSTO a doplňků modelu COM pro Office. Microsoft nebude aktualizovat VSTO nebo platformu doplňku COM pro použití .NET Core nebo .NET 5 +. Můžete využít výhod .NET Core a .NET 5 +, včetně ASP.NET Core, k vytvoření serverové aplikace pro [webové Doplňky Office](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins).
+
   Pomocí nástrojů systém Microsoft Office Developer Tools v sadě Visual Studio můžete vytvářet .NET Framework aplikace, které rozšíří Office. Tyto aplikace se také nazývají *řešení pro systém Office*.
 
  Nástroje Office Developer Tools poskytují funkce, které vám pomůžou vytvářet řešení pro systém Office tak, aby vyhovovala různým obchodním potřebám. Nástroje obsahují šablony projektu, které vám pomohou vytvořit řešení pro systém Office pomocí Visual Basic nebo Visual C# a vizuálních návrhářů, které vám pomohou vytvořit vlastní uživatelská rozhraní pro vaše řešení pro systém Office.
@@ -42,45 +45,45 @@ ms.locfileid: "99947955"
 
  Obsahuje odkazy na informace o tom, jak fungují řešení Office, včetně informací o přizpůsobení na úrovni dokumentu a Doplňkech VSTO.
 
-- [Návrh a tvorba řešení pro systém Office](designing-and-creating-office-solutions.md)
+- [Návrh a vytváření řešení pro Systém Office](designing-and-creating-office-solutions.md)
 
- Poskytuje informace o tom, jak vytvořit projekt Office a nakonfigurovat projekt v sadě Visual Studio.
+ Tento článek obsahuje informace o tom, jak vytvořit projekt Office a nakonfigurovat ho v Visual Studio.
 
-- [Vývoj řešení pro systém Office](developing-office-solutions.md)
+- [Vývoj řešení pro Office](developing-office-solutions.md)
 
- Obsahuje informace o použití spravovaného kódu s řešeními pro systém Office, včetně postupu přizpůsobení uživatelského rozhraní Office, práci s daty a řešení problémů.
+ Poskytuje informace o tom, jak používat spravovaný kód s řešeními Office, včetně toho, jak přizpůsobit uživatelské rozhraní Office, pracovat s daty a řešit problémy.
 
-- [Řešení pro Excel](excel-solutions.md)
+- [Excelová řešení](excel-solutions.md)
 
- Poskytuje informace o tom, jak automatizovat aplikaci Excel, vytvořit řešení aplikace Excel a pochopit problémy globalizace, které jsou specifické pro aplikaci Excel.
+ Tento článek obsahuje informace o automatizaci Excelu, vytváření excelových řešení a pochopení problémů s globalizací specifických pro Excel.
 
 - [Řešení InfoPath](infopath-solutions.md)
 
- Poskytuje informace o tom, jak vytvářet šablony formulářů a doplňky VSTO pro InfoPath.
+ Tento článek obsahuje informace o vytváření šablon formulářů a doplňků VSTO pro aplikaci InfoPath.
 
-- [Řešení pro Outlook](outlook-solutions.md)
+- [Řešení outlooku](outlook-solutions.md)
 
- Poskytuje informace o automatizaci aplikace Outlook a vytváření doplňků a oblastí formulářů aplikace Outlook VSTO.
+ Tento článek obsahuje informace o automatizaci Outlooku a vytváření doplňků a oblastí formulářů Outlooku VSTO.
 
-- [Řešení aplikace PowerPoint](powerpoint-solutions.md)
+- [Řešení PowerPointu](powerpoint-solutions.md)
 
- Poskytuje informace o tom, jak automatizovat PowerPoint a vytvářet doplňky VSTO pro PowerPoint.
+ Tento článek obsahuje informace o automatizaci PowerPointu a vytváření doplňků VSTO pro PowerPoint.
 
 - [Řešení projektu](project-solutions.md)
 
- Poskytuje informace o tom, jak automatizovat systém Microsoft Office projektu a vytvářet doplňky VSTO projektu.
+ Tento článek obsahuje informace o automatizaci systém Microsoft Office projektu a vytváření doplňků VSTO projektu.
 
-- [Řešení aplikace Visio](visio-solutions.md)
+- [Řešení Visio](visio-solutions.md)
 
- Poskytuje informace o automatizaci aplikace Visio a vytváření doplňků aplikace Visio VSTO.
+ Tento článek obsahuje informace o automatizaci visia a vytváření doplňků Visio VSTO.
 
-- [Řešení pro Word](word-solutions.md)
+- [Řešení pro word](word-solutions.md)
 
- Poskytuje informace o tom, jak automatizovat Word a vytvářet řešení pro Word.
+ Tento článek obsahuje informace o automatizaci wordových řešení a vytváření řešení aplikace Word.
 
-- [Sestavování řešení pro systém Office](building-office-solutions.md)
+- [Vytváření řešení pro Office](building-office-solutions.md)
 
- Poskytuje informace o rozdílech mezi vytvářením projektů Office a dalšími typy projektů v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+ Poskytuje informace o rozdílech mezi sestavováním projektů Office a dalšími typy projektů v systému [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - [Ladění projektů Office](debugging-office-projects.md)
 
@@ -115,8 +118,8 @@ ms.locfileid: "99947955"
 
 - [Středisko pro vývojáře sady Visual Studio](https://visualstudio.microsoft.com/) Poskytuje další prostředky sady Visual Studio, jako jsou například technické články, videa a blogy.
 
-- [Část systém Microsoft Office Development knihovny MSDN](/previous-versions/office/office-12/bb726434(v=office.12)) Oblast knihovny MSDN, kde najdete články a referenční dokumentaci týkající se vývoje řešení pro několik verzí Office (není specifické pro vývoj pro Office pomocí sady Visual Studio).
+- [systém Microsoft Office vývojové části knihovny MSDN](/previous-versions/office/office-12/bb726434(v=office.12)) Oblast knihovny MSDN, kde najdete články a referenční dokumentaci týkající se vývoje řešení pro několik verzí Office (ne specifická pro vývoj pro Office pomocí Visual Studio).
 
-- [Vývoj aplikací v aplikaci Visual Studio](/previous-versions/h8w79z10(v=vs.140)) Obsahuje odkazy na témata, která vysvětlují, jak můžete pomocí sady Visual Studio navrhovat, vyvíjet, ladit a nasazovat webové aplikace, webové služby XML a tradiční klientské aplikace.
+- [Vývoj aplikací v Visual Studio](/previous-versions/h8w79z10(v=vs.140)) Obsahuje odkazy na témata, která vysvětlují, jak můžete pomocí Visual Studio navrhovat, vyvíjet, ladit a nasazovat webové aplikace, webové služby XML a tradiční klientské aplikace.
 
-- [.NET Framework programování v aplikaci Visual Studio](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Popisuje vývoj aplikací pomocí .NET Framework v Visual Basic a Visual C#.
+- [.NET Framework programování v Visual Studio](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Popisuje vývoj aplikací s .NET Framework v Visual Basic a Visual C#.
