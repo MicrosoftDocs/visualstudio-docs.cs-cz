@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 24a36bdbe0d3c6ac57b7595883301841ffa138e1
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: e50935145913bcd1f3c4457f4704376a0ac0f6ef
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97846716"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973236"
 ---
 # <a name="container-tools-launch-settings"></a>Nastavení spuštění nástrojů kontejneru
 
@@ -51,7 +51,7 @@ Nastavení příkazového řádku označuje, že tato část se vztahuje na nás
 
 ::: moniker range="vs-2017"
 
-|Název nastavení|Verze|Příklad|Popis|
+|Název nastavení|Verze|Příklad|Description|
 |------------|-------|-------|---------------|
 |launchBrowser|Visual Studio 2017|"launchBrowser": true|Označuje, zda se má po úspěšném spuštění projektu spustit prohlížeč.|
 |launchUrl|Visual Studio 2017|"launchUrl": "{schéma}://{ServiceHost}: {ServicePort}"|Tato adresa URL se používá při spuštění prohlížeče.  Podporované náhradní tokeny pro tento řetězec jsou:<br>   {Schéma} – v závislosti na tom, jestli se používá SSL, nahradí buď http, nebo HTTPS.<br>   {ServiceHost} – obvykle se nahrazuje řetězcem "localhost". Pokud cílíte na kontejnery Windows ve Windows 10 RS3 nebo starší, nahradí se tím i IP adresou kontejneru.<br>   {ServicePort} – obvykle se nahrazuje buď sslPort nebo httpPort, v závislosti na tom, jestli se používá SSL.  Při cílení na kontejnery Windows ve Windows 10 RS3 nebo starší se ale v závislosti na tom, jestli se používá SSL, nahradí buď "443", nebo "80".|
@@ -60,18 +60,18 @@ Nastavení příkazového řádku označuje, že tato část se vztahuje na nás
 
 ::: moniker range=">=vs-2019"
 
-| Název nastavení         | Příklad                                               | Popis                                                                                                             |
+| Název nastavení         | Příklad                                               | Description                                                                                                             |
 | -------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| CommandLineArgs –      | "CommandLineArgs –": "--mysetting hodnota"              | Tyto argumenty příkazového řádku pro spuštění vaší aplikace se použijí při spuštění projektu v kontejneru.                                     |
-| environmentVariables | "environmentVariables": {                             | Tyto hodnoty proměnných prostředí jsou předány procesu při jeho spuštění v kontejneru.                       |
+| commandLineArgs      | "commandLineArgs": "--mysetting myvalue"              | Tyto argumenty příkazového řádku pro spuštění aplikace se používají při spouštění projektu v kontejneru.                                     |
+| proměnné prostředí | "environmentVariables": {                             | Tyto hodnoty proměnných prostředí se předá procesu při spuštění v kontejneru.                       |
 |                      | "ASPNETCORE_URLS": " https://+:443 ; http://+:80 ",       |                                                                                                                         |
 |                      | "ASPNETCORE_HTTPS_PORT": "44381"                      |                                                                                                                         |
 |                      | }                                                     |                                                                                                                         |
-| httpPort             | "httpPort": 24051                                     | Tento port na hostiteli je při spuštění kontejneru mapován na port 80 kontejneru.                                |
-|                      |                                                       | Pokud tento parametr nezadáte, hodnota se převezme z hodnoty iisSettings.                                                          |
-| launchBrowser        | "launchBrowser": true                                 | Označuje, zda se má po úspěšném spuštění projektu spustit prohlížeč.                                       |
-| launchUrl            | "launchUrl": "{schéma}://{ServiceHost}: {ServicePort}" | Tato adresa URL se používá při spuštění prohlížeče. Podporované náhradní tokeny pro tento řetězec jsou:                          |
-|                      |                                                       | -{Schéma} – v závislosti na tom, jestli se používá SSL, nahradí buď http, nebo HTTPS.                                   |
+| httpPort             | "httpPort": 24051                                     | Tento port na hostiteli se při spouštění kontejneru mapuje na port 80 kontejneru.                                |
+|                      |                                                       | Pokud tento parametr nezadáte, hodnota bude převzata z hodnoty iisSettings.                                                          |
+| launchBrowser (prohlížeč spuštění)        | "launchBrowser": true                                 | Určuje, jestli se má po úspěšném spuštění projektu spustit prohlížeč.                                       |
+| launchUrl            | "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}" | Tato adresa URL se používá při spuštění prohlížeče. Podporované nahrazovací tokeny pro tento řetězec jsou:                          |
+|                      |                                                       | - {Scheme} – nahrazeno buď "http" nebo "https", v závislosti na tom, jestli se používá SSL.                                   |
 |                      |                                                       | – {ServiceHost} – obvykle se nahrazuje řetězcem "localhost".                                                                    |
 |                      |                                                       | Pokud cílíte na kontejnery Windows ve Windows 10 RS3 nebo starší, nahradí se tím i IP adresou kontejneru.           |
 |                      |                                                       | -{ServicePort} – obvykle se nahrazuje buď sslPort nebo httpPort, v závislosti na tom, jestli se používá SSL.                   |
@@ -89,4 +89,5 @@ Nakonfigurujte projekt nastavením [vlastností kontejnerových nástrojů](cont
 
 ## <a name="see-also"></a>Viz také
 
-[Docker Compose vlastnosti sestavení](docker-compose-properties.md)
+- [Docker Compose vlastnosti sestavení](docker-compose-properties.md)
+- [Spravovat spouštěcí profily pro Docker Compose](launch-profiles.md)

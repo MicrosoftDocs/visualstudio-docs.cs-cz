@@ -1,23 +1,23 @@
 ---
 title: Aktualizace sady Visual Studio s minimálním offline rozložením
 description: Naučte se aktualizovat Visual Studio pomocí minimálního offline rozložení.
-ms.date: 07/21/2020
+ms.date: 05/18/2021
 ms.custom: seodec18
 ms.topic: how-to
 ms.assetid: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 199771b1cda2049d6508832d7d2264558104a566
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9971007ed38a1f09aa28145ead468f6e5383eeae
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935700"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973604"
 ---
 # <a name="update-visual-studio-using-a-minimal-offline-layout"></a>Aktualizace sady Visual Studio s minimálním offline rozložením
 
@@ -36,58 +36,58 @@ Nástroj pro minimální rozložení generuje rozložení, které se přizpůsob
 Tento nástroj vytvoří rozložení aktualizací pro Visual Studio 2017 (15,9) a vyšší. Rozložení se dá nasadit do počítačů v síti nebo v režimu offline, aby se aktualizovaly instance sady Visual Studio. Během [normálního vytváření rozložení](update-a-network-installation-of-visual-studio.md)se stáhnou všechny balíčky pro danou verzi. Pro opravu, odinstalaci a další standardní operace v instancích sady Visual Studio se vyžaduje vytváření normálního rozložení. Minimální rozložení stahuje pouze aktualizované balíčky, takže je menší a snazší je zkopírovat do počítačů v režimu offline.
 
 ### <a name="installing-the-minimal-layout-tool"></a>Instalace nástroje pro minimální rozložení
- 
+
  1. Nejdřív si stáhněte nástroj pro minimální rozložení, který najdete [tady](https://aka.ms/vs/installer/minimallayout). Nezapomeňte po zobrazení výzvy zvolit možnost **Uložit** a pak vyberte **Spustit**.
 
      ![Uložit Nástroj pro minimální rozložení](media/save-minimal-layout.png)
 
  2. V dalším kroku Přijměte výzvu k řízení uživatelských účtů kliknutím na **Ano**.
 
-     ![Přijmout řízení uživatelských účtů](media/accept-user-account-control.png)
+     ![Přijetí řízení uživatelských účtů](media/accept-user-account-control.png)
 
- 3. Nástroj pro minimální rozložení bude nainstalován do `C:\Program Files (x86)\Microsoft Visual Studio\MinimalLayout` .
+ 3. Nástroj s minimálním rozložením se nainstaluje na `C:\Program Files (x86)\Microsoft Visual Studio\MinimalLayout` .
 
-### <a name="how-to-use-the-minimal-layout-tool"></a>Jak používat nástroj pro minimální rozložení
+### <a name="how-to-use-the-minimal-layout-tool"></a>Jak používat nástroj s minimálním rozložením
 
-`MinimalLayout.exe` k vygenerování rozložení používá následující příkazy a možnosti. Pro spuštění tohoto nástroje je nutný alespoň jeden příkaz. Tady je postup, jak tento nástroj spustit:
+`MinimalLayout.exe` k vygenerování rozložení používá následující příkazy a možnosti. Ke spuštění nástroje je potřeba alespoň jeden příkaz. Nástroj spustíte takhle:
 
 ```MinimalLayout.exe [command] <options>...```
 
 #### <a name="commands"></a>Příkazy
-* **Preview**: pomocí tohoto příkazu můžete zobrazit náhled toho, kolik balíčků se stáhne, a celkové místo využité k vytvoření tohoto rozložení. 
-* **Vygenerovat**: Tento příkaz slouží k vygenerování minimálního rozložení pro aktualizaci sady Visual Studio.
-* **Znovu vygenerovat**: pomocí tohoto příkazu můžete znovu vygenerovat rozložení pomocí existujícího souboru odpovědi na minimální rozložení. Každé minimální rozložení vytvoří `MinimalLayout.json` soubor odezvy, který obsahuje původní vstupní parametry minimálního rozložení. K opětovnému vygenerování minimálního rozložení můžete použít příkaz **znovu vygenerovat** a `MinimalLayout.json` soubor odpovědí. To je užitečné, pokud chcete vytvořit minimální rozložení nové aktualizace sady Visual Studio založené na předchozím souboru odpovědi na minimální rozložení.
+* **Preview:** Pomocí tohoto příkazu zobrazíte náhled počtu stažených balíčků a celkového místa použitého k vytvoření tohoto rozložení.
+* **Generovat:** Pomocí tohoto příkazu vygenerování minimálního rozložení pro aktualizaci Visual Studio.
+* **Znovu vygenerovat:** Pomocí tohoto příkazu můžete znovu vygenerovat rozložení s použitím existujícího souboru s minimálním rozložením odpovědí. Každé minimální rozložení vytvoří soubor `MinimalLayout.json` odpovědi, který obsahuje původní minimální vstupní parametry rozložení. K opětovnému **vygenerování** minimálního rozložení můžete použít příkaz Regenerate a `MinimalLayout.json` soubor odpovědi. To je užitečné, pokud chcete vytvořit minimální rozložení pro novou aktualizaci Visual Studio na základě předchozího minimálního souboru odpovědí rozložení.
 
-   Pro tento příkaz `MinimalLayout.json` je vyžadována cesta k souboru z již vygenerovaného rozložení. 
+   Pro tento příkaz se vyžaduje cesta k souboru z už `MinimalLayout.json` vygenerované rozložení.
 
     ```cmd
     MinimalLayout.exe regenerate --filePath C:\MinimalLayout\MinimalLayout.json
     ```
 
-* **Ověřit**: pomocí tohoto příkazu určete, zda je složka rozložení poškozena.
-* **Oprava**: Tento příkaz použijte k opravě poškozené složky rozložení, včetně nahrazení všech chybějících balíčků ze složky rozložení.
+* **Ověřit:** Pomocí tohoto příkazu zjistěte, jestli je složka rozložení poškozená.
+* **Oprava:** Pomocí tohoto příkazu opravte poškozenou složku rozložení, včetně nahrazení všech chybějících balíčků ze složky rozložení.
 
 ::: moniker range="vs-2019"
 
-#### <a name="options"></a>Možnosti 
+#### <a name="options"></a>Možnosti
 
 |Možnosti    |Description    |Požadováno/volitelné |Příklad |
 |:----------|:-----------|:------------|:--------------|
-|--targetLocation &lt; adresář&gt; |Určuje adresář, ve kterém má být vytvořeno minimální rozložení offline.       |Vyžadováno        |--targetLocation c:\VSLayout\ |
-|-- &lt; verze baseVersion&gt;|Od této verze se vygeneruje minimální rozložení offline.   |Vyžadováno|--baseVersion 16.4.0 |
+|--targetLocation &lt; dir&gt; |Určuje adresář, ve kterém chcete vytvořit minimální offline rozložení.       |Vyžadováno        |--targetLocation c:\VSLayout\ |
+|--baseVersion &lt; version&gt;|Od této verze se vygeneruje minimální offline rozložení.   |Vyžadováno|--baseVersion 16.4.0 |
 |-- &lt; verze targetVersion&gt;|Minimální rozložení offline se vygeneruje až do této verze, včetně této.|Vyžadováno|--targetVersion 16.4.4|
 |--jazyky    |Určuje jazyky, které mají být zahrnuty do minimálního offline rozložení. Je možné zadat více hodnot oddělených mezerami.    |Vyžadováno    |--jazyky en-US fr-FR |
-|-- &lt; ID ProductID&gt;    |ID produktu, z něhož bude vygenerováno minimální rozložení offline <br> <ul><li>Microsoft. VisualStudio. Product. Enterprise</li><li>Microsoft. VisualStudio. Product. Professional</li><li>Microsoft. VisualStudio. Product. BuildTools</li><li>Microsoft. VisualStudio. Product. TestAgent</li><li>Microsoft. VisualStudio. Product. TestController</li><li>Microsoft. VisualStudio. Product. TeamExplorer</li></ul>|Vyžadováno|--productId Microsoft. VisualStudio. Product. Enterprise |
-|--filePath    |Cesta k souboru MinimalLayout.jsv souboru z již vytvořeného rozložení. Tato možnost se používá jenom s příkazem znovu vygenerovat.     |Vyžadováno pro příkaz pro opětovné vygenerování    |--filePath C:\VSLayout\minimalLayout.jsv <br><br> **Všimněte si, že příkaz znovu vygenerovat má pouze možnost--filePath.** |
-|--Přidat &lt; jednu nebo více úloh nebo ID součástí&gt;    |Určuje jedno nebo více úloh nebo ID součástí, které chcete přidat. Další součásti lze globálně přidat pomocí--includeRecommended a/nebo <br> –-includeOptional. Je možné zadat více úloh nebo ID komponent oddělené mezerou.    |Volitelné    |--Přidejte Microsoft. VisualStudio. úlohu. ManagedDesktop Microsoft. VisualStudio. reNetWeb Component. GitHub. VisualStudio. |
-|--includeRecommended    |Zahrnuje Doporučené součásti pro všechny nainstalované úlohy, ale ne volitelné součásti.    |Volitelné    |Pro konkrétní zatížení: <br> --přidat Microsoft. VisualStudio. úlohu. ManagedDesktop;includeRecommended <br><br> Použití na všechny úlohy:--includeRecommended |
-|--includeOptional |Zahrnuje volitelné komponenty pro všechny nainstalované úlohy, včetně doporučených komponent.    |Volitelné    |Pro konkrétní zatížení: <br>--přidat Microsoft. VisualStudio. úlohu. ManagedDesktop;includeOptional <br><br> Použití na všechny úlohy:--includeOptional |
+|--productId &lt; jedno nebo více ID produktu&gt;    |ID (y) produktů, ze kterých se vygeneruje minimální rozložení offline, oddělené čárkami. <br> <ul><li>Microsoft. VisualStudio. Product. Enterprise</li><li>Microsoft. VisualStudio. Product. Professional</li><li>Microsoft. VisualStudio. Product. BuildTools</li><li>Microsoft. VisualStudio. Product. TestAgent</li><li>Microsoft. VisualStudio. Product. TestController</li><li>Microsoft. VisualStudio. Product. TeamExplorer</li></ul>|Vyžadováno|--productId. Microsoft. VisualStudio. Product. Enterprise, Microsoft. VisualStudio. Product. Professional |
+|--filePath    |Cesta k souboru MinimalLayout.jsv souboru z již vytvořeného rozložení. Tato možnost se používá jenom s příkazem znovu vygenerovat.     |Vyžaduje se pro příkaz Pro opětovné vygenerování.    |--filePath C:\VSLayout\minimalLayout.json <br><br> **Všimněte si, že příkaz Regenerate přijímá jako možnost pouze --filePath.** |
+|--add &lt; one or more workload or component IDs&gt;    |Určuje jedno nebo více ID úloh nebo komponent, které se přidávají. Další komponenty je možné přidat globálně pomocí příkazu --includeRecommended a/nebo <br> –-includeOptional. Je možné zadat více ID úloh nebo komponent oddělených mezerou.    |Volitelné    |--add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb Component.GitHub.VisualStudio |
+|--includeRecommended    |Zahrnuje doporučené komponenty pro všechny úlohy, které jsou nainstalované, ale ne volitelné součásti.    |Volitelné    |Pro konkrétní úlohu: <br> --add Microsoft.VisualStudio.Workload. ManagedDesktop, includeRecommended <br><br> Použití na všechny úlohy: --includeRecommended |
+|--includeOptional |Zahrnuje volitelné součásti pro všechny nainstalované úlohy, včetně doporučených komponent.    |Volitelné    |Pro konkrétní úlohu: <br>--add Microsoft.VisualStudio.Workload. ManagedDesktop, includeOptional <br><br> Použití na všechny úlohy:--includeOptional |
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-#### <a name="options"></a>Možnosti 
+#### <a name="options"></a>Možnosti
 
 |Možnosti    |Description    |Požadováno/volitelné |Příklad |
 |:----------|:-----------|:------------|:--------------|
@@ -95,10 +95,10 @@ Tento nástroj vytvoří rozložení aktualizací pro Visual Studio 2017 (15,9) 
 |-- &lt; verze baseVersion&gt;|Od této verze se vygeneruje minimální rozložení offline.   |Vyžadováno|--baseVersion 15.0.0 |
 |-- &lt; verze targetVersion&gt;|Minimální rozložení offline se vygeneruje až do této verze, včetně této.|Vyžadováno|--targetVersion 15.9.31|
 |--jazyky    |Určuje jazyky, které mají být zahrnuty do minimálního offline rozložení. Je možné zadat více hodnot oddělených mezerami.    |Vyžadováno    |--jazyky en-US fr-FR |
-|-- &lt; ID ProductID&gt;    |ID produktu, z něhož bude vygenerováno minimální rozložení offline <br> <ul><li>Microsoft. VisualStudio. Product. Enterprise</li><li>Microsoft. VisualStudio. Product. Professional</li><li>Microsoft. VisualStudio. Product. BuildTools</li><li>Microsoft. VisualStudio. Product. TestAgent</li><li>Microsoft. VisualStudio. Product. TestController</li><li>Microsoft. VisualStudio. Product. TeamExplorer</li></ul>|Vyžadováno|--productId Microsoft. VisualStudio. Product. Enterprise |
-|--filePath    |Cesta k souboru MinimalLayout.jsv souboru z již vytvořeného rozložení. Tato možnost se používá jenom s příkazem znovu vygenerovat.     |Vyžadováno pro příkaz pro opětovné vygenerování    |--filePath C:\VSLayout\minimalLayout.jsv <br><br> **Všimněte si, že příkaz znovu vygenerovat má pouze možnost--filePath.** |
-|--Přidat &lt; jednu nebo více úloh nebo ID součástí&gt;    |Určuje jedno nebo více úloh nebo ID součástí, které chcete přidat. Další součásti lze globálně přidat pomocí--includeRecommended a/nebo <br> –-includeOptional. Je možné zadat více úloh nebo ID komponent oddělené mezerou.    |Volitelné    |--Přidejte Microsoft. VisualStudio. úlohu. ManagedDesktop Microsoft. VisualStudio. reNetWeb Component. GitHub. VisualStudio. |
-|--includeRecommended    |Zahrnuje Doporučené součásti pro všechny nainstalované úlohy, ale ne volitelné součásti.    |Volitelné    |Pro konkrétní zatížení: <br> --přidat Microsoft. VisualStudio. úlohu. ManagedDesktop;includeRecommended <br><br> Použití na všechny úlohy:--includeRecommended |
+|--productId &lt; jedno nebo více ID produktu&gt;    |ID (y) produktů, ze kterých se vygeneruje minimální rozložení offline, oddělené čárkami. <br> <ul><li>Microsoft. VisualStudio. Product. Enterprise</li><li>Microsoft. VisualStudio. Product. Professional</li><li>Microsoft. VisualStudio. Product. BuildTools</li><li>Microsoft. VisualStudio. Product. TestAgent</li><li>Microsoft.VisualStudio.Product.TestController</li><li>Microsoft.VisualStudio.Product.TeamExplorer</li></ul>|Vyžadováno|--productIds Microsoft.VisualStudio.Product.Enterprise,Microsoft.VisualStudio.Product.Professional |
+|--filePath    |Cesta k souboru MinimalLayout.jsv souboru z již vytvořeného rozložení. Tato možnost se používá pouze s příkazem Regenerate (Znovu vygenerovat).     |Vyžaduje se pro příkaz Pro opětovné vygenerování.    |--filePath C:\VSLayout\minimalLayout.json <br><br> **Všimněte si, že příkaz Regenerate přijímá jako možnost pouze --filePath.** |
+|--add &lt; one or more workload or component IDs&gt;    |Určuje jedno nebo více ID úloh nebo komponent, které se přidávají. Další komponenty je možné přidat globálně pomocí příkazu --includeRecommended a/nebo <br> –-includeOptional. Je možné zadat více ID úloh nebo komponent oddělených mezerou.    |Volitelné    |--add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb Component.GitHub.VisualStudio |
+|--includeRecommended    |Zahrnuje doporučené komponenty pro všechny úlohy, které jsou nainstalované, ale ne volitelné součásti.    |Volitelné    |Pro konkrétní úlohu: <br> --add Microsoft.VisualStudio.Workload. ManagedDesktop, includeRecommended <br><br> Použití na všechny úlohy:--includeRecommended |
 |--includeOptional |Zahrnuje volitelné komponenty pro všechny nainstalované úlohy, včetně doporučených komponent.    |Volitelné    |Pro konkrétní zatížení: <br>--přidat Microsoft. VisualStudio. úlohu. ManagedDesktop;includeOptional <br><br> Použití na všechny úlohy:--includeOptional |
 
 ::: moniker-end
@@ -119,16 +119,16 @@ Pojďme si projít několik příkladů, jak zobrazit náhled, vygenerovat a zno
 - Tady je příklad, jak zobrazit náhled rozložení pro Visual Studio Enterprise verze 16.4.0 na 16.4.4 jenom pro angličtinu.
 
     ```cmd
-    MinimalLayout.exe preview --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --languages en-US
+    MinimalLayout.exe preview --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --languages en-US
     ```
 
 - Tady je postup, jak vygenerovat stejné rozložení s jedním úlohou.
 
     ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US
     ```
 
-- A tady je postup, jak znovu vygenerovat minimální rozložení offline pomocí existujícího souboru odpovědí. 
+- A tady je postup, jak znovu vygenerovat minimální rozložení offline pomocí existujícího souboru odpovědí.
 
     ```cmd
     MinimalLayout.exe regenerate -filepath c:\VSLayout\MinimalLayout.json
@@ -136,16 +136,16 @@ Pojďme si projít několik příkladů, jak zobrazit náhled, vygenerovat a zno
 
 Několik dalších příkladů pomocí příkazu **Generovat** :
 
-- Tady je postup, jak přidat další úlohu a zahrnout jenom Doporučené balíčky. 
+- Tady je postup, jak přidat další úlohu a zahrnout jenom Doporučené balíčky.
 
     ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Professional --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Professional --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
     ```
 
-- A konečně, tady je postup, jak do minimálního rozložení zahrnout více jazyků. 
+- A konečně, tady je postup, jak do minimálního rozložení zahrnout více jazyků.
 
     ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
     ```
 
 ::: moniker-end
@@ -155,16 +155,16 @@ Několik dalších příkladů pomocí příkazu **Generovat** :
 - Tady je příklad, jak zobrazit náhled rozložení pro Visual Studio Enterprise verze 15.0.0 na 15.9.31 jenom pro angličtinu.
 
     ```cmd
-    MinimalLayout.exe preview --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --languages en-US
+    MinimalLayout.exe preview --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --languages en-US
     ```
 
 - Tady je postup, jak vygenerovat stejné rozložení s jedním úlohou.
 
     ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US
     ```
 
-- A tady je postup, jak znovu vygenerovat minimální rozložení offline pomocí existujícího souboru odpovědí. 
+- A tady je postup, jak znovu vygenerovat minimální rozložení offline pomocí existujícího souboru odpovědí.
 
     ```cmd
     MinimalLayout.exe regenerate -filepath c:\VSLayout\MinimalLayout.json
@@ -172,16 +172,16 @@ Několik dalších příkladů pomocí příkazu **Generovat** :
 
 Několik dalších příkladů pomocí příkazu **Generovat** :
 
-- Tady je postup, jak přidat další úlohu a zahrnout jenom Doporučené balíčky. 
+- Tady je postup, jak přidat další úlohu a zahrnout jenom Doporučené balíčky.
 
     ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Professional --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Professional --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
     ```
 
-- A konečně, tady je postup, jak do minimálního rozložení zahrnout více jazyků. 
+- A konečně, tady je postup, jak do minimálního rozložení zahrnout více jazyků.
 
     ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
     ```
 
 ::: moniker-end
@@ -190,19 +190,19 @@ Několik dalších příkladů pomocí příkazu **Generovat** :
 
 Použijte příkazy **ověřit** a **opravit** pro zachování minimálního rozložení po jeho vytvoření. Příkaz **ověřit** určuje, jestli jsou v minimálním rozložení poškozené nebo chybějící balíčky. Pokud narazíte na problémy po spuštění příkazu **ověřit** , opravte chybějící nebo poškozené balíčky pomocí příkazu **opravit** .
 
-- Zde je postup, jak ověřit, zda rozložení obsahuje poškozené nebo chybějící balíčky: 
+- Zde je postup, jak ověřit, zda rozložení obsahuje poškozené nebo chybějící balíčky:
 
     ```cmd
-    MinimalLayout.exe Verify --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --languages en-US
+    MinimalLayout.exe Verify --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --languages en-US
     ```
 
 - A tady je postup, jak toto rozložení opravit:
 
     ```cmd
-    MinimalLayout.exe fix --targetLocation C:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended --languages en-US
+    MinimalLayout.exe fix --targetLocation C:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended --languages en-US
     ```
 
->[!NOTE] 
+>[!NOTE]
 > Toto rozložení nelze použít k opravě instalace sady Visual Studio. Chcete-li opravit existující instanci aplikace Visual Studio, přečtěte si téma [Oprava sady Visual Studio](repair-visual-studio.md).
 >
 
@@ -210,29 +210,29 @@ Použijte příkazy **ověřit** a **opravit** pro zachování minimálního roz
 
 Po vygenerování minimálního rozložení můžete zkopírovat celou složku minimálního rozložení do klientského počítače. To je nutné v případě, že počítač nemá přístup do složky minimálního rozložení v původním umístění.
 
-Přejděte do složky a Identifikujte název aplikace zaváděcího nástroje. Název aplikace zaváděcího nástroje závisí na zadané hodnotě ProductId při generování minimálního rozložení. Běžné příklady najdete v následující tabulce.
+Přejděte do složky a Identifikujte název aplikace zaváděcího nástroje. Název aplikace bootstrapperu závisí na hodnotě ProductId zadané při generování minimálního rozložení. Běžné příklady najdete v následující tabulce.
 
 |Hodnota ProductId    |Název aplikace|
 |:-----------|:------------|
-|Microsoft. VisualStudio. Product. Enterprise    |vs_enterprise.exe|
-|Microsoft. VisualStudio. Product. Professional    |vs_professional.exe|
-|Microsoft. VisualStudio. Product. BuildTools    |vs_buildtools.exe|
+|Microsoft.VisualStudio.Product.Enterprise    |vs_enterprise.exe|
+|Microsoft.VisualStudio.Product.Professional    |vs_professional.exe|
+|Microsoft.VisualStudio.Product.BuildTools    |vs_buildtools.exe|
 
-Aktualizace se aplikuje na instanci sady Visual Studio ve dvou krocích. Začněte tím, že aktualizujete Instalační program pro Visual Studio a pak aktualizujete Visual Studio.
+Aktualizace se na instanci Visual Studio ve dvou krocích. Začněte aktualizací Instalační program pro Visual Studio a pak aktualizujte Visual Studio.
 
-1. **Aktualizace Instalační program pro Visual Studio** 
+1. **Aktualizace Instalační program pro Visual Studio**
 
-    Spusťte následující příkaz a v `vs_enterprise.exe`  případě potřeby nahraďte správným názvem aplikace zaváděcího nástroje. 
+    Spusťte následující příkaz a v případě potřeby nahraďte `vs_enterprise.exe`  správným názvem aplikace bootstrapperu.
 
     ```cmd
     vs_enterprise.exe --quiet --update --offline C:\VSLayout\vs_installer.opc
     ```
 
-2. **Aktualizace aplikace sady Visual Studio**
+2. **Aktualizace Visual Studio aplikace**
 
-    Chcete-li aktualizovat sadu Visual Studio, je nutné zadat installPath instance sady Visual Studio, kterou chcete aktualizovat. Pokud je nainstalováno více instancí sady Visual Studio, je třeba každou z nich aktualizovat samostatně. Důrazně doporučujeme, abyste zadali `–noWeb` možnost s příkazem Update, abyste zabránili instalaci komponent, které nejsou v minimálním rozložení. Tím zabráníte tomu, abyste aplikaci Visual Studio opustili v nepoužitelném stavu.
+    Pokud chcete Visual Studio, musíte zadat installPath instance Visual Studio, kterou chcete aktualizovat. Pokud je nainstalováno Visual Studio instancí, je potřeba každou z nich aktualizovat samostatně. Důrazně doporučujeme zadat možnost pomocí příkazu update, abyste zabránili instalaci komponent, které nejsou v `–noWeb` minimálním rozložení. To vám zabrání opustit Visual Studio v nepoužitelném stavu.
 
-    Spusťte následující příkaz a patřičným Nahraďte parametr příkazového řádku installPath. Nezapomeňte použít také správný název aplikace zaváděcího nástroje.
+    Spusťte následující příkaz a odpovídajícím způsobem nahraďte parametr příkazového řádku installPath. Nezapomeňte také použít správný název aplikace bootstrapperu.
 
     ```cmd
     vs_enterprise.exe update --noWeb --quiet --installpath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise"
@@ -246,6 +246,6 @@ Aktualizace se aplikuje na instanci sady Visual Studio ve dvou krocích. Začně
 * [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro zjišťování a správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)
-* [Definování nastavení v souboru odpovědí](automated-installation-with-response-file.md)
+* [Jak definovat nastavení v souboru odpovědí](automated-installation-with-response-file.md)
 * [Řízení aktualizací pro nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md)
 * [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)

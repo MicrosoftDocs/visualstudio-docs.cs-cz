@@ -16,6 +16,7 @@
   items:
     - name: Instalace sady Visual Studio
       href: install/install-visual-studio.md
+      displayName: system requirements
     - name: Offline instalace
       items:
         - name: Vytvoření offline instalace sady Visual Studio
@@ -268,16 +269,6 @@
         - name: Přizpůsobení úloh sestavení a ladění
           displayName: makefile tasks.vs.json
           href: ide/customize-build-and-debug-tasks-in-visual-studio.md
-    - name: Vývoj s Codespaces (Preview)
-      items:
-        - name: Přehled
-          href: ide/codespaces/codespaces-overview.md
-        - name: Použití sady Visual Studio s codespace
-          href: ide/codespaces/use-visual-studio-with-codespaces.md
-        - name: Přizpůsobení codespace
-          href: ide/codespaces/customize-codespaces.md
-        - name: Podporované funkce sady Visual Studio
-          href: ide/codespaces/supported-features-codespaces.md
     - name: Připojení k projektům v Team Exploreru
       displayName: Azure DevOps VSTS
       href: ide/connect-team-project.md
@@ -1443,38 +1434,16 @@
       href: ide/whats-new-visual-studio-docs.md
     - name: Historie novinek v dokumentaci
       href: ide/whats-new-visual-studio-docs-history.md
-    - name: Zpráva k vydání verze a požadavky na systém
+    - name: "Poznámky k\_verzi"
       items:
         - name: Frekvence vydávání nových verzí
           href: /visualstudio/productinfo/release-rhythm/
-        - name: Visual Studio 2017
-          items:
-            - name: Aktuální zpráva k vydání verze
-              href: /visualstudio/releasenotes/vs2017-relnotes/
-            - name: Zpráva k vydání verze Preview
-              href: /visualstudio/releasenotes/vs2017-preview-relnotes/
-            - name: Historie zpráv k vydání verzí
-              href: /visualstudio/releasenotes/vs2017-relnotes-history/
-            - name: Distribuovatelný kód
-              href: /visualstudio/productinfo/2017-redistribution-vs/
-            - name: Kompatibilita platforem
-              href: /visualstudio/productinfo/vs2017-compatibility-vs/
-            - name: Požadavky na systém
-              href: /visualstudio/productinfo/vs2017-system-requirements-vs/
-        - name: Visual Studio 2019
-          items:
-            - name: Aktuální zpráva k vydání verze
-              href: /visualstudio/releases/2019/release-notes/
-            - name: Zpráva k vydání verze Preview
-              href: /visualstudio/releases/2019/release-notes-preview/
-            - name: Historie zpráv k vydání verzí
-              href: /visualstudio/releases/2019/release-notes-history/
-            - name: Distribuovatelný kód
-              href: /visualstudio/releases/2019/redistribution/
-            - name: Kompatibilita platforem
-              href: /visualstudio/releases/2019/compatibility/
-            - name: Požadavky na systém
-              href: /visualstudio/releases/2019/system-requirements/
+        - name: Poznámky k Visual Studiu 2019
+          href: /visualstudio/releases/2019/release-notes/
+        - name: Poznámky k Visual Studiu 2017
+          href: /visualstudio/releasenotes/vs2017-relnotes/
+        - name: Dokumentace k Visual Studiu 2015
+          href: vs-2015-archive.md
         - name: Licenční podmínky
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: Životní cyklus podpory a aktualizace
@@ -1512,8 +1481,3 @@
       href: ide/developer-community-guidelines.md
     - name: Ochrana osobních údajů komunity vývojářů
       href: ide/developer-community-privacy.md
-- name: Visual Studio 2015
-  expanded: true
-  items:
-    - name: Dokumentace k sadě Visual Studio 2015
-      href: vs-2015-archive.md

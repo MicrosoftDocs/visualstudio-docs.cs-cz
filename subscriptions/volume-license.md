@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
-ms.date: 03/18/2021
+ms.date: 05/18/2021
 ms.topic: conceptual
 description: Zjistěte, jak můžou správci na multilicenčních smlouvách získat přístup k portálu pro správu předplatných sady Visual Studio.
-ms.openlocfilehash: 0ab0ca532c1c2cdb848a3f6df9862c1d80518248
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 70a44dd659fe2c972db6ae3b6155e3c2374b159f
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672527"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973556"
 ---
 # <a name="accessing-the-admin-portal-as-an-admin-on-a-volume-license-agreement"></a>Přístup k portálu pro správu jako správce na multilicenční smlouvě
 
@@ -37,4 +37,4 @@ To platí pro všechny typy multilicenčních smluv, včetně, ale ne omezení n
 ## <a name="next-steps"></a>Další kroky
 - Informace o tom, jak [přiřadit odběry](assign-license.md)
 - Další informace o plném rozsahu [výhod předplatného](https://visualstudio.microsoft.com/vs/benefits/)
-- [Nastavení předvoleb smluv](admin-prefs.md)
+- [Nastavení předvoleb smluv](admin-preferences.md)

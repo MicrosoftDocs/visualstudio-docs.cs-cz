@@ -48,7 +48,7 @@
       href: subscription-expiration.md
     - name: Změny na úrovni předplatného
       href: subscription-level-changes.md
-    - name: Odebrané odběry
+    - name: Odebraná předplatná
       href: subscription-removed.md
     - name: Kontaktování správce předplatných
       href: contact-my-admin.md
@@ -161,7 +161,7 @@
         - name: Supersprávci a správci
           href: admin-roles.md
         - name: Nastavení předvoleb smluv
-          href: admin-prefs.md
+          href: admin-preferences.md
         - name: Přehled
           href: using-admin-portal.md
         - name: Přidání měsíčních předplatných

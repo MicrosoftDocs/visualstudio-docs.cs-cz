@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 03/15/2021
 ms.technology: vs-azure
 ms.topic: tutorial
-ms.openlocfilehash: 412156894658cdb2160574e77ea052e4b194d386
-ms.sourcegitcommit: c875360278312457f4d2212f0811466b4def108d
+ms.openlocfilehash: 43684288eea2e1864bf31a8bb68bbac1b217a976
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107315976"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973275"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Kurz: Vytvoření aplikace s více kontejnery pomocí Docker Compose
 
@@ -48,26 +48,26 @@ Nevybírejte možnost **Povolit podporu Docker**. Podporu Docker přidáte pozd�
 
 ![Vytvořit projekt ASP.NET Core webové aplikace](./media/tutorial-multicontainer/vs-2019/create-web-project1.png)
 
-Nevybírejte možnost **Povolit podporu Docker**. Podporu Docker přidáte později.
+Nevybírejte možnost **Povolit podporu Docker**. Podporu Dockeru přidáte později.
 
-![Snímek obrazovky s dalšími informacemi při vytváření webového projektu Není vybraná možnost povolit podporu Docker.](./media/tutorial-multicontainer/vs-2019/create-web-project-additional-information.png)
+![Snímek obrazovky Další informace při vytváření webového projektu Možnost Povolit podporu Dockeru není vybraná.](./media/tutorial-multicontainer/vs-2019/create-web-project-additional-information.png)
 
 ::: moniker-end
 
 ## <a name="create-a-web-api-project"></a>Vytvoření projektu webového rozhraní API
 
-Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ projektu vyberte **rozhraní API** a zrušte zaškrtnutí políčka **Konfigurovat pro protokol HTTPS**. V tomto návrhu používáme pro komunikaci s klientem pouze protokol SSL, nikoli pro komunikaci mezi kontejnery ve stejné webové aplikaci. `WebFrontEnd`Potřebuje pouze https a kód v příkladech předpokládá, že jste toto zaškrtávací políčko zrušili. Obecně platí, že certifikáty vývojářů rozhraní .NET používané v aplikaci Visual Studio jsou podporovány pouze pro požadavky z externích na kontejner, nikoli pro požadavky na kontejner na kontejner.
+Přidejte projekt do stejného řešení a volejte ho *MyWebAPI*. Jako typ projektu vyberte **ROZHRANÍ API** a zrušte zaškrtnutí políčka Konfigurovat pro **HTTPS.** V tomto návrhu používáme pouze SSL pro komunikaci s klientem, nikoli pro komunikaci mezi kontejnery ve stejné webové aplikaci. Vyžaduje `WebFrontEnd` jenom HTTPS a kód v příkladech předpokládá, že jste toto políčko zaškrtnuti. Obecně platí, že vývojářské certifikáty .NET používané službou Visual Studio jsou podporovány pouze pro požadavky typu external-to-container, nikoli pro požadavky typu kontejner-kontejner.
 
 ::: moniker range="vs-2017"
-   ![Snímek obrazovky s vytvořením projektu webového rozhraní API](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
+   ![Snímek obrazovky při vytváření projektu webového rozhraní API](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
 ::: moniker-end
 ::: moniker range="vs-2019"
-   ![Snímek obrazovky s vytvořením projektu webového rozhraní API](./media/tutorial-multicontainer/vs-2019/create-webapi-project.png)
+   ![Snímek obrazovky při vytváření projektu webového rozhraní API](./media/tutorial-multicontainer/vs-2019/create-webapi-project.png)
 ::: moniker-end
 
-## <a name="add-code-to-call-the-web-api"></a>Přidat kód pro volání webového rozhraní API
+## <a name="add-code-to-call-the-web-api"></a>Přidání kódu pro volání webového rozhraní API
 
-1. V `WebFrontEnd` projektu otevřete soubor *index. cshtml. cs* a nahraďte `OnGet` metodu následujícím kódem.
+1. V `WebFrontEnd` projektu otevřete soubor *Index.cshtml.cs* a nahraďte `OnGet` metodu následujícím kódem.
 
    ```csharp
     public async Task OnGet()
@@ -87,11 +87,11 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
    ```
    
     > [!NOTE]
-    > V kódu reálného světa byste `HttpClient` po všech žádostech neměli nakládat. Osvědčené postupy najdete v tématu [použití HttpClientFactory k implementaci odolných požadavků HTTP](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
+    > V reálném kódu byste neměli po každém požadavku `HttpClient` likvidovat. Osvědčené postupy najdete v tématu Implementace odolných požadavků HTTP pomocí [HttpClientFactory.](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)
 
-   Pro .NET Core 3,1 v aplikaci Visual Studio 2019 nebo novější používá šablona webového rozhraní API rozhraní WeatherForecast API, takže odkomentujte řádek a přidejte komentář k řádku pro ASP.NET 2. x.
+   Pro .NET Core 3.1 v Visual Studio 2019 nebo novějším používá šablona webového rozhraní API rozhraní WeatherForecast API, proto odkomentování tohoto řádku a okomentování řádku pro ASP.NET 2.x.
 
-1. V souboru *index. cshtml* přidejte řádek, který se zobrazí `ViewData["Message"]` , aby soubor vypadal jako následující kód:
+1. Do souboru *Index.cshtml* přidejte řádek, který se má zobrazit, aby `ViewData["Message"]` soubor vypadal jako následující kód:
     
       ```cshtml
       @page
@@ -107,7 +107,7 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
       </div>
       ```
 
-1. (Jenom ASP.NET 2. x) Nyní v projektu webového rozhraní API přidejte kód do řadiče hodnot a upravte zprávu vrácenou rozhraním API pro volání, které jste přidali ze služby *webendu*.
+1. (ASP.NET jenom 2.x) Teď v projektu webového rozhraní API přidejte do kontroleru Hodnoty kód pro přizpůsobení zprávy vrácené rozhraním API pro volání, které jste přidali z *webfrontend*.
     
       ```csharp
         // GET api/values/5
@@ -118,7 +118,7 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
         }
       ```
 
-    S .NET Core 3,1 to není potřeba, protože můžete použít rozhraní WeatherForecast API, které už existuje. Nicméně musíte odkomentovat volání <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*>  v `Configure` metodě v *Startup. cs*, protože tento kód používá protokol HTTP, nikoli HTTPS pro volání webového rozhraní API.
+    S .NET Core 3.1 ho nepotřebujete, protože můžete použít rozhraní API WeatherForecast, které tam už je. Volání metody v souboru <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> `Configure` *Startup.cs* je však potřeba okomentovat, protože tento kód používá k volání webového rozhraní API protokol HTTP, nikoli HTTPS.
 
     ```csharp
                 //app.UseHttpsRedirection();
@@ -177,23 +177,25 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
           dockerfile: MyWebAPI/Dockerfile
     ```
 
-1. Nyní spusťte web místně (F5 nebo CTRL + F5) a ověřte, zda funguje podle očekávání. Pokud je všechno správně nakonfigurované pomocí verze .NET Core 2. x, zobrazí se zpráva Hello z webendu a WebApi (s hodnotou 1).  S .NET Core 3 vidíte data předpovědi počasí.
+1. Nyní spusťte web místně (F5 nebo CTRL + F5) a ověřte, zda funguje podle očekávání. Pokud je všechno správně nakonfigurované s verzí .NET Core 2.x, zobrazí se zpráva "Hello from webfrontend and webapi (with value 1).  V .NET Core 3 se zobrazí data předpovědi počasí.
 
-   První projekt, který použijete při přidání orchestrace kontejnerů, je nastaven tak, aby se spustil při spuštění nebo ladění. Akci spuštění můžete nakonfigurovat ve **vlastnostech projektu** pro projekt Docker-pro vytváření.  V uzlu projekt Docker – sestavení klikněte pravým tlačítkem myši a otevřete místní nabídku a zvolte možnost **vlastnosti** nebo stiskněte klávesu ALT + ENTER.  Následující snímek obrazovky ukazuje vlastnosti, které chcete použít pro toto řešení.  Můžete například změnit stránku, která je načtena přizpůsobením vlastnosti **Adresa URL služby** .
+   První projekt, který použijete při přidávání orchestrace kontejnerů, se nastaví tak, aby se spustil při spuštění nebo ladění. Akci spuštění můžete nakonfigurovat ve **vlastnostech projektu** docker-compose ve vlastnostech projektu.  V uzlu projektu docker-compose kliknutím pravým tlačítkem otevřete místní nabídku a pak zvolte **Vlastnosti** nebo použijte Alt+Enter.  Následující snímek obrazovky ukazuje vlastnosti, které byste chtěli pro zde použité řešení použít.  Stránku, která se načte, můžete například změnit přizpůsobením vlastnosti **Adresa URL** služby.
 
-   ![Snímek obrazovky Docker – sestavení vlastností projektu](media/tutorial-multicontainer/launch-action.png)
+   ![Snímek obrazovky s vlastnostmi projektu docker-compose](media/tutorial-multicontainer/launch-action.png)
 
-   Tady vidíte, co se zobrazí při spuštění (verze .NET Core 2. x):
+   Zde vidíte, co se zobrazí při spuštění (verze .NET Core 2.x):
 
-   ![Snímek obrazovky běžící webové aplikace](media/tutorial-multicontainer/webfrontend.png)
+   ![Snímek obrazovky se spuštěnou webovou aplikací](media/tutorial-multicontainer/webfrontend.png)
 
-   Webová aplikace pro .NET 3,1 zobrazuje data o počasí ve formátu JSON.
+   Webová aplikace pro .NET 3.1 zobrazuje data o počasí ve formátu JSON.
 
 ## <a name="next-steps"></a>Další kroky
 
-Podívejte se na možnosti nasazení vašich [kontejnerů do Azure](/azure/containers).
+Podívejte se na možnosti nasazení [kontejnerů do Azure.](/azure/containers)
+
+Pokud chcete mít větší kontrolu nad tím, které služby se spustí během ladicí relace, zjistěte, jak pomocí spouštěcích profilů Docker Compose nakonfigurovat, které služby se spustí při ladění. Viz [Správa spouštěcích profilů pro Docker Compose](launch-profiles.md)
 
 ## <a name="see-also"></a>Viz také
   
 [Docker Compose](https://docs.docker.com/compose/)  
-[Nástroje kontejneru](./index.yml)
+[Nástroje pro kontejnery](./index.yml)

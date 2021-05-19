@@ -7,12 +7,12 @@ ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Přečtěte si o rolích správce superuživatele a správců a postup přiřazení správců.
-ms.openlocfilehash: eca87026c681454925974f2e394737092c3e226d
-ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
+ms.openlocfilehash: 1f107a5bcef9be61c4693549ee8e628a207cc789
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104757591"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973535"
 ---
 # <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Služby Super Admins a Admins pro Visual Studio – smlouvy o předplatném
 
@@ -31,10 +31,10 @@ Přiřazení nových správců (správcům):
 2. Klikněte na kartu s názvem **Správa správců**.
 3. Klikněte na **Přidat**.
    > [!div class="mx-imgBorder"]
-   > ![Přidat správce](_img/admin-roles/add-admins.png "Klikněte na okno spravovat správce a pak kliknutím na Přidat přiřaďte nové správce.")
+   > ![Přidat správce](_img/admin-roles/add-admins.png "Klikněte na okno Spravovat správce a pak kliknutím na Přidat přiřaďte nové správce.")
 4. Vyplňte formulář s informacemi o novém Správci.  
    > [!div class="mx-imgBorder"]
-   > ![Přidat formulář správce](_img/admin-roles/add-form.png "Zadejte přihlašovací údaje pro nového správce a vyberte, jestli se mají nastavit jako správce super.  Pak klikněte na Přidat.")
+   > ![Přidat formulář správce](_img/admin-roles/add-form.png "Zadejte přihlašovací údaje nového správce a zvolte, jestli se má z nich udělat supers právy správce.  Pak klikněte na Přidat.")
 
    > [!NOTE]
    > Pokud chcete, aby tento správce mohl přiřadit další správce, nezapomeňte zaškrtnout políčko **správce Super** .
@@ -42,17 +42,17 @@ Přiřazení nových správců (správcům):
 5. Když kliknete na **Přidat** a přiřadíte nového správce, obdrží jim e-mail, aby se přihlásil k portálu.  
 
 ## <a name="resources"></a>Zdroje informací
-- [Podpora správy a předplatných sady Visual Studio](https://aka.ms/vsadminhelp)
+- [Visual Studio správy a předplatných](https://aka.ms/vsadminhelp)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Visual Studio dokumentace](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
-- [Dokumentace k Microsoft 365](/microsoft-365/)
+- [Microsoft 365 dokumentace](/microsoft-365/)
 
 
 
 ## <a name="next-steps"></a>Další kroky
-- Informace o tom, jak [přiřadit odběry](assign-license.md)
-- Další informace o plném rozsahu [výhod předplatného](https://visualstudio.microsoft.com/vs/benefits/)
-- [Nastavení předvoleb smluv](admin-prefs.md)
+- Zjistěte, jak [přiřadit předplatná.](assign-license.md)
+- Další informace o celé řadě výhod [předplatného](https://visualstudio.microsoft.com/vs/benefits/)
+- [Nastavení předvoleb smluv](admin-preferences.md)
