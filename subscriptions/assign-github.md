@@ -7,12 +7,12 @@ ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
 ms.date: 03/03/2021
 ms.topic: conceptual
 description: Správa předplatných v předplatných Visual Studio s GitHub Enterprise
-ms.openlocfilehash: c174b9beb7a7a0eec6bdb65e684869bc0be7dadb
-ms.sourcegitcommit: 8da735b586276c95bf566a867655e3464ab1f989
+ms.openlocfilehash: a1ece92990bf54d85140b1d3548ebf811913fae4
+ms.sourcegitcommit: 0088835f22334b8fee89f8c07bb12bcdfdef1639
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2021
-ms.locfileid: "109740660"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110188111"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>Správa Visual Studio předplatných pomocí GitHub Enterprise
 Zákazníci se smlouvami Enterprise (EA) s Microsoftem mají nárok na nákup nové nabídky předplatného, která spojuje Visual Studio předplatná a GitHub Enterprise. Je to snadný a ekonomický způsob, jak Visual Studio získat GitHub Enterprise. 
@@ -33,6 +33,10 @@ Další informace o správě předplatných Visual Studio najdete v těchto tém
 > Pokud Visual Studio předplatné s GitHub Enterprise přiřadí správci předplatného Visual Studio bez předchozího nákupu, GitHub nebude upozorněn, že chcete vytvořit GitHub Enterprise účet.  **Nákup alespoň jednoho** Visual Studio předplatné s GitHub Enterprise před přiřazením předplatných.
 
 ## <a name="moving-to-visual-studio-with-github-enterprise"></a>Přechod na Visual Studio s GitHub Enterprise
+</br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEAsv]
+
 Pokud vaše organizace koupí předplatná sady Visual Studio se sadami GitHub Enterprise po standardních Visual Studio Enterprise a Visual Studio Professional předplatných, portál pro správu obsahuje funkci, která vám umožní přesunout stávající předplatitele na odpovídající Visual Studio Enterprise s GitHubem Enterprise nebo Visual Studio Professional s předplatnými v GitHubu Enterprise.  Například předplatitelé s předplatnými Visual Studio Professional se přesunou do Visual Studio Professional s předplatnými GitHub Enterprise. Na panelu přehled na levém panelu se zobrazí následující dlaždice:
 
    > [!div class="mx-imgBorder"]
