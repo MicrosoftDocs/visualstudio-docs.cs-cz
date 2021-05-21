@@ -11,12 +11,12 @@ ms.topic: troubleshooting
 ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: f16ecd899bc1dddd7383ef1a815ed6197b799a19
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f48b5c06e91b9c05e6edc7e2a1738aeb677a7ba
+ms.sourcegitcommit: 69456d802203d21dabc3ae8662547a3241c24f47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859525"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "110235908"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Řešení potíží při vývoji v sadě Visual Studio pomocí Dockeru
 
@@ -29,7 +29,7 @@ Sdílení souborů je potřeba spravovat jenom v případě, že používáte Hy
 1. V oznamovací oblasti klikněte pravým tlačítkem na **Docker for Windows** a pak vyberte **Nastavení**.
 1. Vyberte **prostředky**  >  **sdílení souborů** a nasdílejte složku, ke které je potřeba mít přístup. Sdílení celé systémové jednotky je možné, ale nedoporučuje se.
 
-    ![sdílené jednotky](media/troubleshooting-docker-errors/docker-settings-image.png)
+    :::image type="content" source="media//troubleshooting-docker-errors/docker-settings-image.png" alt-text="Sdílené jednotky":::
 
 > [!TIP]
 > Verze sady Visual Studio vyšší než Visual Studio 2017 verze 15,6 se zobrazí výzva, když nejsou nakonfigurovány **sdílené jednotky** .
@@ -47,46 +47,46 @@ Zkuste provést stažení skriptu z části [vyčistit síťové hostitele konte
 
 ## <a name="mounts-denied"></a>Připojení byla zamítnuta.
 
-Při použití Docker pro macOS se může zobrazit chyba odkazování na složku/usr/local/share/dotnet/sdk/NuGetFallbackFolder. Přidejte složku do karty sdílení souborů v Docker.
+Při použití Dockeru pro macOS může dojít k chybě odkazující na složku /usr/local/share/dotnet/sdk/NuGetFallbackFolder. Přidejte složku na kartu Sdílení souborů v Dockeru.
 
-## <a name="docker-users-group"></a>Skupina uživatelů Docker
+## <a name="docker-users-group"></a>Skupina uživatelů Dockeru
 
-Při práci s kontejnery může dojít k následující chybě v aplikaci Visual Studio:
+Při práci s kontejnery se může Visual Studio následující chyba:
 
 ```
 The current user must be in the 'docker-users' group to use Docker Desktop. 
 Add yourself to the 'docker-users' group and then log out of Windows.
 ```
 
-Abyste mohli mít oprávnění k práci s kontejnery Docker, musíte být členem skupiny Docker-Users.  Pokud se chcete do skupiny ve Windows 10 přidat sami, postupujte takto:
+Abyste mohli pracovat s kontejnery Dockeru, musíte být členem skupiny docker-users.  Pokud se chcete přidat do skupiny v Windows 10, postupujte takto:
 
-1. V nabídce Start otevřete položku **Správa počítače**.
-1. Rozbalte položku **místní uživatelé a skupiny** a klikněte na možnost **skupiny**.
-1. Vyhledejte skupinu **Docker-Users** , klikněte pravým tlačítkem myši a vyberte **Přidat do skupiny**.
+1. V nabídka Start otevřete Správu **počítače**.
+1. Rozbalte **Místní uživatelé a skupiny** a zvolte **Skupiny.**
+1. Vyhledejte **skupinu docker-users,** klikněte pravým tlačítkem a zvolte **Přidat do skupiny**.
 1. Přidejte svůj uživatelský účet nebo účty.
-1. Odhlaste se a znovu se přihlaste, aby se tyto změny projevily.
+1. Odhlásit se a znovu se přihlásit, aby se tyto změny projeví.
 
-`net localgroup`K přidání uživatelů do konkrétních skupin můžete použít také příkaz na příkazovém řádku správce.
+K přidání uživatelů do konkrétních skupin můžete také použít příkaz na příkazovém řádku `net localgroup` správce.
 
 ```cmd
 net localgroup docker-users DOMAIN\username /add
 ```
 
-V PowerShellu použijte funkci [Add-LocalGroupMember](/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember) .
+V PowerShellu použijte [funkci Add-LocalGroupMember.](/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember)
 
 ## <a name="low-disk-space"></a>Nedostatek místa na disku
 
-Ve výchozím nastavení Docker ukládá obrázky do složky *% Složka ProgramData%/Docker/* , která se obvykle nachází na systémové jednotce * C:\ProgramData\Docker \* . Pokud nechcete, aby obrázky zabíraly cenné místo na systémové jednotce, můžete změnit umístění složky s obrázkem. Postupujte následovně:
+Docker ve výchozím nastavení ukládá image do *složky %ProgramData%/Docker/,* která je obvykle na systémové jednotce, *C:\ProgramData\Docker. \* Pokud chcete zabránit tomu, aby image zabraňy zachytát cenné místo na systémové jednotce, můžete změnit umístění složky image. Postupujte následovně:
 
- 1. Klikněte pravým tlačítkem na ikonu Docker na hlavním panelu a vyberte **Nastavení**.
- 1. Vyberte **modul Docker**. 
- 1. V podokně úpravy přidejte `graph` nastavení vlastnosti s hodnotou požadovaného umístění pro Image Docker:
+ 1. Klikněte pravým tlačítkem na ikonu Dockeru na hlavním panelu a vyberte **Nastavení**.
+ 1. Vyberte **Docker Engine**. 
+ 1. V podokně pro úpravy přidejte `graph` nastavení vlastnosti s hodnotou požadovaného umístění pro image Dockeru:
 
 ```json
     "graph": "D:\\mypath\\images"
 ```
 
-![Snímek obrazovky s sdílením souborů Docker](media/troubleshooting-docker-errors/docker-daemon-settings.png)
+:::image type="content" source="media/troubleshooting-docker-errors/docker-daemon-settings.png" alt-text="Snímek obrazovky se sdílením souborů Dockeru":::
 
 Klikněte na **použít & restartovat**. Tyto kroky upraví konfigurační soubor v umístění *% Složka ProgramData% \docker\config\daemon.jsna*. Dříve sestavené obrázky nejsou přesunuty.
 
@@ -94,7 +94,7 @@ Klikněte na **použít & restartovat**. Tyto kroky upraví konfigurační soubo
 
 Když do projektu přidáte podporu Docker, zvolíte buď kontejner Windows, nebo Linux. Pokud hostitel serveru Docker není nakonfigurován tak, aby spouštěl stejný typ kontejneru jako cíl projektu, pravděpodobně se zobrazí chyba podobná té:
 
-![Snímek obrazovky hostitele Docker a projektu nesouhlasí](media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png)
+:::image type="content" source="media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png" alt-text="Snímek obrazovky hostitele Docker a projektu nesouhlasí":::
 
 Řešení tohoto problému:
 
