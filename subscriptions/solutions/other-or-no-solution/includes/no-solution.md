@@ -1,6 +1,6 @@
 ---
 title: Můj problém tu není uvedený
-description: Řešení zobrazené, pokud je vybraná kategorie "problém není v seznamu" nebo se nenajde žádné řešení
+description: Řešení zobrazené, když je vybraná kategorie Problém tu není uvedený nebo se nenašlo žádné řešení
 ms.topic: include
 ms.assetid: c1537b27-0ae4-4bf3-b1e4-ff05f8e14359
 author: caitybuschlen
@@ -10,28 +10,28 @@ user.type: subscriber, admin
 tags: no-solution
 subscription.type: vl, cloud, retail, partner
 sap.id: 34fccc61-0a31-cc35-22dd-016a1ebf1134
-ms.openlocfilehash: 47df65df2b139fa910843da3659d5a520e787d17
-ms.sourcegitcommit: 54aac5044a9853a435577acc5a134cb254494ffb
+ms.openlocfilehash: d26b75015c427d771ab91526802d9b58e3ddb5e8
+ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590159"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349808"
 ---
-## <a name="sorry-we-couldnt-find-a-solution-for-you"></a>Omlouváme se, ale nemůžeme najít řešení. 
+## <a name="sorry-we-couldnt-find-a-solution-for-you"></a>Je nám líto, ale nenašli jsme pro vás řešení. 
 
-Náš tým vám rádi pomohlo. Podpora předplatných sady Visual Studio poskytuje pomoc s prodejem, předplatnými, účty a fakturací. Kliknutím na tlačítko vytvořit lístek podpory níže vytvořte online lístek a náš tým se vám vrátí do 1 pracovního dne. 
+Náš tým by vám s tím chtěl pomoct. Předplatná sady Visual Studio poskytuje pomoc s prodejem, předplatným, účty a fakturací. Vytvořte online lístek kliknutím na tlačítko Online žádost v dolní části tohoto řešení a náš tým se vám do 1 pracovního dne vrátí. 
 
-## <a name="visual-studio-ide-technical-support-resources"></a>Prostředky technické podpory pro Visual Studio IDE  
+## <a name="visual-studio-ide-technical-support-resources"></a>Visual Studio technické podpory k integrovanému vývojovému prostředí (IDE)  
 
-Technické problémy a dotazy k rozhraní IDE sady Visual Studio by měly být směrovány na [technickou podporu sady Visual Studio](https://visualstudio.microsoft.com/vs/support/). Než budete používat omezené [incidenty technické podpory pro Visual Studio](https://docs.microsoft.com/visualstudio/subscriptions/vs-tech-support) , které mohou být součástí vašeho předplatného sady Visual Studio, doporučujeme vyzkoušet si další online prostředky.
+Visual Studio technické problémy nebo dotazy k integrovanému vývojovému prostředí (IDE) by se měly Visual Studio [technické podpory.](https://visualstudio.microsoft.com/vs/support/) Před použitím omezených [incidentů Visual Studio technické podpory,](https://docs.microsoft.com/visualstudio/subscriptions/vs-tech-support) které mohou být součástí vašeho předplatného Visual Studio, doporučujeme si zkoušet některé další online zdroje informací.
 
-- Problémy s instalací sady Visual Studio naleznete v tématu [Poradce při potížích s instalací a upgradem sady Visual Studio](https://docs.microsoft.com/visualstudio/install/troubleshooting-installation-issues) pro podrobné pokyny. Můžete také vyzkoušet možnost [instalační chat](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině).
+- Podrobné Visual Studio s instalací najdete v Visual Studio s instalací a [upgradem](https://docs.microsoft.com/visualstudio/install/troubleshooting-installation-issues) řešení potíží. Můžete také vyzkoušet možnost [podpory instalačního chatu](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině).
 
-- Projděte si kurzy, Průvodce odstraňováním potíží a užitečné materiály v [dokumentaci k rozhraní IDE sady Visual Studio](https://docs.microsoft.com/visualstudio/ide/). 
+- Kurzy, průvodci odstraňováním potíží a užitečné zdroje informací najdete [v Visual Studio integrovaného vývojového prostředí](https://docs.microsoft.com/visualstudio/ide/). 
 
-- Hledejte v online [komunitě pro vývojáře](https://developercommunity.visualstudio.com/) a získejte odborné odpovědi od komunitního fóra podporovaného komunitou. Můžete prohledávat klíčová slova a číst, hlasovat a komentovat vše bez přihlašování.  
+- Vyhledejte [online](https://developercommunity.visualstudio.com/) Developer Community a získejte odborné odpovědi z fóra podporovaného komunitou. Můžete vyhledávat klíčová slova, číst, hlasovat a komentovat vše bez přihlášení.  
 
-- Vyhledejte odpovědi na již kladené dotazy nebo se zaregistrujte do služby Stack Overflow [Public Q&](https://stackoverflow.com/questions/tagged/visual-studio?tab=Newest) a přihlaste se k účtu a požádejte o novou otázku.  
+- Vyhledejte Stack Overflow Q&A se značkou [visual-studio,](https://stackoverflow.com/questions/tagged/visual-studio?tab=Newest) získejte odpovědi na již kladené otázky nebo si zaregistrujte účet a položte novou otázku.  
 
 
 
