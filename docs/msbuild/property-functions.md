@@ -1,6 +1,6 @@
 ---
 title: Funkce vlastností | Microsoft Docs
-description: Naučte se používat funkce vlastností, které jsou voláním .NET Framework metod, které se zobrazují v definicích vlastností MSBuild.
+description: Naučte se používat funkce vlastností, což jsou volání metod .NET Framework, které se zobrazují v definicích vlastností nástroje MSBuild.
 ms.custom: SEO-VS-2020
 ms.date: 02/21/2017
 ms.topic: conceptual
@@ -12,34 +12,34 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b4dce707d51d7a2840aeef78f4d70392c884275
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7c4a6254f15a4108c525231d0e5e93c6fc71bfb3
+ms.sourcegitcommit: d3577395cf016f2836eb5a3c1d496cca6d449baa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932008"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110413335"
 ---
 # <a name="property-functions"></a>Funkce vlastností
 
-Funkce vlastností jsou volání metody .NET Framework, která se zobrazují v definicích vlastností MSBuild. Na rozdíl od úloh lze funkce vlastností použít mimo cíle a jsou vyhodnocovány před jakýmkoli cílovým spuštěním.
+Funkce vlastností jsou volání metody .NET Framework, které se zobrazují v definicích vlastností nástroje MSBuild. Na rozdíl od úloh lze funkce vlastností použít mimo cíle a vyhodnocují se před libovolným cílovým spuštěním.
 
-Bez použití úloh nástroje MSBuild můžete přečíst systémový čas, porovnat řetězce, porovnat regulární výrazy a provádět další akce v rámci skriptu sestavení. Nástroj MSBuild se pokusí převést řetězec na číslo a číslo na řetězec a provést další převody podle požadavků.
+Bez použití úloh nástroje MSBuild můžete číst systémový čas, porovnávat řetězce, porovnávat regulární výrazy a provádět další akce ve skriptu sestavení. Nástroj MSBuild se pokusí převést řetězec na číslo a číslo na řetězec a podle potřeby provést další převody.
 
-Řetězcové hodnoty vrácené z funkcí vlastnosti mají řídicí [znaky speciální](msbuild-special-characters.md) . Pokud chcete, aby byla hodnota zpracována, jako by byla vložena přímo do souboru projektu, použijte `$([MSBuild]::Unescape())` k zrušení Escape speciálních znaků.
+Řetězcové hodnoty vrácené funkcemi vlastností mají [speciální znaky uvozené.](msbuild-special-characters.md) Pokud chcete, aby se s hodnotou zacházelo, jako by byla přímo vložila do souboru projektu, použijte ke zrušení `$([MSBuild]::Unescape())` speciálních znaků.
 
-Funkce vlastností jsou k dispozici v .NET Framework 4 a novější.
+Funkce vlastností jsou k dispozici v .NET Framework verze 4 a novější.
 
-## <a name="property-function-syntax"></a>Syntaxe funkce Property
+## <a name="property-function-syntax"></a>Syntaxe funkce vlastností
 
-Jedná se o tři druhy funkcí vlastností; Každá funkce má odlišnou syntaxi:
+Toto jsou tři druhy funkcí vlastností. Každá funkce má jinou syntaxi:
 
-- Funkce pro vlastnosti String (instance)
+- Funkce vlastností string (instance)
 - Funkce statických vlastností
-- Funkce vlastností MSBuild
+- Funkce vlastností nástroje MSBuild
 
-### <a name="string-property-functions"></a>Funkce řetězcových vlastností
+### <a name="string-property-functions"></a>Funkce vlastností řetězce
 
-Všechny hodnoty vlastností buildu jsou jenom řetězcové hodnoty. Můžete použít metody řetězce (instance) k provozování libovolné hodnoty vlastnosti. Můžete například extrahovat název jednotky (první tři znaky) z vlastnosti Build, která představuje úplnou cestu pomocí tohoto kódu:
+Všechny hodnoty vlastností sestavení jsou jen řetězcové hodnoty. Metody řetězce (instance) můžete použít k použití s libovolnou hodnotou vlastnosti. Pomocí tohoto kódu můžete například extrahovat název jednotky (první tři znaky) z vlastnosti sestavení, která představuje úplnou cestu:
 
 ```
 $(ProjectOutputFolder.Substring(0,3))
@@ -47,7 +47,7 @@ $(ProjectOutputFolder.Substring(0,3))
 
 ### <a name="static-property-functions"></a>Funkce statických vlastností
 
-Ve svém skriptu sestavení máte přístup ke statickým vlastnostem a metodám mnoha systémových tříd. Chcete-li získat hodnotu statické vlastnosti, použijte následující syntaxi, kde \<Class> je název systémové třídy a \<Property> je název vlastnosti.
+Ve skriptu sestavení máte přístup ke statickým vlastnostem a metodám mnoha systémových tříd. Chcete-li získat hodnotu statické vlastnosti, použijte následující syntaxi, kde \<Class> je název systémové třídy a \<Property> je název vlastnosti.
 
 ```
 $([Class]::Property)
@@ -117,47 +117,47 @@ Kromě toho můžete použít následující statické metody a vlastnosti:
 - [System. IO. File:: Exists](xref:System.IO.File.Exists*)
 - [System. IO. File:: GetCreationTime](xref:System.IO.File.GetCreationTime*)
 - [System. IO. File:: GetAttributes](xref:System.IO.File.GetAttributes*)
-- [System. IO. File:: GetLastAccessTime](xref:System.IO.File.GetLastAccessTime*)
-- [System. IO. File:: GetLastWriteTime](xref:System.IO.File.GetLastWriteTime*)
-- [System. IO. File:: ReadAllText](xref:System.IO.File.ReadAllText*)
+- [System.IO.File::GetLastAccessTime](xref:System.IO.File.GetLastAccessTime*)
+- [System.IO.File::GetLastWriteTime](xref:System.IO.File.GetLastWriteTime*)
+- [System.IO.File::ReadAllText](xref:System.IO.File.ReadAllText*)
 
-### <a name="calling-instance-methods-on-static-properties"></a>Volání metod instancí ve statických vlastnostech
+### <a name="calling-instance-methods-on-static-properties"></a>Volání metod instance u statických vlastností
 
-Pokud přistupujete ke statické vlastnosti, která vrací instanci objektu, můžete vyvolat metody instance daného objektu. Chcete-li vyvolat metodu instance, použijte následující syntaxi, kde \<Class> je název systémové třídy, \<Property> je název vlastnosti, \<Method> je název metody a ( \<Parameters> ) je seznam parametrů pro metodu:
+Pokud máte přístup ke statické vlastnosti, která vrací instanci objektu, můžete vyvolat metody instance tohoto objektu. K vyvolání metody instance použijte následující syntaxi, kde je název systémové třídy, je název vlastnosti, je název metody a ( ) je seznam parametrů pro \<Class> \<Property> \<Method> \<Parameters> metodu:
 
 ```
 $([Class]::Property.Method(Parameters))
 ```
 
-Název třídy musí být plně kvalifikován pomocí oboru názvů.
+Název třídy musí být plně kvalifikovaný s oborem názvů.
 
-Například můžete použít následující kód pro nastavení vlastnosti Build na aktuální datum v dnešní době.
+Například následující kód můžete použít k nastavení vlastnosti sestavení na aktuální datum dnes.
 
 ```xml
 <Today>$([System.DateTime]::Now.ToString('yyyy.MM.dd'))</Today>
 ```
 
-### <a name="msbuild-property-functions"></a>Funkce vlastností MSBuild
+### <a name="msbuild-property-functions"></a>Funkce vlastností nástroje MSBuild
 
-Několik statických metod v sestavení lze použít k zajištění aritmetické, bitové logické a řídicí znakové podpory. K těmto metodám přistupujete pomocí následující syntaxe, kde \<Method> je název metody a ( \<Parameters> ) je seznam parametrů pro metodu.
+K několika statickým metodám v sestavení je možné přistupovat za pomoci aritmetické, bitové logické a řídicí znakové podpory. K těmto metodám se přistupuje pomocí následující syntaxe, kde je název metody a ( ) je seznam \<Method> \<Parameters> parametrů pro metodu .
 
 ```
 $([MSBuild]::Method(Parameters))
 ```
 
-Chcete-li například přidat dohromady dvě vlastnosti, které mají číselné hodnoty, použijte následující kód.
+Pokud například chcete sečtet dvě vlastnosti, které mají číselné hodnoty, použijte následující kód.
 
 ```
 $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 ```
 
-Tady je seznam funkcí MSBuild vlastností:
+Tady je seznam funkcí vlastností nástroje MSBuild:
 
 |Signatura funkce|Description|
 |------------------------|-----------------|
-|dvojité přidání (dvojitá a, dvojitá přesnost b)|Přidejte dvě dvojité.|
-|dlouhé přidání (dlouhé a, dlouhé b)|Přidejte dvě dlouhé.|
-|Dvojitý rozdíl (dvojitá a, dvojitá přesnost b)|Odečte dvě dvojice.|
+|double Add(double a, double b)|Přidejte dvě dvojité.|
+|long Add(long a, long b)|Přidejte dvě dlouhé.|
+|double Subtract(double a, double b)|Odečtěte dvě dvojité hodnoty.|
 |Long odečíst (Long a, Long b)|Odečte dvě dlouhé.|
 |dvojité násobení (Double a, double b)|Vynásobení dvou dvojitých hodnot.|
 |Long násobení (Long a, Long b)|Vynásobte dvě dlouhé.|
@@ -168,15 +168,15 @@ Tady je seznam funkcí MSBuild vlastností:
 |Řídicí znak řetězce (řetězec bez řídicích znaků)|Vyřídí řetězec podle pravidel pro uvozovací znaky MSBuild.|
 |řetězcové zrušení řídicího znaku (řetězcové řídicí znaky)|Odřídí řetězec podle pravidel pro uvozovací znaky MSBuild.|
 |Bitový operátor int (int First, int Second)|Proveďte bitovou kopii `OR` prvního a druhého (první &#124; sekundu).|
-|int BitwiseAnd (int First, int Second)|Proveďte bitovou kopii `AND` prvního a druhého (první & sekundu).|
-|int BitwiseXor (int First, int Second)|Proveďte bitovou kopii `XOR` prvního a druhého (prvních ^ sekund).|
-|int BitwiseNot (int First)|Proveďte bitovou `NOT` (~ First).|
-|bool IsOsPlatform (String platformString)|Určete, zda je aktuální platforma operačního systému `platformString` . `platformString` musí být členem <xref:System.Runtime.InteropServices.OSPlatform> .|
-|bool IsOSUnixLike ()|True, pokud je aktuální operační systém systémem UNIX.|
-|String NormalizePath (cesta k parametrům řetězec [])|Získá kanonickou úplnou cestu k zadané cestě a zajistí, že obsahuje správné znaky oddělovače adresáře pro aktuální operační systém.|
-|String NormalizeDirectory (cesta k parametrům řetězec [])|Získá kanonickou úplnou cestu k zadanému adresáři a zajistí, že obsahuje správné znaky oddělovačů adresářů pro aktuální operační systém a zároveň zajišťuje, že má koncové lomítko.|
-|EnsureTrailingSlash řetězce (cesta k řetězci)|Pokud daná cesta nemá koncové lomítko, pak ji přidejte. Pokud je cesta prázdným řetězcem, neupraví ho.|
-|String GetPathOfFileAbove (soubor řetězce; String startingDirectory)|Vyhledá a vrátí úplnou cestu k souboru ve struktuře adresáře nad aktuálním umístěním souboru buildu nebo podle `startingDirectory` toho, jestli je zadaný.|
+|int BitwiseAnd(int first, int second)|Proveďte bitovou operaci u prvního a druhého `AND` (první & sekundy).|
+|int BitwiseXor(int first, int second)|Proveďte bitovou `XOR` operaci na prvním a druhém místě (první ^ sekunda).|
+|int BitwiseNot(int first)|Proveďte bitový `NOT` (~první).|
+|bool IsOsPlatform(string platformString)|Určete, jestli je aktuální platforma operačního systému `platformString` . `platformString` musí být členem <xref:System.Runtime.InteropServices.OSPlatform> .|
+|bool IsOSUnixLike()|True, pokud je aktuální operační systém unixový systém.|
+|string NormalizePath(params string[] path)|Získá kanonický úplnou cestu zadané cesty a zajistí, že obsahuje správné znaky oddělovače adresáře pro aktuální operační systém.|
+|string NormalizeDirectory(params string[] path)|Získá kanonický úplnou cestu k zadanému adresáři a zajistí, že obsahuje správné znaky oddělovače adresáře pro aktuální operační systém a zároveň zajistí, aby měl koncové lomítko.|
+|string EnsureTrailingSlash(cesta řetězce)|Pokud zadaná cesta nemá koncové lomítko, přidejte ho. Pokud je cesta prázdný řetězec, neupraví ji.|
+|string GetPathOfFileAbove(string file, string startingDirectory)|Vyhledá a vrátí úplnou cestu k souboru v adresářové struktuře nad umístěním aktuálního souboru sestavení nebo na základě , pokud `startingDirectory` je zadaný.|
 |GetDirectoryNameOfFileAbove (řetězec startingDirectory, název souboru String)|Vyhledejte a vraťte adresář se souborem buď v zadaném adresáři, nebo v umístění ve struktuře adresáře nad adresářem.|
 |String MakeRelative (řetězec basePath, cesta k řetězci)|Vytváří `path` relativní vzhledem k `basePath` . `basePath` musí být absolutní adresář. Pokud `path` nejde provést relativní, vrátí se do stejného znění. Podobně jako `Uri.MakeRelativeUri` .|
 |String ValueOrDefault (řetězec conditionValue, hodnota defaultValue řetězce)|Vrátí řetězec v parametru defaultValue pouze v případě, že parametr conditionValue je prázdný, v opačném případě vrátí hodnotu conditionValue.|
@@ -205,7 +205,7 @@ $([MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture))
 
 ## <a name="msbuild-ensuretrailingslash"></a>EnsureTrailingSlash nástroje MSBuild
 
-`EnsureTrailingSlash`Funkce Property v MSBuild přidá koncové lomítko, pokud ještě neexistuje.
+Funkce `EnsureTrailingSlash` property v nástroji MSBuild přidá koncové lomítko, pokud ještě neexistuje.
 
 Tato funkce vlastnosti má následující syntaxi:
 
@@ -213,9 +213,9 @@ Tato funkce vlastnosti má následující syntaxi:
 $([MSBuild]::EnsureTrailingSlash('$(PathProperty)'))
 ```
 
-## <a name="msbuild-getdirectorynameoffileabove"></a>GetDirectoryNameOfFileAbove nástroje MSBuild
+## <a name="msbuild-getdirectorynameoffileabove"></a>MSBuild GetDirectoryNameOfFileAbove
 
-Funkce MSBuild `GetDirectoryNameOfFileAbove` Property vyhledá soubor v adresářích nad aktuální adresář v cestě.
+Funkce vlastnosti MSBuild hledá soubor v adresářích nad aktuálním `GetDirectoryNameOfFileAbove` adresářem v cestě.
 
  Tato funkce vlastnosti má následující syntaxi:
 
@@ -229,9 +229,9 @@ $([MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile))
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))\EnlistmentInfo.props" Condition=" '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))' != '' " />
 ```
 
-## <a name="msbuild-getpathoffileabove"></a>GetPathOfFileAbove nástroje MSBuild
+## <a name="msbuild-getpathoffileabove"></a>MSBuild GetPathOfFileAbove
 
-`GetPathOfFileAbove`Funkce Property v MSBuild vrátí cestu k zadanému souboru, pokud se nachází ve struktuře adresáře nad aktuálním adresářem. Je funkčně ekvivalentní volání
+Funkce `GetPathOfFileAbove` property v nástroji MSBuild vrátí cestu k zadanému souboru, pokud se nachází ve struktuře adresářů nad aktuálním adresářem. Je funkčně ekvivalentní volání
 
 ```xml
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
@@ -243,9 +243,9 @@ Tato funkce vlastnosti má následující syntaxi:
 $([MSBuild]::GetPathOfFileAbove(dir.props))
 ```
 
-## <a name="msbuild-getregistryvalue"></a>GetRegistryValue nástroje MSBuild
+## <a name="msbuild-getregistryvalue"></a>MSBuild GetRegistryValue
 
-`GetRegistryValue`Funkce vlastnosti MSBuild vrací hodnotu klíče registru. Tato funkce přijímá dva argumenty, název klíče a název hodnoty a vrací hodnotu z registru. Pokud nezadáte název hodnoty, vrátí se výchozí hodnota.
+Funkce vlastnosti `GetRegistryValue` MSBuild vrací hodnotu klíče registru. Tato funkce přebírá dva argumenty, název klíče a název hodnoty, a vrací hodnotu z registru. Pokud nezadáte název hodnoty, vrátí se výchozí hodnota.
 
 Následující příklady ukazují, jak se tato funkce používá:
 
@@ -255,17 +255,17 @@ $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio
 $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(SampleValue)`))             // parens in name and value
 ```
 
-## <a name="msbuild-getregistryvaluefromview"></a>GetRegistryValueFromView nástroje MSBuild
+## <a name="msbuild-getregistryvaluefromview"></a>MSBuild GetRegistryValueFromView
 
-`GetRegistryValueFromView`Funkce vlastnosti MSBuild získá data systémového registru podle klíče registru, hodnoty a jednoho nebo více seřazených zobrazení registru. Klíč a hodnota jsou prohledány v každém zobrazení registru v pořadí, dokud nebudou nalezeny.
+Funkce vlastnosti MSBuild získá data systémového registru z klíče registru, hodnoty a jednoho `GetRegistryValueFromView` nebo více seřazených zobrazení registru. Klíč a hodnota se prohledá v každém zobrazení registru v pořadí, než se naštou.
 
-Syntaxe pro tuto funkci vlastnosti je:
+Syntaxe této funkce vlastnosti je následující:
 
 ```
 [MSBuild]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)
 ```
 
-Operační systém Windows 64 udržuje **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node** klíč registru, který nabízí **HKEY_LOCAL_MACHINE\SOFTWARE** registru pro 32 aplikace.
+64bitový operační systém Windows udržuje  klíč registruHKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Noderegistru, který představujeHKEY_LOCAL_MACHINE\SOFTWARE **registru** pro 32bitové aplikace.
 
 Ve výchozím nastavení 32 aplikace spuštěná v WOW64 přistupuje ke 32 zobrazení registru a aplikace 64-bit 64 přistupuje k zobrazení 16bitového registru.
 
@@ -344,17 +344,17 @@ Output:
 
 ## <a name="msbuild-targetframework-and-targetplatform-functions"></a>Funkce MSBuild TargetFramework a TargetPlatform
 
-Nástroj MSBuild definuje několik funkcí pro zpracování [vlastností targetFramework a TargetPlatform](msbuild-target-framework-and-target-platform.md).
+MsBuild 16.7 a vyšší definují několik funkcí pro zpracování [vlastností TargetFramework a TargetPlatform](msbuild-target-framework-and-target-platform.md).
 
 |Signatura funkce|Description|
 |------------------------|-----------------|
-|GetTargetFrameworkIdentifier (String targetFramework)|Analyzujte TargetFrameworkIdentifier z hodnoty TargetFramework.|
-|GetTargetFrameworkVersion (String targetFramework)|Analyzujte TargetFrameworkVersion z hodnoty TargetFramework.|
-|GetTargetPlatformIdentifier (String targetFramework)|Analyzujte TargetPlatformIdentifier z hodnoty TargetFramework.|
-|GetTargetPlatformVersion (String targetFramework)|Analyzujte TargetPlatformVersion z hodnoty TargetFramework.|
-|IsTargetFrameworkCompatible (String targetFrameworkTarget; String targetFrameworkCandidate)|Vrátí hodnotu true, pokud je cílový rámec kandidáta kompatibilní s touto cílovou architekturou a jinak false.|
+|GetTargetFrameworkIdentifier(string targetFramework)|Parsování TargetFrameworkIdentifier z TargetFramework|
+|GetTargetFrameworkVersion(string targetFramework)|Parsování TargetFrameworkVersion z TargetFramework|
+|GetTargetPlatformIdentifier(string targetFramework)|Parsování TargetPlatformIdentifier z TargetFramework|
+|GetTargetPlatformVersion(string targetFramework)|Parsování TargetPlatformVersion z TargetFramework|
+|IsTargetFrameworkCompatible(string targetFrameworkTarget, string targetFrameworkCandidate)|Pokud je kandidátská cílová rozhraní kompatibilní s touto cílovou architekturou a jinak false, vrátí hodnotu True.|
 
-Následující příklad ukazuje, jak jsou tyto funkce použity. 
+Následující příklad ukazuje, jak se tyto funkce používají. 
 
 ```xml
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -385,9 +385,42 @@ Value4 = 7.0
 Value5 = True
 ```
 
-## <a name="msbuild-condition-functions"></a>Funkce podmínky nástroje MSBuild
+## <a name="msbuild-version-comparison-functions"></a>Funkce porovnání verzí nástroje MSBuild
 
-Funkce `Exists` a `HasTrailingSlash` nejsou funkcemi vlastností. Jsou k dispozici pro použití s `Condition` atributem. Viz [podmínky nástroje MSBuild](msbuild-conditions.md).
+Nástroj MSBuild 16.5 a novější definuje několik funkcí pro porovnávání řetězců, které představují verze.
+
+> [!Note]
+> Relační operátory v podmínkách mohou porovnávat řetězce, které lze analyzovat jako objekty , ale toto porovnání může způsobit neočekávané výsledky. [ `System.Version` ](#msbuild-conditions.md#Comparing-versions) Upřednostňte funkce vlastností.
+
+|Signatura funkce|Description|
+|------------------------|-----------------|
+|VersionEquals(string a, string b)|Vrátí `true` , pokud jsou verze a ekvivalentní podle následujících `a` `b` pravidel.|
+|VersionGreaterThan (String a; String b)|Vrátí `true` , pokud `a` je verze větší než `b` podle níže uvedených pravidel.|
+|VersionGreaterThanOrEquals (String a; String b)|Vrátí, `true` Pokud `a` je verze větší než nebo rovna `b` podle následujících pravidel.|
+|VersionLessThan (String a; String b)|Vrátí `true` , pokud `a` je verze nižší než `b` podle níže uvedených pravidel.|
+|VersionLessThanOrEquals (String a; String b)|Vrátí, `true` Pokud `a` je verze menší nebo rovna `b` podle následujících pravidel.|
+|VersionNotEquals (String a; String b)|Vrátí, `false` zda `a` jsou verze a `b` jsou ekvivalentní podle níže uvedených pravidel.|
+
+V těchto metodách se verze analyzují jako <xref:System.Version?displayProperty=fullName> , s následujícími výjimkami:
+
+* Úvodní `v` nebo `V` se ignoruje, což umožňuje porovnání `$(TargetFrameworkVersion)` .
+
+* Vše od prvního '-' nebo ' + ' na konec řetězce verze je ignorováno. To umožňuje předávání v sémantických verzích (semver), ačkoliv pořadí není stejné jako semver. Místo toho specifikátory předprodejní a metadata sestavení nemají žádnou váhu řazení. To může být užitečné, například pokud chcete zapnout funkci pro `>= x.y` a nechat ji v systému `x.y.z-pre` .
+
+* Neurčené části jsou stejné jako části s nulovou hodnotou. (`x == x.0 == x.0.0 == x.0.0.0`).
+
+* V celočíselných komponentách není povolený prázdný znak.
+
+* Pouze hlavní verze je platná ( `3` je rovna hodnotě `3.0.0.0` ).
+
+* `+` není povolen jako kladné znaménko pro celočíselné komponenty (je považováno za semver metadata a ignorováno).
+
+> [!TIP]
+> Porovnání [vlastností TargetFramework by](msbuild-target-framework-and-target-platform.md) obecně měla místo extrahování a porovnávání verzí používat [IsTargetFrameworkCompatible.](#MSBuild-TargetFramework-and-TargetPlatform-functions) To umožňuje porovnávání `TargetFramework` hodnot, které se liší `TargetFrameworkIdentifier` v i ve verzi.
+
+## <a name="msbuild-condition-functions"></a>Funkce podmínek nástroje MSBuild
+
+Funkce a `Exists` `HasTrailingSlash` nejsou funkce vlastností. Jsou k dispozici pro použití s `Condition` atributem . Viz [podmínky nástroje MSBuild.](msbuild-conditions.md)
 
 ## <a name="see-also"></a>Viz také
 

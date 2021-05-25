@@ -1,6 +1,6 @@
 ---
 title: Podmínky nástroje MSBuild | Microsoft Docs
-description: Naučte se, jak MSBuild podporuje konkrétní sadu podmínek, které se dají použít všude, kde je povolený atribut podmínky.
+description: Zjistěte, jak NÁSTROJ MSBuild podporuje konkrétní sadu podmínek, které lze použít všude, kde je atribut Podmínky povolený.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,24 +20,24 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a480c539fc178e5ae672427fe32e9fd34728dc79
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 76bafaf5192c59e0f23078e396ae553b3023e060
+ms.sourcegitcommit: d3577395cf016f2836eb5a3c1d496cca6d449baa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919160"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110413322"
 ---
 # <a name="msbuild-conditions"></a>Podmínky nástroje MSBuild
 
-Nástroj MSBuild podporuje konkrétní sadu podmínek, které lze použít všude, kde `Condition` je atribut povolen. Tyto podmínky jsou vysvětleny v následující tabulce.
+Nástroj MSBuild podporuje konkrétní sadu podmínek, které lze použít všude, kde `Condition` je atribut povolen. Tyto podmínky jsou vysvětlené v následující tabulce.
 
 |Podmínka|Description|
 |---------------|-----------------|
-|'`stringA`' == '`stringB`'|Vyhodnotí jako, `true` Pokud `stringA` je rovno `stringB` .<br /><br /> Příklad:<br /><br /> `Condition="'$(Configuration)'=='DEBUG'"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky. U této kontroly se nerozlišují malá a velká písmena.|
-|'`stringA`' != '`stringB`'|Vyhodnotí, `true` Pokud `stringA` není rovno `stringB` .<br /><br /> Příklad:<br /><br /> `Condition="'$(Configuration)'!='DEBUG'"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky. U této kontroly se nerozlišují malá a velká písmena.|
-|\<, >, \<=, >=|Vyhodnotí číselné hodnoty operandů. Vrátí, `true` zda je relační vyhodnocení pravdivé. Operandy musí být vyhodnoceny jako desítkové nebo šestnáctkové číslo. Šestnáctková čísla musí začínat znakem "0x". **Poznámka:**  V jazyce XML jsou znaky `<` a `>` musí být uvozeny řídicím znakem. Symbol `<` je reprezentován jako `&lt;` . Symbol `>` je reprezentován jako `&gt;` .|
-|Existuje (' `stringA` ')|Vyhodnotí, `true` jestli existuje soubor nebo složka s tímto názvem `stringA` .<br /><br /> Příklad:<br /><br /> `Condition="!Exists('$(Folder)')"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky.|
-|HasTrailingSlash ( `stringA` )|Vyhodnotí na, `true` Pokud zadaný řetězec obsahuje buď koncový znak zpětného lomítka ( \\ ), nebo lomítko (/).<br /><br /> Příklad:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky.|
+|'`stringA`' == '`stringB`'|Vyhodnotí `true` hodnotu , pokud je rovno `stringA` `stringB` .<br /><br /> Například:<br /><br /> `Condition="'$(Configuration)'=='DEBUG'"`<br /><br /> Jednoduché uvozovky nejsou vyžadovány pro jednoduché alfanumerické řetězce nebo logické hodnoty. Jednoduché uvozovky jsou však vyžadovány pro prázdné hodnoty. Tato kontrola se nelišují malá a velká písmena.|
+|'`stringA`' != '`stringB`'|Vyhodnotí `true` hodnotu , pokud není rovno `stringA` `stringB` .<br /><br /> Například:<br /><br /> `Condition="'$(Configuration)'!='DEBUG'"`<br /><br /> Jednoduché uvozovky nejsou vyžadovány pro jednoduché alfanumerické řetězce nebo logické hodnoty. Jednoduché uvozovky jsou však vyžadovány pro prázdné hodnoty. Tato kontrola se nelišují malá a velká písmena.|
+|\<, >, \<=, >=|Vyhodnotí číselné hodnoty operandů. Vrátí `true` hodnotu , pokud je relační vyhodnocení pravdivé. Operandy musí být vyhodnoceny jako desetinné nebo šestnáctkové číslo nebo čtyřsekuťová tečkovaná verze. Šestnáctková čísla musí začínat "0x". **Poznámka:**  V XML musí být znaky `<` `>` a uvozeny. Symbol je `<` reprezentován jako `&lt;` . Symbol `>` je reprezentován jako `&gt;` .|
+|Existuje (' `stringA` ')|Vyhodnotí, `true` jestli existuje soubor nebo složka s tímto názvem `stringA` .<br /><br /> Například:<br /><br /> `Condition="!Exists('$(Folder)')"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky.|
+|HasTrailingSlash ( `stringA` )|Vyhodnotí na, `true` Pokud zadaný řetězec obsahuje buď koncový znak zpětného lomítka ( \\ ), nebo lomítko (/).<br /><br /> Například:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky.|
 |!|Vyhodnotí, `true` Pokud je operand vyhodnocen `false` .|
 |`And`|Vyhodnotí, `true` Pokud jsou oba operandy vyhodnoceny `true` .|
 |`Or`|Vyhodnotí, `true` Pokud je alespoň jeden z operandů vyhodnocen jako `true` .|
@@ -60,11 +60,20 @@ Můžete použít řetězcové metody v podmínkách, jak je znázorněno v nás
 </Project>
 ```
 
-V souborech projektu MSBuild neexistuje žádný pravdivý typ Boolean. Logická data jsou reprezentována ve vlastnostech, které mohou být prázdné nebo nastaveny na libovolnou hodnotu. Proto `'$(Prop)' == 'true'` znamená "if Prop is" `true` , ",", ale znamená "," je-li nastavena možnost "nebo" `'$(Prop)' != 'false'` `true` na něco jiného. "
+V souborech projektu MSBuild neexistuje žádný pravdivý typ Boolean. Logická data jsou reprezentována ve vlastnostech, které můžou být prázdné nebo nastavené na libovolnou hodnotu. Proto znamená `'$(Prop)' == 'true'` "pokud je prop `true` ,", ale `'$(Prop)' != 'false'` znamená "pokud je prop nebo `true` unset nebo nastavený na něco jiného".
 
-Logická logika je vyhodnocována pouze v kontextu podmínek, takže nastavení vlastností, jako `<Prop2>'$(Prop1)' == 'true'</Prop>` jsou reprezentována jako řetězec (po rozšíření proměnné), není vyhodnoceno jako logické hodnoty.  
+Logická logika se vyhodnocuje pouze v kontextu podmínek, takže nastavení vlastností, jako je , jsou reprezentována jako řetězec (po rozšíření proměnné), nevyhodnocuje `<Prop2>'$(Prop1)' == 'true'</Prop>` se jako logické hodnoty.  
 
-Nástroj MSBuild implementuje několik speciálních pravidel zpracování, což usnadňuje práci s řetězcovými vlastnostmi, které jsou používány jako logické hodnoty. Logické literály jsou přijaty, takže `Condition="true"` a `Condition="false"` fungují podle očekávání. Nástroj MSBuild také obsahuje zvláštní pravidla pro podporu logického operátoru negace. Takže pokud `$(Prop)` je "true", `!$(Prop)` rozbalí se a tato hodnota se rovná `!true` `false` , jak byste očekávali.
+Nástroj MSBuild implementuje několik speciálních pravidel zpracování, která usnadňují práci s řetězci vlastnostmi, které se používají jako logické hodnoty. Logické literály jsou přijímány, takže `Condition="true"` `Condition="false"` fungují podle očekávání. Nástroj MSBuild obsahuje také speciální pravidla pro podporu logického operátoru negace. Takže pokud je hodnota "true", rozbalí se na a porovná se s hodnotou `$(Prop)` `!$(Prop)` , jak byste `!true` `false` očekávali.
+
+## <a name="comparing-versions"></a>Porovnání verzí
+
+Relační operátory , , a podporují verze parsované pomocí , takže můžete vzájemně porovnat verze, které `<` `>` mají čtyři číselné `<=` `>=` <xref:System.Version?displayProperty=fullName> části. Například je `'1.2.3.4' < '1.10.0.0'` `true` .
+
+> [!CAUTION]
+> `System.Version` Porovnání mohou mít překvapivé výsledky, pokud jedna nebo obě verze nezadá všechny čtyři části. Například verze 1.1 je starší než verze 1.1.0.
+
+Nástroj MSBuild poskytuje [funkce vlastností pro porovnání verzí,](property-functions.md#MSBuild-version-comparison-functions) které mají jinou sadu pravidel kompatibilních se sémantickou sémantickou sekcí verzí (semver).
 
 ## <a name="see-also"></a>Viz také
 
