@@ -1,18 +1,18 @@
 ---
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.date: 03/02/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 2458aac4828c3c79ac249aeb210f62305af8262d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 18826fffbe033b0c2e25780190ad155838543c7a
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868570"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "110449603"
 ---
-Při nastavování závislostí v manifestu VSIX je nutné zadat pouze ID součástí. Pomocí tabulek na této stránce můžete určit minimální závislosti součástí. V některých scénářích to může znamenat, že zadáváte jenom jednu komponentu z úlohy. V jiných scénářích to může znamenat, že zadáváte více komponent z jedné úlohy nebo z více komponent z více úloh. Další informace naleznete v tématu [Postupy: migrace projektů rozšíření na stránku sady Visual Studio 2017](../../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md?view=vs-2017&preserve-view=true) .
+Při nastavení závislostí v manifestu VSIX musíte zadat pouze ID komponent. Pomocí tabulek na této stránce můžete určit minimální závislosti komponent. V některých scénářích to může znamenat, že z úlohy zadáte pouze jednu komponentu. V jiných scénářích to může znamenat, že zadáte více komponent z jedné úlohy nebo více komponent z více úloh. Další informace najdete na stránce Postupy: Migrace projektů rozšiřitelnosti [Visual Studio 2017.](../../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md?view=vs-2017&preserve-view=true)
 
-Další informace o použití těchto identifikátorů najdete na stránce instalace sady [Visual Studio 2017 v tématu Použití parametrů příkazového řádku](../use-command-line-parameters-to-install-visual-studio.md) . Seznam úloh a ID komponent pro jiné produkty najdete na stránce sady [Visual Studio a ID komponent](../workload-and-component-ids.md) .
+Další informace o použití těchto ID najdete na stránce Použití parametrů příkazového řádku [Visual Studio 2017.](../use-command-line-parameters-to-install-visual-studio.md) A seznam ID úloh a komponent pro ostatní produkty najdete na Visual Studio ID úloh a [komponent.](../workload-and-component-ids.md)

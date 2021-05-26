@@ -1,6 +1,6 @@
 ---
-title: Problémy s konfigurací serveru a klienta (ClickOnce)
-description: Přečtěte si o problémech s konfigurací serveru a klienta, které mohou ovlivnit nasazení aplikace ClickOnce.
+title: Problémy s konfigurací serveru nebo klienta (ClickOnce)
+description: Přečtěte si o problémech s konfigurací serveru a klienta, které mohou ovlivnit nasazení vaší aplikace ClickOnce.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -19,29 +19,29 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 469749c28acdb90e835082dd05010102ab50e52b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8040fb8028666d0dd551369b6b7f782de09058ca
+ms.sourcegitcommit: 18e7300d4878f2fcd0263a4aff31a755ae8fc289
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877613"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110449939"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>Problémy s konfigurací serveru a klienta v nasazeních ClickOnce
-Pokud používáte službu Internetová informační služba (IIS) v systému Windows Server a vaše nasazení obsahuje typ souboru, který systém Windows nerozpoznal, například soubor aplikace Microsoft Word, služba IIS odmítne přenést daný soubor a vaše nasazení nebude úspěšné.
+Pokud na Windows Serveru použijete službu Internetová informační služba (IIS) a vaše nasazení obsahuje typ souboru, který Systém Windows nerozpozná, například soubor aplikace Microsoft Word, služba IIS odmítne tento soubor přenést a vaše nasazení nebude úspěšné.
 
- Kromě toho některé webové servery a software webové aplikace, jako například [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] , obsahují seznam souborů a typů souborů, které nelze stáhnout. Například [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] zabraňuje stažení všech *Web.config* souborů. Tyto soubory mohou obsahovat citlivé informace, jako jsou uživatelská jména a hesla.
+ Kromě toho některé webové servery a software webových aplikací, například , obsahují seznam souborů a typů souborů, které [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nelze stáhnout. Například zabrání [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] stahování všech souborů *Web.config* souborů. Tyto soubory mohou obsahovat citlivé informace, jako jsou uživatelská jména a hesla.
 
- I když toto omezení by nemělo způsobovat žádné problémy při stahování základních [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] souborů, jako jsou manifesty a sestavení, může toto omezení zabránit stažení datových souborů, které jsou součástí vaší [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace. V [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nástroji můžete tuto chybu vyřešit odebráním obslužné rutiny, která zakazuje stahování takových souborů ze Správce konfigurace služby IIS. Další podrobnosti najdete v dokumentaci k serveru služby IIS.
+ I když by toto omezení nemělo způsobovat žádné problémy při stahování základních souborů, jako jsou manifesty a sestavení, může vám toto omezení bránit ve stahování datových souborů zahrnutých [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] rámci vaší aplikace. V nástroji můžete tuto chybu vyřešit odebráním obslužné rutiny, která zakáže stahování takových souborů ze správce [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] konfigurace služby IIS. Další podrobnosti najdete v dokumentaci k serveru SLUŽBY IIS.
 
- Některé webové servery mohou blokovat soubory s příponami, například *. dll*, *. config* a *. mdf*. Aplikace založené na systému Windows obvykle obsahují soubory s některými z těchto rozšíření. Pokud se uživatel pokusí spustit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci, která přistupuje k blokovanému souboru na webovém serveru, bude výsledkem chyba. Místo odblokování všech přípon souborů [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] publikuje každý soubor aplikace s příponou *. deploy* ve výchozím nastavení. Proto správce potřebuje jenom nakonfigurovat webový server, aby odblokoval následující tři přípony souborů:
+ Některé webové servery můžou blokovat soubory s příponami, jako jsou *.dll,* *.config* a *.mdf.* Aplikace založené na systému Windows obvykle obsahují soubory s některými z těchto přípon. Pokud se uživatel pokusí spustit aplikaci, která přistupuje k blokovanému souboru na webovém [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] serveru, dojde k chybě. Místo odblokování všech přípon souborů publikuje každý soubor [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace s příponou *souboru .deploy* ve výchozím nastavení. Správce proto musí nakonfigurovat webový server tak, aby odblokuje následující tři přípony souborů:
 
-- *. Application*
+- *.application*
 
-- *. manifest*
+- *.manifest*
 
-- *. deploy*
+- *.deploy*
 
-  Tuto možnost však můžete zakázat zrušením výběru možnosti **Přípona souboru ". deploy"** v [dialogovém okně Možnosti publikování](/previous-versions/visualstudio/visual-studio-2010/7z83t16a(v=vs.100)). v takovém případě je nutné nakonfigurovat webový server tak, aby odblokoval všechny přípony souborů používané v aplikaci.
+  Tuto možnost však můžete zakázat zrušením zaškrtnutí možnosti Použít příponu souboru **".deploy"** v dialogovém okně Možnosti publikování [.](/previous-versions/visualstudio/visual-studio-2010/7z83t16a(v=vs.100))V takovém případě musíte nakonfigurovat webový server tak, aby odblokování všech přípon souborů používaných v aplikaci.
 
   Budete muset nakonfigurovat *. manifest*, *. Application* a *. deploy*, například pokud používáte službu IIS, kde jste nenainstalovali .NET Framework, nebo pokud používáte jiný webový server (například Apache).
 
@@ -62,22 +62,22 @@ Pokud používáte službu Internetová informační služba (IIS) v systému Wi
 > Mozilla Firefox je podporovaná, pokud poskytovatel nasazení není prázdný nebo je nainstalované rozšíření Microsoft .NET Framework Assistant. Toto rozšíření je zabaleno pomocí .NET Framework 3,5 SP1. V případě podpory XBAP je modul plug-in NPWPF v případě potřeby aktivovaný.
 
 ## <a name="activate-clickonce-applications-through-browser-scripting"></a>Aktivace aplikací ClickOnce prostřednictvím skriptování v prohlížeči
- Pokud jste vytvořili vlastní webovou stránku, která spouští [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci pomocí aktivního skriptování, můžete zjistit, že se aplikace na některých počítačích nespustí. Internet Explorer obsahuje nastavení s názvem **Automatické dotazování pro stahování souborů**, což má vliv na toto chování. Toto nastavení je k dispozici na kartě **zabezpečení** v nabídce **Možnosti** , která má vliv na toto chování. Se nazývá **Automatické dotazování souborů ke stažení** a je uvedené pod kategorií **stažené položky** . Vlastnost je nastavená na **Povolit** ve výchozím nastavení pro intranetové webové stránky a **zakáže** se ve výchozím nastavení pro internetové webové stránky. Pokud je toto nastavení **zakázáno**, bude blokován jakýkoli pokus o aktivaci [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace programově (například přiřazením adresy URL k `document.location` Vlastnosti). V této situaci můžou uživatelé spouštět aplikace jenom prostřednictvím stahování iniciované uživatelem, například kliknutím na hypertextový odkaz, který je nastavený na adresu URL aplikace.
+ Pokud jste vyvinuli vlastní webovou stránku, která spouští aplikaci pomocí aktivního skriptování, můžete zjistit, že se aplikace na některých počítačích [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nebude spouštět. Internet Explorer obsahuje nastavení s názvem **Automatické výzvy** ke stažení souborů , které toto chování ovlivňuje. Toto nastavení je dostupné na **kartě Zabezpečení** v nabídce **Možnosti,** která toto chování ovlivňuje. Nazývá se Automatické **výzvy ke stažení souborů a** je uvedená pod kategorií **Stažené** soubory. Vlastnost je u intranetových **webových** stránek ve  výchozím nastavení nastavená na Povolit a pro internetové webové stránky je ve výchozím nastavení nastavená na Hodnotu Zakázat. Pokud je toto nastavení nastavené na **Hodnotu Disable**(Zakázat), všechny pokusy o aktivaci aplikace prostřednictvím kódu programu (například přiřazením její adresy URL k [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `document.location` vlastnosti) se zablokují. Za těchto okolností mohou uživatelé spouštět aplikace pouze prostřednictvím stahování iniciované uživatelem, například kliknutím na hypertextový odkaz nastavený na adresu URL aplikace.
 
 ## <a name="additional-server-configuration-issues"></a>Další problémy s konfigurací serveru
 
-##### <a name="administrator-permissions-required"></a>Jsou vyžadována oprávnění správce.
- Pokud publikujete pomocí protokolu HTTP, musíte mít na cílovém serveru oprávnění správce. Služba IIS vyžaduje tuto úroveň oprávnění. Pokud nepublikujete pomocí protokolu HTTP, budete potřebovat pouze oprávnění k zápisu do cílové cesty.
+##### <a name="administrator-permissions-required"></a>Požadovaná oprávnění správce
+ Pokud publikujete pomocí protokolu HTTP, musíte mít na cílovém serveru oprávnění správce. Služba IIS vyžaduje tuto úroveň oprávnění. Pokud ne publikujete pomocí protokolu HTTP, potřebujete oprávnění k zápisu pouze do cílové cesty.
 
 ##### <a name="server-authentication-issues"></a>Problémy s ověřováním serveru
- Při publikování na vzdáleném serveru, který má vypnutý anonymní přístup, se zobrazí následující upozornění:
+ Když publikujete na vzdálený server, který má vypnutý anonymní přístup, zobrazí se následující upozornění:
 
 ```
 "The files could not be downloaded from http://<remoteserver>/<myapplication>/.  The remote server returned an error: (401) Unauthorized."
 ```
 
 > [!NOTE]
-> Ověřování protokolem NTLM (NT Challenge-Response) můžete provést, pokud se na webu zobrazí výzva k zadání přihlašovacích údajů, které nejsou výchozími přihlašovacími údaji, a v dialogovém okně zabezpečení klikněte na **OK** , když se zobrazí dotaz, jestli chcete zadané přihlašovací údaje uložit pro budoucí relace. Toto řešení ale nebude fungovat pro základní ověřování.
+> Ověřování protokolem NTLM (NT challenge-response) můžete nastavit tak, aby fungovalo, pokud web zobrazí výzvu k zadání jiných přihlašovacích údajů, než jsou vaše výchozí přihlašovací údaje, a v dialogovém okně zabezpečení po zobrazení výzvy kliknete na OK, pokud chcete zadané přihlašovací údaje uložit pro budoucí relace.  Toto alternativní řešení ale nebude fungovat pro základní ověřování.
 
 ## <a name="use-third-party-web-servers"></a>Použití webových serverů třetích stran
  Pokud nasazujete [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci z jiného webového serveru než služby IIS, může dojít k potížím, pokud server vrací nesprávný typ obsahu pro klíčové [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] soubory, jako je například manifest nasazení a manifest aplikace. Chcete-li vyřešit tento problém, přečtěte si dokumentaci k webovému serveru o tom, jak přidat nové typy obsahu na server a zda jsou uvedena všechna mapování přípon názvů souborů uvedená v následující tabulce.
@@ -104,21 +104,21 @@ Pokud používáte službu Internetová informační služba (IIS) v systému Wi
 | file:// | Aplikaci můžete nainstalovat [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] pomocí tohoto protokolu. |
 
 ## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP SP2: Brána Windows Firewall
- Ve výchozím nastavení systém Windows XP SP2 povoluje bránu Windows Firewall. Pokud vyvíjíte aplikaci na počítači s nainstalovaným systémem Windows XP, budete moci publikovat a spouštět [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace z místního serveru, na kterém je spuštěna služba IIS. Nemůžete ale přistupovat k tomuto serveru, na kterém běží služba IIS, z jiného počítače, pokud neotevřete bránu Windows Firewall. Pokyny pro správu brány Windows Firewall najdete v nápovědě k systému Windows.
+ Ve výchozím nastavení systém Windows XP SP2 povoluje bránu Windows Firewall. Pokud vyvíjíte aplikaci na počítači s nainstalovaným systémem Windows XP, stále můžete publikovat a spouštět aplikace z místního serveru se [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] spuštěnou službou IIS. K serveru se spuštěnou službou IIS však nelze získat přístup z jiného počítače, dokud neotevřete bránu Windows Firewall. Pokyny ke správě brány Windows Firewall najdete v nápovědě k Windows.
 
-## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server: povolení rozšíření serveru FrontPage
- K publikování aplikací na webový server Windows, který používá protokol HTTP, se vyžaduje rozšíření serveru FrontPage od Microsoftu.
+## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server: Povolení rozšíření serveru FrontPage
+ Pro publikování aplikací na webový server Windows, který používá protokol HTTP, se vyžaduje rozšíření frontpage serveru od Microsoftu.
 
- Ve výchozím nastavení není v systému Windows Server nainstalováno rozšíření serveru FrontPage. Pokud chcete použít nástroj [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] k publikování na webový server Windows serveru, který používá protokol HTTP s rozšířeními FrontPage Server Extensions, musíte nejdřív nainstalovat rozšíření FrontPage Server Extensions. Instalaci můžete provést pomocí nástroje Správa serveru ve Windows serveru.
+ Ve výchozím nastavení windows Server nemá nainstalovaná rozšíření FrontPage Serveru. Pokud chcete použít k publikování na webový server Windows Server, který používá PROTOKOL HTTP s rozšířeními frontpage serveru, musíte nejprve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nainstalovat rozšíření frontpage serveru. Instalaci můžete provést pomocí nástroje pro správu serveru ve Windows Serveru.
 
-## <a name="windows-server-locked-down-content-types"></a>Windows Server: uzamčené typy obsahu
- Služba IIS v [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] zamkne všechny typy souborů s výjimkou určitých známých typů obsahu (například *. htm*, *. html*, *. txt* atd.). Chcete-li povolit nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací pomocí tohoto serveru, je třeba změnit nastavení služby IIS, aby bylo možné stahovat soubory typu *. Application*, *. manifest* a jakékoli další vlastní typy souborů používané vaší aplikací.
+## <a name="windows-server-locked-down-content-types"></a>Windows Server: Uzamčené typy obsahu
+ Služba IIS v systému uzamkne všechny typy souborů s výjimkou určitých známých typů obsahu [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] (například *.jpg,* *.html,* *.txt* atd.). Pokud chcete povolit nasazení aplikací pomocí tohoto serveru, musíte změnit nastavení služby IIS tak, aby bylo možné stahovat soubory typu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] *.application*, *.manifest* a všechny ostatní vlastní typy souborů používané vaší aplikací.
 
- Pokud nasazujete pomocí serveru služby IIS, spusťte *inetmgr.exe* a přidejte nové typy souborů pro výchozí webovou stránku:
+ Pokud nasazujete pomocí serveru služby IIS, *spusťteinetmgr.exe* a přidejte nové typy souborů pro výchozí webovou stránku:
 
-- Pro rozšíření *. Application* a *. manifest* by měl být typu MIME "application/x-MS-Application". U ostatních typů souborů by měl být typ MIME "Application/oktet-Stream".
+- Pro *přípony .application* a *.manifest* by měl být typ MIME "application/x-ms-application". U jiných typů souborů by typ MIME měl být application/octet-stream.
 
-- Pokud vytvoříte typ MIME s příponou \<em> a typem MIME "Application/oktet-Stream", bude možné stáhnout soubory neblokovaného typu souboru. (Nicméně blokované typy souborů, jako např *\* . aspx* a *\* . asmx* , se nedají stáhnout.)
+- Pokud vytvoříte typ MIME s příponou " " a typem \<em> MIME "application/octet-stream", umožní stažení souborů odblokovaných typů souborů. (Blokované typy souborů, jako jsou *\* .aspx* a *\* .asmx,* ale není možné stáhnout.)
 
   Konkrétní pokyny týkající se konfigurace typů MIME na Windows serveru najdete v tématu [Postup přidání typu MIME na web nebo do aplikace](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application).
 
@@ -132,7 +132,7 @@ Pokud používáte službu Internetová informační služba (IIS) v systému Wi
 
  Pokud používáte službu IIS, můžete snadno povolit kompresi HTTP. Pokud však povolíte kompresi HTTP, je povolena pouze pro určité typy souborů – konkrétně HTML a textové soubory. Chcete-li povolit kompresi pro sestavení (*. dll*), XML (*. XML*), manifesty nasazení (*. Application*) a manifesty aplikace (*. manifest*), je nutné přidat tyto typy souborů do seznamu typů pro službu IIS pro komprimaci. Dokud do nasazení nepřidáte typy souborů, budou komprimovány pouze soubory textu a HTML.
 
- Podrobné pokyny pro službu IIS najdete v tématu [Určení dalších typů dokumentů pro kompresi HTTP](https://support.microsoft.com/help/234497).
+ Podrobné pokyny pro službu IIS najdete v tématu [Určení dalších typů dokumentů pro kompresi HTTP](/troubleshoot/iis/content-types-http-compression.md).
 
 ## <a name="see-also"></a>Viz také
 - [Řešení potíží s nasazeními ClickOnce](../deployment/troubleshooting-clickonce-deployments.md)

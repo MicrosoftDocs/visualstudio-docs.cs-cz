@@ -1,38 +1,38 @@
 ---
-title: Úlohy a ID komponent sady Visual Studio Test Controller 2019
+title: Visual Studio ID komponent a úloh testeru 2019
 titleSuffix: ''
-description: Použití úloh sady Visual Studio a ID komponent k distribuci automatizovaných testů na více počítačů
+description: Použití Visual Studio ID úloh a komponent k distribuci automatizovaných testů do několika počítačů
 keywords: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
-ms.date: 3/2/2021
+ms.date: 05/24/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 7e401ff1cfaea4821b987636261e2dfea8660b3d
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: f72eea5ebbe8ca6f8197002c03237733af6bc2c2
+ms.sourcegitcommit: 18e7300d4878f2fcd0263a4aff31a755ae8fc289
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683657"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110449908"
 ---
 ## <a name="test-controller"></a>Test Controller
 
-**ID:** Microsoft. VisualStudio. úlohy. TestController
+**ID:** Microsoft.VisualStudio.Workload.TestController
 
-**Popis:** Distribuce automatizovaných testů na více počítačů
+**Popis:** Distribuce automatizovaných testů do několika počítačů
 
-### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
+### <a name="components-included-by-this-workload"></a>Komponenty zahrnuté v této úlohu
 
-ID součásti | Název | Verze | Typ závislosti
+ID komponenty | Name | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft. VisualStudio. Component. TestTools. TestController | Test Controller základní funkce | 16.0.28315.86 | Vyžadováno
+Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Základní funkce testovacího kontroleru | 16.0.28315.86 | Vyžadováno
 
-## <a name="unaffiliated-components"></a>Nepřidružené součásti
+## <a name="unaffiliated-components"></a>Nepřiřazené komponenty
 
-Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
+Jedná se o komponenty, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
 
-ID součásti | Název | Verze
+ID komponenty | Name | Verze
 --- | --- | ---
 Není k dispozici | Není k dispozici | Není k dispozici
