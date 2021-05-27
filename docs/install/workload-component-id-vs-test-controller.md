@@ -1,12 +1,12 @@
 ---
-title: Sady Visual Studio Test Controller úlohy a ID komponent
+title: Visual Studio id komponent a úloh testovacího kontroleru
 titleSuffix: ''
-description: Použití úloh sady Visual Studio a ID komponent k distribuci automatizovaných testů na více počítačů
+description: Použití Visual Studio ID úloh a komponent k distribuci automatizovaných testů do několika počítačů
 keywords: ''
 author: j-martens
 ms.author: jmartens
 manager: jmartens
-ms.date: 3/2/2020
+ms.date: 05/25/2021
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,14 +16,14 @@ ms.assetid: fbbda9c8-d2c6-474d-b52d-a95227d52fe7
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 3c5f858f0b1fd8c2952bb8bc7484f86f68fd3c11
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: a1b07cd355d820253e5dd6f9fada832261037eb4
+ms.sourcegitcommit: 4a91c63683ba1c1832b1ba96657862a849320d81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "110449907"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110565203"
 ---
-# <a name="visual-studio-test-controller-component-directory"></a>Adresář součástí sady Visual Studio Test Controller
+# <a name="visual-studio-test-controller-component-directory"></a>Visual Studio adresáře komponenty Test Controller
 
 [!INCLUDE[workloads-components-universal-header_md](includes/workloads-components-universal-header_md.md)]
 
