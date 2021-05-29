@@ -1,42 +1,42 @@
 ---
-title: Zvýhodnění učení LinkedInu v předplatných sady Visual Studio | Microsoft Docs
+title: Výhoda LinkedIn Learning v Visual Studio předplatných | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
 ms.date: 03/17/2021
 ms.topic: how-to
-description: Seznamte se s výhodou LinkedIn Learning zahrnutou jako součást předplatného LinkedIn Premium, které jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: dcf242dc09c833b091454ea1863184229e3b71c0
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+description: Přečtěte si o výhodě LinkedIn Learning, která je součástí předplatného LinkedIn Premium, které je součástí vybraných Visual Studio předplatného.
+ms.openlocfilehash: c4004bd72b269a2f7ad6ef5904f31bb742e68563
+ms.sourcegitcommit: 62e39ea1bf0ed939376c4375fc180ff7c4c760fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672914"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110660209"
 ---
-# <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Zvýhodnění učení LinkedInu v předplatných sady Visual Studio
+# <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Výhoda LinkedIn Learning v Visual Studio předplatných
 
-Využijte sílu LinkedInu s přístupem k lidem, přehledům a dovednostím, které potřebujete k diskrokování kariéry.  Seznamte se s nejnovějšími obchodními, technickými a kreativními dovednostmi od odborných odborníků.
+Odemkněte sílu LinkedInu a získejte přístup k lidem, přehledům a dovednostem, které potřebujete k rozvoji své kariéry.  Seznamte se s nejžádnějšími obchodními, technologickými a kreativními dovednostmi od oborových odborníků.
 
-Vybraná předplatná sady Visual Studio zahrnují předplatné LinkedIn Premium, které zahrnuje učení LinkedInu.  Délka vašeho předplatného Premium závisí na typu předplatného sady Visual Studio, které máte.
-Budete potřebovat účet LinkedIn, abyste mohli využít výhod učení LinkedIn.  Pokud ho ještě nemáte, budete mít možnost ho vytvořit ještě před aktivací svého prémiového předplatného.
+Vybraná Visual Studio předplatná zahrnují předplatné LinkedIn Premium, které zahrnuje LinkedIn Learning.  Délka předplatného Premium závisí na typu předplatného, Visual Studio máte.
+Abyste mohli využít výhody LinkedIn Learning, musíte mít účet LinkedIn.  Pokud ho ještě nemáte, budete si ho před aktivací předplatného Premium muset vytvořit.
 
-## <a name="activation-steps"></a>Kroky aktivace
-Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
+## <a name="activation-steps"></a>Postup aktivace
+Aktivace předplatného LinkedIn Premium a výhody LinkedIn Learning:
 1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
-2. V kategorii vzdělávání Najděte dlaždici LinkedIn Learning a klikněte na odkaz **získat kód** .
+2. V kategorii Vzdělávání vyhledejte dlaždici LinkedIn Learning a klikněte na **odkaz Získat** kód.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice s výhodou LinkedIn Learning](_img/vs-linkedin/vs-linkedin-6-month-tile.png "Klikněte na načíst kód a vyžádejte si svůj kód a začněte.")
+   > ![Dlaždice LinkedIn Learning Benefit](_img/vs-linkedin/vs-linkedin-6-month-tile.png "Pokud chcete získat kód a začít, klikněte na Získat kód.")
 
-3. Pokud již máte účet LinkedIn a jste přihlášeni automaticky, okamžitě se dostanete na stránku Aktivace výhody LinkedIn Learning.  Pokud máte účet LinkedIn, ale nejste přihlášeni automaticky, stačí zadat své uživatelské jméno a heslo a potom kliknout na tlačítko **Přihlásit**.  Pokud chcete nabídku aktivovat, přeskočte prosím na [Tento krok](#activate-your-offer) .
+3. Pokud už máte účet LinkedIn a jste automaticky přihlášení, okamžitě se zobrazí stránka aktivace výhod LinkedIn Learning.  Pokud máte účet LinkedIn, ale nejste automaticky přihlášení, zadejte své uživatelské jméno a heslo a pak klikněte **na Přihlásit se.**  Přejděte k tomuto [kroku a](#activate-your-offer) aktivujte svou nabídku.
 
 ### <a name="create-a-linkedin-account"></a>Vytvoření účtu LinkedIn
-4. Pokud ještě nemáte účet LinkedIn, klikněte na **připojit nyní**.
+4. Pokud ještě nemáte účet LinkedIn, klikněte na **Připojit se.**
 
-5. Zadejte své osobní údaje, vyberte uživatelské jméno a heslo a klikněte na **připojit nyní**.
+5. Zadejte svoje osobní údaje, zvolte uživatelské jméno a heslo a klikněte na **Připojit se.**
 
-6. Zadejte země/oblast a PSČ a pak klikněte na **Další**.
+6. Zadejte zemi/oblast a PSČ a pak klikněte na **Další.**
 
 7. Dále vám poskytneme nějaké informace o vašem profilu.  Určete, jestli jste studenta, a zadejte nejnovější název, společnost a odvětví.
 
@@ -52,58 +52,61 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 
 13. Pokud chcete do svého profilu přidat fotografii, klikněte na **nahrát fotografii**.  V opačném případě můžete tento krok přeskočit.  (Fotografii můžete kdykoli přidat později.)
 
-14. Aplikaci LinkedIn si můžete stáhnout na telefon, abyste měli přístup k vaší síti odkudkoli.  Můžete poslat odkaz na telefon nebo si ho stáhnout přímo z App Storu nebo Google Play.  Můžete také kliknout na tlačítko **Další** a tento krok teď přeskočit a stáhnout aplikaci později.
+14. Aplikaci LinkedIn si můžete stáhnout do telefonu, abyste měli přístup k síti odkudkoli.  Můžete odeslat odkaz na telefon nebo si ho stáhnout přímo z App Store nebo Google Play.  Můžete také kliknout **na Další** a tento krok teď přeskočit a stáhnout si aplikaci později.
 
 ### <a name="activate-your-offer"></a>Aktivace nabídky
-15. Teď, když jste se buď přihlásili k účtu LinkedIn, nebo si vytvořili nový, jste připraveni aktivovat předplatné Premium a začít se učením LinkedInu.  Klikněte na **aktivovat vaši nabídku**.
+15. Teď, když jste se přihlásili ke svému účtu LinkedIn nebo vytvořili nový, jste připraveni aktivovat předplatné Premium a začít využívat LinkedIn Learning.  Klikněte **na Activate your offer (Aktivovat nabídku).**
    > [!div class="mx-imgBorder"]
-   > ![Aktivace LinkedIn Learning](_img/vs-linkedin/vs-linkedin-Activate1.png "Pokud chcete začít učit, klikněte na aktivovat nabídku.")
+   > ![Aktivace LinkedIn Learning](_img/vs-linkedin/vs-linkedin-Activate1.png "Pokud se chcete začít učit, klikněte na Aktivovat nabídku.")
 
-16. Můžete začít zkoumat dovednosti, které vás zajímají.  Vyberte si ze seznamu doporučení, vyhledejte další dovednosti nebo kliknutím na **Přeskočit** pokračujte bez výběru dovedností.
+16. Můžete začít zkoumat dovednosti, které vás zajímají.  Vyberte si ze seznamu doporučení, vyhledejte  další dovednosti nebo pokračujte kliknutím na Přeskočit, aniž byste zvolili dovednosti.
    > [!div class="mx-imgBorder"]
-   > ![Výukové dovednosti LinkedInu](_img/vs-linkedin/vs-linkedin-skills.png "Vyberte dovednosti, které chcete prozkoumat.")
+   > ![Dovednosti LinkedIn Learning](_img/vs-linkedin/vs-linkedin-skills.png "Zvolte dovednosti, které chcete prozkoumat.")
 
-17. Úspěšně jste aktivovali nabídku pro předplatné Premium a teď můžete začít používat učení LinkedIn a všechny další výhody Premium.
+17. Úspěšně jste aktivovali nabídku předplatného Premium a teď můžete začít využívat LinkedIn Learning a všechny další výhody Premium.
    > [!div class="mx-imgBorder"]
-   > ![Domovská stránka učení LinkedIn](_img/vs-linkedin/vs-linkedin-learning-home.png "Vítá vás LinkedIn Premium s výukou LinkedInu!")
+   > ![Domovská stránka linkedin learningu](_img/vs-linkedin/vs-linkedin-learning-home.png "Vítá vás LinkedIn Premium s LinkedIn Learning!")
 
-## <a name="eligibility"></a>Vznik
+> [!NOTE]
+> Tato nabídka není součástí Visual Studio Dev Essentials členství.
 
-| Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
+## <a name="eligibility"></a>Způsobilosti
+
+| Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Obnovitelných zdrojů?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, maloobch.<sup>1</sup> | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail<sup>1</sup> | 6 měsíců       |  No.  K dispozici pouze novým odběratelům          |
+| Visual Studio Enterprise předplatného s GitHub Enterprise   | VL | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 měsíce                                                            |No.  Dostupné jenom pro nové předplatitele         |
 | Visual Studio Professional předplatné s GitHubem Enterprise | VL | 3 měsíce      | No.  Dostupné jenom pro nové předplatitele         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  NA         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              | NA         |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NA|
 
-<sup>1</sup>  *vyloučení: NFR, NFR Basic, Visual Studio Industry Partner, Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, představte, MVP Professional (MVP), oblastní ředitel (RD).  MCT software & služby.*
+<sup>1</sup>  *vyloučení: Visual Studio Dev Essentials, NFR, NFR Basic, Visual Studio Industry Partner, Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, představte, Nejlepší profesionální specialista (MVP), regionální ředitel (RD).  MCT software & služby.*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
-Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) Zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
+Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) Zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  Abyste tato předplatná viděli, budete se muset přihlásit pomocí této e-mailové adresy.
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
-### <a name="q-if-i-renew-my-subscription-does-my-linkedin-learning-benefit-also-renew"></a>Otázka: Pokud obnovíte své předplatné, program LinkedIn Learning získá také obnovení?
-Odpověď: Ne, nabídka LinkedIn Learning je dostupná jenom pro nové předplatitele.
+### <a name="q-if-i-renew-my-subscription-does-my-linkedin-learning-benefit-also-renew"></a>Otázka: Pokud obnovím platnost předplatného, prodlužuje se také můj benefit LinkedIn Learning?
+O: Ne, nabídka LinkedIn Learning je dostupná jenom novým odběratelům.
 
-## <a name="support-resources"></a>Prostředky podpory
-- Potřebujete pomáhat s učením LinkedInu?  Podívejte se na tyto materiály:
-  - Pomáhat s [používáním učení LinkedInu](https://www.linkedin.com/help/learning).
-  - Pomůžou vám obecné otázky týkající se [LinkedInu](https://www.linkedin.com/help/linkedin) , jako je vytváření účtů a profilů a údržba sítě.
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
-- Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+## <a name="support-resources"></a>Zdroje informací o podpoře
+- Potřebujete pomoc s LinkedIn Learning?  Podívejte se na tyto materiály:
+  - Pomoc s [používáním LinkedIn Learning](https://www.linkedin.com/help/learning)
+  - Pomoc s obecnými dotazy [ohledně LinkedInu,](https://www.linkedin.com/help/linkedin) jako je vytváření účtů a profilů a údržba sítě
+- Pokud chcete pomoc s prodejem, předplatným, účty a fakturací pro Předplatná sady Visual Studio, kontaktujte [Visual Studio podpory k předplatným.](https://my.visualstudio.com/gethelp)
+- Máte dotaz ohledně integrovaného vývojového Visual Studio, Azure DevOps Services nebo jiných Visual Studio produktů nebo služeb?  Navštivte [Visual Studio podpory.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Visual Studio dokumentace](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
-- [Dokumentace k Microsoft 365](/microsoft-365/)
+- [Microsoft 365 dokumentace](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Podívejte se na zbytek skvělé výhody, které jsou součástí vašeho předplatného. Přejděte na adresu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
+Podívejte se na zbývající skvělé výhody, které jsou součástí vašeho předplatného. Navštivte [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
 
-Pokud jste ještě neaktivovali zvýhodněné kredity Azure DevTest, která se dodává s vaším předplatným, přejděte na [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) dlaždici Azure v kategorii Nástroje a nastavte své předplatné Azure a uplatněte svůj jednotlivý kredit Azure DevTest.
+Pokud jste ještě neaktivovali individuální kredit Azure DevTest, který je součástí vašeho předplatného, navštivte a klikněte na dlaždici Azure v kategorii Nástroje, nastavte předplatné Azure a uplatnte svůj individuální kredit [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) Azure DevTest.

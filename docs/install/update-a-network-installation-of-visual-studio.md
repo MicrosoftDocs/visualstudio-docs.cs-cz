@@ -1,7 +1,7 @@
 ---
 title: Aktualizace síťové instalace
-description: Naučte se aktualizovat instalaci sady Visual Studio na základě sítě pomocí příkazu--layout.
-ms.date: 04/16/2021
+description: Zjistěte, jak aktualizovat síťovou instalaci Visual Studio pomocí příkazu --layout.
+ms.date: 05/26/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,29 +15,29 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0400f4be06afab2326ac738e1ac15f9d93a6ecee
-ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
+ms.openlocfilehash: 74464aa76c24a798d33fa7639cdd0b6a07489bf7
+ms.sourcegitcommit: 62e39ea1bf0ed939376c4375fc180ff7c4c760fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107800782"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110660218"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Aktualizace síťové instalace sady Visual Studio
 
-Je možné aktualizovat rozložení instalace sítě sady Visual Studio s nejnovějšími aktualizacemi produktu, aby bylo možné je použít jako bod instalace pro nejnovější aktualizaci sady Visual Studio a také k údržbě instalací, které jsou již nasazeny na klientských pracovních stanicích.
+Je možné aktualizovat rozložení síťové instalace Visual Studio nejnovějšími aktualizacemi produktů, aby bylo možné ho použít jak jako instalační bod pro nejnovější aktualizaci Visual Studio, tak i k údržbě instalací, které jsou už nasazené na klientských pracovních stanicích.
 
 ## <a name="how-to-update-a-network-layout"></a>Postup aktualizace rozložení sítě
 
 > [!IMPORTANT]
-> V těchto pokynech se předpokládá, že jste dříve vytvořili rozložení instalace sítě a udělali si rozhodnutí o tom, jak má klient získat aktualizace. Další informace o tom, jak to provést, najdete v tématu [Vytvoření síťové instalace sady Visual Studio](create-a-network-installation-of-visual-studio.md) a [aktualizace ovládacího prvku na stránce nasazení sady Visual Studio](../install/controlling-updates-to-visual-studio-deployments.md) .
+> Tyto pokyny předpokládají, že jste už dříve vytvořili rozložení instalace sítě a provedli několik rozhodnutí o tom, jak má klient získat aktualizace. Další informace o tom, jak to provést, najdete na stránce Vytvoření síťové instalace Visual Studio [a](create-a-network-installation-of-visual-studio.md) řízení aktualizací [Visual Studio nasazení.](../install/controlling-updates-to-visual-studio-deployments.md)
 
-Chcete-li aktualizovat sdílenou síťovou instalaci tak, aby obsahovala nejnovější aktualizace, spusťte zaváděcí nástroj pomocí `--layout` parametru a stáhněte aktualizované balíčky.
+Pokud chcete aktualizovat síťovou instalační složku tak, aby zahrnuje nejnovější aktualizace, spusťte bootstrapper pomocí parametru a `--layout` stáhněte aktualizované balíčky.
 
-Pokud jste při [prvním vytvoření rozložení sítě](create-a-network-installation-of-visual-studio.md)vybrali částečné rozložení, tato nastavení se uloží. Jakékoli budoucí příkazy rozložení používají předchozí možnosti a všechny nové možnosti, které zadáte.
+Pokud jste při prvním vytvoření rozložení sítě vybrali částečné [rozložení,](create-a-network-installation-of-visual-studio.md)uloží se tato nastavení. Všechny budoucí příkazy rozložení používají předchozí možnosti a všechny nové možnosti, které zadáte.
 
-Pokud budete hostovat rozložení sdílené složky, měli byste aktualizovat soukromou kopii rozložení (například c:\VSLayout) a potom po stažení veškerého aktualizovaného obsahu ho zkopírovat do sdílené složky (například \\ server\products\VS). Pokud to neuděláte, je pravděpodobné, že všichni uživatelé, kteří během aktualizace rozložení spouštějí instalaci, nemusí být schopni získat veškerý obsah z rozložení, protože ještě není úplně aktualizovaný.
+Pokud hostíte rozložení sdílené složky, měli byste aktualizovat privátní kopii rozložení (například c:\VSLayout) a po stažení veškerého aktualizovaného obsahu ji zkopírovat do sdílené složky (například \\ server\products\VS). Pokud to neukončíte, je větší pravděpodobnost, že všichni uživatelé, kteří spustí instalační program během aktualizace rozložení, nebudou moct získat veškerý obsah z rozložení, protože ještě nejsou úplně aktualizovaná.
 
-Pojďme si projít několik příkladů, jak vytvořit a následně aktualizovat rozložení:
+Pojďme si projít několik příkladů, jak vytvořit a pak aktualizovat rozložení:
 
 * Nejprve tady je příklad, jak vytvořit rozložení s jednou úlohou pouze pro angličtinu:
 
@@ -45,7 +45,7 @@ Pojďme si projít několik příkladů, jak vytvořit a následně aktualizovat
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --lang en-US
   ```
 
-* Zde je postup, jak aktualizovat stejné rozložení na novější verzi. Nemusíte zadávat žádné další parametry příkazového řádku. Předchozí nastavení bylo uloženo a bude použito v dalších příkazech rozložení v této složce rozložení.
+* Tady je postup aktualizace stejného rozložení na novější verzi. Nemusíte zazadat žádné další parametry příkazového řádku. Předchozí nastavení byla uložena a budou je používat všechny následné příkazy rozložení v této složce rozložení.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout
@@ -64,49 +64,49 @@ Pojďme si projít několik příkladů, jak vytvořit a následně aktualizovat
   ```
 
     > [!IMPORTANT]
-    > Operace aktualizace neinstaluje nově přidané volitelné součásti. Pokud potřebujete nově přidané volitelné součásti, odeberte staré volitelné komponenty v `Layout.JSON` [souboru odpovědí](automated-installation-with-response-file.md) a součásti, které potřebujete, přidejte do oddílu "Přidat" v tématu `Layout.JSON` . 
+    > Operace aktualizace nestáhne ani nenainstaluje další volitelné součásti buď do rozložení, nebo do klienta. Pokud potřebujete přidat nebo změnit volitelné součásti, odeberte nejprve staré volitelné komponenty ze `Layout.JSON` [souboru odpovědí](automated-installation-with-response-file.md) a v části Přidat přidejte nové součásti, které potřebujete `Layout.JSON` . Po spuštění příkazu aktualizovat v rozložení se pak stáhnou nově přidané komponenty do rozložení. 
     >
-    > **Alternativní řešení**: po upgradu pro instalaci chybějících součástí spusťte samostatnou operaci úprav.
+    > Pokud chcete tyto nové komponenty nainstalovat na klientský počítač, ujistěte se, že provádíte tyto tři kroky. Nejprve ověřte, zda rozložení obsahuje nové komponenty, jak je popsáno výše. Dále aktualizujte klienta na nejnovější bity v rozložení.  Nakonec v klientovi znovu spusťte operaci úprav, která nainstaluje nové součásti (přidané do rozložení) do klientského počítače.
 
-* A konečně, jak přidat další úlohu a lokalizovaný jazyk bez aktualizace verze. (Tento příkaz přidá úlohu *vývoje ASP.NET a webu* .)  V tomto rozložení jsou teď součástí spravovaných úloh Desktop, Azure a ASP.NET & Web Development. Pro všechny tyto úlohy jsou k dispozici také jazykové prostředky pro angličtinu, němčinu a francouzštinu.  Při spuštění tohoto příkazu se ale rozložení neaktualizovalo na nejnovější dostupnou verzi. Zůstane v existující verzi.
+* A konečně, jak přidat další úlohu a lokalizovaný jazyk bez aktualizace verze. (Tento příkaz přidá úlohu *vývoje ASP.NET a webu* .)  V tomto rozložení jsou teď součástí spravovaných úloh Desktop, Azure a ASP.NET & Web Development. Pro všechny tyto úlohy jsou zahrnuty také jazykové prostředky pro angličtinu, němčinu a francouzštinu.  Při spuštění tohoto příkazu však rozložení nebylo aktualizováno na nejnovější dostupnou verzi. Zůstává ve stávající verzi.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
   ```
 
-## <a name="deploy-an-update-to-client-machines"></a>Nasazení aktualizace klientských počítačů
+## <a name="deploy-an-update-to-client-machines"></a>Nasazení aktualizace do klientských počítačů
 
-V závislosti na tom, jak je vaše síťové prostředí nakonfigurované, může být aktualizace nasazená podnikovým správcem nebo iniciovaná z klientského počítače.
+V závislosti na tom, jak je síťové prostředí nakonfigurované, může aktualizaci nasadit podnikový správce nebo iniciovat z klientského počítače.
 
-* Uživatelé mohou aktualizovat instanci sady Visual Studio, která byla nainstalována z offline instalační složky:
+* Uživatelé mohou aktualizovat instanci Visual Studio nainstalovanou z offline instalační složky:
   * Spusťte Instalační program pro Visual Studio.
-  * Pak klikněte na **aktualizovat**.
+  * Pak klikněte na **Aktualizovat.**
 
 ::: moniker range="vs-2017"
 
-* Správci mohou aktualizovat nasazení klientů sady Visual Studio bez jakékoli interakce s uživatelem se dvěma samostatnými příkazy:
-  * Nejdřív aktualizujte instalační program sady Visual Studio: <br>```vs_enterprise.exe --quiet --update```
-  * Pak aktualizujte vlastní aplikaci Visual Studio: <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" --quiet --wait --norestart```
+* Správci můžou aktualizovat nasazení klientů Visual Studio bez zásahu uživatele pomocí dvou samostatných příkazů:
+  * Nejprve aktualizujte instalační Visual Studio: <br>```vs_enterprise.exe --quiet --update```
+  * Pak aktualizujte samotnou Visual Studio aplikace: <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" --quiet --wait --norestart```
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-* Správci mohou aktualizovat nasazení klientů sady Visual Studio bez jakékoli interakce s uživatelem se dvěma samostatnými příkazy:
-  * Nejdřív aktualizujte instalační program sady Visual Studio: <br>```vs_enterprise.exe --quiet --update```
-  * Pak aktualizujte vlastní aplikaci Visual Studio: <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" --quiet --wait --norestart```
+* Správci můžou aktualizovat nasazení klientů Visual Studio bez zásahu uživatele pomocí dvou samostatných příkazů:
+  * Nejprve aktualizujte instalační Visual Studio: <br>```vs_enterprise.exe --quiet --update```
+  * Pak aktualizujte samotnou Visual Studio aplikace: <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" --quiet --wait --norestart```
 
 ::: moniker-end
 
 > [!NOTE]
-> Pomocí [ příkazuvswhere.exe](tools-for-managing-visual-studio-instances.md) Identifikujte instalační cestu existující instance aplikace Visual Studio v klientském počítači.
+> Pomocí [vswhere.exe identifikujte](tools-for-managing-visual-studio-instances.md) instalační cestu existující instance nástroje Visual Studio na klientském počítači.
 >
 > [!TIP]
-> Podrobnosti o tom, jak řídit, kdy se mají uživatelům zobrazovat oznámení o aktualizacích, najdete v tématu [řízení aktualizací pro nasazení sady Visual Studio na základě sítě](controlling-updates-to-visual-studio-deployments.md).
+> Podrobnosti o tom, jak řídit, kdy se mají uživatelům prezentovat oznámení o aktualizacích, najdete v tématu Řízení aktualizací síťových [Visual Studio nasazení.](controlling-updates-to-visual-studio-deployments.md)
 
 ## <a name="verify-a-layout"></a>Ověření rozložení
 
-Použijte `--verify` k ověření dodané mezipaměti offline. Kontroluje, zda soubory balíčků chybí nebo jsou neplatné. Na konci ověřování se zobrazí seznam chybějících souborů a neplatných souborů.
+Pomocí `--verify` nástroje proveďte ověření dodané offline mezipaměti. Kontroluje, jestli soubory balíčků chybí nebo jsou neplatné. Na konci ověření vytiskne seznam chybějících souborů a neplatných souborů.
 
 ```cmd
 vs_enterprise.exe --layout <layoutDir> --verify
@@ -138,9 +138,9 @@ Po provedení aktualizací rozložení do offline mezipaměti může složka mez
 
 K tomu budete potřebovat cesty k souboru pro manifesty katalogu, které obsahují tyto zastaralé balíčky. Manifesty katalogu můžete najít ve složce archivu v mezipaměti offline rozložení. Při aktualizaci rozložení se uloží. Ve složce Archive existuje jedna nebo více pojmenovaných složek "GUID", z nichž každý obsahuje zastaralý manifest katalogu. Počet složek "GUID" by měl být stejný jako počet aktualizací provedených v offline mezipaměti.
 
-V každé složce "GUID" je uloženo několik souborů. Mezi dva soubory s největším zájmem patří soubor "catalog.json" a soubor "version.txt". Soubor catalog.json je zastaralý manifest katalogu, který budete muset předat `--clean` Možnosti. Druhý version.txt soubor obsahuje verzi tohoto zastaralého manifestu katalogu. Na základě čísla verze se můžete rozhodnout, jestli chcete z tohoto manifestu katalogu odebrat zastaralé balíčky. Stejný postup můžete provést stejně jako ostatní složky "GUID". Po provedení rozhodnutí pro katalogy, které chcete vyčistit, spusťte `--clean` příkaz zadáním cest k souborům do těchto katalogů.
+Do každé složky GUID se uloží několik souborů. Nejdůležitějšími dvěma soubory jsou soubor "catalog.json" a soubor "version.txt". Soubor "catalog.json" je zastaralý manifest katalogu, který budete muset předat `--clean` možnosti . Druhý version.txt obsahuje verzi tohoto zastaralého manifestu katalogu. Na základě čísla verze se můžete rozhodnout, jestli chcete odebrat zastaralé balíčky z tohoto manifestu katalogu. Můžete to samé dělat i v ostatních složkách GUID. Po rozhodnutí o katalogech, které chcete vyčistit, spusťte příkaz tak, že do těchto katalogů zadáte cesty `--clean` k souborům.
 
-Tady je několik příkladů použití možnosti--Clean:
+Tady je několik příkladů použití možnosti --clean:
 
 ```cmd
 vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> <file-path-of-catalog2> …
@@ -150,21 +150,21 @@ vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> <file-pat
 vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> --clean <file-path-of-catalog2> …
 ```
 
-Můžete také vyvolat vs_enterprise.exe v rámci &lt; layoutDir &gt; . Tady je příklad:
+Můžete také vyvolat vs_enterprise.exe uvnitř &lt; layoutDir &gt; . Tady je příklad:
 
 ```cmd
 c:\VSLayout\vs_enterprise.exe --layout c:\VSLayout --clean c:\VSLayout\Archive\1cd70189-fc55-4583-8ad8-a2711e928325\Catalog.json --clean c:\VS2017Layout\Archive\d420889f-6aad-4ba4-99e4-ed7833795a10\Catalog.json
 ```
 
-Při spuštění tohoto příkazu provede instalační program analýzu složky offline mezipaměti, aby našel seznam souborů, které se odebere. Pak budete mít možnost zkontrolovat soubory, které se budou odstraňovat, a potvrdit odstranění.
+Když spustíte tento příkaz, instalační program analyzuje složku offline mezipaměti a najde seznam souborů, které odebere. Pak budete mít možnost zkontrolovat soubory, které se mají odstranit, a potvrdit odstranění.
 
-## <a name="get-support-for-your-offline-installer"></a>Získání podpory pro offline instalátor
+## <a name="get-support-for-your-offline-installer"></a>Získání podpory pro offline instalační program
 
-Pokud dojde k potížím s offline instalací, chceme o něm znát. Nejlepším způsobem, jak nás říct, je použití nástroje [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) . Při použití tohoto nástroje můžete nám poslat telemetrii a protokoly, které potřebujeme, abychom nám mohli pomoct diagnostikovat a vyřešit problém.
+Pokud máte s offline instalací nějaký problém, chceme se o tom dozvědět. Nejlepší způsob, jak nám to říct, je použít [nástroj Prohlásit](../ide/how-to-report-a-problem-with-visual-studio.md) problém. Když použijete tento nástroj, můžete nám poslat telemetrii a protokoly, které potřebujeme, abychom mohli problém diagnostikovat a opravit.
 
-Nabízíme také [**živý chat**](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině), který umožňuje problémy související s instalací.
+Nabízíme také možnost [**podpory živého chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině) pro problémy související s instalací.
 
-K dispozici jsou i další možnosti podpory. Seznam najdete na naší stránce s [názory na zpětnou vazbu](../ide/feedback-options.md) .
+K dispozici jsou i další možnosti podpory. Seznam najdete na naší stránce [s názory.](../ide/feedback-options.md)
 
 ## <a name="see-also"></a>Viz také
 
@@ -172,5 +172,5 @@ K dispozici jsou i další možnosti podpory. Seznam najdete na naší stránce 
 * [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro zjišťování a správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)
-* [Řízení aktualizací pro nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md)
-* [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)
+* [Řízení aktualizací síťových nasazení Visual Studio nasazení](controlling-updates-to-visual-studio-deployments.md)
+* [Visual Studio životního cyklu a údržby produktů](/visualstudio/releases/2019/servicing/)
