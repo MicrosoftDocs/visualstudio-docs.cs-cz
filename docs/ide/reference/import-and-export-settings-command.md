@@ -1,7 +1,7 @@
 ---
-description: Importuje, exportuje nebo resetuje nastavení sady Visual Studio.
+description: Importuje, exportuje nebo resetuje Visual Studio nastavení. Přípona souboru vssettings
 title: nastavení importu a exportu – příkaz
-ms.date: 11/21/2018
+ms.date: 05/28/2021
 ms.topic: reference
 f1_keywords:
 - Tools.ImportandExportSettings
@@ -14,16 +14,18 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f2ea4811af2c44277b9a6dc285972c5267b28d7
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: dba50cf598c3c74f6c9407fbef5d55f938941a11
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223667"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687644"
 ---
-# <a name="import-and-export-settings-command"></a>nastavení importu a exportu – příkaz
+# <a name="import-and-export-settings-command-vssettings-file"></a>Příkaz Import a export nastavení (soubor .vssettings)
 
-Importuje, exportuje nebo resetuje nastavení sady Visual Studio.
+Importuje, exportuje nebo resetuje Visual Studio souboru nastavení `.vssettings` .
+
+Schéma souboru je otevřené. Nejčastěji se schéma řídí strukturou XML, kde každá kategorie je značka, která může sama obsahovat značky podkategorií. Tyto značky podkategorií mohou obsahovat značky hodnot vlastností. I když většina balíčků používá společnou strukturu, každý balíček v Visual Studio může do souboru přispívat libovolným kódem XML se schématem, které si zvolí.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,21 +35,21 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 
 ## <a name="switches"></a>přepínače,
 
-/Export`filename`
+/export:`filename`
 
 Nepovinný parametr. Exportuje aktuální nastavení do zadaného souboru.
 
-/Import`filename`
+/import:`filename`
 
 Nepovinný parametr. Importuje nastavení v zadaném souboru.
 
-/Reset po vyčištění
+/resetování
 
 Nepovinný parametr. Obnoví aktuální nastavení.
 
 ## <a name="remarks"></a>Poznámky
 
-Spuštění tohoto příkazu bez přepínačů otevře průvodce **importem a exportem nastavení** . Další informace najdete v tématu [synchronizace nastavení](../synchronized-settings-in-visual-studio.md) a [nastavení prostředí](../environment-settings.md).
+Spuštěním tohoto příkazu bez přepínačů se **otevře průvodce importem a exportem nastavení.** Další informace najdete v tématu [Synchronizace nastavení a](../synchronized-settings-in-visual-studio.md) Nastavení [prostředí.](../environment-settings.md)
 
 ## <a name="example"></a>Příklad
 
@@ -57,9 +59,11 @@ Následující příkaz exportuje aktuální nastavení do souboru `MyFile.vsset
 Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"
 ```
 
+
+
 ## <a name="see-also"></a>Viz také
 
 - [Nastavení prostředí](../../ide/environment-settings.md)
-- [Synchronizovat nastavení](../../ide/synchronized-settings-in-visual-studio.md)
-- [Přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
+- [Synchronizace nastavení](../../ide/synchronized-settings-in-visual-studio.md)
+- [Přizpůsobení integrovaného vývojového Visual Studio (IDE)](../../ide/personalizing-the-visual-studio-ide.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)

@@ -1,6 +1,6 @@
 ---
-title: Vývoj mobilních aplikací pro různé platformy v aplikaci Visual Studio | Microsoft Docs
-description: V tomto článku se dozvíte, jak můžete vytvářet aplikace pro zařízení se systémem Android, iOS a Windows pomocí sady Visual Studio.
+title: Vývoj mobilních řešení pro více platforem v Visual Studio | Microsoft Docs
+description: V tomto článku se dozvíte, jak vytvářet aplikace pro zařízení s Androidem, iOSem a Windows pomocí Visual Studio.
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
@@ -12,43 +12,43 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: b50edfe91a9b497760c44d3fd548eb6d2a15a049
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 2f3c611ae157be4f2ea89254856bdd3b6fba448d
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399374"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687675"
 ---
-# <a name="cross-platform-mobile-development-in-visual-studio"></a>Vývoj mobilních aplikací pro různé platformy v aplikaci Visual Studio
+# <a name="cross-platform-mobile-development-in-visual-studio"></a>Vývoj mobilních řešení pro více platforem v Visual Studio
 
-Pomocí sady Visual Studio můžete vytvářet aplikace pro zařízení se systémem Android, iOS a Windows.  Při návrhu aplikace můžete pomocí nástrojů v aplikaci Visual Studio snadno přidat připojené služby, například Microsoft 365, Azure App Service a Application Insights.
+Aplikace pro zařízení s Androidem, iOSem a Windows můžete vytvářet pomocí Visual Studio.  Při návrhu aplikace můžete pomocí nástrojů v Visual Studio snadno přidávat připojené služby, jako jsou Microsoft 365, Azure App Service a Application Insights.
 
-Sestavujte své aplikace pomocí jazyka C# a .NET Framework, HTML a JavaScriptu nebo C++. Sdílejte kód, řetězce, obrázky a v některých případech i v uživatelském rozhraní.
+Vytvářete aplikace pomocí jazyka C# a .NET Framework, HTML a JavaScriptu nebo C++. Sdílejte kód, řetězce, obrázky a v některých případech i uživatelské rozhraní.
 
-Pokud chcete vytvořit herní nebo atraktivní grafickou aplikaci, nainstalujte si Visual Studio Tools for Unity a využijte všechny výkonné funkce produktivity sady Visual Studio s Unity, oblíbené hry pro různé platformy a vývojové prostředí pro aplikace, které běží na iOS, Androidu, Windows a dalších platformách.
+Pokud chcete vytvořit hru nebo imerzivní grafickou aplikaci, nainstalujte si nástroje Visual Studio pro Unity a užívejte si všechny výkonné funkce produktivity Visual Studio pomocí Unity, oblíbeného herního/grafického stroje pro více platforem a vývojového prostředí pro aplikace, které běží na iOSu, Androidu, Windows a dalších platformách.
 
-## <a name="build-an-app-for-android-ios-and-windows-net-framework"></a>Sestavení aplikace pro Android, iOS a Windows (.NET Framework)
+## <a name="build-an-app-for-android-ios-and-windows-net-framework"></a>Vytvoření aplikace pro Android, iOS a Windows (.NET Framework)
 
 ![Zařízení](../cross-platform/media/homedevices.png "HomeDevices")
 
-S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve stejném řešení, sdílet kód a dokonce uživatelské rozhraní.
+Díky Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve stejném řešení a sdílet kód a dokonce i uživatelské rozhraní.
 
 |**Další informace**|
 |--------------------|
-|[Instalace sady Visual Studio](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
-|[Další informace o Xamarin v aplikaci Visual Studio](https://visualstudio.microsoft.com/xamarin/) (VisualStudio.com)|
-|[Dokumentace pro vývoj mobilních aplikací Xamarin](/xamarin/) |
+|[Instalace Visual Studio](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
+|[Informace o Xamarinu v Visual Studio](https://visualstudio.microsoft.com/xamarin/) (VisualStudio.com)|
+|[Dokumentace k vývoji mobilních aplikací Xamarin](/xamarin/) |
 |[DevOps s aplikacemi Xamarin](/xamarin/tools/ci/devops/) |
-|[Další informace o univerzálních aplikacích pro Windows v aplikaci Visual Studio](https://visualstudio.microsoft.com/vs/universal-windows-platform/) (VisualStudio.com)|
-|[Informace o podobnostech mezi SWIFT a C#](https://aka.ms/scposter) (download.Microsoft.com)|
+|[Další informace o univerzálních aplikacích](https://visualstudio.microsoft.com/vs/universal-windows-platform/) pro Windows v Visual Studio (VisualStudio.com)|
+|[Další informace o podobnostech mezi Swiftem](https://aka.ms/scposter) a C# (download.microsoft.com)|
 
-### <a name="target-android-ios-and-windows-from-a-single-code-base"></a><a name="AndroidHTML"></a> Zaměření na Android, iOS a Windows z jediného základu kódu
+### <a name="target-android-ios-and-windows-from-a-single-code-base"></a><a name="AndroidHTML"></a> Cílení na Android, iOS a Windows z jednoho základu kódu
 
- Můžete vytvářet nativní aplikace pro Android, iOS a Windows pomocí jazyků C# nebo F # (Visual Basic není v tuto chvíli podporován).  Chcete-li začít, nainstalujte aplikaci Visual Studio, v instalačním programu vyberte možnost **vývoj mobilních aplikací pomocí rozhraní .NET** .
+ Nativní aplikace pro Android, iOS a Windows můžete vytvářet pomocí jazyka C# nebo F# (Visual Basic se v tuto chvíli nepodporuje).  Pokud chcete začít, nainstalujte Visual Studio a v instalačním programu vyberte možnost Vývoj mobilních aplikací pomocí **.NET.**
 
- Pokud už máte nainstalovanou aplikaci Visual Studio, znovu spusťte **instalační program pro Visual Studio** a vyberte stejný vývoj pro **mobilní zařízení pomocí možnosti .NET** pro Xamarin (výše).
+ Pokud už máte Visual Studio nainstalovanou aplikaci, spusťte znovu **Instalační program pro Visual Studio** a vyberte stejnou možnost Vývoj mobilních aplikací pomocí **.NET** pro Xamarin (jak je uvedeno výše).
 
- Až skončíte, šablony projektu se zobrazí v dialogovém okně **Nový projekt** . Nejjednodušší způsob, jak najít šablony Xamarin, je hledat jen "Xamarin".
+ Až budete hotovi, šablony projektů se zobrazí v **dialogovém okně Nový** projekt. Nejjednodušší způsob, jak najít šablony Xamarin, je hledat jen "Xamarin".
 
  Xamarin zveřejňuje nativní funkce pro Android, iOS a Windows jako třídy a metody .NET. To znamená, že vaše aplikace mají úplný přístup k nativním rozhraním API a nativním ovládacím prvkům a fungují stejně jako aplikace napsané v nativních jazycích platforem.
 
@@ -64,20 +64,20 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 
  ![Sdílení kódu mezi Windows, iOS a Androidem uživatelská rozhraní](../cross-platform/media/sharecode.png "ShareCode")
 
- Svůj kód můžete sdílet pomocí sdíleného projektu, přenositelného projektu knihovny tříd nebo obojího. Může se stát, že nějaký kód nejlépe odpovídá sdílenému projektu a nějaký kód je lepší v rámci přenositelného projektu knihovny tříd.
+ Svůj kód můžete sdílet pomocí sdíleného projektu, projektu přenosné knihovny tříd nebo obojího. Můžete zjistit, že některý kód nejlépe odpovídá sdílenému projektu a že nějaký kód dává větší smysl uvnitř projektu přenosné knihovny tříd.
 
 |**Další informace**|
 |--------------------|
-|[Sdílení možností kódu](/xamarin/cross-platform/app-fundamentals/code-sharing/) (Xamarin) |
+|[Možnosti sdílení kódu](/xamarin/cross-platform/app-fundamentals/code-sharing/) (Xamarin) |
 |[Možnosti sdílení kódu pomocí .NET](/dotnet/standard/cross-platform/) |
 
-### <a name="target-windows-10-devices"></a><a name="WindowsHTML"></a> Cílová zařízení s Windows 10
+### <a name="target-windows-10-devices"></a><a name="WindowsHTML"></a> Cílová Windows 10 zařízení
 
  ![Zařízení s Windows](../cross-platform/media/windowsdevices.png "Zařízení s Windows")
 
- Pokud chcete vytvořit jednu aplikaci, která se zaměřuje na celou škálu zařízení s Windows 10, vytvořte si univerzální aplikaci pro Windows. Aplikaci navrhnete pomocí jediného projektu a stránky se budou správně vykreslovat bez ohledu na to, k čemu se zařízení používají k jejich zobrazení.
+ Pokud chcete vytvořit jednu aplikaci, která cílí na celou Windows 10 zařízení, vytvořte univerzální aplikaci pro Windows. Aplikaci navrhníte pomocí jednoho projektu a stránky se správně vykreslí bez ohledu na to, jaké zařízení se k jejich zobrazení používá.
 
- Začněte s šablonou projektu aplikace Univerzální platforma Windows (UWP). Navrhněte své stránky vizuálně a pak je otevřete v okně náhledu, abyste viděli, jak se zobrazují pro různé typy zařízení. Pokud si nejste spokojeni s tím, jak se stránka zobrazuje na zařízení, můžete stránku optimalizovat, aby lépe vyhovovala velikosti obrazovky, rozlišení nebo různým orientům, jako je například režim na šířku nebo na výšku. To všechno můžete udělat pomocí intuitivního okna nástrojů a snadno dostupné možnosti nabídky v aplikaci Visual Studio. Až budete připraveni spustit aplikaci a krokovat kód, najdete všechny emulátory zařízení a simulátory pro různé typy zařízení společně v jednom rozevíracím seznamu, který je umístěný na **standardním** panelu nástrojů.
+ Začněte šablonou Univerzální platforma Windows aplikace (UPW). Navrhovat stránky vizuálně a pak je otevřít v okně náhledu, abyste viděli, jak se zobrazují pro různé typy zařízení. Pokud se vám nelíbí, jak se stránka zobrazuje na zařízení, můžete stránku optimalizovat tak, aby lépe odpovídala velikosti, rozlišení nebo různým orientaci, jako je orientace na šířku nebo na výšku. To všechno můžete udělat pomocí intuitivních panelů nástrojů a snadno přístupných možností nabídky v Visual Studio. Až budete připraveni spustit aplikaci a procházet kód, najdete všechny emulátory zařízení a simulátory pro různé typy zařízení společně v jednom rozevíracím seznamu, který se nachází na panelu **nástrojů Standard.**
 
 |**Další informace**|
 |--------------------|
@@ -87,17 +87,17 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 
 ::: moniker range="vs-2017"
 
-## <a name="build-an-app-for-android-ios-and-windows-htmljavascript"></a><a name="HTML"></a> Sestavení aplikace pro Android, iOS a Windows (HTML/JavaScript)
+## <a name="build-an-app-for-android-ios-and-windows-htmljavascript"></a><a name="HTML"></a> Vytvoření aplikace pro Android, iOS a Windows (HTML/JavaScript)
 
- ![Zařízení s Windows, iOS a Androidem](../cross-platform/media/homedevices.png "Zařízení s Windows, iOS a Androidem")
+ ![Zařízení s Windows, iOSem a Androidem](../cross-platform/media/homedevices.png "Zařízení s Windows, iOSem a Androidem")
 
- Pokud jste vývojářem webu a jste obeznámeni s HTML a JavaScriptem, můžete cílit na Windows, Android a iOS pomocí Visual Studio Tools pro Apache Cordova. Tyto aplikace můžou cílit na všechny tři platformy a můžete je vytvořit pomocí dovedností a procesů, se kterými jste obeznámení.
+ Pokud jste webový vývojář a znáte HTML a JavaScript, můžete cílit na Windows, Android a iOS pomocí Visual Studio Tools pro Apache Cordova. Tyto aplikace mohou cílit na všechny tři platformy a můžete je vytvářet pomocí dovedností a procesů, které znáte nejvíce.
 
- Apache Cordova je rozhraní, které obsahuje model modulů plug-in. Tento modul plug-in poskytuje jediné rozhraní JavaScript API, které můžete použít pro přístup k nativním funkcím zařízení ze všech tří platforem (Android, iOS a Windows).
+ Apache Cordova je rozhraní, které zahrnuje model modulu plug-in. Tento model modulu plug-in poskytuje jedno rozhraní JavaScript API, které můžete použít pro přístup k nativním funkcím zařízení všech tří platforem (Android, iOS a Windows).
 
  Vzhledem k tomu, že jsou tato rozhraní API pro různé platformy, můžete sdílet většinu toho, co píšete mezi všemi třemi platformami. Tím se sníží náklady na vývoj a údržbu. Navíc není nutné začít od začátku. Pokud jste vytvořili jiné typy webových aplikací, můžete tyto soubory sdílet s vaší aplikací Cordova, aniž byste je museli upravovat nebo měnit jejich návrh jakýmkoli způsobem.
 
- ![Hybridní aplikace pro více zařízení pomocí JavaScriptu](../cross-platform/media/multidevicehybridapps.png "Hybridní aplikace pro více zařízení pomocí JavaScriptu")
+ ![Hybridní aplikace pro více zařízení pomocí JavaScriptu](../cross-platform/media/multidevicehybridapps.png "Hybridní aplikace s více zařízeními s JavaScriptem")
 
  Začněte tím, že nainstalujete Visual Studio a v průběhu instalace zvolíte možnost **vývoj mobilních aplikací pomocí JavaScriptu** . Nástroje Cordova automaticky instalují veškerý software třetí strany, který je nutný k sestavení aplikace pro více platforem.
 
@@ -110,7 +110,7 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 |**Další informace**|
 |--------------------|
 |[Instalace sady Visual Studio](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
-|[Začínáme s Visual Studio Tools pro Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/)|
+|[Začínáme s Visual Studio Tools pro Apache Cordova](/previous-versions/visualstudio/cross-platform/tools-for-cordova/)|
 |[Další informace o emulátoru sady Visual Studio pro Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/) (VisualStudio.com)|
 
 ::: moniker-end
@@ -119,29 +119,29 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 
 ## <a name="build-an-app-for-android-ios-and-windows-c"></a>Sestavení aplikace pro Android, iOS a Windows (C++)
 
-![Použití&#43;&#43; C k sestavení pro Android, iOS a Windows](../cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
+![Použití C&#43;&#43; k sestavení pro Android, iOS a Windows](../cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
 
- Nejdřív nainstalujte Visual Studio a **vývoj mobilních aplikací pomocí C++** . Pak můžete sestavit nativní aplikaci aktivity pro Android nebo aplikaci, která se zaměřuje na Windows nebo iOS. Můžete cílit na Android, iOS a Windows ve stejném řešení, pokud chcete, a pak mezi nimi sdílet kód pomocí statické nebo dynamické sdílené knihovny pro různé platformy.
+ Nejprve nainstalujte Visual Studio **a úlohu Vývoj mobilních aplikací pomocí jazyka C++.** Potom můžete vytvořit aplikaci nativní aktivity pro Android nebo aplikaci, která cílí na Windows nebo iOS. Pokud chcete, můžete cílit na Android, iOS a Windows ve stejném řešení a pak mezi nimi sdílet kód pomocí statické nebo dynamické sdílené knihovny pro více platforem.
 
- Pokud potřebujete sestavit aplikaci pro Android, která vyžaduje jakékoli řazení pokročilé manipulace s grafikou, jako je třeba hra, můžete k tomu použít C++. Začněte s projektem **nativní aktivity aplikace (Android)** . Tento projekt má plnou podporu pro Clang sada nástrojů.
+ Pokud potřebujete vytvořit aplikaci pro Android, která vyžaduje jakoukoli pokročilou manipulaci s grafikou, například hru, můžete k tomu použít C++. Začněte projektem **Aplikace nativní aktivity (Android).** Tento projekt má plnou podporu pro nástroj pro jazyk Clang.
 
  ![Šablona projektu nativní aktivity](../cross-platform/media/cross-plat_cpp_native.png "Šablona projektu nativní aktivity")
 
- Až budete připraveni ke spuštění aplikace a zjistíte, jak vypadá, použijte Android Emulator. Je rychlá, spolehlivá a snadná instalace a konfigurace.
+ Až budete připraveni spustit aplikaci a podívat se, jak vypadá, použijte Android Emulator. Je rychlá, spolehlivá a snadno se instaluje a konfiguruje.
 
- Můžete také vytvořit aplikaci, která se zaměřuje na celou škálu zařízení s Windows 10 pomocí C++ a šablony projektu aplikace Univerzální platforma Windows (UWP). Přečtěte si další informace v části [cílová zařízení s Windows 10](#WindowsHTML) , která se zobrazí dříve v tomto tématu.
+ Můžete také vytvořit aplikaci, která bude cílit na celou Windows 10 zařízení pomocí C++ a šablony projektu aplikace Univerzální platforma Windows (UPW). Další informace najdete v části [Cílová Windows 10 zařízení,](#WindowsHTML) která se zobrazí dříve v tomto tématu.
 
- Kód C++ můžete sdílet mezi Androidem, iOS a Windows tak, že vytvoříte statickou nebo dynamickou sdílenou knihovnu.
+ Kód C++ můžete sdílet mezi Androidem, iOSem a Windows vytvořením statické nebo dynamické sdílené knihovny.
 
  ![Statické a dynamické sdílené knihovny](../cross-platform/media/cross_plat_cpp_libraries.png "Statické a dynamické sdílené knihovny")
 
- Tuto knihovnu můžete využívat v projektu Windows, iOS nebo Android, podobně jako ty popsané dříve v této části. Můžete ji také využít v aplikaci, kterou vytvoříte pomocí nástroje Xamarin, Java nebo libovolného jazyka, který umožňuje vyvolání funkcí v nespravované knihovně DLL.
+ Tuto knihovnu můžete využívat v projektu pro Windows, iOS nebo Android, jak je popsáno výše v této části. Můžete ho také využívat v aplikaci, kterou vytváříte pomocí Xamarinu, Javy nebo libovolného jazyka, který umožňuje volat funkce v nespravované knihovně DLL.
 
- Při psaní kódu v těchto knihovnách můžete pomocí technologie IntelliSense prozkoumat nativní rozhraní API platforem Android a Windows. Tyto projekty knihovny jsou plně integrované s ladicím programem sady Visual Studio, takže můžete nastavit zarážky, krokovat kód a vyhledat a opravit problémy pomocí všech pokročilých funkcí ladicího programu.
+ Při psaní kódu v těchto knihovnách můžete pomocí Technologie IntelliSense prozkoumat nativní rozhraní API platforem Android a Windows. Tyto projekty knihoven jsou plně integrované s ladicím programem Visual Studio, takže můžete nastavit zarážky, krokovat kódem a vyhledat a opravit problémy pomocí všech pokročilých funkcí ladicího programu.
 
 |**Další informace**|
 |--------------------|
-|[Stažení sady Visual Studio](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
+|[Stažení Visual Studio](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
 |[Instalace pro vývoj multiplatformních mobilních řešení v jazyce C++](/cpp/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)|
 |[Další informace o použití C++ k cílení na více platforem](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
 |[Nainstalujte, co potřebujete, a pak vytvořte aplikaci C++ Native Activity pro Android.](/cpp/cross-platform/create-an-android-native-activity-app)|
@@ -152,9 +152,9 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 
 ## <a name="build-a-cross-platform-game-for-android-ios-and-windows-by-using-visual-studio-tools-for-unity"></a>Sestavte hru pro Android, iOS a Windows s využitím nástrojů Visual Studio Tools for Unity pro různé platformy.
 
- Visual Studio Tools for Unity je bezplatné rozšíření pro Visual Studio, které integruje výkonné nástroje pro úpravy, produktivitu a ladění v rámci sady Visual Studio s *Unity* , oblíbenými nástroji pro hraní a grafiku pro různé platformy a vývojovým prostředím pro moderní aplikace, které cílí na Windows, iOS, Android a jiné platformy, včetně webu.
+ Visual Studio Tools for Unity je bezplatné rozšíření pro Visual Studio, které integruje výkonné nástroje pro úpravy, produktivitu a ladění v rámci sady Visual Studio s *Unity*, oblíbenými nástroji pro hraní a grafiku pro různé platformy a vývojovým prostředím pro moderní aplikace, které cílí na Windows, iOS, Android a jiné platformy, včetně webu.
 
- ![Vývojové prostředí VSTU](../cross-platform/media/vstu_overview.png "Přehled Visual Studio Tools for Unity")
+ ![Vývojové prostředí VSTU](../cross-platform/media/vstu_overview.png "Visual Studio Tools for Unity přehledu")
 
  Pomocí Visual Studio Tools for Unity (VSTU) můžete použít Visual Studio k psaní herních a editorových skriptů v jazyce C# a pak pomocí výkonného ladicího programu vyhledat a opravit chyby. Nejnovější vydaná verze VSTU přináší podporu pro Unity 2018,1 a zahrnuje barvy syntaxe pro jazyk shaderu ShaderLab Unity, lepší synchronizaci s Unity, bohatou ladění a vylepšenou generaci kódu pro Průvodce MonoBehavior. VSTU také přináší vaše soubory projektu Unity, zprávy konzoly a možnost začít hru do sady Visual Studio, abyste mohli při psaní kódu strávit méně času přepínání do a z editoru Unity.
 

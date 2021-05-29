@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e3ef6dbfc58c67ce8e4dd7ff26634e4dbce2218
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fe46ea835a119978fd3decd26949db3d59944e5e
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089339"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687609"
 ---
 # <a name="create-a-settings-category"></a>Vytvoření kategorie nastavení
 
@@ -45,12 +45,12 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
     |107|Moje nastavení|
     |108|OptionInteger a OptionFloat|
 
-     Tím se vytvoří zdroje s názvem kategorie Moje kategorie, objekt "Moje nastavení" a kategorie popis "OptionInteger a OptionFloat".
+     Tím se vytvoří prostředky s názvem kategorie "Moje kategorie", objekt "Moje nastavení" a popis kategorie "OptionInteger a OptionFloat".
 
     > [!NOTE]
-    > Z těchto tří typů se v průvodci **importem a exportem nastavení** nezobrazí pouze název kategorie.
+    > Z těchto tří se v průvodci importem a exportem nastavení nezobrazí pouze název **kategorie.**
 
-3. V *MyToolsOptionsPackage. cs* přidejte `float` vlastnost s názvem `OptionFloat` do `OptionPageGrid` třídy, jak je znázorněno v následujícím příkladu.
+3. V *souboru MyToolsOptionsPackage.cs* přidejte do třídy vlastnost `float` s názvem , jak je `OptionFloat` `OptionPageGrid` znázorněno v následujícím příkladu.
 
     ```csharp
     public class OptionPageGrid : DialogPage
@@ -78,29 +78,29 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
     ```
 
     > [!NOTE]
-    > `OptionPageGrid`Kategorie s názvem moje kategorie se teď skládá ze dvou vlastností `OptionInteger` a `OptionFloat` .
+    > Kategorie `OptionPageGrid` s názvem "Moje kategorie" se teď skládá ze dvou vlastností, `OptionInteger` a `OptionFloat` .
 
-4. Přidejte <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> do `MyToolsOptionsPackage` třídy třídu, přiřaďte jí hodnotu NázevKategorie "Moje kategorie", dejte jí název ObjectName "Moje nastavení" a nastavte isToolsOptionPage na hodnotu true. Nastavte categoryResourceID, objectNameResourceID a DescriptionResourceID na odpovídající ID prostředků řetězců, které jste vytvořili dříve.
+4. Přidejte do třídy a přidejte jí CategoryName "Moje kategorie", dejte jí <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> `MyToolsOptionsPackage` ObjectName "Moje nastavení" a nastavte isToolsOptionPage na true. Nastavte categoryResourceID, objectNameResourceID a DescriptionResourceID na odpovídající ID prostředků řetězců vytvořených dříve.
 
     ```csharp
     [ProvideProfileAttribute(typeof(OptionPageGrid),
         "My Category", "My Settings", 106, 107, isToolsOptionPage:true, DescriptionResourceID = 108)]
     ```
 
-5. Sestavte projekt a spusťte ladění. V experimentální instanci byste měli vidět, že **Stránka Moje mřížka** teď má hodnoty Integer i float.
+5. Sestavte projekt a spusťte ladění. V experimentální instanci byste měli vidět, že **stránka Moje mřížka** teď má celočíselné i plovoucí hodnoty.
 
-## <a name="examine-the-settings-file"></a>Projděte si soubor nastavení.
- V této části exportujete hodnoty kategorií vlastností do souboru nastavení. Prověřte soubor a pak hodnoty naimportujte zpátky do kategorie vlastností.
+## <a name="examine-the-settings-file"></a>Prozkoumání souboru nastavení
+ V této části exportujete hodnoty kategorií vlastností do souboru nastavení. Prozkoumáte soubor a pak hodnoty naimportujete zpět do kategorie vlastností.
 
-1. Spusťte projekt v režimu ladění stisknutím klávesy **F5**. Tím se spustí experimentální instance.
+1. Stisknutím klávesy F5 spusťte projekt v režimu **ladění.** Tím se spustí experimentální instance.
 
-2. Otevřete   >  dialogové okno **Možnosti** nástrojů.
+2. Otevřete dialogové **okno**  >  **Možnosti** nástrojů.
 
-3. Ve stromovém zobrazení v levém podokně rozbalte **Moje kategorie** a potom klikněte na **stránku mřížka**.
+3. Ve stromovém zobrazení v levém podokně rozbalte **Moje** kategorie a pak klikněte na **My Grid Page (Moje stránka mřížky).**
 
-4. Změňte hodnotu **OptionFloat** na 3,1416 a **OptionInteger** na 12. Klikněte na **OK**.
+4. Změňte hodnotu **OptionFloat** na 3.1416 a **OptionInteger** na 12. Klikněte na **OK**.
 
-5. V nabídce **nástroje** klikněte na položku **Nastavení importu a exportu**.
+5. V nabídce **Nástroje** klikněte na **Importovat a exportovat nastavení**.
 
      Zobrazí se průvodce **importem a exportem nastavení** .
 
@@ -118,7 +118,9 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
 9. Pojmenujte nový soubor nastavení *MySettings. vssettings* a uložte ho do příslušného adresáře. Klikněte na **Finish** (Dokončit).
 
-     Stránka **exportovat kompletní** hlásí, že vaše nastavení bylo úspěšně exportováno.
+   `.vssettings`Soubor je soubor nastavení aplikace Visual Studio. Schéma souboru je otevřené. Nejčastěji se schéma řídí strukturou XML, kde každá kategorie je značka, která může obsahovat Tagy podkategorie. Tyto značky podkategorie můžou obsahovat značky hodnot vlastností. I když většina balíčků používá společnou strukturu, jakýkoli balíček v aplikaci Visual Studio může přispívat libovolný soubor XML do souboru se schématem, které zvolí.
+
+   Stránka **exportovat kompletní** hlásí, že vaše nastavení bylo úspěšně exportováno.
 
 10. V nabídce **soubor** přejděte na příkaz **otevřít** a poté klikněte na možnost **soubor**. Vyhledejte *MySettings. vssettings* a otevřete ho.
 
@@ -139,20 +141,20 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
 11. Zavřete soubor nastavení beze změny.
 
-12. V nabídce **nástroje** klikněte na **Možnosti**, rozbalte **Moje kategorie**, klikněte na **Stránka mřížka** a pak změňte hodnotu **OptionFloat** na 1,0 a **OptionInteger** na 1. Klikněte na **OK**.
+12. V nabídce **Nástroje** klikněte na **Možnosti,** rozbalte **Moje** kategorie, klikněte na **Moje** stránka mřížky a pak změňte hodnotu **OptionFloat** na 1.0 a **OptionInteger na** 1. Klikněte na **OK**.
 
-13. V nabídce **nástroje** klikněte na položku **Nastavení importu a exportu**, vyberte možnost **Importovat vybrané nastavení prostředí** a pak klikněte na tlačítko **Další**.
+13. V nabídce **Nástroje** klikněte na **Importovat a exportovat nastavení,** vyberte Importovat vybrané nastavení **prostředí** a potom klikněte na **Další.**
 
-     Zobrazí se stránka **Uložit aktuální nastavení** .
+     Zobrazí **se stránka Uložit aktuální** nastavení.
 
-14. Vyberte **Ne, jenom importovat nové nastavení** a pak klikněte na **Další**.
+14. Vyberte **Ne, stačí naimportovat nová nastavení** a pak **kliknout na Další.**
 
-     Zobrazí se stránka **zvolit kolekci nastavení k importu** .
+     Zobrazí **se stránka Choose a Collection of Settings to Import (Zvolte kolekci** nastavení, která se má importovat).
 
-15. V uzlu **Moje nastavení** stromového zobrazení vyberte soubor *MySettings. vssettings* . Pokud se soubor ve stromovém zobrazení nezobrazí, klikněte na tlačítko **Procházet** a vyhledejte ho. Klikněte na **Next** (Další).
+15. V uzlu Moje nastavení ve  stromovém zobrazení vyberte soubor *MySettings.vssettings.* Pokud se soubor ve stromovém zobrazení nezobrazí, klikněte na **Procházet a** vyhledejte ho. Klikněte na **Next** (Další).
 
-     Zobrazí se dialogové okno **zvolit nastavení pro import** .
+     Zobrazí **se dialogové okno Zvolit nastavení** k importu.
 
-16. Ujistěte se, že je vybráno **Nastavení moje nastavení** , a pak klikněte na **Dokončit**. Po zobrazení stránky **Import dokončena** klikněte na tlačítko **Zavřít**.
+16. Ujistěte se, **že je vybraná** možnost Moje nastavení, a pak klikněte na **Dokončit.** Po zobrazení **stránky Import complete (Import dokončeno)** klikněte na Close **(Zavřít).**
 
-17. V nabídce **nástroje** klikněte na **Možnosti**, rozbalte **Moje kategorie**, klikněte na **Stránka mřížka** a ověřte, zda byly obnoveny hodnoty kategorií vlastností.
+17. V nabídce **Nástroje** **klikněte na** Možnosti, rozbalte **Moje** kategorie, klikněte na Moje stránka **mřížky** a ověřte, že byly obnoveny hodnoty kategorií vlastností.
