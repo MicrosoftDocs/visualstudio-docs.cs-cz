@@ -15,16 +15,16 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c7a5b8bacaa7d78be0c7b88bba8e20b416a3c076
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e523738ff23b40c80b5df21d90b582d94c59087f
+ms.sourcegitcommit: a8031c1387d2090129ed33e063744f9f31653dcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957995"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "110724535"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
-Obnoví výchozí nastavení sady Visual Studio a automaticky spustí integrované vývojové prostředí (IDE) sady Visual Studio. Tento přepínač volitelně obnoví nastavení na zadaný soubor nastavení.
+Obnoví výchozí nastavení sady Visual Studio a automaticky spustí integrované vývojové prostředí (IDE) sady Visual Studio. Tento přepínač volitelně obnoví nastavení na zadaný soubor nastavení ( `*.vssettings` ).
 
 Výchozí nastavení pochází z profilu, který byl vybrán při prvním spuštění aplikace Visual Studio.
 
@@ -41,7 +41,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 - *SettingsFile*
 
-  Nepovinný parametr. Úplná cesta a název souboru s nastavením, které se mají použít pro sadu Visual Studio.
+  Nepovinný parametr. Úplná cesta a název `.vssettings` souboru, který se má použít pro sadu Visual Studio.
 
 - *DefaultCollectionSpecifier*
 
@@ -54,12 +54,13 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
   | **Visual Basic** | `VB` |
   | **Vizuál C #** | `CSharp` |
   | **Visual C++** | `VC` |
-  | **Vývoj pro web** | `Web` |
+  | **Vývoj webů** | `Web` |
   | **Vývoj pro web (jenom kód)** | `WebCode` |
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud není zadán žádný *SettingsFile* , IDE se otevře s existujícím nastavením.
+Pokud není zadán žádný *SettingsFile* , IDE se otevře s existujícím nastavením. 
+
 
 ## <a name="example"></a>Příklad
 
@@ -67,10 +68,14 @@ V prvním příkladu se aplikuje nastavení uložená v souboru `MySettings.vsse
 
 Druhý příklad obnoví výchozí profil Visual C#.
 
-```shell
-devenv /resetsettings "%USERPROFILE%\MySettings.vssettings"
+Třetí příklad také ukončí aplikaci Visual Studio po použití nastavení. Můžete připojit `/Command "File.Exit"` .
 
-devenv /resetsettings CSharp
+```shell
+devenv /ResetSettings "%USERPROFILE%\MySettings.vssettings"
+
+devenv /ResetSettings CSharp
+
+devenv /NoSplash /ResetSettings General /Command Exit 
 ```
 
 ## <a name="see-also"></a>Viz také

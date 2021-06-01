@@ -1,6 +1,6 @@
 ---
 title: Automatizace instalace pomocí souboru odpovědí
-description: Naučte se vytvořit soubor odezvy JSON, který vám pomůže automatizovat instalaci sady Visual Studio.
+description: Zjistěte, jak vytvořit soubor odpovědí JSON, který vám pomůže automatizovat instalaci Visual Studio json.
 ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -9,37 +9,37 @@ helpviewer_keywords:
 - automate
 - installation
 - command-line
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d3fa063d82a9d0ba9f26e326961b1345b47151b8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7554ac46d7c4171cfb71166c51689ff4ae95c0d5
+ms.sourcegitcommit: a8031c1387d2090129ed33e063744f9f31653dcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868725"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "110724548"
 ---
-# <a name="how-to-define-settings-in-a-response-file"></a>Definování nastavení v souboru odpovědí
+# <a name="automate-installs-by-using-settings-in-a-response-file"></a>Automatizace instalací pomocí nastavení v souboru odpovědí
 
-Správci, kteří nasazují Visual Studio, mohou určit soubor odpovědí pomocí `--in` parametru, jak je uvedeno v následujícím příkladu:
+Správci, kteří Visual Studio, mohou zadat soubor odpovědi pomocí `--in` parametru jako v následujícím příkladu:
 
 ```cmd
 vs_enterprise.exe --in customInstall.json
 ```
 
-Soubory odpovědí jsou soubory [JSON](http://json-schema.org/) , jejichž obsah zrcadlí argumenty příkazového řádku.  Obecně platí, že pokud parametr příkazového řádku nepřijímá žádné argumenty (například, `--quiet` , `--passive` atd.), musí mít hodnota v souboru odpovědí hodnotu true nebo false.  Pokud převezme argument (například `--installPath <dir>` ), musí být hodnota v souboru odpovědí řetězec.  Pokud převezme argument a může se zobrazit na příkazovém řádku více než jednou (například `--add <id>` ), mělo by to být pole řetězců.
+Soubory odpovědí jsou [soubory JSON,](http://json-schema.org/) jejichž obsah zrcadlí argumenty příkazového řádku.  Obecně platí, že pokud parametr příkazového řádku nemá žádné argumenty (například , atd.), hodnota v souboru odpovědí by měla `--quiet` `--passive` být true/false.  Pokud přebírá argument (například ), hodnota v souboru odpovědi `--installPath <dir>` by měla být řetězec.  Pokud přebírá argument a může se zobrazit na příkazovém řádku více než jednou (například ), mělo by `--add <id>` to být pole řetězců.
 
-Parametry, které jsou zadány v nastavení přepisu příkazového řádku ze souboru odpovědí, s výjimkou případů, kdy parametry přebírají více vstupů (například `--add` ). Pokud máte více vstupů, jsou vstupy zadané v příkazovém řádku sloučeny s nastavením ze souboru odpovědí.
+Parametry zadané na příkazovém řádku přepíší nastavení ze souboru odpovědí, s výjimkou případů, kdy parametry přechytá více vstupů (například `--add` ). Pokud máte více vstupů, vstupy zadané na příkazovém řádku se sloučí s nastavením ze souboru odpovědí.
 
 ## <a name="setting-a-default-configuration-for-visual-studio"></a>Nastavení výchozí konfigurace pro Visual Studio
 
-Pokud jste vytvořili mezipaměť rozložení sítě s nástrojem `--layout` , `response.json` vytvoří se v rozložení počáteční soubor. Pokud vytvoříte částečné rozložení, bude tento soubor odpovědí obsahovat úlohy a jazyky, které byly zahrnuty v rozložení.  Spuštění instalačního programu z tohoto rozložení automaticky používá toto response.jsv souboru, které vybere úlohy a součásti zahrnuté v rozložení.  Uživatelé si stále můžou vybrat libovolné úlohy v uživatelském rozhraní instalace před instalací sady Visual Studio.
+Pokud jste vytvořili mezipaměť rozložení sítě pomocí , vytvoří se v `--layout` `response.json` rozložení počáteční soubor. Pokud vytvoříte částečné rozložení, bude tento soubor odpovědí obsahovat úlohy a jazyky, které byly zahrnuty v rozložení.  Při spuštění instalačního programu z tohoto rozložení se response.jsna soubor, který vybere úlohy a komponenty zahrnuté v rozložení.  Uživatelé mohou stále vybrat nebo zrušit výběr jakýchkoli úloh v uživatelském rozhraní instalace před instalací Visual Studio.
 
-Správci, kteří vytvářejí rozložení, mohou upravit `response.json` soubor v rozložení, aby bylo možné řídit výchozí nastavení, která se uživatelům zobrazí při instalaci sady Visual Studio z rozložení.  Pokud například chce správce, aby ve výchozím nastavení nastavil konkrétní úlohy a komponenty, může je nakonfigurovat `response.json` tak, aby je přidal.
+Správci, kteří vytvářejí rozložení, můžou upravit soubor v rozložení tak, aby mohli řídit výchozí nastavení, která se uživatelům zobrazí při `response.json` instalaci Visual Studio z rozložení.  Pokud například správce chce ve výchozím nastavení nainstalovat konkrétní úlohy a komponenty, může soubor nakonfigurovat tak, aby `response.json` je přidá.
 
 Když je instalační program sady Visual Studio spuštěn ze složky rozložení, _automaticky_ používá soubor odpovědí ve složce rozložení.  Nemusíte používat `--in` možnost.
 
