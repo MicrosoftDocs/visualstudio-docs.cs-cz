@@ -2,22 +2,22 @@
 title: C# IntelliSense
 description: Seznamte se s některými funkcemi technologie IntelliSense, které lze použít při kódování projektu C#.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 06/01/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - C#, IntelliSense
 - IntelliSense [C#]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7e67c3a00a427a9f3cd6167af494484a02cc3f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3156b1236a130478d83fe82c8fa462a1144a8e6a
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862060"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111351952"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -101,6 +101,10 @@ Chcete-li zahájit operaci **přidat pomocí** , umístěte kurzor na odkaz na t
 ![Přidat rozšířený obrázek pomocí a rychlé akce](../ide/media/addusing-quickaction.png)
 
 Klikněte na ikonu žárovky chyba a pak zvolte **použít System.Xml;** k automatickému přidání direktivy using.
+
+### <a name="add-missing-using-directives-on-paste"></a>Přidání chybějících direktiv using při vložení
+
+Technologie IntelliSense může do kódu automaticky přidat chybějící `using` direktivy při vložení typu do souboru kódu. Tato funkce šetří čas tím, že automatizuje úlohu přidávání chybějících direktiv using při vkládání typu do souboru. Tuto funkci povolte v nabídce **nástroje**  >  **Možnosti**  >  **textový editor**  >  **C#** nebo **základní**  >  **Upřesnit** a vyberte **Přidat chybějící direktivy using při vložení**.
 
 ### <a name="remove-and-sort-usings"></a>Odebrat a seřadit direktivy using
 

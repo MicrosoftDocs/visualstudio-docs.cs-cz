@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5160608379549abbd469bd6cf1c17e4357eac15
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ffef522cb85816c36bee1cb623810fb254d1ddec
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060754"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111351939"
 ---
 # <a name="regpkg-utility"></a>Nástroj RegPkg
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "105060754"
 
  Nástroj RegPkg.exe registruje VSPackage pomocí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a připraví ho pro nasazení. Tento nástroj se používá na pozadí během vývoje VSPackage. Spouští se jako součást procesu sestavení, takže můžete sestavit a spustit VSPackage v experimentálním podregistru.
 
- RegPkg může generovat skripty systémového registru v několika formátech. Tyto skripty můžete začlenit do projektů nasazení, jako jsou projekty. msi nebo Instalační služba systému Windows soubory XML sady nástrojů.
+ RegPkg může generovat skripty systémového registru v několika formátech. Tyto skripty můžete začlenit do projektů nasazení, jako jsou .msi projekty nebo Instalační služba systému Windows XML sady nástrojů XML.
 
  RegPkg.exe se obvykle nachází v \<*Visual Studio SDK installation path*>\VisualStudioIntegration\Tools\Bin\RegPkg.exe. RegPkg se řídí touto syntaxí:
 
@@ -34,9 +34,7 @@ ms.locfileid: "105060754"
 RegPkg [/root:<root>] [/regfile:<regfile>] [/rgsfile:<rgsfile> [/rgm]] [/vrgfile:<vrgfile>] [/codebase | /assembly] [/unregister] AssemblyPath
 ```
 
- /root: root provádí registraci pod zadaným
-
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zobrazuje.
+ /root: kořen provádí registraci v rámci zadaného [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kořene.
 
  /regfile: FileName vytvoří soubor. reg místo aktualizace registru.  Nelze použít s/vrgfile nebo/rgsfile nebo/wixfile.
 
