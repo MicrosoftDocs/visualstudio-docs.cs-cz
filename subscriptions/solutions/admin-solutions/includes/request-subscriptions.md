@@ -8,11 +8,11 @@ ms.assetid: 2004856f-7f54-411f-9bff-2f3472c8fff2
 ms.topic: conceptual
 description: Přečtěte si, jak požádat o předplatné sady Visual Studio na pracovišti.
 ms.openlocfilehash: 8fc393782ca8e32cdbdc9f2f1b3a1716633d455c
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99541080"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448363"
 ---
 ## <a name="how-to-request-a-visual-studio-subscription-from-your-workschool"></a>Jak požádat o předplatné sady Visual Studio z vaší práce nebo školy
 Mnoho organizací, včetně pracovišť a škol, si koupí předplatné sady Visual Studio prostřednictvím různých licenčních programů. Tato předplatná se spravují správci předplatných (Správci), kteří můžou přiřazovat odběry, navázat předvolby a povolit nebo zakázat určité funkce.  

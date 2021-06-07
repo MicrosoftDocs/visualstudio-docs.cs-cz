@@ -11,11 +11,11 @@ tags: sign-in
 subscription.type: vl, cloud,
 sap.id: ''
 ms.openlocfilehash: a77e01c102c99e5c92aa00107fabb3ee98b6e50d
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916245"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448362"
 ---
 ## <a name="how-to-change-sign-in-emails-for-admins-and-super-admins"></a>Postup změny přihlašovacích e-mailů pro správce a superuživatele
 

@@ -1,29 +1,29 @@
 ---
 title: Použití ukázkových dat v době návrhu s Návrhář XAML v Visual Studio
 description: Naučte se používat ukázková data v době návrhu v jazyce XAML.
-ms.date: 05/28/2021
+ms.date: 06/01/2021
 ms.topic: conceptual
 author: alihamie
 ms.author: tglee
 manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: a987435d454771bdecf078e78af089405718d261
-ms.sourcegitcommit: 5366c6bca3fb217a2fbf847998387578f51ec45c
+ms.openlocfilehash: 8303e1150db7c12c404e8f67bce52418fbd05b9d
+ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110748071"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111433789"
 ---
 # <a name="use-design-time-sample-data-with-the-xaml-designer-in-visual-studio"></a>Použití ukázkových dat v době návrhu s Návrhář XAML v Visual Studio
 
-Některé ovládací prvky, jako je ListView, ListBox nebo DataGrid, jsou bez dat těžko vizualizované. V tomto dokumentu se budeme seznamovat s novým přístupem, který vývojářům pracujícím s projekty **WPF .NET Core** nebo **projekty WPF .NET Framework** umožňuje pomocí nového návrháře povolit ukázková data v těchto ovládacích prvcích. 
+Některé ovládací prvky, jako je ListView, ListBox nebo DataGrid, jsou bez dat těžko vizualizované. V tomto dokumentu se budeme seznamovat s novým přístupem, který vývojářům pracujícím na projektech **WPF .NET Core** nebo **WPF .NET Framework** umožňuje pomocí nového návrháře povolit ukázková data v těchto ovládacích prvcích. 
 
 ## <a name="sample-data-feature-basics"></a>Základní informace o funkcích ukázkových dat
 
 Ukázková data jsou jenom pro vizualizaci v době návrhu, což znamená, že se zobrazí pouze v návrháři XAML, ne v běžící aplikaci. Proto se použije na verzi návrhu vlastnosti ItemsSource `d:ItemsSource` . Ukázková data potřebují, aby obor názvů v době návrhu fungoval. Pokud chcete začít, přidejte do hlavičky dokumentu XAML následující řádky kódu, pokud ještě nejsou k dispozici:
 
 > [!NOTE]
-> Další [informace o vlastnostech doby](/xaml/xaml-tools/xaml/xaml-designtime-data.md) návrhu v jazyce XAML najdete ve vlastnostech návrhu XAML.
+> Další [informace o vlastnostech doby](../xaml-tools/xaml-designtime-data.md) návrhu v jazyce XAML najdete ve vlastnostech návrhu XAML.
 
 ```xml
 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -74,16 +74,16 @@ Pokud chcete v návrháři snadno povolit nebo zakázat ukázková data pro ovl�
 
 ## <a name="sample-data-with-ivalueconverters"></a>Ukázková data s IValueConverters 
 
-Funkce Ukázkových dat převaděče plně nepodporuje. Můžete ho ale zpracuje jedním nebo oběma z následujících způsobů:
+Funkce Ukázková data převaděče plně nepodporuje. Můžete ho ale zpracuje jedním nebo oběma z následujících způsobů:
 - Ujistěte se, `Convert` že vaše funkce dokáže zpracovat scénář, ve kterém už je hodnota targetType.
 
 - Implementujte `ConvertBack` funkci , která převede vaši hodnotu zpět na původní typ. 
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
-Pokud ukázková data nic nezobrazují nebo se vám nepodaří zobrazit správný typ, můžete zkusit aktualizovat návrháře nebo zavřít a znovu otevřít stránku.
+Pokud se v ukázkových datech nic nezobrazuje nebo se vám nepodaří zobrazit správný typ, můžete zkusit aktualizovat návrháře nebo stránku zavřít a znovu otevřít.
 
-Pokud nastane problém, který není uvedený v této části, nebo ho nemůžete vyřešit aktualizací stránky, dejte nám vědět pomocí nástroje [pro](../ide/how-to-report-a-problem-with-visual-studio.md) nahlášení problému.
+Pokud nastane problém, který není v této části uvedený, nebo ho nejde vyřešit aktualizací stránky, dejte nám vědět pomocí nástroje [pro](../ide/how-to-report-a-problem-with-visual-studio.md) nahlášení problému.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -93,7 +93,7 @@ Pokud nastane problém, který není uvedený v této části, nebo ho nemůžet
 
 ## <a name="see-also"></a>Viz také
 
-- [Vlastnosti návrhu XAML](/xaml/xaml-tools/xaml/xaml-designtime-data)
+- [Vlastnosti návrhu XAML](../xaml-tools/xaml-designtime-data.md)
 - [XAML v aplikacích WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [XAML v aplikacích pro UPW](/windows/uwp/xaml-platform/xaml-overview)
 - [XAML v aplikacích Xamarin.Forms](/xamarin/xamarin-forms/xaml/)

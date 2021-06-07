@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 966b08a912a7bab59998daf39590a6fd46920eb7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 96e5689c0108231be26ddf7d598227137f7bc1f7
+ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969526"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111433776"
 ---
 # <a name="compile-typescript-code-nodejs"></a>Kompilovat kód TypeScriptu (Node.js)
 
@@ -109,13 +109,13 @@ U ASP.NET Core projektů doporučujeme místo toho použít [balíček NuGet](..
 
    I když se aplikace při spuštění automaticky vytvoří, chceme se podívat na něco, co se děje během procesu sestavení:
 
-   Pokud jste vygenerovali zdrojová mapování, otevřete složku zadanou v možnosti *outDir* a najděte vygenerované \* soubory. js spolu se generovanými \* soubory JS. map.
+   Pokud jste vygenerovali zdrojová mapování, otevřete složku zadanou v možnosti *outDir* a najděte vygenerované \*.js soubory spolu se generovanými \* soubory JS. map.
 
    Zdrojové soubory mapování jsou vyžadovány pro [ladění](../javascript/debug-nodejs.md).
 
 ### <a name="run-the-application"></a>Spuštění aplikace
 
-Pokyny ke spuštění aplikace po jejím zkompilování najdete v tématu [Vytvoření první aplikace Node.js](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json#run-the-application).
+Pokyny ke spuštění aplikace po jejím zkompilování najdete v tématu [Vytvoření první aplikace Node.js](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json#run-the-app).
 
 ## <a name="automate-build-tasks"></a>Automatizace úloh sestavení
 

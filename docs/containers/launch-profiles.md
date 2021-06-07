@@ -9,22 +9,22 @@ ms.topic: how-to
 ms.date: 05/10/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 003205525f883b010f897e6e47d4cab92a31b8a1
-ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
+ms.openlocfilehash: e740ea3b7950c14bf11522c4e438a105b09eb7f6
+ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110018503"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111433698"
 ---
-# <a name="manage-launch-profiles-for-docker-compose-preview"></a>Správa spouštěcích profilů pro Docker Compose (Preview)
+# <a name="manage-launch-profiles-for-docker-compose"></a>Správa spouštěcích profilů pro Docker Compose
 
-Pokud máte aplikaci, která se skládá z více služeb a používá Docker Compose, můžete nakonfigurovat, které služby se spouští a ladí, vytvořením nebo úpravou existujícího spouštěcího profilu v nastavení Docker Compose spuštění. Spouštěcí profily umožňují dynamicky spouštět jenom služby, které jsou pro váš aktuální scénář důležité. Můžete vytvořit a vybrat ze spouštěcích profilů, abyste si přizpůsobíte možnosti ladění a nastavili konkrétní akce spuštění, jako je `Browser Launch URL` . Budete mít také možnost zvolit každou službu samostatně nebo výběrem profilu Docker Compose, který se také podívá na váš soubor Compose a určí skupinu služeb, které se mají spustit.
+Pokud máte aplikaci, která se skládá z více služeb a používá Docker Compose, můžete nakonfigurovat, které služby se spouští a ladí, vytvořením nebo úpravou existujícího spouštěcího profilu v nastavení Docker Compose spuštění. Spouštěcí profily umožňují dynamicky spouštět jenom služby, které jsou pro váš aktuální scénář důležité. Můžete vytvořit a vybrat ze spouštěcích profilů, abyste přizpůsobíte prostředí ladění a nastavili konkrétní akce spuštění, jako je `Browser Launch URL` . Budete mít také možnost zvolit každou službu samostatně nebo výběrem profilu Docker Compose, který se také podívá na váš soubor Compose a určí skupinu služeb, které se mají spustit.
 
-Informace o profilech Docker Compose najdete v tématu [Použití profilů s psaním.](https://docs.docker.com/compose/profiles/)
+Informace o profilech Docker Compose naleznete v tématu [Using profiles with Compose](https://docs.docker.com/compose/profiles/).
  
 ## <a name="prerequisites"></a>Požadavky
 
-- [Visual Studio 2019 verze 16.10 Preview](https://visualstudio.microsoft.com/vs/preview/) nebo novější
+- [Visual Studio 2019 verze 16.10](https://visualstudio.microsoft.com/vs/) nebo novější
 - Řešení s [orchestrací kontejnerů s Docker Compose](tutorial-multicontainer.md)
 
 ## <a name="manage-launch-settings"></a>Správa nastavení spuštění
@@ -75,17 +75,17 @@ Existuje několik možností, jak otevřít dialogové okno Docker Compose spuš
 
 - Pomocí Snadné spuštění (**Ctrl** Q ) a vyhledejte Docker Compose výše uvedený + příkaz. 
 
-V následujícím příkladu je vybrán profil Psaní, který vyfiltruje seznam Služby jenom na tři z pěti součástí `web1` tohoto profilu: 
+V následujícím příkladu je vybrán profil Psaní, který vyfiltruje seznam Služeb pouze na tři z pěti součástí `web1` tohoto profilu: 
 
 ![Snímek obrazovky s dialogem nastavení spuštění](media/launch-settings/launch-settings-create-profile.png)
 
-Část Profiles Docker Compose se zobrazí pouze v případě, že jsou v souborech *Docker-Compose. yml* definovány profily.
+Část Docker Compose profiles se zobrazí pouze v případě, že jsou v souborech *docker-compose.yml* definované profily.
 
-Další příklad ukazuje, jak vybrat jednotlivé služby místo filtrování do služeb ve vytváření profilu. Tady ukážeme, jak by dialogové okno vypadalo, pokud jste vytvořili nový profil spuštění s názvem `test2` , který spouští pouze dvě z pěti služeb `webapplication1` s laděním a `webapplication2` bez ladění.  Tento spouštěcí profil také spustí prohlížeč při spuštění aplikace a otevře se na domovské stránce `webapplication1` . 
+Následující příklad ukazuje výběr mezi jednotlivými službami místo filtrování na služby v profilu Psaní. Tady si ukážeme, jak by dialogové okno vypadalo, pokud jste vytvořili nový profil spuštění s názvem , který spustí pouze dvě z pěti služeb s laděním a `test2` `webapplication1` bez `webapplication2` ladění.  Tento profil spuštění také spustí prohlížeč při spuštění aplikace a otevře ho na domovské stránce `webapplication1` . 
 
-![Snímek obrazovky dialogového okna pro nastavení spuštění s některými službami byl nevybraný.](media/launch-settings/launch-settings-selected.png)
+![Snímek obrazovky s dialogem nastavení spuštění a zrušenou výběrem některých služeb](media/launch-settings/launch-settings-selected.png)
 
-A tyto informace budou uloženy v *launchSettings.js* , jak je uvedeno níže.
+Tyto informace se uloží v *launchSettings.js,* jak je znázorněno níže.
 
 ```json
 {
@@ -108,18 +108,18 @@ A tyto informace budou uloženy v *launchSettings.js* , jak je uvedeno níže.
 }
 ```
 
-## <a name="create-a-launch-profile-that-uses-a-docker-compose-profile"></a>Vytvořit profil spuštění, který používá profil Docker Compose
+## <a name="create-a-launch-profile-that-uses-a-docker-compose-profile"></a>Vytvoření profilu spuštění, který používá profil Docker Compose profilu
 
-Můžete také dále přizpůsobit chování při spuštění tím, že vytvoříte profily spuštění sady Visual Studio, které využívají profily pro vytváření.
+Chování při spouštění můžete také dále přizpůsobit vytvořením Visual Studio spouštěcích profilů, které používají profily psaní.
 
-Pokud chcete vytvořit jiný profil, který využívá profil pro vytváření, vyberte **použít Docker Compose profily** a zvolte `web1` . Teď profil spuštění zahrnuje tři služby – `webapplication1` (které patří do profilů i `web` `web1` vytváření) `external1` a `external2` . Ve výchozím nastavení služby bez zdrojového kódu, jako jsou `external1` a,  `external2` mají výchozí akci **Spustit bez ladění**. Aplikace .NET se zdrojovým kódem budou **spouštět ladění** jako výchozí.
+Pokud chcete vytvořit další profil, který profil Psaní používá, vyberte Použít **Docker Compose profilů a** zvolte `web1` . Profil spuštění teď obsahuje tři služby (které patří do profilů i `webapplication1` `web` `web1` Compose) a `external1` `external2` . Ve výchozím nastavení mají služby bez zdrojového kódu, například a, výchozí `external1` akci Spustit bez  `external2` **ladění**. Aplikace .NET se zdrojovým kódem se ve výchozím nastavení spustí **ladění.**
 
 > [!IMPORTANT]
-> Pokud služba neurčí profil pro vytváření, bude se ve všech profilech vytváření implicitně zahrnovat.
+> Pokud služba nezadá profil Psaní, zahrne se implicitně do všech profilů Psaní.
 
 ![Snímek obrazovky s dialogem nastavení spuštění s jiným vytvořeným profilem](media/launch-settings/launch-settings-create-profile.png)
 
-Tyto informace budou uloženy, jak je znázorněno v následujícím kódu. Konfigurace služby a její výchozí akce nebudou uloženy, pokud nezměníte výchozí akci.
+Tyto informace se uloží, jak je znázorněno v následujícím kódu. Konfigurace služby a její výchozí akce se neuloží, pokud nezměníte výchozí akci.
 
 ```json
 {
@@ -137,7 +137,7 @@ Tyto informace budou uloženy, jak je znázorněno v následujícím kódu. Konf
 }
 ```
 
-Akci WebApplication1 můžete také změnit tak, aby se **spouštěla bez ladění**. Nastavení v *launchSettings.js* a pak vypadají jako následující kód:
+Akci webapplication1 můžete také změnit na Spustit **bez ladění.** Nastavení v *launchSettings.jspak* vypadají jako následující kód:
 
 ```json
 {
@@ -160,26 +160,26 @@ Akci WebApplication1 můžete také změnit tak, aby se **spouštěla bez laděn
 
 ## <a name="properties"></a>Vlastnosti
 
-Tady je popis každé vlastnosti v *launchSettings.js*:
+Tady je popis jednotlivých vlastností vlaunchSettings.js *na*:
 
 |Vlastnost| Popis|
 | - | - |
-|commandName| Název příkazu. Výchozí hodnota je DockerCompose.|
-|commandVersion (verze příkazu)| Číslo verze použité ke správě schématu profilu spuštění DockerCompose.|
-|composeProfile| Nadřazená vlastnost, která definuje definici profilu spuštění. Podřízené vlastnosti jsou a . `includes``serviceActions`|
-|composeProfile – zahrnuje | Seznam názvů profilů Compose, které tvoří spouštěcí profil|
+|Commandname| Název příkazu. Výchozí hodnota je DockerCompose.|
+|commandVersion (verze příkazu)| Číslo verze použité ke správě schématu spouštěcího profilu DockerCompose.|
+|composeProfile| Nadřazená vlastnost, která definuje definici spouštěcího profilu. Podřízené vlastnosti jsou a . `includes``serviceActions`|
+|composeProfile – zahrnuje | Seznam názvů profilů Compose, které tvoří profil spuštění.|
 |composeProfile – serviceActions | Vypíše vybrané profily, služby a akci spuštění každé služby.|
 |akce služby | Vypíše vybrané služby a akci spuštění.|
 |composeLaunchServiceName| Pokud jsou zadané DockerLaunchAction nebo DockerLaunchBrowser, dockerServiceName je název služby, která se má spustit. Pomocí této vlastnosti můžete určit, která služba Docker Compose se spustí.|
 |composeLaunchAction| Určuje akci spuštění, která se má provést na **F5** nebo **Ctrl** + **F5.** Povolené hodnoty jsou None, LaunchBrowser a LaunchWCFTestClient.|
-|composeLaunchUrl| Adresa URL, která se má použít při spuštění prohlížeče. Platné náhradní tokeny jsou {ServiceIPAddress}, {ServicePort} a {schéma}. Příklad: {schéma}://{ServiceIPAddress}: {ServicePort}|
+|composeLaunchUrl| Adresa URL, která se má použít při spuštění prohlížeče. Platné náhradní tokeny jsou {ServiceIPAddress}, {ServicePort} a {Scheme}. Příklad: {Scheme}://{ServiceIPAddress}:{ServicePort}|
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o fungování nástrojů kontejnerů najdete v tématu [Přehled sestavení a ladění sady Visual Studio Container Tools](container-build.md).
+Další informace o tom, jak nástroje Container Tools fungují, najdete [v Visual Studio přehledu](container-build.md)sestavení a ladění nástroje Container Tools.
 
 ## <a name="see-also"></a>Viz také
 
-- [Nastavení spuštění nástrojů kontejneru sady Visual Studio](container-launch-settings.md)
+- [Visual Studio nastavení spuštění nástroje Container Tools](container-launch-settings.md)
 
 - [Docker Compose nastavení sestavení](docker-compose-properties.md)

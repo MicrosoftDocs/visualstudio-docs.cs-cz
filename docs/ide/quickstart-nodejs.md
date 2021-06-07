@@ -14,101 +14,122 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ecd65c0348ac16a2097061726e3896961ae04482
-ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
+ms.openlocfilehash: 8a36986842cdac85a8a3e6ab474024b8db552ee7
+ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105617049"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111433711"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první aplikace Node.js
+# <a name="quickstart-create-your-first-nodejs-app-with-visual-studio"></a>Rychlý Start: Vytvoření první aplikace Node.js pomocí sady Visual Studio
 
-V této 5-10 minut Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio vytvoříte jednoduchou webovou aplikaci Node.js.
+V tomto 5 až deseti minutách Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio vytvoříte jednoduchou webovou aplikaci Node.js.
 
 ## <a name="prerequisites"></a>Požadavky
 
-* Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node.js.
+Než začnete, nainstalujte sadu Visual Studio a nastavte prostředí Node.js.
 
-    ::: moniker range=">=vs-2019"
-    Pokud jste ještě nenainstalovali Visual Studio 2019, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) .
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    Pokud jste ještě nenainstalovali Visual Studio 2017, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) .
-    ::: moniker-end
+### <a name="install-visual-studio"></a>Instalace sady Visual Studio
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
+::: moniker range=">=vs-2019"
+Pokud jste ještě nenainstalovali Visual Studio 2019, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) .
+::: moniker-end
+::: moniker range="vs-2017"
+Pokud jste ještě nenainstalovali Visual Studio 2017, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) .
+::: moniker-end
 
-    ![Node.js úlohy v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
+### <a name="set-up-your-nodejs-environment"></a>Nastavení Node.jsho prostředí
 
-* Je nutné mít nainstalovaný modul runtime Node.js.
+Sada Visual Studio vám může pomáhat nastavit vaše prostředí, včetně instalace nástrojů, které jsou společné pro Node.js vývoj.
 
-    Pokud ho nemáte nainstalovaný, doporučujeme, abyste si nainstalovali verzi LTS z webu [Node.js](https://nodejs.org/en/download/) , abyste dosáhli nejlepší kompatibility s externími architekturami a knihovnami. Node.js je sestavená pro 32 bitové a 64 architektury. Nástroje Node.js v aplikaci Visual Studio, které jsou součástí úlohy Node.js, podporují obě verze. Je vyžadována pouze jedna a instalační služba Node.js podporuje pouze instalaci v jednom okamžiku.
-    
-    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nezjistí nainstalovaný modul runtime, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný modul runtime na stránce vlastnosti (po vytvoření projektu klikněte pravým tlačítkem myši na uzel projektu, vyberte možnost **vlastnosti** a nastavte **cestuNode.exe**). Můžete použít globální instalaci Node.js nebo můžete zadat cestu k místnímu interpretu v každém z vašich Node.jsch projektů. 
+1. V aplikaci Visual Studio přejdete na **nástroje**  >  **získat nástroje a funkce**.
 
-## <a name="create-a-project"></a>Vytvoření projektu
+1. V Instalační program pro Visual Studio zvolte úlohu **vývojeNode.js** a vyberte **Upravit** ke stažení a instalaci úlohy.
 
-Nejprve vytvoříte projekt webové aplikace Node.js.
+    ![Node.js úlohy v Instalační program pro Visual Studio](../ide/media/quickstart-nodejs-workload.png)
 
-1. Pokud modul runtime Node.js již není nainstalován, nainstalujte z webu [Node.js](https://nodejs.org/en/download/) verzi LTS.
+1. Nainstalujte verzi LTS [ modulu runtimeNode.js](https://nodejs.org/en/download/). Pro zajištění nejlepší kompatibility s externími architekturami a knihovnami doporučujeme verzi LTS.
 
-    Další informace najdete v části požadavky.
+    I když je Node.js sestavena pro 32 bitové a 64 architektury, instalační program Node.js podporuje pouze jednu verzi nainstalovanou v jednom okamžiku.
+
+1. Pokud Visual Studio nerozpozná nainstalovaný modul runtime (obvykle to znamená), nakonfigurujte projekt tak, aby odkazoval na instalovaný modul runtime:
+
+   1. Po [Vytvoření projektu](#create-your-app-project)klikněte pravým tlačítkem myši na uzel projektu.
+
+   1. Vyberte **vlastnosti** a nastavte **cestuNode.exe**. Můžete použít globální instalaci Node.js nebo zadat cestu k místnímu interpretu v každém z vašich Node.jsch projektů.
+
+## <a name="create-your-app-project"></a>Vytvoření projektu aplikace
+
+1. Pokud jste to ještě neudělali, nainstalujte verzi LTS [ modulu runtimeNode.js](https://nodejs.org/en/download/). Další informace najdete v části [požadavky](#prerequisites).
 
 1. Otevřete sadu Visual Studio.
 
 1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Node.js** a pak zvolte **vytvořit novou prázdnou Node.js projekt webové aplikace** (JavaScript). V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+
+    1. Stisknutím klávesy **ESC** zavřete okno Start.
+
+    1. Stisknutím **kombinace kláves CTRL + Q** otevřete vyhledávací pole a pak zadejte **Node.js**.
+
+    1. Vyberte **prázdnou Node.js webovou aplikaci (JavaScript)**. V dialogovém okně vyberte **vytvořit**.
+
     ::: moniker-end
+
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **JavaScript** a pak zvolte možnost **Node.js**. V prostředním podokně zvolte **prázdné Node.js webová aplikace** a pak zvolte **OK**.
+    1. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
+
+    1. V levém podokně dialogového okna **Nový projekt** rozbalte položku **JavaScript** a vyberte možnost **Node.js**.
+
+    1. V prostředním podokně zvolte **prázdné Node.js webová aplikace** a vyberte **OK**.
+
     ::: moniker-end
+    
     Pokud nevidíte šablonu projektu **prázdná Node.js webové aplikace** , je nutné přidat úlohu **vývojeNode.js** . Podrobné pokyny najdete v části [požadavky](#prerequisites).
 
-    Visual Studio vytvoří a nové řešení a otevře projekt. *server.js* se otevře v editoru v levém podokně.
+    Visual Studio vytvoří a otevře projekt. Soubor *server.js* projektu se otevře v editoru na levé straně.
 
 ## <a name="explore-the-ide"></a>Prozkoumejte rozhraní IDE
 
-1. Podívejte se na **Průzkumník řešení** v pravém podokně.
+1. V pravém podokně se podívejte na **Průzkumník řešení**.
 
    ![Průzkumník řešení](../ide/media/quickstart-nodejs-solution-explorer.png)
 
-   - Projekt je zvýrazněný tučným písmem a má název, který jste zadali v dialogovém okně **Nový projekt**. Na disku je tento projekt reprezentován souborem *. njsproj* ve složce projektu.
+   - Zvýrazněná tučně je váš projekt pomocí názvu, který jste zadali při nastavování projektu. Na disku je tento projekt reprezentován souborem *. njsproj* ve složce projektu.
 
    - Na nejvyšší úrovni je řešení, které má ve výchozím nastavení stejný název jako příslušný projekt. Řešení, reprezentované na disku souborem *.sln*, je kontejner pro jeden nebo více souvisejících projektů.
 
-   - Uzel npm zobrazuje všechny nainstalované balíčky npm. Po kliknutí pravým tlačítkem na uzel npm lze vyhledat a nainstalovat balíčky npm pomocí dialogového okna.
+   - Uzel **npm** zobrazuje nainstalované balíčky npm. Můžete kliknout pravým tlačítkem na uzel npm a vyhledat a nainstalovat balíčky npm pomocí dialogového okna.
 
 1. Pokud chcete nainstalovat balíčky npm nebo příkazy Node.js z příkazového řádku, klikněte pravým tlačítkem myši na uzel projektu a vyberte **otevřít příkazový řádek zde**.
 
-   ![Node.js příkazového řádku](../ide/media/quickstart-nodejs-command-prompt.png)
+   ![Uzel tečka j s – příkazový řádek](../ide/media/quickstart-nodejs-command-prompt.png)
 
-1. V souboru *server.js* v editoru (levé podokno) zvolte `http.createServer` a pak stiskněte klávesu **F12** nebo zvolte **Přejít k definici** z místní nabídky (kliknutím pravým tlačítkem myši). Tento příkaz vás přesměruje do definice `createServer` funkce v *indexu. d. TS*.
+1. Chcete-li otestovat navigaci na zdrojový kód, v souboru Open *server.js* vyberte možnost **http. createServer** a stiskněte klávesu **F12** nebo zvolte možnost **Přejít k definici** z kontextové nabídky (kliknutím pravým tlačítkem myši). Tento příkaz vás provede definicí `createServer` funkce v *http. d. TS*.
 
    ![Přejít na kontextovou nabídku definice](../ide/media/quickstart-nodejs-gotodefinition.png)
 
-1. Vraťte se zpět na *server.js*, umístěte kurzor na konec řetězce v tomto řádku kódu `res.end('Hello World\n');` a upravte ho tak, aby vypadal takto:
+1. Vraťte se na *server.js* a vyhledejte tento řádek kódu: `res.end('Hello World\n');` . Upravte kód takto:
 
     `res.end('Hello World\n' + res.connection.`
 
-    Když zadáte `connection.` , technologie IntelliSense poskytuje možnosti automatického dokončování položky kódu.
+    Při psaní **připojení** technologie IntelliSense poskytuje možnosti automatického dokončování položky kódu.
 
    ![Automatické dokončování IntelliSense](../ide/media/quickstart-nodejs-intellisense.png)
 
-1. Zvolte **localPort** a potom zadejte `);` příkaz pro dokončení příkazu, aby vypadal takto:
+1. Vyberte **localPort** a typ **);** dokončení příkazu:
 
     `res.end('Hello World\n' + res.connection.localPort);`
 
-## <a name="run-the-application"></a>Spuštění aplikace
+## <a name="run-the-app"></a>Spuštění aplikace
 
-1. Spusťte aplikaci stisknutím klávesy **CTRL** + **F5** (nebo **ladění > spustit bez ladění**). Aplikace se otevře v prohlížeči.
+1. Spusťte aplikaci stisknutím **kombinace kláves CTRL + F5** (nebo **ladění**  >  **Spusťte bez ladění**). 
+ 
+   Aplikace se otevře v prohlížeči.
 
-1. V okně prohlížeče se zobrazí zpráva "Hello World" plus číslo místního portu.
+1. V prohlížeči ověřte, že se zobrazí zpráva "Hello World" a číslo místního portu.
 
-1. Zavřete webový prohlížeč.
-
-Blahopřejeme k dokončení tohoto rychlého startu, ve kterém jste začali s prostředím IDE sady Visual Studio a Node.js. Pokud se chcete podrobněji dohlížet na jeho funkce, pokračujte v kurzu v části obsah **kurzů** .
+Gratulujeme! Pomocí sady Visual Studio jste vytvořili jednoduchou aplikaci Node.js. Pokud chcete pokračovat hlouběji, pokračujte v části s **kurzy** v obsahu.
 
 ## <a name="next-steps"></a>Další kroky
 
