@@ -10,19 +10,19 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9486f1cd3e931d134c6fe2842f8704926de70966
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 92914703ea4b293ac054c841251b37886bbc1d5a
+ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060702"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "111588459"
 ---
 # <a name="vsix-color-compiler"></a>Kompilátor barev VSIX
-Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová aplikace, která přebírá soubor. XML reprezentující barvy pro existující motivy sady Visual Studio a převede ho na soubor. pkgdef tak, aby tyto barvy mohly být použity v aplikaci Visual Studio. Vzhledem k tomu, že je snadné porovnat rozdíly mezi soubory. XML, tento nástroj je užitečný pro správu vlastních barev ve správě zdrojového kódu. Dá se taky připojit do prostředí pro Build, aby výstup buildu byl platný soubor. pkgdef.
+Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová aplikace, která přebírá .xml soubor reprezentující barvy pro existující motivy sady Visual Studio a převede ho na soubor. pkgdef, aby se tyto barvy mohly použít v aplikaci Visual Studio. Vzhledem k tomu, že je snadné porovnat rozdíly mezi soubory .xml, je tento nástroj užitečný pro správu vlastních barev ve správě zdrojového kódu. Dá se taky připojit do prostředí pro Build, aby výstup buildu byl platný soubor. pkgdef.
 
  **Schéma XML motivu**
 
- Úplný soubor Theme. XML vypadá takto:
+ Úplný motiv .xml soubor vypadá takto:
 
 ```xml
 <Themes>
@@ -114,7 +114,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 
  **Vše dohromady**
 
- Toto je jednoduchý příklad platného souboru Theme. XML:
+ Toto je jednoduchý příklad platného souboru .xml motivu:
 
 ```xml
 <Themes>
@@ -137,7 +137,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 
 |**Název přepínače**|**Poznámky**|**Povinné nebo volitelné**|
 |-|-|-|
-|Nepojmenované (soubor. XML)|Toto je první nepojmenovaný parametr a je cesta k souboru XML, který se má převést.|Vyžadováno|
+|Nepojmenované (.xml soubor)|Toto je první nepojmenovaný parametr a je cesta k souboru XML, který se má převést.|Vyžadováno|
 |Nepojmenované (soubor. pkgdef)|Toto je druhý nepojmenovaný parametr a je výstupní cesta pro vygenerovaný soubor. pkgdef.<br /><br /> Výchozí: \<XML Filename> . pkgdef|Volitelné|
 |/noLogo|Nastavením tohoto příznaku se zastaví tisk informací o produktech a copyrightech.|Volitelné|
 |/?|Vytiskněte informace o nápovědě.|Volitelné|
@@ -154,6 +154,8 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 - Tento nástroj vyžaduje, aby byla nainstalovaná nejnovější verze modulu runtime VC + +.
 
 - Jsou podporovány pouze jednotlivé soubory. Hromadný převod prostřednictvím cest ke složkám není podporován.
+
+- Nástroj najdete v části. `<VS Install Path>\VSSDK\VisualStudioIntegration\Tools\Bin\`
 
 ## <a name="sample-output"></a>Ukázkový výstup
  Soubor. pkgdef generovaný nástrojem bude vypadat podobně jako v následujících klíčích:

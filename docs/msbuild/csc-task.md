@@ -1,6 +1,6 @@
 ---
 title: Úloha CSc | Microsoft Docs
-description: Tento článek popisuje úlohu MSBuild CSc, která zabalí kompilátor jazyka C#, csc.exe a generuje soubory. exe,. dll nebo. netmodule.
+description: Tento článek popisuje úlohu MSBuild CSc, která zabalí kompilátor jazyka C#, csc.exe a generuje soubory .exe, .dll nebo. netmodule.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,16 +20,16 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a3787d5aa21e029ab4900bdd89c88f1cc60f3489
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 10a63b114379f56ca5f253f853a1ff6bdd6c60dc
+ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901345"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "111588472"
 ---
 # <a name="csc-task"></a>Csc – úloha
 
-Zalomí *csc.exe* a vytváří spustitelné soubory (soubory *. exe* ), dynamické knihovny (soubory *. dll* ) nebo kódové moduly (soubory *. netmodule* ). Další informace o *csc.exe* najdete v tématu [Možnosti kompilátoru C#](/dotnet/csharp/language-reference/compiler-options/index).
+Zalomí *csc.exe* a vytvoří spustitelné soubory (*.exe* soubory), dynamické knihovny (*.dll* soubory) nebo kódové moduly (soubory *. netmodule* ). Další informace o *csc.exe* najdete v tématu [Možnosti kompilátoru C#](/dotnet/csharp/language-reference/compiler-options/index).
 
 ## <a name="parameters"></a>Parametry
 
@@ -50,6 +50,7 @@ Následující tabulka popisuje parametry `Csc` úkolu.
 | `Deterministic` | Volitelný `Boolean` parametr.<br/><br/> Pokud je `true` , vyvolá kompilátor výstup sestavení, jehož binární obsah je identický v rámci kompilací, pokud jsou vstupy identické.<br/><br/>Další informace naleznete v tématu [-deterministické (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/deterministic-compiler-option). |
 | `DisabledWarnings` | Volitelný `String` parametr.<br /><br /> Určuje seznam upozornění, která mají být zakázána. Další informace naleznete v tématu [-warn (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/nowarn-compiler-option). |
 | `DocumentationFile` | Volitelný `String` parametr.<br /><br /> Zpracuje komentáře dokumentace do souboru XML. Další informace naleznete v tématu [-doc (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/doc-compiler-option). |
+| `EmbedAllSources` | Volitelný `Boolean` parametr.<br /><br /> Vložte všechny zdrojové soubory do souboru PDB. Další informace naleznete v tématu [-embed (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/listed-alphabetically) |
 | `EmitDebugInformation` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` úloha vygeneruje informace o ladění a umístí je do souboru databáze programu (PDB). Pokud `false` Úloha negeneruje žádné ladicí informace. Výchozí je `false`. Další informace naleznete v tématu [-Debug (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option). |
 | `ErrorReport` | Volitelný `String` parametr.<br /><br /> Nabízí pohodlný způsob, jak ohlásit interní chybu v jazyce C# společnosti Microsoft. Tento parametr může mít hodnotu `prompt` , `send` nebo `none` . Pokud je parametr nastaven na hodnotu `prompt` , zobrazí se výzva, když dojde k vnitřní chybě kompilátoru. Na příkazovém řádku můžete poslat zprávu o chybě elektronicky společnosti Microsoft. Pokud je parametr nastaven na hodnotu `send` , je automaticky odeslána zpráva o chybě. Pokud je parametr nastaven na hodnotu `none` , chyba je uvedena pouze v textovém výstupu kompilátoru. Výchozí je `none`. Další informace naleznete v tématu [-errorreport (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option). |
 | `FileAlignment` | Volitelný `Int32` parametr.<br /><br /> Určuje velikost oddílů ve výstupním souboru. Další informace naleznete v tématu [-align (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option). |

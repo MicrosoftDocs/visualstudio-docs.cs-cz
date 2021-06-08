@@ -1,49 +1,49 @@
 ---
-title: Microsoft Azure výhody v Visual Studio předplatných | Microsoft Docs
+title: Výhody Microsoft Azure v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 05/18/2021
+ms.date: 06/07/2021
 ms.topic: how-to
-description: Zjistěte, jak aktivovat individuální kredit azure devtest, který je součástí vašeho Visual Studio předplatného.
-ms.openlocfilehash: 0888f20c80dbacad0237fdd12f987870c4834f2b
-ms.sourcegitcommit: 6e27b1238a8aa704b127eac34f4173e9d56690c5
+description: Naučte se aktivovat zvýhodnění pro jednotlivé kredity Azure DevTest, které jsou součástí vašeho předplatného sady Visual Studio.
+ms.openlocfilehash: 4946efb3aa32fd7c80a2926ad2b83c15cfe92452
+ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "110231974"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "111588437"
 ---
-# <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Použití Microsoft Azure v Visual Studio předplatných
-Jako Visual Studio předplatného můžete použít Microsoft Azure bez dalších poplatků.  S [měsíčním individuálním kreditem Azure DevTest](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)je Azure vaším osobním sandboxem pro vývoj a testování.  Můžete zřídit virtuální počítače, cloudové služby a další prostředky Azure.  Částky kreditů se liší podle úrovně předplatného.
+# <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Použití Microsoft Azure v předplatných sady Visual Studio
+Jako předplatitelé sady Visual Studio můžete použít Microsoft Azure bez dalších poplatků.  S vaším [měsíčním kreditem Azure DevTest](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)je Azure vaším osobním izolovaným prostorem pro vývoj a testování.  Můžete zřídit virtuální počítače, cloudové služby a další prostředky Azure.  Částky kreditu se liší podle úrovně předplatného.
 
-## <a name="activation-steps"></a>Postup aktivace
+## <a name="activation-steps"></a>Kroky aktivace
 1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
-2. Vyhledejte dlaždici Azure v části Nástroje  na stránce Výhody a v dolní části dlaždice výhody vyberte Odkaz na aktivaci.
+2. Vyhledejte dlaždici Azure v části nástroje na stránce výhody a v dolní části dlaždice výhody vyberte odkaz **aktivovat** .
    > [!div class="mx-imgBorder"]
    > ![Dlaždice Azure](_img/vs-azure/vs-azure-tile.png "Pokud chcete začít, klikněte na tlačítko Aktivovat na dlaždici Azure.")
 
-3. Pokud ještě nemáte předplatné Azure, budete požádáni o vyplnění požadovaných informací k vytvoření předplatného Azure.  Prvním krokem je poskytnutí osobních údajů a výběr možnosti **Další.**
+3. Pokud nemáte existující předplatné Azure, budete požádáni o vyplnění požadovaných informací k vytvoření vašeho předplatného Azure.  Prvním krokem je poskytnout vaše osobní údaje a pak vybrat **Další**.
    > [!div class="mx-imgBorder"]
-   > ![Registrace do Azure](_img/vs-azure/vs-azure-about-you.png "Přidejte své osobní kontaktní údaje do svého předplatného Azure.")
+   > ![Registrace Azure](_img/vs-azure/vs-azure-about-you.png "Přidejte své osobní kontaktní údaje do svého předplatného Azure.")
 
-4. V dalším kroku budete muset ověřit svou identitu pomocí jednoduchého ověřovacího kódu. Zadejte své telefonní číslo a zvolte, jestli chcete tento kód obdržet pomocí sms nebo telefonu.  Zadejte kód, který obdržíte, a vyberte **Verify code (Ověřit kód).**   
+4. V dalším kroku budete muset ověřit identitu pomocí jednoduchého ověřovacího kódu. Zadejte své telefonní číslo a určete, jestli chcete kód přijmout pomocí textu nebo telefonu.  Zadejte kód, který jste obdrželi, a vyberte **ověřit kód**.   
    > [!div class="mx-imgBorder"]
-   > ![Azure se připravuje](_img/vs-azure/vs-azure-identity.png "Vyžádejte si ověřovací kód a zadejte ho, abyste pokračovali.")
+   > ![Příprava na Azure](_img/vs-azure/vs-azure-identity.png "Vyžádejte si ověřovací kód a zadejte ho, abyste pokračovali.")
 
-5. V posledním kroku zaškrtnutím políčka přijměte podmínky a pak vyberte **Zaregistrovat se.**  A je to!
+5. V posledním kroku zaškrtněte políčko, pokud chcete podmínky přijmout, a pak vyberte **zaregistrovat** se.  A je to!
    > [!div class="mx-imgBorder"]
-   > ![Registrace do Azure](_img/vs-azure/vs-azure-agreement.png "Kliknutím na tlačítko Zaregistrovat se dokončete vytváření předplatného Azure.")
+   > ![Registrace Azure](_img/vs-azure/vs-azure-agreement.png "Kliknutím na tlačítko Zaregistrovat se dokončete vytváření předplatného Azure.")
 
-0. Načte se Centrum rychlého startu řídicího panelu Azure.  
+0. Nahraje se centrum pro rychlé zprovoznění řídicího panelu Azure.  
    > [!div class="mx-imgBorder"]
    > ![Řídicí panel Azure](_img/vs-azure/vs-azure-quick-start.png "Po vytvoření předplatného Azure budete přesměrováni na Azure Portal.") 
 
 0. Pro snadný přístup v budoucnu můžete záložku [Azure Portal](https://portal.azure.com) .
 
 ## <a name="maintain-a-subscription-to-use-monthly-credits"></a>Údržba předplatného, které používá měsíční kredity
-Pokud vaše předplatné sady Visual Studio vyprší nebo se odebere, všechny výhody předplatného, včetně měsíčního individuálního kreditu Azure pro vývoj/testování, už nejsou dostupné. Pokud chcete Azure dál používat s měsíčním kreditem, budete muset obnovit předplatné, koupit nové předplatné nebo přenést výhody Azure na aktivní předplatné, které zahrnuje jednotlivý kredit Azure pro vývoj/testování.  
+Pokud vaše předplatné sady Visual Studio vyprší nebo se odebere, všechny výhody předplatného, včetně měsíčního individuálního kreditu Azure pro vývoj/testování, už nejsou dostupné. Pokud chcete Azure dál používat s měsíčním kreditem, budete muset obnovit předplatné, koupit nové předplatné nebo přenést prostředky Azure do jiného předplatného Azure, které zahrnuje jednotlivý kredit Azure pro vývoj/testování.  
 
 > [!IMPORTANT]
 > Než vaše aktuální předplatné Azure zakážete nebo ztratíte přístup k vašim datům, musíte svoje prostředky přenést do jiného předplatného Azure.  
@@ -67,20 +67,20 @@ Pokud už nepotřebujete předplatné nebo kredit sady Visual Studio, ale chcete
 Pokud některou z těchto akcí neprovedete, vaše předplatné Azure se po přijetí e-mailového oznámení zakáže a odstraní po uplynutí 30 dnů.  
 
 ## <a name="have-a-question"></a>Máte dotaz?
-Pokud máte dotazy týkající se přenosu prostředků, odebrání limitů útraty nebo jiných témat Azure, můžete odeslat žádost [podpora Azure v](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) Azure Portal. 
+Pokud máte dotazy týkající se přenosu prostředků, odebrání limitů útraty nebo jiných témat Azure, můžete [Odeslat žádost o podporu Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) v Azure Portal. 
 
-## <a name="eligibility"></a>Způsobilosti
-|                 Úroveň předplatného / program                 |           Výhoda           |                         Obnovitelných zdrojů?                          |
+## <a name="eligibility"></a>Vznik
+|                 Úroveň/program předplatného                 |           Výhoda           |                         Mlčky?                          |
 |--------------------------------------------------------------|-----------------------------|-------------------------------------------------------------|
-|              Visual Studio Enterprise Standard               |     Měsíční kredit ve výši 150 USD     |                             Yes                             |
-|              Visual Studio Enterprise předplatného s GitHub Enterprise               |     Měsíční kredit ve výši 150 USD     |                             Yes                             |
+|              Visual Studio Enterprise Standard               |     měsíční kredit $150     |                             Yes                             |
+|              Visual Studio Enterprise předplatné s GitHubem Enterprise               |     měsíční kredit $150     |                             Yes                             |
 |               Visual Studio Enterprise měsíčně               |        Není k dispozici        |                                                             |
-|             Visual Studio Professional Standard              |     Měsíční kredit 50 USD      |                             Yes
-|              Visual Studio Professional předplatného s GitHub Enterprise              |     Měsíční kredit 50 USD     |                             Yes                             |
+|             Visual Studio Professional Standard              |     měsíční kredit $50      |                             Yes
+|              Visual Studio Professional předplatné s GitHubem Enterprise              |     měsíční kredit $50     |                             Yes                             |
 |              Visual Studio Professional měsíčně              |        Není k dispozici        |                                                             |
-|                    Visual Studio Test Pro                    |     Měsíční kredit 50 USD      |                             Yes                             |
-|                        MSDN Platforms                        |     Měsíční kredit ve výši 100 USD     |                             Yes                             |
-|               Visual Studio Enterprise – NFR<sup>1</sup>                 |     Měsíční kredit ve výši 150 USD     |                             Yes                             |
+|                    Test sady Visual Studio pro                    |     měsíční kredit $50      |                             Yes                             |
+|                        MSDN Platforms                        |     měsíční kredit $100     |                             Yes                             |
+|               Visual Studio Enterprise – NFR<sup>1</sup>                 |     měsíční kredit $150     |                             Yes                             |
 |                Visual Studio Enterprise – FTE                |     měsíční kredit $150     |                             Yes                             |
 |     Visual Studio Enterprise – Microsoft Partner Network     |     měsíční kredit $150     |                             Yes                             |
 |    Visual Studio Professional – Microsoft Partner Network    |        Není k dispozici        |                                                             |
@@ -98,32 +98,32 @@ Pokud máte dotazy týkající se přenosu prostředků, odebrání limitů útr
 Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) Zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
-### <a name="q-how-do-i-submit-a-technical-support-incident-from-within-the-azure-portal"></a>Otázka: Návody odeslat incident technické podpory v rámci Azure Portal?
-Odpověď: odeslání incidentu podpory z Azure Portal je proces se třemi kroky.
-1. Aktivujte si výhodu technické podpory a Získejte ID pro přístup k ID vaší smlouvy.
-2. Propojte svůj kontrakt podpory s vaším předplatným Azure.
-3. Odeslat incident podpory
+### <a name="q-how-do-i-submit-a-technical-support-incident-from-within-the-azure-portal"></a>Otázka: Návody incident technické podpory v rámci Azure Portal?
+O: Odeslání incidentu podpory z Azure Portal je proces se třemi kroky.
+1. Aktivujte si výhodu technické podpory a získejte přístupové ID smlouvy.
+2. Propoojte smlouvu o podpoře s předplatným Azure.
+3. Odešlete incident podpory.
 
-Úplné podrobnosti najdete v dokumentaci [technické podpory](vs-tech-support.md) .
+Úplné podrobnosti najdete [v dokumentaci technické](vs-tech-support.md) podpory.
 
-### <a name="q-who-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>Otázka: kdo vlastní duševní vlastnictví vytvořené pomocí mého osobního kreditu Azure DevTest?
-O: duševní vlastnictví vytvářené zaměstnancem vytvořeným v prostředcích poskytovaných touto společností je duševní vlastnictví společnosti poskytující prostředky. Pokud jste si od svého zaměstnavatele obdrželi předplatné sady Visual Studio, uplatní se jim zásady duševního vlastnictví. 
+### <a name="q-who-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>Otázka: Kdo vlastní duševní vlastnictví, které vytvářím pomocí svého individuálního kreditu Azure DevTest?
+O: Duševní vlastnictví vytvořené zaměstnancem vytvořeným na prostředcích poskytovaných společností je tedy duševní vlastnictví společnosti poskytující prostředky. Takže pokud jste předplatné Visual Studio prostřednictvím vašeho zaměstnavatele, použijí se jeho zásady duševního vlastnictví. 
 
-## <a name="support-resources"></a>Prostředky podpory
-- Potřebujete s Azure pomáhat?  Podívejte se na tyto materiály:
+## <a name="support-resources"></a>Zdroje informací o podpoře
+- Potřebujete pomoc s Azure?  Podívejte se na tyto materiály:
   - Technická podpora: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
-  - [Tipy k Azure & triky](https://microsoft.github.io/AzureTipsAndTricks/ "Tipy pro Azure & triky") 
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio
-- Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+  - [Tipy pro Azure & triky](https://microsoft.github.io/AzureTipsAndTricks/ "Tipy pro Azure & triky") 
+- Pokud chcete pomoc s prodejem, předplatným, účty a fakturací pro Předplatná sady Visual Studio, kontaktujte Visual Studio [podpory předplatných.](https://aka.ms/vssubscriberhelp)
+- Máte dotaz ohledně integrovaného vývojového Visual Studio, Azure DevOps Services nebo jiných Visual Studio produktů nebo služeb?  Navštivte [Visual Studio podpory.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Visual Studio dokumentace](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
-- [Dokumentace k Microsoft 365](/microsoft-365/)
+- [Microsoft 365 dokumentace](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o nástrojích a službách společnosti Microsoft najdete v dokumentaci pro:
+Další informace o nástrojích a službách Microsoftu najdete v dokumentaci pro:
 - [Azure](/azure/)
 - [Azure DevOps](/azure/devops/)
 - [Integrované vývojové prostředí sady Visual Studio](/visualstudio/)

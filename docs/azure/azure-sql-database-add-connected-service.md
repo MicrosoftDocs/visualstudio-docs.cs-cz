@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 9e4a695a26e17e20fbd19081b863d9f108fc16b6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26a01bfe2a34422f9596710f832a1c4af699fd3b
+ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841195"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "111588485"
 ---
 # <a name="add-a-connection-to-azure-sql-database"></a>Přidání připojení k Azure SQL Database
 
-Pomocí sady Visual Studio můžete ke službě Azure SQL Database připojit kteroukoli z následujících funkcí pomocí funkce **připojené služby** :
+Pomocí sady Visual Studio můžete pomocí funkce **připojené služby** připojit kterýkoli z následujících Azure SQL Database:
 
 - .NET Framework Konzolová aplikace
 - ASP.NET MVC (.NET Framework) 
@@ -80,7 +80,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
    Pokud se zobrazí výzva k nastavení pravidel brány firewall, vyberte **Ano**.
 
-   ![Pravidla firewallu](./media/azure-sql-database-add-connected-service/firewall-rules.png)
+   ![Pravidla brány firewall](./media/azure-sql-database-add-connected-service/firewall-rules.png)
 
 1. Připojení se zobrazí v části **závislosti služby** na kartě **připojené služby** .
 
