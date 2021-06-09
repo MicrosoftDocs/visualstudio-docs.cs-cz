@@ -6,13 +6,13 @@ ms.topic: conceptual
 author: alihamie
 ms.author: tglee
 manager: jmartens
-monikerRange: vs-2019
-ms.openlocfilehash: 8303e1150db7c12c404e8f67bce52418fbd05b9d
-ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
+monikerRange: '>=vs-2019'
+ms.openlocfilehash: 66418d351280a0c067327716766725d22488131b
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111433789"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760910"
 ---
 # <a name="use-design-time-sample-data-with-the-xaml-designer-in-visual-studio"></a>Použití ukázkových dat v době návrhu s Návrhář XAML v Visual Studio
 
@@ -37,9 +37,9 @@ Po přidání oborů názvů můžete pomocí povolit `d:ItemsSource="{d:SampleD
 <DataGrid d:ItemsSource="{d:SampleData}"/>
 ```
 
-[![Ukázková data s datagridem](media\xaml-sample-data-empty-datagrid.png "Ukázková data povolená pro DataGrid")](media\xaml-sample-data-empty-datagrid.png#lightbox)
+[![Ukázková data s DataGridem](media\xaml-sample-data-empty-datagrid.png "Ukázková data povolená v DataGridu")](media\xaml-sample-data-empty-datagrid.png#lightbox)
 
-V tomto příkladu by `d:ItemsSource="{d:SampleData}"` se bez Návrhář XAML data zobrazí prázdná datová mřížka. Místo toho se `d:SampleData` teď zobrazí vygenerovaná výchozí ukázková data.
+V tomto příkladu by `d:ItemsSource="{d:SampleData}"` se bez Návrhář XAML datová mřížka prázdná. Místo toho se `d:SampleData` teď zobrazí vygenerovaná výchozí ukázková data.
 
 Ve výchozím nastavení se zobrazí 5 položek. Pomocí vlastnosti **ItemCount** však můžete určit, kolik položek chcete zobrazit. například: `d:ItemsSource="{d:SampleData ItemCount=2}"`
 
@@ -74,16 +74,16 @@ Pokud chcete v návrháři snadno povolit nebo zakázat ukázková data pro ovl�
 
 ## <a name="sample-data-with-ivalueconverters"></a>Ukázková data s IValueConverters 
 
-Funkce Ukázková data převaděče plně nepodporuje. Můžete ho ale zpracuje jedním nebo oběma z následujících způsobů:
+Funkce Ukázkových dat převaděče plně nepodporuje. Můžete ho ale zpracuje jedním nebo oběma z následujících způsobů:
 - Ujistěte se, `Convert` že vaše funkce dokáže zpracovat scénář, ve kterém už je hodnota targetType.
 
 - Implementujte `ConvertBack` funkci , která převede vaši hodnotu zpět na původní typ. 
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
-Pokud se v ukázkových datech nic nezobrazuje nebo se vám nepodaří zobrazit správný typ, můžete zkusit aktualizovat návrháře nebo stránku zavřít a znovu otevřít.
+Pokud ukázková data nic nezobrazují nebo se vám nepodaří zobrazit správný typ, můžete zkusit aktualizovat návrháře nebo zavřít a znovu otevřít stránku.
 
-Pokud nastane problém, který není v této části uvedený, nebo ho nejde vyřešit aktualizací stránky, dejte nám vědět pomocí nástroje [pro](../ide/how-to-report-a-problem-with-visual-studio.md) nahlášení problému.
+Pokud nastane problém, který není uvedený v této části, nebo ho nemůžete vyřešit aktualizací stránky, dejte nám vědět pomocí nástroje [pro](../ide/how-to-report-a-problem-with-visual-studio.md) nahlášení problému.
 
 ### <a name="requirements"></a>Požadavky
 

@@ -1,8 +1,8 @@
 ---
 title: Vytvoření formuláře Windows k vyhledávání dat
-description: Přečtěte si příklad vytvoření formuláře Windows pro vyhledávání dat. Vytvořte aplikaci Windows Form, zdroj dat a formulář. Přidat Parametrizace. Otestujete aplikaci.
+description: Přečtěte si příklad vytvoření formuláře Windows Pro vyhledávání dat. Vytvořte aplikaci Windows Form, zdroj dat a formulář. Přidejte parametrizaci. Otestujete aplikaci.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 06/07/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Forms, searching data
@@ -16,104 +16,147 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: eb6e5a1ba304627c08828b6ad7bff7f6accd3980
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ce9d3eeebf42855ad69f02b2d72330190a2b390
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859109"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111761092"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>Vytvoření formuláře Windows k vyhledávání dat
 
-Běžným scénářem použití je zobrazení vybraných dat na formuláři. Například můžete chtít zobrazit objednávky konkrétního zákazníka nebo podrobnosti konkrétního objednávky. V tomto scénáři uživatel zadá informace do formuláře a následně se spustí dotaz se vstupem uživatele jako s parametrem. To znamená, že data jsou vybrána na základě parametrizovaného dotazu. Dotaz vrátí pouze data, která splňují kritéria zadaná uživatelem. Tento návod ukazuje, jak vytvořit dotaz, který vrací zákazníky v určitém městě, a upravit uživatelské rozhraní tak, aby uživatelé mohli zadat jméno města a stisknout tlačítko pro spuštění dotazu.
+Běžným scénářem aplikace je zobrazení vybraných dat ve formuláři. Můžete například chtít zobrazit objednávky pro konkrétního zákazníka nebo podrobnosti o konkrétní objednávce. V tomto scénáři uživatel zadá informace do formuláře a pak se spustí dotaz se vstupem uživatele jako parametrem. To znamená, že data jsou vybrána na základě parametrizovaného dotazu. Dotaz vrátí pouze data, která splňují kritéria zadaná uživatelem. Tento názorný postup ukazuje, jak vytvořit dotaz, který vrátí zákazníky v určitém městě, a upravit uživatelské rozhraní tak, aby uživatelé mohli zadat název města a stisknout tlačítko pro provedení dotazu.
 
-Použití parametrizovaných dotazů vám pomůže zajistit efektivitu vaší aplikace tím, že umožňuje databázi provádět práci, která je nejlepší, a rychle filtrovat záznamy. Na rozdíl od toho, pokud požadujete celou databázovou tabulku, přenesete ji přes síť a pak pomocí aplikační logiky vyhledejte požadované záznamy, aplikace může být pomalá a neefektivní.
+Použití parametrizovaných dotazů pomáhá zajistit efektivitu aplikace tím, že databázi umožňuje provádět nejlepší práci– rychle filtrovat záznamy. Naproti tomu pokud si vyžádáte celou databázovou tabulku, přenesete ji přes síť a pak pomocí aplikační logiky najdete záznamy, které chcete, může být vaše aplikace pomalá a neefektivní.
 
-Můžete přidat parametrizované dotazy do libovolného TableAdapter (a ovládací prvky pro přijímání hodnot parametrů a spuštění dotazu) pomocí dialogového okna **Tvůrce kritérií hledání** . Otevřete dialogové okno tak, že v nabídce **data** vyberete příkaz **Přidat dotaz** (nebo na libovolnou inteligentní značku TableAdapter).
+Parametrizované dotazy můžete přidat do libovolného objektu TableAdapter (a ovládacích prvků pro příjem hodnot parametrů a spuštění dotazu) pomocí **dialogového** okna Tvůrce kritérií vyhledávání. Výběrem příkazu Přidat  dotaz v nabídce **Data** (nebo jakékoli inteligentní značky TableAdapter) otevřete dialogové okno.
 
-Úlohy, které jsou znázorněné v tomto návodu, zahrnují:
+Mezi úlohy znázorněné v tomto názorném postupu patří:
 
-- Vytvoření a konfigurace zdroje dat v aplikaci pomocí průvodce **konfigurací zdroje dat** .
+- Vytvoření a konfigurace zdroje dat v aplikaci pomocí Průvodce konfigurací **zdroje** dat
 
-- Nastavení typu přetažení položek v okně **zdroje dat** .
+- Nastavení typu přetažení položek v **okně Zdroje** dat
 
-- Vytváření ovládacích prvků, které zobrazují data přetažením položek z okna **zdroje dat** do formuláře.
+- Vytváření ovládacích prvků, které zobrazují data přetažením položek **z okna Zdroje** dat na formulář
 
-- Přidání ovládacích prvků pro zobrazení dat ve formuláři.
+- Přidání ovládacích prvků pro zobrazení dat ve formuláři
 
-- Dokončuje se dialogové okno **Tvůrce kritérií hledání** .
+- Dokončení dialogového **okna Tvůrce** kritérií vyhledávání
 
-- Zadáním parametrů do formuláře a spuštěním parametrizovaného dotazu.
+- Zadání parametrů do formuláře a spuštění parametrizovaného dotazu.
+
+> [!NOTE]
+> Postupy v tomto článku se vztahují pouze .NET Framework model Windows Forms projekty, nikoli pro projekty .NET Core model Windows Forms projekty.
 
 ## <a name="prerequisites"></a>Požadavky
 
+Musíte mít **nainstalovanou úlohu Ukládání a zpracování** dat. Viz [Úprava Visual Studio](../install/modify-visual-studio.md).
+
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
+1. Pokud localdb nemáte, SQL Server Express si ho buď ze stránky pro stažení [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo přes **Instalační program pro Visual Studio**. V **Instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy Ukládání  a zpracování dat nebo jako jednotlivou komponentu.
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
-    1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v **instalační program pro Visual Studio**.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
+    1. V Visual Studio otevřete okno **Průzkumník objektů systému SQL Server.** (Průzkumník objektů systému SQL Server se instaluje jako součást úlohy **Ukládání** a zpracování dat v **Instalační program pro Visual Studio**.) Rozbalte **uzel SQL Server.** Klikněte pravým tlačítkem na instanci LocalDB a vyberte **New Query (Nový dotaz).**
 
        Otevře se okno editoru dotazů.
 
-    2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
+    2. Zkopírujte [skript jazyka Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
+    3. Vložte skript T-SQL do editoru dotazů a pak zvolte **tlačítko** Provést.
 
-       Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
+       Po ch chvíli se dotaz dokončí a vytvoří se databáze Northwind.
 
-## <a name="create-the-windows-forms-application"></a>Vytvoření aplikace model Windows Forms
+## <a name="create-the-windows-forms-application"></a>Vytvoření model Windows Forms aplikace
 
-Vytvořte nový projekt **aplikace model Windows Forms** pro C# nebo Visual Basic. Pojmenujte projekt **WindowsSearchForm**.
+:::moniker range="vs-2017"
+
+Vytvořte nový projekt **model Windows Forms App (.NET Framework)** pro jazyk C# nebo Visual Basic. Projekt **pojmechnte WindowsSearchForm**.
 
 ## <a name="create-the-data-source"></a>Vytvoření zdroje dat
 
-Tento krok vytvoří zdroj dat z databáze pomocí průvodce **konfigurací zdroje dat** :
+Tento krok vytvoří zdroj dat z databáze pomocí průvodce **konfigurací zdroje** dat:
 
-1. Chcete-li otevřít okno **zdroje dat** , klikněte v nabídce **data** na možnost **Zobrazit zdroje dat**.
+1. Pokud chcete otevřít **okno Zdroje** dat, klikněte v **nabídce Data** na Zobrazit **zdroje dat.**
 
-2. V okně **zdroje dat** vyberte možnost **Přidat nový zdroj dat** a spusťte průvodce **konfigurací zdroje dat** .
+2. V okně **Zdroje** dat vyberte **Přidat nový zdroj dat** a spusťte průvodce konfigurací **zdroje** dat.
 
-3. Vyberte možnost **databáze** na stránce **Vybrat typ zdroje dat** a poté klikněte na tlačítko **Další**.
+3. Na **stránce** Zvolte typ **zdroje dat vyberte** Databáze a pak klikněte na **Další.**
 
-4. Na stránce **Vyberte datové připojení** proveďte jednu z následujících akcí:
+4. Na **stránce Zvolte datové připojení** proveďte jednu z následujících akcí:
 
     - Pokud je připojení dat k ukázkové databázi Northwind k dispozici v rozevíracím seznamu, vyberte je.
 
-    - Vyberte **nové připojení** , aby se spustilo dialogové okno **Přidat nebo upravit připojení** .
+    - Výběrem **možnosti Nové** připojení spusťte **dialogové okno Přidat nebo** upravit připojení.
 
-5. Pokud vaše databáze vyžaduje heslo, vyberte možnost zahrnutí citlivých dat a potom klikněte na tlačítko **Další**.
+5. Pokud vaše databáze vyžaduje heslo, vyberte možnost zahrnutí citlivých dat a potom klikněte na **Další.**
 
-6. Na stránce **Uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na tlačítko **Další**.
+6. Na stránce Save connection string to the Application Configuration file (Uložit připojovací řetězec do **konfiguračního souboru aplikace)** klikněte na **Next (Další).**
 
-7. Na stránce **zvolit databázové objekty** rozbalte uzel **tabulky** .
+7. Na stránce **Zvolte databázové objekty** rozbalte **uzel Tabulky.**
 
-8. Vyberte tabulku **Customers (zákazníci** ) a pak klikněte na **Dokončit**.
+8. Vyberte **tabulku Customers** (Zákazníci) a pak klikněte na **Finish (Dokončit).**
 
-     **NorthwindDataSet** je přidán do projektu a tabulka **Customers (zákazníci** ) se zobrazí v okně **zdroje dat** .
+     **NorthwindDataSet** se přidá do projektu a tabulka **Customers** se zobrazí v **okně Zdroje** dat.
 
-## <a name="create-the-form"></a>Vytvořit formulář
+:::moniker-end
 
-Můžete vytvořit ovládací prvky vázané na data přetažením položek z okna **zdroje dat** do formuláře:
+:::moniker range=">=vs-2019"
 
-1. Rozbalte uzel **zákazníci** v okně **zdroje dat** .
+Vytvořte nový projekt **model Windows Forms App (.NET Framework)** pro jazyk C# nebo Visual Basic. Projekt **pojmechnte WindowsSearchForm**.
 
-2. Přetáhněte uzel **zákazníci** z okna **zdroje dat** do formuláře.
+## <a name="create-the-data-source"></a>Vytvoření zdroje dat
 
-     <xref:System.Windows.Forms.DataGridView>A pruh nástrojů ( <xref:System.Windows.Forms.BindingNavigator> ) pro procházení záznamů se zobrazí ve formuláři. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator> se zobrazí v zásobníku komponent.
+Tento krok vytvoří zdroj dat z databáze pomocí průvodce **konfigurací zdroje** dat:
 
-## <a name="add-parameterization-search-functionality-to-the-query"></a>Přidat do dotazu Parametrizace (funkce vyhledávání)
+1. Pokud chcete otevřít **okno Zdroje** dat, použijte rychlé hledání (**Ctrl** Q ) a + vyhledejte **Zdroje dat**.
 
-Klauzuli WHERE můžete přidat k původnímu dotazu pomocí dialogového okna **Tvůrce kritérií hledání** :
+1. V okně **Zdroje** dat vyberte **Přidat nový zdroj dat** a spusťte průvodce konfigurací **zdroje** dat.
 
-1. Vyberte <xref:System.Windows.Forms.DataGridView> ovládací prvek a potom v nabídce **data** zvolte **Přidat dotaz** .
+1. Na **stránce** Zvolte typ **zdroje dat vyberte** Databáze a pak klikněte na **Další.**
 
-2. Do pole **nový název dotazu** v dialogovém okně **Tvůrce kritérií hledání** zadejte **FillByCity** .
+1. Na **obrazovce Zvolit model databáze** zvolte Datová **sada** a pak klikněte na **Další.**
 
-3. Přidejte `WHERE City = @City` do dotazu v oblasti **textu dotazu** .
+1. Na **stránce Zvolte datové připojení** proveďte jednu z následujících akcí:
 
-     Dotaz by měl vypadat přibližně takto:
+    - Pokud je připojení dat k ukázkové databázi Northwind k dispozici v rozevíracím seznamu, vyberte je.
+
+    - Výběrem **možnosti Nové** připojení spusťte **dialogové okno Přidat nebo** upravit připojení.
+
+1. Na stránce Save connection string to the Application Configuration file (Uložit připojovací řetězec do **konfiguračního souboru aplikace)** klikněte na **Next (Další).**
+
+1. Na stránce **Zvolte databázové objekty** rozbalte **uzel Tabulky.**
+
+1. Vyberte **tabulku Customers** (Zákazníci) a pak klikněte na **Finish (Dokončit).**
+
+     **NorthwindDataSet** se přidá do projektu a tabulka **Customers** se zobrazí v **okně Zdroje** dat.
+
+:::moniker-end
+
+## <a name="create-the-form"></a>Vytvoření formuláře
+
+Ovládací prvky vázané na data můžete vytvořit přetažením položek z **okna Zdroje dat** do formuláře:
+
+1. Ujistěte se, model Windows Forms návrhář dat má  aktivní fokus a že je otevřené a připnuté okno Zdroje dat.
+
+1. Rozbalte **uzel** Zákazníci v **okně Zdroje** dat.
+
+1. Přetáhněte **uzel** Customers z **okna Zdroje** dat do formuláře.
+
+     Na formuláři se zobrazí pruh nástrojů a ( ) pro <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.BindingNavigator> navigaci v záznamech. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a se zobrazí v hlavním panelu <xref:System.Windows.Forms.BindingNavigator> komponent.
+
+## <a name="add-parameterization-search-functionality-to-the-query"></a>Přidání parametrizace (funkce vyhledávání) do dotazu
+
+Klauzuli WHERE můžete do původního dotazu přidat pomocí **dialogového okna Tvůrce kritérií** vyhledávání:
+
+1. Hned pod návrhovou plochou formuláře vyberte tlačítko **customersTableAdapter** a pak v okně **Vlastnosti** zvolte **Přidat dotaz...**.
+
+2. Do oblasti Nový název dotazu v **dialogovém** okně **Tvůrce** kritérií hledání zadejte **FillByCity.**
+
+3. Přidejte `WHERE City = @City` do dotazu v oblasti **Text** dotazu.
+
+     Dotaz by měl být podobný následujícímu:
 
      ```sql
      SELECT CustomerID, CompanyName, ContactName, ContactTitle,
@@ -123,29 +166,29 @@ Klauzuli WHERE můžete přidat k původnímu dotazu pomocí dialogového okna *
      ```
 
     > [!NOTE]
-    > Přístup ke zdrojům dat a jejich OLE DB používají otazník ('? ') k označení parametrů, takže klauzule WHERE by vypadala takto: `WHERE City = ?` .
+    > Přístup a OLE DB zdroje dat používají otazník (?) k označení parametrů, takže klauzule WHERE by vypadala takhle: `WHERE City = ?` .
 
-4. Kliknutím na tlačítko **OK** zavřete dialogové okno **Tvůrce kritérií hledání** .
+4. Kliknutím **na OK** zavřete dialogové okno Tvůrce **kritérií** hledání.
 
-     Do formuláře se přidá **FillByCityToolStrip** .
+     Do **formuláře se přidá FillByCityToolStrip.**
 
 ## <a name="test-the-application"></a>Testování aplikace
 
-Spuštění aplikace otevře formulář a zpřístupní ho pro použití parametru jako vstupu:
+Spuštění aplikace otevře formulář a připraví ho k použití parametru jako vstupu:
 
-1. Stisknutím klávesy **F5** spusťte aplikaci.
+1. Stisknutím **klávesy F5** spusťte aplikaci.
 
-2. Do textového pole **City** zadejte **Londýn** a pak klikněte na **FillByCity**.
+2. Do **textového** pole Město zadejte **London** a potom klikněte na **FillByCity**.
 
-     Datová mřížka je naplněna zákazníky, kteří splňují kritéria. V tomto příkladu datová mřížka zobrazuje pouze zákazníky, kteří mají ve sloupci **City** hodnotu **Londýn** .
+     Datová mřížka se naplní zákazníky, kteří splňují uvedená kritéria. V tomto příkladu zobrazí datová mřížka pouze  zákazníky, kteří mají ve sloupci **City** hodnotu London.
 
 ## <a name="next-steps"></a>Další kroky
 
-V závislosti na požadavcích vaší aplikace existuje několik kroků, které můžete chtít provést po vytvoření parametrizovaného formuláře. Mezi vylepšení, která je možné pro tento návod provést, patří:
+V závislosti na požadavcích vaší aplikace můžete po vytvoření parametrizovaného formuláře provést několik kroků. Mezi vylepšení, která je možné pro tento návod provést, patří:
 
-- Přidávání ovládacích prvků, které zobrazují související data. Další informace najdete v tématu [relace v datových sadách](relationships-in-datasets.md).
+- Přidání ovládacích prvků, které zobrazují související data Další informace najdete v tématu [Relace v datových sadách.](relationships-in-datasets.md)
 
-- Úprava datové sady pro přidání nebo odebrání databázových objektů. Další informace najdete v tématu [Vytvoření a konfigurace datových sad](../data-tools/create-and-configure-datasets-in-visual-studio.md).
+- Úprava datové sady pro přidání nebo odebrání databázových objektů Další informace najdete v tématu [Vytvoření a konfigurace datových sad.](../data-tools/create-and-configure-datasets-in-visual-studio.md)
 
 ## <a name="see-also"></a>Viz také
 
