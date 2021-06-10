@@ -22,15 +22,15 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04cbb0db729d39295ee9c608a19302a109980f10
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 007a7f42448ab8026d8acdc262ce5e0dcdd99b28
+ms.sourcegitcommit: 6aa55db5e1fe19d4d17886e0bfe140dbd186f8ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912221"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111877725"
 ---
 # <a name="create-bootstrapper-packages"></a>Vytváření balíčků bootstrapperu
-Instalační program je obecný instalační program, který se dá nakonfigurovat tak, aby zjišťoval a instaloval distribuovatelné součásti, jako jsou soubory Instalační služba systému Windows (*. msi*) a spustitelné programy. Instalační program je také označován jako zaváděcí nástroj. Je naprogramován sadou manifestů XML, které určují metadata pro správu instalace součásti.  Každá Redistribuovatelná součást, která se zobrazí v dialogovém okně **předpoklady** pro ClickOnce, je balíček zaváděcího nástroje. Balíček zaváděcího nástroje je skupina adresářů a souborů, které obsahují soubory manifestu, které popisují, jak by měla být požadovaná součást nainstalována.
+Instalační program je obecný instalační program, který lze nakonfigurovat pro detekci a instalaci distribuovatelných komponent, jako jsou soubory Instalační služba systému Windows (*.msi*) a spustitelné programy. Instalační program je také označován jako zaváděcí nástroj. Je naprogramován sadou manifestů XML, které určují metadata pro správu instalace součásti.  Každá Redistribuovatelná součást, která se zobrazí v dialogovém okně **předpoklady** pro ClickOnce, je balíček zaváděcího nástroje. Balíček zaváděcího nástroje je skupina adresářů a souborů, které obsahují soubory manifestu, které popisují, jak by měla být požadovaná součást nainstalována.
 
 Zaváděcí nástroj nejprve zjistí, zda některé z požadovaných součástí jsou již nainstalovány. Pokud požadavky nejsou nainstalovány, nejprve si zaváděcí nástroj zobrazí licenční smlouvy. Za druhé se po přijetí licenčních smluv koncovým uživatelem spustí instalace požadovaných součástí. V opačném případě, pokud jsou zjištěny všechny požadavky, zaváděcí nástroj pouze spustí instalační program aplikace.
 
@@ -63,20 +63,17 @@ CustomBootstrapperPackage
 Potom zkopírujte redistribuovatelné soubory do umístění složky zaváděcího nástroje. Další informace naleznete v tématu [How to: Create a lokalizovaný balíček zaváděcího nástroje](../deployment/how-to-create-a-localized-bootstrapper-package.md).
 
 ```
-*\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper*
-```
-
-nebo, pro starší verze sady Visual Studio
-
-```
-*\Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
+*\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages*
 ```
 
 nebo
 
 ```
-*\Program Files (x86)\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
+*<VS Install Path>\MSBuild\Microsoft\VisualStudio\BootstrapperPackages*
 ```
+
+>[!NOTE]
+>Cesta uvedená výše v cestě k instalaci sady Visual Studio funguje počínaje verzí sady Visual Studio 2019 Update 7.
 
 Umístění složky zaváděcího nástroje můžete také najít z hodnoty **cesty** v následujícím klíči registru:
 

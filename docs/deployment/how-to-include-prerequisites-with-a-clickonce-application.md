@@ -1,6 +1,6 @@
 ---
 title: Zahrnout požadavky (aplikace ClickOnce)
-description: Naučte se, jak získat instalační balíčky pro požadavky pro distribuci aplikace ClickOnce pro váš vývojový počítač.
+description: Zjistěte, jak získat instalační balíčky pro požadované součásti pro distribuci aplikace ClickOnce pro vývojový počítač.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,46 +10,49 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e7791308de670b209433708e69ec473780342858
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b41529182b7cca8cea8f94206601b7a818d35420
+ms.sourcegitcommit: 6aa55db5e1fe19d4d17886e0bfe140dbd186f8ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900636"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111877738"
 ---
-# <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Postupy: zahrnutí požadavků do aplikace ClickOnce
-Předtím, než budete moci distribuovat požadovaný software do [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, je třeba nejprve stáhnout instalační balíčky pro tyto požadavky do vašeho vývojového počítače. Když publikujete aplikaci a zvolíte možnost **Stáhnout požadavky ze stejného umístění jako moje aplikace**, dojde k chybě, pokud instalační balíčky nejsou ve složce **Packages** .
+# <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Postupy: Zahrnutí požadavků do aplikace ClickOnce
+Než budete moci distribuovat požadovaný software s aplikací, musíte nejdřív stáhnout instalační balíčky pro tyto požadavky [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] do vývojového počítače. Když publikujete aplikaci a zvolíte Stáhnout požadavky ze stejného umístění jako moje **aplikace,** dojde k chybě, pokud instalační balíčky nejsou ve složce **Packages.**
 
 > [!NOTE]
-> Postup přidání instalačního balíčku pro .NET Framework najdete v tématu [Průvodce nasazením .NET Framework pro vývojáře](/dotnet/framework/deployment/deployment-guide-for-developers).
+> Pokud chcete přidat instalační balíček pro .NET Framework, podívejte se [.NET Framework Průvodce nasazením pro vývojáře.](/dotnet/framework/deployment/deployment-guide-for-developers)
 
-## <a name="to-add-an-installer-package-by-using-packagexml"></a><a name="Package"></a> Postup přidání instalačního balíčku pomocí Package.xml
+## <a name="to-add-an-installer-package-by-using-packagexml"></a><a name="Package"></a> Přidání instalačního balíčku pomocí Package.xml
 
-1. V Průzkumníku souborů otevřete složku **balíčky** .
+1. V Průzkumník souborů otevřete složku **Packages** (Balíčky).
 
     Ve výchozím nastavení je cesta `%ProgramFiles(x86)%\Microsoft SDKs\ClickOnce Bootstrapper\Packages\` .
 
-2. Otevřete složku pro požadavek, který chcete přidat, a poté otevřete složku jazyka pro nainstalovanou verzi nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (například **EN** for English).
+>[!NOTE]
+> Počínaje verzí Visual Studio 2019 s aktualizací Update 7 budou zjištěny také balíčky bootstrapperu v cestě *<VS Install Path> \MSBuild\Microsoft\VisualStudio\BootstrapperPackages*.
 
-3. V programu Poznámkový blok otevřete soubor *Package.xml* .
+2. Otevřete složku požadované součásti, kterou chcete přidat, a pak otevřete složku jazyka pro nainstalovanou verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástroje (například **en** pro angličtinu).
 
-4. Vyhledejte element **Name** , který obsahuje `http://go.microsoft.com/fwlink` , a zkopírujte adresu URL. Zahrňte část **LinkId** .
+3. V Poznámkovém bloku otevřete *souborPackage.xml.*
+
+4. Vyhledejte **element Name,** který obsahuje `http://go.microsoft.com/fwlink` , a zkopírujte adresu URL. Zahrřte **část LinkID** .)
 
    > [!NOTE]
-   > Pokud žádný element **Name** neobsahuje `http://go.microsoft.com/fwlink` , otevřete soubor **Product.xml** v kořenové složce pro požadovanou součást a vyhledejte řetězec **fwlink** .
+   > Pokud žádný **element Name** neobsahuje , otevřeteProduct.xmlv kořenové složce požadované součásti a `http://go.microsoft.com/fwlink` vyhledejte řetězec **fwlink.** 
 
    > [!IMPORTANT]
-   > Některé požadované softwarové programy mohou mít několik instalačních balíčků (například v 32bitových nebo 64bitových systémech). Pokud více elementů **Name** obsahuje **fwlink**, je nutné zopakovat zbývající kroky pro každý z nich.
+   > Některé požadované softwarové programy mohou mít několik instalačních balíčků (například v 32bitových nebo 64bitových systémech). Pokud více **elementů** Název **obsahuje fwlink**, je nutné zbývající kroky opakovat pro každý z nich.
 
-5. Vložte adresu URL do panelu Adresa v prohlížeči a po zobrazení výzvy ke spuštění nebo uložení klikněte na **Uložit**.
+5. Vložte adresu URL do adresního řádku prohlížeče a po zobrazení výzvy ke spuštění nebo uložení zvolte **Uložit.**
 
     Tento krok stáhne instalační soubor do počítače.
 
 6. Zkopírujte soubor do kořenové složky požadovaného softwaru.
 
-    Například pro požadavek Instalační služba systému Windows 4,5 Zkopírujte soubor do složky *WindowsInstaller4_5 \Packages\* .
+    Například pro požadovaný .NET Framework 4.7.2 zkopírujte soubor do složky *\Packages\DotNetFX472.*
 
     Nyní můžete instalační balíček distribuovat spolu s aplikací.
 
 ## <a name="see-also"></a>Viz také
-- [Postupy: Instalace předpokladů s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
+- [Postupy: Instalace požadavků pomocí aplikace ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
