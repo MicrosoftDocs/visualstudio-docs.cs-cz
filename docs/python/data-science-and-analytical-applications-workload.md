@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: de86c2021a2abf3cd5346c684199e8f59e2d314e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2c12c8a0979ab081ea2f09faeeccdb5a8a9d2175
+ms.sourcegitcommit: 398b4d4e5ce0f978720f11990db05b209766aedc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839185"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112016304"
 ---
 # <a name="install-data-science-support-in-visual-studio"></a>Instalace podpory pro datové vědy v aplikaci Visual Studio
 
@@ -37,8 +37,8 @@ ms.locfileid: "99839185"
 Python a R jsou dva z primárních skriptovacích jazyků používaných pro datové vědy. Oba jazyky se snadno učí a podporují bohatý ekosystém balíčků. Tyto balíčky řeší široké spektrum scénářů, jako jsou získávání dat, čištění, školení modelů, nasazování a vykreslování. F # je také výkonný funkční jazyk .NET, který je vhodný pro širokou škálu úloh zpracování dat.
 ::: moniker-end
 
-::: moniker range="vs-2019"
-Python je primární skriptovací jazyk používaný pro datové vědy. Python se snadno učí a podporuje bohatý ekosystém balíčků. Tyto balíčky řeší široké spektrum scénářů, jako jsou získávání dat, čištění, školení modelů, nasazování a vykreslování. F # je také výkonný funkční jazyk .NET, který je vhodný pro širokou škálu úloh zpracování dat. (Pro jazyk R doporučujeme [Azure Notebooks](https://notebooks.azure.com).)
+::: moniker range=">=vs-2019"
+Python je primární skriptovací jazyk používaný pro datové vědy. Python se snadno učí a podporuje bohatý ekosystém balíčků. Tyto balíčky řeší široké spektrum scénářů, jako jsou získávání dat, čištění, školení modelů, nasazování a vykreslování. F # je také výkonný funkční jazyk .NET, který je vhodný pro širokou škálu úloh zpracování dat.)
 ::: moniker-end
 
 <!--Note link on the image because this one is large -->
@@ -48,7 +48,7 @@ Python je primární skriptovací jazyk používaný pro datové vědy. Python s
 
 Ve výchozím nastavení zatížení nainstaluje následující možnosti, které můžete upravit v části Souhrn pro úlohu v instalačním programu sady Visual Studio:
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 - Podpora jazyka F # pro Desktop
 - Python:
   - Podpora jazyka Python

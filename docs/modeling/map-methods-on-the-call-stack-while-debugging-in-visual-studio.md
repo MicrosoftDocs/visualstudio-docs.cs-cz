@@ -30,12 +30,12 @@ ms.author: joshuapa
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7196cf06e7d6bcde33bc1e4a6c5d0ebfac486576
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: faeee42f179351649ba73e06d25e5e948538392e
+ms.sourcegitcommit: 398b4d4e5ce0f978720f11990db05b209766aedc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946485"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112016317"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Mapování metod v zásobníku volání při ladění v sadě Visual Studio
 
@@ -51,7 +51,7 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 - [Visual Studio Enterprise](https://visualstudio.microsoft.com/downloads)
 
