@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 6cf29d16432b677c6e83ba4cbaedb39f0a8d1ed2
-ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
+ms.openlocfilehash: a338b6f62aee6ec342ef6a16abec71cb6a833bc0
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99572990"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042961"
 ---
 # <a name="how-to-use-google-test-for-c-in-visual-studio"></a>Použití Google Test pro jazyk C++ v aplikaci Visual Studio
 
@@ -21,7 +21,7 @@ V aplikaci Visual Studio 2017 a novějších jsou Google Test integrovány do in
 
 ![Nainstalovat Google Test](media/cpp-google-component.png)
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ## <a name="add-a-google-test-project-in-visual-studio-2019"></a>Přidání projektu Google Test v aplikaci Visual Studio 2019
 

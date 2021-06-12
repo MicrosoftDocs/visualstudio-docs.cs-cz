@@ -2,17 +2,17 @@
 title: Připojení k projektům v Team Exploreru
 description: Naučte se používat Team Explorer v aplikaci Visual Studio pro práci se členy týmu pro vývoj a správu projektů.
 ms.custom: SEO-VS-2020
-ms.date: 03/31/2021
+ms.date: 06/11/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 78a71911bb4334e04a085d91ff51238d34981beb
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 4d3d2c005f32aaebacc251414218f5ae03edf546
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216602"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112043013"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Team Exploreru
 
@@ -27,7 +27,7 @@ Použijte okno **Team Explorer** Tool k koordinaci vašeho kódu s ostatními č
 Team Explorer připojuje sadu Visual Studio k úložištím verzí Team Foundation (TFVC) a k projektům hostovaným v [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) nebo v místní [Azure DevOps Server](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) (dříve označované jako TFS). Můžete spravovat zdrojový kód, pracovní položky a sestavení.
 
 > [!IMPORTANT]
-> S nejnovější verzí sady Visual Studio 2019 [**verze 16,8**](/visualstudio/releases/2019/release-notes/)je nyní ve výchozím nastavení standardně nastaveno nové prostředí pro řízení verzí Git. Pokud se chcete dozvědět víc o tom, jak porovnává Team Explorer, podívejte se na [**Souběžné porovnání Gitu a Team Explorer**](git-team-explorer-feature-comparison.md) stránky.
+> S vydáním sady Visual Studio 2019 [**verze 16,8**](/visualstudio/releases/2019/release-notes-history)je prostředí pro řízení verzí Git ve výchozím nastavení zapnuté. Pokud se chcete dozvědět víc o tom, jak porovnává Team Explorer, podívejte se na [**Souběžné porovnání Gitu a Team Explorer**](../version-control/git-team-explorer-feature-comparison.md) stránky.
 >
 > Pokud ale dáváte přednost i nadále používat Team Explorer, přejděte do části **nástroje** > **Možnosti** > **prostředí** > **verze Preview** a potom zaškrtněte políčko **nové uživatelské prostředí Git** .
 
@@ -95,13 +95,13 @@ Způsob použití Team Explorer pro připojení k projektu závisí na verzi sad
 
       ![Snímek obrazovky s oznámením o řešeních a složkách od Team Explorer ve Visual Studiu 2019 verze 16,7 a starší](../get-started/media/open-proj-repo-solutions-folders.png)
 
-   Pokud v úložišti nemáte soubor řešení, zobrazí se zpráva "žádná řešení nalezena". Můžete však dvakrát kliknout na libovolný soubor v nabídce složka a otevřít ho v editoru kódu sady Visual Studio.
+   Pokud v úložišti nemáte soubor řešení, zobrazí se zpráva "žádná řešení nalezena&quot;. Můžete však dvakrát kliknout na libovolný soubor v nabídce složka a otevřít ho v editoru kódu sady Visual Studio.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range=&quot;vs-2017&quot;
 
-![Team Explorer domovskou stránku v aplikaci Visual Studio](media/team-explorer/team-explorer.png "Team Explorer – Domovská stránka v aplikaci Visual Studio.")
+![Team Explorer domovskou stránku v aplikaci Visual Studio](media/team-explorer/team-explorer.png &quot;Team Explorer – Domovská stránka v aplikaci Visual Studio.")
 
 > [!TIP]
 > Pokud otevřete Visual Studio a **Team Explorer** se nezobrazí, otevřete ho tak, že v řádku nabídek kliknete na **Zobrazit**  >  **Team Explorer** nebo stisknete **CTRL** + **&#92;**, **CTRL** + **M**.

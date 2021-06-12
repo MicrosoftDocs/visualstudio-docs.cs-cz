@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3fa99594f42e7e9c3739a8a8d57abf226bc04c
-ms.sourcegitcommit: 66951f064d601b1d7a2253cb9b250380807e12db
+ms.openlocfilehash: 868c02091814fe49ea0224190c7d205e8b67c42b
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103483190"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042974"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Specifikátory formátu pro C++ v ladicím programu sady Visual Studio
 
@@ -90,37 +90,38 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |**s8b**|Řetězec UTF-8 (žádné uvozovky)|\<location> Hello World|Ahoj světe|
 |Pá|Řetězec kódování Unicode (UTF-16) (s uvozovkami)|\<location> L "Hello World"|L "Hello World"<br /><br /> u "Hello World"|
 |jednotk|Řetězec kódování Unicode (UTF-16) (žádné uvozovky)|\<location> L "Hello World"|Ahoj světe|
-|bstr|Binární řetězec BSTR (s uvozovkami)|\<location> L "Hello World"|L "Hello World"|
-|ENV|Blok prostředí (řetězec zakončený znakem null)|\<location>L "=:: =:: \\ \\ "|L "=:: =:: \\ \\ \\ 0 = c: = c: \\ \\ Windows \\ \\ system32 \\ 0ALLUSERSPROFILE =...|
-|**s32**|Řetězec UTF-32 (s uvozovkami)|\<location> U "Hello World"|U "Hello World"|
-|**s32b**|Řetězec UTF-32 (žádné uvozovky)|\<location> U "Hello World"|Ahoj světe|
+|bstr|Binární řetězec BSTR (s uvozovkami)|\<location> L"hello world"|L"hello world"|
+|Env|Blok prostředí (řetězec ukončený dvojitou hodnotou null)|\<location>L"=::=:: \\ \\ "|L"=::=:: \\ \\ \\ 0=C:=C: \\ \\ windows \\ \\ system32 \\ 0ALLUSERSPROFILE=...|
+|**s32**|Řetězec UTF-32 (s uvozovkami)|\<location> U"hello world"|U"hello world"|
+|**s32b**|Řetězec UTF-32 (bez uvozovek)|\<location> U"hello world"|Ahoj světe|
 |**en**|enum|Sobota (6)|Sobota|
-|**hv**|Typ ukazatele – určuje, že hodnota kontrolovaného ukazatele je výsledkem přidělení haldy pole, například `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
-|**ná**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
-|**c**|Zobrazí pouze informace základní třídy, ignorování odvozených tříd.|`(Shape*) square` zahrnuje základní třídu a informace o odvozených třídách.|Zobrazí jenom informace o základní třídě.|
-|hod|Kód chyby HRESULT nebo Win32. Tento specifikátor již není potřeba pro HRESULTs, protože ladicí program je dekóduje automaticky.|S_OK|S_OK|
-|wc|Příznak třídy okna|0x0010|WC_DEFAULTCHAR|
-|WM|Čísla zpráv systému Windows|16|WM_CLOSE|
-|Nr|Potlačit položku nezpracovaného zobrazení|
-|nvo|Zobrazit položku nezpracovaného zobrazení pro číselné hodnoty|
-|!|nezpracovaný formát, který ignoruje přizpůsobení zobrazení datových typů|\<customized representation>|4|
+|**Hv**|Typ ukazatele – označuje, že prověřovaná hodnota ukazatele je výsledkem přidělení haldy pole, například `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
+|**na**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member=value...}|{member=value...}|
+|**Nd**|Zobrazí pouze informace o základní třídě a ignoruje odvozené třídy.|`(Shape*) square` obsahuje informace o základní třídě a odvozené třídě.|Zobrazí pouze informace o základní třídě.|
+|hod|Kód chyby HRESULT nebo Win32. Tento specifikátor už není pro HRESULT potřeba, protože je ladicí program dekóduje automaticky.|S_OK|S_OK|
+|Wc|Příznak třídy okna|0x0010|WC_DEFAULTCHAR|
+|Wm|Čísla zpráv Windows|16|WM_CLOSE|
+|Nr|Potlačení položky Nezpracované zobrazení|
+|nvo|Zobrazit položku "Nezpracované zobrazení" jenom pro číselné hodnoty|
+|!|nezpracovaný formát, ignorování přizpůsobení zobrazení datových typů|\<customized representation>|4|
+|Zpracování|Zobrazí informace o popisovači win32.|0x000000000000009c| Zobrazí užitečné informace o popisovači, jako je ID vlákna atd. |
 
 ::: moniker-end
 
 ::: moniker range="vs-2017" 
 
-|Specifikátor|Formát|Původní hodnota kukátka|Zobrazená hodnota|
+|Specifikátor|Formát|Původní hodnota hodinek|Zobrazená hodnota|
 |---------------|------------|--------------------------|---------------------|
-|d|desítkové celé číslo|0x00000066|102|
-|o|osmičkové celé číslo bez znaménka|0x00000066|000000000146|
-|x<br /><br /> **h**|šestnáctkové celé číslo|102|0xcccccccc|
-|×<br /><br /> **Y**|šestnáctkové celé číslo|102|0xCCCCCCCC|
-|c|jeden znak|0x0065, c|101 "e"|
-|s|const char * String (s uvozovkami)|\<location> Hello World|Hello World|
-|**SB**|const char * String (žádné uvozovky)|\<location> Hello World|Ahoj světe|
-|S8|Řetězec UTF-8|\<location> "Jedná se o kávové konvičku UTF-8, ̃ •"|"Toto je ☕ v kávě v kódování UTF-8"|
-|**s8b**|Řetězec UTF-8 (žádné uvozovky)|\<location> Hello World|Ahoj světe|
-|Pá|Řetězec kódování Unicode (UTF-16) (s uvozovkami)|\<location> L "Hello World"|L "Hello World"<br /><br /> u "Hello World"|
+|d|decimal integer|0x00000066|102|
+|o|unsigned octal integer|0x00000066|000000000146|
+|x<br /><br /> **h**|hexadecimální celé číslo|102|0xcccccccc|
+|×<br /><br /> **H**|hexadecimální celé číslo|102|0xCCCCCCCC|
+|c|jeden znak|0x0065, c|101 'e'|
+|s|const char* string (s uvozovkami)|\<location> "hello world"|"hello world"|
+|**Sb**|const char* řetězec (bez uvozovek)|\<location> "hello world"|Ahoj světe|
+|s8|Řetězec UTF-8|\<location> "This is a UTF-8 coffee cup ̃•" (Toto je UTF-8 coffee cup ̃•)|"This is a UTF-8 coffee cup ☕" (Toto je šálek kávy UTF-8 ☕)|
+|**s8b**|Řetězec UTF-8 (bez uvozovek)|\<location> "hello world"|Ahoj světe|
+|Su|Řetězec Unicode (kódování UTF-16) (s uvozovkami)|\<location> L"hello world"|L"hello world"<br /><br /> u "Hello World"|
 |jednotk|Řetězec kódování Unicode (UTF-16) (žádné uvozovky)|\<location> L "Hello World"|Ahoj světe|
 |bstr|Binární řetězec BSTR (s uvozovkami)|\<location> L "Hello World"|L "Hello World"|
 |ENV|Blok prostředí (řetězec zakončený znakem null)|\<location>L "=:: =:: \\ \\ "|L "=:: =:: \\ \\ \\ 0 = c: = c: \\ \\ Windows \\ \\ system32 \\ 0ALLUSERSPROFILE =...|

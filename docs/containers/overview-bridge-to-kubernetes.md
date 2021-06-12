@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: 1709785c63bd4fbcd702fbcacfe59dddcb71d1b3
-ms.sourcegitcommit: 0135fc6ffa38995cc9e6ab05fa265758890d2e15
+ms.openlocfilehash: 838589e0dd81232de25b88989d621a07fb22f972
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107526157"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112043052"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Jak funguje Přemostění na Kubernetes
 
@@ -52,6 +52,9 @@ Kromě toho přemostění na Kubernetes poskytuje způsob, jak replikovat promě
 
 > [!NOTE]
 > Po dobu trvání připojení ke clusteru (plus dalších 15 minut) spustí most na Kubernetes proces s názvem *EndpointManager* s oprávněními správce v místním počítači.
+
+> [!NOTE]
+> Můžete ladit paralelně s více službami, ale musíte spustit tolik instancí sady Visual Studio jako služby, které chcete ladit. Ujistěte se, že vaše služby naslouchají na různých portech místně, a pak je nakonfigurujte a ladit samostatně. V tomto scénáři není izolace podporována.
 
 ## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>Další konfigurace pomocí KubernetesLocalProcessConfig. yaml
 
@@ -151,11 +154,11 @@ Most na Kubernetes má následující omezení:
 
 ### <a name="bridge-to-kubernetes-and-clusters-with-azure-dev-spaces-enabled"></a>Most do Kubernetes a clusterů s povoleným Azure Dev Spaces
 
-Most nelze použít pro Kubernetes v clusteru s povoleným Azure Dev Spaces. Pokud chcete použít přemostění na Kubernetes v clusteru s povoleným Azure Dev Spaces, je nutné před připojením ke clusteru zakázat Azure Dev Spaces.
+V clusteru s povolenými Bridge to Kubernetes nemůžete Azure Dev Spaces úložiště. Pokud chcete použít funkci Bridge to Kubernetes v clusteru s povoleným Azure Dev Spaces, musíte před připojením ke clusteru zakázat Azure Dev Spaces clusteru.
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokud chcete začít používat přemostění na Kubernetes pro připojení k vašemu místnímu počítači pro vývoj ke svému clusteru, přečtěte si téma [použití mostu na Kubernetes](bridge-to-kubernetes.md).
+Pokud chcete začít používat Bridge to Kubernetes pro připojení k místnímu vývojovému počítači ke clusteru, podívejte se na použití [Bridge to Kubernetes](bridge-to-kubernetes.md).
 
 [asp-net-header]: https://www.nuget.org/packages/Microsoft.AspNetCore.HeaderPropagation/
 [azds-cli]: /azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools

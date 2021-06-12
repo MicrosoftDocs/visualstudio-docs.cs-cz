@@ -9,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 2d145e1383e8f6c0d7c25ae72232fdbe2a8d703d
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: cfdc580b94760cb0c5160918210ba6c3dd8fa2f6
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727538"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042922"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Postupy: zápis testů jednotek pro knihovny DLL C++
 
@@ -86,7 +86,7 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL jazyka C++ pomocí met
 
 ## <a name="create-a-dll-project"></a><a name="create_dll_project"></a> Vytvoření projektu knihovny DLL
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Visual Studio 2019.
 
@@ -215,18 +215,18 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
     > [!TIP]
     > Doporučujeme neměnit testy, které byly úspěšné. Místo toho přidejte nový test, aktualizujte kód tak, aby byl test úspěšný, a poté přidejte další test atd.
     >
-    > Když uživatelé změní své požadavky, zakažte testy, které už nejsou správné. Zapište nové testy a zpřístupněte je po jednom, a to stejným přírůstkovým způsobem.
+    > Když uživatelé změní své požadavky, zakažte testy, které už nejsou správné. Napište nové testy a zajistěte, aby postupně fungovaly postupně.
 
-2. Sestavte řešení a potom v **Průzkumníku testů** zvolte možnost **Spustit vše**.
+2. Sestavte řešení a pak v **Průzkumníku testů** zvolte **Spustit vše.**
 
-     Nový test se nezdařil.
+     Nový test selže.
 
-     ![RangeTest se nezdařila](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
+     ![RangeTest selže](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
-    > Ověřte, že se každý test nezdařil okamžitě po jeho zápisu. To pomáhá vyhnout se jednoduchému omylu při psaní testu, který se nikdy nezdařil.
+    > Ověřte, že každý test selže ihned po jeho napsání. To vám pomůže vyhnout se jednoduché chybě při psaní testu, který nikdy neskoní.
 
-3. Vylepšete svůj kód DLL tak, aby nový test prošl:
+3. Vylepšete kód knihovny DLL tak, aby nový test projde:
 
     ```cpp
     #include <math.h>
@@ -245,18 +245,18 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
     }
     ```
 
-4. Sestavte řešení a potom v **Průzkumníku testů** zvolte možnost **Spustit vše**.
+4. Sestavte řešení a pak v **Průzkumníku testů** zvolte **Spustit vše.**
 
-     Oba testy proběhnou.
+     Oba testy projdou.
 
-     ![Průzkumník testů jednotek &#45; test rozsahu úspěšný](../test/media/utecpp12.png)
+     ![Průzkumník testů jednotek &#45; testu rozsahu testů](../test/media/utecpp12.png)
 
     > [!TIP]
-    > Vývoj kódu přidáním testů po jednom. Ujistěte se, že všechny testy proběhnou po každé iteraci.
+    > Vývoj kódu přidáváním testů po jednom Ujistěte se, že všechny testy projdou po každé iteraci.
 
 ## <a name="debug-a-failing-test"></a><a name="debug"></a> Ladění neúspěšného testu
 
-1. Přidat další test:
+1. Přidejte další test:
 
     ```cpp
     #include <stdexcept>
@@ -289,23 +289,23 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
     }
     ```
 
-2. Sestavte řešení a vyberte **Spustit vše**.
+2. Sestavte řešení a zvolte **Spustit vše.**
 
-3. Otevřete (nebo dvakrát klikněte) na neúspěšný test.
+3. Otevřete neúspěšný test (nebo na něj dvakrát klikněte).
 
-     Kontrolní výraz neúspěšného zpracování je zvýrazněný. Zpráva o selhání je zobrazena v podokně podrobností v **Průzkumníku testů**.
+     Kontrolní výraz, který selhal, je zvýrazněný. Zpráva o selhání se zobrazí v podokně podrobností **Průzkumníka testů.**
 
-     ![NegativeRangeTests se nezdařilo](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
+     ![NegativeRangeTests selhalo](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
-4. Chcete-li zjistit, proč se test nezdařil, postupujte podle této funkce:
+4. Pokud chcete zobrazit, proč test selže, projděte funkci :
 
     1. Nastavte zarážku na začátku funkce SquareRoot.
 
-    2. V místní nabídce neúspěšného testu vyberte možnost **ladit vybrané testy**.
+    2. V místní nabídce neúspěšných testů zvolte **Ladit vybrané testy.**
 
-         Když se běh zastaví na zarážce, krokovat kód.
+         Když se spuštění zastaví na zarážce, prohlédněte si kód.
 
-5. Vložte kód do funkce, kterou vyvíjíte:
+5. Do funkce, kterou vyvíjíte, vložte kód:
 
     ```cpp
 
@@ -321,25 +321,25 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
     ```
 
-6. Všechny testy jsou nyní passované.
+6. Všechny testy teď projdou.
 
-   ![Všechny testy Pass](../test/media/ute_ult_alltestspass.png)
+   ![Všechny testy jsou v pořádku.](../test/media/ute_ult_alltestspass.png)
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Pokud jednotlivé testy neobsahují žádné závislosti, které brání v jejich spuštění v libovolném pořadí, zapněte paralelní spuštění testu pomocí ![ snímku obrazovky s přepínačem paralelního spuštění testu na panelu nástrojů Průzkumníka testů. Pokud je vybráno toto tlačítko, testy budou spuštěny paralelně.](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+> Pokud jednotlivé testy nemají žádné závislosti, které by zabránily jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů pomocí přepínače Snímek obrazovky s přepínacím tlačítkem paralelního spuštění testu na panelu nástrojů ![ Průzkumníka testů. Když je toto tlačítko vybrané, testy poběží paralelně.](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může znatelně zkrátit dobu, po které se spustí všechny testy.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
 > [!TIP]
-> Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní spuštění testů v nabídce nastavení na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+> Pokud jednotlivé testy nemají žádné závislosti, které by zabránily jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů v nabídce nastavení na panelu nástrojů. To může znatelně zkrátit dobu, po které se spustí všechny testy.
 
 ::: moniker-end
 
-## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a> Refaktoring kódu bez změny testů
+## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a> Refaktoring kódu beze změny testů
 
 1. Zjednodušení centrálního výpočtu ve funkci SquareRoot:
 
@@ -351,26 +351,26 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
     ```
 
-2. Sestavte řešení a vyberte **Spustit vše**, abyste se ujistili, že jste nepředstavili chybu.
+2. Sestavte řešení a zvolte **Spustit vše,** abyste se ujistili, že jste nezaváděli chybu.
 
     > [!TIP]
-    > Dobrá sada testů jednotek poskytuje jistotu, že jste při změně kódu nepředstavili chyby.
+    > Dobrá sada testů jednotek dává jistotu, že jste při změně kódu nezavázaní chyby.
     >
-    > Udržujte refaktoring odděleně od jiných změn.
+    > Udržujte refaktoring oddělený od ostatních změn.
 
 ## <a name="next-steps"></a>Další kroky
 
-- **Oddělení.** Většina knihoven DLL je závislá na jiných subsystémech, jako jsou databáze a jiné knihovny DLL. Tyto ostatní komponenty jsou často vyvíjeny paralelně. Aby bylo možné provádět testování jednotek i v případě, že ostatní komponenty ještě nejsou k dispozici, je nutné nahradit ho přípravou nebo
+- **Izolace.** Většina knihoven DLL závisí na jiných subsystémech, jako jsou databáze a další knihovny DLL. Tyto další komponenty se často vyvíjí paralelně. Pokud chcete umožnit testování částí, zatímco ostatní komponenty ještě nejsou k dispozici, musíte nahradit napodobování nebo
 
-- **Ověřovací testy sestavení.** V nastavených intervalech můžete mít testy provedené na serveru sestavení vašeho týmu. Tím je zajištěno, že chyby nebudou zavedeny, když je integrována práce několika členů týmu.
+- **Sestavení ověřovacích testů.** Testy můžete provádět na sestav serveru sestavení vašeho týmu v nastavených intervalech. Tím se zajistí, že při integrované práci několika členů týmu nebudou zavedeny chyby.
 
-- **Testy se změnami.** Můžete určit, že některé testy jsou provedeny předtím, než každý člen týmu zkontroluje kód do správy zdrojového kódu. Obvykle je to podmnožina kompletní sady ověřovacích testů sestavení.
+- **Kontrolní testy.** Můžete nastavit, aby se některé testy provedly předtím, než každý člen týmu zkontroluje kód do správy zdrojového kódu. Obvykle se jedná o podmnožinu kompletní sady ověřovacích testů sestavení.
 
-   Můžete také pověřit minimální úroveň pokrytí kódu.
+   Můžete také nastavit minimální úroveň pokrytí kódu.
 
 ## <a name="see-also"></a>Viz také
 
-- [Přidat testy částí do stávajících aplikací C++](../test/how-to-use-microsoft-test-framework-for-cpp.md)
+- [Přidání testů jednotek do existujících aplikací C++](../test/how-to-use-microsoft-test-framework-for-cpp.md)
 - [Používání atributu Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)
 - [Návod: Vytvoření a použití dynamické knihovny DLL (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
