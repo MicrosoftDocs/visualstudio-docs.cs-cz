@@ -1,5 +1,5 @@
 ---
-title: Informace o řešeních a projektech
+title: Co jsou projekty řešení sady Visual Studio &amp; ?
 description: Přečtěte si o projektech a řešeních sady Visual Studio, způsobu vytváření nových projektů ze šablony a o tom, jak zobrazit & spravovat projekty v Průzkumník řešení.
 ms.custom: SEO-VS-2020, contperf-fy21q2
 ms.date: 12/31/2020
@@ -22,16 +22,16 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 473c3ca0e4a9998d6a320e384bf39b4b5e037085
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eaba06b2da73fc0bc80219ce58baff49a760ebc0
+ms.sourcegitcommit: 529e1716924c3e1ac8a750550b996ad3c79f353b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878497"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112066966"
 ---
-# <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
+# <a name="what-are-solutions-and-projects-in-visual-studio"></a>Co jsou řešení a projekty v aplikaci Visual Studio?
 
-Tato stránka popisuje koncept *projektu* a *řešení* v aplikaci Visual Studio. Také stručně pokrývá okno Průzkumník řešení nástrojů a postup vytvoření nového projektu.
+V tomto článku se dozvíte, co je *projekt* a *řešení* v aplikaci Visual Studio. Také stručně pokrývá okno Průzkumník řešení nástrojů a postup vytvoření nového projektu.
 
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [projekty a řešení v Visual Studio pro Mac](/visualstudio/mac/projects-and-solutions).
