@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: efd75e79d7c015539dfe045f7b0a3b266cfb4756
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26bcf0fa4d56d4e8df100a0d3e65904d065d8757
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923755"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254872"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Jak vytvářet a spravovat prostředí Pythonu v aplikaci Visual Studio
 
@@ -151,7 +151,7 @@ Prostředí conda je vytvořeno pomocí `conda` nástroje nebo s integrovanou sp
 
 ::: moniker range=">=vs-2019"
 
-1. V okně **prostředí Pythonu** vyberte **+ Přidat prostředí** (nebo na panelu nástrojů Python), ve kterém se otevře dialogové okno **Přidat prostředí** . V tomto dialogovém okně vyberte kartu **prostředí conda** :
+1. Vyberte **Přidat prostředí...** v okně **prostředí Pythonu** (nebo na panelu nástrojů Python), ve kterém se otevře dialogové okno **Přidat prostředí** . V tomto dialogovém okně vyberte kartu **prostředí conda** :
 
     ![Karta prostředí conda v dialogovém okně Přidat prostředí](media/environments/environments-conda-1-2019.png)
 
@@ -160,7 +160,7 @@ Prostředí conda je vytvořeno pomocí `conda` nástroje nebo s integrovanou sp
     | Pole | Description |
     | --- | --- |
     | Project | Projekt, ve kterém má být prostředí vytvořeno (Pokud máte více projektů ve stejném řešení sady Visual Studio). |
-    | Název | Název prostředí conda |
+    | Name | Název prostředí conda |
     | Přidat balíčky z | Vyberte **soubor prostředí** , pokud máte soubor *Environment. yml* popisující vaše závislosti, nebo vyberte **jeden nebo více názvů balíčků Anaconda** a v níže uvedeném poli uveďte aspoň jeden balíček Pythonu nebo verzi Pythonu. Seznam balíčků instruuje Conda, aby vytvořil prostředí Pythonu. K instalaci nejnovější verze Pythonu použijte `python` ; k instalaci konkrétní verze použijte `python=,major>.<minor>` jako v `python=3.7` . Pomocí tlačítka balíček můžete také vybrat verze Pythonu a běžné balíčky z řady nabídek. |
     | Nastavit jako aktuální prostředí | Aktivuje nové prostředí ve vybraném projektu po vytvoření prostředí. |
     | Nastavit jako výchozí prostředí pro nové projekty | Automaticky nastaví a aktivuje prostředí conda v jakémkoli novém projektu vytvořeném v sadě Visual Studio. Tato možnost je stejná jako při použití možnosti **nastavit toto výchozí prostředí pro nové projekty** v okně **prostředí Pythonu** . |
@@ -231,7 +231,7 @@ Pomocí následujících kroků můžete identifikovat prostředí, které je na
 
 ::: moniker range=">=vs-2019"
 
-1. V okně **prostředí Pythonu** vyberte **+ Přidat prostředí** (nebo na panelu nástrojů Python), ve kterém se otevře dialogové okno **Přidat prostředí** . V tomto dialogovém okně vyberte kartu **existující prostředí** :
+1. Vyberte **Přidat prostředí...** v okně **prostředí Pythonu** (nebo na panelu nástrojů Python), ve kterém se otevře dialogové okno **Přidat prostředí** . V tomto dialogovém okně vyberte kartu **existující prostředí** :
 
     ![Existující karta prostředí v dialogovém okně Přidat prostředí](media/environments/environments-custom-1-2019.png)
 

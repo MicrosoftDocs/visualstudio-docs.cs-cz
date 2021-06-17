@@ -19,16 +19,19 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 236efe20ee652e2690cedf36843d539bf8a9cc46
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 85921343ac52c066735d607ce32635e953cf2e6a
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850292"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254784"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>Návrh a zobrazení tříd a typů pomocí Návrhář tříd
 
 Navrhněte, Vizualizujte a refaktorujte třídy a další typy v kódu pomocí **Návrhář tříd** v aplikaci Visual Studio. Pomocí diagramů tříd můžete vytvářet a upravovat třídy v projektu C#, Visual Basic nebo C++. Můžete také použít diagramy tříd pro lepší pochopení struktury projektu nebo reorganizace kódu.
+
+>[!NOTE]
+>Návrhář tříd není v projektech .NET Core k dispozici.
 
 ## <a name="what-you-can-do-with-class-diagrams"></a>Co můžete dělat s diagramy tříd
 

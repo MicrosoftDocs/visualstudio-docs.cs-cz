@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a66268d5d6bd200eb3ef0e2c8bcf53471e3a735f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 13080f69de9a8bfc6b1da35a7126f1f0c89a64c7
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839160"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254859"
 ---
 # <a name="step-4-run-code-in-the-debugger"></a>Krok 4: spuštění kódu v ladicím programu
 
@@ -50,6 +50,8 @@ Kromě správy projektů, poskytování bohatých možností úprav a **interakt
     > Chcete-li po dokončení programu zavřít okno výstup automaticky, vyberte   >  příkaz nabídky **Možnosti** nástrojů, rozbalte uzel **Python** , vyberte možnost **ladění** a potom zrušte zaškrtnutí políčka **při normálním ukončení procesu počkat na vstup**:
     >
     > ![Možnost ladění Pythonu pro zavření okna výstupu při normálním ukončení programu](media/vs-getting-started-python-22-debugging5.png)
+    >
+    > Další informace o ladění, včetně úloh, jako je například způsob nastavení argumentů skriptu a interpretu, najdete v tématu [ladění kódu Pythonu](debugging-python-in-visual-studio.md).
 
 1. Nastavte zarážku pro `for` příkaz tak, že kliknete jednou na šedé okraj na tento řádek nebo umístíte blikající kurzor na tento řádek a použijete příkaz **ladit**  >  **přepínací zarážku** (**F9**). Na šedém okraji se zobrazí červená tečka pro indikaci zarážky (jak je uvedeno u šipky níže):
 

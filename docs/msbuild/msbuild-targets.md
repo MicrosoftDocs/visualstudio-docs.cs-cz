@@ -1,6 +1,6 @@
 ---
 title: Cíle nástroje MSBuild | Microsoft Docs
-description: Naučte se, jak nástroj MSBuild používá cíle pro seskupení úkolů a umožňuje procesu sestavení přihlédnout do menších jednotek.
+description: Zjistěte, jak nástroj MSBuild používá cíle k seskupení úloh a umožnění, aby byl proces sestavení začten do menších jednotek.
 ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: conceptual
@@ -12,20 +12,20 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2958b45fc64383fde7d762d4c20887b3f58669d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 294877e4884ae7b89f1e9d6f015c5c9213eba52d
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878393"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254820"
 ---
 # <a name="msbuild-targets"></a>Cíle nástroje MSBuild
 
-Cílí na seskupení úkolů v určitém pořadí a umožňuje procesu sestavení připustit je menší jednotky. Například jeden cíl může odstranit všechny soubory ve výstupním adresáři pro přípravu sestavení, zatímco další zkompiluje vstupy pro projekt a umístí je do prázdného adresáře. Další informace o úlohách najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
+Cíle seskupují úkoly v konkrétním pořadí a umožňují, aby se proces sestavení zohlednil v menších jednotkách. Jeden cíl může například odstranit všechny soubory ve výstupním adresáři, aby se připravil na sestavení, zatímco jiný zkompiluje vstupy pro projekt a umístí je do prázdného adresáře. Další informace o úlohách najdete v tématu [Úlohy](../msbuild/msbuild-tasks.md).
 
-## <a name="declare-targets-in-the-project-file"></a>Deklarovat cíle v souboru projektu
+## <a name="declare-targets-in-the-project-file"></a>Deklarace cílů v souboru projektu
 
- Cíle jsou deklarovány v souboru projektu s [cílovým](../msbuild/target-element-msbuild.md) elementem. Například následující kód XML vytvoří cíl s názvem konstrukce, který pak zavolá úlohu CSC s typem položky kompilace.
+ Cíle jsou deklarovány v souboru projektu s [elementem Target.](../msbuild/target-element-msbuild.md) Například následující KÓD XML vytvoří cíl s názvem Konstruktor, který pak zavolá úlohu Csc s typem položky Compile.
 
 ```xml
 <Target Name="Construct">
@@ -33,7 +33,7 @@ Cílí na seskupení úkolů v určitém pořadí a umožňuje procesu sestaven�
 </Target>
 ```
 
- Podobně jako vlastnosti MSBuild lze cíle předefinovat. Třeba
+ Podobně jako vlastnosti nástroje MSBuild je možné cíle znovu definovat. Třeba
 
 ```xml
 <Target Name="AfterBuild" >
@@ -44,15 +44,25 @@ Cílí na seskupení úkolů v určitém pořadí a umožňuje procesu sestaven�
 </Target>
 ```
 
- Pokud se `AfterBuild` spustí, zobrazí se pouze "druhý výskyt", protože druhá definice `AfterBuild` skryje první.
+Při spuštění se zobrazí pouze "Druhý výskyt", protože druhá `AfterBuild` definice `AfterBuild` skryje první.
 
- MSBuild je závislý na pořadí importu a poslední definice cíle je použitá definice.
+Nástroj MSBuild je závislý na pořadí importu a poslední definicí cíle je použitá definice. Pokud se pokusíte znovu definovat cíl, nebude se projeví, pokud je integrovaný cíl definován později. V případě projektů, které používají sadu SDK, není pořadí definice nutně zřejmé, protože importy cílů se implicitně přidávají za konec souboru projektu.
+
+Pokud tedy chcete rozšířit chování existujícího cíle, vytvořte nový cíl a `BeforeTargets` zadejte (nebo `AfterTargets` podle potřeby) následujícím způsobem:
+
+```xml
+<Target Name="MessageBeforePublish" BeforeTargets="BeforePublish">
+  <Message Text="BeforePublish" Importance="high" />
+</Target>
+```
+
+Zadejte pro cíl popisný název, stejně jako funkci v kódu.
 
 ## <a name="target-build-order"></a>Pořadí sestavení cílů
 
- Cíle musí být seřazené, pokud vstup na jeden cíl závisí na výstupu jiného cíle.
+ Cíle musí být seřazeny, pokud vstup do jednoho cíle závisí na výstupu jiného cíle.
  
- Existuje několik způsobů, jak zadat pořadí, ve kterém se cíle spouštějí.
+ Existuje několik způsobů, jak určit pořadí spouštění cílů.
 
 - Počáteční cíle
 
@@ -62,15 +72,15 @@ Cílí na seskupení úkolů v určitém pořadí a umožňuje procesu sestaven�
 
 - Cílové závislosti
 
-- `BeforeTargets` a `AfterTargets` (MSBuild 4,0)
+- `BeforeTargets` a `AfterTargets` (MSBuild 4.0)
 
-Cíl se nikdy nespustí dvakrát během jednoho sestavení, a to i v případě, že na něm závisí další cíl sestavení. Po spuštění cíle se jeho příspěvek k sestavení dokončí.
+Cíl se nikdy během jednoho sestavení spustí dvakrát, i když na tom závisí následný cíl v sestavení. Po spuštění cíle se dokončí jeho příspěvek k sestavení.
 
-Podrobnosti a další informace o cílové objednávce sestavení naleznete v tématu [cílové pořadí sestavení](../msbuild/target-build-order.md).
+Podrobnosti a další informace o cílovém pořadí sestavení najdete v tématu [Cílové pořadí sestavení](../msbuild/target-build-order.md).
 
-## <a name="target-batching"></a>Dávkování cíle
+## <a name="target-batching"></a>Dávkování cílů
 
-Cílový element může mít `Outputs` atribut, který určuje metadata ve formě%( \<Metadata> ). V takovém případě nástroj MSBuild spustí cíl jednou pro každou jedinečnou hodnotu metadat, seskupení nebo dávkování položek, které mají tuto hodnotu metadat. Třeba
+Cílový prvek může mít atribut `Outputs` , který určuje metadata ve tvaru %( \<Metadata> ). Pokud ano, nástroj MSBuild spustí cíl jednou pro každou jedinečnou hodnotu metadat, seskupí nebo "dávkování" položek, které mají hodnotu metadat. Třeba
 
 ```xml
 <ItemGroup>
@@ -91,24 +101,24 @@ Cílový element může mít `Outputs` atribut, který určuje metadata ve form�
 </Target>
 ```
 
- dávkuje referenční položky podle jejich metadat RequiredTargetFramework. Výstup cíle vypadá takto:
+ batchs the Reference items by their RequiredTargetFramework metadata. Výstup cíle vypadá takhle:
 
 ```
 Reference: 3.5;3.5
 Reference: 4.0
 ```
 
- Cílové dávkové zpracování se v reálných sestaveních používá zřídka. Dávkování úloh je běžnější. Další informace najdete v tématu [dávkování](../msbuild/msbuild-batching.md).
+ Dávkování cílů se v reálných sestaveních používá jen zřídka. Dávkování úkolů je častější. Další informace najdete v tématu [Dávkování](../msbuild/msbuild-batching.md).
 
 ## <a name="incremental-builds"></a>Přírůstková sestavení
 
- Přírůstková sestavení jsou sestavení optimalizovaná tak, aby se neprováděly cíle s výstupními soubory, které jsou aktuální, s ohledem na jejich odpovídající vstupní soubory. Cílový element může mít oba `Inputs` atributy i `Outputs` , které označují, jaké položky cíl očekává jako vstup a jaké položky generuje jako výstup.
+ Přírůstková sestavení jsou sestavení optimalizovaná tak, aby cíle s výstupními soubory, které jsou aktuální s ohledem na jejich odpovídající vstupní soubory, nebyly provedeny. Cílový prvek může mít atributy i , které indikují, jaké položky cíl očekává jako vstup a jaké položky vytvoří `Inputs` `Outputs` jako výstup.
 
- Pokud jsou všechny výstupní položky aktuální, nástroj MSBuild přeskočí cíl, což významně zlepšuje rychlost sestavení. Tento postup se nazývá přírůstkové sestavení cíle. Pokud jsou pouze některé soubory aktuální, nástroj MSBuild spustí cíl bez aktuálnosti položek. Toto se nazývá částečné přírůstkové sestavení cíle. Další informace naleznete v tématu [přírůstkové sestavení](../msbuild/incremental-builds.md).
+ Pokud jsou všechny výstupní položky aktuální, nástroj MSBuild přeskočí cíl, což výrazně zvyšuje rychlost sestavení. Tomu se říká přírůstkové sestavení cíle. Pokud jsou aktuální pouze některé soubory, nástroj MSBuild spustí cíl bez aktuálních položek. To se nazývá částečné přírůstkové sestavení cíle. Další informace najdete v tématu [Přírůstková sestavení.](../msbuild/incremental-builds.md)
 
 ## <a name="default-build-targets"></a>Výchozí cíle sestavení
 
-Následující seznam obsahuje veřejné cíle v Microsoft. Common. CurrentVersion. targets.
+Následující seznam uvádí veřejné cíle v Microsoft.Common.CurrentVersion.Targets.
 
 ```
 ===================================================
@@ -123,14 +133,12 @@ The main build entry point.
 
 ===================================================
 BeforeBuild
-Redefine this target in your project in order to run tasks just before Build
 ===================================================
 <Target Name="BeforeBuild"/>
 
 
 ===================================================
 AfterBuild
-Redefine this target in your project in order to run tasks just after Build
 ===================================================
 <Target Name="AfterBuild"/>
 
@@ -155,21 +163,18 @@ Delete all intermediate and final build outputs, and then build the project from
 
 ===================================================
 BeforeRebuild
-Redefine this target in your project in order to run tasks just before Rebuild
 ===================================================
 <Target Name="BeforeRebuild"/>
 
 
 ===================================================
 AfterRebuild
-Redefine this target in your project in order to run tasks just after Rebuild
 ===================================================
 <Target Name="AfterRebuild"/>
 
 
 ===================================================
 BuildGenerateSources
-Redefine this target in your project in order to run tasks for BuildGenerateSources
 Set BuildPassReferences to enable P2P builds
 ===================================================
 <Target Name="BuildGenerateSources"
@@ -178,7 +183,6 @@ Set BuildPassReferences to enable P2P builds
 
 ===================================================
 BuildCompile
-Redefine this target in your project in order to run tasks for BuildCompile
 ===================================================
 <Target Name="BuildCompile"
         DependsOnTargets="BuildCompileTraverse;$(BuildCompileAction)" />
@@ -186,7 +190,6 @@ Redefine this target in your project in order to run tasks for BuildCompile
 
 ===================================================
 BuildLink
-Redefine this target in your project in order to run tasks for BuildLink
 ===================================================
 <Target Name="BuildLink"
         DependsOnTargets="BuildLinkTraverse;$(BuildLinkAction)" />
@@ -302,14 +305,12 @@ ResolveReferences
 
 ===================================================
 BeforeResolveReferences
-Redefine this target in your project in order to run tasks just before ResolveReferences
 ===================================================
 <Target Name="BeforeResolveReferences"/>
 
 
 ===================================================
 AfterResolveReferences
-Redefine this target in your project in order to run tasks just after ResolveReferences
 ===================================================
 <Target Name="AfterResolveReferences"/>
 
@@ -570,14 +571,12 @@ Run GenerateResource on the given resx files.
 
 ===================================================
 BeforeResGen
-Redefine this target in your project in order to run tasks just before Resgen.
 ===================================================
 <Target Name="BeforeResGen"/>
 
 
 ===================================================
 AfterResGen
-Redefine this target in your project in order to run tasks just after Resgen.
 ===================================================
 <Target Name="AfterResGen"/>
 
@@ -624,14 +623,12 @@ Emit any specified code fragments into a temporary source file for the compiler.
 
 ===================================================
 BeforeCompile
-Redefine this target in your project in order to run tasks just before Compile.
 ===================================================
 <Target Name="BeforeCompile"/>
 
 
 ===================================================
 AfterCompile
-Redefine this target in your project in order to run tasks just after Compile.
 ===================================================
 <Target Name="AfterCompile"/>
 
@@ -802,14 +799,12 @@ Delete all intermediate and final build outputs.
 
 ===================================================
 BeforeClean
-Redefine this target in your project in order to run tasks just before Clean.
 ===================================================
 <Target Name="BeforeClean"/>
 
 
 ===================================================
 AfterClean
-Redefine this target in your project in order to run tasks just after Clean.
 ===================================================
 <Target Name="AfterClean"/>
 
@@ -875,14 +870,12 @@ by the BuildManager.
 
 ===================================================
 BeforePublish
-Redefine this target in your project in order to run tasks just before Publish.
 ===================================================
 <Target Name="BeforePublish"/>
 
 
 ===================================================
 AfterPublish
-Redefine this target in your project in order to run tasks just after Publish.
 ===================================================
 <Target Name="AfterPublish"/>
 
@@ -1017,4 +1010,4 @@ This target gathers the Redist folders from the SDKs which have been resolved.
 ## <a name="see-also"></a>Viz také
 
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
-- [Postupy: použití stejného cíle ve více souborech projektu](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)
+- [Postupy: Použití stejného cíle ve více souborech projektu](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

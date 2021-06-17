@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f34ee9e852c1210425407f80788aa1b9d5c33c1e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21115673a41e26b2f1685442d2ed0ad93a147990
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912278"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254885"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Práce s interaktivním oknem Pythonu
 
@@ -27,10 +27,10 @@ Visual Studio má řadu REPL režimů Pythonu, ze kterých si můžete vybrat:
 
 | REPL | Description | Úprava | Ladění | Obrázky |
 | --- | --- | --- | --- | --- |
-| Standard | Výchozí REPL, přednášky přímo v Pythonu | Standardní úpravy (víceřádkové atd.). | Ano, přes `$attach` | Ne |
-| Ladění | Výchozí REPL, přednášky k ladění procesu v Pythonu | Standardní úpravy | Pouze ladění | Ne |
-| IPython | REPL rozhovory do back-endu IPython | IPython příkazy, Pylab pohodlí | Ne | Ano, vloženo v REPL |
-| IPython, Pylab | REPL rozhovory do back-endu IPython | IPython úrovně Standard | Ne | Ano, samostatné okno |
+| Standard | Výchozí REPL, přednášky přímo v Pythonu | Standardní úpravy (víceřádkové atd.). | Ano, přes `$attach` | No |
+| Ladění | Výchozí REPL, přednášky k ladění procesu v Pythonu | Standardní úpravy | Pouze ladění | No |
+| IPython | REPL rozhovory do back-endu IPython | IPython příkazy, Pylab pohodlí | No | Ano, vloženo v REPL |
+| IPython, Pylab | REPL rozhovory do back-endu IPython | IPython úrovně Standard | No | Ano, samostatné okno |
 
 Tento článek popisuje režimy **standardního** a **ladění** REPL. Podrobnosti o režimech IPython naleznete v tématu [use the IPYTHON REPL](interactive-repl-ipython.md).
 
@@ -73,6 +73,8 @@ Výjimkou je, když je nutné další řádky kódu pro vytvoření příkazu Co
 
 <a name="meta-commands"></a>**Interaktivní** okno také podporuje několik meta příkazů. Všechny meta-příkazy začínají `$` na a můžete zadat a `$help` získat tak seznam meta příkazů a `$help <command>` získat podrobnosti o využití určitého příkazu.
 
+:::moniker range="<=vs-2017"
+
 | Meta – příkaz | Description |
 | --- | --- |
 | `$$` | Vloží komentář, který je užitečný pro komentáře kódu v rámci vaší relace. |
@@ -83,6 +85,22 @@ Výjimkou je, když je nutné další řádky kódu pro vytvoření příkazu Co
 | `$mod` | Přepne aktuální obor na zadaný název modulu. |
 | `$reset` | Obnoví spouštěcí prostředí do počátečního stavu, ale uchová historii. |
 | `$wait` | Počká alespoň zadaný počet milisekund. |
+
+:::moniker-end
+
+:::moniker range=">=vs-2019"
+
+| Meta – příkaz | Description |
+| --- | --- |
+| `$$` | Vloží komentář, který je užitečný pro komentáře kódu v rámci vaší relace. |
+| `$cls`, `$clear` | Vymaže obsah okna editoru, historii a kontext spuštění zůstane beze změny. |
+| `$help` | Zobrazení seznamu příkazů nebo podrobnější informace o konkrétním příkazu. |
+| `$load` | Načte příkazy ze souboru a provede až do dokončení. |
+| `$mod` | Přepne aktuální obor na zadaný název modulu. |
+| `$reset` | Obnoví spouštěcí prostředí do počátečního stavu, ale uchová historii. |
+| `$wait` | Počká alespoň zadaný počet milisekund. |
+
+:::moniker-end
 
 Příkazy jsou také rozšiřitelné pomocí rozšíření sady Visual Studio implementací a export `IInteractiveWindowCommand` ([příklad](https://github.com/Microsoft/PTVS/blob/master/Python/Product/PythonTools/PythonTools/Repl/InteractiveWindowCommands.cs#L85)).
 

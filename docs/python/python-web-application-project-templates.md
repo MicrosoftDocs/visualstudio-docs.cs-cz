@@ -1,6 +1,6 @@
 ---
-title: Šablony webové aplikace pro Python
-description: Visual Studio poskytuje šablony pro webové aplikace v Pythonu s využitím Djangoch lahví, baněk a rozhraní. Podpora zahrnuje konfigurace ladění a publikování na Azure App Service.
+title: Šablony webových aplikací pro Python
+description: Visual Studio poskytuje šablony pro webové aplikace v Pythonu s využitím architektur Bottle, Flask a Django. Podpora zahrnuje konfigurace ladění a publikování do Azure App Service.
 ms.date: 01/28/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -10,144 +10,162 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a309ba898c22836fb5c0cebfc390b6c8d7c116c5
-ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
+ms.openlocfilehash: 6553017034dc46cfd1c035564a83dde89d77d057
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104805988"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254846"
 ---
-# <a name="python-web-application-project-templates"></a>Šablony projektů webové aplikace v Pythonu
+# <a name="python-web-application-project-templates"></a>Šablony projektů webových aplikací Pythonu
 
-Python v aplikaci Visual Studio podporuje vývoj webových projektů v láhvích, baňce a Djangoch architekturách prostřednictvím šablon projektů a spouštěče ladění, které lze nakonfigurovat tak, aby zpracovávala různé architektury. Tyto šablony obsahují soubor *requirements.txt* , který deklaruje nezbytné závislosti. Při vytváření projektu z jedné z těchto šablon vás aplikace Visual Studio vyzve k instalaci těchto balíčků (viz téma [instalace požadavků projektu](#install-project-requirements) dále v tomto článku).
+Python v Visual Studio podporuje vývoj webových projektů v architekturách Bottle, Flask a Django prostřednictvím šablon projektů a spouštěče ladění, který lze nakonfigurovat pro zpracování různých architektur. Tyto šablony zahrnují *requirements.txt,* který deklaruje potřebné závislosti. Při vytváření projektu z jedné z těchto šablon Visual Studio zobrazí výzvu [](#install-project-requirements) k instalaci těchto balíčků (viz Instalace požadavků projektu dále v tomto článku).
 
-Můžete také použít šablonu obecného **webového projektu** pro jiné architektury, jako je například jehlan. V tomto případě nejsou v šabloně nainstalovány žádné architektury. Místo toho nainstalujte potřebné balíčky do prostředí, které používáte pro projekt (viz [okno prostředí Pythonu – karta balíček](python-environments-window-tab-reference.md#packages-tab)).
+Obecnou šablonu webového projektu **můžete použít také** pro další architektury, jako je pyramida. V tomto případě se s šablonou neinstaluje žádná rozhraní. Místo toho nainstalujte potřebné balíčky do prostředí, které používáte pro projekt (viz okno [Prostředí Pythonu – karta Balíček).](python-environments-window-tab-reference.md#packages-tab)
 
-Informace o nasazení webové aplikace v Pythonu do Azure najdete v tématu věnovaném [publikování na Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md).
+Informace o nasazení webové aplikace v Pythonu do Azure najdete v tématu [Publikování do Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md).
 
 ## <a name="use-a-project-template"></a>Použití šablony projektu
 
-Vytvoříte projekt ze šablony pomocí **souboru**  >  **Nový**  >  **projekt**. Šablony pro webové projekty zobrazíte výběrem webu **Python**  >   na levé straně dialogového okna. Pak vyberte šablonu podle vlastního výběru, zadejte název projektu a řešení, nastavte možnosti pro adresář řešení a úložiště Git a vyberte **OK**.
+Projekt vytvoříte ze šablony pomocí příkazu **Soubor**  >  **nový**  >  **projekt**. Pokud chcete zobrazit šablony pro webové projekty, vyberte na levé straně dialogového okna **Python**  >  **Web.** Pak vyberte šablonu podle svého výběru, zadejte názvy projektu a řešení, nastavte možnosti pro adresář řešení a úložiště Git a vyberte **OK.**
 
-![Dialog Nový projekt pro Web Apps](media/projects-new-project-dialog-web.png)
+![Dialogové okno Nový projekt pro webové aplikace](media/projects-new-project-dialog-web.png)
 
-Obecná šablona **webového projektu** uvedená dříve poskytuje pouze prázdný projekt sady Visual Studio bez kódu a žádné jiné předpoklady, než je projekt v Pythonu. Podrobnosti o šabloně **cloudové služby Azure** najdete v tématu [projekty cloudových služeb Azure pro Python](python-azure-cloud-service-project-template.md).
+::: moniker range="<=vs-2017"
 
-Všechny ostatní šablony jsou založené na láhvi, baňce nebo webových rozhraních Django a spadají do tří obecných skupin, jak je popsáno v následujících částech. Aplikace vytvořené některou z těchto šablon obsahují dostatečný kód pro spuštění a ladění aplikace místně. Každý z nich taky poskytuje potřebný [objekt aplikace rozhraním WSGI](https://www.python.org/dev/peps/pep-3333/) (Python.org) pro použití s provozními webovými servery.
+Obecná **šablona webového projektu,** kterou jsme zmínili dříve, poskytuje pouze prázdný projekt Visual Studio bez kódu a bez předpokladů kromě toho, že je projekt v Pythonu. Podrobnosti o šabloně **cloudové služby Azure najdete** v tématu [Projekty cloudových služeb Azure pro Python.](python-azure-cloud-service-project-template.md)
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+Obecná **šablona webového projektu,** kterou jsme zmínili dříve, poskytuje pouze prázdný projekt Visual Studio bez kódu a bez předpokladů kromě toho, že je projekt v Pythonu.
+
+::: moniker-end
+
+Všechny ostatní šablony jsou založené na webových architekturách Bottle, Flask nebo Django a spadají do tří obecných skupin, jak je popsáno v následujících částech. Aplikace vytvořené libovolnou z těchto šablon obsahují dostatečný kód pro místní spuštění a ladění aplikace. Každý z nich také poskytuje potřebný objekt aplikace [WSGI](https://www.python.org/dev/peps/pep-3333/) (python.org) pro použití s provozními webovými servery.
 
 ### <a name="blank-group"></a>Prázdná skupina
 
-Všechny šablony **prázdného \<framework> webového projektu** vytvoří projekt s více nebo méně standardními kódy a potřebnými závislostmi deklarovanými v souboru *requirements.txt* .
+Všechny **šablony \<framework> prázdného webového** projektu vytvoří projekt s více nebo méně minimálním často používaným kódem a nezbytné závislosti deklarované v *requirements.txt* souboru.
 
-| Template (Šablona) | Popis |
+| Template (Šablona) | Description |
 | --- | --- |
-| **Webový projekt ve volné láhvi** | Vygeneruje minimální aplikaci v *App.py* s domovskou stránkou `/` a `/hello/<name>` stránkou, která se `<name>` bude zobrazovat pomocí velmi krátké vložené šablony stránky. |
-| **Prázdný webový projekt v Django** | Vygeneruje projekt Django se základní strukturou lokality Django, ale bez aplikací Django. Další informace najdete v tématu [šablony Django](python-django-web-application-project-template.md) a [informace o Django kroku 1](learn-django-in-visual-studio-step-01-project-and-solution.md). |
-| **Webový projekt ve volné baňce** | Vygeneruje minimální aplikaci s jedním "Hello World!". stránky pro `/` . Tato aplikace je podobná výsledku v podrobném postupu v [rychlém startu: k vytvoření první webové aplikace v Pythonu použijte Visual Studio](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json). Viz také [informace o baňce krok 1](learn-flask-visual-studio-step-01-project-solution.md).
+| **Blank Bottle Web Project** | Vygeneruje minimální aplikaci *v app.py* s domovskou stránkou pro a stránkou, která se vygeneruje pomocí velmi krátké šablony `/` vložené `/hello/<name>` `<name>` stránky. |
+| **Prázdný webový projekt Django** | Vygeneruje projekt Django se základní strukturou webu Django, ale bez aplikací Django. Další informace naleznete v tématu [Django templates and](python-django-web-application-project-template.md) [Learn Django Step 1](learn-django-in-visual-studio-step-01-project-and-solution.md). |
+| **Prázdný webový projekt Flask** | Vygeneruje minimální aplikaci s jedním Hello World!" pro `/` . Tato aplikace se podobá výsledku podrobného postupu v tématu Rychlý start: Použití Visual Studio k vytvoření první [webové aplikace v Pythonu.](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json) Viz také [Learn Flask Krok 1.](learn-flask-visual-studio-step-01-project-solution.md)
 
 ### <a name="web-group"></a>Webová skupina
 
-Všechny šablony **\<Framework> webového projektu** vytvoří úvodní webovou aplikaci se stejným návrhem bez ohledu na zvolenou architekturu. Aplikace obsahuje stránky domů, o produktu a kontaktů spolu s návrhem navigačního panelu a s odpovídajícím návrhem pomocí Bootstrap. Každá aplikace je vhodně nakonfigurovaná tak, aby sloužila pro statické soubory (šablony stylů CSS, JavaScript a Font), a používá mechanismus šablony stránky vhodný pro rozhraní.
+Všechny **\<Framework> šablony webového** projektu vytvoří úvodní webovou aplikaci se stejným návrhem bez ohledu na zvolenou architekturu. Aplikace má stránky Domů, O aplikaci a Kontakt spolu s navigačním panelem a přizpůsobivějším návrhem pomocí bootstrapu. Každá aplikace je správně nakonfigurovaná pro obsluhu statických souborů (CSS, JavaScript a písma) a používá mechanismus šablony stránky vhodný pro rozhraní.
 
-| Template (Šablona) | Popis |
+| Template (Šablona) | Description |
 | --- | --- |
-| **Webový projekt na láhev** | Vygeneruje aplikaci, jejíž statické soubory jsou obsaženy ve *statické* složce a zpracovávány prostřednictvím kódu v *App.py*. Směrování pro jednotlivé stránky je obsaženo v *Routes.py* a složka *zobrazení* obsahuje šablony stránky.|
-| **Webový projekt v Django** | Vygeneruje projekt Django a aplikaci Django se třemi stránkami, podporou ověřování a databází SQLite (ale bez datových modelů). Další informace najdete v tématu [šablony Django](python-django-web-application-project-template.md) a [informace o Django kroku 4](learn-django-in-visual-studio-step-04-full-django-project-template.md). |
-| **Webový projekt v baňce** | Vygeneruje aplikaci, jejíž statické soubory jsou obsaženy ve *statické* složce. Kód v *views.py* zpracovává směrování s šablonami stránek pomocí modulu Jinja, který je součástí složky *Templates* . Soubor *runserver.py* poskytuje spouštěcí kód. Viz část [informace o baňce – krok 4](learn-flask-visual-studio-step-04-full-flask-project-template.md). |
-| **Webový projekt ve baňce/Jade** | Vygeneruje stejnou aplikaci jako s šablonou **webového projektu baňky** , ale s použitím rozšíření Jade pro modul Jinja šablonování. |
+| **Bottle Web Project** | Vygeneruje aplikaci, jejíž statické soubory jsou obsaženy ve *statické* složce a zpracovány prostřednictvím kódu *app.py*. Směrování pro jednotlivé stránky je součástí *routes.py* a *složka views* obsahuje šablony stránek.|
+| **Django Web Project** | Vygeneruje projekt Django a aplikaci Django se třemi stránkami, podporou ověřování a databází SQLite (ale bez datových modelů). Další informace naleznete v tématu [Django templates and](python-django-web-application-project-template.md) [Learn Django Step 4](learn-django-in-visual-studio-step-04-full-django-project-template.md). |
+| **Webový projekt Flask** | Vygeneruje aplikaci, jejíž statické soubory jsou obsaženy ve *statické složce.* Kód v *views.py* zpracovává směrování, šablony stránek používají modul Jinja, který je ve *složce templates.* Soubor *runserver.py* poskytuje spouštěcí kód. Viz [Learn Flask Krok 4.](learn-flask-visual-studio-step-04-full-flask-project-template.md) |
+| **Webový projekt Flask/Jade** | Vygeneruje stejnou aplikaci jako s šablonou webového projektu **Flask,** ale používá rozšíření Jade pro šablonovací modul Jinja. |
 
 ::: moniker range="vs-2017"
-### <a name="polls-group"></a>Skupina dotazování
+### <a name="polls-group"></a>Skupina anket
 
-Šablony **\<framework> webového projektu cyklického dotazování** vytvoří úvodní webovou aplikaci, přes kterou můžou uživatelé hlasovat o různých dotazech na dotazy. Každá aplikace je vytvořena na základě struktury šablon **webového** projektu, aby používala databázi ke správě dotazů a odpovědí uživatelů. Aplikace zahrnují vhodné datové modely a speciální stránku aplikace (/seed), která načte dotazy z *samples.jsdo* souboru.
+Šablony **Polls \<framework> Web Project** vytvoří úvodní webovou aplikaci, prostřednictvím které mohou uživatelé hlasovat pro různé dotazy k hlasování. Každá aplikace vychází ze struktury šablon webových projektů a používá databázi ke správě dotazování a odpovědí uživatelů.  Aplikace obsahují vhodné datové modely a speciální stránku aplikace (/seed), která načítá cyklické dotazování *zsamples.jsv* souboru.
 
-| Template (Šablona) | Popis |
+| Template (Šablona) | Description |
 | --- | --- |
-| **Webový projekt pro dotazování na láhev** | Vygeneruje aplikaci, která se dá spustit pro databázi v paměti, MongoDB nebo Azure Table Storage, která je nakonfigurovaná pomocí `REPOSITORY_NAME` proměnné prostředí. Datové modely a kód úložiště dat jsou obsaženy ve složce *modely* a soubor *Settings.py* obsahuje kód k určení, které úložiště dat je použito. |
-| **Dotaz na webový projekt Django** | Vygeneruje projekt Django a aplikaci Django se třemi stránkami a databází SQLite. Zahrnuje úpravy rozhraní pro správu Django, aby mohl ověřený správce vytvářet a spravovat dotazování. Další informace najdete v tématu [Django Templates](python-django-web-application-project-template.md) and [Django Step 6](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md). |
-| **Webový projekt v baňce s dotazy** | Vygeneruje aplikaci, která se dá spustit pro databázi v paměti, MongoDB nebo Azure Table Storage, která je nakonfigurovaná pomocí `REPOSITORY_NAME` proměnné prostředí. Datové modely a kód úložiště dat jsou obsaženy ve složce *modely* a soubor *Settings.py* obsahuje kód k určení, které úložiště dat je použito. Aplikace používá modul Jinja pro šablony stránek. Viz část [informace o baňce krok 5](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md). |
-| **Webový projekt ve Jade/baňce pro dotazy** | Vygeneruje stejnou aplikaci, jako je šablona webového projektu s protokolem **cyklického dotazování** , ale používá rozšíření Jade pro modul Jinja šablonování. |
+| **Polls Bottle Web Project** | Vygeneruje aplikaci, která se může spouštět pro databázi v paměti, MongoDB nebo Azure Table Storage, která se konfiguruje pomocí `REPOSITORY_NAME` proměnné prostředí. Datové modely a kód úložiště dat jsou obsaženy ve složce *models* a soubor *settings.py* obsahuje kód k určení, které úložiště dat se používá. |
+| **Dotazování webového projektu Django** | Vygeneruje projekt Django a aplikaci Django se třemi stránkami a databází SQLite. Zahrnuje přizpůsobení rozhraní pro správu Django, která ověřenému správci umožňují vytvářet a spravovat cyklické dotazování. Další informace naleznete v tématu [Django templates and](python-django-web-application-project-template.md) [Learn Django Step 6](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md). |
+| **Polls Flask Web Project** | Vygeneruje aplikaci, která se může spouštět pro databázi v paměti, MongoDB nebo Azure Table Storage, která se konfiguruje pomocí `REPOSITORY_NAME` proměnné prostředí. Datové modely a kód úložiště dat jsou obsaženy ve složce *models* a soubor *settings.py* obsahuje kód k určení, které úložiště dat se používá. Aplikace používá modul Jinja pro šablony stránek. Viz [Learn Flask Krok 5.](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md) |
+| **Polls Flask/Jade Web Project** | Vygeneruje stejnou aplikaci jako s šablonou **polls Flask Web Project,** ale používá rozšíření Jade pro modul šablon Jinja. |
 ::: moniker-end
 
-## <a name="install-project-requirements"></a>Instalovat požadavky projektu
+## <a name="install-project-requirements"></a>Instalace požadavků projektu
 
-Při vytváření projektu z šablony specifické pro rozhraní se zobrazí dialogové okno, které vám umožní nainstalovat potřebné balíčky pomocí PIP. Doporučujeme také použít [virtuální prostředí](selecting-a-python-environment-for-a-project.md#use-virtual-environments) pro webové projekty, aby byly zahrnuty správné závislosti při publikování webu:
+Při vytváření projektu ze šablony specifické pro rozhraní se zobrazí dialogové okno, které vám pomůže nainstalovat potřebné balíčky pomocí nástroje pip. Pro webové projekty také [doporučujeme](selecting-a-python-environment-for-a-project.md#use-virtual-environments) použít virtuální prostředí, aby při publikování webu byly zahrnuty správné závislosti:
 
-![Dialog, který nainstaluje potřebné balíčky pro šablonu projektu](media/template-web-requirements-txt-wizard.png)
+![Dialogové okno, které nainstaluje potřebné balíčky pro šablonu projektu](media/template-web-requirements-txt-wizard.png)
 
-Pokud používáte správu zdrojového kódu, obvykle složku virtuálního prostředí vynecháte, protože toto prostředí je možné znovu vytvořit pouze pomocí *requirements.txt*. Nejlepším způsobem, jak složku vyřadit, je nejdřív vybrat, že si je **nainstalujete sami** do zobrazené výzvy a pak před vytvořením virtuálního prostředí zakázat automatické potvrzení. Podrobnosti najdete v článku [o kurzu Django – kroky 1-2 a 1-3](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) a [návod k prostudování – kroky 1-2 a 1-3](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository).
+Pokud používáte řízení zdrojového kódu, obvykle vy vynechat složku virtuálního prostředí, protože toto prostředí je možné znovu vytvořit pouze *pomocírequirements.txt*. Nejlepší způsob, jak složku vyloučit,  je nejprve vybrat možnost Nainstaluji si je sám na výzvu uvedenou výše a pak před vytvořením virtuálního prostředí zakázat automatické potvrzení. Podrobnosti najdete v kurzech Learn Django – kroky [1–2 a 1–3](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) a Kurz Learn Flask – kroky [1–2 a 1–3.](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository)
 
-Při nasazování do Microsoft Azure App Service vyberte verzi Pythonu jako [rozšíření lokality](./managing-python-on-azure-app-service.md?view=vs-2019&preserve-view=true) a nainstalujte balíčky ručně. Z toho důvodu, že Azure App Service neinstaluje **automaticky balíčky** ze souboru *requirements.txt* při nasazení ze sady Visual Studio, postupujte podle podrobných informací o konfiguraci [aka.MS/PythonOnAppService](managing-python-on-azure-app-service.md).
+Při nasazování do Microsoft Azure App Service vyberte verzi Pythonu jako rozšíření [webu](./managing-python-on-azure-app-service.md?view=vs-2019&preserve-view=true) a ručně nainstalujte balíčky. Vzhledem k tomu, Azure App Service  nástroj automaticky neinstaluje balíčky ze souboru *requirements.txt* při nasazení z Visual Studio, postupujte podle podrobností o konfiguraci aka.ms/PythonOnAppService [.](managing-python-on-azure-app-service.md)
 
-Microsoft Azure Cloud Services *podporuje* *requirements.txt* soubor. Podrobnosti najdete v tématu [projekty cloudových služeb Azure](python-azure-cloud-service-project-template.md) .
+::: moniker range="<=vs-2017"
+
+Microsoft Azure Cloud Services *soubor* podporuje *requirements.txt.* Podrobnosti [najdete v tématu Projekty cloudových služeb Azure.](python-azure-cloud-service-project-template.md)
+
+::: moniker-end
 
 ## <a name="debugging"></a>Ladění
 
-Když je spuštěn webový projekt pro ladění, Visual Studio spustí místní webový server na náhodném portu a otevře výchozí prohlížeč pro tuto adresu a port. Chcete-li zadat další možnosti, klikněte pravým tlačítkem myši na projekt, vyberte možnost **vlastnosti** a vyberte kartu **webové spouštěče** :
+Při spuštění webového projektu pro ladění Visual Studio místní webový server na náhodném portu a otevře výchozí prohlížeč pro adresu a port. Pokud chcete zadat další možnosti, klikněte pravým tlačítkem na projekt, vyberte **Vlastnosti** a vyberte kartu **Webový spouštěč:**
 
-![Vlastnosti webového spouštěče pro šablonu obecného webu](media/template-web-launcher-properties.png)
+![Vlastnosti webového spouštěče obecné webové šablony](media/template-web-launcher-properties.png)
 
-Ve skupině **ladění** :
+Ve **skupině Ladění:**
 
-- **Cesty pro hledání**, **argumenty skriptu**, **argumenty interpretu** a **cesta k interpretu**: tyto možnosti jsou stejné jako pro [normální ladění](debugging-python-in-visual-studio.md).
-- **Adresa URL pro spuštění**: Určuje adresu URL, která se otevře v prohlížeči. Výchozí hodnota je `localhost` .
-- **Číslo portu**: port, který se má použít, pokud není v adrese URL zadaný žádný (ve výchozím nastavení Visual Studio vybere jednu možnost automaticky). Toto nastavení umožňuje přepsat výchozí hodnotu `SERVER_PORT` proměnné prostředí, která je používána šablonami ke konfiguraci portu, na kterém místní ladicí Server naslouchá.
+- **Cesty hledání,** **argumenty skriptu,** **argumenty interpreta** a cesta **interpreta:** tyto možnosti jsou stejné jako pro [normální ladění.](debugging-python-in-visual-studio.md)
+- **Launch URL**(Adresa URL pro spuštění): Určuje adresu URL, která se otevře v prohlížeči. Výchozí hodnota je `localhost` .
+- **Číslo portu:** Port, který se má použít, pokud v adrese URL není zadaný (Visual Studio ho automaticky vybere). Toto nastavení umožňuje přepsat výchozí hodnotu proměnné prostředí, kterou šablony používají ke konfiguraci portu, na kterém `SERVER_PORT` místní ladicí server naslouchá.
 
-Vlastnosti v **příkazu spustit server** a skupin **příkazů serveru pro ladění** (ta je pod tím, co se zobrazuje na obrázku) určují, jak se webový server spouští. Vzhledem k tomu, že mnoho rozhraní vyžaduje použití skriptu mimo aktuální projekt, lze zde nakonfigurovat skript a název spouštěcího modulu lze předat jako parametr.
+Vlastnosti ve skupinách Spustit  **příkaz serveru** a Příkaz ladicího serveru (druhá možnost je pod tím, co je znázorněno na obrázku) určují, jak se webový server spustí. Vzhledem k tomu, že mnoho architektur vyžaduje použití skriptu mimo aktuální projekt, je možné skript nakonfigurovat tady a název modulu po spuštění lze předat jako parametr.
 
-- **Příkaz**: může to být skript Python (soubor *\* . py* ), název modulu (jako in, `python.exe -m module_name` ) nebo jeden řádek kódu (jako v, `python.exe -c "code"` ). Hodnota v rozevíracím seznamu označuje, který z těchto typů je určený.
-- **Argumenty**: tyto argumenty jsou předány na příkazovém řádku za příkazem.
-- **Prostředí**: seznam dvojic s oddělovači, který \<NAME> = \<VALUE> Určuje proměnné prostředí. Tyto proměnné jsou nastaveny po všech vlastnostech, které mohou upravit prostředí, například číslo portu a cesty pro hledání, a proto mohou tyto hodnoty přepsat.
+- **Příkaz**: Může to být skript Pythonu ( soubor *\* .py),* název modulu (jako v , ) nebo jeden řádek `python.exe -m module_name` kódu (například `python.exe -c "code"` ). Hodnota v rozevíracím seznamu určuje, které z těchto typů jsou určeny.
+- **Argumenty:** Tyto argumenty se předá na příkazovém řádku za příkazem.
+- **Prostředí:** seznam párů oddělených novým \<NAME> = \<VALUE> řádku, které určují proměnné prostředí. Tyto proměnné se nastaví za všemi vlastnostmi, které mohou upravovat prostředí, jako je číslo portu a cesty hledání, a proto mohou tyto hodnoty přepsat.
 
-Vlastnost projektu nebo proměnnou prostředí lze zadat pomocí syntaxe nástroje MSBuild, například: `$(StartupFile) --port $(SERVER_PORT)` .
-`$(StartupFile)` je relativní cesta ke spouštěcímu souboru a `{StartupModule}` je to importovaný název spouštěcího souboru. `$(SERVER_HOST)` a `$(SERVER_PORT)` jsou normální proměnné prostředí, které nastavuje **Adresa URL pro spuštění** a **číslo portu** , automaticky nebo vlastnost **prostředí** .
+Jakoukoli vlastnost projektu nebo proměnnou prostředí je možné zadat pomocí syntaxe MSBuild, například: `$(StartupFile) --port $(SERVER_PORT)` .
+`$(StartupFile)` je relativní cesta ke spouštěcímu souboru `{StartupModule}` a je importovatelný název spouštěcího souboru. `$(SERVER_HOST)`a jsou normální proměnné prostředí nastavené vlastnostmi Launch URL (Adresa URL pro spuštění) a Port Number (Číslo portu), a to automaticky `$(SERVER_PORT)` nebo **vlastností Environment (Prostředí).**  
 
 > [!Note]
-> Hodnoty v **příkazu spustit server** se používají s příkazem **Debug**  >  **Server** Command nebo **CTRL** + **F5**; hodnoty ve skupině příkazů ladicího **serveru** se používají s příkazem **ladit**  >  **Spustit ladicí Server** nebo **F5**.
+> Hodnoty v **příkazu Spustit server** se používají s příkazem Spustit ladění serveru nebo   >   **Ctrl** + **F5;**  hodnoty ve skupině Příkaz ladicího serveru se používají s příkazem Spustit ladění na serveru ladění nebo  >   **F5.**
 
-### <a name="sample-bottle-configuration"></a>Ukázka konfigurace láhve
+### <a name="sample-bottle-configuration"></a>Konfigurace ukázkové láhve
 
-Šablona **webového projektu pro láhev** obsahuje často používaný kód, který je nezbytnou konfigurací. Importovaná aplikace z láhve nesmí obsahovat tento kód. v takovém případě však následující nastavení spustí aplikaci pomocí nainstalovaného `bottle` modulu:
+Šablona **Bottle Web Project** obsahuje často používaný kód, který dělá potřebnou konfiguraci. Importovaná aplikace pro láhev nemusí tento kód obsahovat. V takovém případě spustí aplikace pomocí nainstalovaného modulu následující `bottle` nastavení:
 
-- **Spustit skupinu příkazů serveru** :
-  - **Příkaz**: `bottle` (Module)
-  - **Argumenty**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
+- **Spusťte skupinu příkazů** serveru:
+  - **Příkaz**: `bottle` (modul)
+  - **Argumenty:**`--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-- Skupina **příkazů serveru pro ladění** :
-  - **Příkaz**: `bottle` (Module)
+- **Skupina příkazů pro ladění** serveru:
+  - **Příkaz**: `bottle` (modul)
   - **Argumenty** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-`--reload`Možnost se nedoporučuje při použití sady Visual Studio pro ladění.
+Tato `--reload` možnost se nedoporučuje při použití Visual Studio ladění.
 
-### <a name="sample-pyramid-configuration"></a>Ukázka konfigurace pyramidy
+### <a name="sample-pyramid-configuration"></a>Ukázková konfigurace pyramidy
 
-Jehlanové aplikace jsou aktuálně nejlépe vytvořené pomocí `pcreate` nástroje příkazového řádku. Jakmile je aplikace vytvořená, dá se importovat pomocí šablony [**kódu z existující Pythonu**](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) . Po provedení tohoto postupu vyberte vlastní přizpůsobení **webového projektu** a nakonfigurujte možnosti. Tato nastavení předpokládají, že jehlan je nainstalován do virtuálního prostředí v `..\env` .
+Pyramidové aplikace se v současné době nejlépe vytvářejí pomocí `pcreate` nástroje příkazového řádku. Jakmile je aplikace vytvořená, můžete ji importovat pomocí šablony [**kódu Z existujícího pythonu.**](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) Po provedení tohoto vlastního nastavení **nakonfigurujte možnosti** výběrem možnosti Obecný webový projekt. Tato nastavení předpokládají, že pyramida je nainstalovaná do virtuálního prostředí na `..\env` adrese .
 
-- Skupina **ladění** :
-  - **Port serveru**: 6543 (nebo cokoli je nakonfigurováno v souborech *. ini* )
+- **Skupina** ladění:
+  - **Port serveru:** 6543 (nebo cokoli, co je nakonfigurované v *.ini* souborů)
 
-- **Spustit skupinu příkazů serveru** :
+- **Spusťte skupinu příkazů** serveru:
   - Příkaz: `..\env\scripts\pserve-script.py` (skript)
-  - Náhodné `Production.ini`
+  - Argumenty: `Production.ini`
 
-- Skupina **příkazů serveru pro ladění** :
+- **Skupina příkazů pro ladění** serveru:
   - Příkaz: `..\env\scripts\pserve-script.py` (skript)
-  - Náhodné `Development.ini`
+  - Argumenty: `Development.ini`
 
 > [!Tip]
-> Pravděpodobně budete muset nakonfigurovat vlastnost **pracovního adresáře** projektu, protože jehlanové aplikace jsou obvykle jedna složka pod kořenem projektu.
+> Pravděpodobně budete muset nakonfigurovat vlastnost **Working Directory** (Pracovní adresář) projektu, protože aplikace Pyramid jsou obvykle jedna složka pod kořenem projektu.
 
 ### <a name="other-configurations"></a>Další konfigurace
 
-Pokud máte nastavení pro jiné rozhraní, které byste chtěli sdílet, nebo pokud chcete požádat o nastavení pro jiné rozhraní, otevřete [problém na GitHubu](https://github.com/Microsoft/PTVS/issues).
+Pokud máte nastavení pro jinou rozhraní, které chcete sdílet, nebo pokud chcete požádat o nastavení pro jinou rozhraní, otevřete problém na [GitHubu.](https://github.com/Microsoft/PTVS/issues)
+
+::: moniker range="<=vs-2017"
 
 ## <a name="convert-a-project-to-azure-cloud-service"></a>Převod projektu na cloudovou službu Azure
 
-Příkaz **převést na Microsoft Azure projekt cloudové služby** (obrázek níže) přidá projekt cloudové služby do vašeho řešení. Tento projekt obsahuje nastavení a konfiguraci nasazení pro virtuální počítače a služby, které se mají použít. K nasazení do Cloud Services použijte příkaz **publikovat** v cloudovém projektu. příkaz **publikovat** v projektu Pythonu se pořád nasazuje na weby. Další informace najdete v tématu [projekty cloudových služeb Azure](python-azure-cloud-service-project-template.md).
+Příkaz **Convert to Microsoft Azure Cloud Service Project** (obrázek níže) přidá projekt cloudové služby do vašeho řešení. Tento projekt zahrnuje nastavení nasazení a konfiguraci virtuálních počítačů a služeb, které se mají použít. Pomocí příkazu **Publish** (Publikovat) v cloudovém projektu nasaďte soubor Cloud Services. Příkaz **Publish** v projektu Pythonu se stále nasazovat na weby. Další informace najdete v tématu [Projekty cloudových služeb Azure.](python-azure-cloud-service-project-template.md)
 
-![Převést na Microsoft Azure projekt cloudové služby – příkaz](media/template-web-convert-menu.png)
+![Převod na Microsoft Azure projektu cloudové služby](media/template-web-convert-menu.png)
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace šablon položek Pythonu](python-item-templates.md)
+- [Referenční informace k šablonám položek Pythonu](python-item-templates.md)
 - [Publikování do Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md)
