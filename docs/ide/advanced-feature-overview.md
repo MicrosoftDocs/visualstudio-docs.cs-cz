@@ -1,7 +1,7 @@
 ---
 title: Pokročilé funkce
 description: Seznamte se s pokročilými funkcemi, které můžou být vhodnější pro zkušené vývojáře nebo vývojáře, kteří už mají Visual Studio.
-ms.custom: SEO-VS-2020
+ms.custom: acquisition
 ms.date: 06/01/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 51b25ff5f5f71291bb1aa1fd006b60566a576d7f
-ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
+ms.openlocfilehash: 843c6f66b833c8f68dad8722c6d32a1975d07913
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110687601"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113000"
 ---
 # <a name="features-of-visual-studio"></a>Funkce Visual Studio
 
@@ -52,29 +52,29 @@ Po instalaci úlohy **Vývoj pro Azure** jsou v dialogovém okně Nový projekt 
 
 ::: moniker-end
 
-Visual Studio Průzkumník [cloudu umožňuje](/azure/vs-azure-tools-resources-managing-with-cloud-explorer) zobrazit a spravovat cloudové prostředky založené na Azure v rámci Visual Studio. Tyto prostředky mohou zahrnovat virtuální počítače, tabulky, databáze SQL a další. **Průzkumník cloudu** zobrazuje prostředky Azure ve všech účtech spravovaných v rámci předplatného Azure, ke kterému jste se přihlásili. A pokud konkrétní operace vyžaduje Azure Portal, **Průzkumník cloudu** poskytuje odkazy, které vás zajímají na místo na portálu, kde potřebujete přejít.
+Visual Studio Průzkumník [cloudu umožňuje](/azure/vs-azure-tools-resources-managing-with-cloud-explorer) zobrazit a spravovat cloudové prostředky založené na Azure v rámci Visual Studio. Tyto prostředky mohou zahrnovat virtuální počítače, tabulky, databáze SQL a další. **Průzkumník cloudu** zobrazuje prostředky Azure ve všech účtech spravovaných v rámci předplatného Azure, ke které jste přihlášeni. A pokud konkrétní operace vyžaduje Azure Portal, **Průzkumník** cloudu nabízí odkazy, které vás převezou na místo na portálu, kam potřebujete přejít.
 
-![Průzkumník cloudu v aplikaci Visual Studio](media/cloud-explorer.png)
+![Průzkumník cloudu v Visual Studio](media/cloud-explorer.png)
 
-Můžete využívat služby Azure pro své aplikace pomocí **propojených služeb** , jako je:
+Služby Azure můžete pro své aplikace využívat pomocí **připojených služeb,** jako jsou:
 
-- [Připojená služba Active Directory](/azure/active-directory/develop/vs-active-directory-add-connected-service) , aby uživatelé mohli používat své účty z [Azure Active Directory](/azure/active-directory/active-directory-whatis) pro připojení k webovým aplikacím
-- [Azure Storage připojená služba](/azure/vs-azure-tools-connected-services-storage) pro úložiště objektů blob, fronty a tabulky
-- [Key Vault připojená služba](/azure/key-vault/vs-key-vault-add-connected-service) pro správu tajných kódů pro webové aplikace
+- [Připojená služba Active Directory,](/azure/active-directory/develop/vs-active-directory-add-connected-service) aby uživatelé mohli používat své účty z [Azure Active Directory](/azure/active-directory/active-directory-whatis) pro připojení k webovým aplikacím
+- [Azure Storage připojené služby pro](/azure/vs-azure-tools-connected-services-storage) úložiště objektů blob, fronty a tabulky
+- [Key Vault připojené služby pro](/azure/key-vault/vs-key-vault-add-connected-service) správu tajných kódů pro webové aplikace
 
-Dostupné **připojené služby** závisí na typu projektu. Přidejte službu kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení** a výběrem možnosti **Přidat**  >  **připojenou službu**.
+Dostupné **připojené služby závisí** na typu projektu. Přidejte službu tak, že kliknete pravým tlačítkem na projekt **v Průzkumník řešení** a zvolíte **Přidat**  >  **připojenou službu**.
 
-![Připojené služby sady Visual Studio](media/connected-services.png)
+![Visual Studio připojených služeb](media/connected-services.png)
 
-Další informace najdete v tématu [Přesun do cloudu pomocí sady Visual Studio a Azure](https://visualstudio.microsoft.com/vs/azure-tools/).
+Další informace najdete v tématu [Přechod do cloudu s využitím Visual Studio a Azure.](https://visualstudio.microsoft.com/vs/azure-tools/)
 
 ## <a name="create-apps-for-the-web"></a>Vytváření aplikací pro web
 
-Webové jednotky našeho moderního světa a Visual Studio vám může pomáhat s psaním aplikací. Můžete vytvářet webové aplikace s využitím ASP.NET, Node.js, Pythonu, JavaScriptu a TypeScript. Visual Studio rozumí webovým rozhraním, jako jsou úhlová, jQuery, Express a další. ASP.NET Core a .NET Core běží na operačních systémech Windows, Mac a Linux. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) je hlavní aktualizace pro MVC, WebApi a Signal a běží v systémech Windows, Mac a Linux.  ASP.NET Core je od základu navržená tak, aby vám poskytovala štíhlou a sestavitelnou sadu .NET Stack pro vytváření moderních cloudových webových aplikací a služeb.
+Web řídí náš moderní svět a Visual Studio vám může pomoct s psaním aplikací. Webové aplikace můžete vytvářet pomocí ASP.NET, Node.js, Pythonu, JavaScriptu a TypeScriptu. Visual Studio rozumí webovým rozhraním, jako jsou Angular, jQuery, Express a další. ASP.NET Core a .NET Core běží na operačních systémech Windows, Mac a Linux. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) je hlavní aktualizace MVC, WebAPI a SignalR a běží ve Windows, Macu a Linuxu.  ASP.NET Core je od základů navržená tak, aby vám poskytovala nenároný a skládaný zásobník .NET pro vytváření moderních cloudových webových aplikací a služeb.
 
-Další informace najdete v tématu [moderní webové nástroje](https://visualstudio.microsoft.com/vs/modern-web-tooling/).
+Další informace najdete v tématu [Moderní webové nástroje](https://visualstudio.microsoft.com/vs/modern-web-tooling/).
 
-## <a name="build-cross-platform-apps-and-games"></a>Vytváření aplikací a her pro různé platformy
+## <a name="build-cross-platform-apps-and-games"></a>Vytváření aplikací a her pro více platforem
 
 Pomocí nástroje Visual Studio vytvářet aplikace a hry pro macOS, Linux a Windows a také pro Android, iOS a další [mobilní zařízení.](https://visualstudio.microsoft.com/vs/mobile-app-development/)
 
@@ -98,21 +98,21 @@ Pomocí nástroje Visual Studio vytvářet aplikace a hry pro macOS, Linux a Win
 
 ## <a name="debug-test-and-improve-your-code"></a>Ladění, testování a vylepšování kódu
 
-Když píšete kód, musíte ho spustit a otestovat, jestli nesnídá chyby a výkon. Visual Studio špičkový systém ladění umožňuje ladit kód spuštěný v místním projektu, na vzdáleném zařízení nebo v [emulátoru zařízení.](../cross-platform/visual-studio-emulator-for-android.md) Můžete procházet kód po jednom příkazu a kontrolovat proměnné, jak chcete. Můžete nastavit zarážky, které budou k dispozice pouze v případě, že je zadaná podmínka pravdivá. Možnosti ladění lze spravovat v editoru kódu samotném, takže nemusíte opustit kód. Další informace o ladění v aplikaci Visual Studio naleznete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
+Když píšete kód, musíte ho spustit a otestovat, jestli nesnídá chyby a výkon. Visual Studio špičkový systém ladění umožňuje ladit kód spuštěný v místním projektu, na vzdáleném zařízení nebo v [emulátoru zařízení.](../cross-platform/visual-studio-emulator-for-android.md) Můžete procházet kód po jednom příkazu a kontrolovat proměnné, jak chcete. Můžete nastavit zarážky, které se dosáhne pouze v případě, že je zadaná podmínka pravdivá. Možnosti ladění je možné spravovat v samotném editoru kódu, takže svůj kód nemusíte opustit. Další podrobnosti o ladění v nástroji Visual Studio v tématu [První pohled na ladicí program.](../debugger/debugger-feature-tour.md)
 
-Chcete-li získat další informace o vylepšení výkonu aplikací, Zarezervujte funkci [profilace](../profiling/profiling-feature-tour.md) sady Visual Studio.
+Další informace o vylepšení výkonu aplikací najdete v Visual Studio [profilace.](../profiling/profiling-feature-tour.md)
 
-Pro [testování](../test/improve-code-quality.md)nabízí Visual Studio testování částí, Live Unit Testing, IntelliTest, zátěžové a výkonnostní testování a další. Visual Studio má také pokročilé možnosti [analýzy kódu](../code-quality/code-analysis-for-managed-code-overview.md) pro zachycení návrhu, zabezpečení a dalších typů vad.
+Pro [testování](../test/improve-code-quality.md)nabízí Visual Studio testování částí, Live Unit Testing, IntelliTest, zátěžové a výkonové testování a další. Visual Studio také pokročilé [možnosti analýzy](../code-quality/code-analysis-for-managed-code-overview.md) kódu, které zachytá návrh, zabezpečení a další typy chyb.
 
-## <a name="deploy-your-finished-application"></a>Nasazení dokončené aplikace
+## <a name="deploy-your-finished-application"></a>Nasazení hotové aplikace
 
-Když je vaše aplikace připravená k nasazení pro uživatele nebo zákazníky, Visual Studio poskytuje nástroje, které to dělají. Mezi možnosti nasazení patří Microsoft Store, na web služby SharePoint nebo pomocí technologie InstallShield nebo Instalační služba systému Windows. Vše je přístupné prostřednictvím integrovaného vývojového prostředí (IDE). Další informace najdete v tématu [nasazení aplikací, služeb a součástí](../deployment/deploying-applications-services-and-components.md).
+Až bude vaše aplikace připravená k nasazení pro uživatele nebo zákazníky, Visual Studio nástroje k tomu. Možnosti nasazení zahrnují Microsoft Store, na sharepointový web nebo pomocí installshield nebo Instalační služba systému Windows technologií. Vše je přístupné prostřednictvím integrovaného vývojového prostředí (IDE). Další informace najdete v tématu [Nasazení aplikací, služeb a komponent](../deployment/deploying-applications-services-and-components.md).
 
-## <a name="manage-your-source-code-and-collaborate-with-others"></a>Spravujte zdrojový kód a spolupracujte s ostatními
+## <a name="manage-your-source-code-and-collaborate-with-others"></a>Správa zdrojového kódu a spolupráce s ostatními
 
-Zdrojový kód můžete spravovat v úložištích Git hostovaných libovolným poskytovatelem, včetně GitHubu. Nebo použijte [Azure DevOps Services](/azure/devops/index) ke správě kódu společně s chybami a pracovními položkami pro celý projekt. Další informace o správě úložišť Git v aplikaci Visual Studio pomocí Team Explorer najdete v tématu [Začínáme s Git a Azure Repos](/azure/devops/repos/git/gitquickstart?tabs=visual-studio) . Visual Studio také obsahuje další integrované funkce správy zdrojového kódu. Další informace o těchto [funkcích naleznete v tématu nové funkce Git v aplikaci Visual Studio (blog)](https://devblogs.microsoft.com/devops/new-git-features-in-visual-studio-2017/).
+Zdrojový kód můžete spravovat v úložišti Git hostovaných libovolným poskytovatelem, včetně GitHubu. Nebo můžete [Azure DevOps Services](/azure/devops/index) ke správě kódu společně s chybami a pracovními položkami pro celý projekt. Další informace o správě úložišť Git v Azure Repos s využitím Gitu najdete v tématu Začínáme s [Gitem](/azure/devops/repos/git/gitquickstart?tabs=visual-studio) Visual Studio s využitím Team Explorer. Visual Studio má také další integrované funkce správy zdrojového kódu. Další informace o nich najdete v tématu [Nové funkce Gitu v Visual Studio (blog)](https://devblogs.microsoft.com/devops/new-git-features-in-visual-studio-2017/).
 
-Azure DevOps Services jsou cloudové služby pro plánování, hostování, automatizaci a nasazení softwaru a umožňují spolupráci v týmech. Azure DevOps Services podporuje úložiště Git (distribuovaná správa verzí) i Správa verzí Team Foundation (centralizované řízení verzí). Podporují kanály pro průběžné sestavování a vydávání kódu (CI/CD), který je uložený v systémech správy verzí. Azure DevOps Services také podporuje metodologie vývoje Pro Scrum, CMMI a Agilní vývoj.
+Azure DevOps Services jsou cloudové služby pro plánování, hostování, automatizaci a nasazení softwaru a umožnění spolupráce v teams. Azure DevOps Services podporuje jak úložiště Git (distribuovaná kontrola verzí), tak Správa verzí Team Foundation (centralizovaná kontrola verzí). Podporují kanály pro průběžné sestavování a vypouštění (CI/CD) kódu uloženého v systémech pro řízení verzí. Azure DevOps Services také podporuje metodologie vývoje Pro Scrum, CMMI a Agilní vývoj.
 
 Team Foundation Server (TFS) je centrum správy životního cyklu aplikací pro Visual Studio. Umožňuje všem uživatelům zapojeným do procesu vývoje účastnit se používání jednoho řešení. Sada TFS je užitečná také pro správu heterogenních týmů a projektů.
 
@@ -130,12 +130,12 @@ Pokud Visual Studio přesně tu funkci, kterou potřebujete, můžete ji přidat
 
 Pomocí sady .NET Compiler Platform (Roslyn) můžete psát vlastní analyzátory kódu a generátory kódu. Všechno, co potřebujete, najdete [v roslynu.](https://github.com/dotnet/Roslyn)
 
-Najděte [stávající rozšíření](https://marketplace.visualstudio.com/vs) pro Visual Studio, která vytvořili vývojáři Microsoftu, a také naši komunitu vývojářů.
+Najděte [existující rozšíření](https://marketplace.visualstudio.com/vs) pro Visual Studio vytvořená vývojáři Microsoftu a naši vývojovou komunitou.
 
-Další informace o rozšíření Visual Studio najdete v tématu [Rozšíření Visual Studio IDE.](https://visualstudio.microsoft.com/vs/extend/)
+Další informace o rozšíření sady Visual Studio najdete v tématu [rozšíření integrovaného vývojového prostředí sady Visual Studio](https://visualstudio.microsoft.com/vs/extend/).
 
 ## <a name="see-also"></a>Viz také
 
-- [Visual Studio integrovaného vývojového prostředí (IDE)](../get-started/visual-studio-ide.md)
+- [Přehled integrovaného vývojového prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
 - [Novinky v sadě Visual Studio 2017](../ide/whats-new-visual-studio-2017.md)
-- [Co je nového v Visual Studio 2019](../ide/whats-new-visual-studio-2019.md)
+- [Co je nového v aplikaci Visual Studio 2019](../ide/whats-new-visual-studio-2019.md)

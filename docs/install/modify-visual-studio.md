@@ -1,10 +1,10 @@
 ---
 title: Úprava Visual Studio úloh, komponent a & jazykových sad
 titleSuffix: ''
-description: Zjistěte, jak Visual Studio, krok za krokem.
+description: Zjistěte, jak Visual Studio postupy, krok za krokem.
 ms.date: 10/12/2020
 ms.topic: how-to
-ms.custom: contperf-fy21q2
+ms.custom: acquisition
 helpviewer_keywords:
 - modify Visual Studio
 - change visual studio
@@ -18,18 +18,18 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 30b28af562e5dbaa8c05624f6cc9d531cf652419
-ms.sourcegitcommit: 8d3d51042261df603487169a7a008fe8f71404ec
+ms.openlocfilehash: 3f4040023dd023db351571482ac2a17c18b46e06
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109501769"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112922"
 ---
 # <a name="modify-visual-studio-workloads-components-and-language-packs"></a>Úprava Visual Studio úloh, komponent a jazykových sad
 
 ::: moniker range="vs-2019"
 
-Změny v tomto souboru Visual Studio tak, aby v případě, že chcete, zahrnují jenom to, co chcete. Pokud to chcete udělat, otevřete Instalační program pro Visual Studio a přidejte nebo odeberte úlohy a komponenty.
+Je snadné je upravit Visual Studio tak, aby v případě, že chcete, byl jenom to, co chcete. Pokud to chcete udělat, otevřete Instalační program pro Visual Studio a přidejte nebo odeberte úlohy a komponenty.
 
 ::: moniker-end
 
@@ -43,11 +43,11 @@ Nejen že jsme vám usnadnili přizpůsobení Visual Studio tak, aby odpovídaly
 
 + Pokud chcete instalovat, aktualizovat nebo Visual Studio, musíte se přihlásit pomocí účtu, který má oprávnění správce. Další informace najdete v tématu [Uživatelská oprávnění a Visual Studio](../ide/user-permissions-and-visual-studio.md).
 
-+ Následující postupy předpokládají, že máte připojení k internetu. Další informace o tom, jak upravit dříve vytvořenou [offline](create-an-offline-installation-of-visual-studio.md) instalaci služby Visual Studio, najdete na stránce Aktualizace [](controlling-updates-to-visual-studio-deployments.md) síťové instalace [služby Visual Studio i](update-a-network-installation-of-visual-studio.md) na stránce Řízení aktualizací síťových nasazení Visual Studio nasazení.
++ Následující postupy předpokládají, že máte připojení k internetu. Další informace o tom, jak upravit dříve vytvořenou [offline](create-an-offline-installation-of-visual-studio.md) instalaci služby Visual Studio, najdete na stránce Aktualizace síťové instalace [služby Visual Studio i](update-a-network-installation-of-visual-studio.md) na stránce Řízení aktualizací síťových Visual Studio [nasazení.](controlling-updates-to-visual-studio-deployments.md)
 
 ## <a name="launch-the-installer"></a>Spusťte instalační program.
 
-Pokud chcete provést úpravy instalace, musíte spustit instalační Visual Studio systému.
+Pokud chcete provést úpravy instalace, musíte spustit Visual Studio instalaci.
 
 ::: moniker range="vs-2017"
 
@@ -55,7 +55,7 @@ Pokud chcete provést úpravy instalace, musíte spustit instalační Visual Stu
 
      Například na počítači se systémem Windows 10 **start** a posuňte se k písmenu **V,** kde je uvedené **jako Instalační program pro Visual Studio**.
 
-     ![Instalační program pro Visual Studio](media/locate-the-visual-studio-installer.png "Vyhledání instalačního programu Microsoft Visual Studio")
+     ![Instalační program pro Visual Studio](media/locate-the-visual-studio-installer.png "Vyhledejte instalační Microsoft Visual Studio.")
 
      >[!TIP]
      >Na některých počítačích může být Instalační program pro Visual Studio uveden pod písmenem **"M"** jako Microsoft Visual Studio **instalační program.**<br/><br/> Další možností je najít Instalační program pro Visual Studio v následujícím umístění: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
@@ -65,53 +65,53 @@ Pokud chcete provést úpravy instalace, musíte spustit instalační Visual Stu
      ![Spuštění nebo úprava Visual Studio](media/modify-visual-studio.png "Úpravy sady Visual Studio 2017")
 
      > [!IMPORTANT]
-     > Pokud máte čekající aktualizaci, je tlačítko Upravit na jiném místě. Tímto způsobem můžete aplikaci Visual Studio upravit bez aktualizace, takže byste ji měli vybrat. Klikněte na tlačítko **Další** a pak zvolte možnost **Upravit**.
+     > Pokud máte čekající aktualizaci, je tlačítko Upravit na jiném místě. Tímto způsobem můžete upravit Visual Studio bez aktualizace, pokud se tak rozhodnete. Klikněte **na Další** a pak zvolte **Upravit.**
      >
-     > ![Aktualizace nebo změna sady Visual Studio](media/modify-or-update-visual-studio.png "Aktualizace nebo změna sady Visual Studio 2017")
+     > ![Aktualizace nebo úprava Visual Studio](media/modify-or-update-visual-studio.png "Aktualizace nebo úprava Visual Studio 2017")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Najděte **instalační program pro Visual Studio** v počítači.
+1. Vyhledejte **Instalační program pro Visual Studio** v počítači.
 
-     V nabídce Start systému Windows můžete vyhledat "instalační program".
+     V části nabídka Start Windows můžete vyhledat instalační program.
 
      ![Instalační program pro Visual Studio](media/vs-2019/visual-studio-installer.png "Vyhledejte Instalační program pro Visual Studio")
 
      > [!NOTE]
-     > Instalační program pro Visual Studio můžete najít také v následujícím umístění:
+     > Tento soubor najdete také Instalační program pro Visual Studio v následujícím umístění:
      >
      > `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-    Než budete pokračovat, bude pravděpodobně nutné aktualizovat instalační program. Pokud ano, postupujte podle pokynů.
+    Než budete pokračovat, možná budete muset instalační program aktualizovat. Pokud ano, postupujte podle pokynů.
 
-1. V instalačním programu vyhledejte edici sady Visual Studio, kterou jste nainstalovali, a pak zvolte možnost **Upravit**.
+1. V instalačním programu vyhledejte edici Visual Studio, kterou jste nainstalovali, a pak zvolte **Upravit.**
 
-     ![Zvolte edici Visual Studio a pak upravit.](media/vs-2019/vs-installer-modify.png "Zvolte edici Visual Studio 2019 a pak upravte")
+     ![Zvolte Visual Studio edici a pak upravte](media/vs-2019/vs-installer-modify.png "Zvolte Visual Studio edici 2019 a pak upravte")
 
      > [!IMPORTANT]
-     > Pokud máte vyřízenou aktualizaci, tlačítko Upravit je na jiném místě. Tímto způsobem můžete aplikaci Visual Studio upravit bez aktualizace, chcete. Zvolte možnost **Další** a pak zvolte možnost **Upravit**.
+     > Pokud máte čekající aktualizaci, je tlačítko Upravit na jiném místě. Tímto způsobem můžete upravit Visual Studio bez aktualizace, pokud chcete. Zvolte **Další** a pak zvolte **Upravit.**
      >
-     > ![Aktualizace nebo změna sady Visual Studio](media/vs-2019/modify-update-visual-studio.png "Aktualizace nebo změna sady Visual Studio 2019")
+     > ![Aktualizace nebo úprava Visual Studio](media/vs-2019/modify-update-visual-studio.png "Aktualizace nebo úprava Visual Studio 2019")
 
 ::: moniker-end
 
-## <a name="change-workloads-or-individual-components"></a>Změna zatížení nebo jednotlivých komponent
+## <a name="change-workloads-or-individual-components"></a>Změna úloh nebo jednotlivých komponent
 
 ::: moniker range="vs-2017"
 
- [Úlohy](https://visualstudio.microsoft.com/vs/support/selecting-workloads-visual-studio-2017/) obsahují funkce, které potřebujete pro programovací jazyk nebo platformu, kterou používáte. Použijte úlohy pro úpravu sady Visual Studio tak, aby podporovala práci, kterou chcete provést, pokud ji chcete provést.
+ [Úlohy obsahují](https://visualstudio.microsoft.com/vs/support/selecting-workloads-visual-studio-2017/) funkce, které potřebujete pro programovací jazyk nebo platformu, kterou používáte. Úlohy můžete použít k Visual Studio tak, aby v době, kdy chcete, byla podpora práce, kterou chcete udělat.
 
-1. V Instalační program pro Visual Studio zvolte kartu **úlohy** a pak vyberte nebo zrušte výběr úloh, které chcete.
+1. V Instalační program pro Visual Studio vyberte **kartu** Úlohy a pak vyberte nebo zrušte výběr úloh, které chcete.
 
-   Případně, pokud nechcete použít úlohy k přizpůsobení instalace sady Visual Studio, zvolte kartu **jednotlivé komponenty** a vyberte požadované součásti a pak postupujte podle pokynů.
+   Případně pokud nechcete k přizpůsobení instalace Visual Studio použít úlohy, zvolte kartu  Jednotlivé komponenty, vyberte komponenty, které chcete, a pak postupujte podle pokynů.
 
-    ![Visual Studio 2017 – dialogové okno instalace](media/modify-workloads.png "Výběr úlohy v aplikaci Visual Studio 2019")
+    ![dialogové okno instalace Visual Studio 2017](media/modify-workloads.png "Volba úlohy v Visual Studio 2019")
 
 1. Zvolte, jestli chcete přijmout výchozí možnost Instalovat **při stahování,** nebo možnost Stáhnout vše **a pak** nainstalovat.
 
-    ![Visual Studio 2017 – možnosti nastavení](media/vs-2019/vs-installer-choose-install-or-download.png "Zvolit instalaci během stahování nebo ke stažení a pozdější instalaci")
+    ![Visual Studio 2017 – možnosti nastavení](media/vs-2019/vs-installer-choose-install-or-download.png "Zvolte instalaci při stahování nebo si ji nejprve stáhněte a nainstalujte později.")
 
     Možnost Stáhnout vše, pak nainstalovat je po ruce, pokud si ji chcete nejprve stáhnout a pak nainstalovat později.
 
@@ -133,13 +133,13 @@ Pokud chcete provést úpravy instalace, musíte spustit instalační Visual Stu
 
 1. V Instalační program pro Visual Studio vyberte **kartu** Úlohy a pak vyberte nebo zrušte výběr úloh, které chcete.
 
-    ![Visual Studio instalace 2019](media/vs-2019/vs-installer-modify-workloads.png "Výběr úlohy v aplikaci Visual Studio 2019")
+    ![Visual Studio instalace 2019](media/vs-2019/vs-installer-modify-workloads.png "Volba úlohy v Visual Studio 2019")
 
 1. Zvolte, jestli chcete přijmout výchozí možnost Instalovat **při stahování,** nebo možnost Stáhnout vše **a pak** nainstalovat.
 
-    ![Visual Studio 2019 – možnosti nastavení](media/vs-2019/vs-installer-choose-install-or-download.png "Zvolit instalaci během stahování nebo ke stažení a pozdější instalaci")
+    ![Visual Studio 2019 – možnosti nastavení](media/vs-2019/vs-installer-choose-install-or-download.png "Zvolte instalaci při stahování nebo si ji nejprve stáhněte a nainstalujte později.")
 
-    Možnost Stáhnout vše, pak nainstalovat je vhod, pokud si ji chcete nejprve stáhnout a pak nainstalovat později.
+    Možnost Stáhnout vše, pak nainstalovat je po ruce, pokud si ji chcete nejprve stáhnout a pak nainstalovat později.
 
 1. Zvolte **Upravit.**
 
@@ -153,18 +153,18 @@ Pokud chcete provést úpravy instalace, musíte spustit instalační Visual Stu
 
 ## <a name="modify-language-packs"></a>Úprava jazykových sad
 
-Instalační program standardně při prvním spuštění odpovídá jazyku operačního systému. Jazyk však můžete kdykoli změnit. 
+Instalační program standardně při prvním spuštění odpovídá jazyku operačního systému. Jazyk ale můžete změnit, kdykoli chcete. 
 
 Postupujte následovně:
-1. Vyberte kartu **jazykové sady** v instalační program pro Visual Studio.
-2. Vyberte jazyk, kterému dáváte přednost.
+1. Na kartě **Jazykové sady** v Instalační program pro Visual Studio.
+2. Vyberte jazyk, který dáváte přednost.
 3. Postupujte podle pokynů.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Viz také
 
-* [Seznam úloh sady Visual Studio & ID součástí](workload-and-component-ids.md)
+* [Seznam ID Visual Studio komponent & úloh](workload-and-component-ids.md)
 * [Aktualizace sady Visual Studio](update-visual-studio.md)
 * [Aktualizace síťové instalace sady Visual Studio](update-a-network-installation-of-visual-studio.md)
 * [Odinstalace sady Visual Studio](uninstall-visual-studio.md)

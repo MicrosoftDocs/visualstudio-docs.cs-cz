@@ -2,10 +2,11 @@
 title: Přehled sady Visual Studio
 titleSuffix: ''
 description: Seznamte se s integrovaným vývojovým prostředím sady Visual Studio.
-ms.date: 03/19/2019
+ms.date: 05/28/2021
 ms.technology: vs-ide-general
 ms.topic: overview
 ms.custom:
+- acquisition
 - vs-get-started
 - SEO-VS-2020
 author: TerryGLee
@@ -16,12 +17,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fb8a558485f6855af1411c99d270f1328d62db20
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3012676af42b1cb575e86948e9bc27e0a0e29821
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944378"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112501"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>Vítá vás integrované vývojové prostředí (IDE) sady Visual Studio
 

@@ -1,7 +1,7 @@
 ---
 title: 'Vytvoření webové aplikace v ASP.NET Core v jazyce C #'
 description: Naučte se, jak vytvořit jednoduchou webovou aplikaci Hello World v aplikaci Visual Studio pomocí C# a ASP.NET Core, krok za krokem.
-ms.custom: mvc,seodec18
+ms.custom: acquisition, mvc,seodec18
 ms.date: 11/06/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: d4f36ac4199d082b6ab0eae3154307bd8f4f7487
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: b361446bb128fcc01ac9a33f3a367b7e60a050c4
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296934"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113235"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první ASP.NET Core webové aplikace
 
@@ -53,7 +53,7 @@ Začněte tím, že vytvoříte projekt webové aplikace ASP.NET Core. Typ proje
 
 1. Otevřete sadu Visual Studio 2017.
 
-1. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
+1. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
 1. V levém podokně dialogového okna **Nový projekt** rozbalte položku **Visual C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **ASP.NET Core webová aplikace**. <br/><br/>Pak zadejte název souboru `HelloWorld` a zvolte **OK**.
 
@@ -171,7 +171,7 @@ Brzy poté aplikace Visual Studio otevře soubor projektu.
 
 Prohlédněte si následující animaci a zkontrolujte práci, kterou jste dokončili v předchozí části.
 
-  ![Zobrazení animovaného souboru. gif, který ukazuje vytvoření a spuštění jednoduché webové aplikace v C# ASP.NET Core v aplikaci Visual Studio](../ide/media/csharp-aspnet-animated-hello-world.gif)
+  ![Zobrazit animovaný .gif soubor, který ukazuje, jak vytvořit a spustit jednoduchou webovou aplikaci v C# ASP.NET Core v aplikaci Visual Studio](../ide/media/csharp-aspnet-animated-hello-world.gif)
 
 Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozvěděli trochu o jazyce C#, ASP.NET Core a integrovaném vývojovém prostředí (IDE) sady Visual Studio (integrované vývojové prostředí).
 

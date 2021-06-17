@@ -8,15 +8,15 @@ metadata:
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
-  author: jillre
-  ms.author: jillfra
-  ms.date: 09/24/2019
-  ms.openlocfilehash: a97cdc17a9e71520d34437e8897f3301de58fb5e
-  ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
-  ms.translationtype: HT
+  author: j-martens
+  ms.author: jmartens
+  ms.date: 06/14/2021
+  ms.openlocfilehash: 91e49ade3715f507523cc09c83c2cfb5fea0459c
+  ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+  ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/19/2020
-  ms.locfileid: "90809658"
+  ms.lasthandoff: 06/15/2021
+  ms.locfileid: "112112403"
 landingContent:
 - title: Začínáme
   linkLists:
@@ -74,9 +74,11 @@ landingContent:
   linkLists:
   - linkListType: whats-new
     links:
+    - text: Poznámky k verzi
+      url: /visualstudio/releases/2019/release-notes
     - text: Novinky v sadě Visual Studio 2019
       url: ../ide/whats-new-visual-studio-2019.md
     - text: Novinky v sadě Visual Studio 2017
       url: ../ide/whats-new-visual-studio-2017.md
-    - text: Novinky v dokumentaci k sadě Visual Studio
+    - text: Co je nového v dokumentu
       url: ../ide/whats-new-visual-studio-docs.md

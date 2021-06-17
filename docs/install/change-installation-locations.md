@@ -1,106 +1,106 @@
 ---
 title: Výběr umístění instalací
-description: Zjistěte, jak omezit nároky na instalaci sady Visual Studio na systémovou jednotku tím, že změníte umístění mezipaměti pro stahování, sdílené komponenty, sady SDK a nástroje na různé jednotky. Například přesuňte některé soubory z jednotky C do jednotky D.
+description: Zjistěte, jak snížit nároky na instalaci Visual Studio na systémové jednotce změnou umístění mezipaměti pro stahování, sdílených komponent, sady SDK a nástrojů na různé jednotky. Přesuňte například některé soubory z jednotky C na jednotku D.
 ms.date: 03/30/2019
-ms.custom: seodec18
+ms.custom: acquisition
 ms.topic: how-to
 helpviewer_keywords:
 - change installation locations for Visual Studio
 - select an installation location for Visual Studio files
 - move installation files to different drives
 - use the D drive
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4db3a31c8baa578a17d14b3a740ff40a444ba208
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e9ee5972a0f1acba37a6b6b417df00a925e5558
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868631"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112483"
 ---
-# <a name="select-the-installation-locations-in-visual-studio"></a>Vybrat umístění instalace v aplikaci Visual Studio
+# <a name="select-the-installation-locations-in-visual-studio"></a>Vyberte umístění instalace v Visual Studio
 
 ::: moniker range="vs-2019"
 
-Nároky na instalaci sady Visual Studio můžete snížit na systémové jednotce změnou umístění některých z jeho souborů. Konkrétně můžete použít jiné umístění pro mezipaměť pro stahování, sdílené komponenty, sady SDK a soubory nástrojů.
+Změnou umístění některých Visual Studio můžete snížit nároky na instalaci systému na systémové jednotce. Konkrétně můžete použít jiné umístění pro mezipaměť pro stahování, sdílené komponenty, sady SDK a soubory nástrojů.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-**Novinka ve verzi 15,7**: můžete snížit nároky na instalaci sady Visual Studio na systémové jednotce změnou umístění některých z jeho souborů. Konkrétně můžete použít jiné umístění pro mezipaměť pro stahování, sdílené komponenty, sady SDK a soubory nástrojů.
+**Novinka ve verzi 15.7:** Změnou umístění některých svých souborů můžete snížit nároky na instalaci Visual Studio na systémové jednotce. Konkrétně můžete použít jiné umístění pro mezipaměť pro stahování, sdílené komponenty, sady SDK a soubory nástrojů.
 
 ::: moniker-end
 
    > [!NOTE]
-   > Existují některé nástroje a sady SDK, které mají různá pravidla, na jejichž základě je možné je nainstalovat. Tyto nástroje a sady SDK jsou nainstalovány na systémové jednotce i v případě, že zvolíte jiné umístění.
+   > Existuje několik nástrojů a sady SDK, které mají různá pravidla pro jejich instalaci. Takové nástroje a sady SDK se na systémové jednotce instaluje i v případě, že zvolíte jiné umístění.
 
 Jste připraveni začít? Jak na to:
 
 ::: moniker range="vs-2017"
 
-1. Při instalaci sady Visual Studio vyberte kartu **umístění instalace** .
+1. Při instalaci Visual Studio zvolte kartu **Umístění** instalace.
 
-   ![Visual Studio 2017 – výběr umístění instalace](media/vs-installation-locations.png "Vyberte umístění instalace.")
+   ![Visual Studio 2017 – Výběr umístění instalace](media/vs-installation-locations.png "Vyberte umístění instalace.")
 
-1. V části **Visual Studio IDE** přijměte výchozí nastavení. Visual Studio nainstaluje základní produkt a obsahuje soubory, které jsou specifické pro tuto verzi sady Visual Studio.
+1. V části **Visual Studio IDE** přijměte výchozí nastavení. Visual Studio nainstaluje základní produkt a obsahuje soubory specifické pro tuto verzi Visual Studio.
 
-   ![Část IDE sady Visual Studio na kartě umístění instalace](media/vs-installation-locations-ide.png "V části rozhraní IDE sady Visual Studio na kartě umístění instalace přijměte výchozí hodnotu.")
+   ![Visual Studio integrovaného vývojového prostředí (IDE) na kartě Umístění instalace](media/vs-installation-locations-ide.png "Přijměte výchozí hodnotu pro Visual Studio IDE na kartě Umístění instalace.")
 
    > [!TIP]
-   > Pokud je systémová jednotka SSD (Solid-State Drive), doporučujeme, abyste přijali výchozí umístění na systémové jednotce. Důvod? Při vývoji v aplikaci Visual Studio můžete číst a zapisovat do velkého množství souborů, které zvyšují aktivitu v/v disku. Nejlepší je zvolit nejrychlejší disk pro zpracování zatížení.
+   > Pokud je vaše systémová jednotka SSD (solid-state drive), doporučujeme přijmout výchozí umístění na systémové jednotce. Důvod? Když vyvíjíte s Visual Studio, čtete z a zapisujete do mnoha souborů, což zvyšuje aktivitu V/V disku. Pro zvládnutí zatížení je nejlepší zvolit nejrychlejší jednotku.
 
-1. V části **mezipaměť pro stahování** se rozhodněte, jestli chcete uchovat mezipaměť pro stahování, a pak se rozhodněte, kam chcete ukládat soubory.
+1. V části **Download cache** (Stáhnout mezipaměť) rozhodněte, jestli chcete zachovat mezipaměť pro stahování, a pak se rozhodněte, kam chcete ukládat soubory.
 
-     ![Část mezipaměti pro stahování na kartě umístění instalace](media/vs-installation-locations-cache.png "Zvolte, zda má být po instalaci uchovávána mezipaměť pro stahování, a pak zadejte jednotku, kam chcete ukládat soubory.")
+     ![Část Stáhnout mezipaměť na kartě Umístění instalace](media/vs-installation-locations-cache.png "Zvolte, jestli se má mezipaměť pro stahování po instalaci zachovat, a pak určete jednotku, do které chcete ukládat soubory.")
 
-    1. Zrušte nebo zrušte kontrolu **po instalaci zachovat mezipaměť pro stahování**.
+    1. Zaškrtněte nebo zrušte zaškrtnutí políčka Keep download cache after the installation (Zachovat **mezipaměť pro stahování po instalaci).**
 
-       Pokud se rozhodnete, že nechcete uchovávat mezipaměť pro stahování, umístění se použije jenom dočasně. Tato akce neovlivní ani neodstraní soubory z předchozích instalací.
+       Pokud se rozhodnete neuchovat mezipaměť pro stahování, umístění se použije pouze dočasně. Tato akce neovlivní nebo odstraní soubory z předchozích instalací.
 
-    1. Zadejte jednotku, do které chcete uložit instalační soubory a manifesty z mezipaměti pro stahování.
+    1. Určete jednotku, do které chcete ukládat instalační soubory a manifesty z mezipaměti pro stahování.
 
-        Pokud například vyberete úlohu vývoj desktopových aplikací s C++, je dočasně požadovaná velikost na systémové jednotce 1,58 GB, která se pak uvolní ihned po dokončení instalace.
+        Pokud například vyberete úlohu Vývoj desktopových aplikací pomocí C++, dočasně požadovaná velikost je 1,58 GB na systémové jednotce, která se pak po dokončení instalace uchová.
 
        > [!IMPORTANT]
-       > Toto umístění je nastavené na první instalaci a nedá se později změnit z uživatelského rozhraní instalačního programu. Místo toho je nutné [použít parametry příkazového řádku](use-command-line-parameters-to-install-visual-studio.md) pro přesunutí mezipaměti pro stahování.
+       > Toto umístění se nastaví při první instalaci a později ho nebude možné změnit v uživatelském rozhraní instalačního programu. Místo toho musíte [k přesunutí mezipaměti pro stahování](use-command-line-parameters-to-install-visual-studio.md) použít parametry příkazového řádku.
 
-1. V části **sdílené komponenty, nástroje a sady SDK** určete jednotku, kam chcete uložit soubory, které jsou sdíleny souběžnými instalacemi sady Visual Studio. Sady SDK a nástroje jsou také uloženy v tomto adresáři.
+1. V části **Sdílené součásti, nástroje** a sady SDK určete jednotku, kam chcete uložit soubory, které jsou sdíleny vedle sebe, Visual Studio instalace. V tomto adresáři jsou také uložené sady SDK a nástroje.
 
-   ![Část sdílené součásti, nástroje a sady SDK na kartě umístění instalace](media/vs-installation-locations-shared.png "Zadejte umístění, kam chcete uložit sdílené součásti, nástroje a sady SDK.")
+   ![Část Sdílené komponenty, nástroje a sady SDK na kartě Umístění instalace](media/vs-installation-locations-shared.png "Zadejte umístění, kam chcete ukládat sdílené komponenty, nástroje a sady SDK.")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Při instalaci sady Visual Studio vyberte kartu **umístění instalace** .
+1. Při instalaci Visual Studio zvolte kartu **Umístění** instalace.
 
-   ![Visual Studio 2019 – výběr umístění instalace](media/vs-2019/vs-installer-installation-locations.png "Vyberte umístění instalace.")
+   ![Visual Studio 2019 – Výběr umístění instalace](media/vs-2019/vs-installer-installation-locations.png "Vyberte umístění instalace.")
 
-1. V části **Visual Studio IDE** přijměte výchozí nastavení. Visual Studio nainstaluje základní produkt a obsahuje soubory, které jsou specifické pro tuto verzi sady Visual Studio.
+1. V části **Visual Studio IDE** přijměte výchozí nastavení. Visual Studio nainstaluje základní produkt a obsahuje soubory specifické pro tuto verzi Visual Studio.
 
    > [!TIP]
-   > Pokud je systémová jednotka SSD (Solid-State Drive), doporučujeme, abyste přijali výchozí umístění na systémové jednotce. Důvod? Při vývoji v aplikaci Visual Studio můžete číst a zapisovat do velkého množství souborů, které zvyšují aktivitu v/v disku. Nejlepší je zvolit nejrychlejší disk pro zpracování zatížení.
+   > Pokud je vaše systémová jednotka SSD (solid-state drive), doporučujeme přijmout výchozí umístění na systémové jednotce. Důvod? Když vyvíjíte s Visual Studio, čtete z a zapisujete do mnoha souborů, což zvyšuje aktivitu V/V disku. Pro zvládnutí zatížení je nejlepší zvolit nejrychlejší jednotku.
 
-1. V části **mezipaměť pro stahování** se rozhodněte, jestli chcete uchovat mezipaměť pro stahování, a pak se rozhodněte, kam chcete ukládat soubory.
+1. V části **Download cache** (Stáhnout mezipaměť) rozhodněte, jestli chcete zachovat mezipaměť pro stahování, a pak se rozhodněte, kam chcete ukládat soubory.
 
-    * Zrušte nebo zrušte kontrolu **po instalaci zachovat mezipaměť pro stahování**.
+    * Zaškrtněte nebo zrušte zaškrtnutí políčka Keep download cache after the installation (Zachovat **mezipaměť pro stahování po instalaci).**
 
-       Pokud se rozhodnete, že nechcete uchovávat mezipaměť pro stahování, umístění se použije jenom dočasně. Tato akce neovlivní ani neodstraní soubory z předchozích instalací.
+       Pokud se rozhodnete neuchovat mezipaměť pro stahování, umístění se použije pouze dočasně. Tato akce neovlivní nebo odstraní soubory z předchozích instalací.
 
-    * Zadejte jednotku, do které chcete uložit instalační soubory a manifesty z mezipaměti pro stahování.
+    * Určete jednotku, do které chcete ukládat instalační soubory a manifesty z mezipaměti pro stahování.
 
-        Pokud například vyberete úlohu vývoj desktopových aplikací s C++, je dočasně požadovaná velikost na systémové jednotce 1,58 GB, která se pak uvolní ihned po dokončení instalace.
+        Pokud například vyberete úlohu Vývoj desktopových aplikací pomocí C++, dočasně požadovaná velikost je 1,58 GB na systémové jednotce, která se pak po dokončení instalace uchová.
 
        > [!IMPORTANT]
-       > Toto umístění je nastavené na první instalaci a nedá se později změnit z uživatelského rozhraní instalačního programu. Místo toho je nutné [použít parametry příkazového řádku](use-command-line-parameters-to-install-visual-studio.md) pro přesunutí mezipaměti pro stahování.
+       > Toto umístění se nastaví při první instalaci a později ho nebude možné změnit v uživatelském rozhraní instalačního programu. Místo toho musíte [k přesunutí mezipaměti pro stahování](use-command-line-parameters-to-install-visual-studio.md) použít parametry příkazového řádku.
 
-1. V části **sdílené komponenty, nástroje a sady SDK** si všimněte, že používá stejnou jednotku, jakou jste zvolili v části "mezipaměť pro stahování". Adresář \Microsoft\VisualStudio\Shared je místo, kde aplikace Visual Studio ukládá soubory, které jsou sdíleny souběžnými instalacemi sady Visual Studio. Sady SDK a nástroje jsou také uloženy v tomto adresáři.
+1. V části **Sdílené komponenty, nástroje** a sady SDK se používá stejná jednotka, kterou jste zvolili v části Stažení mezipaměti. Adresář \Microsoft\VisualStudio\Shared Visual Studio ukládá soubory, které jsou sdíleny vedle sebe, Visual Studio instalace. V tomto adresáři jsou také uložené sady SDK a nástroje.
 
 ::: moniker-end
 

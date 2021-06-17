@@ -1,7 +1,7 @@
 ---
 title: 'Kurz: Začínáme s Visual Basic'
-description: Naučte se vytvářet Visual Basic konzolové aplikace v aplikaci Visual Studio, krok za krokem.
-ms.custom: seodec18, get-started
+description: Naučte se Visual Basic konzolové aplikace v Visual Studio krok za krokem.
+ms.custom: acquisition, seodec18, get-started
 ms.date: 02/10/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,114 +14,114 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 075c84433e5784106bbe1f9c6ac6f58d9613bfdb
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: cc9557c4b7558488fd8757d3c50920debe134568
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295491"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112461"
 ---
-# <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Kurz: Začínáme s Visual Basic v aplikaci Visual Studio
+# <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Kurz: Začínáme s Visual Basic v Visual Studio
 
-V tomto kurzu pro Visual Basic (VB) použijete Visual Studio k vytvoření a spuštění několika různých konzolových aplikací a Prozkoumejte některé funkce [integrovaného vývojového prostředí (IDE) sady Visual Studio](visual-studio-ide.md) .
+V tomto kurzu pro Visual Basic (VB) použijete Visual Studio k vytvoření a spuštění několika různých konzolových aplikací a prozkoumáte některé funkce integrovaného vývojového prostředí [(IDE) Visual Studio.](visual-studio-ide.md)
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Nejprve vytvoříme projekt aplikace Visual Basic. Typ projektu se dodává se všemi soubory šablon, které budete potřebovat, než dokonce cokoli přidáte.
+Nejprve vytvoříme projekt Visual Basic aplikace. Typ projektu se dodává se všemi soubory šablony, které budete potřebovat, ještě než budete něco přidávat.
 
 ::: moniker range="vs-2017"
 
 1. Otevřete sadu Visual Studio 2017.
 
-2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
+2. V horním řádku nabídek zvolte **File** New Project > **(Soubor nového** > **projektu).**
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte projekt *WhatIsYourName*.
+3. V dialogovém **okně Nový** projekt v levém podokně rozbalte **Visual Basic** a pak zvolte **.NET Core**. V prostředním podokně zvolte **Konzolová aplikace (.NET Core).** Pak projekt pojmnuje *WhatIsYourName*.
 
-   ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](media/new-project-vb-dotnetcore-whatisyourname-console-app.png)
+   ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém Visual Studio Ide](media/new-project-vb-dotnetcore-whatisyourname-console-app.png)
 
-### <a name="add-a-workload-optional"></a>Přidat úlohu (volitelné)
+### <a name="add-a-workload-optional"></a>Přidání úlohy (volitelné)
 
-Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete ji získat přidáním úlohy **vývoje .NET Core pro různé platformy** . Tuto úlohu můžete přidat jedním ze dvou způsobů, v závislosti na tom, které aktualizace sady Visual Studio 2017 jsou nainstalovány na vašem počítači.
+Pokud šablonu projektu Konzolová **aplikace (.NET Core)** nevidíte, můžete ji získat přidáním úlohy vývoj pro **různé platformy v .NET Core.** Tuto úlohu můžete přidat jedním ze dvou následujících způsobů v závislosti na tom, které aktualizace Visual Studio 2017 jsou nainstalované na vašem počítači.
 
-#### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: použití dialogového okna Nový projekt
+#### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: Použití dialogového okna Nový projekt
 
-1. Klikněte na odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** .
+1. V **levém Instalační program pro Visual Studio** dialogového okna Nový projekt klikněte na **odkaz** Otevřít nový projekt.
 
-   ![Klikněte na odkaz otevřít Instalační program pro Visual Studio v dialogovém okně Nový projekt.](../media/vs-open-visual-studio-installer-generic.png)
+   ![V dialogovém okně Instalační program pro Visual Studio projektu klikněte na odkaz Otevřít projekt.](../media/vs-open-visual-studio-installer-generic.png)
 
-1. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+1. Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoj pro různé platformy** v .NET Core a pak zvolte **Upravit.**
 
-   ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../media/tutorial-aspnet-workload.png)
+   ![Úloha vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../media/tutorial-aspnet-workload.png)
 
-#### <a name="option-2-use-the-tools-menu-bar"></a>Možnost 2: použití panelu nabídky nástroje
+#### <a name="option-2-use-the-tools-menu-bar"></a>Možnost 2: Použití řádku nabídek Nástroje
 
-1. Zrušte z dialogového okna **Nový projekt** a v horním řádku nabídky vyberte **nástroje** > **získat nástroje a funkce**.
+1. Zrušte dialogové **okno Nový** projekt a v horním řádku nabídek zvolte Nástroje **Získat** nástroje a > **funkce.**
 
-1. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+1. Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoj pro různé platformy** v .NET Core a pak zvolte **Upravit.**
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Některé snímky obrazovky v tomto kurzu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chcete, přečtěte si téma [přizpůsobení stránky IDE a editoru sady Visual Studio](../../ide/quickstart-personalize-the-ide.md) , kde se dozvíte, jak.
+> Některé snímky obrazovky v tomto kurzu používají tmavý motiv. Pokud tmavý motiv používáte, ale chcete, podívejte se na stránku Přizpůsobení integrovaného vývojového Visual Studio a [editoru,](../../ide/quickstart-personalize-the-ide.md) kde se dozvíte, jak.
 
 1. Otevřete Visual Studio 2019.
 
-1. V okně Start vyberte možnost **vytvořit nový projekt**.
+1. V úvodním okně zvolte **Vytvořit nový projekt.**
 
-   ![Zobrazit okno vytvořit nový projekt](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   ![Zobrazení okna Vytvořit nový projekt](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. V okně **vytvořit nový projekt** vyberte v seznamu jazyk možnost **Visual Basic** . Dále ze seznamu typy projektů vyberte možnost **Windows** ze seznamu platforem a **konzole** .
+1. V **okně Vytvořit nový** projekt zvolte **Visual Basic** ze seznamu Jazyk. Dále v seznamu Platforma zvolte **Windows** a **ze** seznamu typů projektů zvolte Konzola.
 
-   Po použití filtrů typu jazyk, platforma a typ projektu zvolte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
+   Po použití filtrů jazyka, platformy a typu projektu zvolte šablonu **Konzolová** aplikace a pak zvolte **Další.**
 
-   :::image type="content" source="./media/vs-2019/vb-create-new-project-console-net-core.png" alt-text="Zvolit šablonu Visual Basic pro konzolovou aplikaci":::
+   :::image type="content" source="./media/vs-2019/vb-create-new-project-console-net-core.png" alt-text="Zvolte šablonu Visual Basic pro konzolovou aplikaci.":::
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **konzolové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
+   > Pokud šablonu Konzolová **aplikace nevidíte,** můžete ji nainstalovat z **okna Vytvořit nový** projekt. Ve zprávě **Nehledá se, co hledáte?** zvolte odkaz Instalovat **další** nástroje a funkce.
    >
-   > ![Odkaz pro instalaci dalších nástrojů a funkcí v okně vytvořit nový projekt v části nenajít, co hledáte?](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
+   > ![Odkaz Install more tools and features (Nainstalovat další nástroje a funkce) ze zprávy Not finding what you're looking for (Najít, co hledáte) v okně Create new project (Vytvořit nový projekt)](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
-   > Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
+   > Potom v části Instalační program pro Visual Studio úlohu **Vývoj pro různé platformy v .NET Core.**
    >
-   > ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../../get-started/media/dot-net-core-xplat-dev-workload.png)
+   > ![Úloha vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../../get-started/media/dot-net-core-xplat-dev-workload.png)
    >
-   > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu. Pak se vraťte ke kroku 2 v tomto postupu "[Vytvoření projektu](#create-a-project)".
+   > Potom zvolte tlačítko **Upravit** v Instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce. Pokud ano, proveďte to. Potom zvolte **Pokračovat a** nainstalujte úlohu. Pak se vraťte ke kroku 2 v[této proceduře "Vytvoření](#create-a-project)projektu".
 
-1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *WhatIsYourName* do pole **název projektu** . Pak klikněte na tlačítko **Další**.
+1. V **okně Configure your new project** (Konfigurace nového projektu) zadejte nebo do pole Project name (Název **projektu)** zadejte nebo zadejte *WhatIsYourName.* Pak zvolte **Další.**
 
-   :::image type="content" source="./media/vs-2019/vb-name-your-project-whatname.png" alt-text="v okně Konfigurovat nový projekt pojmenujte projekt ' WhatIsYourName '.":::
+   :::image type="content" source="./media/vs-2019/vb-name-your-project-whatname.png" alt-text="V okně Konfigurovat nový projekt pojmnujte projekt WhatIsYourName.":::
 
-1. V okně **Další informace** by měl být **.NET Core 3,1** již vybraný pro vaši cílovou architekturu. Pokud ne, vyberte **.NET Core 3,1**. Pak zvolte **vytvořit**.
+1. V okně **Další informace** by už mělo být pro cílovou rozhraní vybrané **rozhraní .NET Core 3.1.** Pokud ne, vyberte **.NET Core 3.1.** Pak zvolte **Vytvořit.**
 
-   :::image type="content" source="./media/vs-2019/vb-target-framework.png" alt-text="V okně Další informace se ujistěte, že je vybraná možnost .NET Core 3,1.":::
+   :::image type="content" source="./media/vs-2019/vb-target-framework.png" alt-text="V okně Další informace se ujistěte, že je vybraná možnost .NET Core 3.1.":::
 
-   Visual Studio otevře nový projekt.
+   Visual Studio nový projekt otevřete.
 
 ::: moniker-end
 
-## <a name="create-a-what-is-your-name-application"></a>Vytvoření aplikace "Co je vaše jméno"
+## <a name="create-a-what-is-your-name-application"></a>Vytvoření aplikace "What Is Your Name" (Jaké je vaše jméno)
 
-Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobrazí se spolu s datem a časem. Jak na to:
+Vytvoříme aplikaci, která vás vyzve k zadání vašeho jména a pak ji zobrazí spolu s datem a časem. Jak na to:
 
  ::: moniker range="vs-2017"
 
-1. Pokud ještě není otevřený, otevřete projekt *WhatIsYourName* .
+1. Pokud ještě není otevřený, otevřete projekt *WhatIsYourName.*
 
-1. Zadejte následující kód Visual Basic hned za levou hranatou závorku, která následuje po `Sub Main(args As String())` řádku a před `End Sub` řádkem:
+1. Zadejte následující kód Visual Basic za otevírací závorku, která následuje řádek `Sub Main(args As String())` a před řádek `End Sub` :
 
      ```vb
      Console.WriteLine(vbCrLf + "What is your name? ")
@@ -132,15 +132,15 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
      Console.ReadKey(True)
     ```
 
-    Tento kód nahradí existující <xref:System.Console.WriteLine%2A> příkazy, <xref:System.Console.Write%2A> a <xref:System.Console.ReadKey%2A> .
+    Tento kód nahrazuje existující příkazy <xref:System.Console.WriteLine%2A> <xref:System.Console.Write%2A> , a <xref:System.Console.ReadKey%2A> .
 
-   ![Okno Code zobrazující, jaký je váš kód vašeho názvu](./media/vs-2019/vb-codewindow-what-name-dark.png)
+   ![Okno kódu zobrazující kód What Is Your Name (Jaké je vaše jméno)](./media/vs-2019/vb-codewindow-what-name-dark.png)
 
-1. Použijte zelené tlačítko **Start** nebo stiskněte klávesu **F5** a sestavte a spusťte svoji první aplikaci.
+1. Pomocí zeleného **tlačítka Start** nebo stisknutím **klávesy F5** sestavte a spusťte svou první aplikaci.
 
 1. Po otevření okna konzoly zadejte své jméno. Okno konzoly by mělo vypadat podobně jako na následujícím snímku obrazovky:
 
-   ![Okno konzoly ukazující vaše jméno, datum a čas a stisknutí libovolné klávesy pro pokračování zprávy](media/vb-console-what-name.png)
+   ![Okno konzoly zobrazující What Is Your Name (Jaké je vaše jméno), datum a čas a stisknutím libovolné klávesy pokračujte ve zprávě](media/vb-console-what-name.png)
 
 1. Stisknutím libovolné klávesy zavřete okno konzoly.
 
@@ -148,7 +148,7 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
 
 ::: moniker range="vs-2019"
 
-1. V projektu *WhatIsYourName* zadejte následující kód Visual Basic hned za levou závorku, která následuje za `Sub Main(args As String())` řádkem a před `End Sub` řádkem:
+1. V projektu *WhatIsYourName* zadejte následující kód Visual Basic za otevírací závorku, která následuje po řádku a před `Sub Main(args As String())` řádek `End Sub` :
 
      ```vb
      Console.WriteLine(vbCrLf + "What is your name? ")
@@ -159,29 +159,29 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
      Console.ReadKey(True)
     ```
 
-    Tento kód nahradí existující <xref:System.Console.WriteLine%2A> příkazy, <xref:System.Console.Write%2A> a <xref:System.Console.ReadKey%2A> .
+    Tento kód nahrazuje existující příkazy <xref:System.Console.WriteLine%2A> <xref:System.Console.Write%2A> , a <xref:System.Console.ReadKey%2A> .
 
-   ![Okno Code zobrazující, jaký je váš kód vašeho názvu](./media/vs-2019/vb-codewindow-what-name-dark.png)
+   ![Okno kódu zobrazující kód What Is Your Name (Jaké je vaše jméno)](./media/vs-2019/vb-codewindow-what-name-dark.png)
 
-1. Použijte zelené tlačítko **Start** nebo stiskněte klávesu **F5** a sestavte a spusťte svoji první aplikaci.
+1. Pomocí zeleného **tlačítka Start** nebo stisknutím **klávesy F5** sestavte a spusťte svou první aplikaci.
 
 1. Po otevření okna konzoly zadejte své jméno. Okno konzoly by mělo vypadat podobně jako na následujícím snímku obrazovky:
 
-   ![Okno konzoly ukazující vaše jméno, datum a čas a stisknutí libovolné klávesy pro pokračování zprávy](media/vb-console-what-name.png)
+   ![Okno konzoly zobrazující What Is Your Name (Jaké je vaše jméno), datum a čas a stisknutím libovolné klávesy pokračujte ve zprávě](media/vb-console-what-name.png)
 
 1. Stisknutím libovolné klávesy zavřete okno konzoly.
 
  ::: moniker-end
 
-## <a name="create-a-calculate-this-application"></a>Vytvoření aplikace "vypočítat tuto aplikaci"
+## <a name="create-a-calculate-this-application"></a>Vytvoření aplikace Calculate This
 
 ::: moniker range="vs-2017"
 
-1. Otevřete Visual Studio 2017 a potom v horním panelu nabídek zvolte **soubor** > **Nový** > **projekt**.
+1. Otevřete Visual Studio 2017 a pak v horním řádku nabídek zvolte File New Project **(Soubor** > **nový** > **projekt).**
 
-1. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak název souboru *CalculateThis*.
+1. V dialogovém **okně Nový** projekt v levém podokně rozbalte **Visual Basic** a pak zvolte **.NET Core**. V prostředním podokně zvolte **Konzolová aplikace (.NET Core).** Pak soubor pojmechte *CalculateThis*.
 
-1. Mezi `Module Program` řádek a řádek zadejte následující kód `End Module` :
+1. Mezi řádek a řádek zadejte `Module Program` následující `End Module` kód:
 
    ```vb
    Public num1 As Integer
@@ -198,29 +198,29 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
    End Sub
    ```
 
-   Okno Code by mělo vypadat jako na následujícím snímku obrazovky:
+   Okno kódu by mělo vypadat jako na následujícím snímku obrazovky:
 
-   ![Okno Code zobrazující kód CalculateThis](media/vb-codewindow-calculate-this.png)
+   ![Okno kódu s kódem CalculateThis](media/vb-codewindow-calculate-this.png)
 
-1. Kliknutím na **CalculateThis** spustíte program. Okno konzoly by mělo vypadat podobně jako na následujícím snímku obrazovky:
+1. Klikněte **na VypočítatTuto** a spusťte program. Okno konzoly by mělo vypadat podobně jako na následujícím snímku obrazovky:
 
-    ![V okně konzoly se zobrazuje aplikace CalculateThis, která obsahuje výzvy, které akce provést.](media/vb-console-calculate-this.png)
+    ![Okno konzoly zobrazující aplikaci CalculateThis, které obsahuje výzvy k tomu, které akce se mají provádět.](media/vb-console-calculate-this.png)
 
 ::: moniker-end 
 
 ::: moniker range="vs-2019"
 
-1. V okně Start vyberte možnost **vytvořit nový projekt**. 
+1. V úvodním okně zvolte **Vytvořit nový projekt.** 
 
-1. V okně **vytvořit nový projekt** vyberte v seznamu jazyk možnost **Visual Basic** . Dále ze seznamu typy projektů vyberte možnost **Windows** ze seznamu platforem a **konzole** .
+1. V **okně Vytvořit nový** projekt zvolte **Visual Basic** ze seznamu Jazyk. Dále v seznamu Platforma zvolte **Windows** a **ze** seznamu typů projektů zvolte Konzola.
 
-1. Po použití filtrů typu jazyk, platforma a typ projektu zvolte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
+1. Po použití filtrů jazyka, platformy a typu projektu zvolte šablonu **Konzolová** aplikace a pak zvolte **Další.**
 
-   Pak v okně **Konfigurovat nový projekt** zadejte nebo zadejte *CalculateThis* do pole **název projektu** . Pak klikněte na tlačítko **Další**.
+   Potom v okně **Configure your new project** (Konfigurace nového projektu) zadejte nebo zadejte *CalculateThis* do **pole Project name (Název** projektu). Pak zvolte **Další.**
 
-1. V okně **Další informace** by měl být **.NET Core 3,1** již vybraný pro vaši cílovou architekturu. Pokud ne, vyberte **.NET Core 3,1**. Pak zvolte **vytvořit**.
+1. V okně **Další informace** by už mělo být pro cílovou rozhraní vybrané **rozhraní .NET Core 3.1.** Pokud ne, vyberte **.NET Core 3.1.** Pak zvolte **Vytvořit.**
 
-1. Mezi `Module Program` řádek a řádek zadejte následující kód `End Module` :
+1. Mezi řádek a řádek zadejte `Module Program` následující `End Module` kód:
 
    ```vb
    Public num1 As Integer
@@ -237,13 +237,13 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
    End Sub
    ```
 
-   Okno Code by mělo vypadat jako na následujícím snímku obrazovky:
+   Okno kódu by mělo vypadat jako na následujícím snímku obrazovky:
 
-   ![Okno Code zobrazující kód CalculateThis](media/vb-codewindow-calculate-this.png)
+   ![Okno kódu s kódem CalculateThis](media/vb-codewindow-calculate-this.png)
 
-1. Kliknutím na **CalculateThis** spustíte program. Okno konzoly by mělo vypadat podobně jako na následujícím snímku obrazovky:
+1. Klikněte **na VypočítatTuto** a spusťte program. Okno konzoly by mělo vypadat podobně jako na následujícím snímku obrazovky:
 
-    ![V okně konzoly se zobrazuje aplikace CalculateThis, která obsahuje výzvy, které akce provést.](media/vb-console-calculate-this.png)
+    ![Okno konzoly zobrazující aplikaci CalculateThis, které obsahuje výzvy k tomu, které akce se mají provádět.](media/vb-console-calculate-this.png)
 
 ::: moniker-end
 

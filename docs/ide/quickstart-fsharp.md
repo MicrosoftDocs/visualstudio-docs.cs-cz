@@ -1,8 +1,9 @@
 ---
-title: 'Rychlý Start: Vytvoření webové služby ASP.NET Core v jazyce F #'
-description: 'Naučte se, jak vytvořit webovou službu ASP.NET Core v aplikaci Visual Studio s F #, krok za krokem.'
+title: 'Rychlý start: Vytvoření webové služby ASP.NET Core v F #'
+description: Podrobné informace o vytvoření webové ASP.NET Core Visual Studio v jazyce F#
 ms.date: 08/24/2018
 ms.topic: quickstart
+ms.custom: acquisition
 author: cartermp
 ms.author: phcart
 manager: andrehal
@@ -11,46 +12,46 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 990106f7f3ca97ae38a20170ca6ed2e1d699d4e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cbb85c41a01a03461bc1a73bdb58620e8a0c472f
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70180326"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113199"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>Rychlý Start: použití sady Visual Studio k vytvoření první webové služby ASP.NET Core v jazyce F\#
+# <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>Rychlý start: Použití Visual Studio k vytvoření první webové služby ASP.NET Core v F\#
 
-V této 5-10 minut Úvod k F # v aplikaci Visual Studio vytvoříte webovou aplikaci ASP.NET Core F #.
+V tomto 5 až 10minutových úvodu do jazyka F# Visual Studio vytvoříte webovou aplikaci F# ASP.NET Core.
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Nejprve vytvoříte projekt webového rozhraní API ASP.NET Core. Typ projektu je dodáván se soubory šablon, které představují funkční webovou službu, ještě před tím, než jste dokonce přidali cokoli!
+Nejprve vytvoříte projekt webového rozhraní API ASP.NET Core. Typ projektu se dodává se soubory šablon, které tvoří funkční webovou službu, ještě než cokoli přidáváte.
 
 ::: moniker range="vs-2017"
 
 1. Otevřete sadu Visual Studio.
 
-2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
+2. V horním řádku nabídek zvolte **File** New Project > **(Soubor nového** > **projektu).**
 
-3. V dialogovém okně **Nový projekt** rozbalte v levém podokně položku **Visual F#** a pak zvolte možnost **Web**. V prostředním podokně zvolte **ASP.NET Core webová aplikace**a pak zvolte **OK**.
+3. V dialogovém **okně Nový** projekt v levém podokně rozbalte Visual F# **a** pak zvolte **Web.** V prostředním podokně zvolte **ASP.NET Core Web Application** a pak zvolte **OK.**
 
-     Pokud nevidíte kategorii šablony projektu **.NET Core** , klikněte na odkaz **otevřít instalační program pro Visual Studio** v levém podokně. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje ASP.NET a webu a** pak zvolte **Upravit**.
+     Pokud nevidíte kategorii šablony projektu **.NET Core,** zvolte v levém **podokně Instalační program pro Visual Studio** otevřít nový odkaz. Spustí se instalační program pro Visual Studio. Zvolte **úlohu ASP.NET a vývoj pro web** a pak zvolte **Upravit.**
 
-     ![ASP.NET úlohy v instalačním programu VS](../ide/media/quickstart-aspnet-workload.png)
+     ![ASP.NET úlohy v instalačním programu sady Visual Studio](../ide/media/quickstart-aspnet-workload.png)
 
-4.In dialogového okna **Nová webová aplikace ASP.NET Core** vyberte v horním rozevíracím seznamu **ASP.NET Core 2,1** . (Pokud v seznamu nevidíte **ASP.NET Core 2,1** , nainstalujte ji pomocí odkazu **ke stažení** , který by se měl zobrazit ve žlutém panelu v horní části dialogového okna.) Klikněte na **tlačítko OK**.
+4.In dialogovém **okně New ASP.NET Core Web Application** (Nová webová aplikace ASP.NET Core 2.1) vyberte v rozevírací nabídce ASP.NET **Core 2.1.** (Pokud v seznamu nevidíte **ASP.NET Core 2.1,** nainstalujte ho  pomocí odkazu Stáhnout, který by se měl zobrazit ve žlutém panelu v horní části dialogového okna.) Zvolte **OK.**
 
 ::: moniker-end
 
@@ -58,23 +59,23 @@ Nejprve vytvoříte projekt webového rozhraní API ASP.NET Core. Typ projektu j
 
 1. Otevřete sadu Visual Studio.
 
-2. V okně Start vyberte možnost **vytvořit nový projekt**.
+2. V úvodním okně zvolte **Vytvořit nový projekt.**
 
-3. Na stránce **vytvořit nový projekt** zadejte do vyhledávacího pole **Web f #** a pak zvolte šablonu projektu **ASP.NET Core webové aplikace** . Zvolte **Další**.
+3. Na **stránce Vytvořit nový projekt** zadejte do vyhledávacího pole **f# web** a pak zvolte šablonu projektu ASP.NET Core Web **Application.** Zvolte **Další**.
 
-4. Na stránce **Konfigurace nového projektu** zadejte název a pak zvolte **vytvořit**.
+4. Na **stránce Configure your new project** (Konfigurace nového projektu) zadejte název a pak zvolte **Create (Vytvořit).**
 
-5. Na stránce **vytvořit novou webovou aplikaci ASP.NET Core** v horním rozevírací nabídce vyberte **ASP.NET Core 2,1** a pak zvolte **vytvořit**.
+5. Na **stránce Create a new ASP.NET Core Web Application** (Vytvořit novou webovou aplikaci ASP.NET Core **2.1)** v horní rozevírací nabídce vyberte a pak zvolte **Create (Vytvořit).**
 
 ::: moniker-end
 
-## <a name="explore-the-ide"></a>Prozkoumejte rozhraní IDE
+## <a name="explore-the-ide"></a>Prozkoumání integrovaného vývojového prostředí (IDE)
 
-1. Na panelu nástrojů **Průzkumník řešení** rozbalte složku **řadiče** a pak zvolte **ValuesController. FS** a otevřete ji v editoru.
+1. Na panelu **Průzkumník řešení** rozbalte složku **Kontrolery** a pak zvolte **ValuesController.fs** a otevřete ji v editoru.
 
-   ![Průzkumník řešení se rozbalenou složkou Controllers v projektu webového rozhraní API F #](../ide/media/hello-world-fs-sln-explorer.png)
+   ![Průzkumník řešení s rozbalenou složku Controllers v projektu webového rozhraní API F#](../ide/media/hello-world-fs-sln-explorer.png)
 
-2. Dále upravte `Get()` člena tak, aby byl následující:
+2. Dále upravte `Get()` člen takto:
 
    ```fsharp
    [<HttpGet>]
@@ -83,25 +84,25 @@ Nejprve vytvoříte projekt webového rozhraní API ASP.NET Core. Typ projektu j
        ActionResult<string[]>(values)
    ```
 
-Kód je jednoduchý. Pole hodnot jazyka F # je vázáno na `values` název a poté předáno do ASP.NET Core rozhraní MVC jako `ActionResult` . ASP.NET Core postará o zbytek za vás.
+Kód je jednoduchý. Pole hodnot F# je svázáno s názvem a poté předáno rozhraní `values` ASP.NET Core MVC jako `ActionResult` . ASP.NET Core se o zbytek postará za vás.
 
-Mělo by to vypadat jako v editoru:
+V editoru by to mělo vypadat takhle:
 
-![Změněný člen get](../ide/media/hello-world-fs-get-member.png)
+![Úprava získání člena](../ide/media/hello-world-fs-get-member.png)
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-1. Stisknutím klávesy **CTRL** + **F5** spusťte aplikaci a otevřete ji ve webovém prohlížeči.
+1. Stisknutím **kláves Ctrl** + **F5** spusťte aplikaci a otevřete ji ve webovém prohlížeči.
 
-2. Stránka by měla přejít na `/api/values` trasu, ale pokud ne, zadejte `https://localhost:44396/api/values` do svého prohlížeče.
+2. Stránka by měla přejít na trasu, ale pokud ne, zadejte `/api/values` `https://localhost:44396/api/values` ji do prohlížeče.
 
-Ve webovém prohlížeči se teď zobrazí shoda formátu JSON, co jste zadali dříve.
+Ve webovém prohlížeči se teď zobrazí JSON odpovídající dříve zadaným informacím.
 
 ## <a name="next-steps"></a>Další kroky
 
-Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozvěděli trochu o jazyce F #, ASP.NET Core a integrovaném vývojovém prostředí (IDE) sady Visual Studio. Pokud chcete zobrazit aplikaci běžící na veřejném serveru, vyberte následující tlačítko.
+Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se trochu dozvěděli o F#, ASP.NET Core a Visual Studio IDE. Pokud chcete zobrazit aplikaci spuštěnou na veřejném serveru, vyberte následující tlačítko.
 
 > [!div class="nextstepaction"]
 > [Nasazení aplikace do Azure App Service](../deployment/quickstart-deploy-to-azure.md)
 
-Další informace o jazyce F # najdete v oficiální [příručce f #](/dotnet/fsharp/index).
+Další informace o F# najdete v oficiální příručce [jazyka F#.](/dotnet/fsharp/index)

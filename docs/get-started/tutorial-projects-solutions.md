@@ -4,6 +4,7 @@ description: Přečtěte si o rozdílech mezi projekty a řešeními a jejich po
 ms.date: 11/17/2020
 ms.technology: vs-ide-general
 ms.custom:
+- acquisition
 - get-started
 - SEO-VS-2020
 ms.topic: tutorial
@@ -14,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe3eaf3c5efcc8341613e9f223d22410111a548f
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 11db2d793f284557f709a4f72362cfc89a77a059
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682597"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113026"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>Seznámení s projekty a řešení
 
@@ -139,9 +140,9 @@ Máme prázdný projekt. Pojďme přidat soubor kódu.
 
 1. Rozbalte položku **Visual C# položky** a pak vyberte možnost **kód**. V prostředním podokně vyberte šablonu položky **Třída** . Pojmenujte **Kalendář** třídy a pak vyberte tlačítko **Přidat** .
 
-   Do projektu se přidá soubor s názvem *Calendar.cs* . Přípona *. cs* na konci je přípona souboru, která je předána souborům kódu jazyka C#. Soubor se zobrazí v hierarchii Visual Project v **Průzkumník řešení** a jeho obsah je otevřen v editoru.
+   Do projektu se přidá soubor s názvem *Calendar. cs* . Přípona *. cs* na konci je přípona souboru, která je předána souborům kódu jazyka C#. Soubor se zobrazí v hierarchii Visual Project v **Průzkumník řešení** a jeho obsah je otevřen v editoru.
 
-1. Obsah souboru *Calendar.cs* nahraďte následujícím kódem:
+1. Obsah souboru *Calendar. cs* nahraďte následujícím kódem:
 
    ```csharp
    using System;
@@ -179,7 +180,7 @@ Pojďme do našeho řešení přidat projekt testování částí. Tentokrát za
 
 2. V levém podokně rozbalte položku **Visual C#** a vyberte kategorii **test** . V prostředním podokně vyberte šablonu projektu **projekt testů MSTest (.NET Core)** . Pojmenujte projekt **QuickTest** a pak vyberte **OK**.
 
-   Druhý projekt je přidán do **Průzkumník řešení** a v editoru se otevře soubor s názvem *UnitTest1.cs* .
+   Druhý projekt je přidán do **Průzkumník řešení** a v editoru se otevře soubor s názvem *UnitTest1. cs* .
 
    ![Visual Studio Průzkumník řešení se dvěma projekty](media/tutorial-projects-solution-explorer.png "Průzkumník řešení se dvěma projekty v aplikaci Visual Studio 2017.")
 
@@ -198,7 +199,7 @@ Pojďme do našeho řešení přidat projekt testování částí. Tentokrát za
 
 5. Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
 
-   Druhý projekt je přidán do **Průzkumník řešení** a v editoru se otevře soubor s názvem *UnitTest1.cs* .
+   Druhý projekt je přidán do **Průzkumník řešení** a v editoru se otevře soubor s názvem *UnitTest1. cs* .
 
    ![Visual Studio Průzkumník řešení se dvěma projekty](media/vs-2019/tutorial-projects-solution-explorer.png "Průzkumník řešení se dvěma projekty v aplikaci Visual Studio.")
 
@@ -238,7 +239,7 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
 ## <a name="add-test-code"></a>Přidat testovací kód
 
-1. Nyní přidáme testovací kód do souboru testovacího kódu C#. Obsah *UnitTest1.cs* nahraďte následujícím kódem:
+1. Nyní přidáme testovací kód do souboru testovacího kódu C#. Obsah *UnitTest1. cs* nahraďte následujícím kódem:
 
    ```csharp
    using System;
@@ -260,7 +261,7 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
    V části kódu se zobrazí červená vlnovka. Tuto chybu vyřešíme tak, že projekt testů vytvoří pro projekt **QuickDate** [sestavení typu Friend](/dotnet/standard/assembly/friend-assemblies) .
 
-1. Zpátky v projektu **QuickDate** otevřete soubor *Calendar.cs* , pokud ještě není otevřený. Přidejte následující [příkaz using](/dotnet/csharp/language-reference/keywords/using-statement) a <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atribut na začátek souboru pro vyřešení chyby v testovacím projektu.
+1. Zpět v projektu **QuickDate** otevřete soubor *Calendar. cs* , pokud ještě není otevřený. Přidejte následující [příkaz using](/dotnet/csharp/language-reference/keywords/using-statement) a <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atribut na začátek souboru pro vyřešení chyby v testovacím projektu.
 
    ```csharp
    using System.Runtime.CompilerServices;
@@ -274,7 +275,7 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
 ## <a name="project-properties"></a>Vlastnosti projektu
 
-Řádek v souboru *Calendar.cs* , který obsahuje atribut, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> odkazuje na název sestavení (název souboru) projektu **QuickTest** . Název sestavení nemusí být vždy stejný jako název projektu. Chcete-li najít název sestavení projektu, otevřete vlastnosti projektu.
+Řádek v souboru *Calendar. cs* , který obsahuje atribut, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> odkazuje na název sestavení (název souboru) projektu **QuickTest** . Název sestavení nemusí být vždy stejný jako název projektu. Chcete-li najít název sestavení projektu, otevřete vlastnosti projektu.
 
 1. V **Průzkumník řešení** vyberte projekt **QuickTest** . V místní nabídce klepněte pravým tlačítkem myši nebo vyberte možnost **vlastnosti**, nebo stačí stisknout klávesu **ALT** + **ENTER**.
 

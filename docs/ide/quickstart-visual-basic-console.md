@@ -1,7 +1,7 @@
 ---
-title: Vytvořte svou první konzolovou aplikaci pomocí Visual Basic
-description: Naučte se, jak vytvořit jednoduchou konzolovou aplikaci Hello World v aplikaci Visual Studio s Visual Basic, krok za krokem.
-ms.custom: seodec18
+title: Vytvoření první konzolové aplikace pomocí Visual Basic
+description: Naučte se vytvářet jednoduchou Hello World konzoly v Visual Studio s Visual Basic pomocí podrobných kroků.
+ms.custom: acquisition, seodec18
 ms.date: 03/23/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,135 +14,135 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a103c672b6539f5893cf52a6e83acde6c87176d
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 5d963762772060296f38a9c9c1ebfce85fbf5f8e
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296635"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113145"
 ---
-# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Rychlý Start: Vytvoření první konzolové aplikace v aplikaci Visual Studio pomocí Visual Basic
+# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Rychlý start: Vytvoření první konzolové aplikace v Visual Studio pomocí Visual Basic
 
-V této 5-10 minut Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio vytvoříte jednoduchou Visual Basic aplikaci, která se spouští v konzole nástroje.
+V tomto 5 až 10minutových úvodu Visual Studio integrovaného vývojového prostředí (IDE) vytvoříte jednoduchou aplikaci pro Visual Basic, která běží na konzole.
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu se dodává se všemi soubory šablon, které budete potřebovat, než dokonce cokoli přidáte.
+Nejprve vytvoříte projekt Visual Basic aplikace. Typ projektu se dodává se všemi soubory šablony, které budete potřebovat, ještě než budete něco přidávat.
 
 ::: moniker range="vs-2017"
 
 1. Otevřete sadu Visual Studio 2017.
 
-2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
+2. V horním řádku nabídek zvolte **File** New Project > **(Soubor nového** > **projektu).**
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte projekt *Hello*.
+3. V dialogovém **okně Nový** projekt v levém podokně rozbalte **Visual Basic** a pak zvolte **.NET Core**. V prostředním podokně zvolte **Konzolová aplikace (.NET Core).** Pak projekt pojmnujte *HelloWorld*.
 
-   ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](../ide/media/new-project-vb-dotnetcore-helloworld-console-app.png)
+   ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém Visual Studio Ide](../ide/media/new-project-vb-dotnetcore-helloworld-console-app.png)
 
-     Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , klikněte na odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** .
+     Pokud šablonu projektu Konzolová aplikace **(.NET Core)** nevidíte, klikněte na odkaz Otevřít **Instalační program pro Visual Studio** v levém podokně dialogového okna **Nový** projekt.
 
-   ![Klikněte na odkaz otevřít Instalační program pro Visual Studio v dialogovém okně Nový projekt.](../ide/media/vb-open-visual-studio-installer-hello-world.png)
+   ![V dialogovém okně Instalační program pro Visual Studio projektu klikněte na odkaz Otevřít projekt.](../ide/media/vb-open-visual-studio-installer-hello-world.png)
 
-     Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+     Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoj pro různé platformy** v .NET Core a pak zvolte **Upravit.**
 
-     ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../ide/media/dot-net-core-xplat-dev-workload.png)
+     ![Úloha vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../ide/media/dot-net-core-xplat-dev-workload.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Některé snímky obrazovky v tomto rychlém startu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chcete, přečtěte si téma [přizpůsobení stránky IDE a editoru sady Visual Studio](quickstart-personalize-the-ide.md) , kde se dozvíte, jak.
+> Některé snímky obrazovky v tomto rychlém startu používají tmavý motiv. Pokud tmavý motiv používáte, ale chcete, podívejte se na stránku Přizpůsobení integrovaného vývojového Visual Studio a [editoru,](quickstart-personalize-the-ide.md) kde se dozvíte, jak.
 
 1. Otevřete Visual Studio 2019.
 
-1. V okně Start vyberte možnost **vytvořit nový projekt**.
+1. V úvodním okně zvolte **Vytvořit nový projekt.**
 
-   ![Zobrazit okno vytvořit nový projekt](../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   ![Zobrazení okna Vytvořit nový projekt](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. V okně **vytvořit nový projekt** vyberte v seznamu jazyk možnost **Visual Basic** . Dále ze seznamu typy projektů vyberte možnost **Windows** ze seznamu platforem a **konzole** .
+1. V **okně Vytvořit nový** projekt zvolte **Visual Basic** ze seznamu Jazyk. Dále v seznamu Platforma zvolte **Windows** a **ze** seznamu typů projektů zvolte Konzola.
 
-   Po použití filtrů typu jazyk, platforma a typ projektu zvolte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
+   Po použití filtrů jazyka, platformy a typu projektu zvolte šablonu **Konzolová** aplikace a pak zvolte **Další.**
 
-   :::image type="content" source="../get-started/visual-basic/media/vs-2019/vb-create-new-project-console-net-core.png" alt-text="Zvolit šablonu Visual Basic pro konzolovou aplikaci":::
+   :::image type="content" source="../get-started/visual-basic/media/vs-2019/vb-create-new-project-console-net-core.png" alt-text="Zvolte šablonu Visual Basic pro konzolovou aplikaci.":::
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **konzolové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
+   > Pokud šablonu Konzolová **aplikace nevidíte,** můžete ji nainstalovat z **okna Vytvořit nový** projekt. Ve zprávě **Nehledá se, co hledáte?** zvolte odkaz Instalovat **další** nástroje a funkce.
    >
-   > ![Odkaz pro instalaci dalších nástrojů a funkcí v okně vytvořit nový projekt v části nenajít, co hledáte?](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
+   > ![Odkaz Install more tools and features (Nainstalovat další nástroje a funkce) ze zprávy Not finding what you're looking for (Najít, co hledáte) v okně Create new project (Vytvořit nový projekt)](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
-   > Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
+   > Potom v části Instalační program pro Visual Studio úlohu **Vývoj pro různé platformy v .NET Core.**
    >
-   > ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../get-started/media/dot-net-core-xplat-dev-workload.png)
+   > ![Úloha vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../get-started/media/dot-net-core-xplat-dev-workload.png)
    >
-   > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu. Pak se vraťte ke kroku 2 v tomto postupu "[Vytvoření projektu](#create-a-project)".
+   > Potom zvolte tlačítko **Upravit** v Instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce. Pokud ano, proveďte to. Potom zvolte **Pokračovat a** nainstalujte úlohu. Pak se vraťte ke kroku 2 v[této proceduře "Vytvoření](#create-a-project)projektu".
 
-1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *WhatIsYourName* do pole **název projektu** . Pak klikněte na tlačítko **Další**.
+1. V **okně Configure your new project** (Konfigurace nového projektu) zadejte nebo do pole Project name (Název **projektu)** zadejte nebo zadejte *WhatIsYourName.* Pak zvolte **Další.**
 
-   :::image type="content" source="../get-started/visual-basic/media/vs-2019/vb-name-your-project-whatname.png" alt-text="v okně Konfigurovat nový projekt pojmenujte projekt ' WhatIsYourName '.":::
+   :::image type="content" source="../get-started/visual-basic/media/vs-2019/vb-name-your-project-whatname.png" alt-text="V okně Konfigurovat nový projekt pojmnujte projekt WhatIsYourName.":::
 
-1. V okně **Další informace** by měl být **.NET Core 3,1** již vybraný pro vaši cílovou architekturu. Pokud ne, vyberte **.NET Core 3,1**. Pak zvolte **vytvořit**.
+1. V okně **Další informace** by už mělo být pro cílovou rozhraní vybrané **rozhraní .NET Core 3.1.** Pokud ne, vyberte **.NET Core 3.1.** Pak zvolte **Vytvořit.**
 
-   :::image type="content" source="../get-started/visual-basic/media/vs-2019/vb-target-framework.png" alt-text="V okně Další informace se ujistěte, že je vybraná možnost .NET Core 3,1.":::
+   :::image type="content" source="../get-started/visual-basic/media/vs-2019/vb-target-framework.png" alt-text="V okně Další informace se ujistěte, že je vybraná možnost .NET Core 3.1.":::
 
-   Visual Studio otevře nový projekt.
+   Visual Studio nový projekt otevřete.
 
 ::: moniker-end
 
 ## <a name="create-the-application"></a>Vytvoření aplikace
 
-Po výběru šablony projektu Visual Basic a pojmenování projektu vytvoří Visual Studio jednoduchou aplikaci "Hello World". Volá <xref:System.Console.WriteLine%2A> metodu pro zobrazení řetězcového literálu "Hello World!" v okně konzoly.
+Po výběru šablony Visual Basic projektu a názvu projektu Visual Studio vytvoří jednoduchou "Hello World" aplikaci. Volá metodu <xref:System.Console.WriteLine%2A> , která zobrazí řetězec literálu "Hello World!" v okně konzoly.
 
-![Zobrazit výchozí kód Hello World ze šablony](../ide/media/vb-console-helloworld-template.png)
+![Zobrazení výchozího Hello World kódu ze šablony](../ide/media/vb-console-helloworld-template.png)
 
-Pokud kliknete na tlačítko **HelloWorld** v integrovaném vývojovém prostředí, můžete spustit program v režimu ladění.
+Pokud v integrovaném **vývojovém prostředí kliknete** na tlačítko HelloWorld, můžete program spustit v režimu ladění.
 
-  ![Kliknutím na tlačítko Hello World spustíte program v režimu ladění.](../ide/media/vb-console-hello-world-button.png)
+  ![Kliknutím na tlačítko Hello World spusťte program v režimu ladění.](../ide/media/vb-console-hello-world-button.png)
 
-Když to uděláte, okno konzoly bude viditelné pouze chvilku před jeho zavřením. K tomu dochází `Main` , protože metoda se ukončí po provedení samostatného příkazu a aplikace skončí.
+Když to použijete, zobrazí se okno konzoly jen na chvíli před jeho zavřením. K tomu `Main` dochází, protože metoda se ukončí po spuštění jediného příkazu, a proto aplikace skončí.
 
-### <a name="add-some-code&quot;></a>Přidat kód
+### <a name="add-some-code&quot;></a>Přidání kódu
 
-Pojďme přidat nějaký kód pro pozastavení aplikace a pak požádat o vstup uživatele.
+Přidejme kód, který aplikaci pozastaví a potom požádá o uživatelský vstup.
 
-1. Přidejte následující kód hned za volání <xref:System.Console.WriteLine%2A> metody:
+1. Ihned po volání metody přidejte následující <xref:System.Console.WriteLine%2A> kód:
 
    ```vb
    Console.Write(&quot;Press any key to continue...")
    Console.ReadKey(true)
    ```
 
-    Tím se program pozastaví, dokud nestisknete klávesu.
+    Program se pozastaví, dokud nestiskáte klávesu .
 
-2. Na řádku nabídek vyberte **sestavení**  >  **sestavení**.
+2. V řádku nabídek vyberte **Sestavit**  >  **řešení sestavení.**
 
-   Tím se program zkompiluje do mezilehlého jazyka (IL), který je převeden do binárního kódu pomocí kompilátoru JIT (just-in-time).
+   Tento kód zkompiluje program do převodní jazyka (IL), který je převeden na binární kód kompilátorem JIT (just-in-time).
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-1. Klikněte na tlačítko **HelloWorld** na panelu nástrojů.
+1. Klikněte na **tlačítko HelloWorld** na panelu nástrojů.
 
-   ![Kliknutím na tlačítko Hello World spustíte program z panelu nástrojů.](../ide/media/vb-console-hello-world-button.png)
+   ![Kliknutím na Hello World tlačítko Pro spuštění programu z panelu nástrojů](../ide/media/vb-console-hello-world-button.png)
 
 2. Stisknutím libovolné klávesy zavřete okno konzoly.
 
-   ![Okno konzoly zobrazující Hello World a pokračujte stisknutím libovolné klávesy](../ide/media/vb-console-hello-world-press-any-key.png)
+   ![Okno konzoly s Hello World a pokračovat stisknutím libovolné klávesy](../ide/media/vb-console-hello-world-press-any-key.png)
 
 ## <a name="next-steps"></a>Další kroky
 
-Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozvěděli trochu o Visual Basic a integrovaném vývojovém prostředí sady Visual Studio. Pokud se chcete dozvědět víc, pokračujte v následujícím kurzu.
+Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se trochu dozvěděli o Visual Basic a Visual Studio IDE. Další informace najdete v následujícím kurzu.
 
 > [!div class="nextstepaction"]
-> [Začínáme s Visual Basic v aplikaci Visual Studio](../get-started/visual-basic/tutorial-console.md)
+> [Začínáme s Visual Basic v Visual Studio](../get-started/visual-basic/tutorial-console.md)

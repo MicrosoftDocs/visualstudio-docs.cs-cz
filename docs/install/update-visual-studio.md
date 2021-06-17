@@ -3,7 +3,7 @@ title: Aktualizace sady Visual Studio
 titleSuffix: ''
 description: Naučte se aktualizovat Visual Studio na nejnovější verzi, krok za krokem.
 ms.date: 04/06/2021
-ms.custom: seodec18
+ms.custom: acquisition
 ms.topic: how-to
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - change [Visual Studio]
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.ProductUpdates
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 02beb43dede8e38f290ff02febb3b84c53b90f9e
-ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
+ms.openlocfilehash: 9244c9e234c56b058dbfe92a4ef6a10d8c9c702d
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106547502"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113190"
 ---
 # <a name="update-visual-studio-to-the-most-recent-release"></a>Aktualizace sady Visual Studio na nejnovější verzi
 

@@ -1,6 +1,8 @@
 ---
 title: Vytvoření první aplikace Node.js
-ms.custom: SEO-VS-2020
+ms.custom:
+- acquisition
+- SEO-VS-2020
 description: V tomto rychlém startu vytvoříte aplikaci Node.js v aplikaci Visual Studio.
 ms.date: 03/25/2021
 ms.technology: vs-javascript
@@ -14,12 +16,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 8a36986842cdac85a8a3e6ab474024b8db552ee7
-ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
+ms.openlocfilehash: d9397cb121ab3aa68d368a0cc7e1ab709411f6b6
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111433711"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113156"
 ---
 # <a name="quickstart-create-your-first-nodejs-app-with-visual-studio"></a>Rychlý Start: Vytvoření první aplikace Node.js pomocí sady Visual Studio
 

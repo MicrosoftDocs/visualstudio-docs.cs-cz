@@ -3,7 +3,7 @@ title: Instalace sady Visual Studio
 titleSuffix: ''
 description: Přečtěte si, jak nainstalovat Visual Studio, krok za krokem.
 ms.date: 12/13/2019
-ms.custom: contperf-fy21q1
+ms.custom: acquisition
 ms.topic: conceptual
 f1_keywords:
 - vs.about
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - set up Visual Studio
 - Visual Studio setup
 - Visual Studio installer
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 97e354dfb1208ec7306cb797049cd8ca82d0d8db
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e4db39c55ff669477efc833c2d482897d529b30b
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852115"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113047"
 ---
 # <a name="install-visual-studio"></a>Instalace sady Visual Studio
 
@@ -131,7 +131,7 @@ Spuštěním souboru zaváděcího nástroje nainstalujte Instalační program p
 
 2. Požádáme vás o potvrzení [licenčních podmínek](https://visualstudio.microsoft.com/license-terms/) společnosti Microsoft a [prohlášení o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement)společnosti Microsoft. Zvolte **Pokračovat**.
 
-   ![Licenční smlouvy a prohlášení o zásadách ochrany osobních údajů](media/privacy-and-license-terms.png "Licenční smlouvy společnosti Microsoft a prohlášení o zásadách ochrany osobních údajů")
+   ![Licenční smlouvy a prohlášení o zásadách ochrany osobních údajů](media/privacy-and-license-terms.png "Licenční podmínky a prohlášení o zásadách ochrany osobních údajů společnosti Microsoft")
 
 ## <a name="step-4---choose-workloads"></a>Krok 4 – Výběr úloh
 
@@ -174,13 +174,13 @@ Pokud nechcete použít funkci úlohy k přizpůsobení instalace sady Visual St
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017 – instalace jednotlivých komponent](media/vs-installer-installing-components.png "Instalovat jednotlivé součásti sady Visual Studio")
+  ![Visual Studio 2017 – instalace jednotlivých komponent](media/vs-installer-installing-components.png "Instalace Visual Studio jednotlivých komponent")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019 – instalace jednotlivých komponent](media/vs-2019/vs-installer-individual-components.png "Instalovat jednotlivé součásti sady Visual Studio")
+  ![Visual Studio 2019 – instalace jednotlivých komponent](media/vs-2019/vs-installer-individual-components.png "Instalace Visual Studio jednotlivých komponent")
 
 ::: moniker-end
 
@@ -190,13 +190,13 @@ Ve výchozím nastavení se instalační program při prvním spuštění pokus�
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017 – instalace jazykových sad](media/vs-installer-installing-language-packs.png "Nainstalovat jazykové sady pro Visual Studio")
+  ![Visual Studio 2017 – instalace jazykových sad](media/vs-installer-installing-language-packs.png "Instalace Visual Studio jazykových sad")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019 – instalace jazykových sad](media/vs-2019/vs-installer-language-packs.png "Nainstalovat jazykové sady pro Visual Studio")
+  ![Visual Studio 2019 – instalace jazykových sad](media/vs-2019/vs-installer-language-packs.png "Instalace Visual Studio jazykových sad")
 
 ::: moniker-end
 
@@ -218,7 +218,7 @@ Dalším způsobem, jak můžete změnit výchozí jazyk, je spuštění instala
 
 Nároky na instalaci sady Visual Studio můžete snížit na systémové jednotce. Můžete se rozhodnout přesunout mezipaměť pro stahování, sdílené součásti, sady SDK a nástroje na různé jednotky a nechat Visual Studio na disku, na kterém je spuštěný, nejrychlejší.
 
-  ![Visual Studio 2019 – výběr umístění instalace](media/vs-2019/vs-installer-installation-locations.png "Vybrat umístění instalace")
+  ![Visual Studio 2019 – výběr umístění instalace](media/vs-2019/vs-installer-installation-locations.png "Vyberte umístění instalace.")
 
 ::: moniker-end
 
@@ -237,23 +237,23 @@ Další informace najdete na stránce [Výběr umístění instalace](change-ins
 
 3. Vyberte typ projektu.
 
-   Chcete-li například [sestavit aplikaci C++](/cpp/get-started/tutorial-console-cpp), zvolte možnost **nainstalováno**, rozbalte položku **Visual C++** a pak zvolte typ projektu jazyka c++, který chcete sestavit.
+   Pokud chcete například [sestavit aplikaci C++,](/cpp/get-started/tutorial-console-cpp)zvolte Nainstalováno, rozbalte **Visual C++** a pak zvolte typ projektu C++, který chcete sestavit.
 
-   Chcete-li [sestavit aplikaci v jazyce c#](../get-started/csharp/tutorial-console.md), zvolte možnost **nainstalováno**, rozbalte položku **Visual C#** a poté zvolte typ projektu jazyka c#, který chcete sestavit.
+   Pokud [chcete sestavit aplikaci v jazyce C#,](../get-started/csharp/tutorial-console.md)zvolte Nainstalováno, rozbalte Visual **C#** a pak zvolte typ projektu C#, který chcete sestavit. 
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Po dokončení instalace sady Visual Studio klikněte na tlačítko **Spustit** a začněte s vývojem v aplikaci Visual Studio.
+1. Po Visual Studio instalace vyberte tlačítko **Spustit** a můžete začít s vývojem pomocí Visual Studio.
 
-1. V okně Start vyberte možnost **vytvořit nový projekt**.
+1. V úvodním okně zvolte **Vytvořit nový projekt.**
 
-1. Do vyhledávacího pole zadejte typ aplikace, kterou chcete vytvořit, aby se zobrazil seznam dostupných šablon. Seznam šablon závisí na úlohách, které jste si zvolili během instalace. Pokud chcete zobrazit různé šablony, vyberte jiné úlohy.
+1. Do vyhledávacího pole zadejte typ aplikace, kterou chcete vytvořit. Zobrazí se seznam dostupných šablon. Seznam šablon závisí na úlohách, které jste zvolili během instalace. Pokud chcete zobrazit různé šablony, zvolte různé úlohy.
 
-   Hledání konkrétního programovacího jazyka můžete filtrovat také pomocí rozevíracího seznamu **jazyk** . Filtrovat můžete také pomocí seznamu **platforem** a seznamu **typ projektu** .
+   Pomocí rozevíracího seznamu Jazyk můžete také filtrovat  hledání konkrétního programovacího jazyka. Můžete filtrovat také pomocí **seznamu Platforma** a **typu** projektu.
 
-1. Visual Studio otevře nový projekt a Vy jste připravení na kód!
+1. Visual Studio nový projekt a jste připraveni kódovat!
 
 ::: moniker-end
 

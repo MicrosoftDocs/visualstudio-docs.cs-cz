@@ -2,7 +2,7 @@
 title: Vytvoření první konzolové aplikace v jazyce C# pomocí sady Visual Studio
 titleSuffix: ''
 description: Naučte se, jak vytvořit jednoduchou konzolovou aplikaci Hello World v aplikaci Visual Studio pomocí jazyka C#, krok za krokem.
-ms.custom: seodec18
+ms.custom: acquisition, seodec18
 ms.date: 03/23/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -15,12 +15,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f51e3e6617578236d31090b23e8cb7c661d6043
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 31759f3ae6359c9e366157012f6321c62085f8f9
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296791"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113218"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první konzolové aplikace v jazyce C#
 
@@ -46,7 +46,7 @@ Nejprve vytvoříte projekt aplikace v jazyce C#. Typ projektu se dodává se v�
 
 1. Otevřete sadu Visual Studio 2017.
 
-2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
+2. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
 3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte projekt *Hello*.
 
