@@ -15,12 +15,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 31759f3ae6359c9e366157012f6321c62085f8f9
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 21cab6f8fd8f4ff6a86a780774d031e60b03e780
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113218"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307996"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první konzolové aplikace v jazyce C#
 
@@ -35,6 +35,12 @@ Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke staže
 ::: moniker range="vs-2019"
 
 Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Pokud jste ještě nenainstalovali Visual Studio 2022 Preview, nainstalujte ho zdarma na stránku [Visual studio 2022 Preview ke stažení](https://visualstudio.microsoft.com/vs/preview/vs2022) .
 
 ::: moniker-end
 
@@ -62,9 +68,9 @@ Nejprve vytvoříte projekt aplikace v jazyce C#. Typ projektu se dodává se v�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Otevřete Visual Studio 2019.
+1. Otevřete sadu Visual Studio.
 
 1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
@@ -103,7 +109,7 @@ Po výběru šablony projektu C# a pojmenování projektu vytvoří Visual Studi
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Visual Studio obsahuje výchozí kód "Hello World" v projektu.
 

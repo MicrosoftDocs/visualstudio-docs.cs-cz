@@ -15,18 +15,18 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: b6e42681d2c25162df22af9711d47b71ba155d67
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a377acba7b8c64503e5e5f821b5f3f833a8d73b2
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867435"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308048"
 ---
 # <a name="add-new-data-sources"></a>Přidání nových zdrojů dat
 
-:::moniker range="vs-2019"
+:::moniker range=">=vs-2019"
 > [!NOTE]
-> Funkce popsané v tomto článku se vztahují na .NET Framework model Windows Forms a vývoj WPF. V aplikaci Visual Studio 2019 (a předchozích verzích) nejsou tyto funkce podporovány pro vývoj v .NET Core pro WPF i model Windows Forms.
+> Funkce popsané v tomto článku se vztahují na .NET Framework model Windows Forms a vývoj WPF. Funkce nejsou podporovány pro vývoj v .NET Core pro WPF i model Windows Forms.
 :::moniker-end
 
 V kontextu nástrojů .NET Data Tools v sadě Visual Studio pojem *zdroj dat* odkazuje na objekty .NET, které se připojují k úložišti dat a zpřístupňuje data aplikaci .NET. Návrháři sady Visual Studio mohou využívat výstup zdroje dat, aby vygenerovaly často používaný kód, který váže data na formuláře při přetahování objektů databáze z okna **zdroje dat** . Tento druh zdroje dat může být:

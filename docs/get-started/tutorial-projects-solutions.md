@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 11db2d793f284557f709a4f72362cfc89a77a059
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 0f962d9e534262fd12cd0ce5c808c9c604db466b
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113026"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308399"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>Seznámení s projekty a řešení
 
@@ -35,6 +35,12 @@ Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke staže
 ::: moniker range="vs-2019"
 
 Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Pokud jste ještě nenainstalovali Visual Studio 2022 Preview, nainstalujte ho zdarma na stránku [Visual studio 2022 Preview ke stažení](https://visualstudio.microsoft.com/vs/preview/vs2022) .
 
 ::: moniker-end
 
@@ -223,7 +229,7 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. V projektu **QuickTest** vyberte uzel **závislosti** a v místní nabídce klikněte pravým tlačítkem nebo vyberte **Přidat odkaz na projekt..**..
 
@@ -293,7 +299,7 @@ Chcete-li zkontrolovat, zda je test jednotky funkční, vyberte možnost **test*
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Chcete-li zkontrolovat, zda je test jednotky funkční, vyberte možnost **test**  >  **Spustit všechny testy** z řádku nabídek. Otevře se okno s názvem **Průzkumník testů** , které by mělo vidět, že test **TestGetCurrentDate** projde.
 

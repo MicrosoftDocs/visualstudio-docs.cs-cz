@@ -5,19 +5,19 @@ ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 837F31AA-F121-46e9-9996-F8BCE768E579
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 02496f230338e429b281f2b0d516cb9a06fe9e7a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5685de34235dcd9b903cbf5be6371ebf3f1e84c3
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868527"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307541"
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Příklady parametrů příkazového řádku pro instalaci sady Visual Studio
 
@@ -37,7 +37,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Instalace minimální instance aplikace Visual Studio bez interaktivních výzev, ale průběh zobrazení:
 
-  ```cmd
+  ```shell
    vs_enterprise.exe --installPath C:\minVS ^
    --add Microsoft.VisualStudio.Workload.CoreEditor ^
    --passive --norestart
@@ -45,7 +45,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Aktualizace instance sady Visual Studio pomocí příkazového řádku bez interaktivních výzev, ale průběh zobrazení:
 
-   ```cmd
+   ```shell
    vs_enterprise.exe --update --quiet --wait
    vs_enterprise.exe update --wait --passive --norestart --installPath "C:\installPathVS"
    ```
@@ -55,7 +55,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Nainstalujte instanci aplikace Visual Studio v tichém režimu s francouzskou jazykovou sadou, která bude vrácena pouze v případě, že je produkt nainstalován.
 
-  ```cmd
+  ```shell
    vs_enterprise.exe --installPath C:\desktopVS ^
    --addProductLang fr-FR ^
    --add Microsoft.VisualStudio.Workload.ManagedDesktop ^
@@ -66,7 +66,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Použijte v dávkových souborech nebo skriptech k čekání na dokončení instalačního programu sady Visual Studio před provedením dalšího příkazu. V případě dávkových souborů `%ERRORLEVEL%` bude proměnná prostředí obsahovat vrácenou hodnotu příkazu, jak je popsáno v [parametrech příkazového řádku use pro instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md) . Některé příkazové nástroje vyžadují další parametry pro čekání na dokončení a získání návratové hodnoty instalačního programu. Následuje příklad dalších parametrů použitých s příkazem PowerShell Script Start-Process:
 
-   ```cmd
+   ```shell
    start /wait vs_professional.exe --installPath "C:\VS" --passive --wait > nul
    echo %errorlevel%
    ```
@@ -94,7 +94,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Stáhněte si základní editor sady Visual Studio (minimální konfigurace sady Visual Studio). Zahrnout pouze anglickou jazykovou sadu:
 
-  ```cmd
+  ```shell
    vs_community.exe --layout C:\VS ^
    --lang en-US ^
    --add Microsoft.VisualStudio.Workload.CoreEditor
@@ -102,7 +102,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Stáhněte si webové úlohy .NET Desktop a .NET spolu se všemi doporučenými součástmi a rozšířením GitHubu. Zahrnout pouze anglickou jazykovou sadu:
 
-  ```cmd
+  ```shell
    vs_community.exe --layout C:\VS ^
    --lang en-US ^
    --add Microsoft.VisualStudio.Workload.NetWeb ^
@@ -115,7 +115,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Spusťte interaktivní instalaci všech úloh a součástí, které jsou k dispozici v edici Visual Studio Enterprise:
 
-   ```cmd
+   ```shell
    vs_enterprise.exe --all
    ```
 
@@ -123,7 +123,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Instalace druhé pojmenované instance Visual Studio Professional na počítači s již nainstalovanou sadou Visual Studio Community Edition s podporou pro Node.js vývoj:
 
-   ```cmd
+   ```shell
    vs_professional.exe --installPath C:\VSforNode ^
    --add Microsoft.VisualStudio.Workload.Node --includeRecommended --nickname VSforNode
   ```
@@ -134,7 +134,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Odeberte součást Nástroje pro profilaci z výchozí nainstalované instance sady Visual Studio:
 
-  ```cmd
+  ```shell
    vs_enterprise.exe modify ^
    --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" ^
    --remove Microsoft.VisualStudio.Component.DiagnosticTools ^
@@ -147,9 +147,22 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 * Odeberte součást Nástroje pro profilaci z výchozí nainstalované instance sady Visual Studio:
 
-  ```cmd
+  ```shell
    vs_enterprise.exe modify ^
    --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" ^
+   --remove Microsoft.VisualStudio.Component.DiagnosticTools ^
+   --passive
+  ```
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+* Odeberte součást Nástroje pro profilaci z výchozí nainstalované instance sady Visual Studio:
+
+  ```shell
+   vs_enterprise.exe modify ^
+   --installPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" ^
    --remove Microsoft.VisualStudio.Component.DiagnosticTools ^
    --passive
   ```
@@ -190,13 +203,13 @@ Tento příkaz příkazového řádku je **v 15,9 nový**. Další informace o t
 
 * Uložení výběru z instalace pomocí exportu:
 
-  ```cmd
+  ```shell
   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe" export --installPath "C:\VS" --config "C:\.vsconfig"
   ```
 
 * Použití exportu pro uložení vlastního výběru od začátku:
 
-  ```cmd
+  ```shell
   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe" export --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --config "C:\.vsconfig"
   ```
 
@@ -210,13 +223,13 @@ Tento parametr příkazového řádku je **v 15,9 nový**. Další informace o t
 
 * Pomocí--config nainstalujete úlohy a komponenty z dříve uloženého konfiguračního souboru instalace:
 
-  ```cmd
+  ```shell
   vs_enterprise.exe --config "C:\.vsconfig" --installPath "C:\VS"
   ```
 
 * Použití--config k přidání úloh a součástí do existující instalace:
 
-  ```cmd
+  ```shell
   vs_enterprise.exe modify --installPath "C:\VS" --config "C:\.vsconfig"
   ```
 

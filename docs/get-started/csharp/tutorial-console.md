@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7317af5667f09ff30d0f2cb54d1399da9d0358de
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 14128a6c5b533d1bf2fe573310c174f6b6a7f897
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113257"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308529"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché konzolové aplikace v jazyce C# v Visual Studio
 
@@ -35,6 +35,12 @@ Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Vis
 ::: moniker range="vs-2019"
 
 Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Pokud jste si ještě nenainstalujete Visual Studio 2022 Preview, přejděte na stránku [stahování Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -75,9 +81,9 @@ Pokud šablonu projektu Konzolová **aplikace (.NET Core)** nevidíte, můžete 
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Otevřete Visual Studio 2019.
+1. Otevřete sadu Visual Studio.
 
 1. V úvodním okně zvolte **Vytvořit nový projekt.**
 
@@ -257,45 +263,45 @@ Pojďme kód opravit tak, aby zpracuje desetinná čísla.
 
    Všimněte si, že aplikace teď místo nuly vrací desetinné číslo.
 
-    ![Okno konzoly zobrazující aplikaci kalkulačky, která teď jako výsledek vrátí desítkovou číslici](./media/csharp-console-calculator-decimal.png)
+    ![Okno konzoly zobrazující aplikaci Kalkulačka, která teď v důsledku toho vrací desetinná čísla](./media/csharp-console-calculator-decimal.png)
 
-Aplikace ale produkuje jenom desítkový výsledek. Pojďme udělat ještě několik vylepšení kódu, aby mohla aplikace vypočítat desetinná místa.
+Aplikace ale vytvoří pouze desítkový výsledek. Pojďme kód ještě trochu upravit, aby aplikace také vypočítala desetinná čísla.
 
-1. Použijte ovládací prvek **Najít a nahradit** (**CTRL**  +  **H**) ke změně každé instance `float` proměnné na a `double` ke změně každé instance `Convert.ToInt32` metody na `Convert.ToDouble` .
+1. Pomocí **ovládacího prvku** Najít a nahradit (**Ctrl** H ) změňte jednotlivé instance proměnné na a ke změně  +  jednotlivých instancí metody na `float` `double` `Convert.ToInt32` `Convert.ToDouble` .
 
-1. Spusťte aplikaci kalkulačky a číslo **42,5** vydělte číslem **119,75**.
+1. Spusťte aplikaci kalkulačky a vydělte **číslo 42,5** číslem **119,75**.
 
-   Všimněte si, že aplikace teď přijímá desítkové hodnoty a jako svůj výsledek vrátí delší desetinné číslo.
+   Všimněte si, že aplikace teď přijímá desetinné hodnoty a vrací jako výsledek delší desetinné číslo.
 
-    ![Okno konzoly zobrazující aplikaci kalkulačky, která teď přijímá desítková čísla a jako výsledek vrátí delší desetinné číslo](./media/csharp-console-calculator-usedecimals.png)
+    ![Okno konzoly zobrazující aplikaci Kalkulačka, která teď přijímá desetinná čísla a vrací v důsledku toho delší desetinná čísla](./media/csharp-console-calculator-usedecimals.png)
 
-    (Počet desetinných míst vyřešíme v části [Revize kódu](#revise-the-code) .)
+    (Počet desetinných míst opravíme v části [Revize](#revise-the-code) kódu.)
 
 ## <a name="debug-the-app"></a>Ladění aplikace
 
-Vylepšili jsme základní aplikaci kalkulačky, ale ještě nedošlo k jejich bezpečnému selhání, aby bylo možné zpracovávat výjimky, například chyby vstupu uživatele.
+Vylepšili jsme aplikaci základní kalkulačky, ale zatím nemá k dispozici bezpečnostní opatření pro selhání, která by zvládla výjimky, jako jsou chyby uživatelského vstupu.
 
-Například pokud se pokusíte dělit číslo nulou nebo zadat alfa znak, když aplikace očekává číselný znak (nebo naopak), může aplikace přestat pracovat, vracet chybu nebo vracet neočekávaný nečíselný výsledek.
+Pokud se například pokusíte vydělit číslo nulou nebo zadat alfa znak, když aplikace očekává číselný znak (nebo naopak), může aplikace přestat fungovat, vrátit chybu nebo vrátit neočekávaný nečísný výsledek.
 
-Pojďme si projít několik běžných chyb vstupu uživatele, vyhledat je v ladicím programu, pokud se tam objeví, a opravit je v kódu.
+Pojďme si projít několik běžných chyb uživatelského vstupu, vyhledat je v ladicím programu, pokud se tam objeví, a opravit je v kódu.
 
 > [!TIP]
-> Další informace o ladicím programu a jeho fungování najdete na stránce [ladicího programu sady Visual Studio na první pohled](../../debugger/debugger-feature-tour.md) .
+> Další informace o ladicím programu a o tom, jak funguje, najdete na stránce První [pohled na Visual Studio ladicího](../../debugger/debugger-feature-tour.md) programu.
 
-### <a name="fix-the-divide-by-zero-error"></a>Opravit chybu dělení nulou
+### <a name="fix-the-divide-by-zero-error"></a>Oprava chyby "vydělit nulou"
 
-Když se pokusíte dělit číslo nulou, aplikace konzoly se může ukotvit a pak se zobrazí informace o tom, co je v editoru kódu chybné.
+Když se pokusíte číslo vydělit nulou, může se konzolová aplikace zablokovat a pak v editoru kódu zobrazit, co je špatně.
 
-   ![Snímek obrazovky editoru kódu sady Visual Studio ukazující žlutě zvýrazněný řádek a Neošetřená chyba pro ' pokus o dělení nulou '.](./media/csharp-console-calculator-dividebyzero-error.png)
+   ![Snímek obrazovky Visual Studio kódu zobrazující řádek zvýrazněný žlutě a chybu Exception Unhandled (Neošetřená výjimka) pro "Attempted to divide by zero" (Pokus o dělení nulou)](./media/csharp-console-calculator-dividebyzero-error.png)
 
 > [!NOTE]
-> V některých případech se aplikace neblokuje a ladicí program nebude zobrazovat chybu s dělením nulou. Místo toho může aplikace vracet neočekávaný nenumerický výsledek, jako je například symbol nekonečno. Následující oprava kódu se pořád používá.
+> Někdy se aplikace nezablokuje a ladicí program nebude zobrazovat chybu dělení nulou. Místo toho může aplikace vrátit neočekávaný nečísový výsledek, například symbol nekonečna. Stále platí následující oprava kódu.
 
-Pojďme změnit kód pro zpracování této chyby.
+Změňte kód tak, aby tuto chybu zvládl.
 
-1. Odstraňte kód, který se zobrazí přímo mezi `case "d":` a komentář, který říká `// Wait for the user to respond before closing` .
+1. Odstraňte kód, který se zobrazí přímo mezi `case "d":` a komentářem , který říká `// Wait for the user to respond before closing` .
 
-1. Nahraďte ji následujícím kódem:
+1. Nahraďte ho následujícím kódem:
 
    ```csharp
             // Ask the user to enter a non-zero divisor until they do so.
@@ -309,31 +315,31 @@ Pojďme změnit kód pro zpracování této chyby.
         }
     ```
 
-   Po přidání kódu by část s `switch` příkazem měla vypadat podobně jako na následujícím snímku obrazovky:
+   Po přidání kódu by část s příkazem měla vypadat `switch` podobně jako na následujícím snímku obrazovky:
 
-   ![Revidovaný oddíl Switch v editoru kódu sady Visual Studio](./media/csharp-console-calculator-switch-code.png)
+   ![Upravená část switch v editoru Visual Studio kódu](./media/csharp-console-calculator-switch-code.png)
 
-Když teď číslo vydělíte nulou, aplikace si vyžádá další číslo. Ještě lepší: přestane zobrazovat výzvy, dokud nezadáte číslo jiné než nula.
+Když teď jakékoli číslo vydělíte nulou, aplikace vás požádá o další číslo. Ještě lepší: Nepřestane se ptát, dokud nezadáte jiné číslo než nulu.
 
-   ![Snímek obrazovky editoru kódu sady Visual Studio zobrazující kód pro příkaz switch s kontrolou pro položku, která je přidána nenulovému děliteli.](./media/csharp-console-calculator-dividebyzero.png)
+   ![Snímek obrazovky Visual Studio kódu zobrazující kód pro příkaz switch s přidanou kontrolu pro zadání nenulového dělitele](./media/csharp-console-calculator-dividebyzero.png)
 
-### <a name="fix-the-format-error"></a>Opravit chybu "formát"
+### <a name="fix-the-format-error"></a>Oprava chyby "format"
 
-Pokud zadáte alfanumerický znak, když aplikace očekává číselný znak (nebo naopak), aplikace konzoly se zablokuje. Visual Studio potom ukáže, co je v editoru kódu chybné.
+Pokud zadáte alfanumerický znak, když aplikace očekává číselný znak (nebo naopak), konzolová aplikace se zablokuje. Visual Studio se v editoru kódu zobrazí, co je špatně.
 
-   ![V editoru kódu sady Visual Studio se zobrazuje chyba formátu](./media/csharp-console-calculator-format-error.png)
+   ![V Visual Studio kódu se zobrazí chyba formátu.](./media/csharp-console-calculator-format-error.png)
 
-Abychom mohli tuto chybu opravit, musíme kód, který jsme předtím zadali, Refaktorovat.
+Pokud chcete tuto chybu vyřešit, musíme refaktorovat kód, který jsme zadali dříve.
 
 #### <a name="revise-the-code"></a>Revize kódu
 
-Místo toho `program` , aby se při zpracování veškerého kódu spoléhá na třídu, rozdělíme naši aplikaci na dvě třídy: `Calculator` a `Program` .
+Místo toho, abyste ke zpracování veškerého kódu spoléhají na třídu , rozdělíme naši aplikaci do dvou tříd: a `program` `Calculator` `Program` .
 
-`Calculator`Třída zpracuje hromadnou práci výpočtu a `Program` Třída zpracuje uživatelské rozhraní a zachytávání chyb.
+Třída bude zpracovávat většinu výpočtů a třída bude zpracovávat uživatelské rozhraní a `Calculator` `Program` práci zachytávání chyb.
 
 Tak se do toho pusťme.
 
-1. Odstranit vše v `Calculator` oboru názvů mezi otevírací a pravou závorkou:
+1. Odstraňte vše v oboru názvů mezi jeho počátečními a `Calculator` uzavíracími závorkami:
 
     ```csharp
     using System;
@@ -344,7 +350,7 @@ Tak se do toho pusťme.
     }
     ```
 
-1. Dále přidejte novou třídu následujícím `Calculator` způsobem:
+1. Dále přidejte novou `Calculator` třídu následujícím způsobem:
 
     ```csharp
     class Calculator
@@ -460,31 +466,31 @@ Tak se do toho pusťme.
     }
     ```
 
-1. Zvolte **kalkulačku** pro spuštění programu nebo stiskněte klávesu **F5**.
+1. Zvolte **Kalkulačku,** aby se program spouštěl, nebo stiskněte **klávesu F5**.
 
-1. Postupujte podle výzev a vydělte číslo **42** číslem **119**. Vaše aplikace by měla vypadat podobně jako na následujícím snímku obrazovky:
+1. Postupujte podle vý výzvy a vydělte **číslo 42** číslem **119**. Vaše aplikace by měla vypadat podobně jako na následujícím snímku obrazovky:
 
-    ![Okno konzoly zobrazující refaktorované aplikace kalkulačky, které obsahují výzvy, které akce při zpracování a zpracování chyb budou mít nesprávné vstupy](./media/csharp-console-calculator-refactored.png)
+    ![Okno konzoly zobrazující refaktorované aplikace kalkulačky, která obsahuje výzvy, které akce se mají provádět, a zpracování chyb kvůli nesprávným vstupům](./media/csharp-console-calculator-refactored.png)
 
-    Všimněte si, že máte možnost zadat další rovnice, dokud se nerozhodnete zavřít konzolovou aplikaci. A také jsme snížili počet desetinných míst ve výsledku.
+    Všimněte si, že máte možnost zadat další rovnice, dokud se rozhodnete zavřít konzolovou aplikaci. Také jsme snížili počet desetinných míst ve výsledku.
 
-## <a name="close-the-app"></a>Zavřít aplikaci
+## <a name="close-the-app"></a>Zavření aplikace
 
-1. Pokud jste to ještě neudělali, zavřete aplikaci Kalkulačka.
+1. Pokud jste to ještě neudělali, zavřete aplikaci kalkulačky.
 
-1. Zavřete podokno **výstup** v aplikaci Visual Studio.
+1. Zavřete **podokno** Výstup v Visual Studio.
 
-   ![Zavření podokna výstup v aplikaci Visual Studio](./media/csharp-calculator-close-output-pane.png)
+   ![Zavřete podokno Výstup v Visual Studio](./media/csharp-calculator-close-output-pane.png)
 
-1. V aplikaci Visual Studio uložte aplikaci stisknutím **kombinace kláves CTRL +** +  .
+1. V Visual Studio uložte **aplikaci stisknutím Ctrl** + **S.**
 
 1. Zavřete Visual Studio.
 
-## <a name="code-complete"></a>Kód je kompletní
+## <a name="code-complete"></a>Dokončení kódu
 
-V tomto kurzu jsme udělali spoustu změn v aplikaci kalkulačky. Aplikace nyní zpracovává výpočetní prostředky efektivněji a zpracovává většinu chyb vstupu uživatele.
+V tomto kurzu jsme provedli spoustu změn aplikace kalkulačky. Aplikace teď zpracovává výpočetní prostředky efektivněji a zpracovává většinu chyb uživatelského vstupu.
 
-Zde je kompletní kód, vše na jednom místě:
+Tady je kompletní kód, vše na jednom místě:
 
 ```csharp
 
@@ -606,25 +612,25 @@ namespace Calculator
 
 :::moniker range="vs-2017"
 
-Pokračovat s dalšími kurzy:
+Pokračujte v dalších kurzech:
 
 > [!div class="nextstepaction"]
-> [Kurzy C#](/dotnet/csharp/tutorials)
+> [Kurzy k jazyku C#](/dotnet/csharp/tutorials)
 
 > [!div class="nextstepaction"]
 > [Prohlídka integrovaného vývojového prostředí sady Visual Studio](../visual-studio-ide.md)
 
 :::moniker-end
 
-:::moniker range="vs-2019"
+:::moniker range=">=vs-2019"
 
-Pokračujte v druhé části tohoto kurzu:
+Pokračujte druhou částí tohoto kurzu:
 
 > [!div class="nextstepaction"]
-> [Pokračovat s částí 2](tutorial-console-part-2.md)
+> [Pokračování s částí 2](tutorial-console-part-2.md)
 :::moniker-end
 
 ## <a name="see-also"></a>Viz také
 
 * [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
-* [Naučte se ladit kód C# v aplikaci Visual Studio.](tutorial-debugger.md)
+* [Naučte se ladit kód C# v Visual Studio](tutorial-debugger.md)

@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b214452a2eb7a85b4a9baea5e4b4e80a1a71e63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3a301c1bd4758ea08f49036fcf8756c8d7e7c26
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933853"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306446"
 ---
 # <a name="walkthrough-use-msbuild"></a>Návod: použití nástroje MSBuild
 
@@ -38,8 +38,8 @@ Nástroj MSBuild můžete spustit ze sady Visual Studio nebo z **příkazového 
 Pokud máte aplikaci Visual Studio, pak již máte nainstalován nástroj MSBuild. Chcete-li nainstalovat nástroj MSBuild 15 do systému, který nemá aplikaci Visual Studio, klikněte na možnost [Visual Studio starší soubory ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/), rozbalte položku **Visual Studio 2017** a klikněte na tlačítko **Stáhnout** . Máte-li předplatné sady Visual Studio, přihlaste se a vyhledejte odkaz pro stažení nejnovější verze **nástrojů Build Tools pro sadu Visual studio 2017**. Pokud nemáte předplatné sady Visual Studio, můžete přesto nainstalovat nejnovější verzi nástrojů pro sestavení. Na této stránce se pomocí selektoru verzí přepněte na stránku verze 2019 a postupujte podle pokynů k instalaci.
 ::: moniker-end
 
-::: moniker range="vs-2019"
-Pokud máte aplikaci Visual Studio, pak již máte nainstalován nástroj MSBuild. Se sadou Visual Studio 2019 se instaluje do instalační složky sady Visual Studio. Pro typickou výchozí instalaci ve Windows 10 se MSBuild.exe nachází pod instalační složkou v *MSBuild\Current\Bin*.
+::: moniker range=">=vs-2019"
+Pokud máte aplikaci Visual Studio, pak již máte nainstalován nástroj MSBuild. V případě sady Visual Studio 2019 a novější je tato instalace nainstalována do instalační složky sady Visual Studio. Pro typickou výchozí instalaci ve Windows 10 se MSBuild.exe nachází pod instalační složkou v *MSBuild\Current\Bin*.
 
 Pokud chcete nástroj MSBuild nainstalovat do systému, který nemá Visual Studio, přejděte do sady [Visual Studio ke stažení](https://visualstudio.microsoft.com/downloads/) a přejděte dolů ke **všem souborům ke stažení** a pak rozbalte **Nástroje pro Visual Studio 2019**. Nainstalujte **Nástroje sestavení pro Visual Studio 2019**, které obsahují MSBuild, nebo nainstalujte [.NET Core SDK](/dotnet/core/sdk#acquiring-the-net-core-sdk).
 
@@ -351,7 +351,7 @@ Všechny položky jsou podřízené prvky prvků Item. Název položky je název
 </ItemGroup>
 ```
 
-definuje skupinu položek, která obsahuje dvě položky. Kompilace typu položky má dvě hodnoty: *program.cs* a *Properties\AssemblyInfo.cs*.
+definuje skupinu položek, která obsahuje dvě položky. Kompilace typu položky má dvě hodnoty: *program. cs* a *Properties\AssemblyInfo.cs*.
 
 Následující kód vytvoří stejný typ položky deklarováním obou souborů v jednom vloženém atributu oddělené středníkem.
 
@@ -460,7 +460,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 <Photos Include="images\*.gif" />
 ```
 
- Vytvoří typ položky s názvem fotka obsahující všechny soubory ve složce *images* s příponou souboru *. jpeg* nebo *. gif*. To je ekvivalentní následujícímu řádku:
+ Vytvoří typ položky s názvem fotka obsahující všechny soubory ve složce *images* s příponou souboru *. jpeg* nebo *.gif*. To je ekvivalentní následujícímu řádku:
 
 ```xml
 <Photos Include="images\*.jpeg;images\*.gif" />
@@ -481,7 +481,7 @@ Atribut Exclude ovlivňuje pouze položky přidané atributem include v prvku po
 <Compile Include="*.res" Exclude="Form1.cs">
 ```
 
-nevylučuje soubor *Form1.cs*, který byl přidán do předchozí položky elementu.
+nevylučuje soubor *Form1. cs*, který byl přidán do předchozí položky elementu.
 
 **Zahrnutí a vyloučení položek**
 

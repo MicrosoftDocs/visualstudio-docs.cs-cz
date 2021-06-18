@@ -19,12 +19,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e9a90198ce4cf3dc54eedbf80bbf4ffbad634cbc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 007e82ee7c1c2839ba266794432605f1f92a1669
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836485"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307788"
 ---
 # <a name="autorecover-environment-options-dialog-box"></a>Automatické obnovení, prostředí, dialogové okno Možnosti
 
@@ -35,6 +35,12 @@ Chcete-li získat přístup k tomuto dialogovému oknu, přejděte do možnosti 
 :::image type="content" source="media/autorecover-options.png" alt-text="Snímek obrazovky s oddílem automatického obnovení v dialogovém okně Možnosti":::
 
 **Ukládat informace automatického obnovení každých [n] min.**
+
+::: moniker range=">=vs-2022"
+
+Tuto možnost použijte, pokud chcete přizpůsobit, jak často se soubor v editoru automaticky ukládá. V případě dříve uložených souborů aplikace Visual Studio uloží kopii souboru do ***%localappdata%\Microsoft\VisualStudio\BackupFiles \\ [projectname]***. Pokud je soubor nový a zatím jste ho neuložili, Visual Studio ho automaticky uloží pomocí náhodně generovaného názvu souboru.
+
+::: moniker-end
 
 ::: moniker range="vs-2019"
 

@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6a93a8a41e4d2c4c91a55cfe91459f7a501b8efc
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 080c4450cfcdca28386811865229af75303beb6a
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296977"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307528"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
@@ -29,7 +29,7 @@ Někdy chce správce podniku vytvořit bod instalace sítě, který obsahuje sou
  > [!NOTE]
  >  - Pokud máte více edicí sady Visual Studio v rámci podniku (například sady Visual Studio 2019 Professional i Visual Studio 2019 Enterprise), musíte pro každou edici vytvořit samostatnou sdílenou síťovou složku pro instalaci.
  >  - Doporučujeme, abyste se rozhodli, jak chcete, aby klienti obdrželi aktualizace produktu _před tím, než_ provedete počáteční instalaci klienta.  Díky tomu je snazší zajistit správné nastavení možností konfigurace. Mezi vaše volby patří klienti, kteří získají aktualizace z umístění rozložení sítě nebo z Internetu. 
- >  - Původní rozložení instalace sady Visual Studio a všechny následné aktualizace produktu se musí nacházet ve stejném síťovém adresáři, aby bylo zajištěno, že funkce opravy a odinstalace funguje správně. 
+ >  - Původní rozložení instalace sady Visual Studio a všechny následné aktualizace produktu se musí nacházet ve stejném síťovém adresáři, aby bylo zajištěno, že funkce opravy a odinstalace funguje správně.
 
 ## <a name="download-the-visual-studio-bootstrapper"></a>Stažení zaváděcího nástroje sady Visual Studio
 
@@ -39,11 +39,11 @@ Stáhněte si soubor zaváděcího nástroje pro edici sady Visual Studio, ktero
 
 Chcete-li získat nejnovější zaváděcí nástroj pro sadu Visual Studio 2017 verze 15,9, navštivte stránku [předchozí verze sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) a Stáhněte jeden z následujících souborů zaváděcího nástroje:
 
-| Edice | Bitmap |
-|-------------|-----------------------|
-|Visual Studio 2017 Enterprise verze 15,9 | vs_enterprise.exe |
-|Visual Studio 2017 Professional verze 15,9 | vs_professional.exe |
-|Visual Studio 2017 Build Tools verze 15,9  | vs_buildtools.exe |
+| Edice                                      | Bitmap            |
+|----------------------------------------------|---------------------|
+| Visual Studio 2017 Enterprise verze 15,9   | vs_enterprise.exe   |
+| Visual Studio 2017 Professional verze 15,9 | vs_professional.exe |
+| Visual Studio 2017 Build Tools verze 15,9  | vs_buildtools.exe   |
 
 Mezi další podporované zaváděcí nástroje patří vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe a vs_testprofessional.exe.
 
@@ -51,15 +51,28 @@ Mezi další podporované zaváděcí nástroje patří vs_feedbackclient.exe, v
 
 ::: moniker range="vs-2019"
 
-Začněte stažením zaváděcího nástroje sady Visual Studio 2019 ze [stránky stažení sady Visual](https://visualstudio.microsoft.com/downloads) Studio nebo ze stránky [verze sady Visual Studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release) pro vaši zvolenou verzi a edici sady Visual Studio.  Instalační program &mdash; nebo bude mít konkrétnější soubor, soubor zaváděcího nástroje &mdash; se bude shodovat s jedním z následujících způsobů:
+Začněte stažením zaváděcího nástroje sady Visual Studio 2019 ze [stránky stažení sady Visual](https://visualstudio.microsoft.com/downloads) Studio nebo ze stránky [verze sady Visual Studio 2019](/visualstudio/releases/2019/history#installing-an-earlier-release) pro vaši zvolenou verzi a edici sady Visual Studio.  Instalační program &mdash; nebo bude mít konkrétnější soubor, soubor zaváděcího nástroje &mdash; se bude shodovat s jedním z následujících způsobů:
 
-|Edice | Stáhnout|
-|-------------|-----------------------|
-|Visual Studio Enterprise | [vs_enterprise.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
-|Visual Studio Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
-| Visual Studio Build Tools   | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
+| Edice                    | Stáhnout                                                                                                                                                                                                                           |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Visual Studio Enterprise   | [vs_enterprise.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019)     |
+| Visual Studio Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
+| Visual Studio Build Tools  | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
 
 Mezi další podporované zaváděcí nástroje patří [vs_teamexplorer.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/4026077127d25d33789f3882998266946608d8ada378b6ed7c8fff8c07f3dde2/vs_TeamExplorer.exe), [vs_testagent.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/1383bf8bcda3d0e986a2e42c14114aaea8a7b085d31aa0623c9f70b2bad130e4/vs_TestAgent.exe)a [vs_testcontroller.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/54dcf24b76e7cd9fb8be0ac518a9dfba6daf18fe9b2aa1543411b1cda8820918/vs_TestController.exe).
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+>![!TIP]
+> Vydané verze sady Visual Studio 2022 ještě nejsou k dispozici, zaváděcí nástroje níže jsou pro verzi Preview sady Visual Studio 2022.
+Začněte stažením zaváděcího nástroje sady Visual Studio 2022 na [stránce soubory ke stažení pro Visual Studio](https://aka.ms/vs2022preview).
+
+| Edice                    | Stáhnout                                                                             |
+|----------------------------|--------------------------------------------------------------------------------------|
+| Visual Studio Enterprise   | [vs_enterprise.exe](https://aka.ms/vs/17/preview/bootstrapper/vs_enterprise.exe)     |
+| Visual Studio Professional | [vs_professional.exe](https://aka.ms/vs/17/preview/bootstrapper/vs_professional.exe) |
 
 ::: moniker-end
 
@@ -73,19 +86,26 @@ Mezi další podporované zaváděcí nástroje patří [vs_teamexplorer.exe](ht
 ::: moniker range="vs-2019"
 
 >[!TIP]
->Pokud jste dříve stáhli soubor zaváděcího nástroje a chcete ověřit, jakou verzi je, tady je postup. V systému Windows otevřete Průzkumníka souborů, klikněte pravým tlačítkem na soubor zaváděcího nástroje, zvolte **vlastnosti**, klikněte na kartu **Podrobnosti** a pak zobrazte číslo **verze produktu** . Chcete-li toto číslo porovnat s vydáním sady Visual Studio, přečtěte si téma [verze sady Visual studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/history).
+>Pokud jste dříve stáhli soubor zaváděcího nástroje a chcete ověřit, jakou verzi je, tady je postup. V systému Windows otevřete Průzkumníka souborů, klikněte pravým tlačítkem na soubor zaváděcího nástroje, zvolte **vlastnosti**, klikněte na kartu **Podrobnosti** a pak zobrazte číslo **verze produktu** . Chcete-li toto číslo porovnat s vydáním sady Visual Studio, přečtěte si téma [verze sady Visual studio 2019](/visualstudio/releases/2019/history).
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+>[!TIP]
+>Pokud jste dříve stáhli soubor zaváděcího nástroje a chcete ověřit, jakou verzi je, tady je postup. V systému Windows otevřete Průzkumníka souborů, klikněte pravým tlačítkem na soubor zaváděcího nástroje, zvolte **vlastnosti**, klikněte na kartu **Podrobnosti** a pak zobrazte číslo **verze produktu** . Chcete-li toto číslo porovnat s vydáním sady Visual Studio, přečtěte si téma [verze sady Visual studio 2022](/visualstudio/releases/2022/history).
 
 ::: moniker-end
 
 ## <a name="create-an-offline-installation-folder"></a>Vytvoření offline instalační složky
 
-K dokončení tohoto kroku je nutné připojení k Internetu. 
+K dokončení tohoto kroku je nutné připojení k Internetu.
 
 Otevřete příkazový řádek, přejděte do adresáře, do kterého jste stáhli zaváděcí nástroj, a pomocí parametrů zaváděcího nástroje, jak je definováno v [parametrech příkazového řádku pro instalaci sady Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md) , vytvořte a udržujte mezipaměť instalace vaší sítě. Běžné příklady vytváření počátečních rozložení jsou uvedené níže a v [příkladech parametrů příkazového řádku pro instalaci sady Visual Studio](../install/command-line-parameter-examples.md).  
 
    > [!IMPORTANT]
    > Dokončení počátečního rozložení pro národní prostředí v jednom jazyce vyžaduje přibližně 35 GB místa na disku pro Visual Studio Community a 42 GB pro Visual Studio Enterprise. Další [jazykové národní prostředí](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales) vyžaduje přibližně polovinu až GB každého z nich. Další informace najdete v části [přizpůsobení rozložení sítě](#customize-the-network-layout) . Je třeba mít na vědomí, že následné aktualizace rozložení se musí taky ukládat do stejného síťového umístění, takže se očekává, že obsah adresáře v umístění rozložení sítě může být v průběhu času poměrně velký.  
-   
+
 - Chcete-li vytvořit počáteční rozložení Visual Studio Enterprise se všemi jazyky a všemi funkcemi, spusťte příkaz:
 
   ```vs_enterprise.exe --layout c:\VSLayout```
@@ -104,13 +124,13 @@ Pokud narazíte na problém s zaváděcím nástrojem sady Visual Studio při p�
 
 Rozdělte rozložení na sdílenou síťovou složku, aby bylo možné spustit z klientských počítačů.
 
-Následující příklad používá [xcopy](/windows-server/administration/windows-commands/xcopy/). Můžete také použít příkaz [Robocopy](/windows-server/administration/windows-commands/robocopy/), který byste měli chtít.
+Následující příklad používá [`xcopy`](/windows-server/administration/windows-commands/xcopy/) . Můžete také použít [`robocopy`](/windows-server/administration/windows-commands/robocopy/) , pokud chcete.
 
 ::: moniker range="vs-2017"
 
 Příklad:
 
-```cmd
+```shell
 xcopy /e c:\VSLayout \\server\products\VS2017
 ```
 
@@ -118,8 +138,16 @@ xcopy /e c:\VSLayout \\server\products\VS2017
 
 ::: moniker range="vs-2019"
 
-```cmd
+```shell
 xcopy /e c:\VSLayout \\server\products\VS2019
+```
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+```shell
+xcopy /e c:\VSLayout \\server\products\VS2022
 ```
 
 ::: moniker-end
@@ -140,37 +168,37 @@ Zde je několik příkladů vytvoření vlastního částečného rozložení.
 
 * Chcete-li stáhnout všechny úlohy a součásti pouze pro jeden jazyk, spusťte příkaz:
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --layout C:\VSLayout --lang en-US
     ```
 
 * Chcete-li stáhnout všechny úlohy a součásti pro více jazyků, spusťte příkaz:
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --layout C:\VSLayout --lang en-US de-DE ja-JP
     ```
 
 * Chcete-li stáhnout jednu úlohu pro všechny jazyky, spusťte příkaz:
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --includeRecommended
     ```
 
 * Ke stažení dvou úloh a jedné volitelné komponenty pro tři jazyky spusťte příkaz:
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended --lang en-US de-DE ja-JP
     ```
 
 * Stažení dvou úloh a všech doporučených součástí:
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended
     ```
 
 * Pokud chcete stáhnout dvě úlohy a všechny doporučené a volitelné komponenty, spusťte:
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional
     ```
 
@@ -178,25 +206,25 @@ Zde je několik příkladů vytvoření vlastního částečného rozložení.
 
 Když spustíte příkaz rozložení, možnosti, které zadáte, se uloží (například úlohy a jazyky). Následné příkazy rozložení budou zahrnovat všechny předchozí možnosti.  Tady je příklad rozložení s jednou úlohou pouze pro angličtinu:
 
-```cmd
+```shell
 vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --lang en-US
 ```
 
 Pokud chcete toto rozložení aktualizovat na novější verzi, nemusíte zadávat žádné další parametry příkazového řádku. Předchozí nastavení se uloží a použijí v dalších příkazech rozložení v této složce rozložení.  V následujícím příkazu se aktualizuje existující částečné rozložení.
 
-```cmd
+```shell
 vs_enterprise.exe --layout c:\VSLayout
 ```
 
 Pokud chcete přidat další úlohu, tady je příklad, jak to provést. V tomto případě přidáme úlohu Azure a lokalizovaný jazyk.  V tomto rozložení jsou teď zahrnuté i spravované desktopy i Azure.  Pro všechny tyto úlohy jsou k dispozici jazykové prostředky pro angličtinu a němčinu. Rozložení se aktualizuje na nejnovější dostupnou verzi.
 
-```cmd
+```shell
 vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
 ```
 
 Chcete-li aktualizovat existující rozložení na celé rozložení, použijte možnost--All, jak je znázorněno v následujícím příkladu.
 
-```cmd
+```shell
 vs_enterprise.exe --layout c:\VSLayout --all
 ```
 
@@ -206,13 +234,13 @@ Správci mohou do klientských pracovních stanic nasadit sadu Visual Studio jak
 
 * Uživatele můžete nainstalovat spuštěním následujícího příkazu: <br>
 
-    ```cmd
+    ```shell
     \\server\products\VS\vs_enterprise.exe
     ```
 
 * Správci se můžou instalovat v bezobslužném režimu spuštěním následujícího příkazu:
 
-    ```cmd
+    ```shell
     \\server\products\VS\vs_enterprise.exe --quiet --wait --norestart
     ```
 
@@ -227,7 +255,7 @@ Správci mohou do klientských pracovních stanic nasadit sadu Visual Studio jak
 > Pokud nepoužijete `--wait` , proces se `vs_enterprise.exe` ukončí před dokončením instalace a vrátí nepřesný ukončovací kód, který nepředstavuje stav operace instalace.
 >
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 > [!IMPORTANT]
 > V případě instalace offline se zobrazí chybová zpráva s informacemi o tom, že produkt odpovídající následujícím parametrům nebyl nalezen, ujistěte se, že používáte `--noweb` přepínač s verzí 16.3.5 nebo novější.
 >
@@ -253,13 +281,13 @@ Jakmile budou aktualizace produktu k dispozici, může být vhodné [Aktualizova
 
 ## <a name="how-to-create-a-layout-for-a-previous-visual-studio-release"></a>Vytvoření rozložení pro předchozí vydání sady Visual Studio
 
-Nejdřív je potřeba pochopit, že existují dva typy spouštěcích prvků sady Visual Studio – jeden, který může být charakterizován slovy "poslední", "Current", "doručoval" a "Tip" a jedním z nich v podstatě znamená "pevná verze". Oba typy souborů zaváděcího nástroje mají přesně stejný název a nejlepším způsobem, jak typ odlišit, je věnovat pozornost tomu, kde jste z nich získali pozornost. Zaváděcí nástroje sady Visual Studio, které jsou k dispozici na [stránce soubory ke stažení pro Visual](https://visualstudio.microsoft.com/downloads) Studio, se považují za doručoval nástroje sady Visual Studio a vždy instalují (nebo aktualizují) nejnovější verzi, která je v kanálu v době spuštění zaváděcího nástroje k dispozici. Zavaděče sady Visual Studio jsou k dispozici na stránce [verze sady Visual studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/history) nebo které jsou vložené v rámci aktualizace správce v katalogu Microsoft Update nainstalujte konkrétní opravenou verzi produktu. 
+Nejdřív je potřeba pochopit, že existují dva typy spouštěcích prvků sady Visual Studio – jeden, který může být charakterizován slovy "poslední", "Current", "doručoval" a "Tip" a jedním z nich v podstatě znamená "pevná verze". Oba typy souborů zaváděcího nástroje mají přesně stejný název a nejlepším způsobem, jak typ odlišit, je věnovat pozornost tomu, kde jste z nich získali pozornost. Zaváděcí nástroje sady Visual Studio, které jsou k dispozici na [stránce soubory ke stažení pro Visual](https://visualstudio.microsoft.com/downloads) Studio, se považují za doručoval nástroje sady Visual Studio a vždy instalují (nebo aktualizují) nejnovější verzi, která je v kanálu v době spuštění zaváděcího nástroje k dispozici. Zaváděcí nástroje sady Visual Studio jsou dostupné na stránce sady Visual Studio [2019 Release](/visualstudio/releases/2019/history) verze sady [Visual Studio 2022](/visualstudio/releases/2022/history)  nebo vložené v rámci aktualizace správce v katalogu Microsoft Update nainstalujte konkrétní opravenou verzi produktu.
 
 Pokud si tedy stáhnete doručoval zaváděcí nástroj sady Visual Studio ještě dnes a spustíte ho šest měsíců od tohoto okamžiku, nainstaluje se verze sady Visual Studio, která je aktuální v době, kdy je zaváděcí nástroj spuštěn. Je navržena tak, aby vždy instalovala nejnovější bity a udržovala vaše aktuální.
 
 Pokud si stáhnete zaváděcí nástroj pro pevné připojení nebo pokud spustíte aktualizaci správce, kterou jste si stáhli z katalogu Microsoftu, bude vždycky instalovat konkrétní verzi produktu bez ohledu na to, kdy byla spuštěna.
 
-Nakonec můžete vytvořit rozložení sítě pomocí některého z těchto zaváděcích nástroje a verze, která se vytvoří v rozložení, bude záviset na zaváděcím programu, který používáte, například bude to buď pevná verze, nebo aktuální. Pak můžete aktualizovat rozložení sítě pomocí pozdějšího zaváděcího nástroje nebo můžete použít také balíček aktualizace správce z katalogu Microsoft Update. Bez ohledu na to, jak rozložení aktualizujete, bude výsledné aktualizované rozložení mezipamětí balíčku, která obsahuje konkrétní verzi produktu, a pak se bude chovat jako zaváděcí nástroj pevné linky. Takže pokud se klient nainstaluje z rozložení, klient nainstaluje konkrétní verzi sady Visual Studio, která existuje v rozložení (i v případě, že může existovat novější verze online). 
+Nakonec můžete vytvořit rozložení sítě pomocí některého z těchto zaváděcích nástroje a verze, která se vytvoří v rozložení, bude záviset na zaváděcím programu, který používáte, například bude to buď pevná verze, nebo aktuální. Pak můžete aktualizovat rozložení sítě pomocí pozdějšího zaváděcího nástroje nebo můžete použít také balíček aktualizace správce z katalogu Microsoft Update. Bez ohledu na to, jak rozložení aktualizujete, bude výsledné aktualizované rozložení mezipamětí balíčku, která obsahuje konkrétní verzi produktu, a pak se bude chovat jako zaváděcí nástroj pevné linky. Takže pokud se klient nainstaluje z rozložení, klient nainstaluje konkrétní verzi sady Visual Studio, která existuje v rozložení (i v případě, že může existovat novější verze online).
 
 ### <a name="how-to-get-support-for-your-offline-installer"></a>Jak získat podporu pro offline instalátor
 

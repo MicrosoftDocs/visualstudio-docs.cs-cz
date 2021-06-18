@@ -11,14 +11,14 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 9a2d362bc9fd22f7bb1db2fa005534f2f67e3155
-ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
+ms.openlocfilehash: 0728011c05d47996a313c11a18f31a196ec08e10
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760962"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306496"
 ---
-# <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v Visual Studio
+# <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core s TypeScriptem v Visual Studio
 
 V tomto kurzu Visual Studio vývoje ASP.NET Core a TypeScript vytvoříte jednoduchou webovou aplikaci, přidáte kód TypeScriptu a pak aplikaci spustíte.
 
@@ -31,6 +31,12 @@ Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Vis
 ::: moniker range=">=vs-2019"
 
 Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Pokud jste si ještě nenainstalujete Visual Studio 2022 Preview, přejděte na stránku [stahování Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -53,7 +59,7 @@ V tomto kurzu se naučíte:
     Pokud jste si ještě nenainstalujete Visual Studio 2017, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma.
     ::: moniker-end
 
-    Pokud potřebujete tuto úlohu nainstalovat, ale Visual Studio, přejděte na **Nástroje** Získat nástroje a funkce. Otevře se  >  Instalační program pro Visual Studio. Zvolte **úlohu ASP.NET a vývoje** webu a pak zvolte **Upravit.**
+    Pokud potřebujete tuto úlohu nainstalovat, ale Visual Studio, přejděte na **Nástroje** Získat nástroje a funkce. Otevře se  >  Instalační program pro Visual Studio. Zvolte **úlohu ASP.NET a vývoj pro web** a pak zvolte **Upravit.**
 
 ## <a name="create-a-new-aspnet-core-mvc-project"></a>Vytvoření nového projektu ASP.NET Core MVC
 
@@ -71,7 +77,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
     ::: moniker range=">=vs-2019"
     V Visual Studio 2019 zvolte **v** úvodním okně Vytvořit nový projekt. Pokud úvodní okno není otevřené, zvolte **Úvodní**  >  **okno souboru**. Zadejte **webovou aplikaci,** jako jazyk zvolte **C#,** pak **zvolte ASP.NET Core Web Application (Model-View-Controller)** a pak zvolte **Další.** Na další obrazovce zadejte název projektu a pak zvolte **Další.**
 
-    Zvolte doporučenou cílovou rozhraní (.NET Core 3.1) nebo .NET 5 a pak zvolte **Vytvořit.**
+    Zvolte doporučené cílové rozhraní (.NET Core 3.1) nebo .NET 5 a pak zvolte **Vytvořit.**
     ::: moniker-end
     ::: moniker range="vs-2017"
     V horním řádku nabídek zvolte **File** New Project  >  **(Soubor nového**  >  **projektu).** V levém podokně dialogového okna **Nový** projekt rozbalte **Visual C#** a pak zvolte **.NET Core**. V prostředním podokně zvolte **ASP.NET Core Web Application – C#** a pak zvolte **OK.**
@@ -86,7 +92,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
 
 ## <a name="add-some-code"></a>Přidání kódu
 
-1. V Průzkumník řešení (pravé podokno). klikněte pravým tlačítkem na uzel projektu a zvolte **Spravovat balíčky NuGet.** Na kartě **Procházet** vyhledejte **soubor Microsoft.TypeScript.MSBuild** a potom kliknutím na Nainstalovat vpravo nainstalujte balíček. 
+1. V Průzkumník řešení (pravé podokno). klikněte pravým tlačítkem na uzel projektu a zvolte **Spravovat balíčky NuGet.** Na kartě **Procházet** vyhledejte **Soubor Microsoft.TypeScript.MSBuild** a pak kliknutím na Nainstalovat vpravo nainstalujte balíček. 
 
    ![Přidání balíčku NuGet](../javascript/media/aspnet-core-ts-nuget.png)
 
@@ -154,7 +160,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
 
     Visual Studio poskytuje podporu Technologie IntelliSense pro váš kód TypeScript.
 
-    Pokud to chcete otestovat, odeberte funkci , pak znovu zadejte "." a zobrazí `.lastName` `greeter` se IntelliSense.
+    Otestujte to tak, že odeberete funkci , pak znovu napíšete "." a zobrazí `.lastName` `greeter` se IntelliSense.
 
     ![Zobrazení IntelliSense](../javascript/media/aspnet-core-ts-intellisense.png)
 
@@ -211,7 +217,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
 
 1. Stisknutím **klávesy F5** spusťte aplikaci.
 
-   Možná budete muset na zprávu reagovat, abyste umožnili ladění skriptů.
+   Možná budete muset reagovat na zprávu, abyste umožnili ladění skriptů.
 
    Aplikace se pozastaví na zarážce. Teď můžete kontrolovat proměnné a používat funkce ladicího programu.
 
@@ -239,7 +245,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
 
 1. V Průzkumník řešení klikněte pravým tlačítkem na složku scripts a zvolte **Přidat**  >  **novou položku.**
 
-1. Zvolte **TypeScript File (Soubor TypeScript),** *zadejte library.ts* a zvolte **Add (Přidat).**
+1. Vyberte **soubor TypeScript**, zadejte *Library. TS* a klikněte na **Přidat**.
 
 1. V *knihovně. TS* přidejte následující kód.
 

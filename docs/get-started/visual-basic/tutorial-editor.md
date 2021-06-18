@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 227d54fbc2734290954fc1c847a34846bb6dc5cf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 56f6570b633941c8f7102e245b7668cd31936f83
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944534"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308360"
 ---
 # <a name="learn-to-use-the-code-editor-with-visual-basic"></a>Naučte se používat editor kódu s Visual Basic
 
@@ -34,6 +34,13 @@ V tomto 10 minutách úvodu do editoru kódu v aplikaci Visual Studio přidáme 
 
 > [!TIP]
 > Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+> [!TIP]
+> Pokud jste ještě nenainstalovali Visual Studio Preview, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) .
 
 ::: moniker-end
 

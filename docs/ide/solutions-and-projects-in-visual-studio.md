@@ -1,6 +1,6 @@
 ---
-title: Co jsou projekty řešení sady Visual Studio &amp; ?
-description: Přečtěte si o projektech a řešeních sady Visual Studio, způsobu vytváření nových projektů ze šablony a o tom, jak zobrazit & spravovat projekty v Průzkumník řešení.
+title: Co jsou Visual Studio &amp; řešení?
+description: Seznamte se Visual Studio projekty a řešeními, jak vytvářet nové projekty ze šablony a jak zobrazit & spravovat projekty v Průzkumník řešení.
 ms.custom: SEO-VS-2020, contperf-fy21q2
 ms.date: 12/31/2020
 ms.topic: conceptual
@@ -22,99 +22,99 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eaba06b2da73fc0bc80219ce58baff49a760ebc0
-ms.sourcegitcommit: 529e1716924c3e1ac8a750550b996ad3c79f353b
+ms.openlocfilehash: f632922078383708319e610d82a4c94a58619424
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112066966"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306394"
 ---
-# <a name="what-are-solutions-and-projects-in-visual-studio"></a>Co jsou řešení a projekty v aplikaci Visual Studio?
+# <a name="what-are-solutions-and-projects-in-visual-studio"></a>Co jsou řešení a projekty v Visual Studio?
 
-V tomto článku se dozvíte, co je *projekt* a *řešení* v aplikaci Visual Studio. Také stručně pokrývá okno Průzkumník řešení nástrojů a postup vytvoření nového projektu.
+V tomto článku se dozvíte, co *je projekt* *a* řešení v Visual Studio. Stručně se také věnuje Průzkumník řešení nástroje a vytvoření nového projektu.
 
 > [!NOTE]
-> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [projekty a řešení v Visual Studio pro Mac](/visualstudio/mac/projects-and-solutions).
+> Toto téma se týká Visual Studio ve Windows. Další Visual Studio pro Mac v tématu [Projekty a řešení v Visual Studio pro Mac](/visualstudio/mac/projects-and-solutions).
 
 ## <a name="projects"></a>Projekty
 
-Při vytváření aplikace nebo webu v aplikaci Visual Studio začnete s *projektem*. V logickém smyslu projekt obsahuje všechny soubory, které jsou zkompilovány do spustitelného souboru, knihovny nebo webu. Tyto soubory mohou zahrnovat zdrojový kód, ikony, obrázky, datové soubory a tak dále. Projekt obsahuje také nastavení kompilátoru a další konfigurační soubory, které mohou být vyžadovány různými službami nebo komponentami, se kterými váš program komunikuje.
+Při vytváření aplikace nebo webu v Visual Studio začnete s *projektem*. V logickém smyslu projekt obsahuje všechny soubory, které jsou zkompilovány do spustitelného souboru, knihovny nebo webu. Mezi tyto soubory může zahrnovat zdrojový kód, ikony, obrázky, datové soubory atd. Projekt obsahuje také nastavení kompilátoru a další konfigurační soubory, které mohou být potřebné různými službami nebo komponentami, se které program komunikuje.
 
 ### <a name="project-file"></a>Soubor projektu
 
-Visual Studio používá [MSBuild](../msbuild/msbuild.md) k sestavení jednotlivých projektů v řešení a každý projekt obsahuje soubor projektu MSBuild. Přípona souboru odráží typ projektu, například projekt C# (. csproj), Visual Basic projekt (. vbproj) nebo databázový projekt (. dbproj). Soubor projektu je dokument XML, který obsahuje všechny informace a pokyny, které nástroj MSBuild potřebuje k sestavení projektu, včetně obsahu, požadavků na platformu, informací o verzích, webového serveru nebo databázového serveru a úkolů, které mají být provedeny.
+Visual Studio každý projekt v řešení pomocí nástroje [MSBuild](../msbuild/msbuild.md) a každý projekt obsahuje soubor projektu nástroje MSBuild. Přípona souboru odráží typ projektu, například projekt jazyka C# (.csproj), projekt Visual Basic (.vbproj) nebo databázový projekt (.dbproj). Soubor projektu je dokument XML, který obsahuje všechny informace a pokyny, které nástroj MSBuild potřebuje k sestavení projektu, včetně obsahu, požadavků na platformu, informací o verzích, nastavení webového serveru nebo databázového serveru a úkolů, které se mají provést.
 
-Soubory projektu jsou založeny na [schématu XML jazyka MSBuild](../msbuild/msbuild-project-file-schema-reference.md). Chcete-li se podívat na obsah novějších [souborů projektů ve stylu sady SDK v sadě](../msbuild/how-to-use-project-sdk.md) Visual Studio, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **Upravit \<projectname\>**. Chcete-li se podívat na obsah .NET Framework a dalších projektů tohoto stylu, nejprve uvolněte projekt (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **Uvolnit projekt**). Potom klikněte pravým tlačítkem na projekt a zvolte možnost **Upravit \<projectname\>**.
+Soubory projektu jsou založené na schématu [MSBuild XML](../msbuild/msbuild-project-file-schema-reference.md). Pokud se chcete podívat na obsah novějších souborů projektu ve stylu sady [SDK](../msbuild/how-to-use-project-sdk.md) v Visual Studio, klikněte pravým tlačítkem na uzel projektu v **Průzkumník řešení** vyberte **Upravit. \<projectname\>** Pokud se chcete podívat na obsah .NET Framework a dalších projektů tohoto stylu, nejprve uvolněte projekt (klikněte pravým tlačítkem na uzel projektu v **Průzkumník řešení** vyberte **Uvolnit projekt**). Pak klikněte pravým tlačítkem na projekt a zvolte **Upravit. \<projectname\>**
 
 > [!NOTE]
-> K úpravám, sestavování a ladění kódu nemusíte používat řešení nebo projekty v aplikaci Visual Studio. Jednoduše otevřete složku, která obsahuje zdrojové soubory v aplikaci Visual Studio, a začněte upravovat. Další informace naleznete v tématu [vývoj kódu v aplikaci Visual Studio bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
+> K úpravám, sestavování a ladění kódu nemusíte Visual Studio nebo projekty v nástroji . Můžete jednoduše otevřít složku, která obsahuje zdrojové soubory v Visual Studio a začít s úpravami. Další informace najdete v tématu [Vývoj kódu v Visual Studio bez projektů nebo řešení.](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 
 ### <a name="create-new-projects"></a>Vytvořit nové projekty
 
-Nejjednodušší způsob, jak vytvořit nový projekt, je použít šablonu projektu pro typ projektu, který chcete. Šablona projektu obsahuje základní sadu předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení.   >    >  Pro výběr šablony projektu použijte soubor nový **projekt** . Další informace najdete v tématu [Vytvoření nového projektu](create-new-project.md).
+Nejjednodušší způsob, jak vytvořit nový projekt, je použít šablonu projektu pro typ projektu, který chcete. Šablona projektu obsahuje základní sadu předem vygenerovaných souborů kódu, konfiguračních souborů, prostředků a nastavení. Pomocí **možnosti**  >  **File New** Project  >  **(Soubor** nového projektu) vyberte šablonu projektu. Další informace najdete v [tématu Vytvoření nového projektu.](create-new-project.md)
 
-Můžete také vytvořit vlastní šablonu projektu, kterou můžete použít k vytvoření nových projektů z. Další informace naleznete v tématu [Create Project and Item Templates](../ide/creating-project-and-item-templates.md).
+Můžete také vytvořit vlastní šablonu projektu, ze které můžete vytvářet nové projekty. Další informace najdete v tématu [Vytvoření šablon projektů a položek.](../ide/creating-project-and-item-templates.md)
 
-Když vytvoříte nový projekt, Visual Studio ho uloží do výchozího umístění *%USERPROFILE%\source\repos*. Pokud chcete toto umístění změnit, přejděte na **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění](./reference/projects-solutions-locations-options.md).
+Když vytvoříte nový projekt, Visual Studio uloží do výchozího umístění *, %USERPROFILE%\source\repos*. Pokud chcete toto umístění změnit, přejděte na **Nástroje**  >  **Možnosti**  >  **Umístění projektů a**  >  **řešení.** Další informace najdete v dialogovém [okně Možnosti: Projekty a řešení > umístění.](./reference/projects-solutions-locations-options.md)
 
 ## <a name="solutions"></a>Řešení
 
-Projekt je obsažen v rámci *řešení*. Bez ohledu na jeho název není řešení "Answer". Je to jednoduše kontejner pro jeden nebo více souvisejících projektů, společně s informacemi o sestavení, nastavení okna sady Visual Studio a s dalšími soubory, které nejsou přidružené k určitému projektu.
+Projekt je obsažen v *řešení*. Řešení navzdory svému názvu není "odpovědí". Je to jednoduše kontejner pro jeden nebo více souvisejících projektů, spolu s informacemi o sestavení, nastavením okna Visual Studio různými soubory, které nejsou přidružené ke konkrétnímu projektu.
 
 ### <a name="solution-file"></a>Soubor řešení
 
-Visual Studio používá dva typy souborů (*. sln* a *. suo*) k ukládání nastavení řešení:
+Visual Studio používá dva typy souborů (*.sln* a *.suo*) k ukládání nastavení pro řešení:
 
 |Linka|Název|Description|
 |---------------|----------|-----------------|
-|. sln|Řešení sady Visual Studio|Uspořádá projekty, položky projektu a položky řešení v řešení.|
-|. suo|Možnosti uživatele řešení|Ukládá nastavení a přizpůsobení na úrovni uživatele, například zarážky.|
+|.sln|Visual Studio řešení|Uspořádá v řešení projekty, položky projektu a položky řešení.|
+|.suo|Možnosti uživatele řešení|Ukládá nastavení a přizpůsobení na úrovni uživatele, jako jsou zarážky.|
 
 > [!IMPORTANT]
-> Řešení je popsáno v textovém souboru (s příponou *. sln*) s vlastním jedinečným formátem. není určeno k úpravám rukou. Naopak soubor *. suo* je skrytý soubor, který není zobrazen pod výchozím nastavením Průzkumníka souborů. Skryté soubory zobrazíte tak, že v nabídce **Zobrazit** v Průzkumníkovi souborů zaškrtnete políčko **skryté položky** .
+> Řešení je popsané textovým souborem (s *příponou .sln)* s vlastním jedinečným formátem. Není určený k ručním úpravám. Naopak soubor *.suo* je skrytý soubor, který se nezobrazuje ve výchozím nastavení Průzkumník souborů nastavení. Pokud chcete zobrazit skryté soubory, v **nabídce Zobrazení** v Průzkumník souborů zaškrtněte **políčko Skryté** položky.
 
 ### <a name="solution-folder"></a>Složka řešení
 
-"Složka řešení" je virtuální složkou, která je pouze v **Průzkumník řešení**, kde ji můžete použít k seskupení projektů v řešení. Pokud chcete na počítači najít soubor řešení, přejděte na možnosti **nástroje**  >    >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění](./reference/projects-solutions-locations-options.md).
+"Složka řešení" je virtuální složka, která je jenom **v Průzkumník řešení**, kde ji můžete použít k seskupení projektů v řešení. Pokud chcete najít soubor řešení na počítači, přejděte na **Nástroje** Možnosti Umístění projektů a  >    >    >  **řešení.** Další informace najdete v dialogovém [okně Možnosti: Projekty a řešení > umístění.](./reference/projects-solutions-locations-options.md)
 
 > [!TIP]
-> Příklad projektu a řešení vytvořeného od začátku, dokončení s podrobnými pokyny a ukázkový kód naleznete v tématu [Úvod do projektů a řešení](../get-started/tutorial-projects-solutions.md).
+> Příklad projektu a řešení vytvořeného od začátku s podrobnými pokyny a ukázkovým kódem najdete v tématu Úvod do projektů a [řešení.](../get-started/tutorial-projects-solutions.md)
 
 ## <a name="solution-explorer"></a>Průzkumník řešení
 
-Po vytvoření nového projektu můžete použít **Průzkumník řešení** k zobrazení a správě projektu a řešení a jejich přidružených položek. Následující ilustrace ukazuje **Průzkumník řešení** s řešením C#, které obsahuje dva projekty:
+Po vytvoření nového projektu můžete pomocí nástroje **Průzkumník řešení** zobrazit a spravovat projekt a řešení a související položky. Následující obrázek znázorňuje **Průzkumník řešení** s řešením jazyka C#, které obsahuje dva projekty:
 
 ::: moniker range="vs-2017"
 
 ![Snímek obrazovky Průzkumník řešení se dvěma projekty](../ide/media/vs2015_solution_explorer.png)
 
-Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka pro přepínání ze zobrazení řešení do zobrazení složky, zobrazení skrytých souborů, sbalení všech uzlů a další.
+Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka pro přepnutí ze zobrazení řešení do zobrazení složek, zobrazení skrytých souborů, sbalení všech uzlů a další.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-![Snímek obrazovky Průzkumník řešení se dvěma projekty v aplikaci Visual Studio 2019.](../ide/media/solution-explorer.png)
+![Snímek obrazovky Průzkumník řešení se dvěma projekty v Visual Studio](../ide/media/solution-explorer.png)
 
-Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka pro přepínání ze zobrazení řešení do zobrazení složky, filtrování nedokončených změn, zobrazení všech souborů, sbalení všech uzlů, zobrazení stránek [vlastností](managing-project-and-solution-properties.md) , náhled kódu v [editoru kódu](writing-code-in-the-code-and-text-editor.md)a další.
+Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka pro přepnutí ze zobrazení řešení do zobrazení složek, filtrování čekajících [](managing-project-and-solution-properties.md) změn, zobrazení všech [](writing-code-in-the-code-and-text-editor.md)souborů, sbalení všech uzlů, zobrazení stránek vlastností, náhled kódu v editoru kódu a další.
 
 ::: moniker-end
 
-Řada příkazů nabídky je k dispozici v kontextové nabídce pravého tlačítka myši na různých položkách v **Průzkumník řešení**. Mezi tyto příkazy patří sestavení projektu, Správa balíčků NuGet, přidání odkazu, přejmenování souboru a spuštění testů, stačí jenom pár název.
+Mnoho příkazů nabídky je k dispozici v místní nabídce po kliknutí pravým tlačítkem na různé položky **v Průzkumník řešení**. Mezi tyto příkazy patří sestavení projektu, správa balíčků NuGet, přidání odkazu, přejmenování souboru a spuštění testů– jen pro některé z nich.
 
-U ASP.NET Core projektů můžete přizpůsobit, jak jsou soubory vnořené v **Průzkumník řešení**. Další informace najdete v tématu [přizpůsobení vnořování souborů v Průzkumník řešení](file-nesting-solution-explorer.md).
+U ASP.NET Core můžete přizpůsobit, jak se soubory vnořuje do **Průzkumník řešení**. Další informace najdete v tématu [Přizpůsobení vnořování souborů v Průzkumník řešení](file-nesting-solution-explorer.md).
 
 > [!TIP]
-> Pokud jste Průzkumník řešení zavřeli a chcete ho znovu otevřít, zvolte **Zobrazit**  >  **Průzkumník řešení** na řádku nabídek nebo stiskněte klávesovou **zkratku CTRL** + **+** + **L**. A pokud jste uzavřeli vedlejší karty a chcete je obnovit do jejich výchozích umístění **, vyberte**  >  z panelu nabídek možnost **rozložení okna obnovit okno** .
+> Pokud jste aplikaci zavřeli Průzkumník řešení chcete ji znovu otevřít, na řádku   >  **nabídek zvolte** Zobrazit Průzkumník řešení nebo stiskněte **Ctrl** + **Alt** + **L.** A pokud jste zavřeli boční karty a chcete je obnovit do výchozích umístění, zvolte na řádku nabídek Rozložení okna  >  **Resetovat** okno.
 
 > [!NOTE]
-> Chcete-li zobrazit obrázky a ikony aplikace, které se zobrazí v aplikaci Visual Studio, Stáhněte si [**knihovnu imagí sady Visual Studio**](https://www.microsoft.com/download/details.aspx?id=35825).
+> Pokud chcete zobrazit obrázky a ikony aplikací, které se Visual Studio, stáhněte si Visual Studio [**Image Library.**](https://www.microsoft.com/download/details.aspx?id=35825)
 
 ## <a name="see-also"></a>Viz také
 
-- [Seznámení s projekty a řešení](../get-started/tutorial-projects-solutions.md)
+- [Úvod do projektů a řešení](../get-started/tutorial-projects-solutions.md)
 - [Správa vlastností projektu a řešení](managing-project-and-solution-properties.md)
-- [Filtrovaná řešení v aplikaci Visual Studio](filtered-solutions.md)
+- [Filtrovaná řešení v Visual Studio](filtered-solutions.md)
 - [Přenos, migrace a upgrade projektů](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
-- [Prostředky pro řešení potíží s chybami IDE sady Visual Studio](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md)
+- [Zdroje informací pro řešení Visual Studio chyb integrovaného vývojového prostředí](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md)
 - [Projekty a řešení (Visual Studio pro Mac)](/visualstudio/mac/projects-and-solutions)

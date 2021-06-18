@@ -11,19 +11,19 @@ helpviewer_keywords:
 - export installation configuration
 - install Visual Studio
 - Visual Studio installer
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 043622d08b5389db8bf4cce80450f62c070a0ace
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1fc4b181436b5e214300b334163b9257af0d0d35
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949464"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307463"
 ---
 # <a name="import-or-export-installation-configurations"></a>Import a export konfigurací instalace
 
@@ -66,7 +66,7 @@ Až budete připraveni k importu konfiguračního souboru instalace, postupujte 
 
 1. Ujistěte se, že máte požadované úlohy a požadované součásti, a pak zvolte **Zavřít**.
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ## <a name="automatically-install-missing-components"></a>Automaticky instalovat chybějící součásti
 

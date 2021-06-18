@@ -5,24 +5,24 @@ ms.date: 07/17/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 2c8510a1ba83243d2d92b538d80876a8b0f20079
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 03a192657a46c2db15cb2d1121735905f06da478
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935650"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306667"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>Aktualizace sady Visual Studio v servisním směrném plánu
 
-Visual Studio aktualizujeme často během životního cyklu produktu. Existují dva typy aktualizací: 
+Visual Studio aktualizujeme často během životního cyklu produktu. Existují dva typy aktualizací:
 
 * **Aktualizace** &mdash; podverze například 16,0 na 16,1 &mdash; , které obsahují nové funkce a součásti.  
 * **Servisní aktualizace**– například 16.0.4 do 16.0.5 – to zahrnuje jenom cílené opravy pro kritické problémy.
@@ -51,7 +51,7 @@ Správci, kteří používají instalaci rozložení sítě, by měli změnit `c
 
 Pro internetovou instalaci přidejte do `--channelUri` příkazového řádku, který se používá ke spuštění instalačního programu, neexistující manifest kanálu. Tím zakážete aplikaci Visual Studio v použití nejnovější dostupné verze aktualizace. Tady je příklad:
 
-```cmd
+```shell
 vs_enterprise.exe --channelUri c:\doesnotexist.chman
 ```
 
@@ -69,15 +69,27 @@ Pro internetovou instalaci spusťte nový zaváděcí nástroj pevné verze s `-
 
 1. Aktualizace instalačního programu sady Visual Studio:
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --quiet --update
     ```
 
+::: moniker range="vs-2019"
+ 
 2. Aktualizace samotné aplikace sady Visual Studio:
-
-    ```cmd
+    ```shell
     vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" --quiet --wait --norestart --channelUri c:\doesnotexist.chman
     ```
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+2. Aktualizace samotné aplikace sady Visual Studio:
+    ```shell
+    vs_enterprise.exe update --installPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" --quiet --wait --norestart --channelUri c:\doesnotexist.chman
+    ```
+
+::: moniker-end
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

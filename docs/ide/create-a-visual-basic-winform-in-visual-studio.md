@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 974696d1ff7f8e82dab8ef2024710ce645b56c72
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 4d3c1aac5bb06ba29b1c70c39db900e704b2f3ec
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107297129"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308321"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Vytvoření aplikace model Windows Forms v aplikaci Visual Studio s Visual Basic
 
@@ -39,6 +39,15 @@ Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke staže
 
 ::: moniker-end
 
+::: moniker range="vs-2022"
+
+Pokud jste ještě nenainstalovali aplikaci Visual Studio, můžete ji nainstalovat zdarma na stránce pro [Stažení sady Visual studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) .
+
+> [!NOTE]
+> Některé snímky obrazovky v tomto kurzu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chcete, přečtěte si téma [přizpůsobení stránky IDE a editoru sady Visual Studio](../ide/quickstart-personalize-the-ide.md) , kde se dozvíte, jak.
+
+::: moniker-end
+
 ## <a name="create-a-project"></a>Vytvoření projektu
 
 Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu se dodává se všemi soubory šablon, které budete potřebovat, než dokonce cokoli přidáte.
@@ -47,7 +56,7 @@ Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu se dodává se v
 
 1. Otevřete sadu Visual Studio 2017.
 
-1. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
+1. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
 1. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic** a pak zvolte možnost **plocha systému Windows**. V prostředním podokně vyberte **model Windows Forms App (.NET Framework)**. Pak soubor pojmenujte `HelloWorld` .
 
@@ -57,9 +66,9 @@ Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu se dodává se v
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Otevřete Visual Studio 2019.
+1. Otevřete sadu Visual Studio.
 
 1. V okně Start vyberte možnost **vytvořit nový projekt**.
 

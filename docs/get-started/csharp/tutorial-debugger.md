@@ -1,6 +1,6 @@
 ---
-title: 'Kurz: ladění kódu C#'
-description: Přečtěte si o funkcích ladicího programu sady Visual Studio a o tom, jak spustit ladicí program, krokovat kód a kontrolovat data v aplikaci C#.
+title: 'Kurz: Ladění kódu jazyka C#'
+description: Seznamte se s funkcemi Visual Studio ladicího programu a zjistěte, jak spustit ladicí program, procházet kód a kontrolovat data v aplikaci jazyka C#.
 ms.custom: debug-experiment, seodec18, get-started
 ms.date: 04/23/2020
 ms.technology: vs-ide-debug
@@ -15,100 +15,106 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6eac51637b3f3b732f1293337080ef851f34c459
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 2cbc35eaabec2dae8bd8b97ba22f55a50fc436c3
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682752"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308451"
 ---
-# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se ladit kód v jazyce C# pomocí sady Visual Studio
+# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se ladit kód jazyka C# pomocí Visual Studio
 
-V tomto článku se seznámíte s funkcemi ladicího programu sady Visual Studio v podrobném podrobném návodu. Pokud chcete zobrazit vyšší úroveň funkcí ladicího programu, podívejte [se na téma první pohled na ladicí program](../../debugger/debugger-feature-tour.md). Při *ladění aplikace* obvykle znamená, že máte spuštěnou aplikaci s připojeným ladicím programem. Když to uděláte, ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód při spuštění dělá. Můžete krokovat kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu spuštění kódu, zjistit, zda je spuštěna větev kódu a tak dále. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprosto začátečníky](../../debugger/debugging-absolute-beginners.md) .
+Tento článek představuje funkce ladicího Visual Studio v podrobném návodu. Pokud chcete zobrazit funkce ladicího programu na vyšší úrovni, podívejte se nejprve na [ladicí program.](../../debugger/debugger-feature-tour.md) Při ladění *aplikace obvykle znamená,* že aplikaci používáte s připojeným ladicím programem. Když to použijete, ladicí program poskytuje mnoho způsobů, jak zobrazit, co váš kód dělá, zatímco běží. Můžete si projít kód a podívat se na hodnoty uložené v proměnných, nastavit u proměnných sledujete, abyste viděli, kdy se hodnoty mění, můžete prozkoumat cestu provádění kódu, zjistit, jestli je spuštěná větev kódu atd. Pokud jste se pokusili ladit kód poprvé, možná si [](../../debugger/debugging-absolute-beginners.md) budete chtít před tímto článkem přečíst ladění pro absolutní začátečníky.
 
-I když je ukázková aplikace C#, většina funkcí platí pro C++, Visual Basic, F #, Python, JavaScript a další jazyky, které podporuje Visual Studio (F # nepodporuje funkci upravit a pokračovat. F # a JavaScript nepodporují okno **Automatické** hodnoty). Snímky obrazovky jsou v jazyce C#.
+I když je ukázková aplikace C#, většina funkcí se vztahuje na jazyky C++, Visual Basic, F#, Python, JavaScript a další jazyky podporované jazykem Visual Studio (jazyk F# nepodporuje úpravy a pokračování. Jazyk F# a JavaScript nepodporují **okno Automatické** zápisy. Snímky obrazovky jsou v jazyce C#.
 
 V tomto kurzu:
 
 > [!div class="checklist"]
-> * Spusťte ladicí program a zarážky volání.
-> * Přečtěte si příkazy pro krokování kódu v ladicím programu
-> * Kontrola proměnných v tipech k datům a v oknech ladicího programu
-> * Kontrola zásobníku volání
+> * Spusťte ladicí program a stiskněte zarážky.
+> * Naučte se příkazy pro krokování kódu v ladicím programu.
+> * Kontrola proměnných v datových tipech a oknech ladicího programu
+> * Prozkoumání zásobníku volání
 
 ## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range=">=vs-2019"
 
-Musíte mít nainstalovanou aplikaci Visual Studio 2019 a úlohu **vývoje .NET Core pro různé platformy** .
+Musíte mít nainstalovanou Visual Studio 2019 a úlohu vývoj pro **různé platformy v .NET Core.**
 
 ::: moniker-end
 ::: moniker range="vs-2017"
 
-Musíte mít nainstalovanou aplikaci Visual Studio 2017 a úlohu **vývoje .NET Core pro různé platformy** .
+Musíte mít nainstalovanou Visual Studio 2017 a úlohu vývoj pro **různé platformy v .NET Core.**
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
-Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+::: moniker range="vs-2022"
+
+Pokud jste si ještě nenainstalujete Visual Studio 2022 Preview, přejděte na stránku [stahování Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) a nainstalujte si ji zdarma.
+
+::: moniker-end
+
+Pokud potřebujete tuto úlohu nainstalovat, ale Visual Studio, přejděte na **Nástroje** Získat nástroje a funkce. Otevře se  >  Instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoj pro různé platformy** v .NET Core a pak zvolte **Upravit.**
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodává se všemi soubory šablon, které budete potřebovat, než dokonce cokoli přidáte.
+Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodává se všemi soubory šablony, které budete potřebovat, ještě než budete něco přidávat.
 
 ::: moniker range="vs-2017"
 
 1. Otevřete sadu Visual Studio 2017.
 
-2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
+2. V horním řádku nabídek zvolte **File** New Project > **(Soubor nového** > **projektu).**
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Potom pojmenujte projekt *Get-Started-Debugging*.
+3. V dialogovém **okně Nový** projekt v levém podokně rozbalte **C#** a pak zvolte **.NET Core.** V prostředním podokně zvolte **Konzolová aplikace (.NET Core).** Pak projekt *pojmechte get-started-debugging*.
 
-     Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , vyberte odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** .
+     Pokud šablonu projektu Konzolová aplikace **(.NET Core)** nevidíte, zvolte odkaz Otevřít **Instalační program pro Visual Studio** v levém podokně dialogového okna **Nový** projekt.
 
-     Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+     Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoj pro různé platformy** v .NET Core a pak zvolte **Upravit.**
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Otevřete Visual Studio 2019.
+1. Otevřete sadu Visual Studio.
 
-   Pokud okno Start není otevřeno, klikněte **na tlačítko** > **Start okna**.
+   Pokud úvodní okno není otevřené, zvolte **Úvodní** > **okno souboru**.
 
-1. V okně Start vyberte možnost **vytvořit nový projekt**.
+1. V úvodním okně zvolte **Vytvořit nový projekt.**
 
-1. V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Potom v seznamu jazyk vyberte **C#** a pak v seznamu platforma zvolte **Windows** . 
+1. V **okně Vytvořit nový projekt** zadejte nebo zadejte *do* vyhledávacího pole konzolu. Potom v seznamu Jazyk zvolte **C#** a pak **v** seznamu Platforma zvolte Windows. 
 
-   Až použijete filtry jazyka a platformy, zvolte šablonu **Konzolová aplikace** pro .NET Core a pak zvolte **Další**.
+   Po použití filtrů jazyka a platformy zvolte šablonu **Konzolová aplikace** pro .NET Core a pak zvolte **Další.**
 
-   ![Zvolit šablonu C# pro konzolovou aplikaci](../csharp/media/vs-2019/get-started-create-console-project.png)
+   ![Zvolte šablonu jazyka C# pro konzolovou aplikaci.](../csharp/media/vs-2019/get-started-create-console-project.png)
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **konzolové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
+   > Pokud šablonu Konzolová **aplikace nevidíte,** můžete ji nainstalovat z **okna Vytvořit nový** projekt. Ve zprávě **Nehledá se, co hledáte?** zvolte odkaz Instalovat **další** nástroje a funkce. Potom v části Instalační program pro Visual Studio úlohu **Vývoj pro různé platformy v .NET Core.**
 
-1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *GetStartedDebugging* do pole **název projektu** . Pak klikněte na tlačítko **Další**.
+1. V **okně Configure your new project** (Konfigurace nového projektu) zadejte nebo do pole Project name (Název **projektu)** zadejte nebo zadejte *GetStartedDebugging.* Pak zvolte **Další.**
 
-1. Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
+1. Zvolte doporučené cílové rozhraní (.NET Core 3.1) nebo .NET 5 a pak zvolte **Vytvořit.**
 
-   Visual Studio otevře nový projekt.
+   Visual Studio nový projekt otevřete.
 
 ::: moniker-end
 
 ## <a name="create-the-application"></a>Vytvoření aplikace
 
-1. V *program.cs* místo toho nahraďte veškerý výchozí kód následujícím kódem:
+1. V *souboru Program.cs* nahraďte veškerý výchozí kód následujícím kódem:
 
     ```csharp
     using System;
@@ -134,11 +140,11 @@ Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodá
     }
     ```
 
-## <a name="start-the-debugger"></a>Spusťte ladicí program.
+## <a name="start-the-debugger"></a>Spusťte ladicí program!
 
-1. Stiskněte klávesu **F5** (**ladění > spustit ladění**) nebo klikněte na tlačítko **Spustit** ladění ![Spustit ladění](../../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") na panelu nástrojů ladění.
+1. Na panelu nástrojů ladění **>** klávesu **F5** ( ![](../../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") Spustit ladění ) nebo tlačítko Spustit ladění. 
 
-     **F5** spustí aplikaci s ladicím programem připojeným k procesu aplikace, ale nyní jsme ještě neudělali cokoli, co by bylo možné zkontrolovat kód. Takže se aplikace jenom načte a zobrazí se výstup z konzoly.
+     **F5** spustí aplikaci s ladicím programem připojeným k procesu aplikace, ale teď jsme ještě neudělali nic zvláštního pro prozkoumání kódu. Aplikace se tedy načte a zobrazí se výstup konzoly.
 
     ```cmd
     Hello, f! Count to 1
@@ -153,77 +159,77 @@ Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodá
     Hello, fred smith! Count to 10
     ```
 
-     V tomto kurzu se podíváme na tuto aplikaci s použitím ladicího programu a zjistíme, jak se podívat na funkce ladicího programu.
+     V tomto kurzu se na tuto aplikaci podíváme blíže pomocí ladicího programu a podíváme se na funkce ladicího programu.
 
-2. Ukončete ladicí program stisknutím tlačítka červené zastavení ![Zastavit ladění](../../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") (**SHIFT**  +  **F5**).
+2. Zastavte ladicí program stisknutím červeného tlačítka ![Zastavit ladění](../../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") (**Shift**  +  **F5**).
 
 3. V okně konzoly stisknutím klávesy zavřete okno konzoly.
 
-## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavit zarážku a spustit ladicí program
+## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavení zarážky a spuštění ladicího programu
 
-1. Ve `for` smyčce `Main` funkce nastavte zarážku kliknutím na levý okraj následujícího řádku kódu:
+1. Ve `for` smyčce funkce nastavte zarážku kliknutím na `Main` levý okraj následujícího řádku kódu:
 
     `name += letters[i];`
 
-    Zarážka ![červeného kruhu se](../../debugger/media/dbg-breakpoint.png "Bodu") zobrazí tam, kde jste nastavili zarážku.
+    Zarážka s ![červeným kruhem](../../debugger/media/dbg-breakpoint.png "Bodu") se zobrazí tam, kde nastavíte zarážku.
 
-    Zarážky jsou jednou ze základních a základních funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
+    Zarážky jsou jednou z nejzákladnějších a nejzákladnějších funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
 
-2. Stiskněte klávesu **F5** nebo tlačítko **Spustit ladění** ![Spustit ladění](../../debugger/media/dbg-tour-start-debugging.png "Spustit ladění"), spustí se aplikace a ladicí program se spustí na řádek kódu, kde jste nastavili zarážku.
+2. Stiskněte **klávesu F5** nebo **tlačítko** Spustit ladění Spustit ladění ![,](../../debugger/media/dbg-tour-start-debugging.png "Spustit ladění")spustí se aplikace a ladicí program se spustí na řádku kódu, kde nastavíte zarážku.
 
-    ![Nastavení a volání zarážky](../csharp/media/get-started-set-breakpoint.gif)
+    ![Nastavení a přístup k zarážce](../csharp/media/get-started-set-breakpoint.gif)
 
-    Žlutá šipka představuje příkaz, na kterém je ladicí program pozastaven, což také pozastavuje spuštění aplikace ve stejném bodě (Tento příkaz ještě nebyl proveden).
+    Žlutá šipka představuje příkaz, na kterém se ladicí program pozastavil, což také pozastaví provádění aplikace ve stejném bodě (tento příkaz se ještě nespouštěl).
 
-     Pokud aplikace ještě není spuštěná, spustí **F5** ladicí program a zastaví se na první zarážce. V opačném případě **F5** pokračuje v běhu aplikace na další zarážku.
+     Pokud aplikace ještě není spuštěná, **F5** spustí ladicí program a zastaví se na první zarážce. V opačném **případě bude F5** pokračovat ve spouštění aplikace až k další zarážce.
 
-    Zarážky jsou užitečnou funkcí, když znáte řádek kódu nebo oddíl kódu, který chcete podrobně prošetřit. Informace o různých typech zarážek, které lze nastavit, například podmíněné zarážky, naleznete v tématu [using zarážek](../../debugger/using-breakpoints.md).
+    Zarážky jsou užitečnou funkcí, pokud znáte řádek kódu nebo část kódu, kterou chcete podrobně prozkoumat. Informace o různých typech zarážek, které můžete nastavit, například podmíněné zarážky, najdete v tématu [Použití zarážek](../../debugger/using-breakpoints.md).
 
-## <a name="navigate-code-and-inspect-data-using-data-tips"></a>Navigace v kódu a kontrola dat pomocí tipů k datům
+## <a name="navigate-code-and-inspect-data-using-data-tips"></a>Procházení kódu a kontrola dat pomocí datových tipů
 
-Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak rychle rychle spustit aplikaci v ladicím programu (ekvivalentní příkazy, jako jsou příkazy nabídky, se zobrazují v závorkách).
+Většinou tady používáme klávesové zkratky, protože je to dobrý způsob, jak rychle spustit aplikaci v ladicím programu (ekvivalentní příkazy, jako jsou příkazy nabídky, se zobrazují v závorkách).
 
-1. Při pozastavení `name += letters[i]` příkazu, najeďte myší na `letters` proměnnou a vidíte její výchozí hodnotu, hodnotu prvního prvku v poli `char[10]` .
+1. Při pozastavení příkazu najeďte myší na proměnnou a zobrazí se výchozí hodnota, hodnota prvního prvku v `name += letters[i]` `letters` poli `char[10]` .
 
-     Funkce, které umožňují kontrolu proměnných, jsou jedním z nejužitečnějších funkcí ladicího programu a existují různé způsoby, jak to provést. Pokud se při pokusu o ladění problému často pokusíte zjistit, zda proměnné ukládají hodnoty, které mají být v určitou dobu k dispozici.
+     Funkce, které umožňují kontrolovat proměnné, jsou jednou z nejužitečnějších funkcí ladicího programu a existují různé způsoby, jak to udělat. Často se při pokusu o ladění problému pokoušíte zjistit, jestli proměnné ukládají hodnoty, které očekáváte, že budou mít v konkrétním čase.
 
-1. Rozbalením `letters` proměnné zobrazíte její vlastnosti, které zahrnují všechny prvky, které proměnná obsahuje.
+1. Rozbalte `letters` proměnnou a zobrazte její vlastnosti, které zahrnují všechny prvky, které proměnná obsahuje.
 
-     ![Snímek obrazovky ladicího programu sady Visual Studio se zvýrazněným příkazem název + = písmena [I] a rozevírací seznam zobrazující prvky v poli dopisy](../csharp/media/get-started-view-data-tip.png)
+     ![Snímek obrazovky Visual Studio Debugger se zvýrazněnou volbou name+= letters[I] a rozevíracím seznamem zobrazující prvky v poli písmen](../csharp/media/get-started-view-data-tip.png)
 
-1. Potom najeďte myší na `name` proměnnou a uvidíte její aktuální hodnotu, prázdný řetězec.
+1. Potom najeďte myší na proměnnou a zobrazí `name` se její aktuální hodnota – prázdný řetězec.
 
-1. Stiskněte **F10** (nebo zvolte možnost **ladění > krokovat** s), abyste mohli přejít ke `SendMessage` volání metody, a pak stiskněte **F10** ještě jednou.
+1. Dvakrát **stiskněte klávesu F10** **(nebo > Krok** přes ) a pak znovu stiskněte klávesu `SendMessage` **F10.**
 
-     F10 posune ladicí program na další příkaz bez krokování do funkcí nebo metod v kódu aplikace (kód se pořád spustí). Stisknutím klávesy F10 ve `SendMessage` volání metody jsme přeskočili kód implementace pro `SendMessage` (což možná není zajímatme hned teď).
+     F10 přejde ladicí program na další příkaz bez krokování do funkcí nebo metod v kódu aplikace (kód se stále provádí). Stisknutím klávesy F10 při volání metody jsme přeskočili kód implementace pro (což nás možná zrovna `SendMessage` `SendMessage` nezajímá).
 
-1. Několikrát stisknutím klávesy **F10** (nebo **ladění**  >  **krok za běhu**) několikrát projdete `for` smyčkou, přechodem znovu na zarážku a pokaždé, když se podíváte na `name` proměnnou pokaždé, aby zkontrolovala její hodnotu.
+1. Několikrát **stiskněte klávesu F10** (nebo Ladit krok přes ), aby se několikrát iteroval smyčkou, znovu se pozasouvá na zarážku a pokaždé na proměnnou najede myší a zkontroluje se její   >   `for` `name` hodnota.
 
-     ![Animovaný snímek obrazovky ladicího programu sady Visual Studio znázorňující efekt stisknutí klávesy F10 ke krokování a iterování prostřednictvím smyčky během ladění.](../csharp/media/get-started-data-tip.gif)
+     ![Animovaný snímek obrazovky Visual Studio Debugger znázorňující účinek stisknutí klávesy F10 na "Krok přes" a iterace smyčkou během ladění.](../csharp/media/get-started-data-tip.gif)
 
-     Hodnota proměnné se mění v každé iteraci `for` smyčky, zobrazuje hodnoty `f` , potom `fr` , `fre` a tak dále. Chcete-li ladit ladicí program přes smyčku rychleji v tomto scénáři, můžete stisknout klávesu **F5** (nebo zvolit možnost pokračovat v **ladění**  >  ), která vás provede přechodem na zarážku namísto dalšího příkazu.
+     Hodnota proměnné se mění při každé iteraci smyčky a zobrazuje hodnoty `for` , pak , a tak `f` `fr` `fre` dále. Pokud chcete v tomto scénáři ladicí program projít smyčkou rychleji, můžete místo dalšího příkazu stisknout **klávesu F5** (nebo vybrat Pokračovat v ladění). Tím přejdete na  >  zarážku.
 
-     Při ladění budete často potřebovat rychlý způsob kontroly hodnot vlastností u proměnných, abyste viděli, zda ukládají hodnoty, které očekáváte pro uložení, a tipy k datům jsou vhodným způsobem.
+     Při ladění často potřebujete rychlý způsob, jak zkontrolovat hodnoty vlastností proměnných, abyste viděli, jestli ukládají hodnoty, které očekáváte, že budou uloženy, a datové tipy jsou dobrým způsobem, jak to udělat.
 
-1. I když se stále pozastaví `for` smyčka v `Main` metodě, stiskněte klávesu **F11** (nebo zvolte možnost **ladit > krokovat** s), dokud nezastavíte `SendMessage` volání metody.
+1. Pozastavené ve smyčce v metodě stiskněte `for` `Main` klávesu **F11** (nebo zvolte Ladit **> Krokovat s** krokem do ), dokud se nepozastavíte při volání `SendMessage` metody.
 
      Měli byste být na tomto řádku kódu:
 
      `SendMessage(name, a[i]);`
 
-1. Stiskněte klávesu **F11** ještě jednou pro krokování do `SendMessage` metody.
+1. Dalším **stisknutím klávesy F11** zakrokte do `SendMessage` metody .
 
-     Žlutý ukazatel se přesune do `SendMessage` metody.
+     Žlutý ukazatel přejde do `SendMessage` metody .
 
-     ![Krokovat s vnořením kódu pomocí klávesy F11](../csharp/media/get-started-f11.png "F10 Krokovat s vnořením")
+     ![Použití klávesy F11 ke kroku do kódu](../csharp/media/get-started-f11.png "F10 Krokovat s vnořením")
 
-     Klávesa F11 je **Krok do** příkazu a aplikace pokračuje v jednom příkazu v jednom okamžiku. Klávesa F11 je dobrým způsobem, jak prostudovat tok spouštění v nejpodrobnějším podrobnostech. Ve výchozím nastavení přeskočí ladicí program neuživatelský kód (Pokud chcete více podrobností, přečtěte si téma [pouze můj kód](../../debugger/just-my-code.md)).
+     F11 je příkaz **Step Into (Krokovat** s krokem do) a postupuje provádění aplikace po jednom příkazu. F11 je dobrý způsob, jak podrobněji prozkoumat tok provádění. Ve výchozím nastavení ladicí program přeskočí kód bez uživatele (pokud chcete další podrobnosti, podívejte se [na Pouze můj kód](../../debugger/just-my-code.md)).
 
-     Řekněme, že jste dokončili zkoumání `SendMessage` metody a chcete získat z metody, ale zůstat v ladicím programu. To můžete provést pomocí příkazu **Krok ven** .
+     Řekněme, že jste skončili s prozkoumáním metody a chcete se z metody dostat, ale `SendMessage` zůstat v ladicím programu. Můžete to provést pomocí příkazu **Krok ven.**
 
-1. Stiskněte **SHIFT**  +  **F11** (nebo **ladění > krokovat**).
+1. Stiskněte **Klávesu Shift**  +  **F11** (nebo > Krok **ven**).
 
-     Tento příkaz obnoví spuštění aplikace (a posune ladicí program), dokud se nevrátí aktuální metoda nebo funkce.
+     Tento příkaz pokračuje v provádění aplikace (a pokračuje v ladicím programu), dokud se nevrátí aktuální metoda nebo funkce.
 
      Měli byste se vrátit do `for` smyčky v `Main` metodě, pozastavena při `SendMessage` volání metody. Další informace o různých způsobech, jak přesouvat kód, naleznete v tématu [Navigace v kódu v ladicím programu](../../debugger/navigating-through-code-with-the-debugger.md).
 

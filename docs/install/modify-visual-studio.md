@@ -18,16 +18,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3f4040023dd023db351571482ac2a17c18b46e06
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 638ec555a6fbef53d19a15c8a6cde26ff121aa0e
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112112922"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306979"
 ---
 # <a name="modify-visual-studio-workloads-components-and-language-packs"></a>Úprava Visual Studio úloh, komponent a jazykových sad
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Je snadné je upravit Visual Studio tak, aby v případě, že chcete, byl jenom to, co chcete. Pokud to chcete udělat, otevřete Instalační program pro Visual Studio a přidejte nebo odeberte úlohy a komponenty.
 
@@ -71,7 +71,7 @@ Pokud chcete provést úpravy instalace, musíte spustit Visual Studio instalaci
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Vyhledejte **Instalační program pro Visual Studio** v počítači.
 
@@ -119,12 +119,11 @@ Pokud chcete provést úpravy instalace, musíte spustit Visual Studio instalaci
 
 1. V případě potřeby zvolte **kartu** Úlohy a pak vyberte požadované úlohy nebo jejich výběr zrušte.
 
-
 1. Po instalaci nových úloh zvolte **Spustit** v okně Instalační program pro Visual Studio a otevřete Visual Studio.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
  Úlohy obsahují funkce, které potřebujete pro programovací jazyk nebo platformu, kterou používáte. Úlohy můžete použít k Visual Studio tak, aby v době, kdy chcete, byla podpora práce, kterou chcete udělat.
 
@@ -147,7 +146,6 @@ Pokud chcete provést úpravy instalace, musíte spustit Visual Studio instalaci
 
 ::: moniker-end
 
-
 >[!TIP]
 > Informace o komponentě SQL Server Data Tools (SSDT) najdete v tématu Stažení a instalace [SSDT pro Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15&preserve-view=true).
 
@@ -156,9 +154,10 @@ Pokud chcete provést úpravy instalace, musíte spustit Visual Studio instalaci
 Instalační program standardně při prvním spuštění odpovídá jazyku operačního systému. Jazyk ale můžete změnit, kdykoli chcete. 
 
 Postupujte následovně:
+
 1. Na kartě **Jazykové sady** v Instalační program pro Visual Studio.
-2. Vyberte jazyk, který dáváte přednost.
-3. Postupujte podle pokynů.
+1. Vyberte jazyk, který dáváte přednost.
+1. Postupujte podle pokynů.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

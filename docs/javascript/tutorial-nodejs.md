@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 5433ae0e84396f3c16dc5ed50f51ce7e9eb7056f
-ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
+ms.openlocfilehash: 2bca688977187071b5530911f9aa975e10ceef99
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760975"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306524"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a Express v Visual Studio
 
@@ -24,13 +24,19 @@ V tomto kurzu pro Visual Studio pomocí Node.js a Expressu vytvoříte jednoduch
 
 ::: moniker range="vs-2017"
 
-Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Pokud jste si ještě nenainstalujete Visual Studio 2022 Preview, přejděte na stránku [stahování Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -54,7 +60,7 @@ Node.js je prostředí javascriptového modulu runtime na straně serveru, kter�
 
 npm je výchozí správce balíčků pro Node.js. Správce balíčků usnadňuje programátorům publikování a sdílení zdrojového kódu knihoven Node.js a je navržený tak, aby zjednodušil instalaci, aktualizaci a odinstalaci knihoven.
 
-### <a name="what-is-express"></a>Co je expresní?
+### <a name="what-is-express"></a>Co je express?
 
 Express je rozhraní webových aplikací, které se používá jako serverová Node.js k vytváření webových aplikací. Express umožňuje zvolit různé front-endové architektury pro vytvoření uživatelského rozhraní, jako je Pug (dříve Jade). V tomto kurzu se používá Pug.
 
@@ -92,7 +98,7 @@ V tomto kurzu začnete jednoduchým projektem obsahujícím kód pro aplikaci No
 1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
-    Stisknutím **klávesy Esc** zavřete úvodní okno. Zadejte **Ctrl + Q,** otevřete vyhledávací pole, zadejte **Node.js** a pak zvolte Vytvořit novou aplikaci Azure basic Node.js **Express 4** (JavaScript). V dialogovém okně, které se zobrazí, zvolte **Vytvořit.**
+    Stisknutím **klávesy Esc** zavřete úvodní okno. Zadejte **Ctrl + Q,** otevřete vyhledávací pole, zadejte **Node.js** a pak zvolte Vytvořit novou aplikaci Azure Basic Node.js **Express 4** (JavaScript). V dialogovém okně, které se zobrazí, zvolte **Vytvořit.**
     ::: moniker-end
     ::: moniker range="vs-2017"
     V horním řádku nabídek zvolte **File** New Project  >  **(Soubor nového**  >  **projektu).** V levém podokně dialogového okna **Nový** projekt rozbalte **JavaScript** a pak **zvolteNode.js**. V prostředním podokně zvolte **Základní Azure Node.js Express 4** a pak zvolte **OK.**
@@ -103,11 +109,11 @@ V tomto kurzu začnete jednoduchým projektem obsahujícím kód pro aplikaci No
 
     ![Struktura projektu](../javascript/media/tutorial-project-structure.png)
 
-    (1) Projekt  je zvýrazněný tučně s použitím názvu, který jste dali v **dialogovém okně Nový** projekt. V systému souborů je tento projekt reprezentovaný souborem *.njsproj* ve složce projektu. Vlastnosti a proměnné prostředí přidružené k projektu můžete nastavit tak, že kliknete pravým tlačítkem na projekt a zvolíte **Vlastnosti**. U jiných vývojových nástrojů můžete provádět přecházování zpět, protože soubor projektu neproovádá vlastní změny ve zdroji Node.js projektu.
+    (1) Projekt  je zvýrazněný tučně a používá název, který jste dali v **dialogovém okně Nový** projekt. V systému souborů je tento projekt reprezentovaný souborem *.njsproj* ve složce projektu. Vlastnosti a proměnné prostředí přidružené k projektu můžete nastavit tak, že kliknete pravým tlačítkem na projekt a zvolíte **Vlastnosti**. U jiných vývojových nástrojů můžete provádět přecházování zpět, protože soubor projektu neproovádá vlastní změny ve zdroji Node.js projektu.
 
     (2) Na nejvyšší úrovni je řešení, které má ve výchozím nastavení stejný název jako váš projekt. Řešení, reprezentované na disku souborem *.sln*, je kontejner pro jeden nebo více souvisejících projektů.
 
-    (3) Uzel npm zobrazuje všechny nainstalované balíčky npm. Kliknutím pravým tlačítkem na uzel npm můžete vyhledat a nainstalovat balíčky npm pomocí dialogového okna nebo nainstalovat a aktualizovat balíčky pomocí nastavení v *souborupackage.json* a kliknout pravým tlačítkem na možnosti v uzlu npm.
+    (3) Uzel npm zobrazuje všechny nainstalované balíčky npm. Kliknutím pravým tlačítkem na uzel npm můžete vyhledat a nainstalovat balíčky npm pomocí dialogového okna nebo nainstalovat a aktualizovat balíčky pomocí nastavení v souboru *package.json* a kliknout pravým tlačítkem na uzlu npm.
 
     (4) *package.json* je soubor, který npm používá ke správě závislostí balíčků a verzí balíčků pro místně nainstalované balíčky. Další informace najdete v tématu [Správa balíčků npm](../javascript/npm-package-management.md).
 
@@ -192,23 +198,23 @@ IntelliSense je Visual Studio nástroj, který vám při psaní kódu pomůže.
 
     ![Zobrazení chyby syntaxe](../javascript/media/tutorial-nodejs-syntax-checking.png)
 
-    Poslední řádek této zprávy vám říká, že interpret JavaScriptu očekával čárku ( `,` ).
+    Poslední řádek této zprávy oznamuje, že překladač JavaScriptu očekával čárku ( `,` ).
 
-1. V dolním podokně klikněte na kartu **Seznam chyb** a jako typ nahlášených problémů vyberte Sestavit **+ IntelliSense.**
+1. V dolním podokně klikněte na kartu **Seznam chyb** a vyberte **sestavení + IntelliSense** pro typ hlášených problémů.
 
     Zobrazí se upozornění a popis spolu s názvem souboru a číslem řádku.
 
-    ![Zobrazení seznamu chyb](../javascript/media/tutorial-nodejs-error-list.png)
+    ![Zobrazit seznam chyb](../javascript/media/tutorial-nodejs-error-list.png)
 
 1. Opravte kód přidáním čárky ( `,` ) před `"data"` .
 
-    Po opravě by řádek kódu měl vypadat takhle: `res.render('index', { title: 'Express', "data": getData() });`
+    Po opravě by měl řádek kódu vypadat takto: `res.render('index', { title: 'Express', "data": getData() });`
 
 ## <a name="set-a-breakpoint"></a>Nastavení zarážky
 
-Dále spustíte aplikaci s připojeným ladicím Visual Studio ladicím programem. Před tím musíte nastavit zarážku.
+Dál budete pokračovat ve spuštění aplikace s připojeným ladicím programem sady Visual Studio. Než to uděláte, musíte nastavit zarážku.
 
-1. V *index.js* nastavte zarážku kliknutím do levého okapu před následujícím řádem kódu:
+1. V *index.js* klikněte na levé hřbety před následujícím řádkem kódu, abyste nastavili zarážku:
 
     `res.render('index', { title: 'Express', "data": getData() });`
 
@@ -218,30 +224,30 @@ Dále spustíte aplikaci s připojeným ladicím Visual Studio ladicím programe
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-1. Na panelu nástrojů Ladění vyberte cíl ladění, například **Webový server (Google Chrome)** nebo **Webový server (Microsoft Edge).**
+1. Vyberte cíl ladění na panelu nástrojů ladění, jako je například **webový server (Google Chrome)** nebo **webový server (Microsoft Edge)**.
 
     ::: moniker range=">=vs-2019"
-    ![Výběr cíle ladění](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)
+    ![Vybrat cíl ladění](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    ![Výběr cíle ladění](../javascript/media/tutorial-nodejs-deploy-target.png)
+    ![Vybrat cíl ladění](../javascript/media/tutorial-nodejs-deploy-target.png)
     ::: moniker-end
 
-    Pokud je Chrome na vašem počítači dostupný, ale jako  možnost se nez zobrazení, zvolte v rozevíracím seznamu cíle ladění možnost Procházet s a jako výchozí cíl prohlížeče vyberte Chrome (zvolte Nastavit jako **výchozí).**
+    Pokud je v počítači k dispozici Chrome, ale nezobrazuje se jako možnost, zvolte **Procházet pomocí** v rozevíracím seznamu cíl ladění a jako výchozí cíl prohlížeče vyberte Chrome (zvolte **nastavit jako výchozí**).
 
-1. Stisknutím **klávesy F5** (  >  **Ladění spustit ladění**) spusťte aplikaci.
+1. Stisknutím klávesy **F5** (**ladění**  >  **Spusťte ladění**) spusťte aplikaci.
 
-    Ladicí program se pozastaví na zarážce, kterou nastavíte. Teď můžete zkontrolovat stav aplikace.
+    Ladicí program se zastaví na zarážce, kterou jste nastavili. Nyní můžete zkontrolovat stav aplikace.
 
-1. Když `getData` najedete myší, zobrazí se jeho vlastnosti v datovém tipu.
+1. Najeďte myší `getData` na zobrazení vlastností DataTip
 
     ![Kontrola proměnných](../javascript/media/tutorial-nodejs-inspect-variables.png)
 
-1. Pokračujte **stisknutím klávesy F5** **(**  >  **Pokračovat** ladění).
+1. Pokračujte stisknutím klávesy **F5** (**ladění**  >  **pokračuje**).
 
     Aplikace se otevře v prohlížeči.
 
-    V okně prohlížeče se v prvním odstavci zobrazí "Express" jako název a "Welcome to Express" (Vítá vás Express).
+    V okně prohlížeče se v prvním odstavci zobrazí text "Express" jako nadpis a "Vítejte v expresním".
 
 1. Kliknutím na tlačítka zobrazíte různé obrázky.
 
@@ -249,19 +255,19 @@ Dále spustíte aplikaci s připojeným ladicím Visual Studio ladicím programe
 
 1. Zavřete webový prohlížeč.
 
-## <a name="optional-publish-to-azure-app-service"></a>(Volitelné) Publikování do Azure App Service
+## <a name="optional-publish-to-azure-app-service"></a>Volitelné Publikovat do Azure App Service
 
-1. V Průzkumník řešení klikněte pravým tlačítkem na projekt a zvolte **Publikovat.**
+1. V Průzkumník řešení klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
 
    ![Publikování do Azure App Service](../javascript/media/tutorial-nodejs-publish-to-azure.png)
 
-1. Zvolte **Microsoft Azure App Service**.
+1. Vyberte **Microsoft Azure App Service**.
 
-    V dialogovém **App Service** se můžete přihlásit ke svému účtu Azure a připojit se k existujícím předplatným Azure.
+    V dialogovém okně **App Service** se můžete přihlásit k účtu Azure a připojit se k existujícím předplatným Azure.
 
-1. Podle zbývajících kroků vyberte předplatné, zvolte nebo vytvořte skupinu prostředků, zvolte nebo vytvořte rovinu služby App Service a po zobrazení výzvy k publikování do Azure postupujte podle pokynů. Podrobnější pokyny najdete v tématu Publikování [na webu Azure pomocí nasazení webu.](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy)
+1. Podle zbývajících kroků vyberte předplatné, vyberte nebo vytvořte skupinu prostředků, zvolte nebo vytvořte plochu služby App Service a pak postupujte podle pokynů k publikování do Azure. Podrobnější pokyny najdete v tématu [publikování na webu Azure pomocí nasazení webu](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy).
 
-1. V **okně** Výstup se zobrazuje průběh nasazení do Azure.
+1. V okně **výstup** se zobrazí průběh nasazování do Azure.
 
     Po úspěšném nasazení se vaše aplikace otevře v prohlížeči spuštěném v Azure App Service. Kliknutím na tlačítko zobrazíte obrázek.
 
@@ -272,7 +278,7 @@ Blahopřejeme k dokončení tohoto kurzu!
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Nasazení aplikace do Linuxu App Service](../javascript/publish-nodejs-app-azure.md)
+> [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)
 
 > [!div class="nextstepaction"]
-> [Rozšíření služby jazyka AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)
+> [Rozšíření služby pro jazyk AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)

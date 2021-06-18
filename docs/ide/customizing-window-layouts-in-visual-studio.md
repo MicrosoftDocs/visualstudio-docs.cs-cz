@@ -1,6 +1,6 @@
 ---
 title: Přizpůsobení rozložení oken
-description: Naučte se, jak přizpůsobit charakteristiky, které Windows vykazuje pro vytváření rozložení, která fungují nejlépe pro různé vývojové pracovní postupy.
+description: Zjistěte, jak přizpůsobit charakteristiky, které se ve Windows projevují, a vytvářet rozložení, která fungují nejlépe pro různé pracovní postupy vývoje.
 ms.custom: SEO-VS-2020
 ms.date: 03/02/2021
 ms.topic: conceptual
@@ -25,135 +25,135 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bd8859b98e54aa9692beaa98dd0f2c2ca70e2796
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: be11db364d0505833e722d3db308b41a18ccbb9d
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682578"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308126"
 ---
-# <a name="customize-window-layouts-in-visual-studio"></a>Přizpůsobení rozložení oken v aplikaci Visual Studio
+# <a name="customize-window-layouts-in-visual-studio"></a>Přizpůsobení rozložení oken v Visual Studio
 
-V aplikaci Visual Studio můžete přizpůsobit polohu, velikost a chování Windows pro vytváření rozložení oken, která fungují nejlépe pro různé vývojové pracovní postupy. Když rozložení přizpůsobíte, IDE ho zapamatuje. Například pokud změníte umístění ukotvení **Průzkumník řešení** a pak zavřete Visual Studio, při příštím otevření sady Visual Studio, a to i v případě, že pracujete na jiném počítači, **Průzkumník řešení** bude ukotveno ve stejném umístění.
+V Visual Studio můžete přizpůsobit umístění, velikost a chování oken a vytvořit rozložení oken, která fungují nejlépe pro různé vývojové pracovní postupy. Když přizpůsobíte rozložení, integrované vývojové prostředí si ho zapamatuje. Pokud například změníte umístění ukotvení  Průzkumník řešení a pak Visual Studio zavřete, při příštím otevření Visual Studio, i když pracujete na jiném počítači, bude **Průzkumník řešení** ukotvený ve stejném umístění.
 
-Můžete také pojmenovat a uložit vlastní rozložení a pak přepínat mezi rozloženími jediným příkazem. Můžete například vytvořit rozložení pro úpravy a rozložení pro ladění a mezi nimi přepínat pomocí příkazu **okna** pro  >  **použití nabídky rozložení** okna.
+Můžete také jedním příkazem nastavit název a uložit vlastní rozložení a přepínat mezi rozloženími. Můžete například vytvořit rozložení pro úpravy a rozložení pro ladění a přepínat mezi nimi pomocí příkazu nabídky **Použít** rozložení  >   okna.
 
 ## <a name="tool-and-document-windows"></a>Okna nástrojů a dokumentů
 
-Rozhraní IDE má dva základní typy oken, okna *nástrojů* a *okna dokumentů*. Okna nástrojů zahrnují **Průzkumník řešení**, **Průzkumník serveru**, **okno výstup**, **Seznam chyb**, návrháře, okna ladicího programu a tak dále. Systém dokumentů Windows obsahuje soubory zdrojového kódu, libovolné textové soubory, konfigurační soubory a tak dále. Můžete změnit velikost oken nástrojů a přetáhnout je podle jejich záhlaví. Okna dokumentu lze přetáhnout na jejich kartu. Klikněte pravým tlačítkem myši na kartu nebo záhlaví a nastavte další možnosti okna.
+Integrované vývojové prostředí (IDE) má dva základní typy oken, *okna nástrojů* a *okna dokumentů.* Mezi okna **nástrojů patří Průzkumník řešení,** **Průzkumník serveru,** **okno Výstup,** **Seznam chyb,** návrháři, okna ladicího programu atd. Okna dokumentů obsahují soubory zdrojového kódu, libovolné textové soubory, konfigurační soubory atd. Velikost panelů nástrojů můžete změnit a přetáhnout podle záhlaví. Okna dokumentů je možné přetáhnout na jejich kartu. Klikněte pravým tlačítkem na kartu nebo záhlaví a nastavte další možnosti v okně.
 
-V nabídce **okna** se zobrazí možnosti pro ukotvení, plovoucí a skrývání oken v integrovaném vývojovém prostředí (IDE). Kliknutím pravým tlačítkem myši na kartu okna nebo záhlaví zobrazíte další možnosti tohoto konkrétního okna. V jednom okamžiku můžete zobrazit víc než jednu instanci některých oken nástrojů. Můžete například zobrazit více než jedno okno webového prohlížeče a můžete vytvořit další instance některých oken nástrojů výběrem možnosti **nové okno** v nabídce **okno** .
+V **nabídce Okna** se zobrazují možnosti ukotvení, plovoucí desetinné čárky a skrytí oken v integrovaném vývojovém prostředí. Kliknutím pravým tlačítkem na kartu okna nebo záhlaví zobrazíte další možnosti pro toto konkrétní okno. Najednou můžete zobrazit více než jednu instanci určitých oken nástrojů. Můžete například zobrazit více než jedno okno webového prohlížeče a výběrem možnosti Nové  okno v nabídce **Okno** můžete vytvořit další instance některých panelů nástrojů.
 
 ### <a name="split-windows"></a>Rozdělit okna
 
-Pokud je třeba v dokumentu zobrazit nebo upravit dvě umístění najednou, můžete rozdělit okna. Pokud chcete dokument rozdělit do dvou nezávisle přesouvaných oddílů, klikněte na **rozdělit** v nabídce **okna** . Kliknutím na **Odebrat rozdělení** v nabídce **okno** obnovíte jednoduché zobrazení.
+Pokud v dokumentu potřebujete zobrazit nebo upravit dvě umístění najednou, můžete rozdělit okna. Pokud chcete dokument rozdělit do dvou samostatných sekcí posouvání, klikněte **v nabídce** **Okno na Rozdělit.** Kliknutím **na Odebrat** rozdělení v nabídce **Okno** obnovíte jedno zobrazení.
 
 ### <a name="tabs"></a>Karty
 
-Pomocí karet můžete uspořádat rozložení několika různými způsoby. Můžete například zobrazit náhled souboru v editoru, aniž byste soubor otevřeli, můžete seskupovat své karty a další.
+Pomocí karet můžete rozložení uspořádat několika různými způsoby. Můžete například zobrazit náhled souboru v editoru bez otevření souboru, seskupit karty a další.
 
-#### <a name="preview-tab-document-windows"></a>Karta náhled (okna dokumentu)
+#### <a name="preview-tab-document-windows"></a>Karta Náhled (okna dokumentů)
 
-Na kartě **Náhled** můžete zobrazit soubory v editoru bez nutnosti jejich otevírání. Můžete zobrazit náhled souborů tak, že je vyberete v **Průzkumník řešení**, během ladění, když přejdete do souboru s možností **Přejít k definici** a při procházení výsledků hledání. Soubory náhledu se zobrazí na kartě na pravé straně karty dokumentu. Soubor se otevře pro úpravy, pokud ho upravíte, nebo klikněte na  **otevřít**.
+Na **kartě Náhled** můžete zobrazit soubory v editoru, aniž byste je otevřeli. Náhled souborů můžete zobrazit tak, že je zvolíte v **Průzkumník řešení**, během ladění při krokování do souborů, pomocí možnosti Přejít k definici a při procházení výsledků hledání. Soubory náhledu se zobrazí na kartě na pravé straně karty dokumentu. Soubor se otevře pro úpravy, pokud ho upravíte, nebo zvolte **Otevřít.**
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-#### <a name="vertical-document-tabs"></a>Svislé karty dokumentu
+#### <a name="vertical-document-tabs"></a>Svislé karty dokumentů
 
-**[Novinka ve verzi 16,4](/visualstudio/releases/2019/release-notes-v16.4/)**: Přidali jsme jednu z hlavních žádostí o funkce, [vertikálních karet dokumentů](https://developercommunity.visualstudio.com/idea/467369/vertical-group-tab.html)ve verzi Visual Studio 2019 verze 16,4. Teď můžete spravovat karty dokumentu ve svislém seznamu na levé nebo pravé straně editoru.
+**[Novinka ve verzi 16.4:](/visualstudio/releases/2019/release-notes-v16.4/)** Do verze Visual Studio 2019 verze 16.4 jsme přidali jednu z nejlepších žádostí o [funkce,](https://developercommunity.visualstudio.com/idea/467369/vertical-group-tab.html)vertikální karty dokumentů. Karty dokumentů teď můžete spravovat ve svislém seznamu na levé nebo pravé straně editoru.
 
-Svislé karty dokumentu můžete použít následujícími způsoby:
+Svislé karty dokumentů můžete použít následujícími způsoby:
 
--   >    >  V řádku nabídek vyberte možnosti nástrojů karta **prostředí**  >  **a okna** . Pak z ovládacího prvku **rozložení karty sada** zvolte v rozevíracím seznamu buď **nahoře**, **vlevo** nebo **vpravo** .
+- Na **řádku**  >  **nabídek**  >    >  zvolte Nástroje Možnosti Karty prostředí a **Okna.** Potom v ovládacím **prvku Nastavit rozložení** karet zvolte  **z** rozevíracího seznamu buď **Nahoře,** Vlevo nebo Vpravo.
 
-- Klikněte pravým tlačítkem myši na kartu, zvolte možnost **nastavit rozložení karty** a pak zvolte možnost **vlevo** nebo **vpravo**. (Pokud chcete tabulátory vrátit na výchozí pozici, vyberte **nahoře**.)
+- Klikněte pravým tlačítkem na kartu, zvolte **Nastavit rozložení karet** a pak zvolte buď **Vlevo,** nebo **Vpravo.** (Pokud chcete karty vrátit na výchozí pozici, zvolte **Nahoře**.)
 
-    :::image type="content" source="./media/vs-2019/vertical-tabs.gif" alt-text="Animace, která zobrazuje svislé karty dokumentu v akci":::
+    :::image type="content" source="./media/vs-2019/vertical-tabs.gif" alt-text="Animace znázorňuje svislé karty dokumentů v akci":::
 
 ::: moniker-end
 
 #### <a name="tab-groups"></a>Skupiny karet
 
-Skupiny karet vám při práci se dvěma nebo více otevřenými dokumenty v integrovaném vývojovém prostředí rozšíří možnost spravovat omezený pracovní prostor. Můžete uspořádat více oken dokumentů a oken nástrojů do skupin svislých a vodorovných karet a náhodně dokumenty z jedné skupiny karet do druhé.
+Skupiny karet rozšiřují vaši schopnost spravovat omezený pracovní prostor, když v integrovaném vývojovém prostředí pracujete se dvěma nebo více otevřenými dokumenty. Můžete uspořádat několik oken dokumentů a panelů nástrojů do vertikálních nebo vodorovných skupin karet a promíchat dokumenty z jedné skupiny karet do druhé.
 
 ### <a name="toolbars"></a>Panely nástrojů
 
-Panely nástrojů lze uspořádat přetažením do míst, kde chcete, nebo pomocí dialogového okna **přizpůsobit** . Další informace o tom, jak umístit a přizpůsobit panely nástrojů, najdete v tématu [Postupy: přizpůsobení nabídek a panelů nástrojů](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md).
+Panely nástrojů můžete uspořádat přetažením na místo, kde je chcete, nebo pomocí **dialogového okna** Přizpůsobit. Další informace o umístění a přizpůsobení panelů nástrojů najdete v tématu [Postupy: Přizpůsobení nabídek a panelů nástrojů.](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
 
-## <a name="arrange-and-dock-windows"></a>Uspořádat a ukotvit okna
+## <a name="arrange-and-dock-windows"></a>Uspořádání a ukotvení oken
 
-Okno dokumentu nebo nástroj může být *ukotveno*, takže má pozici a velikost v rámci rámce okna IDE. Můžete ho také umístit jako samostatné plovoucí okno, které je mimo rozhraní IDE.
+Okno dokumentu nebo panel nástrojů lze *ukotvit* tak, aby měl pozici a velikost v rámci rámce okna integrovaného vývojového prostředí. Můžete ho také umístit jako samostatné plovoucí okno, které je mimo integrované vývojové prostředí (IDE).
 
-Můžete ukotvit okno nástrojů kdekoli uvnitř rámce IDE. Můžete také ukotvit některá okna nástrojů jako okna s kartami v rámci editoru. A můžete ukotvit okna dokumentu v rámci editoru a můžete je připnout na aktuální pozici v pořadí prvků.
+Okno nástroje můžete ukotvit kdekoli uvnitř rámce integrovaného vývojového prostředí( IDE). Některá okna nástrojů můžete také ukotvit jako okna s kartami v rámci editoru. Můžete také ukotvit okna dokumentů v rámci rámce editoru a připnout je na aktuální pozici v pořadí ovládacích panelů.
 
-Můžete také ukotvit více oken, *aby je bylo* možné spojit dohromady v rámci nebo vně integrovaného vývojového prostředí (IDE). Okna nástrojů můžou být taky skrytá nebo minimalizovaná.
+Můžete také ukotvit více oken, aby bylo možné s plovoucí desetinnou čárkou najednou *pracovat* nad nebo vně integrovaného vývojového prostředí. Okna nástrojů mohou být také skrytá nebo minimalizovaná.
 
 Okna můžete uspořádat následujícími způsoby:
 
-- Připnout okna dokumentu vlevo od zásobníku karet.
+- Připněte okna dokumentu nalevo od karty.
 
-- Okna ukotvení karet do editačního snímku.
+- Ukotvení oken pomocí tabulátoru k editačnímu rámci
 
-- Ukotvěte okna nástrojů k okraji rámce v integrovaném vývojovém prostředí (IDE).
+- Ukotvení panelů nástrojů k okraji rámce v integrovaném vývojovém prostředí
 
-- Obtékání dokumentu nebo nástrojů v systému Windows nad rámec nebo mimo integrované vývojové prostředí (IDE)
+- Plovoucí okno dokumentu nebo nástrojů v integrovaném vývojovém prostředí (IDE) nebo mimo toto integrované vývojové prostředí (IDE)
 
-- Skryjte okna nástrojů podél okraje integrovaného vývojového prostředí (IDE).
+- Skryjte okna nástrojů na okraji integrovaného vývojového prostředí.
 
-- Zobrazit okna v různých monitorech.
+- Zobrazení oken na různých monitorech
 
-- Obnovení umístění okna do výchozího rozložení nebo uloženého vlastního rozložení.
+- Resetujte umístění okna na výchozí rozložení nebo do uloženého vlastního rozložení.
 
-Pro uspořádání nástrojů a oken dokumentů můžete umístit kurzor do záhlaví okna a pak ho přetáhnout na místo, kde chcete. Případně můžete kliknout pravým tlačítkem myši na záhlaví okna a použít jeho kontextovou nabídku, nebo můžete použít příkazy v nabídce **okna** .
+Pokud chcete uspořádat okna nástrojů a dokumentů, umístěte kurzor na záhlaví okna a přetáhněte ho tam, kde chcete. Případně můžete kliknout pravým tlačítkem na záhlaví okna a použít jeho místní nabídku, nebo můžete použít příkazy v **nabídce** Okno.
 
-### <a name="dock-windows"></a>Ukotvit okna
+### <a name="dock-windows"></a>Ukotvení oken
 
-Když kliknete a přetáhnete záhlaví okna nástroje nebo kartu okna dokumentu, zobrazí se kosočtverec s vodítkem. Když se během operace přetažení ukazatel myši nachází nad jednou ze šipek ve čtverečku, zobrazí se šedivá oblast, ve které se zobrazí, kde bude okno ukotveno, pokud nyní uvolníte tlačítko myši.
+Když kliknete a přetáhnete záhlaví panelu nástrojů nebo kartu okna dokumentu, zobrazí se kosočtverec s vodítkem. Když je během operace přetažení ukazatel myši nad jednou ze šipek v kosočtverci, zobrazí se vystínovaná oblast, která ukazuje, kde se okno při uvolnění tlačítka myši ukotví.
 
-Chcete-li přesunout okno ukotvit bez jeho přitahování na místo, stiskněte klávesu **CTRL** při přetahování okna.
+Pokud chcete přesunout ukotvené okno bez přichycení na místo, stiskněte při přetažení okna klávesu **Ctrl.**
 
-Chcete-li vrátit okno nástrojů nebo okno dokumentu do svého posledního ukotveného umístění, stiskněte klávesu **CTRL** a dvakrát klikněte na záhlaví nebo kartu okna.
+Pokud chcete okno nástroje nebo okno dokumentu vrátit na jeho nejnovější ukotvené umístění, stiskněte klávesu **Ctrl** a poklikejte na záhlaví nebo kartu okna.
 
-Následující obrázek znázorňuje vodítko pro okna dokumentu, která lze ukotvit pouze v rámci editačního rámce:
+Následující obrázek znázorňuje kosočtverec pro okna dokumentů, která je možné ukotvit pouze v rámci editačních rámců:
 
-![Kosočtverec s oknem dokumentu](../ide/media/documentwindowguidediamonds.png)
+![Kosočtverec s průvodcem oknem dokumentu](../ide/media/documentwindowguidediamonds.png)
 
-Okna nástrojů lze připravit na jednu stranu snímku v integrovaném vývojovém prostředí nebo v rámci editačního rámce. Po přetahování okna nástroje na jiné místo se zobrazí kosočtverec s vodítkem, který vám pomůže okno snadno ukotvit.
+Okna nástrojů je možné v integrovaném vývojovém prostředí (IDE) nebo v rámci editačního rámce připevnit na jednu stranu rámce. Při přetažení okna nástroje do jiného umístění se zobrazí kosočtverec, který vám pomůže toto okno snadno uvolnit.
 
-![Panely nástrojů okna nástroje – kosočtverce](../ide/media/vs10guidediamond.png)
+![Kosočtverce s průvodcem v okně nástrojů](../ide/media/vs10guidediamond.png)
 
-Následující obrázek ukazuje **Průzkumník řešení** ukotven v novém umístění, které je ohraničeno modrou šedou oblastí:
+Následující obrázek **znázorňuje Průzkumník řešení** ukotvené v novém umístění, které je vymezené modrou vystínovanou oblastí:
 
 ![Ukotvení Průzkumník řešení na nové pozici](../ide/media/vs2015_dock_diamond.png)
 
-### <a name="close-and-auto-hide-tool-windows"></a>Zavřít a automaticky skrýt okna nástrojů
+### <a name="close-and-auto-hide-tool-windows"></a>Zavření a automatické skrytí oken nástrojů
 
-Okno nástroje můžete zavřít kliknutím na **X** v pravém horním rohu záhlaví. Chcete-li znovu otevřít okno, použijte jeho klávesovou zkratku nebo příkaz nabídky. Nástroj podporuje systém Windows funkci s názvem *automaticky skrýt*, což způsobí, že okno vyčerpá výstup, když použijete jiné okno. Je-li okno automaticky skryto, jeho název se zobrazí na kartě na okraji integrovaného vývojového prostředí (IDE). Chcete-li znovu použít okno, přejděte na kartu, aby se snímky okna znovu zobrazily.
+Okno nástroje můžete zavřít kliknutím na **X** v pravém horním rohu záhlaví. Pokud chcete okno znovu otevřít, použijte jeho klávesovou zkratku nebo příkaz nabídky. Okna nástrojů podporují funkci s názvem *automatické* skrytí, která způsobí, že se okno při použití jiného okna posune mimo cestu. Při automatickém zobrazení okna se jeho název zobrazí na kartě na okraji integrovaného vývojového prostředí( IDE). Pokud chcete toto okno znovu použít, přejděte na kartu, aby se okno vrátilo zpět do zobrazení.
 
-![Automaticky skrývat](../ide/media/vs2015_auto_hide.png)
-
-> [!NOTE]
-> Chcete-li nastavit, zda má automatické skrývání pracovat v oknech nástrojů individuálně nebo jako ukotvené skupiny, zaškrtněte nebo zrušte zaškrtnutí políčka **automaticky skrýt ovlivní aktivní okna nástrojů pouze** v dialogovém okně **Možnosti** . Další informace naleznete v části [Obecné, prostředí, dialogové okno Možnosti](../ide/reference/general-environment-options-dialog-box.md).
+![Automatické skrytí](../ide/media/vs2015_auto_hide.png)
 
 > [!NOTE]
-> Okna nástrojů, která mají povolenou možnost automaticky skrývat, mohou být dočasně posunuta do zobrazení, když je okno aktivní. Chcete-li znovu skrýt okno, vyberte položku mimo aktuální okno. Když okno ztratí fokus, snímky se vrátí zpátky z pohledu.
+> Pokud chcete nastavit, jestli automatické skrytí funguje v  oknech nástrojů jednotlivě nebo jako ukotvené skupiny, vyberte nebo zrušte zaškrtnutí tlačítka Automaticky skrýt, které ovlivní aktivní okna nástrojů pouze v **dialogovém okně** Možnosti. Další informace najdete v tématu [Obecné, Prostředí, dialogové okno Možnosti.](../ide/reference/general-environment-options-dialog-box.md)
 
-### <a name="use-a-second-monitor"></a>Použít druhý monitor
+> [!NOTE]
+> Okna nástrojů s povoleným automatickým skrytí se mohou dočasně přepnout do zobrazení, když je okno fokusu. Pokud chcete okno znovu skrýt, vyberte položku mimo aktuální okno. Když okno ztratí fokus, posune se zpět ze zobrazení.
 
-Pokud máte druhý monitor a váš operační systém ho podporuje, můžete zvolit, který monitor zobrazí okno. Můžete dokonce seskupit více oken *v počítačích na* jiných monitorech.
+### <a name="use-a-second-monitor"></a>Použití druhého monitorování
+
+Pokud máte druhé monitorování a váš operační systém ho podporuje, můžete zvolit, které monitorování zobrazí okno. Na jiných monitorech můžete dokonce *seskupit více* oken dohromady.
 
 > [!TIP]
-> Můžete vytvořit více instancí **Průzkumník řešení** a přesunout je do jiného monitoru. Klikněte pravým tlačítkem myši na okno a vyberte možnost **nové zobrazení Průzkumník řešení**. Všechna okna můžete vrátit zpět na původní monitor dvojitým kliknutím na klávesovou **zkratku CTRL** .
+> Můžete vytvořit více instancí Průzkumník řešení **a** přesunout je do jiného monitorování. Klikněte pravým tlačítkem na okno a zvolte **Nový Průzkumník řešení Zobrazení**. Všechna okna můžete vrátit zpět do původního monitoru tak, že při výběru klávesy **Ctrl** poklikáte.
 
-### <a name="reset-name-and-switch-between-window-layouts"></a>Resetování, pojmenování a přepínání mezi rozloženími oken
+### <a name="reset-name-and-switch-between-window-layouts"></a>Resetování, název a přepínání mezi rozloženími oken
 
-Rozhraní IDE můžete vrátit do původního rozložení okna pro kolekci nastavení pomocí příkazu **obnovit rozložení okna** . Při spuštění tohoto příkazu dojde k následujícím akcím:
+Integrované vývojové prostředí (IDE) můžete vrátit do původního rozložení okna pro kolekci nastavení pomocí **příkazu Resetovat rozložení** okna. Když spustíte tento příkaz, dojde k následujícím akcím:
 
-- Všechna okna se přesunou do jejich výchozích umístění.
+- Všechna okna se přesunou na výchozí pozice.
 
-- Okna, která jsou zavřena ve výchozím rozložení okna, jsou zavřena.
+- Okna zavřená ve výchozím rozložení okna se zavře.
 
-- Okna, která jsou otevřená ve výchozím rozložení okna, se otevřou.
+- Otevřou se okna, která jsou otevřená ve výchozím rozložení okna.
 
 ### <a name="create-and-save-custom-layouts"></a>Vytvoření a uložení vlastních rozložení
 
@@ -169,7 +169,7 @@ Nejprve vytvořte testovací řešení, které má dva projekty, z nichž každ�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Vytvořte nový projekt **aplikace WPF** v jazyce C#. Představte si, že v tomto projektu budete vyvíjet uživatelské rozhraní. Chcete maximalizovat prostor pro okno návrháře a jiné okna nástrojů přesunout ze své.
 

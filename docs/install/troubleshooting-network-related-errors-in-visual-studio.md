@@ -10,19 +10,19 @@ helpviewer_keywords:
 - list of domains, locations, URLs, Visual Studio
 - proxy errors, Visual Studio
 ms.assetid: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1e5af6f11a6b5036b50f44abaf50c5adfe18487b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e7d54b4e7777b3569031e96760699e7c075245f
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959178"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306823"
 ---
 # <a name="troubleshoot-network-related-errors-when-you-install-or-use-visual-studio"></a>Řešení chyb souvisejících se sítí při instalaci nebo používání sady Visual Studio
 
@@ -73,7 +73,7 @@ K této chybě obvykle dochází, když jsou uživatelé připojeni k Internetu 
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
   1. Najděte **devenv.exe.config** (konfigurační soubor devenv.exe) v: **%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE** nebo **% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Enterprise\Common7\IDE**.
 

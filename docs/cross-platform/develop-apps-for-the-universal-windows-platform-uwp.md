@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 906097e0356922cdcc5afbabb1771348962ea4ff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e54fdd71d848d1edad93fe38598d71c9dbbede7f
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859499"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308113"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Vývoj aplikací pro Univerzální platformu Windows (UWP)
 
@@ -50,7 +50,7 @@ Tady je seznam softwaru, který potřebujete:
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 - [Windows 10](https://support.microsoft.com/help/17777/downloads-for-windows). Visual Studio 2019 podporuje vývoj UWP jenom ve Windows 10. Další podrobnosti najdete v tématu [cílení na platformu](/visualstudio/releases/2019/compatibility/) a [požadavky na systém](/visualstudio/releases/2019/system-requirements/)pro Visual Studio.
 

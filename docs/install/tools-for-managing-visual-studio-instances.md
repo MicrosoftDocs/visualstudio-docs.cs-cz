@@ -9,19 +9,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 85686707-14C0-4860-9B7A-66485D43D241
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2b6b641081c9b969cadd2c9517967adb8cc4cb1e
-ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
+ms.openlocfilehash: 914449fe1db792614af1f9ed22464cb9fdb91481
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106547437"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306888"
 ---
 # <a name="tools-for-detecting-and-managing-visual-studio-instances"></a>Nástroje pro zjišťování a správu instancí sady Visual Studio
 
@@ -34,33 +34,33 @@ Následující nástroje a pomůcky vám pomůžou detekovat a spravovat nainsta
 * [**vswhere**](https://github.com/microsoft/vswhere): spustitelný soubor integrovaný do sady Visual Studio nebo k dispozici pro samostatnou distribuci, která vám pomůže najít umístění všech instancí sady Visual Studio na konkrétním počítači.
 * [**VSSetup. PowerShell**](https://github.com/microsoft/vssetup.powershell): skripty PowerShellu, které používají rozhraní API konfigurace instalace k identifikaci nainstalovaných instancí sady Visual Studio.
 * [**Vs-Setup-Samples**](https://github.com/microsoft/vs-setup-samples): ukázky C# a C++, které ukazují, jak používat konfigurační rozhraní API pro instalaci k dotazování existující instalace.
-* [**Rozhraní WMI (Windows Management Instrumentation) (WMI)**](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page): informace o instanci sady Visual Studio lze dotazovat prostřednictvím MSFT_VSInstance třídy sady Visual Studio. 
+* [**Rozhraní WMI (Windows Management Instrumentation) (WMI)**](/windows/win32/wmisdk/wmi-start-page): informace o instanci sady Visual Studio lze dotazovat prostřednictvím MSFT_VSInstance třídy sady Visual Studio.
 * [**Rozhraní API pro konfiguraci nastavení**](<xref:Microsoft.VisualStudio.Setup.Configuration>) poskytuje rozhraní pro vývojáře, kteří chtějí sestavovat své vlastní nástroje pro interrogating instance sady Visual Studio.
-* [**Inventář softwaru Microsoft Endpoint Configuration Manager**](https://docs.microsoft.com/mem/configmgr/core/clients/manage/inventory/introduction-to-software-inventory): dá se použít ke shromažďování informací o instancích sady Visual Studio na klientských zařízeních. 
+* [**Inventář softwaru Microsoft Endpoint Configuration Manager**](/mem/configmgr/core/clients/manage/inventory/introduction-to-software-inventory): dá se použít ke shromažďování informací o instancích sady Visual Studio na klientských zařízeních.
 
 ## <a name="using-vswhereexe"></a>Použití vswhere.exe
 
 `vswhere.exe` je automaticky zahrnutý v aplikaci Visual Studio 2017 nebo novější, nebo si ji můžete stáhnout ze [stránky vswhere releases](https://github.com/Microsoft/vswhere/releases). Použijte `vswhere -?` k získání informací o nápovědě k tomuto nástroji. Například tento příkaz zobrazí všechny verze sady Visual Studio, včetně dřívějších verzí produktu a předprodejních verzí, a výstup výsledků ve formátu JSON:
 
-```cmd
+```shell
 C:\Program Files (x86)\Microsoft Visual Studio\Installer> vswhere.exe -legacy -prerelease -format json
 ```
 
 ## <a name="using-windows-management-instrumentation-wmi"></a>Použití rozhraní WMI (Windows Management Instrumentation) (WMI)
 
-Pokud je v počítači nainstalován nástroj pro rozpoznávání klientů sady Visual Studio, můžete zadat dotaz na informace o instanci aplikace Visual Studio pomocí rozhraní WMI. Nástroj pro rozpoznávání klienta Visual Studio je ve výchozím nastavení nainstalován s každou aktualizací sady Visual Studio 2017 a Visual Studio 2019, která byla vydána v nebo později než 12. května 2020. Je k dispozici také v [katalogu Microsoft Update](https://catalog.update.microsoft.com/) , pokud ho chcete nainstalovat nezávisle.  Příklad toho, jak použít nástroj k vrácení informací o instanci sady Visual Studio, otevřete PowerShell jako správce na klientském počítači a zadejte následující příkaz:
+Pokud je v počítači nainstalován nástroj pro rozpoznávání klientů sady Visual Studio, můžete zadat dotaz na informace o instanci aplikace Visual Studio pomocí rozhraní WMI. Nástroj pro rozpoznávání klientů sady Visual Studio se instaluje ve výchozím nastavení pomocí každé aktualizace sady Visual Studio 2017, Visual Studio 2019 a sady Visual Studio 2022, která byla vydána v nebo po 12. května 2020. Je k dispozici také v [katalogu Microsoft Update](https://catalog.update.microsoft.com/) , pokud ho chcete nainstalovat nezávisle.  Příklad toho, jak použít nástroj k vrácení informací o instanci sady Visual Studio, otevřete PowerShell jako správce na klientském počítači a zadejte následující příkaz:
 
-```cmd
+```shell
 Get-CimInstance MSFT_VSInstance
 ```
 
-## <a name="using-microsoft-endpoint-configuration-manager"></a>Použití koncového bodu Microsoft Configuration Manager 
+## <a name="using-microsoft-endpoint-configuration-manager"></a>Použití koncového bodu Microsoft Configuration Manager
 
-Funkce [inventáře softwaru Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/inventory/introduction-to-software-inventory) lze použít k dotazování a shromažďování informací o instancích aplikace Visual Studio na klientských zařízeních. Například následující dotaz vrátí zobrazované jméno, verzi a název zařízení, na kterém je nainstalována aplikace Visual Studio pro všechny nainstalované instance sady Visual Studio 2017 a 2019: 
+Funkce [inventáře softwaru Microsoft Endpoint Configuration Manager](/mem/configmgr/core/clients/manage/inventory/introduction-to-software-inventory) lze použít k dotazování a shromažďování informací o instancích aplikace Visual Studio na klientských zařízeních. Například následující dotaz vrátí zobrazované jméno, verzi a název zařízení, na kterém je nainstalována aplikace Visual Studio pro všechny nainstalované instance sady Visual Studio 2017 a 2019:
 
-```WQL 
+```WQL
 select distinct SMS_G_System_COMPUTER_SYSTEM.Name, SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName, SMS_G_System_ADD_REMOVE_PROGRAMS.Version from SMS_R_System inner join SMS_G_System_COMPUTER_SYSTEM on SMS_G_System_COMPUTER_SYSTEM.ResourceID = SMS_R_System.ResourceId inner join SMS_G_System_ADD_REMOVE_PROGRAMS on SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceID = SMS_R_System.ResourceId where SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Visual Studio %[a-z]% 201[7,9]" 
-``` 
+```
 
 ::: moniker range="vs-2017"
 
@@ -81,9 +81,9 @@ Jelikož tyto položky nejsou uloženy v globálním registru, existují zvláš
 
 1. Vyberte `HKEY_LOCAL_MACHINE` uzel.
 
-1. V hlavní nabídce nástroje Regedit vyberte možnost načíst **soubor**  >  **podregistr...** a pak vyberte soubor privátního registru, který je uložený ve složce **AppData\Local** . Například:
+1. V hlavní nabídce nástroje Regedit vyberte možnost načíst **soubor**  >  **podregistr...** a pak vyberte soubor privátního registru, který je uložený ve složce **AppData\Local** . Příklad:
 
-   ```
+   ```shell
    %localappdata%\Microsoft\VisualStudio\<config>\privateregistry.bin
    ```
 

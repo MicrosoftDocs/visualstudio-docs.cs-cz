@@ -16,18 +16,18 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7554ac46d7c4171cfb71166c51689ff4ae95c0d5
-ms.sourcegitcommit: a8031c1387d2090129ed33e063744f9f31653dcd
+ms.openlocfilehash: fe1d1a3c5ec13995cb69fff6ba6ec74c7a6c90d9
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "110724548"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307716"
 ---
 # <a name="automate-installs-by-using-settings-in-a-response-file"></a>Automatizace instalací pomocí nastavení v souboru odpovědí
 
 Správci, kteří Visual Studio, mohou zadat soubor odpovědi pomocí `--in` parametru jako v následujícím příkladu:
 
-```cmd
+```shell
 vs_enterprise.exe --in customInstall.json
 ```
 
@@ -37,18 +37,18 @@ Parametry zadané na příkazovém řádku přepíší nastavení ze souboru odp
 
 ## <a name="setting-a-default-configuration-for-visual-studio"></a>Nastavení výchozí konfigurace pro Visual Studio
 
-Pokud jste vytvořili mezipaměť rozložení sítě pomocí , vytvoří se v `--layout` `response.json` rozložení počáteční soubor. Pokud vytvoříte částečné rozložení, bude tento soubor odpovědí obsahovat úlohy a jazyky, které byly zahrnuty v rozložení.  Při spuštění instalačního programu z tohoto rozložení se response.jsna soubor, který vybere úlohy a komponenty zahrnuté v rozložení.  Uživatelé mohou stále vybrat nebo zrušit výběr jakýchkoli úloh v uživatelském rozhraní instalace před instalací Visual Studio.
+Pokud jste vytvořili mezipaměť rozložení sítě pomocí , vytvoří se v `--layout` `response.json` rozložení počáteční soubor. Pokud vytvoříte částečné rozložení, bude tento soubor odpovědi obsahovat úlohy a jazyky, které byly zahrnuty v rozložení.  Při spuštění instalačního programu z tohoto rozložení se response.jsna soubor, který vybere úlohy a komponenty zahrnuté v rozložení.  Uživatelé mohou stále vybrat nebo zrušit výběr jakýchkoli úloh v uživatelském rozhraní instalace před instalací Visual Studio.
 
-Správci, kteří vytvářejí rozložení, můžou upravit soubor v rozložení tak, aby mohli řídit výchozí nastavení, která se uživatelům zobrazí při `response.json` instalaci Visual Studio z rozložení.  Pokud například správce chce ve výchozím nastavení nainstalovat konkrétní úlohy a komponenty, může soubor nakonfigurovat tak, aby `response.json` je přidá.
+Správci, kteří vytvářejí rozložení, můžou upravit soubor v rozložení tak, aby mohli řídit výchozí nastavení, která se uživatelům zobrazí při `response.json` instalaci Visual Studio z rozložení.  Pokud například chce správce ve výchozím nastavení nainstalovat konkrétní úlohy a komponenty, může soubor nakonfigurovat tak, aby je `response.json` přidá.
 
-Když je instalační program sady Visual Studio spuštěn ze složky rozložení, _automaticky_ používá soubor odpovědí ve složce rozložení.  Nemusíte používat `--in` možnost.
+Když Visual Studio instalační program spustí ze složky  rozložení, automaticky použije soubor odpovědi ve složce rozložení.  Tuto možnost nemusíte `--in` používat.
 
-`response.json`Soubor, který je vytvořen ve složce offline rozložení, můžete aktualizovat a definovat tak výchozí nastavení pro uživatele, kteří z tohoto rozložení nainstalují.
+Můžete aktualizovat soubor vytvořený ve složce rozložení offline a definovat výchozí nastavení pro uživatele, `response.json` kteří instalují z tohoto rozložení.
 
 > [!WARNING]
-> Je důležité, abyste nechali existující vlastnosti, které byly definovány při vytváření rozložení.
+> Je velmi důležité ponechat existující vlastnosti, které byly definovány při vytvoření rozložení.
 
-Základní `response.json` soubor v rozložení by měl vypadat podobně jako v následujícím příkladu, s tím rozdílem, že by obsahoval hodnotu pro produkt a kanál, který chcete nainstalovat:
+Základní soubor v rozložení by měl vypadat podobně jako v následujícím příkladu s tím rozdílem, že by zahrnoval hodnotu produktu a kanálu, `response.json` který chcete nainstalovat:
 
 ::: moniker range="vs-2017"
 
@@ -64,7 +64,7 @@ Základní `response.json` soubor v rozložení by měl vypadat podobně jako v 
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ```json
 {
@@ -78,11 +78,11 @@ Základní `response.json` soubor v rozložení by měl vypadat podobně jako v 
 
 ::: moniker-end
 
-Když vytváříte nebo aktualizujete rozložení, vytvoří se také response.template.jsv souboru.  Tento soubor obsahuje všechna ID úloh, komponent a jazyků, které lze použít.  Tento soubor je k dispozici jako šablona pro to, co by bylo možné zahrnout do vlastní instalace.  Správci můžou tento soubor použít jako výchozí bod pro vlastní soubor odpovědí.  Stačí odebrat ID pro věci, které nechcete instalovat, a uložit je do vlastního souboru odpovědí.  Neupravujte response.template.jsv souboru nebo dojde ke ztrátě změn při každém aktualizaci rozložení.
+Když vytvoříte nebo aktualizujete rozložení, vytvoří se response.template.jsna souboru.  Tento soubor obsahuje všechna ID úloh, komponent a jazyků, které je možné použít.  Tento soubor je k dispozici jako šablona pro to, co všechno může být součástí vlastní instalace.  Správci mohou tento soubor použít jako výchozí bod pro vlastní soubor odpovědí.  Stačí odebrat ID věcí, které nechcete instalovat, a uložit je do vlastního souboru odpovědí.  Nepřiznáte si response.template.jssouboru, jinak se změny ztratí při každé aktualizaci rozložení.
 
-## <a name="example-layout-response-file-content"></a>Příklad obsahu souboru odpovědi na rozložení
+## <a name="example-layout-response-file-content"></a>Příklad obsahu souboru odpovědí rozložení
 
-Následující příklad instaluje Visual Studio Enterprise se šesti běžnými úlohami a komponentami a zároveň s jazyky anglické a francouzského uživatelského rozhraní. Tento příklad můžete použít jako šablonu. Stačí změnit úlohy a komponenty na ty, které chcete nainstalovat:
+Následující příklad nainstaluje Visual Studio Enterprise se šesti běžnými úlohami a komponentami a s anglickým i anglickým uživatelským rozhraním. Tento příklad můžete použít jako šablonu. stačí změnit úlohy a komponenty na ty, které chcete nainstalovat:
 
 ::: moniker range="vs-2017"
 
@@ -119,7 +119,7 @@ Následující příklad instaluje Visual Studio Enterprise se šesti běžnými
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ```json
 {
@@ -159,4 +159,4 @@ Následující příklad instaluje Visual Studio Enterprise se šesti běžnými
 ## <a name="see-also"></a>Viz také
 
 * [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
-* [Řešení chyb souvisejících se sítí při instalaci nebo používání sady Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
+* [Řešení chyb souvisejících se sítí při instalaci nebo používání Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)

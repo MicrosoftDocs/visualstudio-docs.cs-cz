@@ -12,12 +12,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: cbb85c41a01a03461bc1a73bdb58620e8a0c472f
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 5048a92f2a8029a4d4fc1c4c44d14f1630116e83
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113199"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307931"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>Rychlý start: Použití Visual Studio k vytvoření první webové služby ASP.NET Core v F\#
 
@@ -32,6 +32,12 @@ Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Vis
 ::: moniker range="vs-2019"
 
 Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Pokud jste si ještě nenainstalujete Visual Studio 2022 Preview, přejděte na stránku [stahování Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 

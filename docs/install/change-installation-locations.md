@@ -16,16 +16,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9e9ee5972a0f1acba37a6b6b417df00a925e5558
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 0e780cca2515118b92b71c406368d29424f7017c
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112112483"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307619"
 ---
 # <a name="select-the-installation-locations-in-visual-studio"></a>Vyberte umístění instalace v Visual Studio
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Změnou umístění některých Visual Studio můžete snížit nároky na instalaci systému na systémové jednotce. Konkrétně můžete použít jiné umístění pro mezipaměť pro stahování, sdílené komponenty, sady SDK a soubory nástrojů.
 
@@ -76,7 +76,7 @@ Jste připraveni začít? Jak na to:
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Při instalaci Visual Studio zvolte kartu **Umístění** instalace.
 

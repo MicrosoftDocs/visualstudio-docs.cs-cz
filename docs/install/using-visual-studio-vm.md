@@ -17,14 +17,14 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 339b3661760ee539bb4135c59863e7e9fdae5afc
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 41247c13e8b35fd6e6cd26ac0ad0ea82f742fbb0
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295816"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306693"
 ---
-# <a name="visual-studio-images-on-azure"></a><a id="top"></a> Image sady Visual Studio v Azure
+# <a name="visual-studio-images-on-azure"></a>Image sady Visual Studio v Azure
 
 Použití sady Visual Studio v předkonfigurovaném virtuálním počítači Azure je rychlý a snadný způsob, jak přejít z žádného nečinnosti do provozního vývojového prostředí. Systémové image s různými konfiguracemi sady Visual Studio jsou k dispozici v [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure).
 
@@ -34,12 +34,12 @@ Jste nováčky v prostředí Azure? [Vytvořte si bezplatný účet Azure](https
 
 Obrázky pro nejaktuálnější hlavní verze, Visual Studio 2019, Visual Studio 2017 a Visual Studio 2015, najdete v Azure Marketplace.  U každé vydané hlavní verze se zobrazí původní verze "vydáno do webu" (RTW) a nejnovější aktualizované verze.  Každá z těchto verzí nabízí Visual Studio Enterprise a edici Visual Studio Community.  Tyto image se aktualizují aspoň každý měsíc, aby zahrnovaly nejnovější aktualizace sady Visual Studio a Windows.  I když názvy imagí zůstanou stejné, popis každého obrázku zahrnuje nainstalovanou verzi produktu a datum "od".
 
-| Verze vydaných verzí                                                                                                                                          | Edice              |    Verze produktu    |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------:|:-----------------------:|
-| [Visual Studio 2019: nejnovější (verze 16,8)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Enterprise, Community | 16.8.0 verze    |
-| [Visual Studio 2019: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | Enterprise            | 16.0.20 verze    |
-| [Visual Studio 2017: nejnovější (verze 15,9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Enterprise, Community | 15.9.29 verze   |
-| [Visual Studio 2017: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Enterprise, Community | 15.0.28 verze   |
+| Verze vydaných verzí                                                                                                                                                | Edice              | Verze produktu       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|-----------------------|
+| [Visual Studio 2019: nejnovější (verze 16,8)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Enterprise, Community | 16.8.0 verze        |
+| [Visual Studio 2019: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | Enterprise            | 16.0.20 verze       |
+| [Visual Studio 2017: nejnovější (verze 15,9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Enterprise, Community | 15.9.29 verze       |
+| [Visual Studio 2017: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Enterprise, Community | 15.0.28 verze       |
 | [Visual Studio 2015: nejnovější (aktualizace 3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)               | Enterprise, Community | 14.0.25431.01 verze |
 
 > [!NOTE]
@@ -92,8 +92,9 @@ S Azure můžete svoji počáteční volbu znovu vyvážit změnou velikosti vir
 ## <a name="after-the-vm-is-running-whats-next"></a>Když je virtuální počítač spuštěný, co dál?
 
 Visual Studio se řídí modelem "Přineste si vlastní licenci" v Azure. Jedním z prvních kroků je jako instalace na proprietární hardware licencování pro instalaci sady Visual Studio. Chcete-li odemknout aplikaci Visual Studio, buď:
-- Přihlaste se pomocí účet Microsoft, která je přidružená k předplatnému sady Visual Studio.
-- Odemkněte Visual Studio pomocí kódu Product Key, který jste obdrželi s vaším počátečním nákupem.
+
+* Přihlaste se pomocí účet Microsoft, která je přidružená k předplatnému sady Visual Studio.
+* Odemkněte Visual Studio pomocí kódu Product Key, který jste obdrželi s vaším počátečním nákupem.
 
 Další informace najdete v tématu [přihlášení do sady Visual Studio](../ide/signing-in-to-visual-studio.md) a [o tom, jak odemknout Visual Studio](../ide/how-to-unlock-visual-studio.md).
 

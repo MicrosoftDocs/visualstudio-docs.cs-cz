@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 011f04d05d468b23955527e05aebf9f6e45ce43c
-ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
+ms.openlocfilehash: cd02bbd2264720a5443807fb431b4dafa2a0a578
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760988"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306433"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se ladit kód C++ pomocí sady Visual Studio
 
@@ -57,6 +57,12 @@ Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke staže
 ::: moniker range=">=vs-2019"
 
 Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Pokud jste ještě nenainstalovali Visual Studio 2022 Preview, nainstalujte ho zdarma na stránku [Visual studio 2022 Preview ke stažení](https://visualstudio.microsoft.com/vs/preview/vs2022) .
 
 ::: moniker-end
 

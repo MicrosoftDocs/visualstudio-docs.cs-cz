@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: cc9557c4b7558488fd8757d3c50920debe134568
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 8491869f5c0d518b394c0baa6a6da91bfeb6c7a3
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112112461"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308373"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Kurz: Začínáme s Visual Basic v Visual Studio
 
@@ -34,6 +34,12 @@ Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Vis
 ::: moniker range="vs-2019"
 
 Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Pokud jste si ještě nenainstalujete Visual Studio 2022 Preview, přejděte na stránku [stahování Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -73,12 +79,12 @@ Pokud šablonu projektu Konzolová **aplikace (.NET Core)** nevidíte, můžete 
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 > [!NOTE]
 > Některé snímky obrazovky v tomto kurzu používají tmavý motiv. Pokud tmavý motiv používáte, ale chcete, podívejte se na stránku Přizpůsobení integrovaného vývojového Visual Studio a [editoru,](../../ide/quickstart-personalize-the-ide.md) kde se dozvíte, jak.
 
-1. Otevřete Visual Studio 2019.
+1. Otevřete sadu Visual Studio.
 
 1. V úvodním okně zvolte **Vytvořit nový projekt.**
 
@@ -146,7 +152,7 @@ Vytvoříme aplikaci, která vás vyzve k zadání vašeho jména a pak ji zobra
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. V projektu *WhatIsYourName* zadejte následující kód Visual Basic za otevírací závorku, která následuje po řádku a před `Sub Main(args As String())` řádek `End Sub` :
 
@@ -208,7 +214,7 @@ Vytvoříme aplikaci, která vás vyzve k zadání vašeho jména a pak ji zobra
 
 ::: moniker-end 
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. V úvodním okně zvolte **Vytvořit nový projekt.** 
 
@@ -247,35 +253,35 @@ Vytvoříme aplikaci, která vás vyzve k zadání vašeho jména a pak ji zobra
 
 ::: moniker-end
 
-## <a name="quick-answers-faq"></a>Rychlé odpovědi – Nejčastější dotazy
+## <a name="quick-answers-faq"></a>Rychlé odpovědi – nejčastější dotazy
 
-Tady je rychlý přehled nejčastějších dotazů, které vám pomůžeme zvýraznit některé klíčové koncepty.
+Tady je stručný přehled nejčastějších dotazů, ve které najdete některé klíčové koncepty.
 
 ### <a name="what-is-visual-basic"></a>Co je Visual Basic?
 
-Visual Basic je typově bezpečný programovací jazyk, který je navržený tak, aby se snadno dozvěděl. Je odvozen od BASIC, což znamená "začátečník kód" na "začátečník".
+Visual Basic je typový programovací jazyk, který je navržený tak, aby se snadno naučil. Je odvozený od základního, což znamená "symbolický kód pro obecné účely začátečníka".
 
 ### <a name="what-is-visual-studio"></a>Co je Visual Studio?
 
-Visual Studio je integrovaná vývojová sada nástrojů pro produktivitu pro vývojáře. Představte si ho jako program, který můžete použít k vytvoření programů a aplikací.
+Visual Studio je integrovaná sada nástrojů pro produktivitu vývojářů. Představte si ho jako program, který můžete použít k vytváření programů a aplikací.
 
-### <a name="what-is-a-console-app"></a>Co je Konzolová aplikace?
+### <a name="what-is-a-console-app"></a>Co je konzolová aplikace?
 
-Konzolová aplikace přebírá vstup a zobrazuje výstup v okně příkazového řádku, označované také jako konzola.
+Konzolová aplikace přijímá vstup a zobrazuje výstup v okně příkazového řádku, označované také jako konzola.
 
 ### <a name="what-is-net-core"></a>Co je .NET Core?
 
-.NET Core je vývojovým dalším krokem .NET Framework. Pokud .NET Framework umožňují sdílet kód mezi programovacími jazyky, .NET Core přidá možnost sdílení kódu napříč platformami. Ještě lepší, jedná se o open source. (.NET Framework i .NET Core zahrnují knihovny předem sestavených funkcí i modul CLR (Common Language Runtime), který funguje jako virtuální počítač, ve kterém se má váš kód spustit.)
+.NET Core je dalším vývojový krok .NET Framework. Tam, .NET Framework vám rozhraní umožnilo sdílet kód napříč programovacími jazyky, přidává .NET Core možnost sdílet kód napříč platformami. Ještě lepší je to open source. (Rozhraní .NET Framework i .NET Core zahrnují knihovny předem připravených funkcí a modul CLR (Common Language Runtime), který funguje jako virtuální počítač, ve kterém se má váš kód spustit.)
 
 ## <a name="next-steps"></a>Další kroky
 
 Blahopřejeme k dokončení tohoto kurzu! Další informace najdete v následujícím kurzu.
 
 > [!div class="nextstepaction"]
-> [Sestavení knihovny pomocí Visual Basic a .NET Core SDK v aplikaci Visual Studio](/dotnet/core/tutorials/vb-library-with-visual-studio)
+> [Sestavení knihovny s Visual Basic a .NET Core SDK v Visual Studio](/dotnet/core/tutorials/vb-library-with-visual-studio)
 
 ## <a name="see-also"></a>Viz také
 
-* [Názorné postupy Visual Basic jazyka](/dotnet/visual-basic/walkthroughs)
+* [Visual Basic jazyka](/dotnet/visual-basic/walkthroughs)
 * [Referenční dokumentace jazyka Visual Basic](/dotnet/visual-basic/language-reference/index)
-* [IntelliSense pro Visual Basic soubory kódu](../../ide/visual-basic-specific-intellisense.md)
+* [IntelliSense pro Visual Basic souborů kódu](../../ide/visual-basic-specific-intellisense.md)

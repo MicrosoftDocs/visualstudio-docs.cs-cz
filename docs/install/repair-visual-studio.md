@@ -1,7 +1,7 @@
 ---
 title: Oprava sady Visual Studio
 titleSuffix: ''
-description: Informace o tom, jak opravit instalaci sady Visual Studio 2017
+description: Zjistěte, jak opravit instalaci Visual Studio 2017.
 ms.date: 10/12/2020
 ms.custom: acquisition
 ms.topic: how-to
@@ -12,78 +12,78 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 8bbd0fe6fdb724c5b3928d430f6ef836f2e49b4c
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 5fd791b035bc99d46f53d499339a9e9f80a42905
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112112909"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306940"
 ---
 # <a name="repair-visual-studio"></a>Oprava sady Visual Studio
 
-V některých případech se vaše instalace sady Visual Studio stane poškozená nebo poškozená. Oprava je užitečná pro opravy potíží při instalaci mezi všemi operacemi instalace, včetně aktualizací.
+Někdy se Visual Studio instalace poškodí nebo poškodí. Oprava je užitečná pro opravu problémů s instalací ve všech operacích instalace, včetně aktualizací.
 
 ## <a name="when-to-use-repair"></a>Kdy použít opravu
-* Pokud máte problémy s datovou částí instalace. K tomu může dojít v případě, že zápis souboru na disk není úspěšný a nelze jej opravit odstraněním poškozeného souboru. Oprava může znovu získat potřebné soubory. 
-* Pokud máte problémy se stažením na straně klienta. Za předpokladu, že jste vyřešili nějaké problémy s připojením nebo proxy, může vám oprava pomáhat. 
-* Pokud máte problémy s aktualizací sady Visual Studio. Oprava opravuje mnoho běžných problémů s aktualizací. 
+* Pokud máte problémy s datovou část instalace. K tomu může dojít v případě, že zápis souboru na disk není úspěšný a není možné ho opravit odstraněním poškozeného souboru. Oprava může znovu získat potřebné soubory. 
+* Pokud máte problémy se stahováním na straně klienta. Za předpokladu, že jste vyřešili problémy s připojením nebo proxy serverem, může pomoct oprava. 
+* Pokud máte problémy s aktualizací Visual Studio. Opravuje mnoho běžných problémů s aktualizacemi. 
 
 > [!TIP] 
-> Pokud problém s instalací způsobuje problém v podkladové službě systému Windows, například Instalační služba systému Windows, může dojít k opravě stejného problému. Systémové problémy mohou zahrnovat poškozené Instalační služba systému Windows nebo nestabilní připojení k Internetu. Chcete-li zjistit, zda nedochází k systémovému problému, použijte zprávu o chybách vygenerovanou operací instalace.
+> Pokud je problém s instalací způsobený problémem v základní službě Windows, jako je Instalační služba systému Windows, může stejný problém vyřešit oprava. Mezi problémy s problémy souvisejícími s problémy patří Instalační služba systému Windows nebo nestabilní připojení k internetu. Pokud chcete zjistit systémový problém, použijte zprávu o chybách vygenerované z operace instalace.
 
 > [!NOTE] 
-> Oprava sady Visual Studio obnoví uživatelská nastavení a znovu nainstaluje již existující sestavení. Pokud jste narazili na problém s produktem, vytvořte si [lístek pro zpětnou vazbu sady Visual Studio](https://aka.ms/feedback/suggest?space=8), protože oprava nemusí problém vyřešit.
+> Oprava Visual Studio resetuje uživatelská nastavení a znovu nainstaluje sestavení, která už máte. Pokud máte problém s produktem, vytvořte lístek zpětné vazby [Visual Studio Feedback,](https://aka.ms/feedback/suggest?space=8)protože oprava nemusí problém vyřešit.
 
-## <a name="how-to-repair"></a>Jak opravit
+## <a name="how-to-repair"></a>Postup opravy
 ::: moniker range="vs-2017"
 
-1. Najděte **instalační program pro Visual Studio** v počítači.
+1. Vyhledejte **Instalační program pro Visual Studio** v počítači.
 
-     Například na počítači s aktualizací Windows 10 pro výročí nebo novější verzi vyberte **Start** a přejděte na písmeno **v**, kde je uvedený jako **instalační program pro Visual Studio**.
+     Například na počítači se systémem Windows 10 Anniversary Update nebo novějším vyberte **Spustit** a posuňte se k písmenu **V,** kde je uvedené **jako Instalační program pro Visual Studio**.
 
    > [!NOTE]
-   > V některých počítačích může být Instalační program pro Visual Studio uveden pod písmenem **"M"** jako **instalační program Microsoft Visual Studio**.
+   > Na některých počítačích může být Instalační program pro Visual Studio uveden pod písmenem **"M"** jako Microsoft Visual Studio **instalační program.**
    >
-   > Případně můžete najít Instalační program pro Visual Studio v následujícím umístění: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+   > Další možností je najít Instalační program pro Visual Studio v následujícím umístění: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-1. Spusťte instalační program, klikněte na tlačítko **Další** a pak zvolte možnost **opravit**.
+1. Otevřete instalační program, zvolte **Další** a pak zvolte **Opravit.**
 
-    ![Opravit Visual Studio z Instalační program pro Visual Studio](media/repair-visual-studio.png "Opravit Visual Studio z Instalační program pro Visual Studio")
+    ![Oprava Visual Studio z Instalační program pro Visual Studio](media/repair-visual-studio.png "Oprava Visual Studio z Instalační program pro Visual Studio")
 
    > [!NOTE]
-   > Oprava sady Visual Studio obnoví prostředí. Místní úpravy, jako jsou například rozšíření pro jednotlivé uživatele nainstalované bez zvýšení oprávnění, nastavení uživatele a profily, se odeberou. Vaše synchronizovaná nastavení, jako jsou motivy, barvy, vazby klíčů, se obnoví.
+   > Oprava Visual Studio resetuje prostředí. Místní přizpůsobení, jako jsou uživatelská rozšíření nainstalovaná bez zvýšení oprávnění, uživatelská nastavení a profily, budou odebrána. Obnoví se vaše synchronizovaná nastavení, jako jsou motivy, barvy nebo klíčové vazby.
    >
 
    > [!TIP]
-   > Možnost **opravit** se zobrazí pouze pro nainstalované instance sady Visual Studio. Pokud nevidíte možnost **opravit** , je pravděpodobné, že jste vybrali **více** ve verzi, která je uvedena v instalační program pro Visual Studio jako "dostupné" místo "nainstalováno".
+   > Možnost **Opravit** se zobrazí pouze pro nainstalované instance Visual Studio. Pokud možnost Opravit  nevidíte, je pravděpodobné, že  jste ve verzi, která je uvedená v seznamu Instalační program pro Visual Studio, vybrali Možnost k dispozici, a ne Jako nainstalované.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Najděte **instalační program pro Visual Studio** v počítači.
+1. Vyhledejte **Instalační program pro Visual Studio** v počítači.
 
-     V nabídce Start systému Windows můžete vyhledat "instalační program".
+     V části nabídka Start Windows můžete vyhledat instalační program.
 
      ![Instalační program pro Visual Studio](media/vs-2019/visual-studio-installer.png "Vyhledejte Instalační program pro Visual Studio")
 
      > [!NOTE]
-     > Instalační program pro Visual Studio můžete najít také v následujícím umístění:
+     > Tento soubor najdete také Instalační program pro Visual Studio v následujícím umístění:
      >
      > `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-    Než budete pokračovat, bude pravděpodobně nutné aktualizovat instalační program. Pokud ano, postupujte podle pokynů.
+    Než budete pokračovat, možná budete muset instalační program aktualizovat. Pokud ano, postupujte podle pokynů.
 
-1. V instalačním programu vyhledejte edici sady Visual Studio, kterou jste nainstalovali. Dále zvolte možnost **Další** a pak zvolte možnost **opravit**.
+1. V instalačním programu vyhledejte edici Visual Studio, kterou jste nainstalovali. Dále zvolte **Další a** pak zvolte **Opravit.**
 
-     ![Opravit Visual Studio 2019](media/vs-2019/vs-installer-repair.png "Opravit Visual Studio 2019")
+     ![Oprava Visual Studio 2019](media/vs-2019/vs-installer-repair.png "Oprava Visual Studio 2019")
 
    > [!NOTE]
-   > Oprava sady Visual Studio obnoví prostředí. Místní úpravy, jako jsou například rozšíření pro jednotlivé uživatele nainstalované bez zvýšení oprávnění, nastavení uživatele a profily, se odeberou. Vaše synchronizovaná nastavení, jako jsou motivy, barvy, vazby klíčů, se obnoví.
+   > Oprava Visual Studio resetuje prostředí. Místní přizpůsobení, jako jsou uživatelská rozšíření nainstalovaná bez zvýšení oprávnění, uživatelská nastavení a profily, budou odebrána. Obnoví se vaše synchronizovaná nastavení, jako jsou motivy, barvy nebo klíčové vazby.
    >
 
    > [!TIP]
-   > Možnost **opravit** se zobrazí pouze pro nainstalované instance sady Visual Studio. Pokud nevidíte možnost **opravit** , je pravděpodobné, že jste vybrali **více** ve verzi, která je uvedena v instalační program pro Visual Studio jako "dostupné" místo "nainstalováno".
+   > Možnost **Opravit** se zobrazí pouze pro nainstalované instance Visual Studio. Pokud možnost Opravit  nevidíte, je pravděpodobné, že  jste ve verzi, která je uvedená v seznamu Instalační program pro Visual Studio, vybrali Možnost k dispozici, a ne Jako nainstalované.
 
 ::: moniker-end
 
@@ -94,4 +94,4 @@ V některých případech se vaše instalace sady Visual Studio stane poškozen�
 * [Instalace sady Visual Studio](install-visual-studio.md)
 * [Aktualizace sady Visual Studio](update-visual-studio.md)
 * [Odinstalace sady Visual Studio](uninstall-visual-studio.md)
-* [Řešení potíží s instalací a upgradem sady Visual Studio](troubleshooting-installation-issues.md)
+* [Řešení Visual Studio s instalací a upgradem](troubleshooting-installation-issues.md)

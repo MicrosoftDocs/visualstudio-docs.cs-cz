@@ -9,19 +9,19 @@ f1_keywords:
 - uninstall
 - uninstall Visual Studio
 ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7d7c4400d553d8244d3b9239f0b0a984d382c99a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d34a5be9598682982c3918aafec7725e59d6f92
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959165"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306784"
 ---
 # <a name="uninstall-visual-studio"></a>Odinstalace sady Visual Studio
 
@@ -68,7 +68,7 @@ Pokud chcete úplně odebrat všechny instalace sady Visual Studio 2017 a Instal
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Najděte **instalační program pro Visual Studio** v počítači.
 
@@ -91,14 +91,14 @@ Pokud chcete úplně odebrat všechny instalace sady Visual Studio 2017 a Instal
 
      ![Potvrzení odinstalace sady Visual Studio](media/vs-2019/uninstall-visualstudio-confirm.png "Potvrďte, že chcete odinstalovat Visual Studio 2019")
 
-Pokud později změníte svůj názor a chcete znovu nainstalovat sadu Visual Studio 2019, spusťte Instalační program pro Visual Studio znovu, zvolte kartu **dostupné** , zvolte edici sady Visual Studio, kterou chcete nainstalovat, a pak vyberte **nainstalovat**.
+Pokud později změníte svůj názor a chcete znovu nainstalovat sadu Visual Studio 2019 nebo 2022, spusťte Instalační program pro Visual Studio znovu, zvolte kartu **dostupné** , zvolte edici sady Visual Studio, kterou chcete nainstalovat, a pak vyberte **nainstalovat**.
 
 ## <a name="uninstall-visual-studio-installer"></a>Odinstalace Instalační program pro Visual Studio
 
-Pokud chcete z počítače odebrat všechny instalace sady Visual Studio 2019 a Instalační program pro Visual Studio, odinstalujte ji z aplikací & funkcí.
+Pokud chcete z počítače odebrat všechny instalace sady Visual Studio 2019, Visual Studio 2022 a Instalační program pro Visual Studio, odinstalujte ji z aplikací & funkcí.
 
 1. V systému Windows 10 zadejte **aplikace a funkce** do pole "typ zde pro hledání".
-1. Vyhledejte **Visual Studio 2019**.
+1. Vyhledejte **Visual studio 2019** nebo **Visual Studio 2022**.
 1. Vyberte možnost **odinstalovat**.
 1. Pak vyhledejte **Instalační službu Microsoft Visual Studio**.
 1. Vyberte možnost **odinstalovat**.

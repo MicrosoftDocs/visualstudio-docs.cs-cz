@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: b361446bb128fcc01ac9a33f3a367b7e60a050c4
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 61fc3f0cf1e23dcf0f9e22ed7e10050fb84c9ba6
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113235"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308061"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první ASP.NET Core webové aplikace
 
@@ -38,6 +38,12 @@ Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke staže
 ::: moniker range="vs-2019"
 
 Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Pokud jste ještě nenainstalovali Visual Studio 2022 Preview, nainstalujte ho zdarma na stránku [Visual studio 2022 Preview ke stažení](https://visualstudio.microsoft.com/vs/preview/vs2022) .
 
 ::: moniker-end
 
@@ -81,7 +87,7 @@ Brzy poté aplikace Visual Studio otevře soubor projektu.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
@@ -177,7 +183,7 @@ Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozv�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. V **Průzkumník řešení** rozbalte složku **stránky** a pak zvolte **index. cshtml**.
 
