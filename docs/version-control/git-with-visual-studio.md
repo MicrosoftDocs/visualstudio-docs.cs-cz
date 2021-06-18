@@ -2,19 +2,19 @@
 title: Prostředí Git v aplikaci Visual Studio 2019
 titleSuffix: ''
 description: Přečtěte si, jak vám nové integrované prostředí Git v rámci sady Visual Studio 2019 může přispět k vyšší produktivitě.
-ms.date: 04/01/2021
+ms.date: 06/17/2021
 ms.topic: overview
 ms.author: tglee
 author: TerryGLee
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.manager: jmartens
-ms.openlocfilehash: 7e8f428ea82fb36abf944b06c22e73f1b9ca9fb6
-ms.sourcegitcommit: 113b7df611583307d3965984233a33355d6b0318
+ms.openlocfilehash: ae5d17bfe09f2ebac5abb37c6d6ceed59c5398d3
+ms.sourcegitcommit: a9526ab1556c47570286c7a7d3314af67fd1dcf0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/16/2021
-ms.locfileid: "112126554"
+ms.lasthandoff: 06/18/2021
+ms.locfileid: "112365453"
 ---
 # <a name="git-experience-in-visual-studio"></a>Prostředí Git v aplikaci Visual Studio
 
@@ -136,33 +136,33 @@ Když v nabídce **Git** vyberete **Spravovat větve** , v okně **úložiště 
 
 ### <a name="incoming-and-outgoing-commits"></a>Příchozí a odchozí potvrzení změn
 
-Při načítání větve má okno Git Changes (Změny **Gitu)** pod rozevíracím seznamem větví indikátor, který zobrazuje počet nevyplněná potvrzení ze vzdálené větve. Tento indikátor také ukazuje počet místních potvrzení, která jsou nepřesunulá.
+Při načítání větve má okno **změn Git** indikátor pod rozevíracím polem větev, který zobrazuje počet nenačtených potvrzení ze vzdálené větve. Tento indikátor také ukazuje počet nenabízených místních potvrzení.
 
-:::image type="content" source="media/git-repo-drop-down-indicator.png" alt-text="Okno Git Changes (Změny Gitu), které zobrazuje prvek uživatelského rozhraní s rozevíracím seznamem indikátorů v Visual Studio ":::
+:::image type="content" source="media/git-repo-drop-down-indicator.png" alt-text="Okno změn Git, které zobrazuje prvek uživatelského rozhraní rozevíracího seznamu indikátoru v aplikaci Visual Studio ":::
 
-Indikátor také funguje jako odkaz, který vás převeze na historii potvrzení této větve v okně **Úložiště Git.** V horní části historie se teď zobrazují podrobnosti o těchto příchozích a odchozích potvrzeních. Tady se také můžete rozhodnout, že potvrzení nastáhnete nebo nastáhnete.
+Indikátor taky funguje jako odkaz, který vás provede do historie potvrzení této větve v okně **úložiště Git** . V horní části Historie se nyní zobrazí podrobnosti o těchto příchozích a odchozích potvrzeních. Z tohoto místa se můžete rozhodnout, že potvrzení změn vyžádáte nebo vynecháte.
 
-:::image type="content" source="media/git-branch-commit-history.png" alt-text="Okno Úložiště Git, které zobrazuje historii potvrzení větve v Visual Studio ":::
+:::image type="content" source="media/git-branch-commit-history.png" alt-text="Okno úložiště Git, které zobrazuje historii potvrzení větve v aplikaci Visual Studio ":::
 
-#### <a name="commit-details"></a>Podrobnosti potvrzení
+#### <a name="commit-details"></a>Podrobnosti potvrzení změn
 
-Když dvakrát kliknete na **potvrzení,** Visual Studio otevře podrobnosti v samostatném okně nástroje. Tady můžete potvrzení vrátit zpět, resetovat potvrzení, pozměnit zprávu potvrzení nebo vytvořit značku pro potvrzení. Když v potvrzení kliknete na změněný soubor, Visual Studio se  vedle sebe otevře rozdílové zobrazení potvrzení a jeho nadřazeného souboru.
+Když dvakrát kliknete na **potvrzení**, Visual Studio otevře jeho podrobnosti v samostatném okně nástrojů. Tady můžete vrátit potvrzení změn, resetovat potvrzení změn, změnit potvrzovací zprávu nebo vytvořit značku na potvrzení. Když kliknete na změněný soubor v potvrzení, Visual Studio otevře souběžné zobrazení **rozdílu** u potvrzení a jeho nadřazeného prvku.
 
-:::image type="content" source="media/git-branch-commit-details.png" alt-text="Dialogové okno Podrobnosti potvrzení v Visual Studio ":::
+:::image type="content" source="media/git-branch-commit-details.png" alt-text="Dialogové okno Podrobnosti potvrzení v aplikaci Visual Studio ":::
 
-## <a name="handle-merge-conflicts"></a>Zpracování konfliktů při slučování
+## <a name="handle-merge-conflicts"></a>Zpracování konfliktů při sloučení
 
-Ke konfliktům může dojít při sloučení, pokud dva vývojáři upravují stejné řádky v souboru a Git automaticky neví, která je správná. Git zastaví sloučení a informuje vás, že jste v konfliktním stavu.
+Konflikty mohou nastat během sloučení, pokud dva vývojáři upravují stejné řádky v souboru a Git automaticky neví, které z nich je správné. Git zastaví sloučení a informuje vás o tom, že jste v konfliktním stavu.
 
-Visual Studio usnadňuje identifikaci a řešení konfliktu při slučování. Nejprve se **v okně Úložiště Git** v horní části okna zobrazí zlatý informační panel.
+Visual Studio usnadňuje identifikaci a řešení konfliktu sloučení. Nejprve okno **úložiště Git** zobrazuje žlutý informační panel v horní části okna.
 
-:::image type="content" source="media/git-merge-conflict-gold-bar.png" alt-text="Zpráva Sloučit dokončeno s konflikty v Visual Studio ":::
+:::image type="content" source="media/git-merge-conflict-gold-bar.png" alt-text="Zpráva &quot;sloučení dokončeno s konflikty&quot; v aplikaci Visual Studio ":::
 
-V **okně Změn Gitu** se také zobrazí zpráva Probíhá sloučení s konflikty a neslouchané soubory jsou v samostatné části pod ní.
+V okně **Git Changes** se také zobrazí zpráva "*sloučení probíhá s konflikty*" s nesloučenými soubory v jejich samostatné části pod ní.
 
-:::image type="content" source="media/git-merge-progress-conflicts-message.png" alt-text="Zpráva Probíhá sloučení s konflikty v Visual Studio ":::
+:::image type="content" source="media/git-merge-progress-conflicts-message.png" alt-text="Zpráva &quot;Probíhá slučování s konflikty&quot; v aplikaci Visual Studio ":::
 
-Pokud ale nemáte žádná z těchto oken otevřená a místo toho přejděte do souboru, který obsahuje konflikty při sloučení, nebudete muset hledat následující text:
+Pokud ale nemáte žádná z těchto oken otevřená a místo toho přejdete do souboru, který obsahuje konflikty sloučení, nebudete muset hledat následující text:
 
 ```bash
     <<<<<<< HEAD
@@ -170,45 +170,49 @@ Pokud ale nemáte žádná z těchto oken otevřená a místo toho přejděte do
     >>>>>>> main
 ```
 
-Místo Visual Studio v horní části stránky zlatý informační panel, který indikuje, že otevřený soubor je v konfliktu. Potom můžete kliknout na odkaz a otevřít **Editor sloučení.**
+Místo toho Visual Studio zobrazí žlutý informační panel v horní části stránky, který označuje, že otevřený soubor obsahuje konflikty. Potom můžete kliknutím na odkaz otevřít **Editor sloučení**.
 
-:::image type="content" source="media/git-merge-conflict-gold-info-bar.png" alt-text="Snímek obrazovky se zprávou Soubor obsahuje konflikty při slučování Visual Studio ":::
+:::image type="content" source="media/git-merge-conflict-gold-info-bar.png" alt-text="Snímek obrazovky &quot;soubor obsahuje konflikty sloučení&quot; v aplikaci Visual Studio ":::
 
 ### <a name="the-merge-editor"></a>Editor sloučení
 
-Editor sloučení v Visual Studio je trojsestupní nástroj pro sloučení, který zobrazuje příchozí změny, aktuální změny a výsledek sloučení. K navigaci mezi konflikty a  automaticky sloučenými rozdíly v souboru můžete použít panel nástrojů na nejvyšší úrovni editoru sloučení.
+Editor sloučení v sadě Visual Studio je třícestný slučovací nástroj, který zobrazuje příchozí změny, aktuální změny a výsledek sloučení. Panel nástrojů na nejvyšší úrovni **editoru sloučení** můžete použít k navigaci mezi konflikty a automaticky sloučenými rozdíly v souboru.
 
-:::image type="content" source="media/git-merge-editor.png" alt-text="Editor sloučení v Visual Studio ":::
+:::image type="content" source="media/git-merge-editor.png" alt-text="Editor sloučení v aplikaci Visual Studio ":::
 
-Pomocí přepínačů můžete také zobrazit/skrýt rozdíly, zobrazit/skrýt rozdíly ve slovech a přizpůsobit rozložení. V horní části každé strany jsou zaškrtávací políčka, která můžete použít k provedení všech změn z jedné nebo druhé strany. Pokud ale chcete provést jednotlivé změny, můžete kliknout na zaškrtávací políčka nalevo od konfliktních řádků na obou stranách. Až konflikty dokončíte, můžete v Editoru  sloučení vybrat tlačítko Přijmout sloučení. Pak napíšete zprávu potvrzení a potvrdíte změny, aby se řešení dokončilo.
+Můžete také použít přepínače k zobrazení nebo skrytí rozdílů, zobrazení nebo skrytí rozdílů v slovech a přizpůsobení rozložení. K dispozici jsou zaškrtávací políčka v horní části každé strany, kterou můžete použít k provedení všech změn z jedné nebo druhé strany. Pokud ale chcete jednotlivé změny provést, můžete kliknout na zaškrtávací políčka nalevo od konfliktních řádků na obou stranách. Nakonec, po dokončení řešení konfliktů, můžete vybrat tlačítko **Přijmout sloučení** v editoru sloučení. Pak napíšete potvrzovací zprávu a potvrďte změny, které dokončí řešení.
 
 ## <a name="personalize-your-git-settings"></a>Přizpůsobení nastavení Gitu
 
-Pokud chcete přizpůsobit a přizpůsobit nastavení Gitu na úrovni úložiště i na globální úrovni, přejděte na panelu nabídek na Nastavení **Gitu** nebo do části Nástroje Možnosti Source Control na  >     >    >   řádku nabídek. Pak zvolte [požadované](git-settings.md) možnosti.
+Chcete-li přizpůsobit a přizpůsobit nastavení Gitu na úrovni úložiště i na globální úrovni, přejděte na položku   >  **Nastavení** Gitu na panelu nabídek nebo na možnost **nástroje**  >    >  **Správa zdrojového kódu** na řádku nabídek. Pak zvolte požadované [Možnosti](git-settings.md) .
 
-:::image type="content" source="media/git-options-settings.png" alt-text="Dialogové okno Možnosti, kde můžete v integrovaném vývojovém prostředí (IDE) zvolit Visual Studio přizpůsobení ":::
+:::image type="content" source="media/git-options-settings.png" alt-text="Dialogové okno Možnosti, kde můžete zvolit nastavení přizpůsobení a přizpůsobení v integrovaném vývojovém prostředí sady Visual Studio ":::
 
-## <a name="how-to-use-the-full-team-explorer-experience-in-visual-studio"></a>Jak používat úplné prostředí Team Explorer v Visual Studio
+::: moniker range="vs-2019"
 
-Nové prostředí Gitu je výchozím systémem pro řízení verzí Visual Studio 2019 od [verze 16.8](/visualstudio/releases/2019/release-notes/) a novější. Pokud ho ale chcete vypnout, můžete. Přejděte na **Nástroje** Možnosti Prostředí Funkce ve verzi Preview a přepněte zaškrtávací políčko Nové uživatelské prostředí  >    >    >   **Gitu,** které vás přepne zpět na Team Explorer pro Git.
+## <a name="how-to-use-the-full-team-explorer-experience-in-visual-studio"></a>Jak používat úplné prostředí Team Explorer v aplikaci Visual Studio
 
-:::image type="content" source="media/git-opt-new-user-experience.png" alt-text="Část Funkce ve verzi Preview dialogového okna Možnosti v Visual Studio ":::
+Nové prostředí Git je výchozím systémem pro správu verzí v aplikaci Visual Studio 2019 od [verze 16,8](/visualstudio/releases/2019/release-notes/) a vyšší. Pokud je však chcete vypnout, můžete. Přejděte do části **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a potom zaškrtněte políčko **nové uživatelské prostředí Git** , které vám přepne zpět na Team Explorer pro Git.
+
+:::image type="content" source="media/git-opt-new-user-experience.png" alt-text="Oddíl funkcí verze Preview dialogového okna Možnosti v aplikaci Visual Studio ":::
+
+::: moniker-end
 
 ## <a name="whats-next"></a>Kam dál
 
-I když je nové prostředí Gitu ve výchozím nastavení v Visual Studio 2019 verze [16.8,](/visualstudio/releases/2019/release-notes/)nadále přidávají nové funkce, které prostředí vylepšují. Pokud si chcete prohlédnout nové aktualizace prostředí Gitu ve verzi Preview, můžete si je stáhnout a nainstalovat [z Visual Studio Preview](https://aka.ms/vspreview/) stránky.
+I když je nové prostředí Git ve výchozím nastavení v aplikaci Visual Studio 2019 [verze 16,8](/visualstudio/releases/2019/release-notes/), budeme k vylepšení prostředí dál přidávat nové funkce. Pokud chcete zaregistrovat nové aktualizace prostředí Git ve verzi Preview, můžete si ho stáhnout a nainstalovat na stránce [Preview sady Visual Studio](https://aka.ms/vspreview/) .
 
 > [!IMPORTANT]
-> Pokud pro nás máte návrh, dejte nám vědět! Vážíme si příležitosti, abyste se mohli při rozhodování o návrhu zapojit prostřednictvím [**Developer Community**](https://aka.ms/vs-suggest) Portalu.
+> Pokud máte k dispozici nějaký návrh, dejte nám prosím nějaké informace. Oceňujeme vám možnost zapojit se do rozhodnutí o návrhu prostřednictvím portálu [**komunity vývojářů**](https://aka.ms/vs-suggest) .
 
 ## <a name="see-also"></a>Viz také
 
-- [Začínáme s Gitem a GitHubem v Visual Studio](/learn/modules/visual-studio-github-push/) kurzu k Microsoft Learn
-- [Začínáme s Gitem ve Visual Studio](https://www.youtube.com/watch?v=GCZ9x3yqkyc) videu na YouTube
-- [Oznámení vydání prostředí Git v](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/) blogovém Visual Studio příspěvku
-- [Uvedení nového videa o prostředí Git na](https://www.youtube.com/watch?v=UHrAg3iKoe0&t) YouTube
-- [Série Visual Studio toolbox představuje: Nové](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) video s prostředím Git na Webu Channel 9 a [na YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be)
-- [Zajímavé nové aktualizace prostředí Gitu v Visual Studio](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/) příspěvku na blogu
-- [Vylepšené prostředí Gitu v blogovém Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)
+- [Začínáme s Git a GitHubem v kurzu sady Visual Studio](/learn/modules/visual-studio-github-push/) o Microsoft Learn
+- [Začínáme s Git v aplikaci Visual Studio](https://www.youtube.com/watch?v=GCZ9x3yqkyc) video na YouTube
+- [Oznamujeme vydání prostředí Git v](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/) příspěvku na blogu sady Visual Studio
+- [Spuštění nového videa o prostředí Git](https://www.youtube.com/watch?v=UHrAg3iKoe0&t) na YouTube
+- Sada [nástrojů sady Visual Studio představuje nové video o prostředí Git](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) na webu Channel 9 a na [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) .
+- [Skvělé nové aktualizace prostředí Git v](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/) příspěvku na blogu sady Visual Studio
+- [Vylepšené prostředí Git v příspěvku na blogu sady Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)
 - [Práce s účty GitHub v sadě Visual Studio](../ide/work-with-github-accounts.md)
-- [Visual Studio k vydání verze 2019](/visualstudio/releases/2019/release-notes)
+- [Zpráva k vydání verze pro Visual Studio 2019](/visualstudio/releases/2019/release-notes)

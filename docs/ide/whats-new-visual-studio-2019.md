@@ -1,7 +1,7 @@
 ---
 title: Novinky v sadě Visual Studio 2019
 titleSuffix: ''
-description: Seznamte se s novými funkcemi v Visual Studio 2019.
+description: Seznamte se s novými funkcemi v aplikaci Visual Studio 2019.
 ms.date: 06/17/2021
 helpviewer_keywords:
 - Visual Studio, what's new
@@ -15,156 +15,156 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f571860d08d16d85e53148bc1023cb08a1c36d2
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: d34c3a3b4d808b1f4e24051763f1c0876a175a3a
+ms.sourcegitcommit: a9526ab1556c47570286c7a7d3314af67fd1dcf0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307775"
+ms.lasthandoff: 06/18/2021
+ms.locfileid: "112365466"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
-**Aktualizace pro verzi 16.10** Viz [úplné poznámky k verzi](/visualstudio/releases/2019/release-notes/) | Zobrazení [plánu produktu](/visualstudio/productinfo/vs-roadmap)
+**Aktualizováno pro verzi 16,10.** Zobrazit [úplné poznámky k verzi](/visualstudio/releases/2019/release-notes/) | Zobrazit [Plán produktu](/visualstudio/productinfo/vs-roadmap)
 
 >[!div class="button"]
 >[Stáhněte si Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
 
-S Visual Studio 2019 získáte nejlepší nástroje a služby pro všechny vývojáře, aplikace a libovolné platformy. Ať už tento Visual Studio používáte poprvé, nebo ho už roky používáte, je v naší nejnovější verzi spousta věcí, které se vám líbí!
+V rámci sady Visual Studio 2019 získáte špičkové nástroje a služby pro všechny vývojáře, aplikace a platformy. Bez ohledu na to, jestli používáte aplikaci Visual Studio poprvé nebo jste ji používali pro roky, máme v naší nejnovější verzi spoustu.
 
-Tady je rekapitulace všech novinek:
+Tady je rekapitulace, co je nového, vše na nejvyšší úrovni:
 
-* **[Vývoj:](#develop)** Díky lepšímu výkonu, okamžitému vyčištění kódu a lepším výsledkům hledání můžete zůstat soustředění a produktivní.
-* **[Spolupráce:](#collaborate)** Užívejte si přirozenou spolupráci prostřednictvím pracovního postupu git-first, úprav a ladění v reálném čase a rešerše kódu přímo Visual Studio.
-* **[Ladění:](#debug)** Zvýrazněte a přejděte na konkrétní hodnoty, optimalizujte využití paměti a pořizujte automatické snímky provádění vaší aplikace.
+* **[Vývoj](#develop)**: zlepšení výkonu, okamžitého vyčištění kódu a lepších výsledků hledání díky lepšímu vývoji a produktivitě.
+* **[Spolupráce](#collaborate)**: Využijte přirozenou spolupráci pomocí pracovního postupu Git-First, úpravy a ladění v reálném čase a revize kódu přímo v aplikaci Visual Studio.
+* **[Ladění](#debug)**: zvýrazněte a přejděte na konkrétní hodnoty, optimalizujte využití paměti a proveďte automatické snímky provádění vaší aplikace.
 
-Úplný seznam všech novinek v této verzi najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes/).
+Úplný seznam všeho, co je v této verzi nové, najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes/).
 
 ## <a name="develop"></a>Vývoj
 
-Další informace o tom, jak ušetřit čas s novými funkcemi, najdete v následujícím videu. <br><br>*Délka videa: 3,00 minut*
+Podívejte se na následující video, kde se dozvíte víc o tom, jak můžete ušetřit čas pomocí nových funkcí. <br><br>*Délka videa: 3,00 minut*
 
 > [!VIDEO https://www.youtube.com/embed/n5sJ4EewKGk]
 
 ### <a name="improved-search"></a>Vylepšené vyhledávání
 
-Naše nové vyhledávací Snadné spuštění, které se dříve označované jako Snadné spuštění, je rychlejší a efektivnější. Teď se výsledky hledání zobrazují dynamicky při psaní. A výsledky hledání mohou často obsahovat klávesové zkratky pro příkazy, abyste si je mohli zapamatovat pro budoucí použití.
+Dříve označované jako rychlé spuštění je naše nové vyhledávání rychlejší a efektivnější. Nyní se při psaní zobrazí výsledky hledání dynamicky. Výsledky hledání mohou často zahrnovat klávesové zkratky pro příkazy, takže je můžete nepamatují pro budoucí použití.
 
-   ![Animace nového vyhledávacího prostředí v Visual Studio 2019](media/vs-2019/new-search-feature.gif "Nové vyhledávací prostředí v Visual Studio 2019.")
+   ![Animace nového vyhledávacího prostředí v aplikaci Visual Studio 2019](media/vs-2019/new-search-feature.gif "Nové vyhledávací prostředí v Visual Studio 2019.")
 
-Nová logika vyhledávání přibližných shod najde vše, co potřebujete, bez ohledu na překlepy. Takže bez ohledu na to, jestli hledáte příkazy, nastavení, dokumentaci nebo jiné užitečné věci, vám nová funkce vyhledávání usnadní hledání hledané funkce.
+Nová logika přibližného vyhledávání bude najít cokoli, co potřebujete, bez ohledu na překlepy. To znamená, že pokud hledáte příkazy, nastavení, dokumentaci nebo jiné užitečné věci, nová funkce vyhledávání usnadňuje hledání, co hledáte.
 
-Další informace najdete v tématu [Použití Visual Studio vyhledávání.](visual-studio-search.md)
+Další informace najdete v tématu [Použití vyhledávání v aplikaci Visual Studio](visual-studio-search.md).
 
-#### <a name="intelligent-search-service"></a>Inteligentní vyhledávací služba
+#### <a name="intelligent-search-service"></a>Služba inteligentního vyhledávání
 
-**Novinka ve službě 16.9:** Díky použití technologie využívající cloud, umělé inteligence a strojového učení jsme vylepšili výsledky hledání. Teď nejen, že vyhledávání v Visual Studio relevantnější výsledky, ale může vám také pomoct snadněji objevit funkce produktu.
+**Novinka v 16,9**: pomocí technologie založené na cloudu, umělé Intelligence a strojového učení jsme vylepšili výsledky hledání. V aplikaci Visual Studio teď není k dismnožější výsledky, ale je možné, že vám také umožní snadněji zjistit funkce produktu.
 
-Další informace najdete v blogovém [příspěvku Intelligent Visual Studio Search](https://devblogs.microsoft.com/visualstudio/intelligent-visual-studio-search-service/) Service.
+Další informace najdete v příspěvku na blogu [inteligentní vyhledávací služba sady Visual Studio](https://devblogs.microsoft.com/visualstudio/intelligent-visual-studio-search-service/) .
 
 ### <a name="refactorings"></a>Refaktoring
 
-V jazyce C# existuje spousta nových a velmi užitečných refaktoringů, které usnadňují uspořádání kódu. Zobrazují se jako návrhy v žárovkě a zahrnují akce, jako je přesun členů do rozhraní nebo základní třídy, úprava oborů názvů tak, aby odpovídaly struktuře složek, převod smyček foreach na dotazy Linq a další.
+V jazyce C# existuje spousta nových a velmi užitečných refaktoringů, které usnadňují uspořádání kódu. Zobrazují se jako návrhy v žárovkě a zahrnují akce jako přesunutí členů do rozhraní nebo základní třídy, úpravy oborů názvů tak, aby odpovídaly struktuře složek, převedení smyček foreach na dotazy LINQ a další.
 
-   ![Animace prostředí refaktoringu v Visual Studio 2019](media/vs-2019/refactorings.gif "Prostředí refaktoringu v Visual Studio 2019.")
+   ![Animace prostředí refaktoringu v aplikaci Visual Studio 2019](media/vs-2019/refactorings.gif "Prostředí refaktoringu v Visual Studio 2019.")
 
-Refaktoringy jednoduše vyvoláte stisknutím **kláves Ctrl+.** a vyberte akci, kterou chcete provést.
+Jednoduše volejte refaktoring stisknutím **kombinace kláves CTRL +.** a vyberte akci, kterou chcete provést.
 
 ### <a name="intellicode"></a>IntelliCode
 
-[Visual Studio IntelliCode](/visualstudio/intellicode/) vylepšuje vaše úsilí o vývoj softwaru pomocí umělé inteligence (AI). IntelliCode trénuje na 2 000 open source projektů na GitHubu s více než &mdash; 100 hvězdičkami, aby &mdash; vygeneroval doporučení.
+[Visual Studio IntelliCode](/visualstudio/intellicode/) vylepšuje úsilí při vývoji softwaru pomocí umělé Intelligence (AI). IntelliCode vlaky napříč 2 000 open source projektů na GitHubu &mdash; každý s více než 100 hvězdičkami &mdash; , aby vygenerovala doporučení.
 
-![Animace IntelliCode v Visual Studio 2019](media/vs-2019/IntelliCode.gif "IntelliCode v Visual Studio 2019.")
+![Animace IntelliCode ve Visual Studiu 2019](media/vs-2019/IntelliCode.gif "IntelliCode v Visual Studio 2019.")
 
-Tady je několik způsobů, jak Visual Studio IntelliCode pomůže zvýšit produktivitu:
+Tady je několik způsobů, jak může Visual Studio IntelliCode přispět k lepší produktivitě:
 
-* Doručování dokončování kódu s kontextem
-* Navedení vývojářů, aby dodržovali vzory a styly svého týmu
-* Vyhledání problémů s kódem, který se obtížně zachytá
-* Zaměřte se na recenze kódu tím, že upoutáte pozornost na oblasti, které jsou skutečně důležité.
+* Doručovat dokončování kódu s ohledem na kontext
+* Příručka pro vývojáře, aby dodržovala vzory a styly jejich týmu
+* Hledání problémů s kódem, který se špatně zachytí
+* Zaměřte se na revize kódu tím, že vykreslíte pozornost oblastí, které skutečně jsou
 
-Původně jsme podporovali pouze C# při prvním zobrazení náhledu IntelliCode jako rozšíření pro Visual Studio. Nyní, **novinka ve windows 16.1,** jsme přidali podporu pro C# a XAML "in-the-box". (Podpora pro C++ a TypeScript/JavaScript je ale stále ve verzi Preview.)
+Po prvním zobrazení IntelliCode jako rozšíření pro Visual Studio jsme původně podporovali jenom C#. **Novinka v 16,1** jsme přidali podporu pro C# a XAML "in-the-box". (Podpora pro C++ a TypeScript/JavaScript je však stále ve verzi Preview.)
 
-A pokud používáte jazyk C#, přidali jsme také možnost vytrénovat vlastní model na vašem vlastním kódu.
+A pokud používáte jazyk C#, Přidali jsme také možnost naučit se vlastní model ve vlastním kódu.
 
-Další informace o IntelliCode najdete v blogových příspěvku Oznamování obecné dostupnosti [IntelliCode a](https://devblogs.microsoft.com/visualstudio/announcing-the-general-availability-of-intellicode-plus-a-sneak-peek/) náhledu kódu a Dalších kódů. Pomocí blogových příspěvků [Visual Studio IntelliCode](https://devblogs.microsoft.com/visualstudio/code-more-scroll-less-with-visual-studio-intellicode/) se posuňte méně.
+Další informace o IntelliCode najdete v tématu popisujícím [obecnou dostupnost IntelliCode a také vás zajímá náhled](https://devblogs.microsoft.com/visualstudio/announcing-the-general-availability-of-intellicode-plus-a-sneak-peek/) a [Další kód. Posuňte se dál pomocí příspěvků Visual studia IntelliCode](https://devblogs.microsoft.com/visualstudio/code-more-scroll-less-with-visual-studio-intellicode/) na blogu.
 
 ### <a name="code-cleanup"></a>Vyčištění kódu
 
-Spárované s novým indikátorem stavu dokumentu je nový příkaz pro vyčištění kódu. Tento nový příkaz můžete použít k identifikaci a opravě upozornění i návrhů jedinou akcí (nebo kliknutím na tlačítko).
+Párování s novým indikátorem stavu dokumentu je nový příkaz pro vyčištění kódu. Pomocí tohoto nového příkazu můžete identifikovat a opravit upozornění i návrhy s jednou akcí (nebo kliknutím na tlačítko).
 
-Vyčištěním se kód naformátuje a použijí se všechny opravy kódu podle aktuálního nastavení [a](code-styles-and-code-cleanup.md) [souborů .editorconfig](create-portable-custom-editor-options.md).
+Vyčištění naformátuje kód a použije všechny opravy kódu navrhované [aktuálním nastavením](code-styles-and-code-cleanup.md) a [soubory. editorconfig](create-portable-custom-editor-options.md).
 
-   ![Snímek obrazovky nového ovládacího prvku vyčištění kódu v Visual Studio 2019](media/vs-2019/code-cleanup-profile.png "Nový ovládací prvek vyčištění kódu v Visual Studio 2019.")
+   ![Snímek obrazovky nového ovládacího prvku pro vyčištění kódu v aplikaci Visual Studio 2019](media/vs-2019/code-cleanup-profile.png "Nový ovládací prvek vyčištění kódu v Visual Studio 2019.")
 
-Kolekce fixerů můžete také uložit jako profil. Pokud máte například malou sadu cílených fixerů, které často používáte při práci s kódem, a pak máte další komplexní sadu oprav, které se mají použít před revizemi kódu, můžete nakonfigurovat profily pro řešení těchto různých úloh.
+Kolekce analyzérů můžete také ukládat jako profil. Například pokud máte malou sadu cílových analyzérů, kterou použijete často během kódu a pak máte další komplexní sadu analyzérů, která se má použít před revizí kódu, můžete nakonfigurovat profily pro řešení těchto různých úloh.
 
-   ![Snímek obrazovky s konfigurací ovládacího prvku pro vyčištění kódu Visual Studio 2019](media/vs-2019/code-cleanup-profile-configure.png "Ovládací prvek konfigurace čištění kódu v Visual Studio 2019.")
+   ![Snímek obrazovky s ovládacím prvkem pro konfiguraci vyčištění kódu v aplikaci Visual Studio 2019](media/vs-2019/code-cleanup-profile-configure.png "Ovládací prvek konfigurace čištění kódu v Visual Studio 2019.")
 
-### <a name="per-monitor-aware-pma-rendering"></a>Vykreslování pma (per-monitor aware)
+### <a name="per-monitor-aware-pma-rendering"></a>Vykreslování PMA (per-monitor)
 
-Pokud používáte monitory nakonfigurované s různými faktory škálování zobrazení nebo se vzdáleně připojíte k počítači s faktory měřítka zobrazení, které se liší od hlavního zařízení, můžete si všimnout, že Visual Studio vypadá rozmazaně nebo se vykresluje ve špatném měřítku.
+Pokud používáte monitory, které jsou nakonfigurované s různými faktory měřítka zobrazení, nebo se vzdáleně připojit k počítači se zobrazenými faktory škálování, které se liší od vašeho hlavního zařízení, můžete si všimnout, že Visual Studio vypadá rozmazaný nebo vykreslený v nesprávném měřítku.
 
-S vydáním Visual Studio 2019 jsme aplikaci pma Visual Studio pro monitorování. Nyní se Visual Studio správně bez ohledu na faktory měřítka zobrazení, které používáte.
+S vydáním sady Visual Studio 2019 provádíme aplikaci Visual Studio a PMA (per-monitor). Nyní se Visual Studio vykresluje správně bez ohledu na to, jaké faktory škálování displeje používáte.
 
-   ![Vykreslování pma (per-monitor aware) v Visual Studio 2019](media/vs-2019/pma-dpi-scaling.png "Vykreslování pma (per-monitor aware) v Visual Studio 2019")
+   ![Vykreslování PMA (per-monitor) v aplikaci Visual Studio 2019](media/vs-2019/pma-dpi-scaling.png "Vykreslování pma (per-monitor aware) v Visual Studio 2019")
 
-Další informace najdete v blogovém příspěvku [Better multi-monitor experience with Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/a-better-multi-monitor-experience-with-visual-studio-2019/) .
+Další informace najdete v blogovém příspěvku o [lepším prostředí pro více monitorů v rámci sady Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/a-better-multi-monitor-experience-with-visual-studio-2019/) .
 
 ### <a name="test-explorer"></a>Průzkumník testů
 
-Novinka ve verzi **16.2:** Aktualizovali jsme Průzkumníka testů tak, aby poskytoval lepší zpracování velkých testovacích sad, snadnější filtrování, zjistitelnější příkazy, zobrazení seznamu stop s kartami a přizpůsobitelné sloupce, které umožňují doladit zobrazené informace o testování.
+**Novinka v 16,2**: Aktualizovali jsme Průzkumníka testů, abychom zajistili lepší zacházení s velkými testovacími sadami, jednodušším filtrováním, více zjistitelnými příkazy, zobrazeními seznamu skladeb na kartách a přizpůsobitelnými sloupci, které vám umožní doladit informace o tom, jaké informace o testu se zobrazují.
 
-   ![Snímek obrazovky znázorňuje vylepšení uživatelského rozhraní v Průzkumníku testů](media/vs-2019/test-explorer-ui.png "Vylepšení uživatelského rozhraní v Průzkumníku testů")
+   ![Snímek obrazovky, který zobrazuje vylepšení uživatelského rozhraní v Průzkumníku testů](media/vs-2019/test-explorer-ui.png "Vylepšení uživatelského rozhraní v Průzkumníku testů")
 
 ### <a name="net-core"></a>.NET Core
 
-**Novinka ve verzi 16.3:** Zahrneme podporu pro .NET Core 3.0. Mezi platformami, open source &mdash; a plně podporuje Microsoft.
+**Novinka v 16,3**: zahrnuli jsme podporu pro .net Core 3,0. Pro různé platformy, open source &mdash; a plně podporované Microsoftem.
 
-Další informace najdete v blogovém příspěvku [Oznamující .NET Core 3.0.](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/)
+Další informace najdete v příspěvku na blogu o [.NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) .
 
 ## <a name="collaborate"></a>Spolupráce
 
-V následujícím videu se dozvíte další informace o tom, jak můžete problémy vyřešit pomocí týmu. <br><br>*Délka videa: 4,22 minuty*
+Podívejte se na následující video, kde se dozvíte víc o tom, jak se dá tým seskupit a vyřešit problémy. <br><br>*Délka videa: 4,22 minut*
 
 > [!VIDEO https://www.youtube.com/embed/dKLJsiK1QU8]
 
-### <a name="git-first-workflow"></a>Pracovní postup git-first
+### <a name="git-first-workflow"></a>Pracovní postup Git – první
 
-Něco, co si všimnete, když otevřete Visual Studio 2019 je jeho nové úvodní okno.
+Něco, co si všimnete při otevření sady Visual Studio 2019, je nové úvodní okno.
 
-   ![Snímek obrazovky nového úvodního okna v Visual Studio 2019](media/vs-2019/start-window-dark.png "Nové úvodní okno v Visual Studio 2019.")
+   ![Snímek obrazovky s novým oknem Start v aplikaci Visual Studio 2019](media/vs-2019/start-window-dark.png "Nové úvodní okno v Visual Studio 2019.")
 
-V úvodním okně se zobrazí několik možností, jak rychle kódovat. Nejprve jsme umístili možnost klonování nebo rezervujení kódu z repo.
+Okno Start nabízí několik možností, jak rychle získat kód. Umístili jsme možnost klonovat nebo rezervovat kód z úložiště, nejdřív.
 
-   ![Animace prostředí Git-first v roce Visual Studio 2019](media/vs-2019/git-first.gif "Prostředí Git-first ve Visual Studio 2019")
+   ![Animace prostředí Git-First v aplikaci Visual Studio 2019](media/vs-2019/git-first.gif "Prostředí Git-first ve Visual Studio 2019")
 
-V úvodním okně jsou také možnosti otevření projektu nebo řešení, otevření místní složky nebo vytvoření nového projektu.
+Okno Start také obsahuje možnosti pro otevření projektu nebo řešení, otevření místní složky nebo vytvoření nového projektu.
 
-Další informace najdete v blogovém příspěvku Get to code: How we designed the new Visual Studio start window (Získat kód: Jak jsme navrhli nový Visual Studio [úvodním okně).](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)
+Další informace najdete v tématu [získání kódu: jak jsme navrhli nový Blogový příspěvek pro úvodní okno sady Visual Studio](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/) .
 
-### <a name="git-productivity"></a>Produktivita Gitu
+### <a name="git-productivity"></a>Produktivita Git
 
-**Novinka ve verzi 16.8:** Git je teď výchozím prostředím pro řízení verzí Visual Studio 2019. Tuto sadu funkcí jsme na základě vaší zpětné vazby v posledních dvou verzích vybudovali a iterovali na ní. Nové prostředí je teď ve výchozím nastavení zapnuté pro všechny. V nové nabídce Gitu můžete klonovat, vytvářet nebo otevírat úložiště. Pomocí integrovaných oken nástrojů Git můžete potvrdit a vložit změny do kódu, spravovat větve, mít aktuální vzdálená úložiště a řešit konflikty při slučování.
+**Novinka ve verzi 16,8**: Git je teď výchozím prostředím pro řízení verzí v aplikaci Visual Studio 2019. Sestavili jsme sadu funkcí a na ni jste na základě vašich názorů za poslední dvě verze zavedli iteraci. Nové prostředí je teď ve výchozím nastavení zapnuté pro všechny. Z nové nabídky Git můžete klonovat, vytvářet nebo otevírat úložiště. Pomocí integrovaných oken nástroje Git můžete zapsat a doručovat změny kódu, spravovat větve, udržovat aktuální úložiště pomocí vzdálených úložišť a vyřešit konflikty sloučení.
 
-Další informace najdete v tématu Prostředí [Git na Visual Studio](../version-control/git-with-visual-studio.md) stránce.
+Další informace najdete na stránce věnované [prostředí Git](../version-control/git-with-visual-studio.md) na stránce sady Visual Studio.
 
 ### <a name="live-share"></a>Live Share
 
-[Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) je vývojářská služba, která umožňuje sdílet základní kód a jeho kontext s kolegou týmu a získat okamžitou obousměrnou spolupráci přímo z Visual Studio. Díky Live Share může kolega z týmu číst, procházet, upravovat a ladit projekt, který s ním sdílíte, a bez problémů a bezpečně.
+[Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) je služba pro vývojáře, která umožňuje sdílet základ kódu a jeho kontext s společník a získat rychlou obousměrnou spolupráci přímo v rámci sady Visual Studio. Pomocí Live Share může společník číst, Procházet, upravovat a ladit projekt, který s nimi sdílíte, a dělat plynule a bezpečně.
 
-A s Visual Studio 2019 se tato služba nainstaluje ve výchozím nastavení.
+A v rámci sady Visual Studio 2019 je tato služba nainstalována ve výchozím nastavení.
 
-![Animace, která znázorňuje funkci Live Share spolupráce v Visual Studio 2019](media/vs-2019/live-share.gif "Funkce Live Share spolupráce v Visual Studio 2019.")
+![Animace, která zobrazuje funkci Live Share spolupráci v aplikaci Visual Studio 2019](media/vs-2019/live-share.gif "Funkce Live Share spolupráce v Visual Studio 2019.")
 
-Další informace najdete v blogovém [příspěvku o](https://devblogs.microsoft.com/visualstudio/visual-studio-live-share-for-real-time-code-reviews-and-interactive-education/) Visual Studio Live Share pro recenze kódu v reálném čase a interaktivním příspěvku o vzdělávání a v blogovém příspěvku Live Share, který je Visual Studio [2019.](https://devblogs.microsoft.com/visualstudio/live-share-now-included-with-visual-studio-2019/)
+Další informace najdete v příspěvku na blogu [Visual Studio Live Share pro revize kódu v reálném čase a](https://devblogs.microsoft.com/visualstudio/visual-studio-live-share-for-real-time-code-reviews-and-interactive-education/) v příspěvku na blogu o interaktivním vzdělávání a v příspěvku na blogu [Live Share sady Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/live-share-now-included-with-visual-studio-2019/) .
 
-### <a name="integrated-code-reviews"></a>Integrované recenze kódu
+### <a name="integrated-code-reviews"></a>Integrované revize kódu
 
-Představujeme nové rozšíření, které si můžete stáhnout pro použití s Visual Studio 2019. S tímto novým rozšířením můžete zkontrolovat, spustit a dokonce i ladit žádosti o přístup od týmu, aniž byste Visual Studio. Podporujeme kód jak v GitHubu, tak Azure DevOps úložištích.
+Zavádíme nové rozšíření, které můžete stáhnout pro použití se sadou Visual Studio 2019. S tímto novým rozšířením můžete kontrolovat, spouštět a dokonce ladit žádosti o přijetí změn od týmu bez nutnosti opustit Visual Studio. Podporujeme kód v úložištích GitHub a Azure DevOps.
 
-   ![Snímek obrazovky s novým rozšířením Pull Requests v Visual Studio 2019](media/vs-2019/pr-experience.png "Nové rozšíření Pull Requests v roce Visual Studio 2019.")
+   ![Snímek obrazovky s novými rozšířeními žádostí o přijetí změn v aplikaci Visual Studio 2019](media/vs-2019/pr-experience.png "Nové rozšíření Pull Requests v roce Visual Studio 2019.")
 
-Další informace najdete v blogovém příspěvku [o rozšíření Code reviews using the Visual Studio Pull Requests.](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/)
+Další informace najdete v příspěvku na blogu o [revizích kódu pomocí rozšíření pro žádosti o získání dat v aplikaci Visual Studio](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/) .
 
 ## <a name="debug"></a>Ladění
 
@@ -232,7 +232,7 @@ Mezitím se v současnosti pracuje s těmito funkcemi:
 
 - **K dispozici je první veřejná verze Visual Studio 2022 (Preview).**
 
-    Veřejná verze Preview naší další hlavní verze, [Visual Studio 2022,](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/)je nyní k dispozici. Nová verze je rychlejší, přístupnější a zjednodušenější. A vůbec poprvé je Visual Studio 64 bitů. Odkaz ke stažení a další informace najdete v blogovém **[příspěvku Visual Studio 2022 Preview 1.](https://devblogs.microsoft.com/visualstudio/?p=232975&preview=true)**
+    Veřejná verze Preview naší další hlavní verze, [Visual Studio 2022,](/visualstudio/releases/2022/release-notes-preview/)je nyní k dispozici. Nová verze je rychlejší, přístupnější a zjednodušenější. A vůbec poprvé je Visual Studio 64 bitů. Odkaz ke stažení a další informace najdete na Visual Studio **[2022 Preview 1.](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/)** Blogu.
 
 ## <a name="give-us-feedback"></a>Sdělte nám svůj názor
 
