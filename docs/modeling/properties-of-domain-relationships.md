@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, domain relationships
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fb50018dccbe03512c8ab6e5f07c17dbcee307d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fc92bbc32a454208f3d455734b7697a2e69037b4
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941330"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390656"
 ---
 # <a name="properties-of-domain-relationships"></a>Vlastnosti vztahů domény
 Vlastnosti v následující tabulce jsou spojeny s doménovým vztahem. Informace o doménových relacích najdete v tématu [porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md). Další informace o tom, jak tyto vlastnosti použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
@@ -31,7 +31,7 @@ Vlastnosti v následující tabulce jsou spojeny s doménovým vztahem. Informac
 |Povoluje duplicity|Pokud `True` je možné vytvořit duplicitní propojení doménových vztahů mezi stejnými dvěma prvky.|`False`|
 |Základní vztahy|Pokud je vztah domény odvozený, základní vztah doménového vztahu.|\<none>|
 |Je vkládání|Pokud `True` je doménovým vztahem relace vložení. Je-li, jedná se o vztah `False` odkazu.|\<both>|
-|Název|Název doménového vztahu.|Aktuální název|
+|Name|Název doménového vztahu.|Aktuální název|
 |Obor názvů|Obor názvů, který je přidružený k doménovým vztahům.|Aktuální obor názvů|
 |Poznámky|Neformální poznámky, které jsou spojeny s doménovým vztahem.|\<none>|
 |Description|Popis, který se používá k dokumentu kódu a který se používá v uživatelském rozhraní vygenerovaného návrháře.|\<none>|

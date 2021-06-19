@@ -1,61 +1,61 @@
 ---
 title: Čtení modelů a diagramů v jiných edicích sady Visual Studio
-description: Přečtěte si informace o čtení modelů a diagramech v aplikaci Visual Studio a také o chování jen pro čtení při použití verze sady Visual Studio, která nepodporuje vytváření modelů.
+description: Přečtěte si o čtení modelů a diagramů v Visual Studio a také o chování jen pro čtení při použití verze Visual Studio která nepodporuje vytváření modelů.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - models, versions of Visual Studio
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a8049471e9e172496381df016c6155410f3bc244
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 95fbf6451a3f07581ff2bdb098428f41904d4276
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882931"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389901"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Čtení modelů a diagramů v jiných edicích sady Visual Studio
 
-Když otevřete model ve verzi sady Visual Studio, která nepodporuje vytváření modelů, model se otevře v režimu jen pro čtení. V tomto režimu můžete změnit rozložení diagramů, ale model nemůžete změnit.
+Když otevřete model ve verzi Visual Studio, která nepodporuje vytváření modelu, otevře se model v režimu jen pro čtení. V tomto režimu můžete změnit rozložení diagramů, ale nemůžete změnit model.
 
-Chcete-li zjistit, které verze sady Visual Studio podporují vytváření modelů, přečtěte si téma [podpora verzí pro architektury a nástroje pro modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Informace o tom, které verze Visual Studio podporují vytváření modelů, najdete v tématu [Podpora verzí pro nástroje architektury a modelování.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
 
 ## <a name="obtaining-access-to-a-model-and-diagrams"></a>Získání přístupu k modelu a diagramům
 
-Chcete-li si přečíst Diagram závislostí, je nutné nejprve pomocí sady Visual Studio otevřít projekt modelování a pak jej otevřít v rámci tohoto diagramu.
+Chcete-li načíst diagram závislostí, Visual Studio nejprve použít příkaz k otevření projektu modelování a pak v diagramu v rámci něj.
 
-Z tohoto důvodu, pokud chcete číst diagram závislostí, musíte mít také přístup k projektu modelování, ve kterém byl vytvořen. To lze provést buď přístupem k projektu ze správy zdrojového kódu, nebo získáním kopie souborů projektu.
+Z tohoto důvodu, pokud chcete číst diagram závislostí, musíte mít také přístup k projektu modelování, ve kterém byl vytvořen. Můžete to provést buď přístupem k projektu ze správy zdrojového kódu, nebo získáním kopie souborů projektu.
 
 > [!NOTE]
-> To se nevztahuje na mapy kódu a diagramy tříd .NET vygenerované z kódu. Tyto diagramy lze zobrazit nezávisle na projektu modelování.
+> To neplatí pro mapy kódu a diagramy tříd .NET generované z kódu. Tyto diagramy lze zobrazit nezávisle na projektu modelování.
 
-Chcete-li si přečíst Diagram závislostí, je minimální sada souborů, kterou potřebujete, následující:
+Pokud chcete načíst diagram závislostí, potřebujete minimální sadu souborů:
 
-- Dva soubory diagramu pro diagram, který chcete číst, například **MyDiagram. classdiagram a MyDiagram. classdiagram. Layout**.
+- Dva soubory diagramu pro diagram, který chcete číst, například **MyDiagram.classdiagram a MyDiagram.classdiagram.layout**.
 
     > [!NOTE]
-    > U diagramů závislostí byste měli mít také soubor s názvem _MyDiagram_**. layerdiagram. potlačení**.
+    > V případě diagramů závislostí byste měli mít také soubor s názvem _MyDiagram_**.layerdiagram.suppressions**.
 
-- Soubor projektu modelování (**MyModel. modelproj**)
+- Soubor projektu modelování (**MyModel.modelproj**)
 
-- Soubor kořenového modelu (**ModelDefinition\MyModel.UML**)
+- Kořenový soubor modelu (**ModelDefinition\MyModel.uml**)
 
-- Soubory balíčku pro každý balíček, na který se odkazuje v diagramu (**ModelDefinition\MyPackage.UML**)
+- Soubory balíčku pro libovolný balíček odkazovaný v diagramu (**ModelDefinition\MyPackage.uml**)
 
-## <a name="changes-that-you-can-make-in-read-only-mode"></a>Změny, které lze provést v režimu Read-Only
+## <a name="changes-that-you-can-make-in-read-only-mode"></a>Změny, které můžete provést v Read-Only režimu
 
-Pokud otevřete model a jeho diagramy ve verzi sady Visual Studio, která nepodporuje vytváření modelů, nelze model změnit. To znamená, že nemůžete změnit prvky a vztahy, které jsou zobrazeny v diagramech nebo v Průzkumníku modelů. V rozložení diagramů ale můžete udělat nějaké změny:
+Pokud otevřete model a jeho diagramy ve verzi Visual Studio, která nepodporuje vytváření modelů, nemůžete model změnit. To znamená, že nemůžete změnit prvky a relace, které se zobrazují v diagramech nebo v průzkumníku modelů. Rozložení diagramů ale můžete změnit:
 
-- Uspořádejte obrazce a spojnice v diagramu.
+- Uspořádání obrazců a konektorů v diagramu
 
-- Rozbalí a sbalí obrazce.
+- Rozbalení a sbalení obrazců
 
-Tyto změny můžete uložit. Pokud chcete, aby se změny projevily ostatním uživatelům, musíte aspoň odeslat aktualizované soubory **. Layout** .
+Tyto změny můžete uložit. Pokud chcete změny zviditelnit pro ostatní uživatele, musíte odeslat aspoň aktualizované **soubory .layout.**
 
 ## <a name="see-also"></a>Viz také
 

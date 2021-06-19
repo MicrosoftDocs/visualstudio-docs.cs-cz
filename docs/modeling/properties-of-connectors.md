@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, connectors
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b09ec4278dd78f797067c3acdf3152736fb395c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 43f55aecf134bf8e4d043a4fc7f6ffa2201f8e95
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899842"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390812"
 ---
 # <a name="properties-of-connectors"></a>Vlastnosti konektorů
 Konektory reprezentují doménové vztahy ve vygenerovaném návrháři.
@@ -29,8 +29,8 @@ Konektory reprezentují doménové vztahy ve vygenerovaném návrháři.
 |-|-|-|
 |Barva|Barva této spojnice|Black|
 |Styl přerušovanosti|Styl přerušovanosti čáry pro tento konektor (Solid, pomlčka, tečka, čárka tečka, čárka tečka tečka nebo vlastní).|Plná|
-|Styl konce zdroje|Styl konce zdroje pro tento konektor (HollowArrow, EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo žádný).|Žádné|
-|Styl konce cíle|Styl konce cíle pro tento konektor (HollowArrow, EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo None).|Žádné|
+|Styl konce zdroje|Styl konce zdroje pro tento konektor (HollowArrow, EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo žádný).|Žádná|
+|Styl konce cíle|Styl konce cíle pro tento konektor (HollowArrow, EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo None).|Žádná|
 |Barva textu|Barva, která se používá pro text dekoratéry, který je spojený s tímto konektorem.|Black|
 |Tloušťka|Tloušťka čáry pro tuto spojnici měřená v palcích|0,03125|
 |Modifikátor přístupu|Úroveň přístupu třídy ( `public` nebo `internal` ).|Veřejná|
@@ -39,7 +39,7 @@ Konektory reprezentují doménové vztahy ve vygenerovaném návrháři.
 |Má vlastní konstruktor|Pokud se `True` vlastní konstruktor poskytne ve zdrojovém kódu. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|Ne|
 |Modifikátor dědičnosti|Popisuje druh dědění třídy zdrojového kódu, který je generován z konektoru ( `none` `abstract` nebo `sealed` ).|žádné|
 |Základní konektor|Základní třída této spojnice.|(žádná)|
-|Název|Název této spojnice|Aktuální název|
+|Name|Název této spojnice|Aktuální název|
 |Obor názvů|Obor názvů, který je přidružen k této spojnici.|Aktuální obor názvů|
 |Typ popisu|Jak je definován popis tlačítka (pevná, proměnná nebo žádný). Je-li tento parametr zadán, je hodnota `Fixed Tooltip Text` vlastnosti použita jako popis; je-li proměnná, je popis tlačítka definován ve vlastním kódu.|\<none>|
 |Poznámky|Neformální poznámky, které jsou přidruženy k tomuto konektoru.|\<none>|

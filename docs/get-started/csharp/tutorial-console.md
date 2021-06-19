@@ -1,7 +1,7 @@
 ---
 title: 'Kurz: Vytvoření jednoduché konzolové aplikace v jazyce C#'
-description: Zjistěte, jak vytvořit konzolovou aplikaci v jazyce C# Visual Studio krok za krokem.
-ms.custom: acquisition, seodec18, get-started
+description: Naučte se, jak vytvořit konzolovou aplikaci v jazyce C# v aplikaci Visual Studio, krok za krokem.
+ms.custom: vs-acquisition, get-started
 ms.date: 02/10/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -15,69 +15,69 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 14128a6c5b533d1bf2fe573310c174f6b6a7f897
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 5f155c2477c97b6f0d18a4cfd3d54386aee68dd9
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308529"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390369"
 ---
-# <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché konzolové aplikace v jazyce C# v Visual Studio
+# <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché konzolové aplikace v jazyce C# v aplikaci Visual Studio
 
-V tomto kurzu pro jazyk C# použijete Visual Studio k vytvoření a spuštění konzolové aplikace a prozkoumáte některé funkce integrovaného vývojového prostředí (IDE) Visual Studio.
+V tomto kurzu pro C# použijete Visual Studio k vytvoření a spuštění konzolové aplikace a Prozkoumejte některé funkce integrovaného vývojového prostředí (IDE) sady Visual Studio.
 
 ::: moniker range="vs-2017"
 
-Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ho zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2022"
 
-Pokud jste si ještě nenainstalujete Visual Studio 2022 Preview, přejděte na stránku [stahování Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) a nainstalujte si ji zdarma.
+Pokud jste ještě nenainstalovali Visual Studio 2022 Preview, nainstalujte ho zdarma na stránku [Visual studio 2022 Preview ke stažení](https://visualstudio.microsoft.com/vs/preview/vs2022) .
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Začneme vytvořením projektu aplikace v jazyce C#. Typ projektu se dodává se všemi soubory šablony, které budete potřebovat, ještě než budete něco přidávat.
+Začněte tím, že vytvoříte projekt aplikace v jazyce C#. Typ projektu se dodává se všemi soubory šablon, které budete potřebovat, než dokonce cokoli přidáte.
 
 ::: moniker range="vs-2017"
 
 1. Otevřete sadu Visual Studio 2017.
 
-2. V horním řádku nabídek zvolte **File** New Project  >  **(Soubor nového**  >  **projektu).**
-   (Případně stiskněte **Ctrl.** + **Shift (Posun)** + **N**).
+2. V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
+   (Případně stiskněte klávesu **CTRL** + **Posun** + **N**).
 
-3. V levém podokně dialogového **okna Nový** projekt rozbalte **C#** a pak zvolte **.NET Core.** V prostředním podokně zvolte **Konzolová aplikace (.NET Core).** Pak soubor pojmnováte **_Calculator (Kalkulačka)._**
+3. V levém podokně dialogového okna **Nový projekt** rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte **_kalkulačku_** souborů.
 
-   ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém Visual Studio Ide](./media/new-project-csharp-calculator-console-app.png)
+   ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](./media/new-project-csharp-calculator-console-app.png)
 
-### <a name="add-a-workload-optional"></a>Přidání úlohy (volitelné)
+### <a name="add-a-workload-optional"></a>Přidat úlohu (volitelné)
 
-Pokud šablonu projektu Konzolová **aplikace (.NET Core)** nevidíte, můžete ji získat přidáním úlohy vývoj pro **různé platformy v .NET Core.** Jak na to:
+Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete ji získat přidáním úlohy **vývoje .NET Core pro různé platformy** . Jak na to:
 
-#### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: Použití dialogového okna Nový projekt
+#### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: použití dialogového okna Nový projekt
 
-1. V **levém Instalační program pro Visual Studio** dialogového okna Nový projekt zvolte **Otevřít** nový projekt.
+1. V levém podokně dialogového okna **Nový projekt** vyberte odkaz **otevřít instalační program pro Visual Studio** .
 
-   ![Zvolte odkaz Otevřít Instalační program pro Visual Studio v dialogovém okně Nový projekt.](./media/csharp-open-visual-studio-installer-generic-dark.png)
+   ![Vyberte odkaz otevřít Instalační program pro Visual Studio z dialogového okna Nový projekt.](./media/csharp-open-visual-studio-installer-generic-dark.png)
 
-1. Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoj pro různé platformy** v .NET Core a pak zvolte **Upravit.**
+1. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
-   ![Úloha vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](./media/dot-net-core-xplat-dev-workload.png)
+   ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](./media/dot-net-core-xplat-dev-workload.png)
 
-#### <a name="option-2-use-the-tools-menu-bar"></a>Možnost 2: Použití řádku nabídek Nástroje
+#### <a name="option-2-use-the-tools-menu-bar"></a>Možnost 2: použití panelu nabídky nástroje
 
-1. Zrušte dialogové **okno Nový** projekt a v horním řádku nabídek zvolte Nástroje **Získat** nástroje a > **funkce.**
+1. Zrušte z dialogového okna **Nový projekt** a v horním řádku nabídky vyberte **nástroje** > **získat nástroje a funkce**.
 
-1. Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoj pro různé platformy** v .NET Core a pak zvolte **Upravit.**
+1. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
 ::: moniker-end
 
@@ -85,54 +85,54 @@ Pokud šablonu projektu Konzolová **aplikace (.NET Core)** nevidíte, můžete 
 
 1. Otevřete sadu Visual Studio.
 
-1. V úvodním okně zvolte **Vytvořit nový projekt.**
+1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-   ![Zobrazení okna Vytvořit nový projekt](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   ![Zobrazit okno vytvořit nový projekt](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. V **okně Vytvořit nový projekt** zvolte v seznamu Jazyk možnost **C#.** Dále v seznamu Platforma zvolte **Windows** a **ze** seznamu typů projektů zvolte Konzola. 
+1. V okně **vytvořit nový projekt** vyberte v seznamu jazyk položku **C#** . Dále ze seznamu typy projektů vyberte možnost **Windows** ze seznamu platforem a **konzole** . 
 
-   Po použití filtrů jazyka, platformy a typu projektu zvolte šablonu **Konzolová** aplikace a pak zvolte **Další.**
+   Po použití filtrů typu jazyk, platforma a typ projektu zvolte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
 
-    :::image type="content" source="./media/vs-2019/csharp-create-new-project-console-net-core.png" alt-text="Zvolte šablonu jazyka C# pro konzolovou aplikaci (.NET Framework).":::
+    :::image type="content" source="./media/vs-2019/csharp-create-new-project-console-net-core.png" alt-text="Zvolit šablonu C# pro konzolovou aplikaci (.NET Framework)":::
 
    > [!NOTE]
-   > Pokud šablonu Konzolová **aplikace nevidíte,** můžete ji nainstalovat z **okna Vytvořit nový** projekt. Ve zprávě **Nehledá se, co hledáte?** zvolte odkaz Instalovat **další** nástroje a funkce.
+   > Pokud nevidíte šablonu **konzolové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
    >
-   > ![Odkaz Install more tools and features (Nainstalovat další nástroje a funkce) ze zprávy Not finding what you're looking for (Najít, co hledáte) v okně Create new project (Vytvořit nový projekt)](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
+   > ![Odkaz pro instalaci dalších nástrojů a funkcí v okně vytvořit nový projekt v části nenajít, co hledáte?](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
-   > Potom v části Instalační program pro Visual Studio úlohu **Vývoj pro různé platformy v .NET Core.**
+   > Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
    >
-   > ![Úloha vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](./media/dot-net-core-xplat-dev-workload.png)
+   > ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](./media/dot-net-core-xplat-dev-workload.png)
    >
-   > Potom zvolte tlačítko **Upravit** v Instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce. Pokud ano, proveďte to. Potom zvolte **Pokračovat a** nainstalujte úlohu. Pak se vraťte ke kroku 2 v[této proceduře "Vytvoření](#create-a-project)projektu".
+   > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu. Pak se vraťte ke kroku 2 v tomto postupu "[Vytvoření projektu](#create-a-project)".
 
-1. V **okně Configure your new project** (Konfigurace nového projektu) zadejte nebo zadejte *Calculator (Kalkulačka)* **do pole Project name (Název** projektu). Pak zvolte **Další.**
+1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *kalkulačku* do pole **název projektu** . Pak klikněte na tlačítko **Další**.
 
-    :::image type="content" source="./media/vs-2019/csharp-name-your-calculator-project.png" alt-text="V okně Configure your new project (Konfigurace nového projektu) zadejte název projektu Calculator.":::
+    :::image type="content" source="./media/vs-2019/csharp-name-your-calculator-project.png" alt-text="v okně Konfigurovat nový projekt pojmenujte svůj projekt Kalkulačka.":::
    
-1. V okně **Další informace** by už mělo být pro cílovou rozhraní vybrané **rozhraní .NET Core 3.1.** Pokud ne, vyberte **.NET Core 3.1.** Pak zvolte **Vytvořit.**
+1. V okně **Další informace** by měl být **.NET Core 3,1** již vybraný pro vaši cílovou architekturu. Pokud ne, vyberte **.NET Core 3,1**. Pak zvolte **vytvořit**.
 
-    :::image type="content" source="./media/vs-2019/csharp-target-framework.png" alt-text="V okně Další informace se ujistěte, že je vybraná možnost .NET Core 3.1.":::
+    :::image type="content" source="./media/vs-2019/csharp-target-framework.png" alt-text="v okně Další informace se ujistěte, že je vybraná možnost .NET Core 3,1.":::
 
-   Visual Studio nový projekt, který obsahuje výchozí kód "Hello World".
+   Visual Studio otevře nový projekt, který obsahuje výchozí kód "Hello World".
 
 ::: moniker-end
 
 ## <a name="create-the-app"></a>Vytvoření aplikace
 
-Nejprve prozkoumáme základní celočíselnou matematiku v jazyce C#. Pak přidáme kód pro vytvoření základní kalkulačky. Potom budeme ladit aplikaci a hledat a opravovat chyby. A nakonec kód zpřesníme, aby byl efektivnější.
+Nejprve prozkoumáme některé základní celočíselné matematické hodnoty v jazyce C#. Pak přidáme kód pro vytvoření základní kalkulačky. Potom budeme ladit aplikaci, abychom našli a opravili chyby. A nakonec kód Vylepšete, aby bylo efektivnější.
 
 ### <a name="explore-integer-math"></a>Seznámení s matematikou celých čísel
 
-Začneme základní celočíselnou matematikou v jazyce C#.
+Pojďme v C# začít s některým z celých čísel Basic Integer Math.
 
 1. V editoru kódu odstraňte výchozí kód "Hello World".
 
-    ![Odstraňte výchozí Hello World kódu z nové aplikace kalkulačky.](./media/csharp-console-calculator-deletehelloworld.png)
+    ![Odstranění výchozího Hello World kódu z nové aplikace kalkulačky](./media/csharp-console-calculator-deletehelloworld.png)
 
-   Konkrétně odstraňte řádek , který říká `Console.WriteLine("Hello World!");` .
+   Konkrétně odstraňte řádek, který říká, `Console.WriteLine("Hello World!");` .
 
-1. Na jeho místo zadejte následující kód:
+1. Do svého umístění zadejte následující kód:
 
     ```csharp
             int a = 42;
@@ -142,30 +142,30 @@ Začneme základní celočíselnou matematikou v jazyce C#.
             Console.ReadKey();
     ```
 
-    Všimněte si, že funkce IntelliSense v Visual Studio nabízí možnost automatického dokončování položky.
+    Všimněte si, že když to uděláte, funkce IntelliSense v aplikaci Visual Studio vám nabídne možnost automatického dokončování záznamu.
 
     > [!NOTE]
-    > Následující animace nemá duplikovat předchozí kód. Jeho účelem je jenom ukázat, jak funkce automatického dokončování funguje.
+    > Následující animace není určena k duplikování předchozího kódu. Je určena pouze k zobrazení, jak funguje funkce automatického dokončování.
 
-    ![Animace celočíselného matematického kódu, který zobrazuje funkci automatického dokončování IntelliSense v Visual Studio IDE](./media/integer-math-intellisense.gif)
+    ![Animace celočíselného matematického kódu, který zobrazuje funkci automatického dokončování IntelliSense v integrovaném vývojovém prostředí sady Visual Studio](./media/integer-math-intellisense.gif)
 
-1. Vyberte zelené tlačítko **Start** vedle **kalkulačky a** sestavte a spusťte program, nebo stiskněte **klávesu F5**.
+1. Zvolte zelené tlačítko **Start** vedle **kalkulačky** a sestavte a spusťte program, nebo stiskněte klávesu **F5**.
 
-   ![Zvolte tlačítko Kalkulačka a spusťte aplikaci z panelu nástrojů.](./media/csharp-console-calculator-button.png)
+   ![Kliknutím na tlačítko kalkulačky spusťte aplikaci z panelu nástrojů.](./media/csharp-console-calculator-button.png)
 
-   Otevře se okno konzoly, ve kterém se zobrazí součet 42 + 119, což je **161**.
+   Otevře se okno konzoly, které odhalí součet 42 + 119, což je **161**.
 
-    ![Okno konzoly zobrazující výsledky celočíselné matematiky](./media/csharp-console-integer-math.png)
+    ![Okno konzoly zobrazující výsledky typu Integer Math](./media/csharp-console-integer-math.png)
 
-1. **(Volitelné)** Pokud chcete změnit výsledek, můžete změnit operátor . Můžete například změnit operátor na řádku kódu pro odčítání, pro `+` `int c = a + b;` násobení nebo pro `-` `*` `/` dělení. Když pak program spustíte, změní se také výsledek.
+1. **(Volitelné)** Chcete-li změnit výsledek, můžete změnit operátor. Například můžete změnit `+` operátor v `int c = a + b;` řádku kódu na `-` pro odčítání, `*` pro násobení nebo `/` pro dělení. Pak se při spuštění programu změní i výsledek.
 
 1. Zavřete okno konzoly.
 
 ### <a name="add-code-to-create-a-calculator"></a>Přidání kódu pro vytvoření kalkulačky
 
-Pokračujme přidáním složitější sady kódu kalkulačky do projektu.
+Pojďme pokračovat přidáním komplexnější sady kódu kalkulačky do vašeho projektu.
 
-1. Odstraňte veškerý kód, který vidíte v editoru kódu.
+1. Odstraňte veškerý kód, který se zobrazí v editoru kódu.
 
 1. Do editoru kódu zadejte nebo vložte následující nový kód:
 
@@ -225,41 +225,41 @@ Pokračujme přidáním složitější sady kódu kalkulačky do projektu.
     }
     ```
 
-1. Zvolte **Kalkulačku,** aby se program spouštěl, nebo stiskněte **klávesu F5**.
+1. Zvolte **kalkulačku** pro spuštění programu nebo stiskněte klávesu **F5**.
 
-   ![Zvolte tlačítko Kalkulačka a spusťte aplikaci z panelu nástrojů.](./media/csharp-console-calculator-button.png)
+   ![Kliknutím na tlačítko kalkulačky spusťte aplikaci z panelu nástrojů.](./media/csharp-console-calculator-button.png)
 
    Otevře se okno konzoly.
 
-1. Zobrazte aplikaci v okně konzoly a podle pokynů přidejte čísla **42** a **119.**
+1. Zobrazte aplikaci v okně konzoly a podle pokynů přidejte čísla **42** a **119**.
 
    Vaše aplikace by měla vypadat podobně jako na následujícím snímku obrazovky:
 
-    ![Okno konzoly zobrazující aplikaci Kalkulačka s výzvami, které akce se mají provádět](./media/csharp-console-calculator.png)
+    ![Okno konzoly zobrazující aplikaci kalkulačky a obsahuje výzvy, které akce se mají provést](./media/csharp-console-calculator.png)
 
-### <a name="add-functionality-to-the-calculator"></a>Přidání funkce do kalkulačky
+### <a name="add-functionality-to-the-calculator"></a>Přidání funkcí do kalkulačky
 
-Pojďme kód upravit a přidat další funkce.
+Pojďme upravit kód pro přidání dalších funkcí.
 
-### <a name="add-decimals"></a>Přidání desetinných míst
+### <a name="add-decimals"></a>Přidat desetinná místa
 
-Aplikace kalkulačky momentálně přijímá a vrací celá čísla. Pokud ale přidáme kód, který umožňuje desetinná čísla, bude přesnější.
+Aplikace kalkulačky aktuálně přijímá a vrací celá čísla. Ale bude přesnější, pokud přidáme kód, který umožňuje desetinných míst.
 
-Stejně jako na následujícím snímku obrazovky platí, že pokud spustíte aplikaci a vydělíte číslo 42 číslem 119, výsledek bude 0 (nula), což není přesné.
+Jak je znázorněno na následujícím snímku obrazovky, pokud aplikaci spouštíte a číslo 42 vydělíte číslem 119, výsledek je 0 (nula), což není přesné.
 
-![Okno konzoly zobrazující aplikaci kalkulačky, která v důsledku toho nevrací desetinná čísla](./media/csharp-console-calculator-nodecimal.png)
+![Okno konzoly zobrazující aplikaci kalkulačky, která nevrací desítkové číslo jako výsledek](./media/csharp-console-calculator-nodecimal.png)
 
-Pojďme kód opravit tak, aby zpracuje desetinná čísla.
+Pojďme kód opravit tak, aby zpracovává desetinná místa.
 
-1. Stisknutím **kláves Ctrl**  +  **H** otevřete ovládací prvek Najít **a** nahradit.
+1. Stisknutím **kombinace kláves CTRL**  +  **H** otevřete ovládací prvek **Najít a nahradit** .
 
-1. Změňte každou instanci `int` proměnné na `float` .
+1. Změňte všechny instance `int` proměnné na `float` .
 
-   Nezapomeňte v ovládacím prvku Najít **a** nahradit přepínat velká a malá písmena **(Alt** C) a Shoda s celým + slovem (**Alt**  + **W).** 
+   Ujistěte se, že jste přepnuli rozlišovat **velikost písmen** (**ALT** + **C**) a **odpovídá celému slovu** (**ALT** + **W**) v ovládacím prvku **Najít a nahradit** .
 
-    ![Animace ovládacího prvku Najít a nahradit znázorňující, jak změnit proměnnou int na float](./media/find-replace-control-animation.gif)
+    ![Animace ovládacího prvku Find a Replace ukazující, jak změnit proměnnou int na float](./media/find-replace-control-animation.gif)
 
-1. Znovu spusťte aplikaci kalkulačky a vydělte **číslo 42** číslem **119.**
+1. Spusťte znovu aplikaci kalkulačky a vydělte číslo **42** číslem **119**.
 
    Všimněte si, že aplikace teď místo nuly vrací desetinné číslo.
 

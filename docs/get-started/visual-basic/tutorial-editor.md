@@ -1,7 +1,10 @@
 ---
-title: Úvod do úprav pro vývojáře Visual Basic
-description: Tento 10 minutový Úvod do editoru kódu v aplikaci Visual Studio ukazuje některé způsoby, jak Visual Studio usnadňuje psaní, navigaci a porozumění Visual Basic kódu.
-ms.custom: seodec18, get-started
+title: Úvod do úprav pro Visual Basic vývojáře
+description: Tento 10minutový úvod do editoru kódu v Visual Studio ukazuje některé způsoby, jak Visual Studio usnadňuje psaní, navigaci a pochopení Visual Basic kódu.
+ms.custom:
+- vs-acquisition
+- seodec18
+- get-started
 ms.date: 11/20/2018
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -12,46 +15,46 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 56f6570b633941c8f7102e245b7668cd31936f83
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: fe411074c95db15fde4819ffb07eca39a05e844d
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308360"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390161"
 ---
 # <a name="learn-to-use-the-code-editor-with-visual-basic"></a>Naučte se používat editor kódu s Visual Basic
 
-V tomto 10 minutách úvodu do editoru kódu v aplikaci Visual Studio přidáme kód do souboru, abyste se mohli podívat na některé ze způsobů, které Visual Studio dělá při psaní, navigaci a porozumění kódu Visual Basic snazší.
+V tomto 10minutového úvodu do editoru kódu v Visual Studio přidáme do souboru kód, který se podívá na některé ze způsobů, jak Visual Studio usnadňuje psaní, navigaci a pochopení Visual Basic kódu.
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
+> Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!TIP]
-> Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+> Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2022"
 
 > [!TIP]
-> Pokud jste ještě nenainstalovali Visual Studio Preview, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) .
+> Pokud jste si ještě nenainstalujete Visual Studio Preview, nainstalujte si ho zdarma na [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) downloads.
 
 ::: moniker-end
 
-V tomto článku se předpokládá, že už jste obeznámeni s Visual Basic. Pokud nejste, doporučujeme se podívat na kurz, například [Začínáme s Visual Basic v aplikaci Visual Studio](../../get-started/visual-basic/tutorial-console.md) jako první.
+Tento článek předpokládá, že už máte zkušenosti s Visual Basic. Pokud ne, doporučujeme, abyste se nejprve podívali na kurz, například Začínáme s [Visual Basic v Visual Studio.](../../get-started/visual-basic/tutorial-console.md)
 
 > [!TIP]
-> Pokud chcete postupovat podle tohoto článku, ujistěte se, že máte vybraná nastavení Visual Basic pro Visual Studio. Informace o výběru nastavení pro integrované vývojové prostředí (IDE) najdete v tématu [Výběr nastavení prostředí](visual-studio-ide.md#select-environment-settings).
+> Pokud chcete postupovat podle pokynů v tomto článku, ujistěte se, že Visual Basic nastavení pro Visual Studio. Informace o výběru nastavení pro integrované vývojové prostředí (IDE) najdete v tématu [Výběr nastavení prostředí.](visual-studio-ide.md#select-environment-settings)
 
-## <a name="create-a-new-code-file"></a>Vytvořit nový soubor kódu
+## <a name="create-a-new-code-file"></a>Vytvoření nového souboru kódu
 
-Začněte vytvořením nového souboru a přidáním nějakého kódu do něj.
+Začněte vytvořením nového souboru a přidáním kódu do něj.
 
 ::: moniker range="vs-2017"
 
@@ -61,45 +64,45 @@ Začněte vytvořením nového souboru a přidáním nějakého kódu do něj.
 
 ::: moniker range=">=vs-2019"
 
-1. Otevřete sadu Visual Studio. Stisknutím klávesy **ESC** nebo kliknutím na **pokračovat bez kódu** v okně Start otevřete vývojové prostředí.
+1. Otevřete sadu Visual Studio. Stisknutím **klávesy Esc** nebo **kliknutím na** Pokračovat bez kódu v úvodním okně otevřete vývojové prostředí.
 
 ::: moniker-end
 
-2. V nabídce **soubor** na řádku nabídek vyberte možnost **nový soubor**.
+2. V **nabídce File** (Soubor) na řádku nabídek zvolte **New File (Nový soubor).**
 
-3. V dialogovém okně **nový soubor** v kategorii **obecné** zvolte položku **Visual Basic třída** a pak zvolte možnost **otevřít**.
+3. V dialogovém **okně Nový** soubor v **kategorii** Obecné zvolte **Visual Basic a** pak zvolte **Otevřít.**
 
-   V editoru se otevře nový soubor s kostrou Visual Basic třídy. (Už si můžete všimnout, že nemusíte vytvářet úplný projekt sady Visual Studio, abyste získali některé výhody, které Editor kódu nabízí, jako je například zvýrazňování syntaxe. Vše, co potřebujete, je soubor kódu!)
+   V editoru se otevře nový soubor s kostru Visual Basic třídy. (Už si můžete všimnout, že nemusíte vytvářet úplný projekt Visual Studio, abyste získali některé z výhod, které editor kódu nabízí, například zvýraznění syntaxe. Potřebujete jen soubor kódu.)
 
-   ![Soubor kódu Visual Basic v aplikaci Visual Studio](media/tutorial-editor.png)
+   ![Visual Basic souboru kódu v Visual Studio](media/tutorial-editor.png)
 
 ## <a name="use-code-snippets"></a>Používání fragmentů kódu
 
-Visual Studio poskytuje užitečné *fragmenty kódu* , které můžete použít k rychlému a snadnému vygenerování běžně používaných bloků kódu. [Fragmenty kódu](../../ide/code-snippets.md) jsou k dispozici pro různé programovací jazyky, včetně Visual Basic, C# a C++. Pojďme přidat **dílčí** fragment Visual Basic do našeho souboru.
+Visual Studio poskytuje užitečné *fragmenty* kódu, které můžete použít k rychlému a snadnému generování běžně používaných bloků kódu. [Fragmenty kódu jsou](../../ide/code-snippets.md) k dispozici pro různé programovací jazyky, včetně Visual Basic, C# a C++. Pojďme do souboru přidat Visual Basic **Sub.**
 
-1. Umístěte kurzor nad řádek, který říká `End Class` , a zadejte **Sub**.
+1. Umístěte kurzor nad řádek s textem `End Class` a zadejte **sub**.
 
-   Zobrazí se automaticky otevírané okno s informacemi o `Sub` klíčovém slově a způsobu vložení **dílčího** fragmentu kódu.
+   Zobrazí se automaticky otevírané dialogové okno s informacemi o klíčovém slově a o `Sub` tom, jak vložit fragment **kódu Sub.**
 
-   ![IntelliSense pro fragment kódu v aplikaci Visual Studio](media/tutorial-intellisense-snippet.png)
+   ![IntelliSense pro fragment kódu v Visual Studio](media/tutorial-intellisense-snippet.png)
 
-1. Stiskněte klávesu **TAB** dvakrát pro vložení fragmentu kódu.
+1. Stisknutím **klávesy Tab** dvakrát vložte fragment kódu.
 
-   Osnova pro proceduru Sub `MySub()` je přidána do souboru.
+   Osnova procedury Sub `MySub()` se přidá do souboru .
 
-Dostupné fragmenty kódu se liší v různých programovacích jazycích. Můžete se podívat na dostupné fragmenty kódu pro Visual Basic tím, že vyberete **Upravit**  >  **IntelliSense**  >  **Vložit fragment** kódu (nebo stisknout **CTRL** + **K**, **CTRL** + **X**). Pro Visual Basic jsou fragmenty kódu k dispozici pro následující kategorie:
+Dostupné fragmenty kódu se liší pro různé programovací jazyky. Dostupné fragmenty kódu pro váš Visual Basic můžete zobrazit tak, že zvolíte Upravit fragment kódu vložení  >  **IntelliSense**  >   (nebo  +   + stisknete Ctrl K , Ctrl X ). Například Visual Basic fragmenty kódu dostupné pro následující kategorie:
 
-![Visual Basic seznam fragmentů kódu](media/tutorial-code-snippet-list.png)
+![Visual Basic seznamu fragmentů kódu](media/tutorial-code-snippet-list.png)
 
-Existují fragmenty pro zjištění, zda soubor existuje v počítači, zápis do textového souboru, čtení hodnoty registru, provádění dotazu SQL a vytvoření příkazu [pro každý... Další příkaz](/dotnet/visual-basic/language-reference/statements/for-each-next-statement)a mnoho dalších.
+Existují fragmenty kódu, které určují, jestli v počítači existuje soubor, zapisování do textového souboru, čtení hodnoty registru, spuštění dotazu SQL, vytvoření příkazu [For Each... Další příkaz](/dotnet/visual-basic/language-reference/statements/for-each-next-statement)a mnoho dalších.
 
-## <a name="comment-out-code"></a>Kód odhlašovacího komentáře
+## <a name="comment-out-code"></a>Okomentování kódu
 
-Panel nástrojů, který je řádkem tlačítek pod řádkem nabídek v sadě Visual Studio, vám může při psaní kódu zvýšit produktivitu. Můžete například přepnout režim dokončování IntelliSense, zvětšit nebo zmenšit odsazení řádku nebo komentovat kód, který nechcete kompilovat. ([IntelliSense](../../ide/using-intellisense.md) je podpora kódování, která zobrazuje seznam metod porovnání, mimo jiné.) V této části budeme komentovat nějaký kód.
+Panel nástrojů, což je řádek tlačítek pod řádkem nabídek v Visual Studio, vám může pomoct zvýšit produktivitu při práci s kódem. Můžete například přepnout režim dokončování IntelliSense, zvětšit nebo zmenšit odsazení řádku nebo okomentovat kód, který nechcete kompilovat. ([IntelliSense](../../ide/using-intellisense.md) je kódovací pomůcka, která mimo jiné zobrazuje seznam odpovídajících metod.) V této části zakomentujeme nějaký kód.
 
 ![Tlačítka panelu nástrojů editoru](media/tutorial-editor-toolbar.png)
 
-1. Do těla procedury vložte následující kód `MySub()` .
+1. Do těla procedury vložte `MySub()` následující kód.
 
    ```vb
    ' _words is a string array that we'll sort alphabetically
@@ -123,35 +126,35 @@ Panel nástrojů, který je řádkem tlačítek pod řádkem nabídek v sadě Vi
                Select word
    ```
 
-1. Nepoužíváme `morewords` pole, ale můžeme ho použít později, takže ho nechceme úplně odstranit. Místo toho pojďme tyto řádky komentovat. Vyberte celou definici `morewords` pro pravou složenou závorku a pak zvolte tlačítko **Přidat komentář k vybraným řádkům** na panelu nástrojů. Pokud dáváte přednost používání klávesnice, stiskněte klávesy **CTRL** + **K**, **CTRL** + **C**.
+1. Toto pole nebudeme používat, ale můžeme ho použít později, takže ho nechcete úplně `morewords` odstranit. Místo toho tyto řádky zakomentujeme. Vyberte celou definici u uzavírací složené závorky a pak zvolte tlačítko Okomentovat vybrané řádky `morewords` na panelu nástrojů.  Pokud dáváte přednost použití klávesnice, stiskněte **Ctrl** + **K** a **Ctrl** + **C.**
 
-   ![Tlačítko odkomentovat](media/tutorial-comment-out.png)
+   ![Tlačítko Pro okomentování](media/tutorial-comment-out.png)
 
-   Znak komentáře Visual Basic `'` se přidá na začátek každého vybraného řádku, aby se přidal komentář ke kódu.
+   Znak Visual Basic se přidá na začátek každého vybraného řádku, aby se kód `'` okomentoval.
 
-## <a name="collapse-code-blocks"></a>Sbalit bloky kódu
+## <a name="collapse-code-blocks"></a>Sbalení bloků kódu
 
-Můžete sbalit části kódu a soustředit se jenom na části, které vás zajímají. Chcete-li postupovat, sbalte `_words` pole na jeden řádek kódu. Vyberte malé šedé pole s znaménkem mínus uvnitř něj v okraji řádku, který říká `Dim _words = New String() {` . Nebo, pokud jste uživatel klávesnice, umístěte kurzor kamkoli do definice pole a stiskněte **kombinaci kláves CTRL** + **m**, **CTRL** + **m**.
+Můžete sbalit oddíly kódu a zaměřit se pouze na části, které vás zajímají. Procvičme si sbalení `_words` pole na jeden řádek kódu. Vyberte malé šedé pole se znaménkem minus uvnitř na okraji řádku s textem `Dim _words = New String() {` . Nebo, pokud jste uživatel klávesnice, umístěte kurzor kamkoli do definice pole a stiskněte **Ctrl** + **M**, **Ctrl** + **M**.
 
-![Sbalit sbalení – tlačítko](media/tutorial-collapse.png)
+![Sbalení tlačítka](media/tutorial-collapse.png)
 
-Blok kódu se sbalí jenom na první řádek následovaný třemi tečkami ( `...` ). Chcete-li znovu rozšířit blok kódu, klikněte na stejné šedé pole, ve kterém je nyní přihlášeno znaménkem plus, nebo stiskněte **kombinaci kláves CTRL** + **m**, **CTRL** + **m** znovu. Tato funkce se nazývá [sbalení a je](../../ide/outlining.md) obzvláště užitečná, když sbalíte dlouhé metody nebo celé třídy.
+Blok kódu se sbalí jenom na první řádek a za ním tři tečky ( `...` ). Pokud chcete blok kódu znovu rozbalit, klikněte na stejné šedé pole, ve které je teď znaménko plus, nebo znovu stiskněte **Ctrl** + **M**, **Ctrl** + **M.** Tato funkce se nazývá [osnova](../../ide/outlining.md) a je zvláště užitečná, když sbalíte dlouhé metody nebo celé třídy.
 
-## <a name="view-symbol-definitions"></a>Zobrazit definice symbolů
+## <a name="view-symbol-definitions"></a>Zobrazení definic symbolů
 
-Editor sady Visual Studio usnadňuje kontrolu definice typu, metody atd. Jedním ze způsobů je přejít na soubor, který obsahuje definici, například výběrem možnosti **Přejít k definici** kdekoli, kde se odkazuje na symbol. Ještě rychlejší způsob, který nepřesouvá fokus ze souboru, ve kterém pracujete, je použití [náhledu definice](../../ide/go-to-and-peek-definition.md#peek-definition). Pojďme si prohlížet definici `String` typu.
+Editor Visual Studio usnadňuje kontrolu definice typu, metody atd. Jedním ze způsobů je přejít na soubor, který obsahuje definici, například výběrem možnosti **Přejít** k definici všude, kde se symbol odkazuje. Ještě rychlejší způsob, jak přesunout fokus od souboru, ve které pracujete, je použít náhled [definice](../../ide/go-to-and-peek-definition.md#peek-definition). Pojďme se podívat na definici `String` typu.
 
-1. Klikněte pravým tlačítkem myši na slovo `String` a v nabídce obsah vyberte možnost **Náhled definice** . Nebo stiskněte **ALT** + **F12**.
+1. Klikněte pravým tlačítkem na slovo a v nabídce obsahu zvolte Náhled `String` definice.  Nebo stiskněte **Klávesu Alt** + **F12**.
 
-   Zobrazí se automaticky otevírané okno s definicí `String` třídy. V místním okně se můžete posouvat nebo dokonce prohlížet definici jiného typu z prohlíženého kódu.
+   Zobrazí se automaticky otevírané okno s definicí `String` třídy . V automaticky otevíraných oknech se můžete posouvat nebo se v náhledu kódu dokonce podívat na definici jiného typu.
 
-   ![Náhled okna definice](media/tutorial-peek-definition.png)
+   ![Okno Náhled definice](media/tutorial-peek-definition.png)
 
-1. Zavřete okno s náhledem definice výběrem malého pole se znakem x v pravém horním rohu automaticky otevíraného okna.
+1. Zavřete okno náhledu definice výběrem malého pole s x v pravém horním rohu automaticky otevíraných oken.
 
-## <a name="use-intellisense-to-complete-words"></a>Doplňování slov pomocí IntelliSense
+## <a name="use-intellisense-to-complete-words"></a>Použití IntelliSense k dokončení slov
 
-[IntelliSense](../../ide/using-intellisense.md) je nevýznamný prostředek při kódování. Může zobrazit informace o dostupných členech typu nebo podrobnosti o parametrech pro různá přetížení metody. Pomocí technologie IntelliSense můžete také vyplnit slovo poté, co zadáte dostatečný počet znaků, které chcete určit jako nejednoznačnost. Pojďme přidat řádek kódu pro vytištění seřazených řetězců do okna konzoly, což je standardní místo pro výstup z programu k přechodu.
+[IntelliSense](../../ide/using-intellisense.md) je neocenitelný prostředek při psaní kódu. Může zobrazit informace o dostupných členech typu nebo podrobnosti o parametru pro různá přetížení metody. IntelliSense můžete použít také k dokončení slova po zadání dostatečného počet znaků, aby bylo možné ho jednoznačně rozpoznat. Přidejme řádek kódu pro tisk seřazených řetězců do okna konzoly, což je standardní místo pro výstup z programu.
 
 1. Pod `query` proměnnou začněte psát následující kód:
 
@@ -159,11 +162,11 @@ Editor sady Visual Studio usnadňuje kontrolu definice typu, metody atd. Jedním
    For Each str In qu
    ```
 
-   Vidíte, že vám IntelliSense ukáže **rychlé informace** o `query` symbolu.
+   Zobrazí se funkce IntelliSense s **rychlými informacemi** o `query` symbolu.
 
-   ![Dokončování slov IntelliSense v aplikaci Visual Studio](media/tutorial-intellisense-completion-list.png)
+   ![Dokončování slov IntelliSense v Visual Studio](media/tutorial-intellisense-completion-list.png)
 
-1. Chcete-li vložit zbytek slova `query` pomocí funkce dokončování slov v technologii IntelliSense, stiskněte klávesu **TAB**.
+1. Pokud chcete vložit zbytek slova pomocí funkce dokončování slov `query` technologie IntelliSense, stiskněte **klávesu Tab**.
 
 1. Dokončete blok kódu, aby vypadal jako následující kód.
 
@@ -173,21 +176,21 @@ Editor sady Visual Studio usnadňuje kontrolu definice typu, metody atd. Jedním
    Next
    ```
 
-## <a name="refactor-a-name"></a>Refaktorovat název
+## <a name="refactor-a-name"></a>Refaktoring názvu
 
-Nikdo nezíská kód napravo poprvé a jedna z věcí, kterou je třeba změnit, je název proměnné nebo metody. Pojďme si vyzkoušíme funkci [refaktoru](../../ide/refactoring-in-visual-studio.md) sady Visual Studio, která proměnnou přejmenuje `_words` na `words` .
+Nikdo na první pohled nedostane kód a jednou z věcí, které možná budete muset změnit, je název proměnné nebo metody. Pojďme si vyzkoušet Visual Studio funkce [refaktoringu](../../ide/refactoring-in-visual-studio.md) a proměnnou přejmenujte `_words` na `words` .
 
-1. Umístěte kurzor na definici `_words` proměnné a v místní nabídce klikněte pravým tlačítkem myši na možnost **Přejmenovat** .
+1. Umístěte kurzor na definici proměnné a v místní nabídce nebo kliknutí pravým tlačítkem zvolte `_words` Přejmenovat. 
 
-   Automaticky otevíraná okna pro **přejmenování** se zobrazí v pravém horním rohu editoru.
+   V pravém horním **rohu** editoru se zobrazí automaticky otevírané dialogové okno Přejmenovat.
 
-1. Když je proměnná `_words` stále vybraná, zadejte požadované názvy **slov**. Všimněte si, že odkaz na `words` v dotazu je také automaticky přejmenován. Před stisknutím klávesy **ENTER** nebo kliknutím na možnost **použít** zaškrtněte políčko **zahrnout komentáře** v automaticky otevíraném okně pro **přejmenování** .
+1. Když je `_words` proměnná stále vybraná, zadejte požadovaný název **slov**. Všimněte si, že `words` odkaz na v dotazu je také automaticky přejmenován. Než **stisknete Enter** nebo **kliknete na Použít,** zaškrtněte políčko Include comments (Zahrnout **komentáře)** v automaticky otevírané nabídce **Přejmenovat.**
 
    ![přejmenování dialogového okna](media/tutorial-rename.png)
 
-1. Stiskněte klávesu **ENTER** nebo klikněte na **použít**.
+1. Stiskněte **Enter** nebo klikněte na **Použít.**
 
-   Oba výskyty `words` jsou přejmenovány a také odkaz na `words` Komentář kódu.
+   Oba výskyty se přejmenují, stejně jako `words` odkaz na v `words` komentáři ke kódu.
 
 ## <a name="next-steps"></a>Další kroky
 

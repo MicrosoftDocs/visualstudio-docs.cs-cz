@@ -1,7 +1,7 @@
 ---
 title: Ladění vícevláknových aplikací | Microsoft Docs
 description: Ladění vícevláknových aplikací v aplikaci Visual Studio. Přečtěte si nástroje a další články o ladění aplikací s více vlákny.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/06/2018
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e7a133b4b59b11525a7f7ba776b3b4a4a1e6a31e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5551ffd39bfe3485d0b6e31def0b3cfff9c7e3b1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873207"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389758"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>Ladění vícevláknových aplikací v aplikaci Visual Studio
 Vlákno je posloupnost pokynů, na které operační systém uděluje čas procesoru. Každý proces, který běží v operačním systému, se skládá alespoň z jednoho vlákna. Procesy, které mají více než jedno vlákno, se nazývají multithreading.

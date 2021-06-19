@@ -1,7 +1,7 @@
 ---
 title: 'Hello World aplikace s WPF v jazyce C #'
 description: Vytvořte jednoduchou desktopovou aplikaci .NET pro Windows v jazyce C# s Visual Studio s využitím rozhraní Windows Presentation Foundation (WPF).
-ms.custom: seodec18, get-started
+ms.custom: vs-acquisition, get-started
 ms.date: 02/10/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -14,12 +14,12 @@ ms.author: jmartens
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: ee7b5ecc023d1319f4d7551e0e7b186d76d86741
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 268797369fbd878d99028303fa17ba71626a07fb
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308477"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390265"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Kurz: Vytvoření jednoduché aplikace pomocí jazyka C\#
 

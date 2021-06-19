@@ -1,67 +1,67 @@
 ---
 title: Vlastnosti dekorátorů
-description: Přečtěte si, že dekoratéry jsou ikony, text nebo rozbalit nebo sbalit šipky, které se mohou objevit na tvarech nebo spojnicích v diagramu.
+description: Zjistěte, že dekorátory jsou ikony, text nebo rozbalení/sbalení chevrons, které se dají zobrazit na tvarech nebo konektorech v diagramu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, decorators
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e29dcda43fdbb7b60567ff0aa0627b41ca3ca299
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f3436bb800142e7c85594f4b05cef6fb45c4489
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873785"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390799"
 ---
 # <a name="properties-of-decorators"></a>Vlastnosti dekorátorů
-Dekoratéry jsou ikony, text nebo rozbalit/sbalit šipky, které se mohou objevit na tvarech nebo spojnicích v diagramu. V následujících tabulkách jsou uvedeny vlastnosti pro tři druhy dekoratér. Některé vlastnosti se zobrazí pouze u obrazce dekoratéry nebo pouze na dekoratéry konektoru.
+Dekorátory jsou ikony, text nebo rozbalení/sbalení chevrons, které se dají zobrazit u obrazců nebo konektorů v diagramu. Následující tabulky zobrazují vlastnosti pro tři druhy dekoratéra. Některé vlastnosti se zobrazují pouze u dekorátorů obrazce nebo pouze u dekorátorů konektorů.
 
- Další informace najdete v tématu [definování Domain-Specificho jazyka](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak tyto vlastnosti použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
+ Další informace najdete v [tématu Definování jazyka Domain-Specific .](../modeling/how-to-define-a-domain-specific-language.md) Další informace o použití těchto vlastností naleznete v tématu [Customizing and Extending a Domain-Specific Language](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
-## <a name="expandcollapse-decorator"></a>Rozbalit/sbalit dekoratér
-
-|Vlastnost|Popis|Výchozí|
-|-|-|-|
-|DisplayName|Název dekoratér, který se zobrazí ve vygenerovaném návrháři.|Rozbalit sbalení dekoratér|
-|Název|Název dekoratér.|ExpandCollapseDecorator|
-|Poznámky|Neformální poznámky, které jsou spojeny s tímto dekoratér.|\<none>|
-|HorizontalOffset|Vodorovný posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
-|VerticalOffset|Svislý posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
-|OffsetFromLine|Posun dekoratéru od řádku vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
-|OffsetFromShape|Posun dekoratér od tvaru vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
-|Pozice|Výchozí pozice dekoratéru|SourceTop|
-
-## <a name="icon-decorator"></a>Dekoratér ikony
+## <a name="expandcollapse-decorator"></a>Rozbalení/sbalení dekorátoru
 
 |Vlastnost|Popis|Výchozí|
 |-|-|-|
-|DefaultIcon|Cesta k souboru ikony nebo obrázku, který se má zobrazit|\<none>|
-|DisplayName|Název dekoratér, který se má zobrazit ve vygenerovaném návrháři.|Dekoratér ikony|
-|Název|Název dekoratér.|IconDecorator|
-|Poznámky|Neformální poznámky, které jsou přidruženy k dekoratér.|\<none>|
-|HorizontalOffset|Vodorovný posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
-|VerticalOffset|Svislý posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
-|OffsetFromLine|Posun dekoratéru od řádku vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
-|OffsetFromShape|Posun dekoratér od tvaru vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
-|Pozice|Výchozí pozice dekoratéru|SourceTop|
+|DisplayName|Název dekoratéru, který se zobrazí ve vygenerované návrháři.|Rozbalení dekorátoru sbalení|
+|Name|Název dekorátoru.|ExpandCollapseDecorator|
+|Poznámky|Neformální poznámky, které jsou přidruženy k tomuto dekorátoru.|\<none>|
+|HorizontalOffset|Vodorovný posun vzhledem k výchozí pozici dekorátoru v palcích. (Pouze u obrazců.)|0|
+|Verticaloffset|Svislý posun vzhledem k výchozí pozici dekorátoru v palcích. (Pouze u obrazců.)|0|
+|PosunFromLine|Posun dekorátoru od čáry vzhledem k jeho výchozí pozici v palcích. (Jenom u konektorů.)|0|
+|PosunFromShape|Posun dekorátoru od obrazce vzhledem k jeho výchozí pozici v palcích. (Jenom u konektorů.)|0|
+|Pozice|Výchozí pozice dekorátoru.|SourceTop|
 
-## <a name="textdecorator"></a>TextDecorator
+## <a name="icon-decorator"></a>Dekorátor ikon
 
 |Vlastnost|Popis|Výchozí|
 |-|-|-|
-|DefaultText|Výchozí text, který se má zobrazit|Popisek|
-|DisplayName|Název dekoratér, který se má zobrazit ve vygenerovaném návrháři.|Popisek|
-|FontSize|Velikost písma textu zobrazeného v dekoratéru|8|
-|FontStyle|Styl písma textu, který se zobrazí v dekoratér.|Pravidelný|
-|Název|Název dekoratér.|Popisek|
-|Poznámky|Neformální poznámky, které jsou přidruženy k dekoratér.|\<none>|
-|HorizontalOffset|Vodorovný posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
-|VerticalOffset|Svislý posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
+|DefaultIcon (Výchozí Icon)|Cesta k ikoně nebo souboru obrázku, který se má zobrazit.|\<none>|
+|DisplayName|Název dekorátoru, který se má zobrazit ve vygenerované návrháři.|Dekorátor ikon|
+|Name|Název dekorátoru.|IkonaDecorator|
+|Poznámky|Neformální poznámky, které jsou přidruženy k dekorátoru.|\<none>|
+|HorizontalOffset|Vodorovný posun vzhledem k výchozí pozici dekorátoru v palcích. (Pouze u obrazců.)|0|
+|Verticaloffset|Svislý posun vzhledem k výchozí pozici dekorátoru v palcích. (Pouze u obrazců.)|0|
+|PosunFromLine|Posun dekorátoru od čáry vzhledem k jeho výchozí pozici v palcích. (Jenom u konektorů.)|0|
+|PosunFromShape|Posun dekorátoru od obrazce vzhledem k jeho výchozí pozici v palcích. (Jenom u konektorů.)|0|
+|Pozice|Výchozí pozice dekorátoru.|SourceTop|
+
+## <a name="textdecorator"></a>TextDecorator (Textový decorator)
+
+|Vlastnost|Popis|Výchozí|
+|-|-|-|
+|Výchozítext|Výchozí text, který se má zobrazit.|Popisek|
+|DisplayName|Název dekorátoru, který se má zobrazit ve vygenerované návrháři.|Popisek|
+|Fontsize|Velikost písma pro text, který je zobrazen v dekorátoru.|8|
+|Fontstyle|Styl písma pro text, který je zobrazen v dekorátoru.|Pravidelný|
+|Name|Název dekorátoru.|Popisek|
+|Poznámky|Neformální poznámky, které jsou přidruženy k dekorátoru.|\<none>|
+|HorizontalOffset|Vodorovný posun vzhledem k výchozí pozici dekorátoru v palcích. (Pouze u obrazců.)|0|
+|Verticaloffset|Svislý posun vzhledem k výchozí pozici dekorátoru v palcích. (Pouze u obrazců.)|0|
 |OffsetFromLine|Posun dekoratéru od řádku vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
 |OffsetFromShape|Posun dekoratér od tvaru vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
 |Pozice|Výchozí pozice dekoratéru|TargetBottom|

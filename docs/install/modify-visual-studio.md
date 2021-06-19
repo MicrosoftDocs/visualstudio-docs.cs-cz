@@ -4,7 +4,7 @@ titleSuffix: ''
 description: Zjistěte, jak Visual Studio postupy, krok za krokem.
 ms.date: 10/12/2020
 ms.topic: how-to
-ms.custom: acquisition
+ms.custom: vs-acquisition
 helpviewer_keywords:
 - modify Visual Studio
 - change visual studio
@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 638ec555a6fbef53d19a15c8a6cde26ff121aa0e
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 435ee6ad72141453e89aadcfd4ac3310bde0d538
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112306979"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112391072"
 ---
 # <a name="modify-visual-studio-workloads-components-and-language-packs"></a>Úprava Visual Studio úloh, komponent a jazykových sad
 

@@ -9,23 +9,23 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 06f4baed4851681065f3f7ccafecd3af339398f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f46e2b774cd4da2ef9cdb9ddef7efd19f731ade7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957371"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112391020"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Diagramy závislostí: pokyny
 
 Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *diagramy závislosti* v aplikaci Visual Studio. Ujistěte se, že váš kód zůstává v souladu s tímto návrhem ověřováním kódu pomocí diagramu závislostí. Do procesu sestavení můžete také zahrnout ověřování vrstvy. Podívejte [se na video pro kanál 9: návrh a ověření architektury pomocí diagramů závislostí](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture).
 
-Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 > [!NOTE]
 > Diagramy závislostí pro projekty .NET Core jsou podporovány počínaje verzí Visual Studio 2019 verze 16,2.
@@ -115,64 +115,64 @@ Chcete-li popsat změny, které plánujete udělat v systému nebo zamýšlené 
 
 ### <a name="improving-the-structure-of-the-code"></a><a name="Improving"></a> Zlepšení struktury kódu
 
-Změny refaktoringu jsou vylepšení, která neovlivňují chování aplikace, ale usnadňují změnu a rozšiřování kódu v budoucnu. Dobře strukturovaný kód má návrh, který se snadno zaabstrakcí do diagramu závislostí.
+Změny refaktoringu jsou vylepšení, která neovlivňují chování aplikace, ale usnadňují změnu a rozšiřování kódu v budoucnu. Dobře strukturovaný kód má návrh, který lze snadno abstrahovat do diagramu závislostí.
 
-Například pokud vytvoříte vrstvu pro každý obor názvů v kódu a pak zpětnou analýzu závislostí, měla by být minimální sada jednosměrných závislostí mezi vrstvami. Pokud vytvoříte podrobnější diagram pomocí tříd nebo metod jako vašich vrstev, pak výsledek by měl mít také stejné charakteristiky.
+Pokud například vytvoříte vrstvu pro každý obor názvů v kódu a pak reverzní analýzu závislostí, měla by mezi vrstvami být minimální sada jednosměnných závislostí. Pokud vytvoříte podrobnější diagram pomocí tříd nebo metod jako vrstev, měl by mít výsledek také stejné charakteristiky.
 
-V takovém případě se kód v průběhu své životnosti obtížně změní a bude méně vhodný pro ověřování pomocí diagramů závislostí.
+Pokud tomu tak není, bude změna kódu v průběhu jeho životnosti obtížnější a bude méně vhodná pro ověřování pomocí diagramů závislostí.
 
 ## <a name="design-new-areas-of-your-application"></a><a name="NewAreas"></a> Návrh nových oblastí aplikace
 
-Při zahájení vývoje nového projektu nebo nové oblasti v novém projektu lze nakreslit vrstvy a závislosti, které vám pomohou identifikovat hlavní komponenty před začátkem vývoje kódu.
+Když začnete s vývojem nového projektu nebo nové oblasti v novém projektu, můžete nakreslit vrstvy a závislosti, které vám pomůžou identifikovat hlavní komponenty, než začnete vyvíjet kód.
 
-- Pokud je to možné, zobrazit v diagramech závislosti **identifikovatelné struktury architektury** . Diagram závislosti, který popisuje desktopovou aplikaci, může například zahrnovat vrstvy, jako je prezentace, doménová logika a úložiště dat. Diagram závislosti, který pokrývá jednu funkci v rámci aplikace, může mít vrstvy, jako je model, zobrazení a kontroler. Další informace o těchto vzorech najdete v tématu [vzory & postupy: Architektura aplikace](https://archive.codeplex.com/?p=apparch).
+- **Pokud je to možné, můžete** v diagramech závislostí zobrazit identifikovatelné vzory architektury. Například diagram závislostí, který popisuje desktopovou aplikaci, může zahrnovat vrstvy, jako je prezentace, logika domény a úložiště dat. Diagram závislostí, který pokrývá jednu funkci v rámci aplikace, může mít vrstvy, jako je model, zobrazení a kontroler. Další informace o těchto vzorech najdete v tématu [Patterns & Practices: Application Architecture](https://archive.codeplex.com/?p=apparch).
 
-- **Vytvořte artefakt kódu pro každou vrstvu** , například obor názvů, třídu nebo komponentu. Díky tomu je snazší sledovat kód a propojit artefakty kódu s vrstvami. Jakmile vytvoříte každý artefakt, propojte jej s příslušnou vrstvou.
+- **Vytvořte artefakt kódu pro každou vrstvu,** například obor názvů, třídu nebo komponentu. To usnadňuje sledování kódu a propojení artefaktů kódu s vrstvami. Jakmile každý artefakt vytvoříte, propoejte ho s příslušnou vrstvou.
 
-- **Nemusíte propojit většinu tříd a jiných artefaktů s vrstvami** , protože spadají do větších artefaktů, jako jsou například obory názvů, které již byly propojeny s vrstvami.
+- **Většinu tříd a dalších** artefaktů není třeba propojit s vrstvami, protože spadají do větších artefaktů, jako jsou obory názvů, které už máte propojené s vrstvami.
 
-- **Vytvoří nový diagram pro novou funkci**. Obvykle bude k dispozici jeden nebo více diagramů závislostí, které popisují celou aplikaci. Pokud navrhujete novou funkci v rámci aplikace, nepřidávejte nebo neměňte existující diagramy. Místo toho vytvořte vlastní diagram, který odráží nové části kódu. Mezi vrstvy v novém diagramu může patřit prezentace, logika domény a vrstva databáze pro novou funkci.
+- **Vytvořte nový diagram pro novou funkci**. Obvykle bude k dispozici jeden nebo více diagramů závislostí popisujících celou aplikaci. Pokud v rámci aplikace navrhovat novou funkci, nepřidáte do stávajících diagramů ani je neměňte. Místo toho vytvořte vlastní diagram, který odráží nové části kódu. Vrstvy v novém diagramu můžou zahrnovat prezentační vrstvy, logiku domény a databázové vrstvy pro novou funkci.
 
-     Když sestavíte aplikaci, váš kód se ověří jak z celkového diagramu, tak z diagramu podrobnějších funkcí.
+     Při sestavování aplikace se váš kód ověří jak v celkovém diagramu, tak v podrobnějším diagramu funkcí.
 
-## <a name="edit-the-layout-for-presentation-and-discussion"></a><a name="EditLayout"></a> Upravit rozložení prezentace a diskuze
+## <a name="edit-the-layout-for-presentation-and-discussion"></a><a name="EditLayout"></a> Úprava rozložení pro prezentaci a diskuzi
 
-Pro usnadnění identifikace vrstev a závislostí nebo jejich diskuzi se členy týmu upravte vzhled a rozložení diagramu následujícími způsoby:
+Abyste mohli snadno identifikovat vrstvy a závislosti nebo je probrat se členy týmu, upravte vzhled a rozložení diagramu následujícími způsoby:
 
-- Změna velikosti, tvarů a pozic vrstev.
+- Změňte velikosti, tvary a pozice vrstev.
 
-- Změna barev vrstev a závislostí.
+- Změňte barvy vrstev a závislostí.
 
-  - Vyberte jednu nebo více vrstev nebo závislostí, klikněte pravým tlačítkem myši a pak klikněte na **vlastnosti**. V okně **vlastnosti** upravte vlastnost **Color** .
+  - Vyberte jednu nebo více vrstev nebo závislostí, klikněte pravým tlačítkem a potom klikněte na **Vlastnosti**. V **okně Vlastnosti** upravte vlastnost **Color.**
 
-## <a name="validate-the-code-against-the-diagram"></a><a name="Validate"></a> Ověření kódu proti diagramu
+## <a name="validate-the-code-against-the-diagram"></a><a name="Validate"></a> Ověření kódu v diagramu
 
-Pokud jste diagram upravili, můžete ho kdykoli ověřit pomocí kódu ručně nebo automaticky pokaždé, když sestavíte.
+Po úpravě diagramu ho můžete kdykoli ručně ověřit v kódu nebo automaticky pokaždé, když ho sestavíte.
 
 Přečtěte si:
 
 - [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)
 
-- [Zahrnout ověřování vrstvy do procesu sestavení](#BuildValidation)
+- [Zahrnutí ověření vrstvy do procesu sestavení](#BuildValidation)
 
 ## <a name="update-the-code-to-conform-to-the-new-architecture"></a><a name="UpdateCode"></a> Aktualizujte kód tak, aby odpovídal nové architektuře.
 
-Obvykle se chyby zobrazí při prvním ověření kódu proti aktualizovanému diagramu závislostí. Tyto chyby mohou mít několik příčin:
+Chyby se obvykle zobrazí při prvním ověření kódu proti aktualizovanému diagramu závislostí. Tyto chyby mohou mít několik příčin:
 
 - Artefakt je přiřazen nesprávné vrstvě. V tomto případě přesuňte artefakt.
 
 - Artefakt, jako je například třída, používá jiné třídy způsobem, který je v konfliktu s architekturou. V tomto případě refaktorujte kód a odeberte závislost.
 
-Chcete-li tyto chyby odstranit, aktualizujte kód, dokud se během ověřování neobjeví žádné chyby. To je obvykle iterativní proces. Další informace o těchto chybách najdete v tématu [ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md).
+Chcete-li tyto chyby odstranit, aktualizujte kód, dokud se během ověřování neobjeví žádné chyby. Obvykle se jedná o iterativní proces. Další informace o těchto chybách najdete v tématu [Ověření kódu pomocí diagramů závislostí.](../modeling/validate-code-with-layer-diagrams.md)
 
 > [!NOTE]
-> Při vývoji nebo refaktorování kódu mohou být k dispozici nové artefakty, které by bylo možné propojit s diagramem závislostí. To však nemusí být nutné, například když máte vrstvy, které reprezentují existující obory názvů, a nový kód přidá více materiálů do těchto oborů názvů.
+> Při vývoji nebo refaktoringu kódu můžete mít nové artefakty pro propojení s diagramem závislostí. To však nemusí být nutné, například pokud máte vrstvy, které představují existující obory názvů, a nový kód přidá do těchto oborů názvů pouze další materiály.
 
-Během procesu vývoje můžete chtít potlačit některé vykázané konflikty během ověřování. Například můžete chtít potlačit chyby, které již řešíte nebo které nejsou relevantní k danému scénáři. Pokud potlačíte chybu, je vhodné Protokolovat pracovní položku v Team Foundation. Chcete-li provést tuto úlohu, přečtěte si téma [ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md).
+Během procesu vývoje můžete chtít potlačit některé vykázané konflikty během ověřování. Například můžete chtít potlačit chyby, které již řešíte nebo které nejsou relevantní k danému scénáři. Když chybu potlačíte, je vhodné protokolovat pracovní položku v Team Foundation. Pokud chcete tuto úlohu provést, podívejte [se na stránku Ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md).
 
-## <a name="include-layer-validation-in-the-build-process"></a><a name="BuildValidation"></a> Zahrnout ověřování vrstvy do procesu sestavení
+## <a name="include-layer-validation-in-the-build-process"></a><a name="BuildValidation"></a> Zahrnutí ověření vrstvy do procesu sestavení
 
-Chcete-li zajistit, aby budoucí změny v kódu odpovídaly diagramům závislostí, zahrňte ověřování vrstvy do procesu standardního sestavení vašeho řešení. Kdykoli ostatní členové týmu sestaví řešení, všechny rozdíly mezi závislostmi v kódu a diagramem závislostí budou hlášeny jako chyby sestavení. Další informace o tom, jak zahrnout ověřování vrstev v procesu sestavení, naleznete v tématu [ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md).
+Pokud chcete zajistit, aby budoucí změny v kódu odpovídaly diagramům závislostí, zahrpište ověřování vrstev do standardního procesu sestavení vašeho řešení. Kdykoli ostatní členové týmu sestaví řešení, všechny rozdíly mezi závislostmi v kódu a diagramem závislostí budou hlášeny jako chyby sestavení. Další informace o zahrnutí ověřování vrstev do procesu sestavení najdete v tématu Ověření [kódu pomocí diagramů závislostí.](../modeling/validate-code-with-layer-diagrams.md)
 
 ## <a name="see-also"></a>Viz také
 

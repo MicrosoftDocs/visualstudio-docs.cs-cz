@@ -1,6 +1,6 @@
 ---
 title: Vytvoření kódu a textové šablony T4
-description: Zjistěte, jak je šablona textu T4 kombinací textových bloků a řídicí logiky, která může vygenerovat textový soubor.
+description: Zjistěte, jak je textová šablona T4 kombinace textových bloků a řídicí logiky, která může generovat textový soubor.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - code generation
 - text templates
 - generating code
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 262ab0638a128fe94561debabe35e20723fb6615
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 76714be09c38f6426626e94ee7734873c823f704
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861813"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389771"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Vytvoření kódu a textové šablony T4
 
-V aplikaci Visual Studio je *Textová šablona T4* kombinací textových bloků a řídicí logiky, která může vygenerovat textový soubor. Logika ovládacího prvku je zapsána jako fragmenty kódu programu v systému [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . V systému Visual Studio 2015 Update 2 a novějších můžete použít funkce C# verze 6,0 v direktivách šablon T4. Vygenerovaný soubor může být text libovolného typu, jako je například webová stránka nebo soubor prostředků nebo zdrojový kód programu v libovolném jazyce.
+V Visual Studio *textová šablona T4* je kombinace textových bloků a řídicí logiky, která může generovat textový soubor. Řídicí logika se zapisuje jako fragmenty programového kódu v [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . V Visual Studio 2015 Update 2 a novějších verzích můžete použít funkce jazyka C# verze 6.0 v direktivách šablon T4. Vygenerovaný soubor může být libovolný text, například webová stránka, soubor prostředků nebo zdrojový kód programu v libovolném jazyce.
 
 Existují dva druhy textových šablon T4: doba běhu a doba návrhu.
 
-## <a name="run-time-t4-text-templates"></a>Šablony textu T4 v době běhu
+## <a name="run-time-t4-text-templates"></a>Textové šablony T4 za běhu
 
-Známé také jako šablony předzpracovaného běhu jsou spouštěny ve vaší aplikaci, aby vytvořily textové řetězce, obvykle jako součást výstupu. Můžete například vytvořit šablonu pro definování stránky HTML:
+Šablony běhu, označované také jako předzpracované šablony, se ve vaší aplikaci spouštěly, aby se vytvářely textové řetězce, obvykle jako součást jejího výstupu. Můžete například vytvořit šablonu pro definování stránky HTML:
 
 ```
 <html><body>
@@ -40,27 +40,27 @@ Známé také jako šablony předzpracovaného běhu jsou spouštěny ve vaší 
 </body></html>
 ```
 
-Všimněte si, že šablona se podobá vygenerovanému výstupu. Podobnost šablony s výsledným výstupem vám pomůže vyhnout se chybám, když je chcete změnit.
+Všimněte si, že šablona vypadá podobně jako vygenerovaný výstup. Podobnost šablony s výsledným výstupem vám pomůže vyhnout se chybám, když ji chcete změnit.
 
-Kromě toho šablona obsahuje fragmenty kódu programu. Tyto fragmenty můžete použít k opakování oddílů textu, k vytvoření podmíněných oddílů a k zobrazení dat z aplikace.
+Kromě toho šablona obsahuje fragmenty kódu programu. Pomocí těchto fragmentů můžete opakovat oddíly textu, vytvořit podmíněné oddíly a zobrazit data z vaší aplikace.
 
-Chcete-li vygenerovat výstup, vaše aplikace volá funkci, která je vygenerována šablonou. Příklad:
+K vygenerování výstupu volá aplikace funkci, která je vygenerována šablonou. Příklad:
 
 ```csharp
 string webResponseText = new MyTemplate().TransformText();
 ```
 
-Vaše aplikace může běžet na počítači, na kterém není nainstalovaná aplikace Visual Studio.
+Vaše aplikace může běžet na počítači, který nemá nainstalované Visual Studio počítače.
 
-Chcete-li vytvořit šablonu run-time, přidejte do projektu soubor **předzpracované textové šablony** . Alternativně můžete přidat textový soubor a nastavit jeho vlastnost **vlastní nástroj** na **TextTemplatingFilePreprocessor**.
+Pokud chcete vytvořit šablonu za běhu, přidejte **do** projektu soubor předzpracované textové šablony. Případně můžete přidat soubor prostého textu a nastavit jeho vlastnost **Vlastní** nástroj na **TextTemplatingFilePreprocessor.**
 
-Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md). Další informace o syntaxi šablon najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
+Další informace najdete v tématu Generování textu za běhu pomocí [textových šablon T4.](../modeling/run-time-text-generation-with-t4-text-templates.md) Další informace o syntaxi šablon najdete v tématu [Zápis textové šablony T4.](../modeling/writing-a-t4-text-template.md)
 
-## <a name="design-time-t4-text-templates"></a>Šablony textu T4 v době návrhu
+## <a name="design-time-t4-text-templates"></a>Textové šablony T4 doby návrhu
 
-Šablony návrhu definují část zdrojového kódu a dalších prostředků vaší aplikace. Obvykle používáte několik šablon, které čtou data v jednom vstupním souboru nebo databázi, a vygenerujete některé z vašich souborů *. cs*, *. vb* nebo jiných zdrojových souborů. Každá šablona generuje jeden soubor. Jsou spouštěny v sadě Visual Studio nebo MSBuild.
+Šablony času návrhu definují část zdrojového kódu a další prostředky vaší aplikace. Obvykle se používá několik šablon, které čtou data v jednom vstupním souboru nebo databázi a generují některé zdrojové soubory *.cs*, *.vb* nebo jiné. Každá šablona vygeneruje jeden soubor. Jsou spouštěny v rámci Visual Studio nebo MSBuild.
 
-Vstupní data by například mohla být soubor XML s konfiguračními daty. Kdykoli upravíte soubor XML během vývoje, textové šablony znovu vygenerují část kódu aplikace. Jedna ze šablon by mohla vypadat podobně jako v následujícím příkladu:
+Vstupními daty může být například soubor XML konfiguračních dat. Pokaždé, když upravíte soubor XML během vývoje, textové šablony znovu vygenerují část kódu aplikace. Jedna ze šablon může vypadat podobně jako v následujícím příkladu:
 
 ```
 <#@ output extension=".cs" #>
@@ -74,7 +74,7 @@ namespace Fabrikam.<#= configurationData.SelectSingleNode("jobName").Value #>
 }
 ```
 
-V závislosti na hodnotách v souboru XML by generovaný soubor *. cs* vypadal takto:
+V závislosti na hodnotách v souboru XML by vygenerovaný soubor *.cs* měl vypadat takto:
 
 ```
 namespace Fabrikam.FirstJob
@@ -83,16 +83,16 @@ namespace Fabrikam.FirstJob
 }
 ```
 
-Jako další příklad může být vstup diagram pracovního postupu v obchodní aktivitě. Když uživatelé změní svůj obchodní pracovní postup nebo když začnete pracovat s novými uživateli, kteří mají jiný pracovní postup, můžete kód snadno vygenerovat tak, aby odpovídal novému modelu.
+Dalším příkladem může být diagram pracovního postupu v obchodní aktivitě. Když uživatelé změní pracovní postup nebo když začnete pracovat s novými uživateli, kteří mají jiný pracovní postup, je snadné znovu vygenerovat kód tak, aby odpovídal novému modelu.
 
-Šablony návrhu umožňují rychlejší a spolehlivější změnu konfigurace v případě změny požadavků. Obvykle je vstup definovaný v souladu s obchodními požadavky, jako v příkladu pracovního postupu. Díky tomu je snazší diskutovat o změnách s vašimi uživateli. Šablony návrhu jsou proto užitečným nástrojem v procesu agilního vývoje.
+Šablony v době návrhu urychlí a spolehlivěji změní konfiguraci při změně požadavků. Vstup je obvykle definován z hlediska obchodních požadavků, jako v příkladu pracovního postupu. To usnadňuje diskuzi o změnách s uživateli. Šablony v době návrhu jsou proto užitečným nástrojem v procesu agilní vývoje.
 
-Chcete-li vytvořit šablonu pro dobu návrhu, přidejte do projektu soubor **textové šablony** . Alternativně můžete přidat textový soubor a nastavit jeho vlastnost **vlastní nástroj** na **hodnotu TextTemplatingFileGenerator**.
+Pokud chcete vytvořit šablonu návrhu, přidejte **do** projektu soubor textové šablony. Případně můžete přidat soubor prostého textu a nastavit jeho vlastnost **Vlastní** nástroj na **TextTemplatingFileGenerator**.
 
-Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Další informace o syntaxi šablon najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
+Další informace najdete v tématu [Generování kódu při návrhu pomocí textových šablon T4.](../modeling/design-time-code-generation-by-using-t4-text-templates.md) Další informace o syntaxi šablon najdete v tématu [Zápis textové šablony T4.](../modeling/writing-a-t4-text-template.md)
 
 > [!NOTE]
-> Termínový *model* se někdy používá k popisu dat přečtených jednou nebo více šablonami. Model může být v libovolném formátu v jakémkoli typu souboru nebo databáze. Nemusí se jednat o model UML ani Domain-Specific jazykový model. Model označuje pouze to, že data lze definovat v rámci obchodních konceptů místo toho, aby se nemusela podobat kódu.
+> Termín *model se* někdy používá k popisu dat přečteých jednou nebo více šablonami. Model může být v libovolném formátu v libovolném typu souboru nebo databáze. Nemusí to být model UML ani model jazyka Domain-Specific modelu. "Model" pouze indikuje, že data je možné definovat z hlediska obchodních konceptů, a nikoli zoznačovat kód.
 
 Funkce transformace textové šablony má název *T4*.
 

@@ -1,7 +1,7 @@
 ---
 title: 'Kurz: Začínáme s Visual Basic'
 description: Naučte se Visual Basic konzolové aplikace v Visual Studio krok za krokem.
-ms.custom: acquisition, seodec18, get-started
+ms.custom: vs-acquisition,  get-started
 ms.date: 02/10/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 8491869f5c0d518b394c0baa6a6da91bfeb6c7a3
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 8d34fef6251da95b6c3ac99430b87d853d4b5ba7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308373"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390708"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Kurz: Začínáme s Visual Basic v Visual Studio
 
@@ -249,39 +249,39 @@ Vytvoříme aplikaci, která vás vyzve k zadání vašeho jména a pak ji zobra
 
 1. Klikněte **na VypočítatTuto** a spusťte program. Okno konzoly by mělo vypadat podobně jako na následujícím snímku obrazovky:
 
-    ![Okno konzoly zobrazující aplikaci CalculateThis, které obsahuje výzvy k tomu, které akce se mají provádět.](media/vb-console-calculate-this.png)
+    ![V okně konzoly se zobrazuje aplikace CalculateThis, která obsahuje výzvy, které akce provést.](media/vb-console-calculate-this.png)
 
 ::: moniker-end
 
-## <a name="quick-answers-faq"></a>Rychlé odpovědi – nejčastější dotazy
+## <a name="quick-answers-faq"></a>Rychlé odpovědi – Nejčastější dotazy
 
-Tady je stručný přehled nejčastějších dotazů, ve které najdete některé klíčové koncepty.
+Tady je rychlý přehled nejčastějších dotazů, které vám pomůžeme zvýraznit některé klíčové koncepty.
 
 ### <a name="what-is-visual-basic"></a>Co je Visual Basic?
 
-Visual Basic je typový programovací jazyk, který je navržený tak, aby se snadno naučil. Je odvozený od základního, což znamená "symbolický kód pro obecné účely začátečníka".
+Visual Basic je typově bezpečný programovací jazyk, který je navržený tak, aby se snadno dozvěděl. Je odvozen od BASIC, což znamená "začátečník kód" na "začátečník".
 
 ### <a name="what-is-visual-studio"></a>Co je Visual Studio?
 
-Visual Studio je integrovaná sada nástrojů pro produktivitu vývojářů. Představte si ho jako program, který můžete použít k vytváření programů a aplikací.
+Visual Studio je integrovaná vývojová sada nástrojů pro produktivitu pro vývojáře. Představte si ho jako program, který můžete použít k vytvoření programů a aplikací.
 
-### <a name="what-is-a-console-app"></a>Co je konzolová aplikace?
+### <a name="what-is-a-console-app"></a>Co je Konzolová aplikace?
 
-Konzolová aplikace přijímá vstup a zobrazuje výstup v okně příkazového řádku, označované také jako konzola.
+Konzolová aplikace přebírá vstup a zobrazuje výstup v okně příkazového řádku, označované také jako konzola.
 
 ### <a name="what-is-net-core"></a>Co je .NET Core?
 
-.NET Core je dalším vývojový krok .NET Framework. Tam, .NET Framework vám rozhraní umožnilo sdílet kód napříč programovacími jazyky, přidává .NET Core možnost sdílet kód napříč platformami. Ještě lepší je to open source. (Rozhraní .NET Framework i .NET Core zahrnují knihovny předem připravených funkcí a modul CLR (Common Language Runtime), který funguje jako virtuální počítač, ve kterém se má váš kód spustit.)
+.NET Core je vývojovým dalším krokem .NET Framework. Pokud .NET Framework umožňují sdílet kód mezi programovacími jazyky, .NET Core přidá možnost sdílení kódu napříč platformami. Ještě lepší, jedná se o open source. (.NET Framework i .NET Core zahrnují knihovny předem sestavených funkcí i modul CLR (Common Language Runtime), který funguje jako virtuální počítač, ve kterém se má váš kód spustit.)
 
 ## <a name="next-steps"></a>Další kroky
 
 Blahopřejeme k dokončení tohoto kurzu! Další informace najdete v následujícím kurzu.
 
 > [!div class="nextstepaction"]
-> [Sestavení knihovny s Visual Basic a .NET Core SDK v Visual Studio](/dotnet/core/tutorials/vb-library-with-visual-studio)
+> [Sestavení knihovny pomocí Visual Basic a .NET Core SDK v aplikaci Visual Studio](/dotnet/core/tutorials/vb-library-with-visual-studio)
 
 ## <a name="see-also"></a>Viz také
 
-* [Visual Basic jazyka](/dotnet/visual-basic/walkthroughs)
+* [Názorné postupy Visual Basic jazyka](/dotnet/visual-basic/walkthroughs)
 * [Referenční dokumentace jazyka Visual Basic](/dotnet/visual-basic/language-reference/index)
-* [IntelliSense pro Visual Basic souborů kódu](../../ide/visual-basic-specific-intellisense.md)
+* [IntelliSense pro Visual Basic soubory kódu](../../ide/visual-basic-specific-intellisense.md)
