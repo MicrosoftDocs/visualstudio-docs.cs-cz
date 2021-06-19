@@ -1,6 +1,6 @@
 ---
 title: Přizpůsobení nástrojů a panelu nástrojů
-description: Zjistěte, jak je nutné definovat položky nástrojů pro prvky, které chcete umožnit uživatelům přidat do jejich modelů.
+description: Zjistěte, jak je nutné definovat položky sady nástrojů pro prvky, které chcete uživatelům nechat přidat do svých modelů.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,24 +10,24 @@ f1_keywords:
 - vs.dsltools.dsldesigner.selectcursordialog
 helpviewer_keywords:
 - Domain-Specific Language, toolbox
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 40341a0c74b371c4c84429474e58c7d338bb8059
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 956955a9c2feb9982bee0101965336be2ca29ab7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935427"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385809"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Přizpůsobení nástrojů a panelu nástrojů
 
-Je nutné definovat položky sady nástrojů pro prvky, které chcete umožnit uživatelům přidávat do jejich modelů. Existují dva druhy nástrojů: nástroje pro prvky a nástroje pro připojení. Ve vygenerovaném návrháři může uživatel vybrat nástroj prvku pro přetahování tvarů do diagramu a může vybrat nástroj pro připojení k vykreslování propojení mezi obrazci. Obecně platí, že nástroje pro prvky umožňují uživatelům přidávat do svých modelů instance doménových tříd a nástroje pro připojení umožňují přidávat instance doménových vztahů.
+Musíte definovat položky sady nástrojů pro prvky, které chcete uživatelům nechat přidat do svých modelů. Existují dva druhy nástrojů: nástroje elementů a nástroje pro připojení. Ve vygenerované návrháři může uživatel vybrat nástroj prvku pro přetažení tvarů do diagramu a výběrem nástroje pro připojení nakreslit propojení mezi tvary. Obecně platí, že nástroje elementů umožňují uživatelům přidávat do svých modelů instance tříd domén a nástroje pro připojení umožňují přidávat instance vztahů mezi doménami.
 
-## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a> Jak je definována sada nástrojů
- V Průzkumníku DSL rozbalte uzel Editor a uzly pod ním. Obvykle se zobrazí hierarchie podobná této:
+## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a> Jak je sada nástrojů definována
+ V Průzkumníku DSL rozbalte uzel Editor a pod ním uzly. Obvykle se zobrazí hierarchie, která se podobá této:
 
 ```
 Editor
@@ -38,68 +38,68 @@ Editor
                ExampleRelationship // a connection tool
 ```
 
-V této části Průzkumníka DSL můžete:
+V této části průzkumníka DSL můžete:
 
-- Vytvořte nové karty. Karty definují záhlaví oddílů v sadě nástrojů.
+- Vytvořte nové karty. Karty definují záhlaví oddílu v sadě nástrojů.
 
 - Vytvořte nové nástroje.
 
 - Nástroje pro kopírování a vkládání.
 
-- Přesunutí nástrojů v seznamu nahoru nebo dolů.
+- Přesuňte nástroje v seznamu nahoru nebo dolů.
 
-- Odstraní karty a nástroje.
+- Odstraňte karty a nástroje.
 
 > [!IMPORTANT]
-> Chcete-li přidat nebo vložit položky v Průzkumníku DSL, klikněte pravým tlačítkem myši na prarodič nového uzlu. Chcete-li například přidat nástroj, klikněte pravým tlačítkem myši na kartu a nikoli na uzel **nástroje** . Chcete-li přidat kartu, klikněte pravým tlačítkem myši na uzel **editoru** .
+> Pokud chcete přidat nebo vložit položky v průzkumníku DSL, klikněte pravým tlačítkem myši na ikonu nového uzlu. Pokud například chcete přidat nástroj, klikněte pravým tlačítkem na kartu, a ne na **uzel** Nástroje. Pokud chcete přidat kartu, klikněte pravým tlačítkem na **uzel Editor.**
 
-Vlastnost **ikony panelu nástrojů** každého nástroje odkazuje na soubor s obrázkem 16x16. Tyto soubory jsou obvykle uchovávány ve složce **Dsl\Resources** .
+Vlastnost **Ikona panelu** nástrojů každého nástroje odkazuje na rastrový soubor 16x16. Tyto soubory jsou obvykle uloženy ve **složce Dsl\Resources.**
 
-Vlastnost **Class** nástroje elementu odkazuje na konkrétní doménovou třídu. Ve výchozím nastavení nástroj vytvoří instance této třídy. Můžete však napsat kód, který má nástroj vytvořit skupiny prvků, nebo prvky různých typů.
+Vlastnost **Class** nástroje prvku odkazuje na konkrétní třídu domény. Ve výchozím nastavení nástroj vytvoří instance této třídy. Můžete ale napsat kód, který nástroj vytvoří skupiny prvků nebo prvky různých typů.
 
-Vlastnost **Tvůrce připojení** nástroje pro připojení odkazuje na Tvůrce připojení, který definuje typy prvků, které může nástroj připojit, a vztahy mezi nimi vytvořenými. Tvůrci připojení jsou v Průzkumníkovi DSL definováni jako uzly. Tvůrci připojení se vytvoří automaticky při definování doménových vztahů, ale můžete napsat kód, který je přizpůsobí.
+Vlastnost **Tvůrce připojení** nástroje pro připojení odkazuje na tvůrce připojení, který definuje, jaké typy prvků může nástroj připojit a jaké relace mezi nimi vytváří. Tvůrci připojení jsou definováni jako uzly v průzkumníku DSL. Tvůrci připojení se vytvářejí automaticky při definování vztahů mezi doménami, ale můžete napsat kód pro jejich přizpůsobení.
 
-#### <a name="to-add-a-tool-to-the-toolbox"></a>Přidání nástroje do sady nástrojů
+#### <a name="to-add-a-tool-to-the-toolbox"></a>Přidání nástroje do panelu nástrojů
 
-1. Obvykle vytvoříte nástroj element po vytvoření třídy Shape a namapujete ji na doménovou třídu.
+1. Nástroj elementu obvykle vytvoříte po vytvoření třídy obrazce a namapování na třídu domény.
 
-     Nástroj spojnice obvykle vytvoříte poté, co vytvoříte třídu konektoru a namapujete ji na referenční relaci.
+     Nástroj konektoru obvykle vytvoříte po vytvoření třídy konektoru a namapování na referenční relaci.
 
-2. V Průzkumníku DSL rozbalte uzel **Editor** a uzel **karty panelu nástrojů** .
+2. V Průzkumníku DSL rozbalte **uzel Editor** a uzel **Karty panelu** nástrojů.
 
-     Klikněte pravým tlačítkem myši na uzel karta panelu nástrojů a potom klikněte na tlačítko **Přidat nový nástroj prvku** nebo **Přidat nový nástroj připojení**.
+     Klikněte pravým tlačítkem na uzel karty panelu nástrojů a potom klikněte na **Přidat nový nástroj elementu** nebo **Přidat nový nástroj pro připojení**.
 
-3. Nastavte vlastnost **Icon panelu nástrojů** tak, aby odkazovala na obrázek 16x16.
+3. Nastavte **vlastnost Ikona panelu** nástrojů tak, aby odkazovat na rastrový obrázek o 16 × 16.
 
-     Pokud chcete definovat novou ikonu, vytvořte v Průzkumník řešení ve složce **Dsl\Resources** rastrový soubor. Soubor by měl obsahovat následující hodnoty vlastností: obsah **Akce sestavení**  =  ; **Kopírovat do výstupního adresáře**  =  **Nekopírovat**.
+     Pokud chcete definovat novou ikonu, vytvořte v souboru bitmapy Průzkumník řešení ve složce **Dsl\Resources.** Soubor by měl mít následující hodnoty vlastností: **Obsah akce**  =  **sestavení**; **Kopírování do výstupního adresáře**  =  **Nekopírujte .**
 
-4. **Pro nástroj elementu:** Nastavte vlastnost **Class** nástroje tak, aby odkazovala na konkrétní doménovou třídu, která je namapována na tvar.
+4. **Nástroj elementu:** Nastavte **vlastnost Class** nástroje tak, aby odkazoval na konkrétní třídu domény, která je namapovaná na tvar.
 
-     **Pro nástroj konektoru:** Nastavte vlastnost **Tvůrce připojení** nástroje na jednu z položek, které jsou nabízeny v rozevíracím seznamu. Tvůrci připojení se automaticky vytvoří při mapování spojnice na doménový vztah. Pokud jste v poslední době vytvořili konektor, obvykle byste vybrali přidruženého Tvůrce připojení.
+     **Nástroj konektoru:** Nastavte **vlastnost Tvůrce** připojení nástroje na jednu z položek, které jsou nabízeny v rozevíracím seznamu. Tvůrci připojení se automaticky vytvoří při mapování konektoru na vztah domény. Pokud jste nedávno vytvořili konektor, normálně byste vytvořili přidruženého tvůrce připojení.
 
-5. Chcete-li otestovat DSL, stiskněte klávesu F5 nebo CTRL + F5 a v experimentální instanci aplikace Visual Studio otevřete vzorový soubor modelu. Nový nástroj by se měl zobrazit v sadě nástrojů. Přetáhněte ho do diagramu, abyste ověřili, že vytvoří nový prvek.
+5. Pokud chcete dsl otestovat, stiskněte F5 nebo CTRL+F5 a v experimentální instanci Visual Studio otevřete soubor ukázkového modelu. Nový nástroj by se měl zobrazit na panelu nástrojů. Přetáhněte ho do diagramu a ověřte, že vytvoří nový prvek.
 
-     Pokud se nástroj nezobrazí, zastavte experimentální aplikaci Visual Studio. V nabídce **Start** systému Windows spusťte **resetování experimentální instance Microsoft Visual Studio 2010**. V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**. Pak zkuste DSL znovu otestovat.
+     Pokud se nástroj nezobrazí, zastavte experimentální Visual Studio. V nabídce **Start** ve Windows spusťte **resetování experimentální instance Microsoft Visual Studio 2010.** V nabídce **Sestavení** klikněte na **Znovu sestavit řešení.** Pak znovu otestujte DSL.
 
-## <a name="customizing-element-tools"></a><a name="customizing"></a> Přizpůsobení nástrojů elementů
- Ve výchozím nastavení nástroj vytvoří jednu instanci zadané třídy, ale můžete se změnit dvěma způsoby:
+## <a name="customizing-element-tools"></a><a name="customizing"></a> Přizpůsobení nástrojů elementu
+ Ve výchozím nastavení nástroj vytvoří jednu instanci zadané třídy, ale můžete to změnit dvěma způsoby:
 
-- Definovat direktivy sloučení elementů na jiných třídách, povolit jim přijímat nové instance této třídy a povolit jim vytváření dalších odkazů při vytvoření nového prvku. Můžete například uživateli dovolit, aby vynechal komentář k jinému prvku, a vytvoří odkaz propojení mezi těmito dvěma.
+- Definujte direktivy sloučení elementů u jiných tříd, které jim umožňují přijímat nové instance této třídy a umožnit jim vytvářet další odkazy při vytvoření nového prvku. Uživateli můžete například umožnit, aby přetál komentář na jiný prvek a vytvořil odkazový odkaz mezi těmito dvěma prvky.
 
-     Tato přizpůsobení mají vliv také na to, co se stane, když uživatel vloží nebo přetáhne a uvolní prvek.
+     Tato přizpůsobení mají také vliv na to, co se stane, když uživatel vloží nebo přetáhne prvek.
 
-     Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
+     Další informace najdete v tématu [Přizpůsobení vytváření a přesouvání elementů.](../modeling/customizing-element-creation-and-movement.md)
 
-- Napište kód pro přizpůsobení nástroje tak, aby mohl vytvořit skupiny prvků. Nástroj je inicializován metodami v ToolboxHelper.cs, které lze přepsat. Další informace naleznete v tématu [vytváření skupin prvků z nástroje](#groups).
+- Napište kód pro přizpůsobení nástroje tak, aby mohl vytvářet skupiny prvků. Nástroj je inicializován metodami v souboru ToolboxHelper.cs, který lze přepsat. Další informace najdete v tématu [Vytváření skupin elementů z nástroje](#groups).
 
 ## <a name="creating-groups-of-elements-from-a-tool"></a><a name="groups"></a> Vytváření skupin elementů z nástroje
- Každý nástroj elementu obsahuje prototyp prvků, které by měl vytvořit. Ve výchozím nastavení každý nástroj elementu vytvoří jeden prvek, ale je také možné vytvořit skupinu souvisejících objektů s jedním nástrojem. K tomu je třeba nástroj inicializovat pomocí objektu <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> , který obsahuje související položky.
+ Každý nástroj elementu obsahuje prototyp prvků, které by měl vytvořit. Ve výchozím nastavení každý nástroj prvku vytvoří jeden prvek, ale pomocí jednoho nástroje je také možné vytvořit skupinu souvisejících objektů. Chcete-li to provést, inicializovat nástroj s <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> objektem , který obsahuje související položky.
 
- Následující příklad je proveden z DSL, v němž je typu Transistor. Každý Transistor má tři pojmenované terminály. Nástroj elementu pro Transistors ukládá prototyp obsahující čtyři prvky modelu a tři odkazy na relace. Když uživatel přetáhne nástroj do diagramu, vytvoří se prototyp instance a propojí se s kořenem modelu.
+ Následující příklad je převzat z DSL, ve kterém je typ Tranzistor. Každý tranzistor má tři pojmenované Terminály. Nástroj elementu pro tranzistory ukládá prototyp obsahující čtyři prvky modelu a tři propojení vztahů. Když uživatel nástroj přetáhne do diagramu, vytvoří se instance prototypu a vytvoří se propojení s kořenem modelu.
 
- Tento kód přepisuje metodu, která je definována v **Dsl\GeneratedCode\ToolboxHelper.cs**.
+ Tento kód přepíše metodu definovanou v **souboru Dsl\GeneratedCode\ToolboxHelper.cs**.
 
- Další informace o přizpůsobení modelu pomocí kódu programu naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
+ Další informace o přizpůsobení modelu pomocí programového kódu najdete v tématu Navigace a aktualizace [modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
 ```
 using Microsoft.VisualStudio.Modeling;
@@ -142,26 +142,26 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
 ## <a name="customizing-connection-tools"></a><a name="connections"></a> Přizpůsobení nástrojů pro připojení
- Obvykle vytvoříte nástroj prvku při vytváření nové třídy konektoru. Alternativně můžete přetížit jeden nástroj tím, že umožníte typům obou konců určit typ relace. Můžete například definovat jeden nástroj pro připojení, který by mohl vytvořit vztahy Person-Person a relace Person-Town.
+ Při vytváření nové třídy konektoru obvykle vytvoříte nástroj elementu. Alternativně můžete jeden nástroj přetížit tím, že umožníte typům obou konců určit typ relace. Můžete například definovat jeden nástroj pro připojení, který by mohl vytvořit Person-Person a Person-Town relace.
 
- Nástroje pro připojení vyvolávají tvůrci připojení. Pomocí tvůrců připojení určete, jak mohou uživatelé propojit prvky ve vygenerovaném návrháři. Tvůrci připojení určují prvky, které mohou být propojeny, a druh propojení, které je mezi nimi vytvořeno.
+ Nástroje pro připojení vyvolané tvůrci připojení. Pomocí tvůrců připojení můžete určit, jak mohou uživatelé propojit prvky ve vygenerované návrháři. Tvůrci připojení určují prvky, které mohou být propojeny, a typ propojení, které je mezi nimi vytvořeno.
 
- Při vytváření referenčního vztahu mezi doménovými třídami se automaticky vytvoří Tvůrce připojení. Pomocí tohoto Tvůrce připojení můžete namapovat nástroj připojení. Další informace o tom, jak vytvořit nástroje pro připojení, najdete v tématu [Konfigurace sady nástrojů](../modeling/customizing-tools-and-the-toolbox.md).
+ Při vytváření referenční relace mezi třídami domény se automaticky vytvoří tvůrce připojení. Tohoto tvůrce připojení můžete použít při mapování nástroje pro připojení. Další informace o tom, jak vytvořit nástroje pro připojení, najdete v [tématu Konfigurace sady nástrojů](../modeling/customizing-tools-and-the-toolbox.md).
 
- Výchozí Tvůrce připojení můžete upravit tak, aby mohl pracovat s různými rozsahy zdrojového a cílového typu, a vytvořit různé typy vztahů.
+ Můžete upravit výchozího tvůrce připojení tak, aby mohl řešit jiný rozsah zdrojových a cílových typů a vytvářet různé typy vztahů.
 
- Můžete také napsat vlastní kód pro tvůrci připojení pro určení zdrojové a cílové třídy pro připojení, definovat typ připojení, který má být vytvořen, a provést další akce spojené s vytvořením připojení.
+ Můžete také napsat vlastní kód pro tvůrce připojení k určení zdrojových a cílových tříd pro připojení, definovat typ připojení, které se má vytvořit, a provádět další akce spojené s vytvořením připojení.
 
 ### <a name="the-structure-of-connection-builders"></a>Struktura tvůrců připojení
- Tvůrci připojení obsahují jednu nebo více direktiv propojení odkazů, které určují vztah domény a zdrojové a cílové prvky. Například v šabloně řešení toku úloh můžete zobrazit **CommentReferencesSubjectsBuilder** v **Průzkumníku DSL**. Tento Tvůrce připojení obsahuje jednu direktivu připojení propojení s názvem **CommentReferencesSubjects**, která je namapovaná na **CommentReferencesSubjects** doménového vztahu. Tato direktiva propojení odkazů obsahuje direktivu zdrojové role, která odkazuje na `Comment` doménovou třídu a cílovou direktivu role odkazující na `FlowElement` doménovou třídu.
+ Tvůrci připojení obsahují jednu nebo více direktiv připojení propojení, které určují vztah domény a zdrojové a cílové elementy. Například v šabloně řešení Tok úloh uvidíte **CommentReferencesSubjectsBuilder** v **Průzkumníku DSL.** Tento tvůrce připojení obsahuje jednu direktivu link connect s názvem **CommentReferencesSubjects**, která je namapovaná na vztah domény **CommentReferencesSubjects**. Tato direktiva propojení connect obsahuje direktivu zdrojové role, která odkazuje na třídu domény, a cílovou direktivu role, která odkazuje `Comment` na `FlowElement` třídu domény.
 
 ### <a name="using-connection-builders-to-restrict-source-and-target-roles"></a>Použití tvůrců připojení k omezení zdrojových a cílových rolí
- Tvůrci připojení můžete použít k omezení výskytu určitých tříd buď ve zdrojové roli, nebo v cílové roli daného doménového vztahu. Například můžete mít třídu základní domény, která má doménový vztah k jiné doménové třídě, ale nechcete, aby všechny odvozené třídy základní třídy měly stejné role v daném vztahu. V řešení flow je k dispozici čtyři konkrétní třídy domény (**StartPoint**, **Endpoint**, **MergeBranch** a **Synchronization**), které dědí přímo z abstraktní třídy domény **FlowElement**, a dvě konkrétní třídy domény (**úlohy** a **ObjectInState**), které z nich dědí nepřímo. Existuje také vztah odkazu na **tok** , který převezme **FlowElement** doménové třídy v jeho zdrojové roli a cílové roli. Instance třídy domény **koncového bodu** by však neměla být zdrojem instance vztahu **toku** , ani by instance třídy **StartPoint** měla být cílem instance vztahu **toku** . **FlowBuilder** Connection Builder obsahuje direktivu Connect Link s názvem **Flow** , která určuje, které třídy domény mohou hrát zdrojovou roli (**Task**, **MergeBranch**, **StartPoint** a **Synchronization**) a které mohou hrát cílovou roli **(MergeBranch**, **koncový bod** a **synchronizace**).
+ Pomocí tvůrců připojení můžete omezit výskyt určitých tříd ve zdrojové roli nebo cílové roli daného vztahu domény. Můžete mít například základní třídu domény, která má vztah mezi doménou a jinou doménovou třídou, ale možná nechcete, aby všechny odvozené třídy základní třídy v tomto vztahu měli stejné role. V řešení toku úloh existují čtyři konkrétní třídy domény (**StartPoint**, **EndPoint**, **MergeBranch** a **Synchronization**), které dědí přímo z abstraktní třídy domény **FlowElement** a dvě konkrétní třídy domény (**Task** a **ObjectInState**), které z něj dědí nepřímo. Existuje také odkazový **vztah toku,** který přebírá třídy domény **FlowElement** ve své zdrojové i cílové roli. Instance třídy domény **EndPoint** by však neměla být zdrojem instance relace **toku** a instance třídy **StartPoint** by neměla být cílem instance relace **toku.** Tvůrce **připojení FlowBuilder** má direktivu propojení connect s názvem **Flow,** která určuje, které třídy domény mohou hrát zdrojovou roli (**Úloha**, **MergeBranch**, **StartPoint** a **Synchronizace**) a které mohou hrát cílovou roli(**MergeBranch**, **Koncový** bod a **Synchronizace**).
 
-### <a name="connection-builders-with-multiple-link-connect-directives"></a>Tvůrci připojení s více direktivami spojení odkazů
- Do Tvůrce připojení můžete přidat více než jednu direktivu připojení propojení. To vám může pomáhat s skrytím některých složitosti doménového modelu od uživatelů a zabránit tomu, aby se **Sada nástrojů** dostala příliš zbytečně. Do jednoho Tvůrce připojení můžete přidat direktivy propojení odkazů pro několik různých doménových vztahů. Při provádění přibližně stejné funkce byste ale měli kombinovat relace domény.
+### <a name="connection-builders-with-multiple-link-connect-directives"></a>Tvůrci připojení s více direktivami propojení
+ Do tvůrce připojení můžete přidat více než jednu direktivu link connect. To vám pomůže skrýt některé složitosti doménového modelu před uživateli a zabránit tomu, aby sada **nástrojů** byla příliš zatřitelná. K jednomu tvůrci připojení můžete přidat direktivy propojení pro několik různých vztahů mezi doménami. Relace domény byste však měli kombinovat, pokud provádějí přibližně stejnou funkci.
 
- V řešení toku úloh se nástroj pro připojení **Flow** používá k nakreslení instancí vztahů mezi **ObjectFlow** a  doménami. Tvůrce připojení **FlowBuilder** kromě výše popsané směrnice pro propojení **toků** , která je popsaná výše, obsahuje dvě direktivy Connect Link s názvem **ObjectFlow**. Tyto direktivy určují, že instance vztahu **ObjectFlow** může být vykreslena mezi instancemi doménové třídy **ObjectInState** nebo z instance **ObjectInState** do instance **úlohy**, ale ne mezi dvěma instancemi **úlohy** nebo z instance **úlohy** do instance **ObjectInState**. Nicméně instance vztahu **toku** může být vykreslena mezi dvěma instancemi **úkolu**. Pokud zkompilujete a spustíte řešení toku úkolů, vidíte, že při vykreslování **toku** z instance **ObjectInState** do instance **úlohy** se vytvoří instance **ObjectFlow**, ale při vykreslování **toku** mezi dvěma instancemi **úlohy** se vytvoří instance **toku**.
+ V řešení Tok úloh se nástroj pro připojení **toku** používá k kreslení instancí vztahů mezi doménami **Tok** i **Tok** objektů. Tvůrce **připojení FlowBuilder** má kromě direktivy připojení propojení **toku** popsané výše také dvě direktivy připojení propojení s názvem **ObjectFlow**. Tyto direktivy určují, že instance vztahu **ObjectFlow** může být nakreslena mezi instancemi třídy domény **ObjectInState** nebo z instance **ObjectInState** do instance úkolu **,** ale ne mezi dvěma instancemi úkolu **nebo** z instance **Task** do instance **ObjectInState**. Mezi dvěma instancemi úlohy **však lze** vykreslit instanci vztahu **toku.** Při kompilaci **a** spuštění řešení toku úloh  uvidíte, že při kreslení toku z instance **ObjectInState** do instance úlohy  se vytvoří instance  **toku** objektů , ale při kreslení toku mezi dvěma instancemi úlohy se vytvoří instance **toku**.
 
 ### <a name="custom-code-for-connection-builders"></a>Vlastní kód pro sestavování připojení
  V uživatelském rozhraní jsou čtyři zaškrtávací políčka, která definují různé typy přizpůsobení tvůrců připojení:

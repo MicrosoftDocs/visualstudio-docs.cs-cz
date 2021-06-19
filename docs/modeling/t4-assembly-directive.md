@@ -1,29 +1,29 @@
 ---
 title: T4 – direktiva Assembly
-description: Přečtěte si, že v textové šabloně v době návrhu sady Visual Studio načte direktiva Assembly sestavení tak, aby kód šablony mohl použít jeho typy.
+description: Zjistíte, že Visual Studio šablony návrhu načte direktiva assembly sestavení tak, aby kód šablony mohl používat jeho typy.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d214764e8067e1165eeacc044bddc1994230562
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 38b5a7fe2308884d4837a068770af67435ada70e
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899676"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386355"
 ---
 # <a name="t4-assembly-directive"></a>T4 – direktiva Assembly
 
-V textové šabloně návrhu sady Visual Studio `assembly` načte direktiva sestavení tak, aby kód šablony mohl použít jeho typy. Efekt je podobný přidání odkazu na sestavení v projektu sady Visual Studio.
+V Visual Studio šablony v době návrhu načte direktiva sestavení, aby kód šablony mohl `assembly` používat své typy. Účinek je podobný přidání odkazu na sestavení do Visual Studio projektu.
 
- Obecný přehled o psaní textových šablon najdete v tématu [Vytvoření textové šablony T4](../modeling/writing-a-t4-text-template.md).
+ Obecný přehled psaní textových šablon najdete v tématu [Zápis textové šablony T4.](../modeling/writing-a-t4-text-template.md)
 
 > [!NOTE]
-> Tuto direktivu nepotřebujete `assembly` v textové šabloně běhu (předzpracované). Místo toho přidejte potřebná sestavení do **odkazů** projektu aplikace Visual Studio.
+> Direktivu v textové šabloně `assembly` běhu (předzpracované) nepotřebujete. Místo toho přidejte potřebná sestavení **do odkazů** vašeho Visual Studio projektu.
 
 ## <a name="using-the-assembly-directive"></a>Použití direktivy assembly
  Syntaxe této direktivy je následující:
@@ -34,17 +34,17 @@ V textové šabloně návrhu sady Visual Studio `assembly` načte direktiva sest
 
  Název sestavení by měl být jeden z následujících názvů:
 
-- Silný název sestavení v globální mezipaměti sestavení (GAC), například `System.Xml.dll` . Můžete také použít dlouhý tvar, například `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` . Další informace naleznete v tématu <xref:System.Reflection.AssemblyName>.
+- Silný název sestavení v GAC, například `System.Xml.dll` . Můžete také použít dlouhý tvar, například `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` . Další informace naleznete v tématu <xref:System.Reflection.AssemblyName>.
 
 - Absolutní cesta k sestavení
 
-  Syntaxi můžete použít `$(variableName)` k odkazování na proměnné sady Visual Studio, jako jsou `$(SolutionDir)` , a `%VariableName%` pro referenční proměnné prostředí. Příklad:
+  Syntaxi můžete použít k odkazování na proměnné Visual Studio, jako je , a k `$(variableName)` `$(SolutionDir)` `%VariableName%` odkazování na proměnné prostředí. Příklad:
 
 ```
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>
 ```
 
- Direktiva assembly nemá žádný účinek na předzpracované textové šablony. Místo toho zahrňte nezbytné odkazy v části **reference** projektu sady Visual Studio. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ Direktiva assembly nemá žádný účinek na předzpracované textové šablony. Místo toho do části Odkazy vašeho projektu **projektu** Visual Studio odkazy. Další informace najdete v tématu Generování textu za běhu pomocí [textových šablon T4.](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
 ## <a name="standard-assemblies"></a>Standardní sestavení
  Následující sestavení se načítají automaticky, takže pro ně nemusíte psát direktivy sestavení:
@@ -65,8 +65,8 @@ V textové šabloně návrhu sady Visual Studio `assembly` načte direktiva sest
 
 - Sestavení obsahující váš kód DSL
 
-## <a name="using-project-properties-in-both-msbuild-and-visual-studio"></a><a name="msbuild"></a> Používání vlastností projektu v nástroji MSBuild i v aplikaci Visual Studio
- Makra sady Visual Studio, jako je $ (SolutionDir), nefungují v nástroji MSBuild. Chcete-li transformovat šablony v sestavovacím počítači, je nutné místo toho použít vlastnosti projektu.
+## <a name="using-project-properties-in-both-msbuild-and-visual-studio"></a><a name="msbuild"></a> Použití vlastností projektu v nástroji MSBuild i Visual Studio
+ Visual Studio jako $(SolutionDir) nefungují v nástroji MSBuild. Chcete-li transformovat šablony v sestavovacím počítači, je nutné místo toho použít vlastnosti projektu.
 
  Úpravou souboru .csproj nebo .vbproj definujte vlastnost projektu. Tento příklad definuje vlastnost s názvem `myLibFolder` :
 

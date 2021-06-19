@@ -2,7 +2,7 @@
 title: Dialogové okno Microsoft Visual Studioho ladicího programu (vyvolána výjimka) | Microsoft Docs
 titleSuffix: ''
 description: 'Zjistěte, co dělat, když dojde k výjimce, kterou program potřebuje zpracovat. Můžete: 1) přerušit do ladicího programu; 2) pokračovat; nebo 3) ignorujte.'
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2982912a0bf165f25b7777311d6db9a1bbe01a8b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c7a4b92a3ec5c6876fae3054b692ff46f26e82cd
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930275"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387044"
 ---
 # <a name="microsoft-visual-studio-debugger-exception-thrown-dialog-box"></a>Dialogové okno programu Microsoft Visual Studio Debugger (vyvolána výjimka)
 V programu došlo k výjimce. Toto dialogové okno oznamuje druh vyvolané výjimky. Váš kód musí zpracovat tuto výjimku. Pro zpracování výjimky si můžete vybrat z následujících možností:

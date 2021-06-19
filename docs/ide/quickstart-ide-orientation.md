@@ -1,7 +1,7 @@
 ---
 title: 'Rychlý start: Prohlídka integrovaného vývojového Visual Studio (IDE)'
 description: Přečtěte si o některých oknech, nabídkách a dalších funkcích uživatelského rozhraní integrovaného vývojového Visual Studio (IDE).
-ms.custom: acquisition
+ms.custom: vs-acquisition
 titleSuffix: ''
 ms.date: 03/02/2021
 ms.topic: quickstart
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f10c3fcca5d87f8371d1373314406cf4aa47ec3
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 0e3a0c62c1ec13ba6fec464a2903512b2acf33ad
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113231"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386290"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Rychlý start: První pohled na integrované Visual Studio ide
 
@@ -201,7 +201,7 @@ Pokud při používání služby Visual Studio narazíte na nějaké problémy n
 
 ## <a name="next-steps"></a>Další kroky
 
-Prohlédli jsme si jenom několik funkcí sady Visual Studio, abyste se seznámili s uživatelským rozhraním. Další zkoumání:
+Podívali jsme se jen na několik funkcí služby Visual Studio seznámit s uživatelským rozhraním. Další zkoumání:
 
 > [!div class="nextstepaction"]
 > [Další informace o editoru kódu](../get-started/tutorial-editor.md)
@@ -211,6 +211,6 @@ Prohlédli jsme si jenom několik funkcí sady Visual Studio, abyste se seznámi
 
 ## <a name="see-also"></a>Viz také
 
-- [Přehled integrovaného vývojového prostředí (IDE) sady Visual Studio](../get-started/visual-studio-ide.md)
-- [Další funkce sady Visual Studio](../ide/advanced-feature-overview.md)
+- [Přehled integrovaného vývojového Visual Studio systému](../get-started/visual-studio-ide.md)
+- [Další funkce Visual Studio](../ide/advanced-feature-overview.md)
 - [Změna barev motivu a písma](../ide/quickstart-personalize-the-ide.md)

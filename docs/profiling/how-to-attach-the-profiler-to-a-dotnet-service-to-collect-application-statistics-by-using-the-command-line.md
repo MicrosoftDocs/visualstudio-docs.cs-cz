@@ -1,7 +1,7 @@
 ---
 title: Připojení profileru ke službě .NET ke shromažďování statistik aplikace
 description: Pomocí nástrojů příkazového řádku sady Visual Studio Nástroje pro profilaci Připojte profiler ke službě .NET Framework a získejte statistiku výkonu pomocí metody vzorkování.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: a0046c47-26c8-4bec-96a0-81da05e5104a
@@ -11,12 +11,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3808f004d9813e846a10c2b672b6406f9cc54cde
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 92b5e24100e43a6a03352c49111226298160521b
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958879"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385471"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-application-statistics-by-using-the-command-line"></a>Postupy: Připojení profileru ke službě .NET ke shromažďování statistik aplikace pomocí příkazového řádku
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku připojit profiler ke službě .NET Framework a shromažďovat statistiku výkonu pomocí metody vzorkování.

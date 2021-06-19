@@ -1,7 +1,7 @@
 ---
-title: Ladění webových aplikací – řešení potíží | Microsoft Docs
-description: Umožňuje vyhledat odkazy na běžné postupy, které lze použít k ladění a řešení chyb ve webových aplikacích.
-ms.custom: SEO-VS-2020, seodec18
+title: Ladění webových aplikací – řešení | Microsoft Docs
+description: Objevte odkazy na běžné postupy, které lze použít k ladění a řešení chyb ve webových aplikacích.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,20 +19,20 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e256e62152d774eb5e296784d934f205a1003d2d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 01b298d84bd626a73c0b21526281dc788f7e2f8b
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872284"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387720"
 ---
 # <a name="debugging-web-applications-troubleshooting"></a>Ladění webových aplikací: řešení potíží
-Tato část obsahuje běžné postupy, které je možné použít k řešení chyb.
+Tato část obsahuje běžné postupy, které lze použít k řešení chyb.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Postupy: ověření nastavení vlastnosti služby IIS](../debugger/how-to-verify-iis-property-settings.md) Vysvětluje, jak správně nastavit vlastnosti ve službě IIS pro povolení ladění.
+ [Postupy: Ověření nastavení vlastností služby IIS](../debugger/how-to-verify-iis-property-settings.md) Vysvětluje, jak správně nastavit vlastnosti ve službě IIS pro povolení ladění.
 
 ## <a name="related-sections"></a>Související oddíly
- [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md) Vysvětluje řešení potíží a řešení chyb.
+ [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md) Vysvětluje řešení potíží a řešení chyb.
 
- [Ladění webových aplikací a skriptů](how-to-enable-debugging-for-aspnet-applications.md) Přehled ladění webových aplikací, jako [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] jsou webové služby XML a serverové projekty ATL.
+ [Ladění webových aplikací a skriptů](how-to-enable-debugging-for-aspnet-applications.md) Přehled ladění webových aplikací, jako jsou , webové služby XML a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] serverové projekty ATL

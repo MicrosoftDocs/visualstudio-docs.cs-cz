@@ -4,17 +4,17 @@ description: Přečtěte si o vlastnostech přidružených k doméně domény, j
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9edee5f8128933b2ecb36434a64d39c40d3d799f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 670704a86f0c149d26c7c869259c0f2f6bb75881
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941304"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385144"
 ---
 # <a name="properties-of-domain-roles"></a>Vlastnosti rolí domény
 Vlastnosti v následující tabulce jsou spojeny s doménovou rolí. Informace o doménových rolích najdete v tématu [porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md). Další informace o tom, jak tyto vlastnosti použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
@@ -28,7 +28,7 @@ Vlastnosti v následující tabulce jsou spojeny s doménovou rolí. Informace o
 |Modifikátor přístupu getter vlastnosti|Modifikátor přístupu pro metodu getter pro generovanou vlastnost ( `public` ,,, `internal` `private` `protected` nebo `protected internal` ).|`public`|
 |Modifikátor přístupu metody set vlastnosti|Modifikátor přístupu pro metodu setter pro generovanou vlastnost ( `public` ,,, `internal` `private` `protected` nebo `protected internal` ).|`public`|
 |Násobnost|Počet prvků modelu, které mohou hrát opačnou roli ( `0..1` ,, `1..1` `0..*` nebo `1..*` ). Pokud je násobnost `0..*` nebo `1..*` , pak vygenerovaná vlastnost představuje kolekci. v opačném případě vygenerovaná vlastnost představuje jeden prvek modelu.|Závisí na typu vztahu a na tom, zda se jedná o zdrojovou nebo cílovou roli v relaci.|
-|Název|Název role domény Tato vlastnost nemůže obsahovat prázdný znak.|Název třídy domény aktéra role pro tuto roli.|
+|Name|Název role domény Tato vlastnost nemůže obsahovat prázdný znak.|Název třídy domény aktéra role pro tuto roli.|
 |Šíří kopii|`DoNotPropagateCopy` -Zkopírovaný aktér role nebude mít žádnou kopii tohoto odkazu.<br /><br /> `PropagateCopyToLinkOnly` – Zkopírovaný odkaz odkazuje na existující aktéra opačné role.<br /><br /> `PropagateCopyToLinkAndOppositeRolePlayer` – Kopírovaný odkaz odkazuje na kopii aktéra opačné role.|`PropagateCopyToLinkAndOppositeRolePlayer` pro zdrojové role vložení.<br /><br /> `DoNotPropagateCopy` pro jiné role.<br /><br /> Další informace najdete v tématu [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md) .|
 |Šíří odstranění|`True` Chcete-li odstranit prvek, který tuto roli přehraje při odstranění přidruženého odkazu.|`True` pro cíl role vložení.<br /><br /> `False` pro jiné role.|
 |Název vlastnosti|Název vlastnosti generované v kódu aktéra role Tento název nemůže obsahovat prázdný znak.|Název opačné role, pokud má tato role násobnost 0 – jedna nebo jedna ku 1; jinak se jedná o plurální název opačné role.|

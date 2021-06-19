@@ -4,17 +4,17 @@ description: Přečtěte si o odpovědích na časté otázky, které se vyskytl
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c5b5e1f4e7488253112eb33905fe534be3591782
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0c65a7ba67c3972620b3d589188e233827a12ffd
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934894"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387265"
 ---
 # <a name="how-to--with-text-templates"></a>Postupy pro textové šablony
 Textové šablony v aplikaci Visual Studio poskytují užitečný způsob, jak vygenerovat text libovolného druhu. Můžete použít textové šablony k vygenerování textu v době běhu jako součást vaší aplikace a v době návrhu k vygenerování kódu projektu. Toto téma shrnuje nejčastější dotaz "Návody...?" otázky.

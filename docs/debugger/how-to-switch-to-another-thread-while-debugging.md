@@ -1,7 +1,7 @@
 ---
 title: Přepnutí na jiné vlákno během ladění
 description: Přečtěte si různé metody pro přepnutí na jiné vlákno při ladění vícevláknové aplikace v aplikaci Visual Studio.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 04/27/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: affc4dec196169580ff23c5faf2f7876a71fbba9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a0a68047c5c9e772fc978c56f2cd70dc9454ca57
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896520"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384691"
 ---
 # <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio-c-visual-basic-c"></a>Postupy: přepnutí na jiné vlákno během ladění v aplikaci Visual Studio (C#, Visual Basic, C++)
 Při ladění vícevláknové aplikace můžete použít některou z několika metod k přepnutí z vlákna, se kterým jste pracovali, s jiným vláknem.

@@ -1,29 +1,29 @@
 ---
-title: Vygenerování textové šablony z textové šablony
+title: Generování textové šablony z textové šablony
 description: Poskytuje informace o tom, jak vygenerovat textovou šablonu z jiné textové šablony pomocí řídicích sekvencí.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, generating templates from templates
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: e3debeeafa55e483e9625c67534694debff6acfa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9347e32a72e7f590f8f513c4b47a4b7aae699f27
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922772"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387174"
 ---
 # <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>Postupy: Generování šablon ze šablon pomocí řídicích sekvencí
-Můžete vytvořit textovou šablonu, která vytvoří další textovou šablonu jako vygenerovaný textový výstup. K tomu je nutné použít řídící sekvence k vymezení tagů textových šablon. Pokud nepoužíváte řídicí sekvence, vaše vytvořená šablona textu bude mít předem definovaný význam. Další informace o použití řídicích sekvencí v textových šablonách naleznete v tématu [Použití řídicích sekvencí v textových šablonách](../modeling/using-escape-sequences-in-text-templates.md).
+Můžete vytvořit textovou šablonu, která vytvoří jinou textovou šablonu jako její vygenerovaný textový výstup. K tomu je nutné použít řídicí sekvence k vytyčení značek textové šablony. Pokud řídicí sekvence použijete, bude mít vygenerovaná textová šablona předdefinovaný význam. Další informace o použití řídicích sekvencí v textových šablonách najdete v tématu [Použití řídicích sekvencí v textových šablonách](../modeling/using-escape-sequences-in-text-templates.md).
 
-### <a name="to-generate-a-text-template-from-within-a-text-template"></a>Vygenerování textové šablony v rámci textové šablony
+### <a name="to-generate-a-text-template-from-within-a-text-template"></a>Vygenerování textové šablony z textové šablony
 
-- Pomocí zpětného lomítka ( \\ ) jako řídicího znaku vytvořte potřebné značky značek v rámci textové šablony pro direktivy, příkazy, výrazy a funkce třídy v samostatném souboru textové šablony.
+- Zpětné lomítko ( ) použijte jako řídicí znak k vytvoření potřebných značek v textové šabloně pro direktivy, příkazy, výrazy a funkce třídy v samostatném souboru \\ textové šablony.
 
     ```
     \<#@ directive \#>
@@ -33,7 +33,7 @@ Můžete vytvořit textovou šablonu, která vytvoří další textovou šablonu
     ```
 
 ## <a name="example"></a>Příklad
- Následující příklad používá řídicí znaky k vytvoření textové šablony z textové šablony. `output`Direktiva nastaví typ cílového souboru na typ souboru textové šablony (. TT).
+ Následující příklad používá řídicí znaky k vytvoření textové šablony z textové šablony. Direktiva `output` nastaví cílový typ souboru na typ souboru textové šablony (.tt).
 
 ```csharp
 \<#@ output extension=".tt" \#>
@@ -54,7 +54,7 @@ XmlDocument xDoc = new XmlDocument();
 \#>
 ```
 
- Generovaný textový výstup je textová šablona.
+ Vygenerovaný textový výstup je textová šablona.
 
 ```
 <#@ output extension=".tt" #>

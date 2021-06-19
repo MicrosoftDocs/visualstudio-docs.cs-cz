@@ -1,67 +1,67 @@
 ---
 title: 'Postupy: Přístup k aktuálnímu výběru a jeho omezení'
-description: Zjistěte, jak můžete určit, ke kterému prvku se uživatel klikne pravým tlačítkem, když napíšete obslužnou rutinu příkazu nebo gesta pro jazyk specifický pro doménu.
+description: Zjistěte, jak můžete určit, na který prvek uživatel klikl pravým tlačítkem při psaní obslužné rutiny příkazů nebo gest pro jazyk specifický pro vaši doménu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, accessing the current selection
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 83903c8ff911fdd1d4900714137a7f6976513dad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 28d0f99743535965b3cf203d461fac5d0193607c
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890562"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386602"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Postupy: Přístup k aktuálnímu výběru a jeho omezení
 
-Při psaní obslužné rutiny příkazu nebo gesta pro jazyk specifický pro doménu můžete určit, na který prvek uživatel klikne pravým tlačítkem myši. Můžete také zabránit výběru některých tvarů nebo polí. Můžete například určit, že když uživatel klikne na ikonu dekoratér, místo toho se vybere obrazec, který ho obsahuje. Omezení výběru tímto způsobem snižuje počet obslužných rutin, které je nutné zapsat. Také usnadňuje uživateli, který může kliknout kamkoli v obrazci bez nutnosti vyhnout se dekoratér.
+Když píšete obslužnou rutinu příkazů nebo gest pro jazyk specifický pro doménu, můžete určit, na který prvek uživatel klikl pravým tlačítkem. Můžete také zabránit výběru některých tvarů nebo polí. Můžete například uspořádat, že když uživatel klikne na dekorátor ikon, místo toho se vybere tvar, který ho obsahuje. Omezením výběru tímto způsobem se sníží počet obslužných rutin, které musíte napsat. Usnadňuje to také uživateli, který může kliknout na libovolné místo ve tvaru, aniž by se museli vyhnout dekoratéru.
 
 ## <a name="access-the-current-selection-from-a-command-handler"></a>Přístup k aktuálnímu výběru z obslužné rutiny příkazu
 
-Třída sady příkazů pro jazyk specifický pro doménu obsahuje obslužné rutiny příkazu pro vlastní příkazy. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>Třída, ze které je odvozena třída sady příkazů pro jazyk specifický pro doménu, poskytuje několik členů pro přístup k aktuálnímu výběru.
+Třída sady příkazů pro jazyk specifický pro doménu obsahuje obslužné rutiny příkazů pro vaše vlastní příkazy. Třída, ze které je odvozena třída sady příkazů pro jazyk specifický pro doménu, poskytuje několik členů pro přístup <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> k aktuálnímu výběru.
 
-V závislosti na příkazu může obslužná rutina příkazu potřebovat výběr v Návrháři modelů, Průzkumníku modelů nebo aktivním okně.
+V závislosti na příkazu může obslužná rutina příkazu potřebovat výběr v návrháři modelů, v průzkumníku modelů nebo v aktivním okně.
 
 ### <a name="to-access-selection-information"></a>Přístup k informacím o výběru
 
-1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>Třída definuje následující členy, které lze použít pro přístup k aktuálnímu výběru.
+1. Třída <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> definuje následující členy, které lze použít pro přístup k aktuálnímu výběru.
 
     |Člen|Description|
     |-|-|
-    |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A>|Vrátí, `true` zda kterýkoli prvek vybraný v Návrháři modelů je tvar oddílu, jinak `false` .|
-    |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A>|Vrátí `true` , zda je diagram vybrán v Návrháři modelů; v opačném případě `false` .|
-    |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A>|Vrátí, `true` zda je v Návrháři modelů vybrán právě jeden prvek; v opačném případě `false` .|
-    |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A>|Vrátí, `true` zda je v aktivním okně vybrán právě jeden prvek; v opačném případě `false` .|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> majetek|Získá kolekci prvků, které jsou vybrány v Návrháři modelů, jen pro čtení.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> majetek|Získá kolekci prvků, které jsou vybrány v aktivním okně, jen pro čtení.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> majetek|Získá primární prvek výběru v Návrháři modelů.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> majetek|Získá primární prvek výběru v aktivním okně.|
+    |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A>|Vrátí hodnotu , pokud některý z `true` prvků vybraných v návrháři modelů má tvar přihrádky. V opačném případě `false` vrátí hodnotu .|
+    |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A>|Vrátí `true` hodnotu , pokud je diagram vybraný v návrháři modelů. V opačném případě vrátí hodnotu `false` .|
+    |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A>|Vrátí hodnotu , pokud je v návrháři modelů vybrán právě `true` jeden prvek. V opačném případě `false` vrátí hodnotu .|
+    |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A>|Vrátí hodnotu , pokud je v aktivním okně vybrán právě jeden prvek. V opačném případě vrátí hodnotu `true` `false` .|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> Vlastnost|Získá kolekci prvků vybraných v návrháři modelů jen pro čtení.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> Vlastnost|Získá kolekci prvků vybraných v aktivním okně jen pro čtení.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> Vlastnost|Získá primární prvek výběru v návrháři modelů.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> Vlastnost|Získá primární prvek výběru v aktivním okně.|
 
-2. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> třídy poskytuje přístup k <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> objektu, který představuje okno návrháře modelů a poskytuje další přístup k vybraným prvkům v Návrháři modelů.
+2. Vlastnost třídy poskytuje přístup k objektu, který představuje okno návrháře modelů a poskytuje další přístup k vybraným <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A> <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> prvkům v návrháři modelů.
 
-3. Kromě toho generovaný kód definuje vlastnost okna Průzkumníka a vlastnost výběr Průzkumníka ve třídě sady příkazů pro jazyk specifický pro doménu.
+3. Kromě toho vygenerovaný kód definuje vlastnost okna nástroje průzkumníka a vlastnost výběru průzkumníka ve třídě sady příkazů pro jazyk specifický pro doménu.
 
-    - Vlastnost okna nástroje Průzkumník vrací instanci třídy okna nástroje Průzkumník pro jazyk specifický pro doménu. Třída okna nástroje Průzkumník je odvozena z <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> třídy a představuje Průzkumníka modelů pro jazyk specifický pro doménu.
+    - Vlastnost okna nástroje průzkumníka vrátí instanci třídy okna nástroje průzkumníka pro jazyk specifický pro doménu. Třída okna nástroje průzkumníka je odvozená z třídy a představuje průzkumníka modelů pro jazyk <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> specifický pro doménu.
 
-    - `ExplorerSelection`Vlastnost vrací vybraný prvek v okně Průzkumníka modelů pro jazyk specifický pro doménu.
+    - Vlastnost `ExplorerSelection` vrátí vybraný prvek v okně Průzkumníka modelů pro jazyk specifický pro doménu.
 
-## <a name="determine-which-window-is-active"></a>Určit, které okno je aktivní
+## <a name="determine-which-window-is-active"></a>Určení, které okno je aktivní
 
-<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>Rozhraní obsahuje definice členů, kteří poskytují přístup k aktuálnímu stavu výběru v prostředí. Objekt můžete získat <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> buď z třídy balíčku, nebo z třídy sady příkazů pro jazyk specifický pro doménu prostřednictvím `MonitorSelection` vlastnosti definované v základní třídě každého. Třída balíčku je odvozena z <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> třídy a třída sady příkazů je odvozena od <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> třídy.
+Rozhraní <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> obsahuje členy, které poskytují přístup k aktuálnímu stavu výběru v prostředí. Objekt můžete získat z třídy balíčku nebo třídy sady příkazů pro jazyk specifický pro doménu prostřednictvím vlastnosti definované v každé <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> `MonitorSelection` základní třídě. Třída balíčku je odvozena z <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> třídy a třída sady příkazů je odvozena z třídy <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> .
 
-### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>Určení z obslužné rutiny příkazu, který typ okna je aktivní
+### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>Určení typu okna, který je aktivní, z obslužné rutiny příkazu
 
-1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A>Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> třídy vrátí <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> objekt, který poskytuje přístup k aktuálnímu stavu výběru v prostředí.
+1. Vlastnost třídy vrací objekt, který poskytuje přístup k <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A> <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> aktuálnímu stavu výběru v prostředí.
 
-2. <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A>Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> rozhraní získá aktivní kontejner výběru, který se může lišit od aktivního okna.
+2. Vlastnost rozhraní získá aktivní kontejner výběru, který se může <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A> <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> lišit od aktivního okna.
 
-3. Přidejte následující vlastnosti do třídy sady příkazů pro jazyk specifický pro doménu, abyste určili, jaký typ okna je aktivní.
+3. Přidejte následující vlastnosti do třídy sady příkazů pro jazyk specifický pro doménu, abyste zjistili, jaký typ okna je aktivní.
 
     ```csharp
     // using Microsoft.VisualStudio.Modeling.Shell;
@@ -89,29 +89,29 @@ V závislosti na příkazu může obslužná rutina příkazu potřebovat výbě
     }
     ```
 
-## <a name="constrain-the-selection"></a>Omezit výběr
+## <a name="constrain-the-selection"></a>Omezení výběru
 
-Přidáním pravidel výběru můžete řídit, které prvky jsou vybrány, když uživatel vybere prvek v modelu. Pokud například chcete, aby uživatel mohl zacházet s několika prvky jako s jednou jednotkou, můžete použít pravidlo výběru.
+Přidáním pravidel výběru můžete řídit, které prvky se vyberou, když uživatel vybere prvek v modelu. Pokud například chcete uživateli umožnit, aby s několika prvky zacloučil jednu jednotku, můžete použít pravidlo výběru.
 
 ### <a name="to-create-a-selection-rule"></a>Vytvoření pravidla výběru
 
 1. Vytvoření vlastního souboru kódu v projektu DSL
 
-2. Definujte třídu pravidla výběru, která je odvozena od <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules> třídy.
+2. Definujte třídu pravidla výběru odvozenou z <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules> třídy .
 
-3. Přepsat <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A> metodu třídy pravidla výběru, aby bylo možné použít kritéria výběru.
+3. Přepsáním <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A> metody třídy pravidla výběru použijte kritéria výběru.
 
-4. Přidejte do vlastního souboru kódu definici částečné třídy pro třídu ClassDiagram.
+4. Do souboru vlastního kódu přidejte částečnou definici třídy ClassDiagram.
 
-     `ClassDiagram`Třída je odvozena z <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> třídy a je definována v souboru generovaného kódu diagram.cs v projektu DSL.
+     Třída je odvozena z třídy a je definována ve vygenerované souboru kódu `ClassDiagram` <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> Diagram.cs v projektu DSL.
 
-5. Přepište <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> vlastnost `ClassDiagram` třídy tak, aby vracela vlastní pravidlo výběru.
+5. Přepište <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> vlastnost třídy `ClassDiagram` tak, aby vracel vlastní pravidlo výběru.
 
-     Výchozí implementace <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> vlastnosti získá objekt pravidla výběru, který neupravuje výběr.
+     Výchozí implementace vlastnosti získá objekt pravidla <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> výběru, který neupravuje výběr.
 
 ### <a name="example"></a>Příklad
 
-Následující soubor kódu vytvoří pravidlo výběru, které rozšíří výběr tak, aby zahrnoval všechny instance všech původně vybraných obrazců domény.
+Následující soubor kódu vytvoří pravidlo výběru, které rozbalí výběr tak, aby zahrnoval všechny instance jednotlivých tvarů domény, které byly původně vybrány.
 
 ```csharp
 using System;

@@ -1,7 +1,7 @@
 ---
-title: Použít okna ladicího programu při ladění aplikace v popředí | Microsoft Docs
-description: Pokud ladíte program, který musí zůstat v popředí, použijte vzdálené ladění, abyste se vyhnuli vložení na pozadí.
-ms.custom: SEO-VS-2020, seodec18
+title: Použití oken ladicího programu při ladění aplikace na popředí | Microsoft Docs
+description: Pokud ladíte program, který musí zůstat v popředí, použijte vzdálené ladění, abyste zabránili jeho umístění na pozadí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -23,19 +23,19 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 03a143ee2d04227171895bf2b14dff92545b9952
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: fce51a1a28a8e03692faeee3ed723627864f4031
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155091"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386823"
 ---
 # <a name="how-can-i-use-debugger-windows-while-debugging-a-foreground-program"></a>Jak mohu použít okna ladicího programu během ladění programu na popředí?
 ## <a name="problem-description"></a>Popis problému
- Snažím se ladit problém s vykreslováním obrazovky. Chcete-li tento problém vyřešit, je nutné ponechat program v popředí, což znamená, že nemám přístup k ladicím systémům. Co mám udělat?
+ Pokouším se ladit problém obrazovek. Pokud chcete sledovat tento problém, musím program ponechat v popředí, což znamená, že nemám přístup k oknu ladění. Co mám udělat?
 
 ## <a name="solution"></a>Řešení
- Pokud máte druhý počítač, můžete použít vzdálené ladění. Při instalaci dvou počítačů můžete sledovat vykreslování obrazovky na vzdáleném počítači při provozování ladicího programu na hostiteli. Další informace o vzdáleném ladění naleznete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
+ Pokud máte druhý počítač, můžete použít vzdálené ladění. Při nastavení se dvěma počítači můžete sledovat obraz obrazovky na vzdáleném počítači, zatímco na hostiteli pracujete s ladicím programem. Další informace o vzdáleném ladění najdete v tématu [Vzdálené ladění.](../debugger/remote-debugging.md)
 
 ## <a name="see-also"></a>Viz také
 - [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)

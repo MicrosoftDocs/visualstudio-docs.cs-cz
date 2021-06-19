@@ -1,26 +1,26 @@
 ---
 title: T4 – direktiva Import
-description: Seznamte se s tím, že v textové šabloně sady Visual Studio T4 umožňuje Direktiva Import odkazovat na prvky v jiném oboru názvů bez zadání plně kvalifikovaného názvu.
+description: V textové šabloně Visual Studio T4 zjistíte, že direktiva importu umožňuje odkazovat na elementy v jiném oboru názvů bez poskytnutí plně kvalifikovaného názvu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d9eb50261b346d8751a76817d97d59a798d17236
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d0d441ec5a62dfa5266a17a06ac8fe33941136c6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899668"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386316"
 ---
 # <a name="t4-import-directive"></a>T4 – direktiva Import
 
-V blocích kódu textové šablony T4 sady Visual Studio `import` umožňuje direktivám odkazovat na prvky v jiném oboru názvů bez zadání plně kvalifikovaného názvu. Je ekvivalentem `using` v jazyce C# nebo `imports` v [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] .
+V blocích kódu textové Visual Studio T4 umožňuje direktiva odkazovat na prvky v jiném oboru názvů bez poskytnutí `import` plně kvalifikovaného názvu. Jedná se o ekvivalent v `using` jazyce C# nebo `imports` v [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] .
 
-Obecný přehled psaní textových šablon T4 naleznete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
+Obecný přehled psaní textových šablon T4 najdete v tématu [Zápis textové šablony T4.](../modeling/writing-a-t4-text-template.md)
 
 ## <a name="using-the-import-directive"></a>Použití direktivy importu
 
@@ -49,7 +49,7 @@ The file contains: <#=  fileContent #>
 
 - `Microsoft.VisualStudio.Modeling`
 
-- Obor názvů vaší DSL
+- Obor názvů vašeho DSL
 
 ## <a name="see-also"></a>Viz také
 

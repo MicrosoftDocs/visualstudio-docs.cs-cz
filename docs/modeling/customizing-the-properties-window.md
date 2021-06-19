@@ -1,140 +1,140 @@
 ---
 title: Přizpůsobení okna Vlastnosti
-description: Zjistěte, jak můžete přizpůsobit vzhled a chování okna vlastnosti v jazyce DSL (Domain Specific Language) v aplikaci Visual Studio.
+description: Zjistěte, jak můžete přizpůsobit vzhled a chování okna vlastností v jazyce specifickém pro doménu (DSL) v Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b7ee201494ed849062458afdcd41c2aed1b83b42
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e1bd54850264c33c5317a4395f219689a8e8634
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935388"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385796"
 ---
 # <a name="customize-the-properties-window"></a>Přizpůsobení okno Vlastnosti
 
-V aplikaci Visual Studio můžete přizpůsobit vzhled a chování okna vlastnosti v jazyce specifickém pro doménu (DSL). V definici DSL definujete vlastnosti domény v každé třídě domény. Ve výchozím nastavení, když vyberete instanci třídy, buď v diagramu nebo v Průzkumníku modelů, je každá doménová vlastnost uvedena v okně Vlastnosti. To vám umožní zobrazit a upravit hodnoty vlastností domény, a to i v případě, že jste je nemapovali na pole obrazce v diagramu.
+Můžete přizpůsobit vzhled a chování okna vlastností v jazyce specifickém pro doménu (DSL) v Visual Studio. V definici DSL definujete vlastnosti domény pro každou třídu domény. Když ve výchozím nastavení vyberete instanci třídy , buď v diagramu, nebo v Průzkumníku modelů, bude každá vlastnost domény uvedená v okně vlastností. To vám umožní zobrazit a upravit hodnoty vlastností domény, i když jste je nenamapovali na tvarování polí v diagramu.
 
 ## <a name="names-descriptions-and-categories"></a>Názvy, popisy a kategorie
 
-**Název a zobrazované jméno**. V definici doménové vlastnosti je zobrazovaný název vlastnosti název, který se zobrazí v době běhu v okně Vlastnosti. Naopak název se používá při psaní kódu programu pro aktualizaci vlastnosti. Název musí být správný alfanumerický název CLR, ale zobrazovaný název může obsahovat mezery.
+**Název a Zobrazovaný název**. V definici vlastnosti domény je Zobrazovaný název vlastnosti název, který se zobrazí za běhu v okně vlastností. Naopak Název se používá při psaní kódu programu k aktualizaci vlastnosti. Název musí být správný alfanumerický název CLR, ale zobrazovaný název může obsahovat mezery.
 
-Když nastavíte název vlastnosti v definici DSL, její zobrazovaný název se automaticky nastaví na kopii názvu. Pokud napíšete název Pascal použita, jako je například "FuelGauge", zobrazované jméno bude automaticky obsahovat mezeru: "měřič pohonu". Zobrazované jméno ale můžete nastavit explicitně na jinou hodnotu.
+Když nastavíte Název vlastnosti v definici DSL, její zobrazovaný název se automaticky nastaví na kopii názvu. Pokud napíšete název v jazyce Pascal, například FuelGauge, bude zobrazovaný název automaticky obsahovat mezeru s názvem "Fuel Gauge" (Měřidlo paliva). Zobrazovaný název ale můžete explicitně nastavit na jinou hodnotu.
 
-**Popis:** Popis doménové vlastnosti se zobrazí na dvou místech:
+**Popis:** Popis vlastnosti domény se zobrazí na dvou místech:
 
-- V dolní části okna vlastnosti, když uživatel vybere vlastnost. Můžete ji použít k vysvětlení uživateli, co vlastnost představuje.
+- Když uživatel vybere vlastnost, v dolní části okna vlastností. Můžete ho použít k vysvětlení, co vlastnost představuje uživateli.
 
-- Ve vygenerovaném programovém kódu. Pokud používáte dokumentaci k extrakci dokumentace k rozhraní API, zobrazí se jako popis této vlastnosti v rozhraní API.
+- Ve vygenerované programové kódu. Pokud k extrakci dokumentace k rozhraní API použijete dokumentaci, zobrazí se v rozhraní API jako popis této vlastnosti.
 
-**Kategorie**. Kategorie je záhlaví v okno Vlastnosti.
+**Kategorie**: Kategorie je nadpis v okno Vlastnosti.
 
 ## <a name="expose-style-features"></a>Vystavení funkcí stylu
 
-Některé dynamické funkce grafických prvků mohou být reprezentovány nebo *vystaveny* jako vlastnosti domény. Funkce, která byla vystavena tímto způsobem, může být aktualizována uživatelem a lze ji snáze aktualizovat pomocí kódu programu.
+Některé dynamické funkce grafických prvků mohou být reprezentovány nebo *zpřístupněny* jako vlastnosti domény. Funkce, která byla zveřejněna tímto způsobem, může být aktualizována uživatelem a lze ji snadněji aktualizovat pomocí programového kódu.
 
-V definici DSL klikněte pravým tlačítkem myši na třídu Shape, přejděte na **Přidat vystavené** a pak zvolte funkci.
+Klikněte pravým tlačítkem na třídu obrazce v definici DSL, přejděte na **Přidat vystavené** a zvolte funkci.
 
-V obrazcích můžete vystavit vlastnosti **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** a **FillGradientMode** . V konektorech můžete vystavit vlastnosti **barev** `,` **TextColor**, **DashStyle** a **tloušťku** . V diagramech můžete zveřejnit vlastnosti **FillColor** a **TextColor** .
+U tvarů můžete zveřejnit **vlastnosti FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** a **FillGradientMode.** U konektorů můžete zobrazit vlastnosti **Color** `,` **TextColor**, **DashStyle** **a Thickness.** V diagramech můžete zveřejnit vlastnosti **FillColor** a **TextColor.**
 
-## <a name="forwarding-display-properties-of-related-elements"></a>Předávání: zobrazení vlastností souvisejících elementů
+## <a name="forwarding-display-properties-of-related-elements"></a>Předávání: Zobrazení vlastností souvisejících prvků
 
-Když uživatel vaší DSL vybere prvek v modelu, zobrazí se vlastnosti tohoto prvku v okně Vlastnosti. Můžete ale také zobrazit vlastnosti zadaných souvisejících prvků. To je užitečné, pokud jste definovali skupinu prvků, které pracují dohromady. Například můžete definovat hlavní prvek a volitelný element modulu plug-in. Je-li hlavní prvek mapován na tvar a druhý není, je užitečné zobrazit všechny vlastnosti, jako kdyby byly na jednom prvku.
+Když uživatel vašeho DSL vybere prvek v modelu, vlastnosti tohoto prvku se zobrazí v okně vlastností. Můžete ale také zobrazit vlastnosti zadaných souvisejících prvků. To je užitečné, pokud jste definovali skupinu prvků, které spolupracují. Můžete například definovat hlavní prvek a volitelný element modulu plug-in. Pokud je hlavní prvek namapován na tvar a druhý není, je užitečné zobrazit všechny jejich vlastnosti, jako by byly na jednom prvku.
 
-Tento efekt se nazývá *předávání vlastností* a v několika případech k němu dojde automaticky. V jiných případech můžete dosáhnout předávání vlastností definováním popisovače typu domény.
+Tento efekt se nazývá *předávání vlastností* a v několika případech k tomu automaticky dochází. V jiných případech můžete předávání vlastností dosáhnout definováním popisovače typu domény.
 
-### <a name="default-property-forwarding-cases"></a>Výchozí případy předávání vlastností
+### <a name="default-property-forwarding-cases"></a>Případy předávání výchozích vlastností
 
-Když uživatel vybere obrazec nebo spojnici nebo prvek v Průzkumníkovi, zobrazí se v okno Vlastnosti následující vlastnosti:
+Když uživatel vybere tvar, konektor nebo prvek v Průzkumníku, zobrazí se v okně okno Vlastnosti:
 
-- Vlastnosti domény, které jsou definovány v doméně třídy elementu modelu, včetně těch, které jsou definovány v základních třídách. Výjimkou jsou doménové **vlastnosti, pro** které jste nastavili procházení na `False` .
+- Vlastnosti domény, které jsou definovány v třídě domény prvku modelu, včetně vlastností definovaných v základních třídách. Výjimkou jsou vlastnosti domény, pro které jste **nastavili možnost Procházení na** `False` hodnotu .
 
-- Názvy prvků, které jsou propojeny pomocí relací, které mají násobnost 0.. 1. To poskytuje pohodlný způsob, jak zobrazit volitelně propojené prvky, i když jste pro relaci nedefinovali mapování spojnice.
+- Názvy prvků, které jsou propojeny prostřednictvím relací, které mají násobnost 0..1. To poskytuje pohodlný způsob zobrazení volitelně propojených elementů, i když jste pro relaci nedefinovali mapování konektoru.
 
-- Vlastnosti domény relace vložení, která cílí na element. Vzhledem k tomu, že se vztahy vložení obvykle nezobrazují explicitně, umožní uživateli zobrazit jeho vlastnosti.
+- Vlastnosti domény vztahu vkládání, který cílí na prvek. Vzhledem k tomu, že relace vkládání se obvykle nezobrazují explicitně, umožní to uživateli zobrazit jeho vlastnosti.
 
-- Vlastnosti domény, které jsou definovány na vybraném tvaru nebo spojnici.
+- Vlastnosti domény definované u vybraného obrazce nebo konektoru.
 
-### <a name="add-property-forwarding"></a>Přidat předávání vlastností
+### <a name="add-property-forwarding"></a>Přidání předávání vlastností
 
-Chcete-li vlastnost předává, definujte popisovač typu domény. Pokud máte doménový vztah mezi dvěma doménovými třídami, můžete použít popisovač typu domény k nastavení doménové vlastnosti v první třídě na hodnotu vlastnosti domény ve druhé třídě domény. Pokud například máte relaci mezi třídou domény **knihy** a doménou **autora** , můžete použít popisovač typu domény a nastavit vlastnost **název** **autora** knihy na okno Vlastnosti, když uživatel vybere knihu.
+Chcete-li předat vlastnost, definujete popisovač typu domény. Pokud máte doménový vztah mezi dvěma třídami domény, můžete použít popisovač typu domény a nastavit vlastnost domény v první třídě na hodnotu vlastnosti domény ve druhé třídě domény. Pokud máte například vztah mezi třídou domény Book **(Kniha)** a doménou **Author** (Autor), můžete pomocí popisovače typu domény nastavit vlastnost **Name** (Jméno) autora knihy na okno Vlastnosti, když uživatel vybere Knihu. 
 
 > [!NOTE]
-> Přeposílání vlastností ovlivňuje pouze okno Vlastnosti, když uživatel upravuje model. Pro přijímací třídu nedefinuje doménovou vlastnost. Chcete-li získat přístup k vlastnosti předané domény v jiných částech definice DSL nebo v kódu programu, je nutné získat přístup k elementu pro předávání.
+> Předávání vlastností ovlivňuje pouze okno Vlastnosti, když uživatel upravuje model. Nedefinuje vlastnost domény na přijímající třídě. Pokud chcete získat přístup k předané vlastnosti domény v jiných částech definice DSL nebo v kódu programu, musíte získat přístup k prvku předávání.
 
-Následující postup předpokládá, že jste vytvořili DSL. První pár kroků shrnuje požadavky.
+Následující postup předpokládá, že jste vytvořili DSL. V prvních několika krocích jsou shrnuty požadavky.
 
-#### <a name="forward-a-property-from-another-element"></a>Předejte vlastnost z jiného elementu.
+#### <a name="forward-a-property-from-another-element"></a>Předání vlastnosti z jiného prvku
 
-1. Vytvořte [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] řešení, které obsahuje alespoň dvě třídy, v tomto příkladu se říká **Kniha** a **Autor**. Mezi **knihou** a **autorem** by měl existovat vztah obou druhů.
+1. Vytvořte řešení, které obsahuje alespoň dvě třídy, které se v tomto příkladu nazývají Book (Kniha) a [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] **Author (Autor).**  Mezi Book (Kniha) a **Author (Autor)** by **měl** být nějaký druh relace.
 
-    Násobnost zdrojové role (role na straně **knihy** ) by měla být 0.. 1 nebo 1.. 1, aby každá **Kniha** měla jednoho **autora**.
+    Násobnost zdrojové role (role na  straně knihy) by měla být 0..1 nebo 1..1, aby každá kniha měla jednu **autorku**. 
 
-2. V **Průzkumníku DSL** klikněte pravým tlačítkem na třídu doména **knihy** a pak klikněte na **Přidat nový DomainTypeDescriptor**.
+2. V **Průzkumníku DSL** klikněte pravým tlačítkem na **třídu Doména** knihy a potom klikněte na Přidat **nový DomainTypeDescriptor**.
 
-    Uzel s názvem **cesty popisovačů vlastních vlastností** se zobrazí v uzlu **vlastní deskriptor typu** .
+    Pod uzlem **Popisovač vlastního typu** se zobrazí uzel s názvem Cesty popisovačů vlastních **vlastností.**
 
-3. Klikněte pravým tlačítkem na uzel **vlastní popisovač typu** a pak klikněte na **Přidat nový PropertyPath**.
+3. Klikněte pravým tlačítkem **na uzel Popisovač vlastního** typu a potom klikněte na **Přidat novou vlastnost.**
 
-    V uzlu **cesty vlastních popisovačů vlastností** se zobrazí nová cesta k vlastnosti.
+    V uzlu Cesty popisovačů vlastních vlastností se zobrazí nová cesta **k vlastnosti.**
 
-4. Vyberte novou cestu vlastnosti a v okně **vlastnosti** nastavte **cestu k vlastnosti** na cestu příslušného prvku modelu.
+4. Vyberte novou cestu k vlastnosti a v **okně Vlastnosti** nastavte Cestu na **Vlastnost** na cestu k příslušnému prvku modelu.
 
-    Cestu ve stromovém zobrazení můžete upravit kliknutím na šipku dolů napravo od této vlastnosti. Další informace o cestách k doméně najdete v tématu [syntaxe cesty k doméně](../modeling/domain-path-syntax.md). Pokud jste ho upravili, cesta by měla vypadat podobně jako **BookReferencesAuthor. Author/! Autor**:
+    Cestu můžete upravit ve stromovém zobrazení kliknutím na šipku dolů vpravo od této vlastnosti. Další informace o cestách k doméně najdete v tématu [Syntaxe cesty k doméně.](../modeling/domain-path-syntax.md) Po úpravě by cesta měla vypadat podobně jako **BookReferencesAuthor.Author/! Autor:**.
 
-5. **Vlastnost** nastavte na vlastnost **název** domény **Autor**.
+5. Vlastnost **nastavte** na **vlastnost Doména** názvu v poli **Autor.**
 
-6. Nastavte **zobrazované jméno** na **jméno autora**.
+6. **Zobrazovaný název nastavte** **na Jméno autora.**
 
 7. Transformujte všechny šablony, sestavte a spusťte DSL.
 
-8. V diagramu modelu vytvořte knihu, autora a propojte ji pomocí referenčního vztahu. Vyberte prvek Book a v okno Vlastnosti měli byste vedle vlastností knihy zobrazovat jméno autora. Změňte název propojeného autora nebo propojte knihu s jiným autorem a sledujte, že se změní jméno autora knihy.
+8. V diagramu modelu vytvořte knihu, autora a propoojte je pomocí referenční relace. Vyberte prvek knihy a v okno Vlastnosti by se vedle vlastností knihy měl zobrazit Také jméno autora. Změňte jméno propojeného autora nebo propojíte knihu s jiným autorem a všimněte si, že se změní jméno autora knihy.
 
-## <a name="custom-property-editors"></a>Vlastní editory vlastností
+## <a name="custom-property-editors"></a>Editory vlastních vlastností
 
-Okno vlastností poskytuje vhodné výchozí prostředí pro úpravy pro typ každé doménové vlastnosti. Například pro výčtový typ uživatel uvidí rozevírací seznam a pro číselnou vlastnost může uživatel zadat číslice. To platí pouze pro předdefinované typy. Pokud zadáte externí typ, bude uživatel moci zobrazit hodnoty vlastnosti, ale nebude je upravovat.
+Okno vlastností poskytuje odpovídající výchozí prostředí pro úpravy pro typ jednotlivých vlastností domény. Například u výčtového typu se uživateli zobrazí rozevírací seznam a pro číselnou vlastnost může uživatel zadat číslice. To platí pouze pro předdefinové typy. Pokud zadáte externí typ, uživatel bude moct zobrazit hodnoty vlastnosti, ale nebude ji upravovat.
 
-Můžete však zadat následující editory a typy:
+Můžete ale zadat následující editory a typy:
 
-1. Jiný editor, který se používá se standardním typem. Můžete například zadat editor cesty k souboru pro řetězcovou vlastnost.
+1. Jiný editor, který se používá se standardním typem. Můžete například zadat editor cest k souboru pro vlastnost řetězce.
 
-2. Externí typ pro doménovou vlastnost a editor.
+2. Externí typ pro vlastnost domény a editor pro něj.
 
-3. Editor .NET, jako je například editor cesty k souboru, nebo můžete vytvořit vlastní editor vlastností.
+3. Editor .NET, například editor cest k souborům, nebo můžete vytvořit vlastní editor vlastností.
 
-   Převod mezi externím typem a typem, jako je například String, který má výchozí editor.
+   Převod mezi externím typem a typem, například String, který má výchozí editor.
 
-   V DSL je *externí typ* libovolný typ, který není jedním z jednoduchých typů (například Boolean nebo Int32) nebo String.
+   V DSL je externí *typ* libovolný typ, který není jedním z jednoduchých typů (například logická hodnota nebo int32) nebo řetězec.
 
-### <a name="define-a-domain-property-that-has-an-external-type"></a>Definovat doménovou vlastnost, která má externí typ
+### <a name="define-a-domain-property-that-has-an-external-type"></a>Definování vlastnosti domény, která má externí typ
 
-1. V **Průzkumník řešení** přidejte odkaz na sestavení (DLL), které obsahuje externí typ, v projektu **DSL** .
+1. V **Průzkumník řešení** přidejte odkaz na sestavení (DLL), které obsahuje externí typ, do **projektu Dsl.**
 
-    Sestavení může být sestavení .NET nebo sestavení, které vám dodal.
+    Sestavení může být sestavení .NET nebo sestavení, které jste dodali.
 
-2. Přidejte typ do seznamu **typy domén** , pokud jste to ještě neudělali.
+2. Pokud jste to ještě neudělali, **přidejte** typ do seznamu Typy domén.
 
-   1. Otevřete DslDefinition. DSL a v **Průzkumníku DSL** klikněte pravým tlačítkem na kořenový uzel a pak klikněte na **Přidat nový externí typ**.
+   1. Otevřete DslDefinition.dsl a v **Průzkumníku DSL** klikněte pravým tlačítkem na kořenový uzel a pak klikněte na **Přidat nový externí typ**.
 
-        V uzlu **typy domén** se zobrazí nová položka.
+        Pod uzlem Typy domén se **zobrazí nová** položka.
 
        > [!WARNING]
-       > Položka nabídky je na kořenovém uzlu DSL, nikoli v uzlu **typy domén** .
+       > Položka nabídky je v kořenovém uzlu DSL, nikoli v **uzlu Typy** domén.
 
    2. Nastavte název a obor názvů nového typu v okno Vlastnosti.
 
-3. Obvyklým způsobem přidejte do doménové třídy doménovou vlastnost.
+3. Přidejte vlastnost domény do třídy domény obvyklým způsobem.
 
-    V okno Vlastnosti v poli **typ** vyberte externí typ z rozevíracího seznamu.
+    V okno Vlastnosti v rozevíracím seznamu v poli Typ vyberte externí **typ.**
 
-   V této fázi si uživatelé můžou zobrazit hodnoty vlastnosti, ale nemůžou je upravovat. Zobrazené hodnoty jsou získány z `ToString()` funkce. Můžete napsat programový kód, který nastaví hodnotu vlastnosti, například v příkazu nebo pravidle.
+   V této fázi mohou uživatelé zobrazit hodnoty vlastnosti, ale nemohou ji upravovat. Zobrazené hodnoty se získávají z `ToString()` funkce . Můžete napsat programový kód, který nastaví hodnotu vlastnosti, například v příkazu nebo pravidle.
 
 ### <a name="set-a-property-editor"></a>Nastavení editoru vlastností
 

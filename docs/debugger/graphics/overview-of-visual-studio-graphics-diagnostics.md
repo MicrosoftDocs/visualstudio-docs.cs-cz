@@ -1,7 +1,7 @@
 ---
 title: Přehled diagnostiky grafiky | Microsoft Docs
 description: Visual Studio Diagnostika grafiky je sada nástrojů pro protokolování aktivity Direct3D a analyzuje protokoly pro řešení problémů s vykreslováním a výkonem.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 author: mikejo5000
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ae7969a3eb0e33b46755cdb3fa92cc2bcbe19c8a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24b67b9585db973e6cbef3b1c28c6068e7c37034
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905181"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386186"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Přehled diagnostiky grafiky sady Visual Studio
 Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a analýzu problémů s výkonem a výkonem v aplikacích Direct3D. Diagnostika grafiky lze použít pro aplikace, které jsou spuštěny místně na počítači s Windows nebo na vzdáleném počítači nebo zařízení.

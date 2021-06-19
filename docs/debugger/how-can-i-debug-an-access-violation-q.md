@@ -1,7 +1,7 @@
 ---
-title: Ladění narušení přístupu C++ | Microsoft Docs
-description: Přečtěte si tipy pro řešení potíží s porušením přístupu, pokud je více než jeden ukazatel kandidátem. Poslední verze sady Visual Studio pojmenují ukazatel errant.
-ms.custom: SEO-VS-2020, seodec18
+title: Ladění narušení přístupu v jazyce C++ | Microsoft Docs
+description: Tipy k řešení potíží s porušením přístupu najdete v případě, že je kandidátem více než jeden ukazatel. Nedávné verze Visual Studio jako ukazatel na errant.
+ms.custom: SEO-VS-2020
 ms.date: 02/05/2019
 ms.topic: how-to
 f1_keywords:
@@ -20,24 +20,24 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f7e33ff34357dc0aa258f179f55d379bdf05636
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3689942c9db9fde3598590cf30100fc590c50753
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904313"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387031"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>Jak mohu ladit porušení přístupu k C++?
+# <a name="how-can-i-debug-a-c-access-violation"></a>Jak můžu ladit porušení přístupu C++?
 
 ## <a name="problem-description"></a>Popis problému
 
-Program vytvoří porušení přístupu. Jak se dá ladit?
+V mém programu dochází k narušení přístupu. Jak to můžu ladit?
 
 ## <a name="solution"></a>Řešení
 
-Pokud dojde k narušení přístupu na řádku kódu, který odkazuje na více ukazatelů, může být obtížné zjistit, který ukazatel způsobil narušení přístupu. Počínaje verzí Visual Studio 2015 Update 1 se v dialogovém okně výjimka teď explicitně pojmenuje ukazatel, který způsobil narušení přístupu.
+Pokud dojde k narušení přístupu na řádku kódu, který přeskakuje více ukazatelů, může být obtížné zjistit, který ukazatel narušení přístupu způsobil. Počínaje Visual Studio 2015 Update 1 teď dialogové okno výjimky explicitně uvádí ukazatel, který způsobil narušení přístupu.
 
-Například s ohledem na následující kód byste měli mít porušení přístupu:
+Například v případě následujícího kódu by mělo dojít k narušení přístupu:
 
 ```C++
 #include <iostream>
@@ -74,11 +74,11 @@ int main() {
 }
 ```
 
-Pokud spustíte tento kód v aplikaci Visual Studio 2015 Update 1, mělo by se zobrazit následující dialog výjimky:
+Pokud tento kód spustíte v Visual Studio 2015 Update 1, mělo by se zobrazit následující dialogové okno výjimky:
 
-![Snímek obrazovky dialogového okna s výjimkou Microsoft Visual Studio, ve kterém se zobrazuje porušení přístupu pro čtení pro: A->B, je nullptr. Je vybráno tlačítko přerušit.](../debugger/media/accessviolationcplus.png)
+![Snímek obrazovky Microsoft Visual Studio výjimkami zobrazující porušení přístupu pro čtení pro A->B byl nullptr Je vybráno tlačítko Break (Přerušit).](../debugger/media/accessviolationcplus.png)
 
-Pokud nemůžete určit, proč ukazatel způsobil narušení přístupu, Sledujte kód, abyste se ujistili, že ukazatel způsobující problém byl správně přiřazen.  Pokud se předává jako parametr, ujistěte se, že je předaný správně, a Vy nechtěně nevytvoříte [kopii](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)s podmnožinou. Pak ověřte, že se hodnoty neúmyslně v programu nezměnily, vytvořením datové zarážky pro daný ukazatel, abyste se ujistili, že se nemění jinde v programu. Další informace o zarážekch dat naleznete v části datové zarážky v tématu [použití zarážek](../debugger/using-breakpoints.md).
+Pokud nemůžete určit, proč ukazatel způsobil narušení přístupu, proveďte trasování kódu a ujistěte se, že byl ukazatel způsobující problém přiřazen správně.  Pokud se předá jako parametr, ujistěte se, že je předán správně a že nechtěně nevytváříte [mělkou kopii](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy). Potom vytvořením datové zarážky pro sledovaný ukazatel ověřte, že se hodnoty neúmyslně nemění někde v programu, abyste se ujistili, že se neupravují jinde v programu. Další informace o datových zarážkách najdete v části datové zarážky v tématu [Použití zarážek](../debugger/using-breakpoints.md).
 
 ## <a name="see-also"></a>Viz také
 - [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)

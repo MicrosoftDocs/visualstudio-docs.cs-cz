@@ -1,34 +1,34 @@
 ---
 title: T4 – direktiva Parameter
-description: Přečtěte si, že v aplikaci Visual Studio direktiva parametru deklaruje vlastnosti v kódu šablony, které jsou inicializovány z hodnot předaných z externího kontextu.
+description: V tomto Visual Studio deklaruje direktiva parameter vlastnosti v kódu šablony, které jsou inicializovány z hodnot předáovaných z externího kontextu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe68d31d214ae4be8fca35f1e90e63690f3ad581
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ef80179d43996669b9d883fd2ca9163208d18d7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924603"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386095"
 ---
 # <a name="t4-parameter-directive"></a>T4 – direktiva Parameter
 
-V textové šabloně sady Visual Studio `parameter` deklaruje direktiva vlastnosti v kódu šablony, které jsou inicializovány z hodnot předaných z externího kontextu. Tyto hodnoty můžete nastavit, pokud píšete kód, který vyvolá transformaci textu.
+V Visual Studio šablony deklaruje direktiva vlastnosti v kódu šablony, které jsou inicializovány z hodnot předáovaných `parameter` z externího kontextu. Tyto hodnoty můžete nastavit, pokud napíšete kód, který vyvolá transformaci textu.
 
-## <a name="using-the-parameter-directive"></a>Použití direktivy parametru
+## <a name="using-the-parameter-directive"></a>Použití direktivy Parameter
 
 ```
 <#@ parameter type="Full.TypeName" name="ParameterName" #>
 ```
 
- `parameter`Direktiva deklaruje vlastnosti v kódu šablony, které jsou inicializovány z hodnot předaných z externího kontextu. Tyto hodnoty můžete nastavit, pokud píšete kód, který vyvolá transformaci textu. Hodnoty mohou být předány buď ve `Session` slovníku, nebo v <xref:System.Runtime.Remoting.Messaging.CallContext> .
+ Direktiva `parameter` deklaruje vlastnosti v kódu šablony, které jsou inicializovány z hodnot předáovaných z externího kontextu. Tyto hodnoty můžete nastavit, pokud napíšete kód, který vyvolá transformaci textu. Hodnoty lze předat buď ve `Session` slovníku, nebo v <xref:System.Runtime.Remoting.Messaging.CallContext> .
 
- Můžete deklarovat parametry libovolného typu vzdáleně. To znamená, že typ musí být deklarován s <xref:System.SerializableAttribute> , nebo musí být odvozen od <xref:System.MarshalByRefObject> . To umožňuje předání hodnot parametrů do domény aplikace, ve které je šablona zpracována.
+ Můžete deklarovat parametry libovolného spustitelného typu. To znamená, že typ musí být deklarován pomocí <xref:System.SerializableAttribute> nebo musí být odvozen z <xref:System.MarshalByRefObject> . To umožňuje předat hodnoty parametrů do domény AppDomain, ve které je šablona zpracována.
 
  Můžete například napsat textovou šablonu s následujícím obsahem:
 
@@ -42,8 +42,8 @@ Line <#= i #>
 <# } #>
 ```
 
-## <a name="passing-parameter-values-to-a-template"></a>Předávání hodnot parametrů do šablony
- Pokud píšete rozšíření sady Visual Studio, jako je například příkaz nabídky nebo obslužná rutina události, můžete zpracovat šablonu pomocí služby text šablonování:
+## <a name="passing-parameter-values-to-a-template"></a>Předávání hodnot parametrů šabloně
+ Pokud píšete rozšíření Visual Studio, jako je příkaz nabídky nebo obslužná rutina události, můžete šablonu zpracovat pomocí služby šablonování textu:
 
 ```csharp
 // Get a service provider - how you do this depends on the context:
@@ -61,7 +61,7 @@ string result = t4.ProcessTemplate("MyTemplateFile.t4",
 ```
 
 ## <a name="passing-values-in-the-call-context"></a>Předávání hodnot v kontextu volání
- Hodnoty můžete alternativně předat jako logická data v <xref:System.Runtime.Remoting.Messaging.CallContext> .
+ Alternativně můžete předat hodnoty jako logická data v <xref:System.Runtime.Remoting.Messaging.CallContext> .
 
  Následující příklad předává hodnoty pomocí obou metod:
 
@@ -84,10 +84,10 @@ string result = t4.ProcessTemplate("",
 //     Test 32 test
 ```
 
-## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Předání hodnot do textové šablony Run-Time (předzpracovaná)
- Není obvykle nutné použít `<#@parameter#>` direktivu s textovými šablonami run-time (předzpracované). Místo toho můžete definovat další konstruktor nebo nastavitelnou vlastnost pro generovaný kód, pomocí kterého předáte hodnoty parametrů. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
+## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Předávání hodnot do Run-Time (předzpracované) textové šablony
+ Obvykle není nutné používat direktivu s textovou šablonou `<#@parameter#>` za běhu (předzpracované). Místo toho můžete definovat další konstruktor nebo nastavitelné vlastnosti pro vygenerovaný kód, jehož prostřednictvím předáte hodnoty parametrů. Další informace najdete v tématu Generování textu za běhu pomocí [textových šablon T4.](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
- Pokud však chcete použít `<#@parameter>` v šabloně run-time, můžete do ní předat hodnoty pomocí slovníku relace. Předpokládejme například, že jste vytvořili soubor jako předzpracovaná šablona s názvem `PreTextTemplate1` . Šablonu můžete vyvolat v programu pomocí následujícího kódu.
+ Pokud však chcete použít v šabloně za běhu, můžete do ní předat hodnoty `<#@parameter>` pomocí slovníku Relace. Předpokládejme například, že jste soubor vytvořili jako předzpracovanou šablonu s názvem `PreTextTemplate1` . Šablonu v programu můžete vyvolat pomocí následujícího kódu.
 
 ```csharp
 PreTextTemplate1 t = new PreTextTemplate1();
@@ -98,7 +98,7 @@ t.Initialize(); // Must call this to transfer values.
 string resultText = t.TransformText();
 ```
 
-## <a name="obtaining-arguments-from-texttemplateexe"></a>Získávání argumentů z TextTemplate.exe
+## <a name="obtaining-arguments-from-texttemplateexe"></a>Získání argumentů z TextTemplate.exe
 
 > [!IMPORTANT]
-> `parameter`Direktiva nenačítá hodnoty nastavené v `-a` parametru tohoto `TextTransform.exe` nástroje. Pro získání těchto hodnot nastavte `hostSpecific="true"` v `template` direktivě a použijte `this.Host.ResolveParameterValue("","","argName")` .
+> Direktiva `parameter` nenačítá hodnoty nastavené `-a` v parametru `TextTransform.exe` nástroje. Pokud chcete tyto hodnoty získat, `hostSpecific="true"` nastavte v direktivě a `template` použijte `this.Host.ResolveParameterValue("","","argName")` .

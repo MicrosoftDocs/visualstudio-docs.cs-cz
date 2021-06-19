@@ -1,7 +1,7 @@
 ---
-description: 'Úplný text zprávy: při vyhodnocování funkce Function vypršel časový limit a bylo nutné ho přerušit nebezpečným způsobem.'
-title: Vyhodnocení funkce Function &apos; &apos; vypršel časový limit a bylo nutné ho přerušit nebezpečným způsobem | Microsoft Docs
-ms.date: 11/04/2016
+title: Vyhodnocení funkce funkce mělo časový limit a bylo potřeba ji přerušit nebezpečným &apos; &apos; způsobem| Microsoft Docs
+description: 'Celý text zprávy: Při vyhodnocování funkce function (funkce) se vyhodnotil časový limit a bylo potřeba ji přerušit nebezpečným způsobem.'
+ms.date: 06/18/2021
 ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unsafe_func_eval_abort
@@ -10,43 +10,47 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a540f6f80029039644b22a24a31510042236de2
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e928bb0ebae1e644729fcaf4f47b7dd461399be6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147013"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386667"
 ---
-# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Chyba: vyhodnocování funkce &#39;funkce&#39; vypršel časový limit a bylo nutné je přerušit nebezpečným způsobem.
+# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Chyba: Při vyhodnocování funkce &#39;došlo&#39; časový limit a bylo potřeba ji přerušit nebezpečným způsobem.
 
-Úplný text zprávy: při vyhodnocování funkce Function vypršel časový limit a bylo nutné ho přerušit nebezpečným způsobem. To může mít poškozený cílový proces.
+Celý text zprávy: Při vyhodnocování funkce function (funkce) se vyhodnotil časový limit a bylo potřeba ji přerušit nebezpečným způsobem. Může dojít k poškození cílového procesu.
 
-Aby bylo snazší zkontrolovat stav objektů .NET, ladicí program automaticky vynutí laděný proces, aby spouštěl další kód (obvykle metody getter vlastností a funkce ToString). Ve většině scénářů se tyto funkce dokončí rychle a ladění je mnohem jednodušší. Ladicí program však aplikaci nespustí v izolovaném prostoru (sandbox). V důsledku toho metoda get nebo ToString, která volá do nativní funkce, která přestane reagovat, může způsobit dlouhé časové limity, které nemusí být obnovitelné. Pokud se zobrazí tato chybová zpráva, došlo k této chybě.
+Aby bylo snazší zkontrolovat stav objektů .NET, ladicí program automaticky vynutí, aby laděné procesy spouštěly další kód (obvykle metody getter vlastností a funkce ToString). Ve většině scénářů se tyto funkce dokončí rychle a ladění je mnohem jednodušší. Ladicí program ale nespouštěl aplikaci v sandboxu. Výsledkem je, že metoda getter vlastnosti nebo ToString, která volá nativní funkci, která přestane reagovat, může vést k dlouhým časovým limitům, které nemusí být možné obnovit. Pokud se zobrazí tato chybová zpráva, došlo k tomu.
 
-Jednou z běžných příčin tohoto problému je, že když ladicí program vyhodnotí vlastnost, umožňuje pouze kontrolované vlákno. Takže pokud vlastnost čeká na spuštění jiných vláken uvnitř laděné aplikace a pokud čeká způsobem, že modul runtime .NET nemůže provést přerušení, dojde k tomuto problému.
+Jedním z běžných důvodů tohoto problému je to, že když ladicí program vyhodnocuje vlastnost, umožňuje spuštění pouze vlákna, které se prověřuje. Takže pokud vlastnost čeká na spuštění v jiných vláknech v laděné aplikaci a pokud čeká způsobem, který modul runtime .NET nemůže přerušit, dojde k tomuto problému.
 
 ## <a name="to-correct-this-error"></a>Oprava této chyby
 
-Existuje několik možných řešení tohoto problému.
+V následujících částech najdete několik možných řešení tohoto problému.
 
-### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Řešení #1: zabrání ladicímu programu volat vlastnost getter nebo metodu ToString.
+## <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Řešení #1: Zabránit ladicímu programu v volání vlastnosti getter nebo metody ToString
 
-Chybová zpráva vám sdělí název funkce, kterou se ladicí program pokusil zavolat. Pokud tuto funkci můžete změnit, můžete zabránit ladicímu programu v volání metody getter nebo ToString vlastnosti. Zkuste provést jednu z následujících akcí:
+Chybová zpráva vám řekne název funkce, kterou se ladicí program pokusil volat. Pokud tuto funkci můžete upravit, můžete ladicímu programu zabránit v volání metody property getter nebo ToString. Vyzkoušejte jednu z následujících možností:
 
-* Změňte metodu na jiný typ kódu kromě metody getter nebo ToString a problém zmizí.
-    -nebo-
-* (Pro ToString) Definujte pro typ atribut DebuggerDisplay a ladicí program může vyhodnotit jinou hodnotu než ToString.
-    -nebo-
-* (Pro Getter vlastnost) Umístěte `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` atribut na vlastnost. To může být užitečné, pokud máte metodu, která musí zůstat v případě důvodu kompatibility rozhraní API, ale měla by být ve skutečnosti metoda.
+* Změňte metodu na jiný typ kódu kromě metody property getter nebo ToString a problém zmizí.
+  -nebo-
+* (Pro ToString) Definujte [atribut DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md) pro typ a ladicí program může vyhodnotit něco jiného než ToString.
+  -nebo-
+* (Pro getter vlastnost) Do vlastnosti umístěte atribut [System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never).](/dotnet/api/system.diagnostics.debuggerbrowsableattribute) To může být užitečné, pokud máte metodu, která musí zůstat vlastností z důvodů kompatibility rozhraní API, ale ve skutečnosti by to měla být metoda.
 
-### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>#2 řešení: Pokud chcete, aby se v ladicím programu přerušuje zkušební verze, obraťte se na něj.
+## <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>Řešení #2: Požádejte cílový kód ladicího programu, aby přerušil vyhodnocení.
 
-Chybová zpráva vám sdělí název funkce, kterou se ladicí program pokusil zavolat. Pokud metoda getter nebo ToString v některých případech nefunguje správně, zejména v situacích, kdy problém je, že kód potřebuje jiné vlákno ke spuštění kódu, pak funkce implementace může zavolat, `System.Diagnostics.Debugger.NotifyOfCrossThreadDependency` aby mohl ladicí program přerušit vyhodnocení funkce. V tomto řešení je stále možné tyto funkce explicitně vyhodnotit, ale výchozí chování je, že se spuštění zastaví, když dojde k volání NotifyOfCrossThreadDependency.
+Chybová zpráva vám řekne název funkce, kterou se ladicí program pokusil volat. Pokud se někdy nepodaří správně spustit metodu getter nebo ToString vlastnosti, zejména v situacích, kdy je problém v tom, že kód ke spuštění kódu potřebuje jiné vlákno, může implementační funkce zavolat [metodu System.Diagnostics.Debugger.NotifyOfCrossThreadDependency](/dotnet/api/system.diagnostics.debugger.notifyofcrossthreaddependency) a požádat ladicí program o přerušení vyhodnocení funkce. V tomto řešení je stále možné explicitně vyhodnotit tyto funkce, ale výchozí chování je, že provádění se zastaví, když dojde k volání NotifyOfCrossThreadDependency.
 
-### <a name="solution-3-disable-all-implicit-evaluation"></a>Řešení #3: Zakázat všechna implicitní vyhodnocení
+## <a name="solution-3-disable-all-implicit-evaluation"></a>Řešení #3: Zákaz veškerého implicitního vyhodnocení
 
-Pokud předchozí řešení problém nevyřeší, pokračujte na   >  **Možnosti** nástroje a zrušte zaškrtněte nastavení **ladění**  >  **Obecné**  >  **Povolit vyhodnocení vlastností a další implicitní volání funkcí**. Tato akce zakáže většinu implicitních vyhodnocení funkcí a tento problém by měl vyřešit.
+Pokud předchozí řešení problém nevyřeší, přejděte na Možnosti nástrojů a zrušte zaškrtnutí nastavení Ladění obecného povolení vyhodnocení vlastností a dalších  >     >    >  **implicitních volání funkcí**. Tím se zakáže většina implicitních vyhodnocení funkcí a problém by se měl vyřešit.
 
-### <a name="solution-4-enable-managed-compatibility-mode"></a>#4 řešení: Povolit spravovaný režim kompatibility
+## <a name="solution-4-check-compatibility-with-third-party-developer-tools"></a>Řešení #4: Kontrola kompatibility s vývojářských nástrojů třetích stran
 
-Pokud přepnete na starší verzi ladicího modulu, možná budete moct tuto chybu eliminovat. V **nabídce nástroje**  >  klikněte na **Možnosti** a vyberte nastavení **ladění**  >  **Obecné**  >  **použití spravovaného režimu kompatibility**. Další informace najdete v tématu [Obecné možnosti ladění](../debugger/general-debugging-options-dialog-box.md).
+Pokud používáte Resharper, najdete návrhy v [tomto](https://youtrack.jetbrains.com/issue/RSRP-476824) problému.
+
+## <a name="solution-5-enable-managed-compatibility-mode"></a>Řešení #5: Povolení režimu spravované kompatibility
+
+Pokud přepnete na starší verzi modulu ladění, můžete tuto chybu eliminovat. Přejděte na **Nástroje** Možnosti a vyberte nastavení Ladění Obecné  >     >    >  **použití spravovaného režimu kompatibility**. Další informace najdete v tématu [Obecné možnosti ladění.](../debugger/general-debugging-options-dialog-box.md)

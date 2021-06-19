@@ -1,7 +1,7 @@
 ---
-title: Použití úprav v režimu pozastavení s úpravou a pokračováním | Microsoft Docs
-description: Viz jak použít Edit and Continue k úpravám Visual Basic kódu v režimu pozastavení. Existují různé způsoby, jak zadat režim přerušení.
-ms.custom: SEO-VS-2020, seodec18
+title: Použití úprav v režimu přerušení pomocí úpravy a | Microsoft Docs
+description: Podívejte se, jak pomocí funkce Upravit a pokračovat upravit Visual Basic kódu v režimu přerušení. Do režimu přerušení můžete vstoupit různými způsoby.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -24,42 +24,42 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a9074d992c06c1b7d49f59481bee35345c5199f8
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e62c6a7a6e30bac6d054f3e5484498047426d96d
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155039"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386797"
 ---
-# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Postupy: použití úprav v režimu pozastavení pomocí funkce upravit a pokračovat (Visual Basic)
-Můžete použít příkaz Upravit a pokračovat pro úpravu kódu v režimu přerušení a pak pokračovat bez zastavení a restartování provádění.
+# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Postupy: Použití úprav v režimu přerušení pomocí funkce Upravit a pokračovat (Visual Basic)
+Pomocí příkazů Upravit a Pokračovat můžete upravit kód v režimu přerušení a pokračovat bez zastavení a restartování provádění.
 
-Omezení použití úpravy a pokračování při ladění naleznete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md).
+Omezení týkající se použití funkce Upravit a pokračovat při ladění najdete v tématu [Podporované změny kódu (C# a Visual Basic).](../debugger/supported-code-changes-csharp.md)
 
-### <a name="to-edit-code-in-break-mode"></a>Úprava kódu v režimu pozastavení
+### <a name="to-edit-code-in-break-mode"></a>Úprava kódu v režimu přerušení
 
-1. Do režimu přerušení zadejte jednu z následujících možností:
+1. Do režimu přerušení můžete vstoupit jedním z následujících způsobů:
 
-    - Nastavte zarážku v kódu a pak zvolte **Spustit ladění** z nabídky **ladění** a počkejte, než aplikace dorazí na zarážku.
-
-         -nebo-
-
-    - Spusťte ladění a v nabídce **ladění** vyberte možnost **rozdělit vše** .
+    - Nastavte zarážku v kódu, pak v  nabídce **Ladit** zvolte Spustit ladění a počkejte, až aplikace tuto zarážku narazí.
 
          -nebo-
 
-    - Pokud dojde k výjimce, klikněte na **Povolit úpravy** v **Pomocníkovi s výjimkami**.
+    - Spusťte ladění a pak v **nabídce Ladit** vyberte Break All **(Zastavit** vše).
 
-2. Proveďte požadované a podporované změny kódu.
+         -nebo-
 
-     Další informace najdete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md).
+    - Pokud dojde k výjimce, **v Pomocníkovi s** výjimkami zvolte Povolit **úpravy.**
+
+2. Proveďte všechny požadované a podporované změny kódu.
+
+     Další informace najdete v tématu [Podporované změny kódu (C# a Visual Basic).](../debugger/supported-code-changes-csharp.md)
 
     > [!NOTE]
-    > Pokud se pokusíte změnit kód, který není povolen úpravou a pokračováním, bude vaše úprava podtržena fialovou vlnovkou a úloha se zobrazí v Seznam úkolů. Nebudete moci pokračovat v provádění kódu, Pokud nevrátíte neplatnou změnu kódu.
+    > Pokud se pokusíte provést změnu kódu, která není povolena pomocí upravit a pokračovat, vaše úpravy budou podtrženy fialovou vlnovkou a úkol se zobrazí v Seznam úkolů. Pokud nepovolíte neplatnou změnu kódu, nebudete moct pokračovat v provádění kódu.
 
-3. V nabídce **ladit** klikněte na **pokračovat** a pokračujte v provádění.
+3. V nabídce **Ladit** klikněte na **Pokračovat a** obnovte provádění.
 
-     Váš kód se teď provádí s použitými úpravami, které jsou součástí projektu.
+     Váš kód se teď spustí s použitými úpravami začleněných do projektu.
 
 ## <a name="see-also"></a>Viz také
 - [Podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md)

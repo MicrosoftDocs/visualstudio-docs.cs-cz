@@ -1,7 +1,7 @@
 ---
 title: Jak spustit program (C#)
 description: Příručka pro začátečníky, jak spustit program v jazyce C# v aplikaci Visual Studio.
-ms.custom: get-started
+ms.custom: vs-acquisition, get-started
 ms.date: 10/16/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bbebcec3f5b2de01bcbfa7839f68e6f7a3e2cc64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e20caabb55e65801224177168f5c936f81402bbd
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922845"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385224"
 ---
 # <a name="how-to-run-a-c-program-in-visual-studio"></a>Postupy: spuštění programu v jazyce C# v aplikaci Visual Studio
 

@@ -1,7 +1,7 @@
 ---
 title: Začínáme s Visual Studio Tools for Unity | Microsoft Docs
 description: Zjistěte, jak nainstalovat a nastavit Visual Studio pro vývoj pro Unity.
-ms.custom: ''
+ms.custom: acquisition
 ms.date: 01/27/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
@@ -13,12 +13,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: 791f25b61c86f0115c225d505bdb1edb07869961
-ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
+ms.openlocfilehash: 8eea998731c4d29e533d1e6bf21d4a2870a81ff5
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109782605"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386693"
 ---
 # <a name="get-started-with-visual-studio-and-unity"></a>Začínáme s Visual Studio a Unity
 
@@ -46,7 +46,7 @@ Visual Studio Tools for Unity je bezplatné rozšíření, které poskytuje podp
 > [!NOTE]
 > Tento průvodce instalací je pro Visual Studio pro Mac. Pokud používáte aplikaci Visual Studio Code, navštivte stránku [Unity Development with VS Code dokumentaci.](https://code.visualstudio.com/docs/other/unity)
 
-Nástroje pro Unity jsou součástí instalace Visual Studio pro Mac a nejsou vyžadovány žádné samostatné kroky instalace. Můžete to ověřit v nabídce **Visual Studio pro Mac > rozšíření > Game Development.** **Visual Studio pro Mac by měly být povolené nástroje pro Unity.**
+Nástroje pro Unity jsou součástí instalace Visual Studio pro Mac a nejsou vyžadovány žádné samostatné instalační kroky. Můžete to ověřit v nabídce **Visual Studio pro Mac > rozšíření > Game Development.** **Visual Studio pro Mac by měly být povolené nástroje pro Unity.**
 
 ![Zobrazení Správce rozšíření s povolenými Visual Studio pro Mac Tools for Unity](../media/vsm/unity-workload.png)
 
@@ -54,48 +54,48 @@ Nástroje pro Unity jsou součástí instalace Visual Studio pro Mac a nejsou vy
 
 ## <a name="check-for-updates"></a>Vyhledat aktualizace
 
-Doporučuje se nechat Visual Studio a Visual Studio pro Mac aktualizovat, abyste měli nejnovější opravy chyb, funkce a podporu Unity. To nevyžaduje aktualizaci verze Unity.
+Doporučujeme udržovat aktualizace Visual Studio Visual Studio pro Mac, abyste měli nejnovější opravy chyb, funkce a podporu Unity. To nevyžaduje aktualizaci verzí Unity.
 
 :::zone pivot="windows"
 
-1. Klikněte na nabídku **> vyhledat aktualizace v nápovědě** .
+1. Klikněte na **nabídku Help > Check for Updates (Vyhledat aktualizace).**
 
-    ![Nabídka vyhledat aktualizace v aplikaci Visual Studio 2019](../media/vs/check-for-updates.png)
+    ![Nabídka Vyhledat aktualizace v Visual Studio 2019](../media/vs/check-for-updates.png)
 
-2. Pokud je k dispozici aktualizace, Instalační program pro Visual Studio zobrazí novou verzi. Klikněte na tlačítko **aktualizovat** .
+2. Pokud je k dispozici aktualizace, Instalační program pro Visual Studio zobrazí novou verzi. Klikněte na **tlačítko** Aktualizovat.
 
 :::zone-end
 :::zone pivot="macos"
 
-1. Kliknutím na **Visual Studio pro Mac > vyhledat aktualizace...** otevřete dialog **aktualizace sady Visual Studio** .
-2. Pokud je k dispozici aktualizace, klikněte na tlačítko **nainstalovat** .
+1. Kliknutím na **Visual Studio pro Mac > Zkontrolovat aktualizace...** otevřete dialogové **okno Visual Studio Aktualizovat.**
+2. Pokud je k dispozici aktualizace, klikněte na **tlačítko** Nainstalovat.
 
 :::zone-end
 
-## <a name="configure-unity-to-use-visual-studio"></a>Konfigurace Unity pro použití Visual studia
+## <a name="configure-unity-to-use-visual-studio"></a>Konfigurace Unity pro použití Visual Studio
 
-Ve výchozím nastavení by Unity měla být nakonfigurovaná tak, aby používala aplikaci Visual Studio, nebo Visual Studio pro Mac jako editor skriptu. Můžete to potvrdit nebo změnit externí editor skriptu na konkrétní verzi sady Visual Studio z editoru Unity.
+Ve výchozím nastavení by Unity už měla být nakonfigurovaná tak, aby Visual Studio nebo Visual Studio pro Mac jako editor skriptů. Můžete to potvrdit nebo změnit editor externích skriptů na konkrétní verzi Visual Studio v Unity Editoru.
 
 :::zone pivot="windows"
 
-1. V editoru Unity vyberte nabídku **Upravit předvolby >** ..
-2. Na levé straně vyberte kartu **externí nástroje** .
-3. Rozevírací seznam **editoru externích skriptů** nabízí způsob, jak zvolit různé instalace aplikace Visual Studio. Můžete také kliknout na **Procházet...** v rozevíracím seznamu a přidat tak verzi, která není v seznamu.
+1. V Editoru Unity vyberte Upravit a **> Předvolby.**
+2. Na levé **straně vyberte** kartu Externí nástroje.
+3. Rozevírací **seznam Editor** externích skriptů poskytuje způsob, jak zvolit různé instalace Visual Studio. Můžete také **kliknout na Procházet...** z rozevíracího seznamu a přidat neuvedené verze.
 
-    ![Nabídka předvolby externích nástrojů v editoru Unity ve Windows](../media/vs/preferences-external-tools.png)
+    ![Nabídka předvoleb Externí nástroje v Editoru Unity ve Windows](../media/vs/preferences-external-tools.png)
 
-4. Pokud jste vybrali možnost **Procházet...** , přejděte do adresáře **Common7/IDE** v instalačním adresáři sady Visual Studio a vyberte **devenv.exe**. Pak klikněte na **otevřít**.
-5. Jakmile je v seznamu **Editor externích skriptů** vybraná možnost Visual Studio, zkontrolujte, že je zaškrtnuté políčko **připojovat Editor** .
-6. Zavřete dialogové okno **Předvolby** a dokončete proces konfigurace.
+4. Pokud **jste vybrali** Procházet..., přejděte do **adresáře Common7/IDE** v instalačním adresáři Visual Studio a vyberte **devenv.exe**. Pak klikněte na **Otevřít.**
+5. Jakmile Visual Studio v seznamu Editor  externích skriptů, ověřte, že je zaškrtnuté políčko Editor **Attaching** (Připojení editoru).
+6. Zavřete **dialogové okno** Předvolby a dokončete proces konfigurace.
 
 :::zone-end
 :::zone pivot="macos"
 
 1. V Editoru Unity vyberte nabídku **Unity > Předvolby.**
 2. Na levé **straně vyberte** kartu Externí nástroje.
-3. Rozevírací **seznam Editor externích** skriptů poskytuje způsob, jak zvolit různé instalace Visual Studio. Můžete také **kliknout na Procházet...** z rozevíracího seznamu a přidat neuvedené verze.
+3. Rozevírací **seznam Editor** externích skriptů poskytuje způsob, jak zvolit různé instalace Visual Studio. Můžete také **kliknout na Procházet...** z rozevíracího seznamu a přidat neuvedené verze.
 
-    ![Nabídka předvoleb Externí nástroje v Editoru Unity v macOS](../media/vsm/preferences-external-tools.png)
+    ![Nabídka předvoleb Externí nástroje v Unity Editoru v macOS](../media/vsm/preferences-external-tools.png)
 
 4. Zavřete **dialogové okno** Předvolby a dokončete proces konfigurace.
 
@@ -103,4 +103,4 @@ Ve výchozím nastavení by Unity měla být nakonfigurovaná tak, aby používa
 
 ## <a name="next-steps"></a>Další kroky
 
- Informace o tom, jak pracovat s projektem Unity a ladit ho v Visual Studio, najdete v tématu Používání [Visual Studio Tools for Unity](using-visual-studio-tools-for-unity.md).
+ Informace o tom, jak pracovat s projektem Unity a ladit ho v Visual Studio, najdete v tématu [Používání Visual Studio Tools for Unity](using-visual-studio-tools-for-unity.md).

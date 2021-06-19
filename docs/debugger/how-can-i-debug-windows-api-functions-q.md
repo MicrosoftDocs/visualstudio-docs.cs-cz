@@ -1,7 +1,7 @@
 ---
 title: Ladění funkcí rozhraní API systému Windows | Microsoft Docs
-description: Naučte se ladit funkci rozhraní Windows API, která má načtené symboly NT. V 32 bitového kódu použijte dekorované forma názvu funkce pro nastavení zarážky.
-ms.custom: SEO-VS-2020, seodec18
+description: Zjistěte, jak ladit funkci rozhraní API systému Windows, která má načtené symboly NT. Ve 32bitovém kódu použijete dekorovaný tvar názvu funkce k nastavení zarážky.
+ms.custom: SEO-VS-2020
 ms.date: 06/03/2020
 ms.topic: how-to
 f1_keywords:
@@ -23,29 +23,29 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d84bdc20ab4601798e1f967c1352468e750fa9bd
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 89fdbcf9d18a7794e1fb2520384db0f9bcec3147
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155210"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386940"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>Jak mohu ladit funkce rozhraní API systému Windows?
-Pokud chcete ladit funkci rozhraní API systému Windows, která má načteny symboly NT, je nutné provést následující postup.
+Pokud chcete ladit funkci rozhraní API systému Windows, která má načtené symboly NT, musíte provést následující kroky.
 
-### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>Nastavení zarážky na funkci rozhraní Windows API se zavedenými symboly NT
+### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>Nastavení zarážky ve funkci rozhraní API systému Windows s načteným symbolem NT
 
-- Ve [zarážce funkce](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)zadejte název funkce společně s názvem knihovny DLL, kde je funkce umístěná (viz [kontextový operátor](../debugger/context-operator-cpp.md)). V 32 bitového kódu použijte dekorované formuláře názvu funkce. Chcete-li nastavit zarážku na **MessageBeep**, například je třeba zadat následující.
+- Do [zarážky funkce](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)zadejte název funkce společně s názvem knihovny DLL, ve které se funkce nachází (viz [operátor kontextu](../debugger/context-operator-cpp.md)). Ve 32bitovém kódu použijte dekorovaný tvar názvu funkce. Pokud chcete nastavit zarážku **například v MessageBeep,** musíte zadat následující.
 
     ```cpp
     {,,USER32.DLL}_MessageBeep@4
     ```
 
-     Chcete-li získat upravený název, přečtěte si téma [zobrazení dekorovaných názvů](/previous-versions/5x49w699(v=vs.140)).
+     Pokud chcete získat dekorovaný název, podívejte se na [zobrazení dekorovaných názvů](/previous-versions/5x49w699(v=vs.140)).
 
-     Můžete otestovat dekorované jméno a zobrazit ho v kódu zpětného překladu. Při pozastavení ve funkci v ladicím programu sady Visual Studio klikněte pravým tlačítkem myši na funkci v editoru kódu nebo v okně zásobník volání a vyberte možnost **Přejít na zpětný překlad**.
+     Můžete otestovat dekorovaný název a zobrazit ho v kódu pro zpětný překlad. Při pozastavení funkce v ladicím programu Visual Studio klikněte pravým tlačítkem na funkci v editoru kódu nebo v okně zásobníku volání a zvolte **Přejít na Zpětný překlad**.
 
-- V 64 bitového kódu můžete použít nedekorovaný název.
+- V 64bitovém kódu můžete použít název bez názvu.
 
     ```cpp
     {,,USER32.DLL}MessageBeep

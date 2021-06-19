@@ -11,12 +11,13 @@ metadata:
   author: j-martens
   ms.author: jmartens
   ms.date: 06/14/2021
-  ms.openlocfilehash: 91e49ade3715f507523cc09c83c2cfb5fea0459c
-  ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+  ms.custom: vs-acquisition
+  ms.openlocfilehash: a8f0b61e9978accf1af7142271b66f84ec5cbdb4
+  ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 06/15/2021
-  ms.locfileid: "112112403"
+  ms.lasthandoff: 06/19/2021
+  ms.locfileid: "112385159"
 landingContent:
 - title: Začínáme
   linkLists:
@@ -80,5 +81,5 @@ landingContent:
       url: ../ide/whats-new-visual-studio-2019.md
     - text: Novinky v sadě Visual Studio 2017
       url: ../ide/whats-new-visual-studio-2017.md
-    - text: Co je nového v dokumentu
+    - text: Co je nového v dokumentaci
       url: ../ide/whats-new-visual-studio-docs.md

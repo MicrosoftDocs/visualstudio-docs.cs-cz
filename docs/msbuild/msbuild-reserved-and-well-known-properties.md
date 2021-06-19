@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cbf2aff512b98e7a813134c3b376b6972c8cd4f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2edfd4b9391beed5c379817c55871759ff02eec
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897736"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384925"
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>Vyhrazené a známé vlastnosti nástroje MSBuild
 
@@ -71,7 +71,10 @@ Tabulka v této části zobrazuje předdefinované vlastnosti MSBuild. Vzorový 
 | `MSBuildThisFileName` | Vyhrazené | Část názvu souboru `MSBuildThisFileFullPath` bez přípony názvu souboru. | `ConsoleApp1` |
 | `MSBuildToolsPath` | Vyhrazené | Instalační cesta verze nástroje MSBuild, která je přidružena k hodnotě `MSBuildToolsVersion` .<br /><br /> Do cesty nezahrnujte koncové zpětné lomítko.<br /><br /> Tuto vlastnost nelze přepsat. | `C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Current\Bin` |
 | `MSBuildToolsVersion` | Vyhrazené | Verze sady nástrojů MSBuild, která se používá k sestavení projektu.<br /><br /> Poznámka: sada nástrojů MSBuild se skládá z úloh, cílů a nástrojů, které se používají k sestavení aplikace. Mezi tyto nástroje patří kompilátory, jako jsou *csc.exe* a *vbc.exe*. Další informace najdete v tématech [Sada nástrojů (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)a [standardní a vlastní konfigurace sady nástrojů](../msbuild/standard-and-custom-toolset-configurations.md). | `Current` |
-| `MSBuildVersion` | Vyhrazené | Verze nástroje MSBuild použitá k sestavení projektu. <br /><br/> Tuto vlastnost nelze přepsat, jinak je vrácena chybová zpráva `MSB4004 - The 'MSBuildVersion' property is reserved, and can not be modified.` . | 16.7.0 |
+| `MSBuildVersion` | Vyhrazené | Verze nástroje MSBuild použitá k sestavení projektu. <br /><br/> Tuto vlastnost nelze přepsat, jinak je vrácena chybová zpráva `MSB4004 - The 'MSBuildVersion' property is reserved, and can not be modified.` . | 16.11.0 |
+| `MSBuildAssemblyVersion` | Vyhrazené | Verze sestavení nástroje MSBuild použité k sestavení projektu. | 16,0 |
+| `MSBuildFileVersion` | Vyhrazené | Verze 4 části sestavení nástroje MSBuild použité k sestavení projektu. | 16.11.0.30701 |
+| `MSBuildSemanticVersion` | Vyhrazené | Úplná verze 2,0 semver sady MSBuild pro sestavení projektu. | 16.11.0-Preview-21302-05 + 5e37cc992 |
 
 ## <a name="names-that-conflict-with-msbuild-elements"></a>Názvy, které jsou v konfliktu s elementy MSBuild
 

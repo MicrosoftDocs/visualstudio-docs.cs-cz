@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 063c0a5cfcf5136e53750e4405e8619bf3154ee2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4b578c949b3b5121eb90b2c034766ea15ae6d096
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963299"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386563"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Postupy: Přidání příkazu do místní nabídky
 
@@ -32,7 +32,7 @@ V souhrnu jsou kroky provedeny v projektu DslPackage následujícím způsobem:
 3. [Metody zápisu do třídy CommandSet](#CommandSet) , aby příkaz byl viditelný a definoval, co má příkaz dělat.
 
 > [!NOTE]
-> Můžete také změnit chování některých existujících příkazů, jako je například vyjmout, vložit, vybrat vše a tisknout přepsáním metod v CommandSet.cs. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+> Můžete také změnit chování některých existujících příkazů, jako je například vyjmout, vložit, vybrat vše a tisknout přepsáním metod v CommandSet. cs. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
 ## <a name="define-a-command-using-mef"></a>Definování příkazu pomocí MEF
 
@@ -133,7 +133,7 @@ Použijte metodu v tomto tématu, pokud:
 ## <a name="update-the-package-version-in-packagett"></a><a name="version"></a> Aktualizace verze balíčku v Package.tt
  Kdykoli přidáte nebo změníte příkaz, aktualizujte `version` parametr <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> , který se použije na třídu balíčku, a teprve potom uvolněte novou verzi vašeho jazyka specifického pro doménu.
 
- Vzhledem k tomu, že třída balíčku je definována ve vygenerovaném souboru, aktualizujte atribut v souboru textové šablony, který generuje soubor Package.cs.
+ Vzhledem k tomu, že třída balíčku je definována ve vygenerovaném souboru, aktualizujte atribut v souboru textové šablony, který generuje soubor Package. cs.
 
 ### <a name="to-update-the-packagett-file"></a>Aktualizace souboru Package.tt
 
@@ -153,7 +153,7 @@ Třída sady příkazů je odvozena z <xref:Microsoft.VisualStudio.Modeling.Shel
 
 ### <a name="extend-the-commandset-class"></a>Rozšiřování třídy CommandSet
 
-1. V Průzkumník řešení v projektu DslPackage otevřete složku GeneratedCode a potom se podívejte do části CommandSet.tt a otevřete její vygenerovaný soubor CommandSet.cs. Poznamenejte si obor názvů a název první třídy, která je zde definována. Může se například zobrazit:
+1. V Průzkumník řešení v projektu DslPackage otevřete složku GeneratedCode a potom se podívejte do části CommandSet.tt a otevřete její vygenerovaný soubor CommandSet. cs. Poznamenejte si obor názvů a název první třídy, která je zde definována. Může se například zobrazit:
 
      `namespace Company.Language1`
 
@@ -182,7 +182,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Shell;
 ```
 
-Upravte obor názvů a název třídy tak, aby odpovídaly hodnotám ve vygenerovaných CommandSet.cs:
+Upravte obor názvů a název třídy tak, aby odpovídaly hodnotám ve vygenerované CommandSet. cs:
 
 ```csharp
 namespace Company.Language1 /* Make sure this is correct */

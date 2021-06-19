@@ -1,7 +1,7 @@
 ---
-title: Zobrazení hodnot registru v ladicím programu | Microsoft Docs
-description: Zobrazit hodnoty registru v okně Registry v aplikaci Visual Studio. Během ladění zaregistruje změny hodnot, jako se ve vaší aplikaci spustí kód.
-ms.custom: SEO-VS-2020, seodec18
+title: Zobrazení hodnot registru v ladicím | Microsoft Docs
+description: Hodnoty registru si můžete zobrazit v okně Registry v Visual Studio. Během ladění se hodnoty registru mění při provádění kódu ve vaší aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/19/2018
 ms.topic: how-to
 f1_keywords:
@@ -25,38 +25,38 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ea0275a5186b58c9b9a07934b95351b597a816f3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2648f74453f51cd8d655ccb0c2344eb1030c1ed
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99845006"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385393"
 ---
-# <a name="view-register-values-in-the-registers-window-c-c-visual-basic-f"></a>Zobrazení hodnot registru v okně Registry (C#, C++, Visual Basic, F #)
+# <a name="view-register-values-in-the-registers-window-c-c-visual-basic-f"></a>Zobrazení hodnot registru v okně Registry (C#, C++, Visual Basic, F#)
 
-Okno **Registry** zobrazuje obsah registru během ladění sady Visual Studio. Úvod do konceptů za registry a v okně **Registry** najdete v části [základy ladění: Registry Window](../debugger/debugging-basics-registers-window.md).
+V **okně Registry** se během ladění registru Visual Studio registru. Základní informace o konceptech registrů a okně **Registry** najdete v tématu Základy [ladění: Okno Registry.](../debugger/debugging-basics-registers-window.md)
 
 > [!NOTE]
 > Informace o registraci nejsou k dispozici pro skripty nebo aplikace SQL.
 
-Během ladění zaregistruje změny hodnot, jako se ve vaší aplikaci spustí kód. Hodnoty, které se v poslední době změnily, se v okně **Registry** zobrazí červeně.
+Během ladění se hodnoty registru mění při provádění kódu ve vaší aplikaci. Hodnoty, které se nedávno změnily, se v okně **Registry** zobrazí červeně.
 
-Chcete-li snížit přehlednost, okno **Registry** uspořádá Registry do skupin, které se liší podle typu platformy a procesoru. Můžete zobrazit nebo skrýt skupiny registrů. Další informace najdete v tématu [Postup: zobrazení a skrytí skupin registrů](../debugger/how-to-display-and-hide-register-groups.md).
+Aby se snížily  nepotřbné položky, okno Registry uspořádá registry do skupin, které se liší podle typu platformy a procesoru. Registrační skupiny můžete zobrazit nebo skrýt. Další informace najdete v tématu [Postupy: Zobrazení a skrytí skupin registrů.](../debugger/how-to-display-and-hide-register-groups.md)
 
-Informace o příznacích, které vidíte v okně **Registry** , naleznete v části [o okně Registry](../debugger/debugging-basics-registers-window.md) .
+Informace o příznakech, které vidíte v okně **Registry,** najdete v tématu [Informace o okně Registry.](../debugger/debugging-basics-registers-window.md)
 
-Hodnoty registru můžete upravovat. Další informace najdete v tématu [Postupy: Úprava hodnoty registru](../debugger/how-to-edit-a-register-value.md).
+Hodnoty registru můžete upravit. Další informace najdete v tématu [Postupy: Úprava hodnoty registru](../debugger/how-to-edit-a-register-value.md).
 
 **Otevření okna Registry**
 
-1. Povolte ladění na úrovni adres výběrem možnosti **Povolit ladění na úrovni adresy** v **nástrojích** (nebo **ladění**) >   >  **ladění** možností.
+1. Povolte ladění na úrovni adres výběrem **možnosti Povolit ladění na** úrovni adres v části Nástroje (nebo Ladit) > **Možnosti**    >  **ladění.**
 
-1. Když je ladění spuštěno nebo na zarážce, vyberte **ladit**  >  **Registry systému Windows**  >  nebo stiskněte **ALT** + **5**.
+1. Při spuštěném ladění nebo na zarážce vyberte **Ladit** registry  >  **Windows**  >  nebo stiskněte **Alt** + **5.**
 
 >[!NOTE]
->Dialogová okna a příkazy nabídek se mohou lišit v závislosti na vaší edici nebo nastavení sady Visual Studio. Chcete-li změnit nastavení, zvolte **Nastavení importu a exportu** v nabídce **nástroje** sady Visual Studio. Další informace najdete v tématu [resetování nastavení](../ide/environment-settings.md#reset-settings).
+>Dialogová okna a příkazy nabídky se můžou lišit v závislosti na Visual Studio edici nebo nastavení. Pokud chcete nastavení změnit, vyberte **v nabídce Nástroje** Visual Studio **Import** a export. Další informace najdete v tématu [Resetování nastavení.](../ide/environment-settings.md#reset-settings)
 
 ### <a name="see-also"></a>Viz také
 
-- [Základy ladění: okno Registry](../debugger/debugging-basics-registers-window.md)
+- [Základy ladění: Okno Registry](../debugger/debugging-basics-registers-window.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - tracking properties [Domain-Specific Language Tools], walkthrough
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c58e01fa5da5608b183827e366c115c214aa483d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 546636ec3de4656bf0f6480dfaa5141d38e963d6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862008"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384912"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>Přidání vlastnosti sledování do definice jazyka specifického pro doménu
 
@@ -153,7 +153,7 @@ Je nutné zadat kód pro zachování hodnoty a stavu vlastnosti sledování. Aby
 
 3. Vyberte šablonu **soubor kódu** , nastavte **název** na `NamespaceTrackingProperty.cs` a pak klikněte na **OK**.
 
-     Soubor NamespaceTrackingProperty.cs se vytvoří a otevře pro úpravy.
+     Vytvoří se soubor NamespaceTrackingProperty. cs a otevře se pro úpravy.
 
 4. Ve složce vytvořte následující soubory kódu: `ExampleModel.cs,``HelperClasses.cs` , `Serialization.cs` , a `TypeDescriptor.cs` .
 
@@ -161,9 +161,9 @@ Je nutné zadat kód pro zachování hodnoty a stavu vlastnosti sledování. Aby
 
 ## <a name="add-helper-classes-to-support-tracking-properties"></a>Přidat pomocné třídy pro podporu vlastností sledování
 
-Do souboru HelperClasses.cs přidejte `TrackingHelper` `CriticalException` třídy a následujícím způsobem. Na tyto třídy se odkazuje později v tomto návodu.
+Do souboru HelperClasses. cs přidejte `TrackingHelper` `CriticalException` třídy a následujícím způsobem. Na tyto třídy se odkazuje později v tomto návodu.
 
-1. Do souboru HelperClasses.cs přidejte následující kód.
+1. Do souboru HelperClasses. cs přidejte následující kód.
 
     ```csharp
     using System;
@@ -249,7 +249,7 @@ Definování této metody vytvoří popisovač sledovacích vlastností pro vlas
 
 ### <a name="to-modify-the-type-descriptor-for-the-examplemodel-domain-class"></a>Úprava popisovače typu pro doménovou třídu ExampleModel
 
-1. Do souboru TypeDescriptor.cs přidejte následující kód.
+1. Přidejte následující kód do souboru deskriptoru TypeDescriptor. cs.
 
     ```csharp
     using System;
@@ -311,7 +311,7 @@ Definování této metody vytvoří popisovač sledovacích vlastností pro vlas
 
 Generovaný kód definuje poskytovatele popisu typu pro doménovou třídu ExampleElement; je však nutné přidat kód, který instruuje DSL na použití tohoto poskytovatele popisu typu.
 
-1. Do souboru Package.cs přidejte následující kód.
+1. Do souboru Package. cs přidejte následující kód.
 
     ```csharp
     using System.ComponentModel;
@@ -349,7 +349,7 @@ Vzhledem k tomu, že vlastnost DefaultNamespace se používá k výpočtu vlastn
 
 ### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>Úprava obslužné rutiny vlastnosti pro sledovanou vlastnost
 
-1. Do souboru ExampleModel.cs přidejte následující kód.
+1. Do souboru ExampleModel. cs přidejte následující kód.
 
     ```csharp
     using System.Linq;
@@ -425,7 +425,7 @@ Přidejte také úložiště pro a metody pro Get a set, vlastnost vlastního ú
 
 ### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>Přidání metody pro vlastní popisovač typu
 
-1. Do souboru NamespaceTrackingProperty.cs přidejte následující kód.
+1. Do souboru NamespaceTrackingProperty. cs přidejte následující kód.
 
     ```csharp
     using System;
@@ -592,7 +592,7 @@ Přidejte kód pro podporu vlastního chování po načtení pro serializaci XML
 
 ### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>Přidání kódu pro podporu vlastního chování po načtení
 
-1. Do souboru Serialization.cs přidejte následující kód.
+1. Do souboru Serialization. cs přidejte následující kód.
 
     ```csharp
     using System;

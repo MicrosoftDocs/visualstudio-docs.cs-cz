@@ -1,7 +1,7 @@
 ---
 title: 'Vytvoření webové aplikace v ASP.NET Core v jazyce C #'
 description: Naučte se, jak vytvořit jednoduchou webovou aplikaci Hello World v aplikaci Visual Studio pomocí C# a ASP.NET Core, krok za krokem.
-ms.custom: acquisition, mvc,seodec18
+ms.custom: vs-acquisition
 ms.date: 11/06/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 61fc3f0cf1e23dcf0f9e22ed7e10050fb84c9ba6
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 65ad48bab545d635763a1cabb4e76734431c2a55
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308061"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384834"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první ASP.NET Core webové aplikace
 

@@ -7,22 +7,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - UML model, sharing
 - UML diagrams, saving
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e12dcd1fcb9119aa65811fc149d86150a8b084e7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef33052e8ae98e5a716265a130f8b2031bbfd340
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899782"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385653"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Sdílení modelů a export diagramů
 V aplikaci Visual Studio můžete sdílet modely a diagramy s kolegy několika způsoby.
 
- Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).
 
 ## <a name="working-on-a-model-as-a-team"></a>Práce na modelu jako tým
  Uživatelé sady Visual Studio mohou vytvářet a upravovat modely, diagramy závislostí a řízené grafy.
@@ -32,7 +32,7 @@ V aplikaci Visual Studio můžete sdílet modely a diagramy s kolegy několika z
  Návrhy na uspořádání modelů ve středním nebo velkém projektu najdete v tématu [Struktura řešení modelování](../modeling/structure-your-modeling-solution.md).
 
 ## <a name="reading-and-reviewing-models"></a>Čtení a kontrola modelů
- Členové týmu, kteří používají některé verze sady Visual Studio (které nemůžou vytvářet modely), můžou číst modely, diagramy modelování a směrované grafy, ale nemůžou je upravovat.  Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Členové týmu, kteří používají některé verze sady Visual Studio (které nemůžou vytvářet modely), můžou číst modely, diagramy modelování a směrované grafy, ale nemůžou je upravovat.  Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
  Diagram závislosti lze otevřít pouze v modelu, ve kterém byl vytvořen. Chcete-li poskytnout přístup k diagramu, je proto nutné poskytnout přístup ke všem souborům projektu modelování nebo k jejich kopiím.
 

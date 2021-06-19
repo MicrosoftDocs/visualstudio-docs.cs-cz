@@ -20,9 +20,9 @@ highlightedContent:
     - title: Vítá vás integrované vývojové prostředí (IDE) sady Visual Studio
       itemType: overview
       url: ../get-started/visual-studio-ide.md
-    - title: Zpráva k vydání verze pro Visual Studio 2019
+    - title: Visual Studio 2022 Preview
       itemType: whats-new
-      url: /visualstudio/releases/2019/release-notes/
+      url: /visualstudio/releases/2022/release-notes-preview
     - title: Zlepšení dovedností v sadě Visual Studio
       itemType: learn
       url: /learn/browse/?products=vs
@@ -180,7 +180,7 @@ additionalContent:
           summary: 'Sdílení aplikací a kódu pomocí nástrojů Nasazení webu, InstallShield, NuGet, Kontinuální integrace a dalších'
           url: ../deployment/index.yml
         - title: Správa verzí
-          summary: 'Sdílejte kód pomocí technologií pro řízení verzí, jako je Git a GitHub.'
+          summary: 'Sdílejte kód pomocí technologií pro řízení verzí, jako je git a GitHub.'
           url: ../version-control/index.yml
         - title: DevOps
           summary: Průběžné sestavování a vydávání aplikací v cloudu a implementace agilních postupů pomocí Azure DevOps Services

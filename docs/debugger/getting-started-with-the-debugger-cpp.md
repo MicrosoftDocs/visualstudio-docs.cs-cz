@@ -1,7 +1,7 @@
 ---
-title: 'Kurz: ladění kódu C++'
-description: Přečtěte si o funkcích ladicího programu sady Visual Studio a o tom, jak spustit ladicí program, krokovat kód a kontrolovat data v aplikaci C++.
-ms.custom: debug-experiment, seodec18, get-started
+title: 'Kurz: Ladění kódu C++'
+description: Seznamte se s funkcemi Visual Studio ladicího programu a se způsobem spuštění ladicího programu, krokování kódu a kontrole dat v aplikaci jazyka C++.
+ms.custom: debug-experiment,  get-started
 ms.date: 02/04/2020
 ms.technology: vs-ide-debug
 ms.topic: tutorial
@@ -14,77 +14,77 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cd02bbd2264720a5443807fb431b4dafa2a0a578
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 8abb517103254aa1e0c89a02b0dc81b38af3ecee
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112306433"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385250"
 ---
-# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se ladit kód C++ pomocí sady Visual Studio
+# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se ladit kód C++ pomocí Visual Studio
 
-V tomto článku se seznámíte s funkcemi ladicího programu sady Visual Studio v podrobném podrobném návodu. Pokud chcete zobrazit vyšší úroveň funkcí ladicího programu, podívejte [se na téma první pohled na ladicí program](../debugger/debugger-feature-tour.md). Při *ladění aplikace* obvykle znamená, že máte spuštěnou aplikaci s připojeným ladicím programem. Když to uděláte, ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód při spuštění dělá. Můžete krokovat kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu spuštění kódu, zjistit, zda je spuštěna větev kódu a tak dále. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprosto začátečníky](../debugger/debugging-absolute-beginners.md) .
+Tento článek představuje funkce ladicího Visual Studio v podrobném návodu. Pokud chcete zobrazit funkce ladicího programu na vyšší úrovni, podívejte se nejprve na [ladicí program.](../debugger/debugger-feature-tour.md) Při ladění *aplikace obvykle znamená,* že aplikaci používáte s připojeným ladicím programem. Když to použijete, ladicí program poskytuje mnoho způsobů, jak zobrazit, co váš kód dělá, zatímco běží. Můžete si projít kód a podívat se na hodnoty uložené v proměnných, nastavit u proměnných sledujete, abyste viděli, kdy se hodnoty mění, můžete prozkoumat cestu provádění kódu, zjistit, jestli je spuštěná větev kódu atd. Pokud jste se pokusili ladit kód poprvé, možná si [](../debugger/debugging-absolute-beginners.md) budete chtít před tímto článkem přečíst ladění pro absolutní začátečníky.
 
-I když je ukázková aplikace C++, většina funkcí je platná pro C#, Visual Basic, F #, Python, JavaScript a další jazyky, které podporuje Visual Studio (F # nepodporuje funkci upravit a pokračovat. F # a JavaScript nepodporují okno **Automatické** hodnoty). Snímky obrazovky jsou v jazyce C++.
+I když je ukázková aplikace C++, většina funkcí se vztahuje na jazyky C#, Visual Basic, F#, Python, JavaScript a další jazyky podporované jazykem Visual Studio (jazyk F# nepodporuje úpravy a pokračování. Jazyk F# a JavaScript nepodporují **okno Automatické** zápisy. Snímky obrazovky jsou v jazyce C++.
 
 V tomto kurzu:
 
 > [!div class="checklist"]
-> * Spusťte ladicí program a zarážky volání.
-> * Přečtěte si příkazy pro krokování kódu v ladicím programu
-> * Kontrola proměnných v tipech k datům a v oknech ladicího programu
-> * Kontrola zásobníku volání
+> * Spusťte ladicí program a stiskněte zarážky.
+> * Naučte se příkazy pro krokování kódu v ladicím programu.
+> * Kontrola proměnných v datových tipech a oknech ladicího programu
+> * Prozkoumání zásobníku volání
 
 ## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range=">=vs-2019"
 
-Musíte mít nainstalovanou aplikaci Visual Studio 2019 a úlohu **vývoj desktopových aplikací v jazyce C++** .
+Musíte mít nainstalovanou Visual Studio 2019 a úlohu **Vývoj desktopových aplikací pomocí C++.**
 
 ::: moniker-end
 ::: moniker range="vs-2017"
 
-Musíte mít nainstalovanou aplikaci Visual Studio 2017 a úlohu **vývoj desktopových aplikací v jazyce C++** .
+Musíte mít nainstalovanou Visual Studio 2017 a úlohu **Vývoj desktopových aplikací pomocí jazyka C++.**
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+Pokud jste si ještě nenainstalujete Visual Studio, přejděte na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a nainstalujte si ho zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2022"
 
-Pokud jste ještě nenainstalovali Visual Studio 2022 Preview, nainstalujte ho zdarma na stránku [Visual studio 2022 Preview ke stažení](https://visualstudio.microsoft.com/vs/preview/vs2022) .
+Pokud jste si ještě nenainstalujete Visual Studio 2022 Preview, přejděte na stránku [stahování Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
-Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací pomocí C++** a pak zvolte **Upravit**.
+Pokud potřebujete tuto úlohu nainstalovat, ale Visual Studio, přejděte na **Nástroje** Získat nástroje a funkce. Otevře se  >  Instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **úlohu Vývoj desktopových aplikací** pomocí C++ a pak zvolte **Upravit.**
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Nejprve vytvoříte projekt konzolové aplikace C++. Typ projektu se dodává se všemi soubory šablon, které budete potřebovat, než dokonce cokoli přidáte.
+Nejprve vytvoříte projekt konzolové aplikace jazyka C++. Typ projektu se dodává se všemi soubory šablony, které budete potřebovat, ještě než budete něco přidávat.
 
 ::: moniker range="vs-2017"
 
 1. Otevřete sadu Visual Studio 2017.
 
-2. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
+2. V horním řádku nabídek zvolte **File** New Project > **(Soubor nového** > **projektu).**
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual C++** a zvolte možnost **plocha systému Windows**. V prostředním podokně vyberte **Konzolová aplikace systému Windows**. Potom pojmenujte projekt *Get-Started-Debugging*.
+3. V dialogovém **okně Nový** projekt v levém podokně rozbalte položku **Visual C++** pak zvolte **Windows Desktop.** V prostředním podokně zvolte **Konzolová aplikace systému Windows**. Pak projekt *pojmechte get-started-debugging*.
 
-     Pokud nevidíte šablonu projektu **Konzolová aplikace** , vyberte odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** . Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+     Pokud šablonu projektu Konzolová aplikace nevidíte, zvolte odkaz Otevřít **Instalační program pro Visual Studio** v levém podokně **dialogového okna Nový** projekt.  Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoj pro různé platformy** v .NET Core a pak zvolte **Upravit.**
 
 4. Klikněte na **OK**.
 
-   Visual Studio otevře nový projekt.
+   Visual Studio nový projekt otevřete.
 
 ::: moniker-end
 
@@ -92,28 +92,28 @@ Nejprve vytvoříte projekt konzolové aplikace C++. Typ projektu se dodává se
 
 1. Otevřete Visual Studio 2019.
 
-   Pokud okno Start není otevřeno, klikněte **na tlačítko** > **Start okna**.
+   Pokud úvodní okno není otevřené, zvolte **Úvodní** > **okno souboru**.
 
-1. V okně Start vyberte možnost **vytvořit nový projekt**.
+1. V úvodním okně zvolte **Vytvořit nový projekt.**
 
-1. V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Potom v seznamu jazyk vyberte **C++** a v seznamu platforma zvolte **Windows** . 
+1. V **okně Vytvořit nový projekt** zadejte nebo zadejte *do* vyhledávacího pole konzolu. Potom v seznamu Jazyk zvolte **C++** a pak **v** seznamu Platforma zvolte Windows. 
 
-   Po použití filtrů jazyků a platforem zvolte šablonu **aplikace konzoly** a klikněte na tlačítko **Další**.
+   Po použití filtrů jazyka a platformy zvolte šablonu **Konzolová aplikace** a pak zvolte **Další.**
 
-   ![Zvolit šablonu C++ pro konzolovou aplikaci](../debugger/media/vs-2019/get-started-create-console-project-cpp.png)
+   ![Volba šablony C++ pro konzolovou aplikaci](../debugger/media/vs-2019/get-started-create-console-project-cpp.png)
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **konzolové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v Instalační program pro Visual Studio zvolte **vývoj desktopových aplikací pomocí C++** .
+   > Pokud šablonu Konzolová **aplikace nevidíte,** můžete ji nainstalovat z **okna Vytvořit nový** projekt. Ve zprávě **Nehledá se, co hledáte?** zvolte odkaz Instalovat **další** nástroje a funkce. Potom v Instalační program pro Visual Studio úlohy **Vývoj desktopových aplikací pomocí jazyka C++.**
 
-1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *příkaz Get-Started-Debugging* do pole **název projektu** . Pak zvolte **vytvořit**.
+1. V **okně Configure your new project** (Konfigurace nového projektu) zadejte nebo do pole Project name **(Název projektu)** zadejte nebo zadejte *get-started-debugging.* Pak zvolte **Vytvořit.**
 
-   Visual Studio otevře nový projekt.
+   Visual Studio nový projekt otevřete.
 
 ::: moniker-end
 
 ## <a name="create-the-application"></a>Vytvoření aplikace
 
-1. V *Get-Started-Debugging. cpp* nahraďte veškerý výchozí kód následujícím kódem:
+1. V *souboru get-started-debugging.cpp* nahraďte veškerý výchozí kód následujícím kódem:
 
     ```cpp
     #include <string>
@@ -143,11 +143,11 @@ Nejprve vytvoříte projekt konzolové aplikace C++. Typ projektu se dodává se
     }
     ```
 
-## <a name="start-the-debugger"></a>Spusťte ladicí program.
+## <a name="start-the-debugger"></a>Spusťte ladicí program!
 
-1. Stiskněte klávesu **F5** (**ladění > spustit ladění**) nebo klikněte na tlačítko **Spustit** ladění ![Spustit ladění](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") na panelu nástrojů ladění.
+1. Na panelu nástrojů ladění **>** klávesu **F5** ( ![](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") Spustit ladění ) nebo tlačítko Spustit ladění. 
 
-     **F5** spustí aplikaci s ladicím programem připojeným k procesu aplikace, ale nyní jsme ještě neudělali cokoli, co by bylo možné zkontrolovat kód. Takže se aplikace jenom načte a zobrazí se výstup z konzoly.
+     **F5** spustí aplikaci s ladicím programem připojeným k procesu aplikace, ale teď jsme ještě neudělali nic zvláštního pro prozkoumání kódu. Aplikace se tedy načte a zobrazí se výstup konzoly.
 
     ```cmd
     Hello, f! Count to 1
@@ -162,73 +162,73 @@ Nejprve vytvoříte projekt konzolové aplikace C++. Typ projektu se dodává se
     Hello, fred smith! Count to 10
     ```
 
-     V tomto kurzu se podíváme na tuto aplikaci s použitím ladicího programu a zjistíme, jak se podívat na funkce ladicího programu.
+     V tomto kurzu se na tuto aplikaci podíváme blíže pomocí ladicího programu a podíváme se na funkce ladicího programu.
 
-2. Ukončete ladicí program stisknutím tlačítka červené zastavení ![Zastavit ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") (**SHIFT**  +  **F5**).
+2. Zastavte ladicí program stisknutím červeného tlačítka ![Zastavit ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") (**Shift**  +  **F5**).
 
-3. V okně konzoly stiskněte klávesu **a stisknutím** klávesy zavřete okno konzoly.
+3. V okně konzoly stiskněte klávesu a **stisknutím klávesy Enter** zavřete okno konzoly.
 
-## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavit zarážku a spustit ladicí program
+## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavení zarážky a spuštění ladicího programu
 
-1. Ve `for` smyčce `main` funkce nastavte zarážku kliknutím na levý okraj následujícího řádku kódu:
+1. Ve `for` smyčce funkce nastavte zarážku kliknutím na `main` levý okraj následujícího řádku kódu:
 
     `name += letters[i];`
 
-    Zarážka ![červeného kruhu se](../debugger/media/dbg-breakpoint.png "Bodu") zobrazí tam, kde jste nastavili zarážku.
+    Zarážka s ![červeným kruhem](../debugger/media/dbg-breakpoint.png "Bodu") se zobrazí tam, kde nastavíte zarážku.
 
-    Zarážky jsou jednou ze základních a základních funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
+    Zarážky jsou jednou z nejzákladnějších a nejzákladnějších funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
 
-2. Stiskněte klávesu **F5** nebo tlačítko **Spustit ladění** ![Spustit ladění](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění"), spustí se aplikace a ladicí program se spustí na řádek kódu, kde jste nastavili zarážku.
+2. Stiskněte **klávesu F5** nebo **tlačítko** Spustit ladění Spustit ladění ![,](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění")spustí se aplikace a ladicí program se spustí na řádku kódu, kde nastavíte zarážku.
 
-    ![Nastavení a volání zarážky](../debugger/media/get-started-set-breakpoint-cpp.png)
+    ![Nastavení a přístup k zarážce](../debugger/media/get-started-set-breakpoint-cpp.png)
 
-    Žlutá šipka představuje příkaz, na kterém je ladicí program pozastaven, což také pozastavuje spuštění aplikace ve stejném bodě (Tento příkaz ještě nebyl proveden).
+    Žlutá šipka představuje příkaz, na kterém se ladicí program pozastavil, což také pozastaví provádění aplikace ve stejném bodě (tento příkaz se ještě nespouštěl).
 
-     Pokud aplikace ještě není spuštěná, spustí **F5** ladicí program a zastaví se na první zarážce. V opačném případě **F5** pokračuje v běhu aplikace na další zarážku.
+     Pokud aplikace ještě není spuštěná, **F5** spustí ladicí program a zastaví se na první zarážce. V opačném **případě bude F5** pokračovat ve spouštění aplikace až k další zarážce.
 
-    Zarážky jsou užitečnou funkcí, když znáte řádek kódu nebo oddíl kódu, který chcete podrobně prošetřit. Informace o různých typech zarážek, které lze nastavit, například podmíněné zarážky, naleznete v tématu [using zarážek](../debugger/using-breakpoints.md).
+    Zarážky jsou užitečnou funkcí, pokud znáte řádek kódu nebo část kódu, kterou chcete podrobně prozkoumat. Informace o různých typech zarážek, které můžete nastavit, například podmíněné zarážky, najdete v tématu [Použití zarážek](../debugger/using-breakpoints.md).
 
-## <a name="navigate-code-in-the-debugger-using-step-commands"></a>Procházení kódu v ladicím programu pomocí příkazů Step
+## <a name="navigate-code-in-the-debugger-using-step-commands"></a>Procházení kódu v ladicím programu pomocí příkazů kroku
 
-Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak rychle rychle spustit aplikaci v ladicím programu (ekvivalentní příkazy, jako jsou příkazy nabídky, se zobrazují v závorkách).
+Většinou tady používáme klávesové zkratky, protože je to dobrý způsob, jak rychle spustit aplikaci v ladicím programu (ekvivalentní příkazy, jako jsou příkazy nabídky, se zobrazují v závorkách).
 
-1. Při pozastavení ve `for` smyčce v `main` metodě stiskněte klávesu **F11** (nebo zvolte možnost **ladění > krokovat** s), aby bylo možné přejít k `SendMessage` volání metody.
+1. Při pozastavení ve smyčce v metodě stiskněte `for` `main` klávesu **F11** (nebo dvakrát > **Krokovat** s krokem do ), abyste se posunuli `SendMessage` na volání metody.
 
-     Po stisknutí klávesy **F11** dvakrát byste měli být na tomto řádku kódu:
+     Po stisknutí **klávesy F11** dvakrát byste měli být na tomto řádku kódu:
 
      `SendMessage(name, a[i]);`
 
-1. Stiskněte klávesu **F11** ještě jednou pro krokování do `SendMessage` metody.
+1. Dalším **stisknutím klávesy F11** zakrokte do `SendMessage` metody .
 
-     Žlutý ukazatel se přesune do `SendMessage` metody.
+     Žlutý ukazatel přejde do `SendMessage` metody .
 
-     ![Krokovat s vnořením kódu pomocí klávesy F11](../debugger/media/get-started-f11-cpp.png "F10 Krokovat s vnořením")
+     ![Použití klávesy F11 ke kroku do kódu](../debugger/media/get-started-f11-cpp.png "F10 Krokovat s vnořením")
 
-     Klávesa F11 je **Krok do** příkazu a aplikace pokračuje v jednom příkazu v jednom okamžiku. Klávesa F11 je dobrým způsobem, jak prostudovat tok spouštění v nejpodrobnějším podrobnostech. (K rychlejšímu přesunu kódu vám ukážeme i některé další možnosti.) Ve výchozím nastavení přeskočí ladicí program neuživatelský kód (Pokud chcete více podrobností, přečtěte si téma [pouze můj kód](../debugger/just-my-code.md)).
+     F11 je příkaz **Step Into (Krokovat** s krokem do) a postupuje provádění aplikace po jednom příkazu. F11 je dobrý způsob, jak podrobněji prozkoumat tok provádění. (Pokud chcete kódem urychlit, ukážeme vám také některé další možnosti.) Ve výchozím nastavení ladicí program přeskočí kód bez uživatele (pokud chcete další podrobnosti, podívejte se [na Pouze můj kód](../debugger/just-my-code.md)).
 
-     Řekněme, že jste dokončili zkoumání `SendMessage` metody a chcete získat z metody, ale zůstat v ladicím programu. To můžete provést pomocí příkazu **Krok ven** .
+     Řekněme, že jste skončili s prozkoumáním metody a chcete se z metody dostat, ale `SendMessage` zůstat v ladicím programu. Můžete to provést pomocí příkazu **Krok ven.**
 
-1. Stiskněte **SHIFT**  +  **F11** (nebo **ladění > krokovat**).
+1. Stiskněte **Klávesu Shift**  +  **F11** (nebo > Krok **ven**).
 
-     Tento příkaz obnoví spuštění aplikace (a posune ladicí program), dokud se nevrátí aktuální metoda nebo funkce.
+     Tento příkaz pokračuje v provádění aplikace (a pokračuje v ladicím programu), dokud se nevrátí aktuální metoda nebo funkce.
 
-     Měli byste se vrátit do `for` smyčky v `main` metodě, pozastavena při `SendMessage` volání metody.
+     Měli byste být zpět ve `for` smyčce v `main` metodě , pozastaveno při `SendMessage` volání metody.
 
-1. Několikrát stiskněte klávesu **F11** , dokud se znovu nevrátíte k `SendMessage` volání metody.
+1. Několikrát **stiskněte klávesu F11,** dokud se znovu nevrátíte `SendMessage` k volání metody.
 
-1. Když jste pozastavili volání metody, stiskněte **F10** (nebo zvolte **ladění > krokovat** s) jednou.
+1. Při pozastavení při volání metody stiskněte **klávesu F10** (nebo jednou **> Krok přes**).
 
-     ![Pro krokování kódu použijte F10](../debugger/media/get-started-step-over-cpp.png "F10 krok přes")
+     ![Použití klávesy F10 ke kroku přes kód](../debugger/media/get-started-step-over-cpp.png "F10 krok přes")
 
-     Všimněte si, že ladicí program nekrokuje do `SendMessage` metody. **F10** posune ladicí program bez krokování do funkcí nebo metod v kódu aplikace (kód se pořád spustí). Stiskem klávesy **F10** ve `SendMessage` volání metody (místo **klávesy F11**) jsme přeskočili na implementační kód pro `SendMessage` (což možná není zajímatme hned teď). Další informace o různých způsobech, jak přesouvat kód, naleznete v tématu [Navigace v kódu v ladicím programu](../debugger/navigating-through-code-with-the-debugger.md).
+     Všimněte si, že ladicí program tentokrát nepřidá krok do `SendMessage` metody . **F10** posune ladicí program bez krokování s funkcemi nebo metodami v kódu aplikace (kód se stále provádí). Stisknutím **klávesy F10** při volání metody `SendMessage` (místo **F11)** jsme přeskočili kód implementace pro (který nás možná zrovna `SendMessage` nezajímá). Další informace o různých způsobech procházení kódu najdete v tématu [Procházení kódu v ladicím programu.](../debugger/navigating-through-code-with-the-debugger.md)
 
-## <a name="navigate-code-using-run-to-click"></a>Procházení kódu pomocí rutiny Run to Click
+## <a name="navigate-code-using-run-to-click"></a>Navigace v kódu pomocí příkazu Run to Click
 
-1. Stisknutím klávesy **F5** přejděte k zarážce.
+1. Stisknutím **klávesy F5** přejdete na zarážku.
 
-1. V editoru kódu se posuňte dolů a umístěte ukazatel myši na `std::wcout` funkci v `SendMessage` metodě, dokud na něj ![neklikne](../debugger/media/dbg-tour-run-to-click.png "RunToClick") tlačítko zelený **běh** na tlačítko, které se zobrazí vlevo. V popisu tlačítka se zobrazí text spustit provádění na tomto místě.
+1. V editoru kódu se posuňte dolů a najeďte myší na funkci v metodě, dokud se na levé straně nezobrazí zelené tlačítko Run to Click Run to Click (Spustit do `std::wcout` `SendMessage` kliknutí).  ![](../debugger/media/dbg-tour-run-to-click.png "RunToClick") Popis tlačítka zobrazuje "Run execution to here" (Spustit provádění sem).
 
-     ![Použití funkce spustit pro kliknutí](../debugger/media/get-started-run-to-click-cpp.png "Běžet do kliknutí")
+     ![Použití funkce Spustit do kliknutí](../debugger/media/get-started-run-to-click-cpp.png "Běžet do kliknutí")
 
    > [!NOTE]
    > Tlačítko **Spustit pro kliknutí** je v nástroji nového [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] . (Pokud nevidíte zelenou šipku tlačítka, použijte klávesu **F11** v tomto příkladu, aby se ladicí program napředal na správné místo.)

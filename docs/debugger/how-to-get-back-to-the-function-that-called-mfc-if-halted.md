@@ -1,7 +1,7 @@
 ---
-title: Vrátit se zpět k funkci, která se nazývá MFC, pokud je zastavená | Microsoft Docs
-description: Přečtěte si, jak se vrátit k funkci, která se nazývá MFC, pokud je spuštění zastaveno v ladicím programu sady Visual Studio.
-ms.custom: SEO-VS-2020, seodec18
+title: Vraťte se zpět k funkci, která volala MFC, pokud se | Microsoft Docs
+description: Porozumíte tomu, jak se vrátit zpět k funkci, která volala MFC, pokud je provádění zastaveno v Visual Studio ladicím programu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -25,25 +25,25 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a0b3849653161278dc0f6e9e06a1baca2e8b6e62
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 31bbb064aad5a43738b2f345cf31a20767c55e69
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904247"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384678"
 ---
 # <a name="how-to-get-back-to-the-function-that-called-mfc-if-halted"></a>Postupy: Přechod zpět na funkci, která volala MFC při zastavení.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace najdete v tématu [resetování nastavení](../ide/environment-settings.md#reset-settings).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Pokud chcete nastavení změnit, zvolte **v nabídce Nástroje** možnost Nastavení importu a exportu.  Další informace najdete v tématu [Resetování nastavení.](../ide/environment-settings.md#reset-settings)
 
-Pokud jste v nabídce **ladit** použili příkaz **Break** k zastavení programu a skončí v knihovně MFC a opravdu jste si jisti, že se jedná o váš kód, můžete použít okno zásobník volání a přejít zpět na svou funkci. Další informace naleznete v tématu [Postupy: použití okna zásobník volání](../debugger/how-to-use-the-call-stack-window.md).
+Pokud jste  v nabídce  Ladění použili příkaz Break k zastavení programu a skončili v MFC a jste si jisti, že problém je ve vašem kódu, můžete použít okno Zásobník volání a vrátit se zpět ke své funkci. Další informace najdete v tématu [Postupy: Použití okna zásobníku volání.](../debugger/how-to-use-the-call-stack-window.md)
 
-Někdy může být váš kód v pumpě zpráv přerušen. V takovém případě není v zásobníku volání žádný uživatelský kód. Chcete-li se tomuto problému vyhnout, můžete místo příkazu **Break** použít zarážky (případně podmínky a počty přístupů). Další informace naleznete v tématu [zarážky a trasováním](/previous-versions/ktf38f66(v=vs.100)).
+Někdy se váš kód může přerušit v pumpě zpráv. V takovém případě není v zásobníku volání žádný uživatelský kód. Pokud se chcete tomuto problému vyhnout, můžete místo příkazu **Break** použít zarážky (například s podmínkami a počty přístupů). Další informace najdete v tématu [Zarážky a tracepointy](/previous-versions/ktf38f66(v=vs.100)).
 
-## <a name="navigate-to-the-function-from-which-mfc-was-called"></a>Přejděte na funkci, ze které byla volána knihovna MFC.
+## <a name="navigate-to-the-function-from-which-mfc-was-called"></a>Přejděte do funkce, ze které byla volána knihovna MFC.
 
-- Použijte okno **zásobník volání** .
+- Použijte okno **Zásobník** volání.
 
 ## <a name="see-also"></a>Viz také
 

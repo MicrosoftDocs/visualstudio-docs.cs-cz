@@ -18,22 +18,24 @@ ms.author: joshuapa
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a39be2e465ebe8b04501f319e89d6f8bc926b4c2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b422c6c7857ca1baaa5bd1d8a7d6955e8b6751b3
+ms.sourcegitcommit: c3713f284c4fe10b10996d5eb67077ddd8641424
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924465"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112375796"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>Použití map kódu k ladění aplikací
 
-Mapy kódu vám mohou přispět k tomu, abyste se ztratili v rozsáhlých základech kódu, neznámém kódu nebo starším kódu. Například při ladění může být nutné podívat se na kód v mnoha souborech a projektech. Pomocí map kódu se můžete pohybovat v jednotlivých částech kódu a pochopit vztahy mezi nimi. Tímto způsobem není nutné sledovat tento kód ve vaší hlavě nebo nakreslit samostatný diagram. Takže když dojde k přerušení práce, mapy kódu vám pomůžou aktualizovat vaši paměť o kódu, se kterým pracujete.
+[Mapy kódu v aplikaci Visual Studio](../modeling/map-dependencies-across-your-solutions.md) vám mohou přispět k tomu, abyste se vyhnuli ztrátě ve velkých základech kódu, neznámém kódu nebo starším kódu. Například při ladění může být nutné podívat se na kód v mnoha souborech a projektech. Pomocí map kódu se můžete pohybovat v jednotlivých částech kódu a pochopit vztahy mezi nimi. Tímto způsobem není nutné sledovat tento kód ve vaší hlavě nebo nakreslit samostatný diagram. Takže když dojde k přerušení práce, mapy kódu vám pomůžou aktualizovat vaši paměť o kódu, se kterým pracujete.
 
 ![Mapa kódu &#45; relace map v kódu](../modeling/media/codemapstoryboardpaint.png)
 
 **Zelená šipka ukazuje, kde se kurzor zobrazuje v editoru.**
 
 Podrobnosti o příkazech a akcích, které můžete použít při práci s mapami kódu, naleznete v tématu [procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md).
+
+Přečtěte si další informace o [ladění v aplikaci Visual Studio pomocí nástroje ladicího programu](../debugger/debugger-feature-tour.md).
 
 > [!NOTE]
 > Chcete-li vytvářet a upravovat mapy kódu, potřebujete Visual Studio Enterprise edici. V edicích Visual Studio Community a Professional můžete otevřít diagramy vygenerované v Enterprise Edition, ale nemůžete je upravovat.

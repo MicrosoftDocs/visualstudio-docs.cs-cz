@@ -4,17 +4,17 @@ description: Přečtěte si, že v sadě Visual Studio vizualizace and modeling 
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ca83bd9f6ac88e26247f6c9beea9c242a505887c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9304117932b92408f12a23747253de66dfd767d1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873772"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385666"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Nastavení obrázku pozadí v diagramu
 V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obrázek pozadí pro vygenerovaný Návrhář pomocí vlastního kódu.
@@ -41,9 +41,9 @@ V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obr�
 
 9. Otevřete nabídku soubor a kliknutím na možnost uložte vlastnosti projektu.
 
-10. Ověřte, že soubor Dsl\Properties\Resources.resx existuje a má pod ním soubor Resources.Designer.cs.
+10. Ověřte, že soubor Dsl\Properties\Resources.resx existuje a má pod ním soubor Resources. Designer. cs.
 
-11. Pokud chybí Resources.Designer.cs, klikněte na soubor Resources. resx v **Průzkumník řešení**.
+11. Pokud soubor Resources. Designer. cs chybí, klikněte na soubor Resources. resx v **Průzkumník řešení**.
 
 12. V okně **vlastnosti** nastavte `Custom Tool` vlastnost na hodnotu `ResXFileCodeGenerator` .
 
@@ -57,7 +57,7 @@ V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obr�
 
 17. Do pole **název** zadejte `BackgroundImage.cs` a klikněte na **Přidat**.
 
-18. Zkopírujte následující kód do souboru BackgroundImage.cs, upravte obor názvů, název třídy diagramu a název prostředku obrázkového souboru.
+18. Zkopírujte následující kód do souboru BackgroundImage. cs, upravte obor názvů, název třídy diagramu a název prostředku obrázkového souboru.
 
      Nahraďte "MyDiagramClass" názvem částečné třídy diagramu, která je definována v Dsl\GeneratedCode\Diagrams.cs. Správný obor názvů můžete také načíst ze souboru Dsl\GeneratedCode\Diagrams.cs.
 

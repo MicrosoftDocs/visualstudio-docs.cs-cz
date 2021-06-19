@@ -1,32 +1,32 @@
 ---
 title: T4 – direktiva Output
-description: Přečtěte si, že v textových šablonách sady Visual Studio je použita direktiva Output k definování přípony názvu souboru a kódování transformačního souboru.
+description: Zjistěte, Visual Studio textových šablonách se direktiva output používá k definování přípony názvu souboru a kódování transformovaných souborů.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 58e7c255d767e9b35764e03a76f9cda516dbe606
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8105edc57e68aa7cedcb612ec4f6bcd0ef367d2f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899604"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386108"
 ---
 # <a name="t4-output-directive"></a>T4 – direktiva Output
 
-V textových šablonách sady Visual Studio `output` je použita direktiva k definování přípony názvu souboru a kódování transformačního souboru.
+V Visual Studio textových šablon se direktiva používá k definování přípony názvu souboru a kódování `output` transformovaných souborů.
 
- Například pokud váš projekt sady Visual Studio obsahuje soubor šablony s názvem **MyTemplate.TT** , který obsahuje následující direktivu:
+ Například pokud váš projekt Visual Studio obsahuje soubor šablony s názvem **MyTemplate.tt** který obsahuje následující direktivu:
 
  `<#@output extension=".cs"#>`
 
- pak Visual Studio vygeneruje soubor s názvem **MyTemplate.cs**
+ pak Visual Studio vygeneruje soubor s názvem **MyTemplate.cs.**
 
- `output`Direktiva není vyžadována v textové šabloně běhu (předzpracované). Místo toho aplikace získá generovaný řetězec voláním metody `TextTransform()` . Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ Direktiva `output` není požadována v textové šabloně běhu (předzpracované). Místo toho vaše aplikace získá vygenerovaný řetězec voláním `TextTransform()` . Další informace najdete v tématu Generování textu za běhu pomocí [textových šablon T4.](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
 ## <a name="using-the-output-directive"></a>Použití direktivy Output
 
@@ -34,14 +34,14 @@ V textových šablonách sady Visual Studio `output` je použita direktiva k def
 <#@ output extension=".fileNameExtension" [encoding="encoding"] #>
 ```
 
- V každé textové šabloně by neměla existovat více než jedna `output` direktiva.
+ V každé textové šabloně by `output` nemělo být více než jedna direktiva.
 
-## <a name="extension-attribute"></a>atribut Extension
+## <a name="extension-attribute"></a>atribut extension
  Určuje příponu názvu souboru generovaného textového výstupního souboru.
 
- Výchozí hodnota je **. cs**
+ Výchozí hodnota je **.cs.**
 
- 4.6 `<#@ output extension=".txt" #>`
+ Příklady: `<#@ output extension=".txt" #>`
 
  `<#@ output extension=".htm" #>`
 
@@ -49,14 +49,14 @@ V textových šablonách sady Visual Studio `output` je použita direktiva k def
 
  `<#@ output extension=".vb" #>`
 
- Přijatelné hodnoty: jakákoli platná přípona názvu souboru.
+ Přijatelné hodnoty: Libovolná platná přípona názvu souboru.
 
-## <a name="encoding-attribute"></a>atribut Encoding
- Určuje kódování, které má být použito při vygenerování výstupního souboru. Příklad:
+## <a name="encoding-attribute"></a>atribut encoding
+ Určuje kódování, které se má použít při generování výstupního souboru. Příklad:
 
  `<#@ output encoding="utf-8"#>`
 
- Výchozí hodnota je kódování používané souborem textové šablony.
+ Výchozí hodnota je kódování používané textovým souborem šablony.
 
  Přijatelné hodnoty: `us-ascii`
 
@@ -70,6 +70,6 @@ V textových šablonách sady Visual Studio `output` je použita direktiva k def
 
  `utf-32`
 
- `0` (Výchozí systémové nastavení)
+ `0` (Výchozí systém)
 
- Obecně můžete použít řetězec WebName nebo číslo znakové stránky libovolného z kódování vrácených funkcí <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName> .
+ Obecně můžete použít řetězec WebName nebo číslo CodePage libovolného kódování vráceného parametrem <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName> .

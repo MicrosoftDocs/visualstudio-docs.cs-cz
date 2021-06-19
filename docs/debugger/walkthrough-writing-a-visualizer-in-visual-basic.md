@@ -1,7 +1,7 @@
 ---
 title: Napište Vizualizér v Visual Basic | Microsoft Docs
 description: Při vytváření jednoduchého Vizualizér v Visual Basic postupujte podle návodu. Také vytvoříte testovací kabel, který otestuje svůj Vizualizér.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 49d730fe6fef116577f26acabd72440950a6e192
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b1a4fc7d6f33d1bdfd469ec352674b08dd2495e6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884049"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385001"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>Návod: Zápis vizualizéru v jazyce Visual Basic
 
@@ -116,7 +116,7 @@ Kód Vizualizér musí být umístěn v knihovně DLL, která bude načtena ladi
 
 3. Klikněte na **OK**.
 
-4. Do DebuggerSide.cs přidejte do příkazů následující příkaz `Imports` :
+4. V DebuggerSide. cs přidejte do příkazů následující příkaz `Imports` :
 
     ```vb
     Imports System.Windows.Forms

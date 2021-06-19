@@ -3,7 +3,7 @@ title: 'Rychlý start: Vytvoření webové služby ASP.NET Core v F #'
 description: Podrobné informace o vytvoření webové ASP.NET Core Visual Studio v jazyce F#
 ms.date: 08/24/2018
 ms.topic: quickstart
-ms.custom: acquisition
+ms.custom: vs-acquisition
 author: cartermp
 ms.author: phcart
 manager: andrehal
@@ -12,12 +12,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 5048a92f2a8029a4d4fc1c4c44d14f1630116e83
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 298b55120a5e4d0efea1ec5eeeacc2dfa3da274f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307931"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386433"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>Rychlý start: Použití Visual Studio k vytvoření první webové služby ASP.NET Core v F\#
 

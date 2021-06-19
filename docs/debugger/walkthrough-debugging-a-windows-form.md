@@ -1,7 +1,7 @@
 ---
 title: Ladění formuláře Windows | Microsoft Docs
 description: 'Postup při vytváření a ladění formuláře Windows, společné spravované aplikace, najdete v návodu. Můžete použít C#, Visual Basic, C++ nebo F #.'
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e9293956e2ca47e68ff5bf22502251b22115a827
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 73b58326bb594f275a508e5ba7fb17071f283ac2
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884127"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385172"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>Návod: Ladění formuláře systému Windows
 Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikací. Model Windows Form vytvoří standardní aplikaci systému Windows. Tuto rekapitulaci lze dokončit pomocí jazyků Visual Basic, C# nebo C++.

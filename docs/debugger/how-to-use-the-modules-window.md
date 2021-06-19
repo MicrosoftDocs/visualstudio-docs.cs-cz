@@ -1,7 +1,7 @@
 ---
 title: Zobrazení knihoven DLL a spustitelných souborů
-description: Zobrazení knihoven DLL a spustitelných souborů (soubory. exe), které vaše aplikace používá v okně moduly během relace ladění v aplikaci Visual Studio.
-ms.custom: SEO-VS-2020, seodec18
+description: Zobrazení knihoven DLL a spustitelných souborů (.exe soubory), které vaše aplikace používá v okně moduly během relace ladění v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 titleSuffix: Visual Studio Modules window
 ms.date: 11/04/2018
 ms.topic: how-to
@@ -26,16 +26,16 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8add274d74d9d8d7d72f2808a2b0100c66a19717
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f82b8a5051cf1c338c4b1aab6e78209fb2bc08b0
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912218"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385406"
 ---
 # <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>Zobrazení knihoven DLL a spustitelných souborů v okně moduly (C#, C++, Visual Basic, F #)
 
-Během ladění sady Visual Studio obsahuje okno **moduly** seznam a zobrazuje informace o knihovnách DLL a spustitelných souborech (soubory *. exe* ), které vaše aplikace používá.
+Během ladění sady Visual Studio obsahuje okno **moduly** seznam a zobrazuje informace o knihovnách DLL a spustitelných souborech (*.exe* soubory), které vaše aplikace používá.
 
 > [!NOTE]
 > Okno moduly není k dispozici pro ladění SQL nebo skriptu.
