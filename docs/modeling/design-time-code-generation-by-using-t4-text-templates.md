@@ -12,17 +12,17 @@ helpviewer_keywords:
 - text templates, getting started
 - Text Template project item
 - text templates, generating code for your application
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ec309be7fbeb81951af73517412f36f7b28bc82f
-ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
+ms.openlocfilehash: f8b7bc48a5c409dbecbb313fd277a31ad1cec287
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104884145"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389134"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>Vytvoření kódu v době návrhu pomocí textových šablon T4
 
@@ -56,7 +56,7 @@ Textová šablona obsahuje kombinaci textu, který chcete vygenerovat, a kód pr
 
     Pokud jste přidali šablonu do [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projektu, atribut Language bude " `VB` ".
 
-4. Na konec souboru přidejte nějaký text. Například:
+4. Na konec souboru přidejte nějaký text. Příklad:
 
    ```
    Hello, world!
@@ -66,7 +66,7 @@ Textová šablona obsahuje kombinaci textu, který chcete vygenerovat, a kód pr
 
     Může se zobrazit okno s **upozorněním zabezpečení** , které vás vyzve k potvrzení, že chcete šablonu spustit. Klikněte na **OK**.
 
-6. V **Průzkumník řešení** rozbalte uzel soubor šablony a vyhledejte soubor s příponou **. txt**. Soubor obsahuje text vygenerovaný ze šablony.
+6. V **Průzkumník řešení** rozbalte uzel soubor šablony a najdete soubor s příponou **.txt**. Soubor obsahuje text vygenerovaný ze šablony.
 
    > [!NOTE]
    > Pokud je projekt Visual Basic projektu, musíte kliknout na **Zobrazit všechny soubory** , aby se zobrazil výstupní soubor.
@@ -115,7 +115,7 @@ Textové šablony umožňují použít kód programu k odlišení obsahu generov
    #>
    ```
 
-2. Uložte soubor. TT a znovu zkontrolujte vygenerovaný soubor. txt. Zobrazuje čtverce čísel od 0 do 10.
+2. Uložte soubor. TT a zkontrolujte vygenerovaný .txt soubor znovu. Zobrazuje čtverce čísel od 0 do 10.
 
    Všimněte si, že příkazy jsou uzavřeny v rámci `<#...#>` a jednotlivé výrazy v rámci `<#=...#>` . Další informace najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
@@ -125,7 +125,7 @@ Textové šablony umožňují použít kód programu k odlišení obsahu generov
 
 Ladění textové šablony:
 
-- Vložte `debug="true"` do `template` direktivy. Například:
+- Vložte `debug="true"` do `template` direktivy. Příklad:
 
    `<#@ template debug="true" hostspecific="false" language="C#" #>`
 
@@ -146,7 +146,7 @@ V závislosti na modelu můžete vygenerovat soubory programu, které se liší.
 
 ### <a name="to-generate-program-code-or-resources"></a>Generování kódu programu nebo prostředků
 
-1. Změňte direktivu Output tak, aby vygenerovala soubor příslušného typu, jako je například cs,. vb,. resx nebo. XML.
+1. Změňte direktivu Output tak, aby vygenerovala soubor příslušného typu, jako je například cs,. vb,. resx nebo .xml.
 
 2. Vložte kód, který vygeneruje kód řešení, který budete potřebovat. Například pokud chcete generovat tři deklarace polí typu Integer ve třídě:
 
@@ -274,7 +274,7 @@ Typ `this.Host` (v jazyce VB, `Me.Host` ) je `Microsoft.VisualStudio.TextTemplat
 
 ### <a name="getting-data-from-visual-studio"></a>Získávání dat ze sady Visual Studio
 
-Chcete-li použít služby poskytované v aplikaci Visual Studio, nastavte `hostSpecific` atribut a načtěte `EnvDTE` sestavení. Importujte `Microsoft.VisualStudio.TextTemplating` , který obsahuje `GetCOMService()` metodu rozšíření.  Pro přístup k DTE a dalším službám pak můžete použít IServiceProvider. GetCOMService (). Například:
+Chcete-li použít služby poskytované v aplikaci Visual Studio, nastavte `hostSpecific` atribut a načtěte `EnvDTE` sestavení. Importujte `Microsoft.VisualStudio.TextTemplating` , který obsahuje `GetCOMService()` metodu rozšíření.  Pro přístup k DTE a dalším službám pak můžete použít IServiceProvider. GetCOMService (). Příklad:
 
 ```src
 <#@ template hostspecific="true" language="C#" #>

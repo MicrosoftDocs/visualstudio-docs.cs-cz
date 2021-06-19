@@ -1,32 +1,32 @@
 ---
 title: Obslužná rutina změny hodnoty vlastnosti domény
-description: Přečtěte si o obslužných rutinách změny hodnot vlastnosti domény, které lze použít v jazyce specifickém pro doménu sady Visual Studio.
+description: Přečtěte si o obslužných rutinách změny hodnoty vlastnosti domény, které je možné Visual Studio v jazyce specifickém pro doménu.
 ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, overriding event handlers
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a5a372d2e558b44753e9d0bc66d7c4c24b825533
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1c6cdb027bafdf4d1fe7689d7dd30d697b539370
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935089"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388994"
 ---
 # <a name="domain-property-value-change-handlers"></a>Obslužné rutiny změny hodnoty vlastnosti domény
 
-V jazyce specifickém pro doménu sady Visual Studio se při změně hodnoty vlastnosti domény `OnValueChanging()` `OnValueChanged()` vyvolají metody a v obslužné rutině vlastnosti domény. Pro reakci na změnu můžete tyto metody přepsat.
+V Visual Studio jazyka specifickém pro doménu se při změně hodnoty vlastnosti domény v obslužné rutině vlastností domény vyvolá `OnValueChanging()` `OnValueChanged()` metody a . Pokud chcete na změnu reagovat, můžete tyto metody přepsat.
 
-## <a name="override-the-property-handler-methods"></a>Přepsat metody obslužné rutiny vlastností
+## <a name="override-the-property-handler-methods"></a>Přepsání metod obslužné rutiny vlastností
 
-Každá doménová vlastnost jazyka specifického pro doménu je zpracována třídou, která je vnořena do své nadřazené třídy domény. Jeho název následuje po formátu *PropertyName* PropertyHandler. Tuto třídu obslužné rutiny vlastnosti můžete zkontrolovat v souboru **Dsl\Generated Code\DomainClasses.cs**. Ve třídě `OnValueChanging()` je volána bezprostředně před změnou hodnoty a `OnValueChanged()` je volána bezprostředně po změně hodnoty.
+Každá vlastnost domény jazyka specifického pro doménu je zpracováván třídou, která je vnořena do její nadřazené třídy domény. Jeho název má formát *PropertyName* PropertyHandler. Tuto třídu obslužné rutiny vlastnosti můžete zkontrolovat v souboru **Dsl\Generated Code\DomainClasses.cs**. Ve třídě je volána bezprostředně před změnou hodnoty a je `OnValueChanging()` `OnValueChanged()` volána ihned po změně hodnoty.
 
-Předpokládejme například, že máte doménovou třídu s názvem `Comment` , která má řetězcovou vlastnost domény s názvem `Text` a vlastnost Integer s názvem `TextLengthCount` . Chcete-li `TextLengthCount` , aby vždy obsahovala délku `Text` řetězce, mohli byste zapsat následující kód do samostatného souboru v projektu DSL:
+Předpokládejme například, že máte třídu domény s názvem , která má vlastnost domény řetězce s názvem `Comment` a `Text` celočíselnou vlastnost s názvem `TextLengthCount` . Pokud chcete, aby vždy obsahoval délku řetězce, můžete do samostatného souboru v projektu Dsl napsat `TextLengthCount` `Text` následující kód:
 
 ```csharp
 // Domain Class "Comment":
@@ -52,27 +52,27 @@ public partial class Comment
 }
 ```
 
-Všimněte si následujících bodů obslužných rutin vlastností:
+Všimněte si následujících bodů o obslužných rutinách vlastností:
 
-- Metody obslužné rutiny vlastností jsou volány v případě, že uživatel provede změny v doménové vlastnosti a když kód programu přiřadí k vlastnosti jinou hodnotu.
+- Metody obslužné rutiny vlastnosti jsou volány jak při změně vlastnosti domény uživatelem, tak v případě, že programový kód přiřadí vlastnosti jinou hodnotu.
 
-- Metody jsou volány pouze v případě, že se hodnota skutečně změní. Obslužná rutina není vyvolána, pokud kód programu přiřadí hodnotu, která je rovna aktuální hodnotě.
+- Metody jsou volány pouze v případě, že se hodnota skutečně změní. Obslužná rutina není vyvolána, pokud programový kód přiřadí hodnotu, která se rovná aktuální hodnotě.
 
-- Vypočítané a vlastní vlastnosti domény úložiště nemají metody OnValueChanged a OnValueChanging.
+- Počítané a vlastní vlastnosti domény úložiště nemají metody OnValueChanged a OnValueChanging.
 
-- Nelze použít obslužnou rutinu změn pro úpravu nové hodnoty. Pokud to chcete provést, například k omezení hodnoty na určitý rozsah, definujte `ChangeRule` .
+- K úpravě nové hodnoty nelze použít obslužnou rutinu změn. Pokud chcete například omezit hodnotu na konkrétní rozsah, definujte `ChangeRule` .
 
-- Do vlastnosti, která představuje roli vztahu, nelze přidat obslužnou rutinu změn. Místo toho definujte `AddRule` a a `DeleteRule` na třídě Relationship. Tato pravidla se aktivují při vytváření nebo změně propojení. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+- Obslužnou rutinu změny nelze přidat do vlastnosti, která představuje roli vztahu. Místo toho `AddRule` definujte a `DeleteRule` ve třídě relace. Tato pravidla se spustí při vytvoření nebo změně odkazů. Další informace najdete v tématu [Pravidla šíří změny v rámci modelu.](../modeling/rules-propagate-changes-within-the-model.md)
 
-### <a name="changes-in-and-out-of-the-store"></a>Změny v úložišti a ven z něj
+### <a name="changes-in-and-out-of-the-store"></a>Změny v a mimo úložiště
 
-Metody obslužné rutiny vlastností jsou volány uvnitř transakce, která iniciovala změnu. Proto můžete v úložišti dělat další změny bez otevření nové transakce. Vaše změny můžou mít za následek další volání obslužných rutin.
+Metody obslužné rutiny vlastností jsou volány uvnitř transakce, která iniciovala změnu. Proto můžete provádět další změny v obchodě bez otevření nové transakce. Vaše změny můžou vést k dalším voláním obslužné rutiny.
 
-V případě vrácení transakce zpět, opětovného dokončení nebo vrácení změn byste neměli provádět změny v úložišti, tedy změny prvků modelu, relací, tvarů, spojnicových diagramů nebo jejich vlastností.
+Když se transakce vrací zpět, znovu se vrátí nebo se vrátí zpět, neměli byste provádět změny v obchodě, to znamená změny prvků modelu, relací, obrazců, diagramů konektorů nebo jejich vlastností.
 
-Kromě toho byste obvykle neaktualizovali hodnoty při načítání modelu ze souboru.
+Kromě toho byste obvykle ne aktualizací hodnot při načítání modelu ze souboru .
 
-Změny modelu by proto měly být chráněny následujícím testem:
+Změny modelu by proto měly být strážené tímto testem:
 
 ```csharp
 if (!store.InUndoRedoOrRollback && !store. InSerializationTransaction)
@@ -81,11 +81,11 @@ if (!store.InUndoRedoOrRollback && !store. InSerializationTransaction)
 }
 ```
 
-Naopak, pokud vaše obslužná rutina vlastnosti šíří změny mimo úložiště, například do souboru, databáze nebo proměnných neuloženého, pak byste tyto změny měli vždycky dělat, aby se tyto změny aktualizovaly, když uživatel vyvolá vrácení akce zpět nebo znovu.
+Naopak pokud obslužná rutina vlastnosti šíří změny mimo úložiště, například do souboru, databáze nebo neskladových proměnných, měli byste tyto změny vždy provést, aby se externí hodnoty aktualizovaly, když uživatel vyvolá vrácení zpět nebo znovu.
 
-### <a name="cancel-a-change"></a>Zrušit změnu
+### <a name="cancel-a-change"></a>Zrušení změny
 
-Pokud chcete zabránit změně, můžete aktuální transakci vrátit zpět. Například může být vhodné zajistit, aby vlastnost zůstala v určitém rozsahu.
+Pokud chcete zabránit změně, můžete vrátit aktuální transakci zpět. Můžete například chtít zajistit, aby vlastnost zůstala v určitém rozsahu.
 
 ```csharp
 if (newValue > 10)
@@ -95,26 +95,26 @@ if (newValue > 10)
 }
 ```
 
-### <a name="alternative-technique-calculated-properties"></a>Alternativní postup: vypočtené vlastnosti
+### <a name="alternative-technique-calculated-properties"></a>Alternativní technika: Počítané vlastnosti
 
-Předchozí příklad ukazuje, jak lze pomocí OnValueChanged () rozšířit hodnoty z jedné doménové vlastnosti do jiné. Každá vlastnost má svou vlastní uloženou hodnotu.
+Předchozí příklad ukazuje, jak lze metodu OnValueChanged() použít k šíření hodnot z jedné vlastnosti domény do druhé. Každá vlastnost má svou vlastní uloženou hodnotu.
 
-Místo toho můžete zvážit definování odvozené vlastnosti jako počítané vlastnosti. V takovém případě vlastnost nemá žádné vlastní úložiště a je vyhodnocena funkcí, pokud je požadována její hodnota. Další informace najdete v tématu věnovaném [vypočítaným a vlastním vlastnostem úložiště](../modeling/calculated-and-custom-storage-properties.md).
+Místo toho můžete zvážit definování odvozené vlastnosti jako vlastnosti Calculated. V takovém případě vlastnost nemá vlastní úložiště a definuje funkci, která se vyhodnotí vždy, když je její hodnota požadována. Další informace najdete v tématu [Počítané a vlastní vlastnosti úložiště.](../modeling/calculated-and-custom-storage-properties.md)
 
-Místo předchozího příkladu jste mohli nastavit pole **druh** , `TextLengthCount` které se má v definici DSL **Vypočítat** . Pro tuto doménovou vlastnost byste zadali vlastní metodu **Get** . Metoda **Get** vrátí aktuální délku `Text` řetězce.
+Místo předchozího příkladu byste mohli nastavit pole **Druh** pro , `TextLengthCount` aby se **vypočítal** v definici DSL. Pro tuto vlastnost **domény** byste měli zadat vlastní metodu Get. Metoda **Get** vrátí aktuální délku `Text` řetězce.
 
-Potenciální nevýhodou počítaných vlastností však je, že výraz je vyhodnocován při každém použití hodnoty, což může představovat problém s výkonem. Pro počítanou vlastnost nejsou k dispozici žádné OnValueChanging () a OnValueChanged ().
+Potenciální nevýhodou počítaných vlastností je ale to, že se výraz vyhodnocuje při každém použití hodnoty, což může být problém s výkonem. U počítané vlastnosti také nejsou žádné OnValueChanging() a OnValueChanged().
 
-### <a name="alternative-technique-change-rules"></a>Alternativní postupy: Změna pravidel
+### <a name="alternative-technique-change-rules"></a>Alternativní technika: Změna pravidel
 
-Definujete-li ChangeRule, je proveden na konci transakce, ve které se změní hodnota vlastnosti.  Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+Pokud definujete ChangeRule, provede se na konci transakce, ve které se změní hodnota vlastnosti.  Další informace najdete v tématu [Pravidla šíří změny v rámci modelu.](../modeling/rules-propagate-changes-within-the-model.md)
 
-Pokud se v jedné transakci provede několik změn, ChangeRule se spustí, až budou dokončená. Naproti tomu hodnota-... metody jsou spouštěny, pokud nebyly provedeny některé změny. V závislosti na tom, co chcete dosáhnout, může to ChangeRule být vhodnější.
+Pokud je v jedné transakci provedeno několik změn, po dokončení všech se provede pravidlo změny. Naproti tomu onValue... Metody se spustí, když nebyly provedeny některé změny. V závislosti na tom, čeho chcete dosáhnout, může být pravidlo změn vhodnější.
 
-Pomocí ChangeRule můžete také upravit novou hodnotu vlastnosti tak, aby se zachovala v konkrétním rozsahu.
+Můžete také použít ChangeRule a upravit novou hodnotu vlastnosti tak, aby byla v určitém rozsahu.
 
 > [!WARNING]
-> Pokud pravidlo provede změny v obsahu úložiště, mohou se aktivovat další pravidla a obslužné rutiny vlastností. Pokud pravidlo změní vlastnost, která ji aktivovala, bude volána znovu. Je nutné zajistit, aby definice pravidel nezpůsobily nekonečné spouštění.
+> Pokud pravidlo provede změny obsahu úložiště, můžou se aktivovat další pravidla a obslužné rutiny vlastností. Pokud pravidlo změní vlastnost, která ho aktivoval, bude volána znovu. Musíte zajistit, aby definice pravidel neskončily nekonečnou aktivací.
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -148,7 +148,7 @@ public partial class MyDomainModel
 
 ### <a name="description"></a>Description
 
-Následující příklad přepisuje obslužnou rutinu vlastnosti domény a upozorní uživatele, když se změní vlastnost pro `ExampleElement` doménovou třídu.
+Následující příklad přepíše obslužnou rutinu vlastnosti vlastnosti domény a upozorní uživatele při změně vlastnosti `ExampleElement` pro třídu domény.
 
 ### <a name="code"></a>Kód
 

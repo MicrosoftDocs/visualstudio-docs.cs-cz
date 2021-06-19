@@ -1,72 +1,72 @@
 ---
 title: Vytváření vlastních procesorů pro direktivy textových šablon T4
-description: Přečtěte si o procesu transformace textové šablony a o tom, jak vytvořit vlastní procesor směrnice textové šablony T4.
+description: Přečtěte si o procesu transformace textových šablon a o tom, jak vytvořit vlastní procesor direktiv textových šablon T4.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bf17d2a7e3b38e267f0353f71c7cd83826b141bf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 59644275f17eac197074351a777959bb1826a5de
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945328"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389498"
 ---
 # <a name="create-custom-t4-text-template-directive-processors"></a>Vytváření vlastních procesorů pro direktivy textových šablon T4
 
-*Proces transformace textové šablony* převede soubor *textové šablony* jako vstup a vytvoří textový soubor jako výstup. *Modul transformace textových šablon* řídí proces a modul komunikuje s hostitelem transformace textové šablony a jedním nebo více *procesory direktiv* textových šablon pro dokončení procesu. Další informace naleznete v tématu [proces transformace textové šablony](../modeling/the-text-template-transformation-process.md).
+Proces *transformace textové šablony přebírá* jako *vstup* textový soubor šablony a jako výstup vytvoří textový soubor. Modul *transformace textových šablon* řídí proces a modul komunikuje s hostitelem transformace  textových šablon a jedním nebo více procesory direktiv textových šablon k dokončení procesu. Další informace najdete v tématu [Proces transformace textových šablon.](../modeling/the-text-template-transformation-process.md)
 
-Chcete-li vytvořit vlastní procesor direktiv, vytvoříte třídu, která dědí z buď <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> nebo <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> .
+Pokud chcete vytvořit vlastní procesor direktiv, vytvoříte třídu, která dědí z nebo <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> .
 
-Rozdíl mezi těmito dvěma hodnotami je, že <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> implementuje minimální rozhraní, které je nezbytné pro získání parametrů od uživatele a pro vygenerování kódu, který vytváří výstupní soubor šablony. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> implementuje vzor návrhu vyžaduje/poskytuje. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> zpracovává dva speciální parametry `requires` a `provides` .  Vlastní procesor direktiv může například přijmout název souboru od uživatele, otevřít a číst soubor a pak text souboru Uložit do proměnné s názvem `fileText` . Podtřídou <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> třídy může být název souboru od uživatele jako hodnota `requires` parametru a název proměnné, do které se má text uložit, jako hodnota `provides` parametru. Tento procesor by otevřel a četl soubor a pak v zadané proměnné uložil text souboru.
+Rozdíl mezi těmito dvěma rozhraními spočívá v implementaci minimálního rozhraní, které je nezbytné k získání parametrů od uživatele a k vygenerování kódu, který vytváří <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> výstupní soubor šablony. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> implementuje vzor návrhu requires/provides. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> zpracovává dva speciální parametry, `requires` a `provides` .  Například procesor vlastních direktiv může přijmout název souboru od uživatele, otevřít a přečíst soubor a pak uložit text souboru do proměnné s názvem `fileText` . Podtřída třídy může převzít název souboru od uživatele jako hodnotu parametru a název proměnné, do které se má text uložit jako hodnota <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> `requires` `provides` parametru. Tento procesor by otevřel a načetl soubor a pak text souboru ukládal do zadané proměnné.
 
-Před voláním vlastního procesoru direktiv z textové šablony v aplikaci Visual Studio je nutné jej zaregistrovat.
+Před voláním vlastního procesoru direktiv z textové šablony v Visual Studio, musíte ho zaregistrovat.
 
-Další informace o tom, jak přidat klíč registru, najdete v tématu [nasazení vlastního procesoru direktiv](../modeling/deploying-a-custom-directive-processor.md).
+Další informace o tom, jak přidat klíč registru, najdete v tématu [Nasazení vlastního procesoru direktiv](../modeling/deploying-a-custom-directive-processor.md).
 
 ## <a name="custom-directives"></a>Vlastní direktivy
 
-Vlastní direktiva vypadá takto:
+Vlastní direktiva vypadá takhle:
 
 `<#@ MyDirective Processor="MyDirectiveProcessor" parameter1="value1" ... #>`
 
 Pokud chcete získat přístup k externím datům nebo prostředkům z textové šablony, můžete použít vlastní procesor direktiv.
 
-Různé textové šablony mohou sdílet funkce, které poskytuje jeden procesor direktiv, takže procesory direktiv poskytují způsob, jak použít kód pro opakované použití. Integrovaná `include` direktiva je podobná, protože ji můžete použít k vyzkoušení kódu a jejich sdílení mezi různými textovými šablonami. Rozdílem je, že všechny funkce, které `include` direktiva poskytuje, je pevná a nepřijímá parametry. Chcete-li pro textovou šablonu poskytnout společné funkce a umožnit šabloně předat parametry, je nutné vytvořit vlastní procesor direktiv.
+Různé textové šablony mohou sdílet funkce, které poskytuje procesor s jednou direktivou, takže procesory direktiv poskytují způsob, jak kód použít k opakovanému použití. Integrovaná direktiva je podobná, protože ji můžete použít k ověření kódu a jeho sdílení `include` mezi různými textovou šablonou. Rozdíl je v tom, že všechny funkce, které direktiva poskytuje, jsou pevné a `include` nepřijímá parametry. Pokud chcete textové šabloně poskytnout běžné funkce a umožnit šabloně předat parametry, musíte vytvořit vlastní procesor direktiv.
 
-Některé příklady vlastních procesorů direktiv mohou být:
+Mezi příklady vlastních procesorů direktiv patří:
 
-- Procesor direktiv pro vrácení dat z databáze, která přijímá uživatelské jméno a heslo jako parametry.
+- Procesor direktiv pro vrácení dat z databáze, která jako parametry přijímá uživatelské jméno a heslo.
 
 - Procesor direktiv pro otevření a čtení souboru, který přijímá název souboru jako parametr.
 
 ### <a name="principal-parts-of-a-custom-directive-processor"></a>Hlavní části vlastního procesoru direktiv
 
-Chcete-li vyvinout procesor direktiv, je nutné vytvořit třídu, která dědí z buď <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> nebo <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> .
+Chcete-li vyvinout procesor direktiv, je nutné vytvořit třídu, která dědí z <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> nebo <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> .
 
 Nejdůležitější `DirectiveProcessor` metody, které je nutné implementovat, jsou následující.
 
-- `bool IsDirectiveSupported(string directiveName)` – Vrátí, `true` zda může procesor direktiv pracovat s pojmenovanou direktivou.
+- `bool IsDirectiveSupported(string directiveName)` – Vrátí `true` hodnotu , pokud procesor direktiv dokáže pojmenovanou direktivu použít.
 
-- `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)` -Modul šablon volá tuto metodu pro každý výskyt direktivy v šabloně. Váš procesor by měl výsledky uložit.
+- `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)` – Modul šablon volá tuto metodu pro každý výskyt direktivy v šabloně. Váš procesor by měl výsledky uložit.
 
-Po všech voláních ProcessDirective () modul šablonování vyvolá tyto metody:
+Po všech voláních metody ProcessDirective() bude modul šablon volat tyto metody:
 
-- `string[] GetReferencesForProcessingRun()` – Vrátí názvy sestavení, které kód šablony vyžaduje.
+- `string[] GetReferencesForProcessingRun()` – Vrátí názvy sestavení, která vyžaduje kód šablony.
 
 - `string[] GetImportsForProcessingRun()` – Vrátí obory názvů, které lze použít v kódu šablony.
 
-- `string GetClassCodeForProcessingRun()` – Vrátí kód metod, vlastností a dalších deklarací, které může kód šablony použít. Nejjednodušší způsob, jak to provést, je sestavení řetězce obsahujícího kód C# nebo Visual Basic. Aby byl procesor direktiv schopný volat ze šablony, která používá jakýkoliv jazyk CLR, můžete vytvořit příkazy jako strom CodeDom a pak vrátit výsledek serializace stromu v jazyce používaném šablonou.
+- `string GetClassCodeForProcessingRun()` – Vrátí kód metod, vlastností a dalších deklarací, které může kód šablony použít. Nejjednodušším způsobem, jak to provést, je sestavit řetězec obsahující kód jazyka C# nebo Visual Basic kódu. Chcete-li zajistit, aby byl procesor direktiv schopný být volán ze šablony, která používá libovolný jazyk CLR, můžete příkazy sestavit jako strom CodeDom a poté vrátit výsledek serializace stromu v jazyce používaném šablonou.
 
-- Další informace najdete v tématu [Návod: Vytvoření vlastního procesoru direktiv](../modeling/walkthrough-creating-a-custom-directive-processor.md).
+- Další informace najdete v [návodu: Vytvoření vlastního procesoru direktiv](../modeling/walkthrough-creating-a-custom-directive-processor.md).
 
 ## <a name="see-also"></a>Viz také
 
-- [Nasazení vlastního procesoru direktiv](../modeling/deploying-a-custom-directive-processor.md) vysvětluje, jak zaregistrovat vlastní procesor direktiv.
-- [Návod: Vytvoření vlastního procesoru direktiv](../modeling/walkthrough-creating-a-custom-directive-processor.md) popisuje, jak vytvořit vlastní procesor direktiv, jak registrovat a testovat procesor direktiv a jak zformátovat výstupní soubor jako HTML.
+- [Článek Nasazení vlastního procesoru direktiv](../modeling/deploying-a-custom-directive-processor.md) vysvětluje, jak zaregistrovat vlastní procesor direktiv.
+- [Návod: Vytvoření vlastního](../modeling/walkthrough-creating-a-custom-directive-processor.md) procesoru direktiv popisuje, jak vytvořit vlastní procesor direktiv, jak zaregistrovat a otestovat procesor direktiv a jak formátovat výstupní soubor jako HTML.

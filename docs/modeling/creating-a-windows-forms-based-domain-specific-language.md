@@ -3,18 +3,18 @@ title: Vytvoření jazyka specifického pro doménu založeného na modelu Windo
 description: Poskytuje informace o tom, jak použít model Windows Forms k zobrazení stavu modelu jazyka specifického pro doménu.
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 41c3ba299df1e6f9ce0e2848f7ffad59e5b3fbea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a77a22b7ed888b28f12154974d735213952899c
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945406"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389537"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>Vytvoření jazyka Domain-Specific založeného na model Windows Forms
 
@@ -141,7 +141,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
     Pro ostatní vlastnosti ponechte výchozí nastavení.
 
-4. Otevřete FarmControl.cs v návrhovém zobrazení.
+4. Otevřete FarmControl. cs v zobrazení Návrh.
 
     Přetáhněte **farmu** z okna zdroje dat do FarmControl.
 
@@ -237,7 +237,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 ### <a name="make-the-properties-update-immediately"></a>Provést aktualizaci vlastností hned
 
-1. V zobrazení Návrh FarmControl.cs vyberte jednoduché pole, jako je název, velikost nebo anorganické.
+1. V zobrazení Návrh FarmControl. cs vyberte jednoduché pole, jako je název, velikost nebo anorganické.
 
 2. V okno Vlastnosti rozbalte položku **DataBindings** a otevřete **(rozšířené)**.
 
@@ -249,7 +249,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 ### <a name="provide-add-buttons"></a>Zadání tlačítek pro přidání
 
-1. V zobrazení Návrh FarmControl.cs použijte panel nástrojů k vytvoření tlačítka na formuláři.
+1. V zobrazení Návrh FarmControl. cs použijte panel nástrojů k vytvoření tlačítka na formuláři.
 
     Upravte název a text tlačítka, například na `New Sheep` .
 

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - text templates, syntax
 - text templates, guide
 - text templates, functions that generate text
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eb988854cb1bc049e024bf204553dd715e652a4e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8034e0d1df6410c842f7d93a4ee3023957904744
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923986"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388084"
 ---
 # <a name="writing-a-t4-text-template"></a>Tvorba textové šablony T4
 Textová šablona obsahuje text, který z ní bude vygenerován. Například šablona, která vytvoří webovou stránku, bude obsahovat " \<html> ..." a všechny ostatní standardní části stránky HTML. Vložení do šablony jsou *řídicí bloky*, které jsou fragmenty kódu programu. Řídicí bloky poskytují různé hodnoty a umožňují, aby části textu byly podmíněné a opakované.
@@ -33,7 +33,7 @@ Textová šablona obsahuje text, který z ní bude vygenerován. Například ša
 
 - **Řídicí bloky** – programový kód, který vkládá proměnné hodnoty do textu a řídí podmíněné nebo opakující se části textu.
 
-Chcete-li vyzkoušet příklady v tomto tématu, zkopírujte je do souboru šablony, jak je popsáno v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Po úpravě souboru šablony ho uložte a pak zkontrolujte výstupní soubor **. txt** .
+Chcete-li vyzkoušet příklady v tomto tématu, zkopírujte je do souboru šablony, jak je popsáno v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Po úpravě souboru šablony ho uložte a pak zkontrolujte výstupní **.txt** soubor.
 
 ## <a name="directives"></a>Direktivy
  Direktivy textové šablony poskytují obecné pokyny modulu šablon textu o tom, jak generovat kód transformace a výstupní soubor.
@@ -240,10 +240,10 @@ private void WriteSquareLine(int i)
 
  **Načte soubor jako naviguje model**. Výkonnější metodou je načíst data jako model, kterým kód textové šablony může procházet. Lze například načíst soubor XML a procházet jím pomocí výrazů XPath. Můžete také použít [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) k vytvoření sady tříd, pomocí které můžete číst data XML.
 
- **Upravte soubor modelu v diagramu nebo ve formuláři.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] poskytuje nástroje, které umožňují úpravu modelu jako diagramu nebo formuláře Windows. Můžete tak tento model snáze prodiskutovat s uživateli generované aplikace. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Vytvoří také sadu silně typované třídy, které odrážejí strukturu modelu. Další informace naleznete v tématu [generování kódu z Domain-Specificho jazyka](../modeling/generating-code-from-a-domain-specific-language.md).
+ **Upravte soubor modelu v diagramu nebo ve formuláři.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] poskytuje nástroje, které umožňují úpravu modelu jako diagramu nebo formuláře Windows. Můžete tak tento model snáze prodiskutovat s uživateli generované aplikace. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Vytvoří také sadu silně typované třídy, které odrážejí strukturu modelu. Další informace najdete v tématu [Generování kódu z Domain-Specific Language.](../modeling/generating-code-from-a-domain-specific-language.md)
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>Relativní cesty k souborům v návrhových šablonách
- V [textové šabloně návrhu](../modeling/design-time-code-generation-by-using-t4-text-templates.md), pokud chcete odkazovat na soubor v umístění relativní vzhledem k textové šabloně, použijte `this.Host.ResolvePath()` . Je také nutné nastavit hodnotu `hostspecific="true"` v direktivě `template`:
+ Pokud chcete [v textové šabloně](../modeling/design-time-code-generation-by-using-t4-text-templates.md)návrhu odkazovat na soubor v umístění relativním vzhledem k textové šabloně, použijte `this.Host.ResolvePath()` . Je také nutné nastavit hodnotu `hostspecific="true"` v direktivě `template`:
 
 ```
 <#@ template hostspecific="true" language="C#" #>
@@ -257,16 +257,16 @@ Content of MyFile.txt is:
 <#= myFile #>
 ```
 
-Lze také získat další služby, které jsou poskytovány tímto hostitelem. Další informace naleznete v tématu [přístup k aplikaci Visual Studio nebo k jiným hostitelům ze šablony](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
+Lze také získat další služby, které jsou poskytovány tímto hostitelem. Další informace najdete v tématu Přístup Visual Studio hostitelů nebo [jiných hostitelů ze šablony](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
 
 ### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Návrhové textové šablony běží v oddělené doméně AppDomain.
 
- Měli byste si uvědomit, že [Textová šablona návrhu](../modeling/design-time-code-generation-by-using-t4-text-templates.md) se spouští v doméně AppDomain, která je oddělená od hlavní aplikace. Ve většině případů to není důležité, ale v některých složitých případech lze narazit na omezení. Pokud například chcete předat data do nebo ze šablony ze samostatné služby, musí tato služba poskytovat serializovatelné rozhraní API.
+ Měli byste vědět, že [textová šablona v](../modeling/design-time-code-generation-by-using-t4-text-templates.md) době návrhu běží v doméně AppDomain, která je oddělená od hlavní aplikace. Ve většině případů to není důležité, ale v některých složitých případech lze narazit na omezení. Pokud například chcete předat data do nebo ze šablony ze samostatné služby, musí tato služba poskytovat serializovatelné rozhraní API.
 
- (To není pravdivé pro [textovou šablonu běhu](../modeling/run-time-text-generation-with-t4-text-templates.md), která poskytuje kód kompilovaný spolu se zbytkem kódu.)
+ (To není pravda pro [textovou](../modeling/run-time-text-generation-with-t4-text-templates.md)šablonu za běhu , která poskytuje kód zkompilovaný společně se zbytkem kódu.)
 
 ## <a name="editing-templates"></a>Úpravy šablon
- Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. V nabídce **nástroje** klikněte na **Správce rozšíření**. Klikněte na položku **Online galerie** a pak použijte nástroj pro hledání.
+ Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. V nabídce **Nástroje** klikněte na **Správce rozšíření.** Klikněte **na Online galerie** a pak použijte vyhledávací nástroj.
 
 ## <a name="related-topics"></a>Související témata
 
@@ -274,7 +274,7 @@ Lze také získat další služby, které jsou poskytovány tímto hostitelem. D
 |-|-|
 |Vytvoření šablony|[Pokyny pro zápis textových šablon T4](../modeling/guidelines-for-writing-t4-text-templates.md)|
 |Generování textu pomocí kódu programu|[Struktura textových šablon](../modeling/writing-a-t4-text-template.md)|
-|Generování souborů v řešení sady Visual Studio.|[Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
-|Spuštění generování textu mimo Visual Studio.|[Generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
+|Generování souborů v Visual Studio řešení|[Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
+|Generování textu spusťte mimo Visual Studio.|[Generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
 |Transformujte data ve formě jazyka specifického pro doménu.|[Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)|
-|Zapište procesory direktiv pro transformaci vašich vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|
+|Pište procesory direktiv pro transformaci vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|

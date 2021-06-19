@@ -1,6 +1,6 @@
 ---
-title: Zobrazit vlastní typ pomocí používání DebuggerTypeProxy | Microsoft Docs
-description: Použijte instanci DebuggerTypeProxyAttribute – k určení proxy (pro) pro určitý typ pro změnu způsobu zobrazení typu v ladicím programu.
+title: Zobrazení vlastního typu pomocí třídy DebuggerTypeProxy | Microsoft Docs
+description: Pomocí instance DebuggerTypeProxyAttribute můžete zadat proxy (stand-in) pro typ a změnit způsob zobrazení typu v oknech ladicího programu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,16 +19,16 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fdd0b67075a66663146d706d8f82e8c5d9f76e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 532850f8bb4ac6198481188c2a57a8db15a13873
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940537"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389277"
 ---
-# <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>Sdělte ladicímu programu, jaký typ se má zobrazit pomocí atributu používání DebuggerTypeProxy (C#, Visual Basic, C++/CLI).
+# <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>Sdělte ladicímu programu, jaký typ se má zobrazit, pomocí atributu DebuggerTypeProxy (C#, Visual Basic, C++/CLI)
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute> Určuje proxy server nebo jeho nezávisle pro typ a mění způsob, jakým se typ zobrazuje v oknech ladicího programu. Pokud zobrazíte proměnnou, která má proxy server, proxy server je v části pro původní typ v **zobrazení**. Okno proměnné ladicího programu zobrazuje pouze veřejné členy typu proxy serveru. Soukromé členy nejsou zobrazeny.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> určuje proxy nebo stand-in pro typ a změní způsob zobrazení typu v oknech ladicího programu. Když zobrazíte proměnnou, která má proxy server, proxy zastupuje původní typ v **zobrazení**. V okně proměnné ladicího programu se zobrazují pouze veřejné členy typu proxy. Soukromé členy se nezobrazují.
 
 Tento atribut lze použít pro:
 
@@ -37,33 +37,33 @@ Tento atribut lze použít pro:
 - Sestavení
 
 > [!NOTE]
-> Pro nativní kód je tento atribut podporován pouze v kódu jazyka C++/CLI.
+> Pro nativní kód je tento atribut podporován pouze v kódu C++/CLI.
 
-Třída typu proxy musí mít konstruktor, který přebírá argument typu, který bude server nahrazen. Ladicí program vytvoří novou instanci třídy typu proxy pokaždé, když potřebuje zobrazit proměnnou cílového typu. To může mít vliv na výkon. V důsledku toho byste neměli v konstruktoru dělat žádné další práce, než je nezbytně nutné.
+Třída typu proxy musí mít konstruktor, který přebírá argument typu, který bude proxy server nahradit. Ladicí program vytvoří novou instanci třídy typu proxy pokaždé, když potřebuje zobrazit proměnnou cílového typu. To může mít vliv na výkon. V důsledku toho byste neměli v konstruktoru dělat nic dalšího, než je nezbytně nutné.
 
-Pro minimalizaci sankcí za výkon vyhodnocovací filtr výrazů neověřuje atributy na proxy zobrazení typu, pokud typ není rozbalen uživatelem kliknutím na symbol + v okně ladicího programu nebo pomocí <xref:System.Diagnostics.DebuggerBrowsableAttribute> . Proto byste neměli umístit atributy na samotný typ zobrazení. Atributy mohou a by měly být použity v těle typu zobrazení.
+Aby se minimalizovaly penalizování výkonu, vyhodnocovač výrazů neprozkoumá atributy na zobrazované proxy serveru typu, pokud uživatel nerozšířuje typ kliknutím na symbol + v okně ladicího programu nebo použitím <xref:System.Diagnostics.DebuggerBrowsableAttribute> . Proto byste neměli umisovat atributy do samotného typu zobrazení. Atributy lze a by měly být použity v těle zobrazovaný typ.
 
-Je vhodné, aby proxy typ byl privátní vnořenou třídou v rámci třídy, které cílí na atribut. To umožňuje snadno získat přístup k interním členům.
+Je vhodné, aby proxy typ byl privátní vnořenou třídou v rámci třídy, na kterou cílí atribut . To umožňuje snadný přístup k interním členům.
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute> může být zděděno, takže pokud je typ proxy serveru zadán v základní třídě, bude platit pro všechny odvozené třídy, pokud tyto odvozené třídy neurčí svůj vlastní typ proxy.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> může být zděděn, takže pokud je v základní třídě zadán proxy typ, použije se pro všechny odvozené třídy, pokud tyto odvozené třídy neurčí svůj vlastní typ proxy.
 
-Pokud <xref:System.Diagnostics.DebuggerTypeProxyAttribute> je použita na úrovni sestavení, `Target` parametr určuje typ, který bude server nahrazen.
+Pokud <xref:System.Diagnostics.DebuggerTypeProxyAttribute> se používá na úrovni sestavení, parametr určuje `Target` typ, který bude proxy server nahradit.
 
-Příklad použití tohoto atributu spolu s <xref:System.Diagnostics.DebuggerDisplayAttribute> a <xref:System.Diagnostics.DebuggerTypeProxyAttribute> naleznete v tématu[using the DebuggerDisplay Attribute](../debugger/using-the-debuggerdisplay-attribute.md).
+Příklad použití tohoto atributu spolu s a najdete v <xref:System.Diagnostics.DebuggerDisplayAttribute> <xref:System.Diagnostics.DebuggerTypeProxyAttribute> tématu Použití [atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md).
 
-## <a name="using-generics-with-debuggertypeproxy"></a>Použití generických typů s používání DebuggerTypeProxy
+## <a name="using-generics-with-debuggertypeproxy"></a>Použití obecných typů s DebuggerTypeProxy
 
-Podpora pro obecné typy je omezená. V jazyce C# `DebuggerTypeProxy` podporuje pouze otevřené typy. Otevřený typ, označovaný také jako nekonstruovaný typ, je obecný typ, který nebyl vytvořen s argumenty pro jeho parametry typu. Uzavřené typy, označované také jako konstruované typy, nejsou podporovány.
+Podpora obecných typů je omezená. V jazyce C# `DebuggerTypeProxy` podporuje pouze otevřené typy. Otevřený typ, také nazývaný nekonstruovaný typ, je obecný typ, který nebyl vytvořen s argumenty pro jeho parametry typu. Uzavřené typy, také nazývané konstruované typy, nejsou podporovány.
 
-Syntaxe pro otevřený typ vypadá takto:
+Syntaxe otevřeného typu vypadá takhle:
 
 `Namespace.TypeName<,>`
 
-Použijete-li obecný typ jako cíl v `DebuggerTypeProxy` , je nutné použít tuto syntaxi. `DebuggerTypeProxy`Mechanismus odvodí parametry typu pro vás.
+Pokud jako cíl v použijete obecný `DebuggerTypeProxy` typ, musíte použít tuto syntaxi. Mechanismus `DebuggerTypeProxy` odvodí parametry typu za vás.
 
-Další informace o otevřených a uzavřených typech v jazyce C# naleznete v tématu [specifikace jazyka C#](/dotnet/csharp/language-reference/language-specification), 20.5.2 otevřené a uzavřené typy oddílu.
+Další informace o otevřených a uzavřených typech v jazyce C# najdete ve specifikaci jazyka [C#](/dotnet/csharp/language-reference/language-specification)v části 20.5.2 Otevřené a uzavřené typy.
 
-Visual Basic nemá syntaxi otevřeného typu, takže nemůžete v Visual Basic provádět stejné věci. Místo toho je nutné použít řetězcovou reprezentaci názvu otevřeného typu.
+Visual Basic nemá otevřenou syntaxi typu, takže v tomto případě nemůžete Visual Basic. Místo toho musíte použít řetězcovou reprezentaci názvu otevřeného typu.
 
 `"Namespace.TypeName'2"`
 

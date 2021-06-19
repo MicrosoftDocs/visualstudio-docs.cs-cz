@@ -1,7 +1,7 @@
 ---
-title: Nasazení aplikací pro UWP | Microsoft Docs
-description: Nasaďte aplikace Univerzální platforma Windows (UWP) ze sady Visual Studio. Zadejte místní nebo vzdálené cílové zařízení pro nasazení. Pochopení možností nasazení.
-ms.custom: SEO-VS-2020, seodec18
+title: Nasazení aplikací pro UPW | Microsoft Docs
+description: Nasazení Univerzální platforma Windows (UPW) z Visual Studio. Zadejte místní nebo vzdálené cílové zařízení pro nasazení. Principy možností nasazení
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2018
 ms.topic: conceptual
 dev_langs:
@@ -14,109 +14,109 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 6d8819f92e19960aefc7e485acb2fb7fa827b6ce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a1c1802d92beb436bbd2ac87bd1e7a39f6086f1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872167"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387863"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Nasazení aplikací pro UPW ze sady Visual Studio
 
-Funkce nasazení sady Visual Studio vytváří a registruje aplikace UWP vytvořené pomocí sady Visual Studio na cílovém zařízení. Přesně to, jak je aplikace zaregistrovaná, závisí na tom, jestli je cílové zařízení místní nebo vzdálené:
+Funkce Visual Studio nasazení sestaví a zaregistruje aplikace pro UPW, které jsou vytvořené Visual Studio na cílovém zařízení. Přesně to, jak je aplikace zaregistrovaná, závisí na tom, jestli je cílové zařízení místní nebo vzdálené:
 
-- Pokud je cílem místní počítač sady Visual Studio, aplikace Visual Studio zaregistruje aplikaci ze své složky sestavení.
+- Pokud je cílem místní Visual Studio, Visual Studio aplikace zaregistruje ze složky sestavení.
 
-- Pokud je cílem vzdálené zařízení, Visual Studio zkopíruje požadované soubory do vzdáleného počítače a zaregistruje aplikaci na tomto zařízení.
+- Pokud je cílem vzdálené zařízení, Visual Studio požadované soubory zkopíruje do vzdáleného počítače a zaregistruje aplikaci na tomto zařízení.
 
-Nasazení je automatické při ladění aplikace ze sady Visual Studio pomocí možnosti **Spustit ladění** (klávesnice: F5) nebo možnosti **Spustit bez ladění** (klávesnice: CTRL + F5). Aplikaci můžete nasadit také ručně. Ruční nasazení je užitečné v následujících scénářích:
+Nasazení je automatické při ladění aplikace z Visual Studio  pomocí možnosti Spustit ladění (klávesnice: F5) nebo možnosti Spustit bez **ladění** (klávesnice: CTRL + F5). Aplikaci můžete nasadit také ručně. Ruční nasazení je užitečné v následujících scénářích:
 
-- Testování ad hoc na místním nebo vzdáleném počítači.
+- Jednorázové testování na místním nebo vzdáleném počítači.
 
-- Nasazení aplikace, která spustí jinou aplikaci, kterou chcete ladit.
+- Nasazení aplikace, která spustí jinou aplikaci, kterou chcete ladit
 
 - Nasazení aplikace, která se bude ladit při spuštění jinou aplikací nebo metodou
 
-## <a name="how-to-deploy-a-uwp-app"></a><a name="BKMK_How_to_deploy_a_Windows_Store_app"></a> Nasazení aplikace pro UWP
+## <a name="how-to-deploy-a-uwp-app"></a><a name="BKMK_How_to_deploy_a_Windows_Store_app"></a> Postup nasazení aplikace pro UPW
  Ruční nasazení aplikace je jednoduchý proces:
 
-1. Pokud nasazujete na vzdálené zařízení, zadejte název nebo IP adresu zařízení na stránce projekt vlastností spouštěného projektu aplikace. (Tento postup je uveden dále v tomto tématu.).
+1. Pokud nasazujete na vzdálené zařízení, zadejte název nebo IP adresu zařízení na stránce projektu vlastností projektu po spuštění aplikace. (Postup je uvedený dále v tomto tématu.)
 
-2. Na panelu nástrojů ladicího programu sady Visual Studio v rozevíracím seznamu vedle tlačítka **Spustit ladění** vyberte cíl nasazení.
+2. Na panelu Visual Studio ladicího programu vyberte cíl nasazení z rozevíracího seznamu vedle tlačítka **Spustit** ladění.
 
-     ![Spustit na místním počítači](../debugger/media/vsrun_f5_local.png "VSRUN_F5_Local")
+     ![Spuštění na místním počítači](../debugger/media/vsrun_f5_local.png "VSRUN_F5_Local")
 
-3. V nabídce **sestavení** klikněte na příkaz **nasadit** .
+3. V **nabídce Sestavení** zvolte **Nasadit.**
 
 ## <a name="how-to-specify-a-remote-device"></a><a name="BKMK_How_to_specify_a_remote_device"></a> Určení vzdáleného zařízení
 
 **Požadavky**
 
-Na vzdáleném zařízení s Windows 10 musíte povolit [vývojářský režim](/windows/uwp/get-started/enable-your-device-for-development). Na zařízeních s Windows 10, na kterých běží aktualizace autora nebo novější, se nástroje Remote Tools automaticky nainstalují při nasazení aplikace. Další informace najdete v tématu [ladění nainstalovaného balíčku aplikace](../debugger/debug-installed-app-package.md).
+Na Windows 10 zařízení musíte povolit [vývojářský režim](/windows/uwp/get-started/enable-your-device-for-development). Na Windows 10, na které běží Creator's Update nebo novější, se vzdálené nástroje automaticky nainstalují při nasazení aplikace. Další informace najdete v tématu [Ladění nainstalovaného balíčku aplikace.](../debugger/debug-installed-app-package.md)
 
 > [!NOTE]
-> V případě aktualizací verze Windows 10 předběžného autora musí být na vzdáleném zařízení nainstalovaný Remote Tools for Visual Studio a musí běžet vzdálený ladicí program.
+> V předchozích verzích sady Update Windows 10 musí být Remote Tools for Visual Studio na vzdáleném zařízení nainstalován a musí být spuštěný vzdálený ladicí program.
 
-Nasazení používá síťový kanál vzdáleného ladícího programu k posílání souborů aplikace na vzdálené zařízení.
+Nasazení používá síťový kanál vzdáleného ladicího programu k odesílání souborů aplikace do vzdáleného zařízení.
 
 #### <a name="to-specify-a-remote-device"></a>Určení vzdáleného zařízení
 
-1. Na stránce vlastností ladění spouštěného projektu zadejte název nebo IP adresu cíle vzdáleného nasazení.
+1. Na stránce vlastností Ladění projektu po spuštění zadejte název nebo IP adresu cíle vzdáleného nasazení.
 
-2. Chcete-li otevřít stránku vlastností ladění, zvolte projekt v Průzkumník řešení a pak v místní nabídce zvolte možnost **vlastnosti** .
+2. Pokud chcete otevřít stránku vlastností Ladění, zvolte projekt v Průzkumník řešení a pak **v** místní nabídce zvolte Vlastnosti.
 
-3. Pak zvolte uzel **ladění** v okně stránky vlastností.
+3. Pak zvolte **uzel Ladit** v okně stránek vlastností.
 
-4. V případě **cílového zařízení** vyberte možnost **vzdálený počítač**.
+4. V **oblasti Cílové zařízení** vyberte Vzdálený **počítač.**
 
-5. V části **vzdálený počítač** klikněte na **Najít**.
+5. V **části Vzdálený počítač** klikněte na **Najít.**
 
-6. Můžete zadat název nebo IP adresu vzdáleného zařízení nebo můžete vybrat zařízení z dialogového okna **vzdálené připojení** .
+6. Můžete zadat název nebo IP adresu vzdáleného zařízení, nebo můžete zařízení zvolit v dialogovém **okně Vzdálené** připojení.
 
-    ![Dialogové okno vybrat připojení vzdáleného ladicího programu](../debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN_SelectRemoteDebuggerDlg")
+    ![Dialogové okno Vybrat připojení vzdáleného ladicího programu](../debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN_SelectRemoteDebuggerDlg")
 
-    Dialogové okno **vzdálené připojení** zobrazuje zařízení v podsíti místní sítě a všechna zařízení, která jsou přímo připojena k počítači sady Visual Studio pomocí kabelu sítě Ethernet.
+    V **dialogovém okně Vzdálené** připojení se zobrazí zařízení v podsíti místní sítě a všechna zařízení, která jsou přímo připojená k virtuálnímu počítači Visual Studio pomocí ethernetového kabelu.
 
-   **Určení vzdáleného zařízení na stránce projektu C++**
+   **Zadání vzdáleného zařízení na stránce projektu C++**
 
-   ![Vlastnosti projektu v jazyce C&#43;&#43; pro vzdálené ladění](../debugger/media/vsrun_cpp_projprop_remote.png "VSRUN_CPP_ProjProp_Remote")
+   ![Vlastnosti&#43;&#43; C pro vzdálené ladění](../debugger/media/vsrun_cpp_projprop_remote.png "VSRUN_CPP_ProjProp_Remote")
 
-7. Pro spuštění seznamu vyberte možnost **vzdálený ladicí program** z **ladicího programu** .
+7. V **ladicím programu** zvolte Vzdálený **ladicí program, aby se spouštěl** seznam.
 
-8. Do pole **název počítače** zadejte název sítě vzdáleného zařízení. Případně můžete vybrat šipku dolů v poli a vybrat zařízení z dialogového okna Vybrat připojení vzdáleného ladicího programu.
+8. Do pole Název počítače zadejte název sítě **vzdáleného** zařízení. Nebo můžete zvolit šipku dolů v poli a vybrat zařízení z dialogového okna Vybrat připojení vzdáleného ladicího programu.
 
-   **Určení vzdáleného zařízení na stránce projektu Visual C# a Visual Basic**
+   **Určení vzdáleného zařízení v jazyce Visual C# a na Visual Basic projektu**
 
    ![Vlastnosti spravovaného projektu pro vzdálené ladění](../debugger/media/vsrun_managed_projprop_remote.png "VSRUN_Managed_ProjProp_Remote")
 
-9. V seznamu **cílový seznam zařízení** vyberte možnost **vzdálený počítač** .
+9. V **seznamu Cílové** zařízení zvolte **Vzdálený** počítač.
 
-10. Zadejte síťový název vzdáleného zařízení do pole **vzdálený počítač** nebo klikněte na **Najít** a zvolte zařízení v dialogovém okně **Vybrat připojení vzdáleného ladicího programu** .
+10. Do pole Vzdálený počítač zadejte  název sítě vzdáleného zařízení nebo klikněte na Najít a zvolte zařízení v dialogovém okně Vybrat připojení vzdáleného **ladicího** programu. 
 
 ## <a name="deployment-options"></a><a name="BKMK_Deployment_options"></a> Možnosti nasazení
 
-Na stránce vlastností ladění spouštěného projektu můžete nastavit následující možnosti nasazení.
+Na stránce vlastností Ladění projektu po spuštění můžete nastavit následující možnosti nasazení.
 
-**Povolení zpětné smyčky sítě**
+**Povolit zpětné smyčky sítě**
 
-Z bezpečnostních důvodů není u UWP nebo [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplikace, která je nainstalovaná standardním způsobem, povoleno provádět síťová volání do zařízení, na kterém je nainstalovaná. Ve výchozím nastavení vytvoří nasazení sady Visual Studio výjimku z tohoto pravidla pro nasazenou aplikaci. Tato výjimka umožňuje testovat komunikační postupy na jednom počítači. Před odesláním aplikace do nástroje [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] byste měli aplikaci otestovat bez výjimky.
+Z bezpečnostních důvodů nesmí UPW nebo aplikace, která je nainstalovaná standardním způsobem, provádět síťová volání zařízení, [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] na které je nainstalovaná. Ve výchozím Visual Studio nasazení vytvoří výjimku z tohoto pravidla pro nasazenou aplikaci. Tato výjimka umožňuje otestovat komunikační postupy na jednom počítači. Před odesláním aplikace do [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] byste měli aplikaci otestovat bez výjimky.
 
 Odebrání výjimky zpětné smyčky sítě z aplikace:
 
-- Na stránce vlastností C# a Visual Basic ladění zrušte zaškrtnutí políčka **Povolení zpětné smyčky sítě** .
+- Na stránce vlastností C# Visual Basic Ladění zrušte zaškrtnutí **políčka Povolit** zpětné smyčky sítě.
 
-- Na stránce vlastností ladění v jazyce C++ nastavte hodnotu **zapnout síťovou smyčku** na **ne**.
+- Na stránce vlastností Ladění jazyka C++ nastavte hodnotu Povolit zpětné smyčky **sítě** na **Hodnotu Ne.**
 
-**Nespouštět, ale ladit můj kód při spuštění (C# a Visual Basic)/spustit aplikaci (C++)**
+**Nespouštět, ale ladit kód při spuštění (C# a Visual Basic) / Spustit aplikaci (C++)**
 
-Konfigurace nasazení tak, aby automaticky spouštěla relaci ladění při spuštění aplikace:
+Konfigurace nasazení pro automatické spuštění ladicí relace při spuštění aplikace:
 
-- Na stránce vlastností C# a Visual Basic Debug zaškrtněte políčko **nespouštět, ale při spuštění ladit můj kód** .
+- Na stránce vlastností C# Visual Basic Ladění zaškrtněte  políčko Nespouštět, ale při spuštění ladit kód.
 
-- Na stránce vlastností ladění v jazyce C++ nastavte hodnotu **Spustit aplikaci** na **Ano**.
+- Na stránce vlastností Ladění jazyka C++ nastavte **hodnotu Spustit** aplikaci na **Ano.**
 
 ## <a name="see-also"></a>Viz také
 
-- [Rozšířené možnosti vzdáleného nasazení](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
+- [Pokročilé možnosti vzdáleného nasazení](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
 - [Ladění balíčku nainstalované aplikace](../debugger/debug-installed-app-package.md)
 - [Spouštění aplikací ze sady Visual Studio](debugging-windows-store-and-windows-universal-apps.md)

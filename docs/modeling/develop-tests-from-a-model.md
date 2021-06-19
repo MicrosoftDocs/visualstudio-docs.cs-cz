@@ -6,22 +6,22 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - tests and requirements
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e4884ec4eb3e316e22e4ba54cd8defe71d4b8018
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dadffd0a2950d55145b24d3172564eb572f98d70
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935167"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389147"
 ---
 # <a name="develop-tests-from-a-model"></a>Vývoj testů z modelu
 Můžete použít požadavky a modely architektury, které vám pomůžou organizovat testy vašeho systému a jeho součástí. Tento postup pomáhá zajistit, že budete testovat požadavky, které jsou důležité pro uživatele a další zúčastněné strany, a pomůže vám rychle aktualizovat testy v případě změny požadavků. Pokud používáte [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] , můžete také zachovat propojení mezi modely a testy.
 
- Chcete-li zjistit, které verze aplikace Visual Studio podporují tyto funkce, přečtěte si téma [podpora verzí pro architektury a nástroje pro modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Chcete-li zjistit, které verze aplikace Visual Studio podporují tyto funkce, přečtěte si téma [podpora verzí pro architektury a nástroje pro modelování](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 ## <a name="system-and-subsystem-testing"></a>Testování systému a subsystému
  *Testování systému,* označované také jako *testování přijetí*, znamená testování, jestli jsou požadavky uživatelů splněné. Tyto testy se týkají externě viditelného chování systému místo interního návrhu.
@@ -117,45 +117,45 @@ Assert (countAfter == countBefore = 1);
  V obou případech můžete vytvořit relaci mezi prvky modelu a testy subsystému stejným způsobem jako mezi modelem požadavků a systémovými testy.
 
 ### <a name="isolate-components-with-provided-and-required-interfaces"></a>Izolace součástí pomocí poskytovaných a požadovaných rozhraní
- Je vhodné identifikovat všechny závislosti, které má součást v jiných částech systému nebo externích služeb, a reprezentovat je jako požadovaná rozhraní. Toto cvičení obvykle vede k nějakému přepracování, který ponechá součást mnohem více oddělenou a snadno se oddělit od ostatních vašich návrhů.
+ Je užitečné identifikovat všechny závislosti, které má komponenta na jiných částech systému nebo externích služeb, a reprezentovat je jako požadovaná rozhraní. Toto cvičení obvykle vede k nějakému přepracování, které nechá komponentu mnohem oddělenou a snadno oddělitelnou od zbytku návrhu.
 
- Výhodou tohoto odkládání je, že komponentu lze spustit pro testování nahrazením objekty typu, které obvykle používá. Jedná se o komponenty, které jsou nastaveny pro účely testování. Přípravou součást poskytuje rozhraní, které vaše komponenta vyžaduje, a reaguje na dotazy se simulovanými daty. Naformátované komponenty tvoří součást kompletního testovacího svazku, který se můžete připojit ke všem rozhraním komponenty.
+ Výhodou tohoto oddělení je, že komponentu je možné provést pro testování nahrazením napodobených objektů službami, které obvykle používá. Jedná se o komponenty, které jsou nastavené pro účely testování. Napodobovací komponenta poskytuje rozhraní, které vaše komponenta vyžaduje, a reaguje na dotazy pomocí simulovaných dat. Napodobné komponenty tvoří součást kompletního testovacího systému, který se můžete připojit ke všem rozhraním komponenty.
 
- Výhodou takového testování je, že můžete vyvíjet komponentu, zatímco ostatní komponenty, jejichž služby se budou používat, jsou stále ve vývoji.
+ Výhodou napodobování testování je, že můžete vyvíjet svou komponentu, zatímco ostatní komponenty, jejichž služby bude používat, jsou stále ve vývoji.
 
 ## <a name="maintain-the-relationships-between-tests-and-model"></a>Udržování vztahů mezi testy a modelem
- V typickém projektu, který provádí iteraci každé pár týdnů, se na začátku každé iterace podrží revize požadavků. Schůzka se zabývá funkcemi, které se mají doručit v další iteraci. Model požadavků se dá použít k pojednání o konceptech, scénářích a sekvencích akcí, které se budou vyvíjet. Obchodní účastníci nastavili priority, vývojáři vytvářejí odhady a testeri ověří, že očekávané chování jednotlivých funkcí je správně zachyceno.
+ V typickém projektu, který provádí iteraci každých několik týdnů, se kontrola požadavků provádí na začátku každé iterace. Schůzka popisuje funkce, které se mají doručit v další iteraci. Model požadavků lze použít k diskusi o konceptech, scénářích a sekvencích akcí, které se budou vyvíjet. Zainteresované strany nastavují priority, vývojáři odhadují a testeři zajišťují správné zachytávání očekávaného chování jednotlivých funkcí.
 
- Psaní testů je nejúčinnější způsob, jak definovat požadavek, a je také účinný způsob, jak zajistit, aby osoba měla jasné porozumění tomu, co je potřeba. Vzhledem k tomu, že během specifikace dílny trvá zápis testů příliš dlouho, vytváření modelů je možné provést mnohem rychleji.
+ Psaní testů je nejúčinnější způsob, jak definovat požadavek, a je také efektivní způsob, jak zajistit, aby člověk měl jasnou znalost toho, co je potřeba. Zatímco ale psaní testů trvá příliš dlouho během workshopu o specifikacích, vytváření modelů je možné provést mnohem rychleji.
 
- Z hlediska testování je možné model požadavků zobrazit jako zkrácený pro testy. Proto je důležité udržovat vztah mezi testy a modelem v celém projektu.
+ Z hlediska testování lze model požadavků pro testy nahlížet jako zkrácený. Proto je důležité zachovat vztah mezi testy a modelem v celém projektu.
 
 ## <a name="attaching-test-cases-to-model-elements"></a><a name="Attaching"></a> Připojení testovacích případů k prvkům modelu
- Pokud váš projekt používá [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] , můžete propojit testy s prvky v modelu. To vám umožní rychle najít testy ovlivněné změnou požadavků a pomůže vám sledovat rozsah, do kterého byl požadavek realizován.
+ Pokud váš projekt používá [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] , můžete testy propojit s prvky v modelu. To vám umožní rychle najít testy ovlivněné změnou požadavků a pomáhá sledovat rozsah, v jakém byl požadavek realizovaný.
 
- Testy můžete propojit se všemi druhy prvků. Tady je několik příkladů:
+ Testy můžete propojit se všemi druhy elementů. Tady je několik příkladů:
 
-- Propojit případ použití s testy, které ji vykonávají.
+- Propoojte případ použití s testy, které ho procvičují.
 
-- Zapište klauzule případu použití následná podmínka nebo cíl, do komentářů, které jsou propojeny s případem použití, a pak propojte testy s každým komentářem.
+- Do komentářů propojených s případem použití zapište klauzule případu použití postcondition nebo goal a pak testy propojíte s jednotlivými komentáři.
 
-- Zapište invariantní pravidla v komentářích k diagramům tříd nebo diagramům aktivit a propojte je s testy.
+- Pište invariantní pravidla v komentářích k diagramům tříd nebo diagramům aktivit a propoojte je s testy.
 
-- Propojte testy s diagramem činnosti nebo jednotlivými aktivitami.
+- Testy můžete propojit s diagramem aktivit nebo s jednotlivými aktivitami.
 
-- Propojte sadu testů s komponentou nebo podsystémem, který testuje testy.
+- Propoojte sadu testů s komponentou nebo subsystémem, který testuje.
 
-#### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Propojení testů s prvkem modelu nebo vztahu
+#### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Propojení testů s prvkem modelu nebo vztahem
 
-1. V portálu [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] vytvořte požadavek a založte na něm testovací sadu.
+1. V [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] souboru vytvořte požadavek a založit na ní testovací sadu.
 
-    Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] . Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití, v závislosti na šabloně procesu, kterou projekt používá s Team Foundation. Další informace najdete v tématu [o agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true).
+    Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] . Může to být pracovní položka Uživatelský scénář, Požadavek nebo Případ použití v závislosti na šabloně procesu, kterou váš projekt používá s Team Foundation. Další informace najdete v tématu [Informace o agilní nástrojích a agilní řízení projektů.](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)
 
-2. Propojte pracovní položku požadavku s jedním nebo více prvky v modelu.
+2. Propoojte pracovní položku požadavku s jedním nebo více elementy v modelu.
 
-    V diagramu modelování klikněte pravým tlačítkem myši na prvek, komentář nebo vztah a pak klikněte na **odkaz na pracovní položku**.
+    V diagramu modelování klikněte pravým tlačítkem na prvek, komentář nebo relaci a potom klikněte na **Propojit s pracovní položkou.**
 
-3. Přidejte do testovací sady, testovací případy, které ověřují požadavek vyjádřený v prvku modelu.
+3. Přidejte do sady testů testovací případy, které ověřují požadavek vyjádřený v prvku modelu.
 
 ## <a name="see-also"></a>Viz také
 

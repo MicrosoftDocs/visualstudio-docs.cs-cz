@@ -4,17 +4,17 @@ description: Přečtěte si, jak můžete vytvořit jazyk specifický pro domén
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5142189e5502d1be29442359b8705abec2b8ca7a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 84831d747a1f3b55bb11eb637f2961706abaef9f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945341"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389524"
 ---
 # <a name="create-a-wpf-based-domain-specific-language"></a>Vytvoření jazyka specifického pro doménu založeného na WPF
 

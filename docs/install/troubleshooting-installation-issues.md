@@ -1,8 +1,8 @@
 ---
 title: Řešení potíží s instalací nebo upgradem
-description: Někdy se může něco pokazit. Pokud vaše Visual Studio instalace nebo upgrade selže, může vám tato stránka pomoct.
+description: V některých případech může docházet k chybám. Pokud se instalace nebo upgrade sady Visual Studio nepovede, může vám tato stránka popomáhat.
 ms.date: 06/24/2020
-ms.custom: acquisition
+ms.custom: vs-acquisition
 ms.topic: troubleshooting
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
@@ -15,142 +15,142 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: e0bc092663cc0e100598f991ae1b2a18a4b94501
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 802e4cfb78a9302bd24bca55cda1bf9eab79f9ef
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112306862"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387824"
 ---
-# <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Řešení Visual Studio s instalací a upgradem
+# <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Řešení potíží s instalací a upgradem sady Visual Studio
 
 > [!IMPORTANT]
-> Máte problém s instalací? Můžeme vám pomoct. Nabízíme možnost [**podpory instalačního chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině).
+> Máte problém s instalací? Můžeme vám pomůžeme. Nabízíme možnost podpory [**instalace**](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině).
 
-Tento průvodce odstraňováním potíží obsahuje podrobné pokyny, které by měly vyřešit většinu problémů s instalací.
+Tato příručka pro řešení potíží obsahuje podrobné pokyny, které by měly vyřešit většinu problémů s instalací.
 
-## <a name="online-installations"></a>Instalace online
+## <a name="online-installations"></a>Online instalace
 
-Následující kroky jsou optimalizované pro typickou online instalaci. Informace o problému, který ovlivňuje offline instalaci, najdete v tématu [Řešení potíží s offline instalací.](#offline-installations)
+Následující kroky jsou optimalizované pro typickou online instalaci. Problém, který má vliv na offline instalaci, najdete v tématu [jak řešit potíže s offline instalací](#offline-installations).
 
-### <a name="step-1---check-whether-this-problem-is-a-known-issue"></a>Krok 1 – Kontrola, jestli se jedná o známý problém
+### <a name="step-1---check-whether-this-problem-is-a-known-issue"></a>Krok 1 – ověření, zda se jedná o známý problém
 
 ::: moniker range="vs-2017"
 
-Existuje několik známých problémů s Instalační program pro Visual Studio, na které Microsoft pracuje na opravě. Pokud chcete zjistit, jestli existuje alternativní řešení vašeho problému, podívejte se do části [Známé problémy v poznámkách k verzi.](/visualstudio/releasenotes/vs2017-relnotes#-known-issues)
+U Instalační program pro Visual Studio, které Microsoft pracuje na řešení, dochází k některým známým problémům. Pokud chcete zjistit, jestli existuje alternativní řešení vašeho problému, podívejte se do [části známé problémy v našem poznámkách k verzi](/visualstudio/releasenotes/vs2017-relnotes#-known-issues).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Existuje několik známých problémů s Instalační program pro Visual Studio, na které Microsoft pracuje na opravě. Pokud chcete zjistit, jestli existuje alternativní řešení vašeho problému, podívejte se do části [Známé problémy v poznámkách k verzi.](/visualstudio/releases/2019/release-notes#-known-issues)
+U Instalační program pro Visual Studio, které Microsoft pracuje na řešení, dochází k některým známým problémům. Pokud chcete zjistit, jestli existuje alternativní řešení vašeho problému, podívejte se do [části známé problémy v našem poznámkách k verzi](/visualstudio/releases/2019/release-notes#-known-issues).
 
 ::: moniker-end
 
 ### <a name="step-2---try-repairing-visual-studio"></a>Krok 2 – Zkuste opravit Visual Studio
 
-Opravuje mnoho běžných problémů s aktualizacemi. Další informace o tom, kdy a jak používat funkci opravy v nástroji Visual Studio najdete v tématu [Oprava Visual Studio](repair-visual-studio.md).
+Oprava opravuje mnoho běžných problémů s aktualizací. Další informace o tom, kdy a jak používat funkce opravy v aplikaci Visual Studio, naleznete v tématu [Oprava sady Visual Studio](repair-visual-studio.md).
 
-### <a name="step-3---check-with-the-developer-community"></a>Krok 3 : Kontrola s komunitou vývojářů
+### <a name="step-3---check-with-the-developer-community"></a>Krok 3 – Projděte si komunitu vývojářů
 
-Vyhledejte chybovou zprávu pomocí [Visual Studio Developer Community](https://aka.ms/feedback/suggest?space=8). Ostatní členové komunity mohli zdokumentovat řešení vašeho problému.
+Vyhledejte svou chybovou zprávu pomocí [komunity vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8). Jiní členové komunity si mohli zdokumentovat řešení vašeho problému.
 
-### <a name="step-4---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems"></a>Krok 4 – odstranění adresáře Instalační program pro Visual Studio, který opraví problémy s upgradem
+### <a name="step-4---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems"></a>Krok 4 – odstranění adresáře Instalační program pro Visual Studio pro vyřešení problémů s upgradem
 
-Zaváděcí Instalační program pro Visual Studio je minimální odlehčený spustitelný soubor, který nainstaluje zbytek Instalační program pro Visual Studio. Odstranění Instalační program pro Visual Studio souborů a opětovné spuštění zaváděcího nástroje může vyřešit některá selhání aktualizací.
+Zaváděcí nástroj Instalační program pro Visual Studio je minimální spustitelný soubor, který nainstaluje zbytek Instalační program pro Visual Studio. Odstranění Instalační program pro Visual Studio souborů a následného spuštění zaváděcího nástroje může vyřešit některé chyby aktualizace.
 
 > [!NOTE]
-> Provedením následujících akcí se přeinstalují Instalační program pro Visual Studio soubory a resetují metadata instalace.
+> Při provádění následujících akcí se přeinstalují Instalační program pro Visual Studio soubory a obnoví se metadata instalace.
 
 ::: moniker range="vs-2017"
 
 1. Ukončete instalační program sady Visual Studio.
-2. Odstraňte Instalační program pro Visual Studio. Adresář je obvykle `C:\Program Files (x86)\Microsoft Visual Studio\Installer` .
-3. Spusťte Instalační program pro Visual Studio bootstrapper. Zaváděcí nástroj můžete najít ve složce Stažené soubory s názvem, který se řídí `vs_[Visual Studio edition]__*.exe` vzorem. Pokud tuto aplikaci nenajdete, můžete si stáhnout bootstrapper tak, že kliknete  na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a kliknete na Stáhnout pro vaši edici Visual Studio. Potom spuštěním spustitelného souboru resetujte metadata instalace.
-4. Zkuste aplikaci nainstalovat nebo Visual Studio znovu. Pokud se instalační program pořád nedaří, přejděte k dalšímu kroku.
+2. Odstraňte adresář Instalační program pro Visual Studio. Obvykle je adresář `C:\Program Files (x86)\Microsoft Visual Studio\Installer` .
+3. Spusťte zaváděcí nástroj Instalační program pro Visual Studio. Zaváděcí nástroj můžete najít ve složce stažené soubory s názvem souboru, který následuje `vs_[Visual Studio edition]__*.exe` vzor. Pokud tuto aplikaci nenajdete, můžete zaváděcí nástroj stáhnout tak, že přejdete na stránku [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a kliknete na **Stáhnout** pro vaši edici sady Visual Studio. Potom spusťte spustitelný soubor a obnovte metadata instalace.
+4. Zkuste znovu nainstalovat nebo aktualizovat Visual Studio. Pokud se instalační program stále nedaří, pokračujte na další krok.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
 1. Ukončete instalační program sady Visual Studio.
-2. Odstraňte Instalační program pro Visual Studio. Adresář je obvykle `C:\Program Files (x86)\Microsoft Visual Studio\Installer` .
-3. Spusťte Instalační program pro Visual Studio bootstrapper. Zaváděcí nástroj můžete najít ve složce Stažené soubory s názvem, který se řídí `vs_[Visual Studio edition]__*.exe` vzorem. Pokud tuto aplikaci nenajdete, můžete si stáhnout bootstrapper tak, že kliknete  na stránku [Visual Studio stahování](https://visualstudio.microsoft.com/downloads) a kliknete na Stáhnout pro vaši edici Visual Studio. Potom spuštěním spustitelného souboru resetujte metadata instalace.
-4. Zkuste aplikaci nainstalovat nebo Visual Studio znovu. Pokud se instalační program pořád nedaří, přejděte k dalšímu kroku.
+2. Odstraňte adresář Instalační program pro Visual Studio. Obvykle je adresář `C:\Program Files (x86)\Microsoft Visual Studio\Installer` .
+3. Spusťte zaváděcí nástroj Instalační program pro Visual Studio. Zaváděcí nástroj můžete najít ve složce stažené soubory s názvem souboru, který následuje `vs_[Visual Studio edition]__*.exe` vzor. Pokud tuto aplikaci nenajdete, můžete zaváděcí nástroj stáhnout tak, že přejdete na stránku [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a kliknete na **Stáhnout** pro vaši edici sady Visual Studio. Potom spusťte spustitelný soubor a obnovte metadata instalace.
+4. Zkuste znovu nainstalovat nebo aktualizovat Visual Studio. Pokud se instalační program stále nedaří, pokračujte na další krok.
 
 ::: moniker-end
 
 ### <a name="step-5---report-a-problem"></a>Krok 5 – nahlášení problému
 
-V některých situacích, například v situacích souvisejících s poškozenými soubory, může být třeba na problémy řešit případ od případu. Abychom vám pomohli, postupujte následovně:
+V některých situacích, jako jsou například ty, které souvisejí s poškozenými soubory, se může stát, že se tyto problémy budou považovat za případ od případu. Abychom vám pomohli, udělejte prosím toto:
 
 ::: moniker range="vs-2017"
 
-1. Shromáždíte instalační protokoly. Podrobnosti [najdete v tématu Jak Visual Studio protokolů instalace.](#installation-logs)
-2. Otevřete okno Instalační program pro Visual Studio a potom kliknutím na **Nahlásit problém** otevřete nástroj Visual Studio Feedback.
-![Kartu můžete použít k tlačítku Poskytnout zpětnou vazbu a otevřít nástroj pro zpětnou vazbu.](media/report-a-problem.png)
-3. Dejte svému problému název a uveďte relevantní podrobnosti. Kliknutím **na** Další přejděte do **části Přílohy** a připojte vygenerovaný soubor protokolu (obvykle je soubor v `%TEMP%\vslogs.zip` ).
-4. Kliknutím **na Další** zkontrolujte sestavu problému a pak klikněte na **Odeslat.**
+1. Shromáždí protokoly instalace. Podrobnosti najdete v tématu [Jak získat podrobnosti o instalačních protokolech sady Visual Studio](#installation-logs) .
+2. Otevřete Instalační program pro Visual Studio a potom kliknutím na **ohlásit problém** otevřete nástroj pro zpětnou vazbu sady Visual Studio.
+![Kartu můžete zobrazit tlačítkem zadat zpětnou vazbu a otevřít tak Nástroj pro zpětnou vazbu.](media/report-a-problem.png)
+3. Dejte vašemu problému zprávu s názvem a poskytněte příslušné podrobnosti. Kliknutím na **Další** přejděte do části **přílohy** a pak připojte vygenerovaný soubor protokolu (obvykle se jedná o soubor `%TEMP%\vslogs.zip` ).
+4. Kliknutím na **Další** Zkontrolujte zprávu o problému a pak klikněte na **Odeslat**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Shromáždíte instalační protokoly. Podrobnosti [najdete v tématu Jak Visual Studio protokolů instalace.](#installation-logs)
-2. Otevřete okno Instalační program pro Visual Studio a potom kliknutím na **Nahlásit problém** otevřete nástroj Visual Studio Feedback.
-![Kartu můžete použít k tlačítku Poskytnout zpětnou vazbu a otevřít nástroj pro zpětnou vazbu.](media/vs-2019/vs-installer-report-problem.png)
-3. Dejte svému problému název a uveďte relevantní podrobnosti. Kliknutím **na** Další přejděte do **části Přílohy** a připojte vygenerovaný soubor protokolu (obvykle je soubor v `%TEMP%\vslogs.zip` ).
-4. Kliknutím **na Další** zkontrolujte sestavu problému a pak klikněte na **Odeslat.**
+1. Shromáždí protokoly instalace. Podrobnosti najdete v tématu [Jak získat podrobnosti o instalačních protokolech sady Visual Studio](#installation-logs) .
+2. Otevřete Instalační program pro Visual Studio a potom kliknutím na **ohlásit problém** otevřete nástroj pro zpětnou vazbu sady Visual Studio.
+![Kartu můžete zobrazit tlačítkem zadat zpětnou vazbu a otevřít tak Nástroj pro zpětnou vazbu.](media/vs-2019/vs-installer-report-problem.png)
+3. Dejte vašemu problému zprávu s názvem a poskytněte příslušné podrobnosti. Kliknutím na **Další** přejděte do části **přílohy** a pak připojte vygenerovaný soubor protokolu (obvykle se jedná o soubor `%TEMP%\vslogs.zip` ).
+4. Kliknutím na **Další** Zkontrolujte zprávu o problému a pak klikněte na **Odeslat**.
 
 ::: moniker-end
 
-### <a name="step-6---run-installcleanupexe-to-remove-installation-files"></a>Krok 6 – InstallCleanup.exe odebrání instalačních souborů
+### <a name="step-6---run-installcleanupexe-to-remove-installation-files"></a>Krok 6 – spuštění InstallCleanup.exe pro odebrání instalačních souborů
 
-Nakonec můžete odebrat všechny instalační [soubory Visual Studio](remove-visual-studio.md) informace o produktech.
+Jako poslední možnost můžete [odebrat aplikaci Visual Studio](remove-visual-studio.md) a odebrat všechny instalační soubory a informace o produktu.
 
-1. Postupujte podle pokynů v tématu [Odebrání Visual Studio](remove-visual-studio.md).
-2. Znovu spusťte zaváděcí nástroj popsaný v kroku 4 – odstranění adresáře [Instalační program pro Visual Studio a opravte problémy s upgradem.](#step-4---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems)
-3. Zkuste aplikaci nainstalovat nebo Visual Studio znovu.
+1. Postupujte podle pokynů v tématu [odebrání sady Visual Studio](remove-visual-studio.md).
+2. Spusťte znovu zaváděcí nástroj, který je popsaný v [kroku 4 – odstraněním instalační program pro Visual Studio adresáře opravíte problémy s upgradem](#step-4---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems).
+3. Zkuste znovu nainstalovat nebo aktualizovat Visual Studio.
 
-### <a name="step-7---contact-us-optional"></a>Krok 7 – kontaktujte nás (volitelné)
+### <a name="step-7---contact-us-optional"></a>Krok 7 – kontaktujte nás (nepovinné)
 
-Pokud vám žádný z předchozích kroků nepomáhou úspěšně nainstalovat [](https://visualstudio.microsoft.com/vs/support/#talktous) nebo upgradovat Visual Studio, kontaktujte nás s další pomocí možnosti podpory živého chatu (jenom v angličtině).
+Pokud žádný z předchozích kroků nepomohly úspěšně nainstalovat nebo upgradovat sadu Visual Studio, kontaktujte nás pomocí možnosti podpory [**živého chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině), kde najdete další pomoc.
 
 ## <a name="offline-installations"></a>Offline instalace
 
-Tady je tabulka známých problémů a některá alternativní řešení, která vám můžou pomoct při vytváření [offline](create-an-offline-installation-of-visual-studio.md) instalace a instalaci z místního rozložení.
+Tady je tabulka známých problémů a některá alternativní řešení, která vám můžou při vytváření [offline instalace](create-an-offline-installation-of-visual-studio.md) a následné instalaci z místního rozložení pomáhat.
 
 | Problém       | Položka                   | Řešení |
 | ----------- | ---------------------- | -------- |
-| Uživatelé nemají přístup k souborům. | oprávnění (seznamy ACL) | Před sdílením offline instalace nezapomeňte oprávnění (seznamy ACL)  upravit tak, aby ostatním uživatelům udělili oprávnění ke čtení. |
-| Nové úlohy, komponenty nebo jazyky se nedaří nainstalovat.  | `--layout`  | Ujistěte se, že máte přístup k internetu, pokud instalujete z částečného rozložení a vybíráte úlohy, komponenty nebo jazyky, které nebyly staženy dříve v tomto částečném rozložení. |
+| Uživatelé nemají přístup k souborům. | oprávnění (seznamy ACL) | Ujistěte se, že jste upravili oprávnění (ACL), aby mohli jiní uživatelé udělit přístup pro čtení  *před* sdílením offline instalace. |
+| Nedaří se nainstalovat nové úlohy, součásti nebo jazyky.  | `--layout`  | Ujistěte se, že máte přístup k Internetu, pokud instalujete z částečného rozložení a vyberete úlohy, komponenty nebo jazyky, které nebyly dříve staženy v tomto částečném rozložení. |
 
-Další informace o řešení problémů s instalací sítě [najdete](create-a-network-installation-of-visual-studio.md)v tématu Řešení chyb souvisejících se sítí při instalaci nebo používání [nástroje Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md).
+Další informace o řešení potíží s [instalací sítě](create-a-network-installation-of-visual-studio.md)najdete v tématu [řešení potíží souvisejících se sítí při instalaci nebo používání sady Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md).
 
 ## <a name="installation-logs"></a>Protokoly instalace
 
-K řešení většiny problémů s instalací jsou potřeba instalační protokoly. Když odešlete problém pomocí funkce [Nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) v Instalační program pro Visual Studio, tyto protokoly se automaticky zahrnou do vaší sestavy.
+Pro řešení většiny problémů s instalací je potřeba nainstalovat protokoly. Při odeslání problému pomocí [nahlášení problému](../ide/how-to-report-a-problem-with-visual-studio.md) v instalační program pro Visual Studio jsou tyto protokoly automaticky zahrnuty do sestavy.
 
-Pokud se Podpora Microsoftu, budete možná muset zadat tyto instalační protokoly pomocí nástroje pro shromažďování protokolů Microsoft Visual Studio a [.NET Framework protokolů.](https://www.microsoft.com/download/details.aspx?id=12493) Nástroj pro shromažďování protokolů shromažďuje instalační protokoly ze všech komponent nainstalovaných Visual Studio, včetně .NET Framework, Windows SDK a SQL Server. Shromažďuje také informace o počítači, inventář Instalační služba systému Windows a informace protokolu událostí systému Windows pro Instalační program pro Visual Studio, Instalační služba systému Windows a obnovení systému.
+Pokud se obrátíte na podpora Microsoftu, možná budete muset zadat tyto protokoly instalace pomocí [Nástroje pro Microsoft Visual Studio a .NET Framework pro shromažďování protokolů](https://www.microsoft.com/download/details.aspx?id=12493). Nástroj shromažďování protokolů shromažďuje protokoly instalace ze všech komponent nainstalovaných aplikací Visual Studio, včetně .NET Framework, Windows SDK a SQL Server. Shromažďuje také informace o počítači, Instalační služba systému Windows inventáře a informace protokolu událostí systému Windows pro Instalační program pro Visual Studio, Instalační služba systému Windows a obnovení systému.
 
-Shromažďování protokolů:
+Postup shromáždění protokolů:
 
 1. [Stáhněte si nástroj](https://www.microsoft.com/download/details.aspx?id=12493).
 2. Otevřete příkazový řádek pro správu.
 3. Spusťte `Collect.exe` z adresáře, kam jste nástroj uložili.
-4. Výsledný soubor `vslogs.zip` vyhledejte ve svém `%TEMP%` adresáři, například `C:\Users\YourName\AppData\Local\Temp\vslogs.zip` .
+4. Vyhledá výsledný `vslogs.zip` soubor v `%TEMP%` adresáři, například `C:\Users\YourName\AppData\Local\Temp\vslogs.zip` .
 
 > [!NOTE]
-> Nástroj musí být spuštěný pod stejným uživatelským účtem, pod který byla neúspěšná instalace spuštěna. Pokud nástroj používáte z jiného uživatelského účtu, nastavte možnost pro zadání uživatelského účtu, pod kterým byla `–user:<name>` neúspěšná instalace spuštěna. Další možnosti a informace o použití zobrazíte spuštěním příkazu z příkazového řádku `Collect.exe -?` správce.
+> Nástroj musí být spuštěn pod stejným uživatelským účtem, pod kterým byla neúspěšná instalace spuštěna. Pokud nástroj spouštíte z jiného uživatelského účtu, nastavte `–user:<name>` možnost zadat uživatelský účet, pod kterým byla spuštěna instalace, která selhala. `Collect.exe -?`Další možnosti a informace o využití získáte spuštěním z příkazového řádku správce.
 
-## <a name="live-help"></a>Živá nápověda
+## <a name="live-help"></a>Živá pomáhat
 
-Pokud vám řešení uvedená v tomto průvodci odstraňováním potíží nepomáhou s úspěšnou instalací nebo upgradem Visual Studio, pro další pomoc použijte naši možnost podpory [**živého**](https://visualstudio.microsoft.com/vs/support/#talktous) chatu (jenom v angličtině).
+Pokud řešení uvedená v této příručce pro odstraňování potíží nepomáhají úspěšně nainstalovat nebo upgradovat Visual Studio, použijte možnost podpory [**živého chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině), kde najdete další pomoc.
 
 ## <a name="see-also"></a>Viz také
 
 * [Oprava sady Visual Studio](repair-visual-studio.md)
-* [Odebrání Visual Studio](remove-visual-studio.md)
-* [Instalace a používání Visual Studio a služeb Azure za bránou firewall nebo proxy server](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
+* [Odebrat Visual Studio](remove-visual-studio.md)
+* [Nainstalujte a použijte Visual Studio a služby Azure za bránou firewall nebo proxy server](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
 * [Nástroje pro zjišťování a správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)
 * [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)

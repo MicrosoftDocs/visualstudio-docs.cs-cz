@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords:
 - Domain-Specific Language, serialization
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 019f77320e9118d5f3d31e647a59c71bb474d204
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be19b3026010e37108ca1b19096d48a3c8d88ab6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935531"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389368"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Přizpůsobení úložiště souborů a serializace XML
 
@@ -172,28 +172,28 @@ Existuje několik metod, které se mohou vyhnout této situaci:
 
 ### <a name="moniker-paths-and-qualifiers"></a>Cesty monikerů a kvalifikátory
 
-Úplný moniker klíče končí klíčem monikeru a je předponou jeho nadřazeného prvku ve stromu vkládání. Pokud je například moniker alba:
+Kvalifikovaný moniker klíče končí klíčem monikeru a má ve stromu vkládání předponu monikeru jeho nadřazeného parametru. Pokud je například monikerem monikeru Funkce:
 
 ```xml
 <albumMoniker title="/My Favorites/Jazz after Teatime" />
 ```
 
-Pak může být jedna z písní v tomto albu:
+Jedním z skladb v této oblasti by pak mohl být:
 
 ```xml
 <songMoniker title="/My Favorites/Jazz after Teatime/Hot tea" />
 ```
 
-Pokud je však místo toho odkazováno na alba pomocí ID, pak budou monikery následující:
+Pokud se ale místo toho odkazuje na monikery podle ID, budou monikery následující:
 
 ```xml
 <albumMoniker Id="77472c3a-9bf9-4085-976a-d97a4745237c" />
 <songMoniker title="/77472c3a-9bf9-4085-976a-d97a4745237c/Hot tea" />
 ```
 
-Všimněte si, že protože identifikátor GUID je jedinečný, není nikdy nahrazen monikerem jeho nadřazeného objektu.
+Všimněte si, že vzhledem k tomu, že identifikátor GUID je jedinečný, nikdy před něj není předpona monikeru jeho nadřazeného objektu.
 
-Pokud víte, že určitá doménová vlastnost bude mít vždycky jedinečnou hodnotu v rámci modelu, můžete pro tuto vlastnost nastavit **kvalifikátor monikeru** `true` . To způsobí, že se použije jako kvalifikátor bez použití monikeru nadřazeného objektu. Pokud například nakonfigurujete **kvalifikátor monikeru** a **je klíč monikeru** pro vlastnost název domény třídy alba, název modelu nebo identifikátor se nepoužívá v monikerech pro album a jeho vložené podřízené položky:
+Pokud víte, že konkrétní vlastnost domény bude mít vždy jedinečnou hodnotu v rámci modelu, můžete nastavit kvalifikátor is **moniker** na `true` pro vlastnost. To způsobí, že se použije jako kvalifikátor, bez použití monikeru nadřazeného objektu. Pokud například nastavíte vlastnosti **Is Moniker Qualifier** a **Is Moniker Key** pro vlastnost Domény nadpisu třídy Na, název nebo identifikátor modelu se v monikerech Pro a jeho vložené děti nepoužívali:
 
 ```xml
 <albumMoniker name="Jazz after Teatime" />
@@ -202,9 +202,9 @@ Pokud víte, že určitá doménová vlastnost bude mít vždycky jedinečnou ho
 
 ## <a name="customize-the-structure-of-the-xml"></a>Přizpůsobení struktury XML
 
-Chcete-li provést následující přizpůsobení, rozbalte uzel **chování serializace XML** v Průzkumníku DSL. V rámci doménové třídy rozbalte uzel data elementu, abyste viděli seznam vlastností a relací, které jsou v této třídě napsány jako zdroje. Vyberte relaci a upravte její možnosti v okno Vlastnosti.
+Chcete-li provést následující přizpůsobení, rozbalte uzel Chování **serializace XML** v průzkumníku DSL. Pod doménovou třídou rozbalte uzel Data elementu a zobrazte seznam vlastností a relací, které jsou zdrojem v této třídě. Vyberte relaci a upravte její možnosti v okno Vlastnosti.
 
-- Nastavte **vynechání elementu** na hodnotu true, chcete-li vynechat uzel zdrojové role a opustit pouze seznam cílových elementů. Tuto možnost byste neměli nastavit, pokud existuje více než jedna relace mezi zdrojovou a cílovou třídou.
+- Pokud **chcete vynechat zdrojový uzel** role a nechat jen seznam cílových elementů, nastavte vynechat element na true. Tuto možnost byste neměli nastavovat, pokud existuje více než jedna relace mezi zdrojovou a cílovou třídou.
 
     ```xml
     <familyTreeModel ...>
@@ -216,7 +216,7 @@ Chcete-li provést následující přizpůsobení, rozbalte uzel **chování ser
     </familyTreeModel>
     ```
 
-- Nastavte **použít úplný formulář** pro vložení cílových uzlů do uzlů, které představují instance vztahů. Tato možnost se nastaví automaticky při přidání vlastností domény do doménového vztahu.
+- Pokud **chcete vložit cílové** uzly do uzlů představujících instance relace, nastavte možnost Použít celý formulář. Tato možnost se nastaví automaticky při přidání vlastností domény do vztahu domény.
 
     ```xml
     <familyTreeModel ...>
@@ -232,7 +232,7 @@ Chcete-li provést následující přizpůsobení, rozbalte uzel **chování ser
     </familyTreeModel>
     ```
 
-- Nastavte **element reprezentaci**  =   tak, aby měl doménovou vlastnost uloženou jako prvek namísto hodnoty atributu.
+- Nastavte **Representation** Element tak, aby se vlastnost domény uložila  =   jako prvek místo jako hodnota atributu.
 
     ```xml
     <person name="Elizabeth I" birthYear="1533">
@@ -240,71 +240,71 @@ Chcete-li provést následující přizpůsobení, rozbalte uzel **chování ser
     </person>
     ```
 
-- Chcete-li změnit pořadí, ve kterém jsou atributy a vztahy serializovány, klikněte pravým tlačítkem myši na položku v části data prvku a použijte příkazy nabídky **Přesunout nahoru** nebo **Přesunout dolů** .
+- Pokud chcete změnit pořadí, ve kterém jsou atributy a relace serializovány, klikněte pravým tlačítkem na položku v části Data elementu a použijte příkazy nabídky Přesunout nahoru **nebo** Přesunout dolů. 
 
 ## <a name="major-customization-using-program-code"></a>Hlavní přizpůsobení pomocí kódu programu
 
 Můžete nahradit části nebo všechny algoritmy serializace.
 
-Doporučujeme, abyste si prostudovali kód v **Dsl\Generated Code\Serializer.cs** a **SerializationHelper.cs**.
+Doporučujeme prostudovat si kód **v dsl\Generated Code\Serializer.cs** a **SerializationHelper.cs**.
 
 ### <a name="to-customize-the-serialization-of-a-particular-class"></a>Přizpůsobení serializace konkrétní třídy
 
-1. Sada **je vlastní** v uzlu pro danou třídu v **chování serializace XML**.
+1. Nastavení **je vlastní** v uzlu pro třídu v rámci chování **serializace XML**.
 
-2. Transformujte všechny šablony, sestavte řešení a prozkoumejte výsledné chyby při kompilaci. Komentáře poblíž každé chyby vysvětlují, jaký kód je třeba zadat.
+2. Transformujte všechny šablony, sestavte řešení a prozkoumejte výsledné chyby kompilace. Komentáře u každé chyby vysvětlují, jaký kód musíte zadat.
 
-### <a name="to-provide-your-own-serialization-for-the-whole-model"></a>Poskytnutí vlastního serializace pro celý model
+### <a name="to-provide-your-own-serialization-for-the-whole-model"></a>Chcete-li poskytnout vlastní serializace pro celý model
 
-1. Metody přepisu v Dsl\GeneratedCode\SerializationHelper.cs
+1. Přepsání metod v Dsl\GeneratedCode\SerializationHelper.cs
 
 ## <a name="options-in-xml-serialization-behavior"></a>Možnosti v chování serializace XML
 
-V Průzkumníku DSL obsahuje uzel chování serializace XML podřízený uzel pro každou třídu domény, vztah, tvar, spojnici a diagram třídy. Pod každým z těchto uzlů je seznam vlastností a vztahů, které jsou v daném elementu napsány. Vztahy jsou reprezentovány v jejich vlastním právu a v rámci jejich zdrojových tříd.
+V Průzkumníku DSL uzel Chování serializace XML obsahuje podřízený uzel pro každou třídu domény, vztah, tvar, konektor a třídu diagramu. Pod každým z těchto uzlů je seznam vlastností a relací, které jsou zdrojem tohoto prvku. Relace jsou reprezentovány jak vlastními, tak ve zdrojových třídách.
 
 Následující tabulka shrnuje možnosti, které můžete nastavit v této části definice DSL. V každém případě vyberte prvek v Průzkumníku DSL a nastavte možnosti v okno Vlastnosti.
 
 ### <a name="xml-class-data"></a>Data třídy XML
 
-Tyto prvky se nacházejí v Průzkumníkovi DSL pod **daty serializace XML Behavior\Class**.
+Tyto prvky se nacházejí v průzkumníku DSL v **části Chování serializace XML\Data třídy**.
 
 |Vlastnost|Popis|
 |-|-|
-|Má vlastní schéma elementů|Pokud má hodnotu true, znamená to, že doménová třída má schéma vlastního elementu.|
-|Je vlastní|Nastavte na **hodnotu true** , pokud chcete zapsat vlastní serializaci a kód deserializace pro tuto doménovou třídu.<br /><br /> Sestavte řešení a prozkoumejte chyby a zjistěte podrobné pokyny.|
-|Domain – třída|Doménová třída, na kterou se vztahuje tento uzel dat třídy Jen pro čtení.|
-|Název prvku|Název uzlu XML pro prvky této třídy. Výchozí hodnota je nižší verze názvu doménové třídy.|
-|Název atributu monikeru|Název atributu použitého v elementech monikeru, který má obsahovat odkaz. Pokud je pole prázdné, použije se název vlastnosti klíče nebo ID.<br /><br /> V tomto příkladu je to "Name":  `<personMoniker name="/Mike Nash"/>`|
-|Název elementu monikeru|Název XML elementu, který se používá pro monikery, které odkazují na prvky této třídy.<br /><br /> Výchozí hodnota je malá verze názvu třídy s příponou "moniker". Například, `personMoniker`.|
-|Název typu monikeru|Název typu XSD vygenerovaného pro monikery v elementech této třídy XSD je ve **schématu Dsl\Generated Code \\ \* Schema. xsd.**|
-|ID serializace|Je-li nastavena hodnota true, je identifikátor GUID elementu obsažen v souboru. Tato hodnota musí být true, pokud neexistuje žádná vlastnost, která je označena **klíčovým** slovem MONIKER a DSL definuje referenční vztahy k této třídě.|
-|Název typu|Název typu XML vygenerovaného v XSD z určené doménové třídy|
-|Poznámky|Neformální poznámky přidružené k tomuto elementu|
+|Má vlastní schéma elementu|Pokud je true, znamená to, že třída domény má vlastní schéma elementu.|
+|Je vlastní|Nastavte na **hodnotu True,** pokud chcete napsat vlastní serializace a deserializace kódu pro tuto třídu domény.<br /><br /> Sestavte řešení a prozkoumejte chyby, abyste zjistili podrobné pokyny.|
+|Domain – třída|Doménová třída, na kterou se vztahuje tento uzel dat třídy. Jen pro čtení.|
+|Název prvku|Název uzlu XML pro prvky této třídy. Výchozí hodnota je malá verze názvu třídy domény.|
+|Název atributu monikeru|Název atributu použitého v elementech monikeru, který obsahuje odkaz. Pokud je tato možnost prázdná, použije se název vlastnosti nebo ID klíče.<br /><br /> V tomto příkladu je to "name":  `<personMoniker name="/Mike Nash"/>`|
+|Název elementu monikeru|Název elementu xml používaného pro monikery, které odkazují na prvky této třídy.<br /><br /> Výchozí hodnota je malá verze názvu třídy s příponou "Moniker". Například, `personMoniker`.|
+|Název typu monikeru|Název typu xsd vygenerovaného pro monikery prvků této třídy. XSD je v **souboru Dsl\Generated Code \\ \* Schema.xsd.**|
+|Serializovat ID|Pokud je true, identifikátor GUID elementu je zahrnutý v souboru . To musí být true, pokud není žádná vlastnost označená jako Is **Moniker Key** a DSL definuje referenční relace k této třídě.|
+|Název typu|Název typu XML vygenerovaný v souboru xsd z určené třídy domény.|
+|Poznámky|Neformální poznámky přidružené k tomuto prvku|
 
-### <a name="xml-property-data"></a>Data vlastnosti XML
+### <a name="xml-property-data"></a>Data vlastností XML
 
-Uzly vlastností XML jsou nalezeny v uzlech třídy.
+Uzly vlastností XML se nacházejí v uzlech třídy.
 
 |Vlastnost|Popis|
 |-|-|
-|Doménová vlastnost|Vlastnost, na kterou se vztahují data konfigurace serializace XML Jen pro čtení.|
-|Je klíč monikeru|Při hodnotě true se vlastnost používá jako klíč pro vytváření monikerů, které odkazují na instance této doménové třídy.|
-|Je kvalifikátor monikeru|Při hodnotě true se vlastnost používá k vytvoření kvalifikátoru v monikerech. Pokud je hodnota false a pokud SerializeId není pro tuto doménovou třídu true, monikery jsou kvalifikovány monikerem nadřazeného elementu ve stromu vkládání.|
-|Obrázek|Pokud je atribut, vlastnost serializována jako atribut XML; je-li element, je serializován jako element; Pokud je ignorováno, není serializováno.|
-|Název XML|Název, který se používá pro atribut nebo element XML představující vlastnost Ve výchozím nastavení je to malá verze názvu doménové vlastnosti.|
-|Poznámky|Neformální poznámky přidružené k tomuto elementu|
+|Vlastnost domény|Vlastnost, na kterou platí konfigurační data serializace XML. Jen pro čtení.|
+|Je klíč monikeru|Pokud je true, vlastnost se používá jako klíč pro vytváření monikerů, které odkazují na instance této třídy domény.|
+|Je kvalifikátor monikeru|Pokud je true, vlastnost se použije k vytvoření kvalifikátoru v monikerech. Pokud je false a SerializeId není true pro tuto třídu domény, jsou monikery kvalifikovány monikerem nadřazeného prvku ve stromu vkládání.|
+|Reprezentace|Pokud Attribute, vlastnost je serializován jako atribut XML; Pokud element, je serializován jako element; Pokud Ignore, není serializován.|
+|Název XML|Název použitý pro atribut xml nebo element představující vlastnost . Ve výchozím nastavení je to malá verze názvu vlastnosti domény.|
+|Poznámky|Neformální poznámky přidružené k tomuto prvku|
 
 ### <a name="xml-role-data"></a>Data role XML
 
-Uzly dat role se nacházejí v uzlech zdrojové třídy.
+Uzly dat rolí se nacházejí v uzlech zdrojové třídy.
 
 |Vlastnost|Popis|
 |-|-|
-|Má vlastní moniker|Nastavte na hodnotu true, pokud chcete zadat vlastní kód pro generování a překlad monikerů, které procházejí touto relací.<br /><br /> Pro podrobné pokyny Sestavte řešení a dvakrát klikněte na chybové zprávy.|
-|Doménový vztah|Určuje vztah, pro který tyto možnosti platí. Jen pro čtení.|
-|Vynechat element|Pokud je nastaveno na true, uzel XML, který odpovídá zdrojové roli, se ve schématu vynechá.<br /><br /> Pokud existuje více než jedna relace mezi zdrojovou a cílovou třídou, tento uzel role rozlišuje mezi odkazy, které patří do obou vztahů. Proto doporučujeme, abyste v tomto případě tuto možnost nestavili.|
-|Název elementu role|Určuje název elementu XML, který je odvozen ze zdrojové role. Výchozí hodnota je název vlastnosti role.|
-|Použít úplný formulář|Je-li nastavena hodnota true, je každý cílový element nebo moniker uzavřen v uzlu XML představujícím relaci. Tato hodnota by měla být nastavena na hodnotu true, pokud má vztah své vlastní doménové vlastnosti.|
+|Má vlastní moniker|Nastavte tuto hodnotu na true, pokud chcete zadat vlastní kód pro generování a řešení monikerů, které procházují tento vztah.<br /><br /> Podrobné pokyny zobrazíte tak, že sestavíte řešení a poklikáte na chybové zprávy.|
+|Vztah domény|Určuje relaci, na kterou se tyto možnosti vztahují. Jen pro čtení.|
+|Vynechat element|Pokud je true, uzel XML, který odpovídá zdrojové roli, je ze schématu vynechán.<br /><br /> Pokud existuje více než jedna relace mezi zdrojovou a cílovou třídou, tento uzel role rozlišuje mezi propojeními, která patří do těchto dvou relací. Proto doporučujeme tuto možnost nenastavovat.|
+|Název elementu role|Určuje název elementu XML, který je odvozen od zdrojové role. Výchozí hodnota je název vlastnosti role.|
+|Použití úplného formuláře|Pokud je true, každý cílový prvek nebo moniker je uzavřen v uzlu XML představující vztah. Pokud má relace vlastní vlastnosti domény, měla by být nastavená na hodnotu true.|
 
 ## <a name="see-also"></a>Viz také
 

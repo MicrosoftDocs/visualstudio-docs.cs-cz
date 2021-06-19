@@ -1,7 +1,7 @@
 ---
 title: Použití souborů výpisu paměti v ladicím programu | Microsoft Docs
 description: Soubor výpisu paměti je snímek spuštěné aplikace a načtené moduly. Zvažte vytvoření souboru s výpisem paměti pro situace, kdy nemáte přístup k ladění aplikace.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/05/2018
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f3b72db232e5e83a0d83fbab1d1223da507054d9
-ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
+ms.openlocfilehash: 1496c50d6a4022083a5cd093a0682ef36c70bbaa
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107941120"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389225"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Soubory s výpisem paměti v ladicím programu sady Visual Studio
 
@@ -95,20 +95,20 @@ Když je povoleno [ladění za běhu](../debugger/just-in-time-debugging-in-visu
    - Chcete-li nastavit umístění pro načítání symbolů, vyberte možnost **nastavit cesty k symbolům**.
    - Chcete-li spustit ladění, vyberte možnost **ladit pouze se spravovanými**, **ladit pouze s nativním**, **laděním se smíšeným** nebo **laděním pomocí spravované paměti**.
 
-## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> Najít. exe,. pdb a zdrojové soubory
+## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> Najít .exe, pdb a zdrojové soubory
 
 Pro použití úplných funkcí ladění pro soubor s výpisem paměti vyžaduje aplikace Visual Studio:
 
-- Soubor *. exe* , pro který byl vytvořen výpis paměti, a další binární soubory (knihovny DLL atd.), které použil proces výpisu paměti.
-- Soubory symbolů (*PDB*) pro soubor *. exe* a další binární soubory.
-- Soubory *. exe* a *. pdb* , které přesně odpovídají verzi a sestavení souborů při vytváření výpisu.
+- *.exe* soubor, pro který byl vytvořen výpis paměti, a další binární soubory (knihovny DLL atd.), které použil proces výpisu paměti.
+- Soubory symbolů (*PDB*) pro *.exe* a další binární soubory.
+- Soubory *.exe* a *PDB* , které přesně odpovídají verzi a sestavení souborů při vytváření výpisu.
 - Zdrojové soubory pro příslušné moduly. Pokud nemůžete najít zdrojové soubory, můžete použít zpětný překlad modulů.
 
 Pokud má výpis dat haldy, sada Visual Studio se může vypořádat s chybějícími binárními soubory pro některé moduly, ale musí mít binární soubory pro dostatek modulů, aby mohla vygenerovat platné zásobníky volání.
 
-### <a name="search-paths-for-exe-files"></a>Cesty hledání pro soubory. exe
+### <a name="search-paths-for-exe-files"></a>Cesty hledání pro soubory .exe
 
-Visual Studio automaticky vyhledá tato umístění pro soubory *. exe* , které nejsou zahrnuté v souboru s výpisem paměti:
+Visual Studio automaticky hledá v těchto umístěních soubory *.exe* , které nejsou zahrnuté v souboru s výpisem paměti:
 
 1. Složka, která obsahuje soubor s výpisem paměti.
 2. Cesta k modulu, který obsahuje soubor s výpisem paměti, což je cesta modulu v počítači, kde je výpis paměti shromážděn.

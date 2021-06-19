@@ -8,17 +8,17 @@ helpviewer_keywords:
 - code, understanding
 - code, visualizing
 - code, exploring
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a261589af027c76708a70631426d8033eb2ada63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90c180bf9d910227013c2e089001ce5332cd1bd3
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924227"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388344"
 ---
 # <a name="visualize-code"></a>Vizualizace kódu
 
@@ -32,7 +32,7 @@ Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můž
 
 Tyto nástroje také usnadňují komunikaci s lidmi, které se podílejí na vašem projektu.
 
-Pokud chcete zjistit, které edice sady Visual Studio podporují jednotlivé funkce, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport) .
+Pokud chcete zjistit, které edice sady Visual Studio podporují jednotlivé funkce, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/analyze-and-model-your-architecture.md#VersionSupport) .
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
@@ -44,6 +44,7 @@ Pokud chcete zjistit, které edice sady Visual Studio podporují jednotlivé fun
 
 ## <a name="see-also"></a>Viz také
 
+- [Nainstalovat nástroje kódu architektury](install-architecture-tools.md)
 - [Scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)
 - [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md)
 - [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)

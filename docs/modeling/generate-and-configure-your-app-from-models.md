@@ -1,76 +1,76 @@
 ---
 title: Generování a konfigurace aplikace z modelů
-description: Zjistěte, co model představuje a jak můžete vygenerovat nebo nakonfigurovat části aplikace z modelu.
+description: Zjistěte, co model představuje a jak můžete generovat nebo konfigurovat části aplikace z modelu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9299880c2d06cf323351a234239bed71597072a4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 68339159ed9926490f22a82cd30ce69f45ab6a30
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902706"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388864"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>Generování a konfigurace aplikace z modelů
-Můžete vygenerovat nebo nakonfigurovat části aplikace z modelu.
+Části aplikace můžete vygenerovat nebo nakonfigurovat z modelu.
 
- Model představuje více požadavků přímo než kód. Odvozením chování aplikace přímo z modelu můžete reagovat na změněné požadavky mnohem rychleji a spolehlivější než prostřednictvím aktualizace kódu. I když je k nastavení odvození potřeba některá počáteční práce, tato investice se vrátí, pokud očekáváte změny v požadavcích, nebo pokud máte v plánu provést několik variant produktu.
+ Model představuje požadavky přímo než kód. Odvozením chování aplikace přímo z modelu můžete reagovat na změněné požadavky mnohem rychleji a spolehlivěji než aktualizací kódu. I když je k nastavení odvozování nutné provést určité počáteční práce, tato investice se vrátí, pokud očekáváte změny v požadavcích nebo pokud plánujete vytvořit několik variant produktu.
 
-## <a name="generating-the-code-of-your-application-from-a-model"></a>Generování kódu vaší aplikace z modelu
- Nejjednodušší způsob, jak vygenerovat kód, je použití textových šablon. Kód můžete vygenerovat ve stejném řešení sady Visual Studio, ve kterém model udržujete. Další informace naleznete v tématu:
+## <a name="generating-the-code-of-your-application-from-a-model"></a>Generování kódu aplikace z modelu
+ Nejjednodušší způsob, jak vygenerovat kód, je pomocí textových šablon. Kód můžete vygenerovat ve stejném Visual Studio, ve kterém model uchováte. Další informace naleznete v tématu:
 
 - [Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
 - [Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)
 
-  Tato metoda se dá snadno použít přírůstkově. Začněte s aplikací, která funguje jenom pro konkrétní případ, a vyberte několik částí, které se mají od modelu lišit. Přejmenujte zdrojové soubory těchto částí tak, aby se staly soubory textových šablon (. TT). V tomto okamžiku budou zdrojové soubory. cs automaticky vygenerovány ze souborů šablony, takže aplikace bude fungovat stejně jako dříve.
+  Tato metoda se snadno používá přírůstkově. Začněte s aplikací, která funguje jenom pro konkrétní případ, a zvolte několik částí, které chcete od modelu lišit. Přejmenujte zdrojové soubory těchto částí tak, aby se z nich staly textové soubory šablony (.tt). V tomto okamžiku se ze souborů šablony automaticky vygenerují zdrojové soubory .cs, takže aplikace bude fungovat stejně jako předtím.
 
-  Potom můžete provést jednu část kódu a nahradit ji výrazem textové šablony, který čte model a generuje tuto část zdrojového souboru. Nejméně jedna hodnota modelu by měla vygenerovat původní zdroj, takže znovu můžete spustit aplikaci a bude fungovat stejně jako dříve. Po otestování různých hodnot modelu můžete přejít na a vložit výrazy šablony do jiné části kódu.
+  Pak můžete vzít jednu část kódu a nahradit ji výrazem textové šablony, který přečte model a vygeneruje ji ve zdrojovém souboru. Alespoň jedna hodnota modelu by měla vygenerovat původní zdroj, abyste aplikaci mohli znovu spustit a fungovala stejně jako předtím. Po otestování různých hodnot modelu můžete přejít k vložení výrazů šablony do jiné části kódu.
 
-  Tato přírůstková metoda znamená, že generování kódu je obvykle přístup s nízkou rizikovostí. Výsledné aplikace obvykle vyplývají z toho skoro i ručně psaná verze.
+  Tato přírůstková metoda znamená, že generování kódu je obvykle přístup s nízkým rizikem. Výsledné aplikace obvykle provádějí téměř stejně jako ručně psané verze.
 
-  Pokud však začnete s existující aplikací, může dojít k tomu, že k oddělení různých chování, které se řídí modelem, je nutné provést mnoho refaktoringu, aby bylo možné je nezávisle měnit. Doporučujeme, abyste vyhodnotili tento aspekt aplikace při odhadování nákladů na projekt.
+  Pokud ale začnete s existující aplikací, můžete zjistit, že k oddělení různých chování, která se řídí modelem, je potřeba hodně refaktoringu, aby bylo možné je nezávisle měnit. Doporučujeme posoudit tento aspekt aplikace při odhadu nákladů na projekt.
 
 ## <a name="configuring-your-application-from-a-model"></a>Konfigurace aplikace z modelu
- Chcete-li změnit chování aplikace za běhu, nemůžete použít generování kódu, který generuje zdrojový kód před zkompilováním aplikace. Místo toho můžete navrhnout aplikaci pro čtení modelu a odpovídajícím způsobem měnit jeho chování. Další informace naleznete v tématu:
+ Pokud chcete měnit chování aplikace za běhu, nemůžete použít generování kódu, které generuje zdrojový kód před kompilaci aplikace. Místo toho můžete aplikaci navrhnout tak, aby četla model, a odpovídajícím způsobem odlišit její chování. Další informace naleznete v tématu:
 
 - [Postupy: Otevření modelu ze souboru v kódu programu](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 
-  Tato metoda se dá použít taky přírůstkově, ale na začátku je víc práce. Je nutné napsat kód, který načte model, a nastavit rozhraní, které umožní přístup k jeho hodnotám proměnným části. Vytváření obecných částí proměnných je dražší než generování kódu.
+  Tuto metodu lze také použít přírůstkově, ale na začátku je více práce. Musíte napsat kód, který bude číst model, a nastavit rozhraní, které umožní přístup k jeho hodnotám pro části proměnných. Obecné nastavení proměnných částí je dražší než generování kódu.
 
-  Obecná aplikace obvykle provádí méně, než je jejich konkrétní protějšky. Pokud je rozhodující výkon, váš plán projektu by měl zahrnovat posouzení tohoto rizika.
+  Obecná aplikace obvykle provádí méně dobře než její konkrétní protějšky. Pokud je výkon zásadní, měl by váš plán projektu zahrnovat posouzení tohoto rizika.
 
 ## <a name="developing-a-derived-application"></a>Vývoj odvozené aplikace
- Můžete najít následující obecné pokyny, které jsou užitečné.
+ Následující obecné pokyny můžou být užitečné.
 
-- **Spusťte konkrétní a pak generalizujte.** Nejdřív napište konkrétní verzi aplikace. Tato verze by měla fungovat v jedné sadě podmínek. Pokud jste přesvědčeni, že funguje správně, můžete některé z nich odvodit z modelu. Postupně rozšíříte odvozené části.
+- **Začněte konkrétně a pak zobecnit.** Nejprve napište konkrétní verzi aplikace. Tato verze by měla fungovat v jedné sadě podmínek. Pokud jste spokojeni s tím, že funguje správně, můžete některé z těchto vlastností odvodit z modelu. Rozšiřte odvozené části postupně.
 
-     Například Navrhněte web, který má konkrétní sadu webových stránek před návrhem webové aplikace, která obsahuje stránky definované v modelu.
+     Můžete například navrhnout web, který má konkrétní sadu webových stránek, než navrhovat webovou aplikaci, která bude prezentovat stránky definované v modelu.
 
-- **Modelujte aspekty variant.** Identifikujte aspekty, které se budou lišit, buď mezi jedním nasazením a další, nebo v průběhu času podle změny požadavků. Toto jsou aspekty, které by měly být odvozeny z modelu.
+- **Modelovat variantní aspekty.** Identifikujte aspekty, které se budou lišit, ať už mezi jedním a druhým, nebo v průběhu času podle toho, jak se požadavky mění. Jedná se o aspekty, které by měly být odvozeny z modelu.
 
-     Například pokud se sada webových stránek a propojení mezi nimi změní, ale styl a formát stránek jsou vždy stejné, pak model musí popsat odkazy, ale nemusí popsán formát stránek.
+     Pokud se například změní sada webových stránek a propojení mezi nimi, ale styl a formát stránek jsou vždy stejné, měl by model popisovat odkazy, ale nemusí popisovat formát stránek.
 
-- **Nezávislé obavy.** Pokud se aspekty proměnných dají rozdělit na nezávislé oblasti, použijte pro každou oblast samostatné modely. Pomocí ModelBus můžete definovat operace, které ovlivňují oba modely, a omezení mezi nimi.
+- **Samostatné obavy.** Pokud lze aspekty proměnných rozdělit do nezávislých oblastí, použijte pro každou oblast samostatné modely. Pomocí modelbusu můžete definovat operace, které ovlivňují oba modely, a omezení mezi nimi.
 
-     Například použijte jeden model k definování navigace mezi webovými stránkami a jiným modelem pro definování rozložení stránek.
+     Pomocí jednoho modelu můžete například definovat navigaci mezi webovými stránkami a jiným modelem pro definování rozložení stránek.
 
-- **Vymodelujte požadavek, ne řešení.** Navrhněte model tak, aby popisuje požadavky uživatele. Naopak nenavrhovat zápis podle proměnných aspektů implementace.
+- **Modeluje požadavek, nikoli řešení.** Navrhovat model tak, aby popisuje požadavky uživatelů. Naopak nenavrhovat notaci podle proměnných aspektů implementace.
 
-     Například webový navigační model musí představovat webové stránky a hypertextové odkazy. Webový navigační model by neměl představovat fragmenty HTML nebo tříd ve vaší aplikaci.
+     Model webové navigace by například měl představovat webové stránky a hypertextové odkazy mezi nimi. Model webové navigace by neměl představovat fragmenty kódu HTML nebo tříd ve vaší aplikaci.
 
-- **Generovat nebo interpretovat?** Pokud se požadavky na konkrétní nasazení zřídka mění, vygenerujte programový kód z modelu. Pokud se požadavky často mění nebo můžou existovat ve více než jedné variantě ve stejném nasazení, napište aplikaci tak, aby mohla číst a interpretovat model.
+- **Generovat nebo interpretovat?** Pokud se požadavky na konkrétní nasazení zřídka změní, vygenerování programového kódu z modelu. Pokud se požadavky můžou často měnit nebo mohou existovat ve více variantách ve stejném nasazení, napište aplikaci, aby mohla číst a interpretovat model.
 
-     Pokud například použijete váš model webu k vývoji řady různých a samostatně instalovaných webů, měli byste vygenerovat kód lokality z modelu. Ale použijete svůj model k řízení lokality, která se každý den mění, pak je lepší napsat webový server, který čte model a prezentuje web odpovídajícím způsobem.
+     Pokud například použijete model webu k vývoji řady různých a samostatně nainstalovaných webů, měli byste z modelu vygenerovat kód webu. Model ale použijete k řízení webu, který se každý den mění, a pak je lepší napsat webový server, který čte model a odpovídajícím způsobem prezentuje web.
 
-- **UML nebo DSL?** Zvažte vytvoření zápisu modelování pomocí stereotypů pro rozšiřování UML. Definujte DSL, pokud není k dispozici žádný diagram UML, který by odpovídal účelu. Ale Vyhněte se narušení standardní sémantiky UML.
+- **UML nebo DSL?** Zvažte vytvoření notace modelování pomocí stereotypů k rozšíření UML. Definujte DSL, pokud neexistuje žádný diagram UML, který by tomuto účelu odpovídá. Vyhněte se ale porušení standardní sémantiky UML.
 
-     Například diagram tříd UML je kolekce polí a šipek. v tomto Notation můžete v teoreticky definovat cokoli. Nedoporučuje se ale používat diagram tříd s výjimkou případů, kdy jste ve skutečnosti popisují sadu typů. Například můžete přizpůsobovat diagramy tříd pro popis různých typů webových stránek.
+     Například diagram tříd UML je kolekce polí a šipek. Pomocí tohoto notace můžete teoreticky definovat cokoli. Nedoporučujeme ale používat diagram tříd s výjimkou případů, kdy ve skutečnosti popisujete sadu typů. Diagramy tříd můžete například přizpůsobit pro popis různých typů webových stránek.
 
 ## <a name="see-also"></a>Viz také
 

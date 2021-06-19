@@ -18,23 +18,23 @@ helpviewer_keywords:
 - diagrams - modeling, layer
 - software, designing
 - software, modeling
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9adf4445ca4b52e23fce91bb1f574e55fbab4f1d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a4642c73279340c710ed82d57563bdc3b84aff4f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945380"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389511"
 ---
 # <a name="create-models-for-your-app"></a>Vytváření modelů pro aplikaci
 
 Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týkající se vašeho kódu a požadavky uživatelů, které musí váš softwarový systém podporovat.
 
-Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé typy diagramů, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé typy diagramů, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 K vizualizaci architektury systému nebo existujícího kódu vytvořte následující diagramy:
 
@@ -55,7 +55,7 @@ K vizualizaci architektury systému nebo existujícího kódu vytvořte následu
 |[Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)<br /><br /> [Používání modelů v agilním vývoji](/previous-versions/ff398061(v=vs.140))|Použijte modely, které vám pomůžou pochopit a změnit svůj systém během vývoje.|
 |[Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md)|Uspořádejte modely ve velkém nebo středním projektu.|
 
-## <a name="resources"></a>Zdroje a prostředky
+## <a name="resources"></a>Zdroje informací
 
 - [Fórum Visual Studio vizualizace & modelování nástrojů](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)
 - [Fórum rozšiřitelnosti sady Visual Studio](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)

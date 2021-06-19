@@ -1,41 +1,41 @@
 ---
 title: Syntaxe cesty domény
-description: Přečtěte si o syntaxi cest domény a o tom, jak definice DSL používají k vyhledání konkrétních prvků v modelu syntaxi typu XPath.
+description: Přečtěte si o syntaxi cesty k doméně a o tom, jak definice DSL používají syntaxi typu XPath k vyhledání konkrétních prvků v modelu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, domain path
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c11776576d00306e4b0f3de5e7ff830037c1fefd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 69dfd02dca5ead65d4f36303e547aaeba04cde98
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935154"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389095"
 ---
 # <a name="domain-path-syntax"></a>Syntaxe cesty domény
-Definice DSL používají k vyhledání konkrétních prvků v modelu syntaxi typu XPath.
+Definice DSL používají syntaxi typu XPath k vyhledání konkrétních prvků v modelu.
 
- Obvykle není nutné pracovat s touto syntaxí přímo. Kde se zobrazí v podrobnostech DSL nebo okno Vlastnosti, můžete kliknout na šipku dolů a použít Editor cest. Tato cesta se ale v tomto formuláři zobrazí v poli po použití editoru.
+ S touto syntaxí obvykle pracovat přímo není. Tam, kde se zobrazuje v podrobnostech DSL nebo okno Vlastnosti, můžete kliknout na šipku dolů a použít editor cest. Cesta se ale zobrazí v tomto formuláři v poli po použití editoru.
 
- Cesta k doméně má následující formát:
+ Cesta k doméně má následující podobu:
 
- *Vlastnost Relationship. PropertyName/! Role*
+ *RelationshipName.PropertyName/! Roli*
 
- ![Referenční vztah CommentReferencesSubjects](../modeling/media/dsl_reference.png)
+ ![Referenční relace commentReferencesSubjects](../modeling/media/dsl_reference.png)
 
- Syntaxe projde stromovou strukturou modelu. Například doménový vztah **CommentReferencesSubjects** na ilustraci výše má roli **subjekty** . Segment cesty **/! Subject** – určuje, že cesta je dokončena na prvcích, které jsou k dispozici prostřednictvím role **subjekt** .
+ Syntaxe prochádá strom modelu. Například relace domény **CommentReferencesSubjects** na obrázku výše má **roli Předměty.** Segment cesty **/! Předmět určuje,** že se cesta dokončí u prvků, ke kterým se přistupuje prostřednictvím role **Předměty.**
 
- Každý segment začíná názvem doménového vztahu. Pokud je průchod z prvku na relaci, segment cesty se zobrazí jako *Relationship. PropertyName*. Pokud je směrování z odkazu na element, segment cesty se zobrazí jako *vztah/! RoleName*.
+ Každý segment začíná názvem relace domény. Pokud procházení pochází z prvku do relace, zobrazí se segment cesty *jako Relationship.PropertyName*. Pokud segment směrování pochází z odkazu na prvek, zobrazí se segment cesty *Jako Relace/! Název role*.
 
- Lomítka oddělují syntaxi cesty. Každý segment cesty je buď směrování z prvku na odkaz (instance vztahu), nebo z odkazu na element. Segmenty cesty se často zobrazují ve dvojicích. Jeden segment cesty představuje směrování z prvku na odkaz a další segment představuje směrování z odkazu na element na druhém konci. (Jakékoli propojení může být také zdrojem nebo cílem samotného vztahu).
+ Lomítka odděluje syntaxi cesty. Každý segment cesty je buď segment směrování z prvku do propojení (instance relace), nebo z odkazu na prvek. Segmenty cest se často zobrazují v párech. Jeden segment cesty představuje segment směrování z prvku na odkaz a další segment představuje segment směrování z odkazu na prvek na druhém konci. (Libovolný odkaz může být také zdrojem nebo cílem samotné relace).)
 
- Název, který použijete pro směrování elementu na propojení, je hodnotou role `Property Name` . Název, který použijete pro směrování propojení na prvky, je název cílové role.
+ Název, který použijete pro segment směrování element-to-link, je hodnota role `Property Name` . Název, který použijete pro segment směrování link-to-element, je název cílové role.
 
 ## <a name="see-also"></a>Viz také
 

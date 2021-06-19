@@ -1,7 +1,7 @@
 ---
-title: 'Kurz: otevření projektu z úložiště v aplikaci Visual Studio 2017'
-description: Naučte se, jak otevřít projekt v úložišti Git nebo Azure DevOps pomocí sady Visual Studio 2017.
-ms.custom: get-started
+title: 'Kurz: Otevření projektu z Visual Studio 2017'
+description: Zjistěte, jak otevřít projekt v Gitu nebo Azure DevOps úložiště pomocí Visual Studio 2017.
+ms.custom: vs-acquisition, get-started
 ms.date: 02/15/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -15,103 +15,103 @@ ms.workload:
 - dotnet
 - dotnetcore
 monikerRange: vs-2017
-ms.openlocfilehash: 01aca95bde7a20f746d4faece4090eac60b3849e
-ms.sourcegitcommit: 51e4426889ae5f49c69b122e37b3f48aa7a3925d
+ms.openlocfilehash: 5543a568f7246d9600ba375d9a1cf19af4cbd2d4
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100542974"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389199"
 ---
-# <a name="tutorial-open-a-project-from-a-repo-in-visual-studio-2017"></a>Kurz: otevření projektu z úložiště v aplikaci Visual Studio 2017
+# <a name="tutorial-open-a-project-from-a-repo-in-visual-studio-2017"></a>Kurz: Otevření projektu z Visual Studio 2017
 
-V tomto kurzu použijete Visual Studio 2017 k prvnímu připojení k úložišti a pak z něho otevřete projekt.
+V tomto kurzu použijete Visual Studio 2017 pro první připojení k úložišti a pak z něj otevřete projekt.
 
 > [!TIP]
-> Existuje nový, plně integrovaný způsob připojení k úložišti GitHub v [aplikaci Visual Studio 2019](https://visualstudio.microsoft.com/downloads). Další informace najdete na stránce [**nové prostředí Git v aplikaci Visual Studio 2019**](../ide/git-with-visual-studio.md?view=vs-2019&preserve-view=true) .
+> V roce 2019 je k dispozici nový, plně integrovaný způsob připojení k úložišti GitHub [Visual Studio 2019.](https://visualstudio.microsoft.com/downloads) Další informace najdete na stránce [**Nové prostředí Git Visual Studio 2019.**](../ide/git-with-visual-studio.md?view=vs-2019&preserve-view=true)
 
-## <a name="open-a-project-from-a-github-repo-by-using-visual-studio-2017"></a>Otevření projektu z úložiště GitHub pomocí sady Visual Studio 2017
+## <a name="open-a-project-from-a-github-repo-by-using-visual-studio-2017"></a>Otevření projektu z úložiště GitHub pomocí Visual Studio 2017
 
 1. Otevřete sadu Visual Studio 2017.
 
-1. V horním řádku nabídek vyberte otevřít **soubor**  >    >  **Otevřít ze správy zdrojového kódu**.
+1. V horním řádku nabídek vyberte **File** Open Open from Source Control (Otevřít  >    >  **soubor otevřít ze správy zdrojového kódu).**
 
-   Otevře se podokno **Team Explorer – připojit** .
+   Otevře **Team Explorer –** Připojit.
 
-    ![Team Explorer okno v integrovaném vývojovém prostředí sady Visual Studio](./media/open-proj-repo-team-explorer.png)
+    ![Okno Team Explorer v integrovaném vývojovém prostředí Visual Studio ideu](./media/open-proj-repo-team-explorer.png)
 
-1. V části **místní úložiště Git** vyberte **klonovat**.
+1. V části **Místní úložiště Git vyberte** Clone (Klonovat). 
 
-    ![V části místní úložiště Git vyberte klonovat.](./media/open-proj-repo-local-git-repo-clone.png)
+    ![V části Místní úložiště Git zvolte Clone (Klonovat).](./media/open-proj-repo-local-git-repo-clone.png)
 
-1. Do pole říkám ***Zadejte adresu URL úložiště Git, které se má klonovat**, zadejte nebo vložte adresu URL pro vaše úložiště a potom stiskněte _ * ENTER * *. (Můžete obdržet výzvu k přihlášení do GitHubu. Pokud ano, udělejte to.)
+1. Do pole s textem * Zadejte adresu URL úložiště **Git,** do něj zadejte nebo vložte adresu URL úložiště a stiskněte _*Enter**. (Může se zobrazit výzva k přihlášení ke GitHubu. Pokud ano, můžete to udělat.)
 
-   Jakmile aplikace Visual Studio naklonuje vaše úložiště, Team Explorer se zavře a Průzkumník řešení otevře. Zobrazí se zpráva s informacemi *o tom, jak kliknout na řešení a složky výše, a zobrazit seznam řešení*. Vyberte **řešení a složky**.
+   Po Visual Studio klonování se vaše Team Explorer zavře a Průzkumník řešení otevře. Zobrazí se zpráva *Klikněte na Řešení a složky výše a zobrazte seznam řešení.* Zvolte **Řešení a složky.**
 
-   ![Vyberte řešení a složky z Průzkumník řešení](./media/open-proj-repo-github-solutions-folders.png)
+   ![Zvolte Řešení a složky z Průzkumník řešení](./media/open-proj-repo-github-solutions-folders.png)
 
-1. Pokud máte soubor řešení k dispozici, zobrazí se v rozevírací nabídce "řešení a složky". Vyberte ho a Visual Studio otevře vaše řešení.
+1. Pokud máte k dispozici soubor řešení, zobrazí se v místní nabídce Řešení a složky. Zvolte ji a Visual Studio otevře vaše řešení.
 
-   ![Z rozevíracího seznamu Průzkumník řešení vyberte, co chcete otevřít.](./media/open-proj-repo-github-solutions-folders-picker.png)
+   ![V rozevíracím seznamu vyberte, co Průzkumník řešení otevřít.](./media/open-proj-repo-github-solutions-folders-picker.png)
 
-   Pokud v úložišti nemáte soubor řešení (konkrétně soubor. sln), nabídka rozchodu znamená "žádná řešení nebyla nalezena." Můžete však dvakrát kliknout na libovolný soubor v nabídce složka a otevřít ho v editoru kódu sady Visual Studio.
+   Pokud v tomto repo nemáte soubor řešení (konkrétně soubor .sln), v místní nabídce se zobrazí Zpráva Nenašla se žádná řešení. Dvojitým kliknutím na libovolný soubor z nabídky složky ho ale můžete otevřít v editoru Visual Studio kódu.
 
 ### <a name="review-your-work"></a>Kontrola práce
 
-Prohlédněte si následující animaci a zkontrolujte práci, kterou jste dokončili v předchozí části.
+Podívejte se na následující animaci a zkontrolujte práci, kterou jste dokončili v předchozí části.
 
-   ![Animace otevření projektu v úložišti GitHub pomocí sady Visual Studio](./media/open-project-from-github.gif)
+   ![Animace otevření projektu v úložišti GitHub pomocí Visual Studio](./media/open-project-from-github.gif)
 
 > [!NOTE]
-> Informace, které jsou specifické pro Visual Studio 2019, najdete v tématu [otevření projektu na stránce úložiště v aplikaci Visual Studio 2019](tutorial-open-project-from-repo-visual-studio-2019.md) .
+> Informace specifické pro Visual Studio 2019 najdete na stránce Otevření projektu z [Visual Studio 2019.](tutorial-open-project-from-repo-visual-studio-2019.md)
 
-## <a name="open-a-project-from-an-azure-devops-repo-by-using-visual-studio-2017"></a>Otevření projektu z úložiště Azure DevOps pomocí sady Visual Studio 2017
+## <a name="open-a-project-from-an-azure-devops-repo-by-using-visual-studio-2017"></a>Otevření projektu z Azure DevOps pomocí Visual Studio 2017
 
 1. Otevřete sadu Visual Studio 2017.
 
-1. V horním řádku nabídek vyberte otevřít **soubor**  >    >  **Otevřít ze správy zdrojového kódu**.
+1. V horním řádku nabídek vyberte **File** Open Open from Source Control (Otevřít  >    >  **soubor otevřít ze správy zdrojového kódu).**
 
-   Otevře se podokno **Team Explorer – připojit** .
+   Otevře **Team Explorer –** Připojit.
 
-    ![Team Explorer okno v integrovaném vývojovém prostředí sady Visual Studio](./media/open-proj-repo-team-explorer.png)
+    ![Okno Team Explorer v integrovaném vývojovém prostředí Visual Studio ideu](./media/open-proj-repo-team-explorer.png)
 
-1. Tady jsou dva způsoby, jak se připojit k úložišti Azure DevOps:
+1. Tady jsou dva způsoby připojení k vašemu Azure DevOps:
 
-      - V části **poskytovatelé hostovaných služeb** vyberte **připojit...**.
+      - V části **Poskytovatelé hostovaných** služeb vyberte **Připojit...**.
 
-        ![Část poskytovatele hostovaných služeb v okně Team Explorer v rámci integrovaného vývojového prostředí (IDE) sady Visual Studio](./media/open-proj-repo-azure-devops.png)
+        ![Část Poskytovatelé hostovaných služeb v okně Team Explorer v integrovaném vývojovém prostředí Visual Studio.](./media/open-proj-repo-azure-devops.png)
 
-      - V rozevíracím seznamu **Spravovat připojení** vyberte **připojit k projektu...**.
+      - V **rozevíracím seznamu** Spravovat připojení vyberte **Připojit k projektu...**.
 
-        ![Oddíl spravovat připojení v okně Team Explorer v rámci integrovaného vývojového prostředí (IDE) sady Visual Studio](./media/open-proj-repo-azuredevops-manage-connections.png)
+        ![Část Správa připojení v okně Team Explorer integrovaného vývojového prostředí (IDE) Visual Studio.](./media/open-proj-repo-azuredevops-manage-connections.png)
 
-1. V dialogovém okně **připojit k projektu** zvolte úložiště, ke kterému se chcete připojit, a pak vyberte **klonovat**.
+1. V dialogovém **okně Connect to a Project** (Připojit k projektu) zvolte repo, ke které se chcete připojit, a pak vyberte Clone (Klonovat). 
 
-      ![Dialogové okno připojit k projektu, které je vygenerováno ze sady Visual Studio](./media/open-proj-azure-devops-connect-cloud-clone.png)
+      ![Dialogové okno Připojit k projektu vygenerované z Visual Studio](./media/open-proj-azure-devops-connect-cloud-clone.png)
 
     > [!NOTE]
-    > Co vidíte v seznamu, závisí na úložištích Azure DevOps, ke kterým máte přístup.
+    > To, co se zobrazí v seznamu, závisí na Azure DevOps, ke které máte přístup.
 
-1. Jakmile aplikace Visual Studio naklonuje vaše úložiště, Team Explorer se zavře a Průzkumník řešení otevře. Zobrazí se zpráva s informacemi *o tom, jak kliknout na řešení a složky výše, a zobrazit seznam řešení*. Vyberte **řešení a složky**.
+1. Po Visual Studio klonování se vaše Team Explorer zavře a Průzkumník řešení otevře. Zobrazí se zpráva *Klikněte na Řešení a složky výše a zobrazte seznam řešení.* Zvolte **Řešení a složky.**
 
-      ![Oznámení "řešení a složky" z Team Explorer v aplikaci Visual Studio](./media/open-proj-repo-solutions-folders.png)
+      ![Oznámení "Řešení a složky" z Team Explorer v Visual Studio](./media/open-proj-repo-solutions-folders.png)
 
-   Soubor řešení (konkrétně soubor. sln) se zobrazí v rozevírací nabídce "řešení a složky". Vyberte ho a Visual Studio otevře vaše řešení.
+   Soubor řešení (konkrétně soubor .sln) se zobrazí v místní nabídce Řešení a složky. Zvolte ji a Visual Studio otevře vaše řešení.
 
-   Pokud ve svém úložišti nemáte soubor řešení, pozastaví se nabídka bez nalezených řešení. Můžete však dvakrát kliknout na libovolný soubor v nabídce složka a otevřít ho v editoru kódu sady Visual Studio.
+   Pokud v tomto repo nemáte soubor řešení, v místní nabídce se zobrazí Zpráva Nenašla se žádná řešení. Dvojitým kliknutím na libovolný soubor z nabídky složky ho ale můžete otevřít v editoru Visual Studio kódu.
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokud jste připravení na kód v rámci sady Visual Studio 2017, podrobně do některého z následujících kurzů pro konkrétní jazyk:
+Pokud jste připraveni kódovat pomocí Visual Studio 2017, projděte si některý z následujících kurzů pro konkrétní jazyk:
 
-- [Kurzy pro Visual Studio | **Jazyk C#**](./csharp/index.yml)
-- [Kurzy pro Visual Studio | **Visual Basic**](./visual-basic/index.yml)
-- [Kurzy pro Visual Studio | **Jazyk C++**](/cpp/get-started/tutorial-console-cpp)
-- [Kurzy pro Visual Studio | **Python**](../python/index.yml)
-- [Kurzy pro Visual Studio | **JavaScript**, **TypeScript** a **Node.js**](../javascript/index.yml)
+- [Visual Studio kurzy | **C#**](./csharp/index.yml)
+- [Visual Studio kurzy | **Visual Basic**](./visual-basic/index.yml)
+- [Visual Studio kurzy | **C++**](/cpp/get-started/tutorial-console-cpp)
+- [Visual Studio kurzy | **Python**](../python/index.yml)
+- [Visual Studio kurzy | **JavaScript,** **TypeScript** **aNode.js**](../javascript/index.yml)
 
 ## <a name="see-also"></a>Viz také
 
-- [Otevření projektu z úložiště v aplikaci Visual Studio 2019](tutorial-open-project-from-repo-visual-studio-2019.md)
-- [Nové prostředí Git v aplikaci Visual Studio 2019](../ide/git-with-visual-studio.md)
-- [Azure DevOps Services: Začínáme s Azure Repos a sadou Visual Studio](/azure/devops/repos/git/gitquickstart/)
+- [Otevření projektu z Visual Studio 2019](tutorial-open-project-from-repo-visual-studio-2019.md)
+- [Nové prostředí Gitu v Visual Studio 2019](../ide/git-with-visual-studio.md)
+- [Azure DevOps Services: Začínáme s Azure Repos a Visual Studio](/azure/devops/repos/git/gitquickstart/)
 - [Microsoft Learn: Začínáme s Azure DevOps](/learn/modules/get-started-with-devops/)

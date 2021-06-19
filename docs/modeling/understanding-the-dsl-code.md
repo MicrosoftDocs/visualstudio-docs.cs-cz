@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, generated code
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 330a2a8f4173ddb22303064ee7f97ee025d05758
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 84f75298bc2854172eb7ec63bd6412e5703cfad7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924481"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388578"
 ---
 # <a name="understanding-the-dsl-code"></a>Porozumění kódu DSL
 
@@ -124,7 +124,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
 - Metody obslužné rutiny prototypu skupiny elementů (EGP). Ty jsou nezbytné, pokud uživatel může *Sloučit* (Přidat) jiný prvek do instancí této třídy. Uživatel to obvykle provede přetažením z nástroje prvku nebo jiného tvaru nebo vložením.
 
-   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Rozhraní
+   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Prostředek
 
    Metody obslužné rutiny EGP ve třídě Component umožňují komponentě přijímat porty, ale ne komentáře. Obslužná rutina EGP v kořenové třídě modelu akceptuje komentáře a komponenty, ale ne porty.
 
@@ -280,11 +280,11 @@ namespace Company.EmbedInForm
 
  `EditorFactory.cs`
 
- Vytváří instance `DocData` a `DocView` . Splňuje standardní rozhraní, které sada Visual Studio používá k otevření editoru při spuštění vašeho balíčku DSL. Je odkazováno v `ProvideEditorFactory` atributu v Package.cs
+ Vytváří instance `DocData` a `DocView` . Splňuje standardní rozhraní, které sada Visual Studio používá k otevření editoru při spuštění vašeho balíčku DSL. Je odkazováno v `ProvideEditorFactory` atributu v Package. cs
 
  `GeneratedVSCT.vsct`
 
- Vyhledá standardní příkazy nabídky v nabídkách, například v diagramu klikněte pravým tlačítkem myši na nabídku (kontext), nabídce **Upravit** a tak dále. Kód pro příkazy je v CommandSet.cs. Můžete přemístit nebo upravit standardní příkazy a můžete přidat vlastní příkazy. Další informace najdete v tématu [zápis uživatelských příkazů a akcí](how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+ Vyhledá standardní příkazy nabídky v nabídkách, například v diagramu klikněte pravým tlačítkem myši na nabídku (kontext), nabídce **Upravit** a tak dále. Kód pro příkazy je v CommandSet. cs. Můžete přemístit nebo upravit standardní příkazy a můžete přidat vlastní příkazy. Další informace najdete v tématu [zápis uživatelských příkazů a akcí](how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
  `ModelExplorer.cs`
 

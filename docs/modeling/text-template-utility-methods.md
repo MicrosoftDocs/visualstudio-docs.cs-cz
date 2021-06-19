@@ -1,33 +1,33 @@
 ---
 title: Pomocné metody textových šablon
-description: Přečtěte si o různých metodách textových šablon, které jsou k dispozici při psaní kódu v nástroji Visual Studio.
+description: Seznamte se s různými metodami nástrojů textových šablon, které jsou k dispozici při psaní kódu v Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - text templates, utility methods
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fcc879a19d3dfcd9e1e8e1bcd79f0488a312e96c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b45bf6418562da5315c986a64a1295c137e982d6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924571"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388682"
 ---
 # <a name="text-template-utility-methods"></a>Pomocné metody textových šablon
 
-Existuje několik metod, které jsou vždy k dispozici při psaní kódu v textové šabloně sady Visual Studio. Tyto metody jsou definovány v <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> .
+Existuje několik metod, které jsou vždy k dispozici při psaní kódu v Visual Studio textové šabloně. Tyto metody jsou definovány v <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> souboru .
 
 > [!TIP]
-> Můžete také použít jiné metody a služby poskytované hostitelským prostředím v běžné (nezpracované) textové šabloně. Můžete například vyřešit cesty k souborům, protokolovat chyby a získávat služby, které poskytuje Visual Studio a všechny načtené balíčky. Další informace naleznete v tématu [přístup k aplikaci Visual Studio z textové šablony](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
+> Můžete také použít jiné metody a služby poskytované hostitelským prostředím v běžné (nezpracované) textové šabloně. Můžete například vyřešit cesty k souborům, protokolovat chyby a získat služby poskytované Visual Studio a všechny načtené balíčky. Další informace najdete v tématu [Přístup Visual Studio z textové šablony](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
 
 ## <a name="write-methods"></a>Metody zápisu
 
-Můžete použít `Write()` `WriteLine()` metody a k připojení textu uvnitř bloku standardního kódu namísto použití bloku kódu výrazu. Následující dva bloky kódu jsou funkčně ekvivalentní.
+Místo použití bloku kódu výrazu můžete k připojení textu uvnitř standardního bloku kódu použít metody `Write()` `WriteLine()` a . Následující dva bloky kódu jsou funkčně ekvivalentní.
 
 ### <a name="code-block-with-an-expression-block"></a>Blok kódu s blokem výrazu
 
@@ -41,7 +41,7 @@ while (i-- > 0)
 #>
 ```
 
-### <a name="code-block-using-writeline"></a>Blok kódu pomocí metody WriteLine ()
+### <a name="code-block-using-writeline"></a>Blok kódu využívající WriteLine()
 
 ```
 <#
@@ -53,9 +53,9 @@ while (i-- > 0)
 #>
 ```
 
-Může být užitečné použít jednu z těchto pomocných metod namísto bloku výrazu uvnitř dlouhého bloku kódu s vnořenými řídicími strukturami.
+Může být užitečné použít jednu z těchto užitkových metod místo bloku výrazů uvnitř dlouhého bloku kódu s vnořenými řídicími strukturami.
 
-`Write()`Metody a `WriteLine()` mají dvě přetížení, jednu, která přijímá jeden řetězcový parametr a jednu, která má složený řetězec formátu a pole objektů, které mají být zahrnuty do řetězce (například `Console.WriteLine()` metody). Následující dvě použití `WriteLine()` jsou funkčně ekvivalentní:
+Metody a mají dvě přetížení, jedno, které přebírá jeden řetězcový parametr, a jedno, které přebírá složený formátovací řetězec a pole objektů, které se mají zahrnout do řetězce `Write()` `WriteLine()` (jako `Console.WriteLine()` metoda ). Následující dvě použití jsou `WriteLine()` funkčně ekvivalentní:
 
 ```
 <#
@@ -69,9 +69,9 @@ Může být užitečné použít jednu z těchto pomocných metod namísto bloku
 #>
 ```
 
-## <a name="indentation-methods"></a>Metody odsazování
+## <a name="indentation-methods"></a>Metody odsazení
 
-Můžete použít metody odsazení k formátování výstupu šablony textu. <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>Třída má `CurrentIndent` řetězcovou vlastnost, která zobrazuje aktuální odsazení v textové šabloně a `indentLengths` pole, které je seznam odsazení, která byla přidána. Můžete přidat odsazení s `PushIndent()` metodou a odečíst odsazení `PopIndent()` metodou. Chcete-li odebrat všechna odsazení, použijte `ClearIndent()` metodu. Následující blok kódu ukazuje použití těchto metod:
+K formátování výstupu textové šablony můžete použít metody odsazení. Třída <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> má řetězcovou vlastnost, která zobrazuje aktuální odsazení v textové šabloně, a pole, které je seznamem přidaných `CurrentIndent` `indentLengths` odsazení. Pomocí metody můžete přidat odsazení a odečíst `PushIndent()` odsazení pomocí `PopIndent()` metody . Pokud chcete odebrat všechna odsazení, použijte `ClearIndent()` metodu . Následující blok kódu ukazuje použití těchto metod:
 
 ```
 <#
@@ -87,7 +87,7 @@ Můžete použít metody odsazení k formátování výstupu šablony textu. <xr
 #>
 ```
 
-Tento blok kódu generuje následující výstup:
+Tento blok kódu vytvoří následující výstup:
 
 ```
 Hello
@@ -99,7 +99,7 @@ Hello
 
 ## <a name="error-and-warning-methods"></a>Metody chyb a upozornění
 
-Chcete-li přidat zprávy do Seznam chyb sady Visual Studio, můžete použít metody nástroje Error a Warning. Například následující kód přidá chybovou zprávu do Seznam chyb.
+K přidání zpráv do aplikace můžete použít chybové a varovné Visual Studio Seznam chyb. Následující kód například přidá chybovou zprávu do Seznam chyb.
 
 ```
 <#
@@ -117,23 +117,23 @@ Chcete-li přidat zprávy do Seznam chyb sady Visual Studio, můžete použít m
 
 ## <a name="access-to-host-and-service-provider"></a>Přístup k hostiteli a poskytovateli služeb
 
-Vlastnost `this.Host` může poskytovat přístup k vlastnostem vystaveným hostitelem, který spouští šablonu. Chcete-li použít `this.Host` , musíte nastavit `hostspecific` atribut v `<@template#>` direktivě:
+Vlastnost může `this.Host` poskytnout přístup k vlastnostem vystaveným hostitelem, který spouští šablonu. Pokud chcete `this.Host` použít , musíte nastavit atribut v `hostspecific` `<@template#>` direktivě :
 
 `<#@template ... hostspecific="true" #>`
 
-Typ `this.Host` závisí na typu hostitele, ve kterém je šablona spuštěna. V šabloně, která je spuštěna v aplikaci Visual Studio, můžete přetypovat `this.Host` na, `IServiceProvider` abyste získali přístup ke službám, jako je IDE. Příklad:
+Typ závisí `this.Host` na typu hostitele, ve kterém je šablona spuštěná. V šabloně, která běží v Visual Studio, můžete přetypovat na , abyste získali přístup ke `this.Host` službám, jako je integrované vývojové prostředí `IServiceProvider` (IDE). Příklad:
 
 ```
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
                        .GetService(typeof(EnvDTE.DTE));
 ```
 
-## <a name="using-a-different-set-of-utility-methods"></a>Použití jiné sady pomocných metod
+## <a name="using-a-different-set-of-utility-methods"></a>Použití jiné sady užitkových metod
 
-V rámci procesu generování textu je soubor šablony transformován na třídu, která je vždy pojmenována `GeneratedTextTransformation` a dědí z <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> . Pokud místo toho chcete použít jinou sadu metod, můžete napsat vlastní třídu a zadat ji v direktivě šablony. Vaše třída musí dědit z <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> .
+V rámci procesu generování textu se soubor šablony transformuje do třídy, která je vždy pojmenována a `GeneratedTextTransformation` dědí z <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> . Pokud chcete místo toho použít jinou sadu metod, můžete napsat vlastní třídu a zadat ji do direktivy šablony. Vaše třída musí dědit z <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> .
 
 ```
 <#@ template inherits="MyUtilityClass" #>
 ```
 
-Použijte `assembly` direktivu pro odkaz na sestavení, kde lze nalézt zkompilovanou třídu.
+Direktiva `assembly` slouží k odkazování na sestavení, kde lze najít zkompilované třídy.

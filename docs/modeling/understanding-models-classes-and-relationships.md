@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, models
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: da5817711c7131868c4bad22bbe93447119d19d8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b086f21b466863c3498ce15c15f7077b358c6d39
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924524"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388617"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Porozumění modelům, třídám a vztahům
 Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společně s jakýmkoli vlastním programovým kódem, který můžete napsat. Většina kódu programu v řešení DSL je vygenerována z tohoto souboru.
@@ -109,47 +109,47 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
 
  V Průzkumníkovi se zobrazí všechny prvky v modelu, i ty, pro které nejsou definovány žádné tvary. Zobrazuje elementy a vkládání vztahů, ale ne referenčních vztahů.
 
- Chcete-li zobrazit hodnoty vlastností domény elementu, uživatel vybere prvek, buď v diagramu modelu, nebo v Průzkumníku modelů a otevře okno Vlastnosti. Zobrazí se všechny vlastnosti domény, včetně těch, které nejsou v diagramu zobrazené. V příkladu má každá skladba název i Žánr, ale v diagramu je zobrazená jenom hodnota názvu.
+ Chcete-li zobrazit hodnoty vlastností domény elementu, uživatel vybere prvek, buď v diagramu modelu, nebo v Průzkumníku modelů a otevře okno Vlastnosti. Zobrazí se všechny vlastnosti domény, včetně těch, které nejsou v diagramu zobrazené. V tomto příkladu má každá skladba název i žánr, ale na diagramu se zobrazuje jenom hodnota Názvu.
 
 ## <a name="reference-relationships"></a>Referenční relace
- Vztah odkazu představuje jakýkoli druh relace, která není vložena.
+ Referenční relace představuje jakýkoli druh relace, který se nevkládá.
 
- Referenční relace se obvykle zobrazují v diagramu jako spojnice mezi obrazci.
+ Relace odkazů se obvykle zobrazují v diagramu jako konektory mezi tvary.
 
- V jazyce XML reprezentace modelu je odkaz na odkaz mezi dvěma prvky reprezentován pomocí *monikerů.* To znamená, že monikery jsou názvy, které jednoznačně identifikují každý prvek v modelu. Uzel XML pro každý prvek modelu obsahuje uzel, který určuje název vztahu a moniker druhého prvku.
+ V reprezentaci XML modelu je odkazové propojení mezi dvěma prvky reprezentováno pomocí *monikerů.* To znamená, že monikery jsou názvy, které jednoznačně identifikují každý prvek v modelu. Uzel XML pro každý prvek modelu obsahuje uzel, který určuje název relace a moniker druhého prvku.
 
 ## <a name="roles"></a>Role
- Každý doménový vztah má dvě role, zdrojovou roli a cílovou roli.
+ Každý vztah domény má dvě role, zdrojovou a cílovou roli.
 
- Na následujícím obrázku je čára mezi třídou domény **vydavatele** a doménovou rolí **PublisherCatalog** zdrojová role. Řádkem mezi doménovým vztahem a doménovou třídou **alba** je cílová role.
+ Na následujícím obrázku je zdrojovou rolí řádek mezi doménovou třídou Vydavatel a doménou **PublisherCatalog.**  Čára mezi doménovou vztahem a doménovou třídou **Vlastnost** je cílovou rolí.
 
  ![Role a vlastnosti.](../modeling/media/propertycode.png)
 
- Názvy přidružené k relaci jsou obzvláště důležité při psaní kódu programu, který projde modelem. Například při sestavování řešení DSL má Vydavatel generovaných tříd katalog vlastností, který je kolekcí alb. Album třídy má vydavatele vlastností, který je jedinou instancí třídy Vydavatel.
+ Názvy přidružené k relaci jsou zvláště důležité, když píšete programový kód, který prochová model. Když například sestavíte řešení DSL, vygenerovaná třída Publisher má vlastnost Catalog, která je kolekcí katalogu Nachytá. Třída Má vlastnost Publisher, která je jedinou instancí třídy Publisher.
 
- Když vytvoříte relaci v definici DSL, názvy vlastností a vztahů jsou zadané výchozí hodnoty. Můžete je ale změnit.
+ Když vytvoříte relaci v definici DSL, mají názvy vlastností a vztahů výchozí hodnoty. Můžete je ale změnit.
 
-## <a name="multiplicities"></a>Mnohočetnostmi
- Násobnosti určují, kolik prvků může mít stejnou roli v relaci domény. V příkladu má nastavení násobnosti nula (0.. \* ) v roli **Catalog** , že jakákoli instance třídy domény **vydavatele** může mít tolik odkazů na **PublisherCatalog** vztahů, jak je chcete dát.
+## <a name="multiplicities"></a>Násobení
+ Násobnosti určují, kolik prvků může mít stejnou roli v relaci domény. Nastavení násobnosti 0:N (0.. ) u role katalogu v tomto příkladu určuje, že každá instance třídy domény Vydavatel může mít libovolný počet odkazů na vztahy \* **PublisherCatalog,** kolik  chcete. 
 
- Nastavte násobnost role buď zadáním v diagramu, nebo úpravou `Multiplicity` vlastnosti v okně **vlastnosti** . Následující tabulka popisuje nastavení pro tuto vlastnost.
+ Násobnost role můžete nakonfigurovat buď zadáním do diagramu, nebo úpravou `Multiplicity` vlastnosti v **okně** Vlastnosti. Následující tabulka popisuje nastavení této vlastnosti.
 
 |Typ násobnosti|Description|
 |-|-|
-|0.. * (nula až mnoho)|Každá instance doménové třídy může mít více instancí relace nebo žádné instance relace.|
-|0.. 1 (nula až jedna)|Každá instance doménové třídy nemůže mít více než jednu instanci relace nebo žádné instance relace.|
-|1.. 1 (jeden)|Každá instance doménové třídy může mít jednu instanci relace. Z jakékoli instance třídy role nemůžete vytvořit více než jednu instanci této relace. Pokud je povoleno ověřování, zobrazí se chyba ověření v případě, že jakákoli instance třídy role nemá žádnou instanci relace.|
-|1.. * (jedna až mnoho)|Každá instance třídy v roli, která má tuto násobnost, může mít více instancí relace a každá instance musí mít alespoň jednu instanci vztahu. Pokud je povoleno ověřování, zobrazí se chyba ověření v případě, že jakákoli instance třídy role nemá žádnou instanci relace.|
+|0..* (nula k mnoha)|Každá instance třídy domény může mít více instancí vztahu nebo žádné instance vztahu.|
+|0..1 (nula k jedné)|Každá instance třídy domény nemůže mít více než jednu instanci relace nebo žádné instance relace.|
+|1..1 (jeden)|Každá instance třídy domény může mít jednu instanci vztahu. Z jakékoli instance třídy role nelze vytvořit více než jednu instanci tohoto vztahu. Pokud je povolené ověřování, zobrazí se chyba ověření, když kterákoli instance třídy role nemá žádnou instanci relace.|
+|1..* (1:M)|Každá instance třídy v roli, která má tuto násobnost, může mít více instancí relace a každá instance musí mít alespoň jednu instanci relace. Pokud je povolené ověřování, zobrazí se chyba ověření, když kterákoli instance třídy role nemá žádnou instanci relace.|
 
-## <a name="domain-relationships-as-classes"></a>Doménové vztahy jako třídy
- Odkaz je reprezentován ve Storu jako instance LinkElement, která je odvozenou třídou třídy ModelElement. Tyto vlastnosti můžete definovat v diagramu doménového modelu u doménových vztahů.
+## <a name="domain-relationships-as-classes"></a>Vztahy mezi doménami jako třídy
+ Odkaz je reprezentován v Store jako instance LinkElement, což je odvozená třída ModeluElement. Tyto vlastnosti můžete definovat v diagramu doménového modelu u vztahů mezi doménami.
 
- Můžete také vytvořit vztah mezi zdrojem a cílem jiných vztahů. V diagramu doménového modelu klikněte pravým tlačítkem na doménový vztah a pak klikněte na **Zobrazit jako třídu**. Zobrazí se další pole třídy. K němu pak můžete připojit relace.
+ Relaci můžete také nastavit jako zdroj nebo cíl jiných relací. V diagramu modelu domény klikněte pravým tlačítkem na vztah domény a pak klikněte na **Zobrazit jako třídu**. Zobrazí se další pole třídy. Pak k ní můžete připojit relace.
 
- Relaci můžete definovat částečně děděním, stejně jako u doménových tříd. Vyberte odvozený vztah a nastavte **základní vztah** v okno Vlastnosti.
+ Vztah můžete definovat částečně dědičností, stejně jako u tříd domén. Vyberte odvozenou relaci a **nastavte základní relaci** v okno Vlastnosti.
 
- Odvozený vztah se specializuje na základní vztah. Třídy domény, na které odkazuje, by měly být odvozeny od nebo stejné jako třídy propojené základní relací. Je-li v modelu vytvořen odkaz odvozeného vztahu, jedná se o instanci odvozeného i základního vztahu. V programovém kódu můžete přejít na opačný konec odkazu pomocí vlastností generovaných buď základní třídou, nebo odvozenou třídou.
+ Odvozená relace se specializuje na svou základní relaci. Třídy domény, které odkazuje, by měly být odvozeny z třídy nebo stejné jako třídy propojené základní vztah. Když je v modelu vytvořeno propojení odvozené relace, jedná se o instanci odvozených i základních relací. V kódu programu můžete přejít na opačný konec odkazu pomocí vlastností generovaných buď základní třídou, nebo odvozenou třídou.
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))
+- [Nástroje DSL glosář](/previous-versions/bb126564(v=vs.100))

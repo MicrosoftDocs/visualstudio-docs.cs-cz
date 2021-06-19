@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.elementmergedirective
 helpviewer_keywords:
 - Domain-Specific Language, element merge directives
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 01867bf4c5d3e9c60ad4a2ba0ed76c45eca055c1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 42339c532db3442d5fb5c5da3b51d94801a0907d
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935583"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389394"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Přizpůsobení vytvoření a přesunutí elementu
 
@@ -310,16 +310,16 @@ V řešení modelu komponenty můžete vytvořit direktivu pro přeposílání. 
 
 9. Uložte řešení a pak šablony Transformujte kliknutím na tlačítko vpravo na panelu nástrojů **Průzkumník řešení** .
 
-10. Sestavte a spusťte řešení. Zobrazí se nová instance aplikace Visual Studio.
+10. Sestavte a spusťte řešení. Zobrazí se nová instance Visual Studio.
 
-11. V **Průzkumník řešení** otevřete Sample. mydsl. Zobrazí se diagram a **Sada nástrojů ComponentLanguage** .
+11. V **Průzkumník řešení** otevřete soubor Sample.mydsl. Zobrazí se diagram a **sada nástrojů ComponentLanguage.**
 
-12. Přetáhněte **vstupní port** ze **sady nástrojů** na jiný **vstupní port.** V dalším kroku přetáhněte **OutputPort** do **InputPort** a pak na jiný **OutputPort**.
+12. Přetáhněte **vstupní port z** panelu **nástrojů** na jiný **vstupní port.** Potom přetáhněte **OutputPort** na **InputPort** a pak na jiný **OutputPort**.
 
-     Neměl by se zobrazovat nedostupný ukazatel a měli byste být schopni vyřadit nový **vstupní port** na stávajícím. Vyberte nový **vstupní port** a přetáhněte jej na jiný bod **součásti**.
+     Ukazatel Nedostupný by se neměl zobrazit a nový vstupní **port** byste měli být schopni vypustit u existujícího. Vyberte nový vstupní **port a** přetáhněte ho do jiného bodu na **komponentě**.
 
 ## <a name="see-also"></a>Viz také
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Přizpůsobení nástrojů a panelu nástrojů](../modeling/customizing-tools-and-the-toolbox.md)
-- [Ukázka DSL diagramů okruhů](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [Ukázka DSL v schématech okruhu](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

@@ -1,36 +1,36 @@
 ---
 title: 'Návod: Vytvoření kódu pomocí textových šablon'
-description: Naučte se, že generování kódu vám umožní vytvářet kód programu, který je silného typu, a když se změní zdrojový model, lze ho snadno změnit.
+description: Zjistěte, že generování kódu umožňuje vytvářet programový kód se silnými typy, který lze však snadno změnit při změně zdrojového modelu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs [text templates], generating application code
 - walkthroughs [text templates]
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e6b824d53c37ef922b8c9580c87a478aef93586
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22940fb86ab0cfd7262a3ca7845521847add2dff
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924062"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388123"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>Návod: Vytvoření kódu pomocí textových šablon
 
-Generování kódu umožňuje vytvářet kód programu, který je silného typu a který lze snadno změnit při změně zdrojového modelu. Na rozdíl od tohoto alternativní techniky psaní zcela obecného programu, který přijímá konfigurační soubor, který je flexibilnější, ale má za následek, že není snadné ho číst a měnit, ani takový dobrý výkon. Tento názorný postup ukazuje tuto výhodu.
+Generování kódu umožňuje vytvořit programový kód se silnými typy, který lze při změně zdrojového modelu snadno změnit. Porovnejte to s alternativní technikou psaní zcela obecného programu, který přijímá konfigurační soubor, který je flexibilnější, ale výsledkem je kód, který není tak snadný ke čtení a změně, ani nemá tak dobrý výkon. Tento názorný postup tuto výhodu předvede.
 
 ## <a name="typed-code-for-reading-xml"></a>Typový kód pro čtení XML
 
-Obor názvů System.Xml poskytuje komplexní nástroje pro načítání dokumentu XML a jeho procházení v paměti. Všechny uzly však mají stejný typ, XmlNode. Je proto velmi snadné dělat chyby programování, například očekávat špatný typ podřízeného uzlu nebo nesprávné atributy.
+Obor System.Xml poskytuje komplexní nástroje pro načtení dokumentu XML a jeho volné procházení v paměti. Bohužel všechny uzly mají stejný typ, XmlNode. Proto je velmi snadné provádět programovací chyby, například očekávat nesprávný typ podřízeného uzlu nebo nesprávné atributy.
 
-V tomto příkladu projektu šablona čte ukázkový soubor XML a generuje třídy, které odpovídají každému typu uzlu. V kódu psané rukou můžete použít tyto třídy pro navigaci v souboru XML. Můžete také spustit aplikaci na všech ostatních souborech, které používají stejné typy uzlů. Účelem ukázkového souboru XML je poskytnout příklady všech typů uzlů, se kterými se má aplikace zabývat.
+V tomto ukázkovém projektu šablona načte ukázkový soubor XML a vygeneruje třídy, které odpovídají jednotlivým typům uzlů. V ručně napsaném kódu můžete tyto třídy použít k navigaci v souboru XML. Aplikaci můžete také spustit na všech ostatních souborech, které používají stejné typy uzlů. Účelem ukázkového souboru XML je poskytnout příklady všech typů uzlů, které má vaše aplikace řešit.
 
 > [!NOTE]
-> Aplikace [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe), která je součástí sady Visual Studio, může generovat třídy silného typu ze souborů XML. Zde uvedená šablona je uvedena jako příklad.
+> Aplikace [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe), která je součástí Visual Studio, může generovat třídy silného typu ze souborů XML. Zde zobrazená šablona je uvedena jako příklad.
 
 Tady je ukázkový soubor:
 
@@ -47,7 +47,7 @@ Tady je ukázkový soubor:
 </catalog>
 ```
 
-V projektu, který tento návod sestaví, můžete napsat kód jako následující a IntelliSense zobrazí výzvu se správným atributem a podřízenými názvy při psaní:
+V projektu, který tento názorný průvodce sestaví, můžete napsat kód, jako je následující, a IntelliSense vás při psaní vyzve ke správnému názvu atributu a podřízených názvů:
 
 ```csharp
 Catalog catalog = new Catalog(xmlDocument);
@@ -61,7 +61,7 @@ foreach (Artist artist in catalog.Artist)
 }
 ```
 
-Naproti tomu Netypový kód, který můžete napsat bez šablony:
+Porovnejte tento kód s netypový kód, který můžete napsat bez šablony:
 
 ```csharp
 XmlNode catalog = xmlDocument.SelectSingleNode("catalog");
@@ -75,37 +75,37 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 }
 ```
 
-Ve verzi silného typu, Změna schématu XML má za následek změny tříd. Kompilátor zvýrazní části kódu aplikace, které je třeba změnit. V netypové verzi, která používá obecný kód XML, neexistuje žádná taková podpora.
+Změna schématu XML ve verzi silného typu vede ke změnám tříd. Kompilátor zvýrazní části kódu aplikace, které je nutné změnit. V netypové verzi, která používá obecný kód XML, není taková podpora k dispozici.
 
-V tomto projektu se k vygenerování tříd, které vytvářejí typovou verzi, používá jeden soubor šablony.
+V tomto projektu se jeden soubor šablony používá k vygenerování tříd, které umožní typovou verzi.
 
 ## <a name="set-up-the-project"></a>Nastavení projektu
 
 ### <a name="create-or-open-a-c-project"></a>Vytvoření nebo otevření projektu v jazyce C#
 
-Tuto techniku můžete použít pro libovolný projekt kódu. Tento návod používá projekt C# a pro účely testování používáme konzolovou aplikaci.
+Tuto techniku můžete použít u libovolného projektu kódu. Tento názorný postup používá projekt jazyka C# a pro účely testování používáme konzolovou aplikaci.
 
-1. V nabídce **soubor** klikněte na příkaz **Nový** a potom klikněte na **projekt**.
+1. V nabídce **File (Soubor)** **klikněte na New (Nový)** a pak na **Project (Projekt).**
 
-2. Klikněte na uzel **Visual C#** a potom v podokně **šablony** klikněte na **Konzolová aplikace.**
+2. Klikněte na **uzel Visual C#** a pak v podokně **Šablony** klikněte na **Konzolová aplikace.**
 
-### <a name="add-a-prototype-xml-file-to-the-project"></a>Přidat do projektu prototypový soubor XML
+### <a name="add-a-prototype-xml-file-to-the-project"></a>Přidání prototypu souboru XML do projektu
 
-Účelem tohoto souboru je poskytnout vzorky typů uzlů XML, které mají být schopné číst aplikace. Může se jednat o soubor, který se bude používat k testování vaší aplikace. Šablona vytvoří třídu jazyka C# pro každý typ uzlu v tomto souboru.
+Účelem tohoto souboru je poskytnout ukázky typů uzlů XML, které má aplikace číst. Může to být soubor, který se použije k testování vaší aplikace. Šablona vytvoří třídu jazyka C# pro každý typ uzlu v tomto souboru.
 
-Soubor by měl být součástí projektu, aby jej šablona mohla číst, ale nebude integrován do kompilované aplikace.
+Soubor by měl být součástí projektu, aby ho šablona četla, ale nebude sestavený do zkompilované aplikace.
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt, klikněte na tlačítko **Přidat** a poté klikněte na položku **Nová položka**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt, klikněte na **Přidat** a potom klikněte na **Nová položka.**
 
-2. V dialogovém okně **Přidat novou položku** vyberte v podokně **šablony** možnost **soubor XML** .
+2. V **dialogovém okně Přidat** novou položku vyberte v podokně **Šablony** možnost Soubor **XML.**
 
 3. Přidejte do souboru ukázkový obsah.
 
-4. Pro tento návod pojmenujte soubor `exampleXml.xml` . Nastavte obsah souboru tak, aby byl XML zobrazený v předchozí části.
+4. Pro tento názorný postup pojmnte soubor `exampleXml.xml` . Nastavte obsah souboru na XML zobrazený v předchozí části.
 
-### <a name="add-a-test-code-file"></a>Přidat soubor testovacího kódu
+### <a name="add-a-test-code-file"></a>Přidání souboru testovacího kódu
 
-Přidejte do projektu soubor C# a zapište do něj ukázku kódu, který chcete mít k zápisu. Příklad:
+Přidejte do projektu soubor jazyka C# a napište do něj vzorek kódu, který chcete napsat. Příklad:
 
 ```csharp
 using System;
@@ -125,47 +125,47 @@ namespace MyProject
 } } } } }
 ```
 
-V této fázi se tento kód nedaří zkompilovat. Při psaní šablony vygenerujete třídy, které jim umožní úspěch.
+V této fázi se tento kód nepodaří zkompilovat. Při psaní šablony budete generovat třídy, které umožní, aby byla úspěšná.
 
-Komplexnější test může zkontrolovat výstup této testovací funkce proti známému obsahu ukázkového souboru XML. V tomto návodu ale budeme při kompilaci testovací metody spokojeni.
+Komplexnější test by mohl zkontrolovat výstup této testovací funkce se známým obsahem příkladu souboru XML. V tomto názorném postupu ale budeme spokojeni, až se testovací metoda zkompiluje.
 
-### <a name="add-a-text-template-file"></a>Přidat textový soubor šablony
+### <a name="add-a-text-template-file"></a>Přidání souboru textové šablony
 
-Přidejte textový soubor šablony a nastavte rozšíření Output na *. cs*.
+Přidejte soubor textové šablony a nastavte výstupní příponu na *.cs.*
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt, klikněte na tlačítko **Přidat** a poté klikněte na položku **Nová položka**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt, klikněte **na Přidat** a potom klikněte na Nová **položka.**
 
-2. V dialogovém okně **Přidat novou položku** vyberte v podokně **šablony** **text šablona** .
+2. V dialogovém **okně Přidat novou** položku vyberte **Textová šablona** z **podokna** Šablony.
 
     > [!NOTE]
-    > Ujistěte se, že jste přidali textovou šablonu, nikoli předzpracovaná textovou šablonu.
+    > Nezapomeňte přidat textovou šablonu, a ne předzpracovanou textovou šablonu.
 
-3. V souboru v direktivě šablony změňte `hostspecific` atribut na `true` .
+3. V souboru v direktivě template změňte `hostspecific` atribut na `true` .
 
-     Tato změna umožní kódu šablony získat přístup ke službám sady Visual Studio.
+     Tato změna umožní kódu šablony získat přístup k Visual Studio službám.
 
-4. V direktivě Output změňte atribut Extension na ". cs", aby šablona vygenerovala soubor C#. V Visual Basic projektu byste ho změnili na ". vb".
+4. V direktivě output změňte atribut extension na ".cs", aby šablona vygeneruje soubor jazyka C#. V Visual Basic projektu byste ho změnili na ".vb".
 
-5. Soubor uložte. V této fázi by soubor textové šablony měl obsahovat tyto řádky:
+5. Soubor uložte. V této fázi by měl soubor textové šablony obsahovat tyto řádky:
 
     ```
     <#@ template debug="false" hostspecific="true" language="C#" #>
     <#@ output extension=".cs" #>
     ```
 
-Všimněte si, že soubor. cs se zobrazí v Průzkumník řešení jako dceřiná položka souboru šablony. Můžete ji zobrazit kliknutím na [+] vedle názvu souboru šablony. Tento soubor je vygenerován ze souboru šablony vždy, když uložíte nebo přesunete fokus mimo soubor šablony. Vygenerovaný soubor se zkompiluje jako součást projektu.
+Všimněte si, že soubor .cs se Průzkumník řešení jako pobočka souboru šablony. Zobrazí se kliknutím na [+] vedle názvu souboru šablony. Tento soubor se vygeneruje ze souboru šablony pokaždé, když uložíte nebo přesunete fokus mimo soubor šablony. Vygenerovaný soubor se zkompiluje jako součást projektu.
 
-Pro usnadnění práce při vývoji souboru šablony uspořádejte okna souboru šablony a vygenerovaný soubor, abyste je viděli vedle sebe. To vám umožní hned zobrazit výstup šablony. Všimněte si také, že když Šablona generuje neplatný kód C#, v okně chybová zpráva se zobrazí chyby.
+Pro usnadnění vývoje souboru šablony uspořádejte okna souboru šablony a vygenerovaný soubor tak, abyste je viděli vedle sebe. To vám umožní okamžitě zobrazit výstup šablony. Také si všimnete, že když vaše šablona vygeneruje neplatný kód jazyka C#, zobrazí se v okně chybové zprávy chyby.
 
-Všechny úpravy, které provedete přímo ve vygenerovaném souboru, budou ztraceny při každém uložení souboru šablony. Proto byste se buď vyhnuli úpravám vygenerovaného souboru, nebo je jenom upravovat jenom pro krátké experimenty. Někdy je vhodné vyzkoušet krátký fragment kódu ve vygenerovaném souboru, kde je technologie IntelliSense v provozu, a pak ji zkopírovat do souboru šablony.
+Veškeré úpravy, které provedete přímo ve vygenerovaném souboru, budou ztraceny při každém uložení souboru šablony. Proto byste se měli buď vyhnout úpravám vygenerované souboru, nebo ho upravit pouze pro krátké experimenty. Někdy je užitečné vyzkoušet ve vygenerovaném souboru krátký fragment kódu, ve kterém je technologie IntelliSense v provozu, a pak ji zkopírovat do souboru šablony.
 
 ## <a name="develop-the-text-template"></a>Vývoj textové šablony
 
-Po dosažení osvědčených rad pro agilní vývoj budeme vyvíjet šablonu v malých krocích, takže se v každém přírůstku vymaže některé chyby, dokud testovací kód nebude zkompilován a správně spuštěn.
+Na základě nejlepších rad pro agilní vývoj budeme šablonu vyvíjet v malých krocích a některé chyby v každém přírůstku vymazat, dokud se testovací kód nezkompiluje a neshodí správně.
 
 ### <a name="prototype-the-code-to-be-generated"></a>Vytvoření prototypu kódu, který se má vygenerovat
 
-Testovací kód vyžaduje třídu pro každý uzel v souboru. Proto některé chyby kompilace zmizí, pokud tyto řádky připojíte k šabloně a uložíte je:
+Testovací kód vyžaduje třídu pro každý uzel v souboru . Proto některé chyby kompilace zmizí, pokud tyto řádky připojíte k šabloně a pak je uložíte:
 
 ```csharp
 class Catalog {}
@@ -173,7 +173,7 @@ class Artist {}
 class Song {}
 ```
 
-To vám pomůže zjistit, co je potřeba, ale deklarace by se měly vygenerovat z typů uzlů v ukázkovém souboru XML. Odstraňte tyto experimentální řádky ze šablony.
+To vám pomůže zobrazit, co je potřeba, ale deklarace by měly být generovány z typů uzlů v ukázkovém souboru XML. Odstraňte tyto experimentální řádky ze šablony.
 
 ### <a name="generate-application-code-from-the-model-xml-file"></a>Generování kódu aplikace ze souboru XML modelu
 
@@ -197,21 +197,21 @@ Chcete-li číst soubor XML a generovat deklarace třídy, nahraďte obsah šabl
 #>
 ```
 
-Nahraďte cestu k souboru správnou cestou k vašemu projektu.
+Nahraďte cestu k souboru správnou cestou pro váš projekt.
 
-Všimněte si oddělovačů bloků kódu `<#...#>` . Tyto oddělovače jsou v závorkách fragment kódu programu, který generuje text. Oddělovač bloku výrazu `<#=...#>` závorky je výraz, který lze vyhodnotit na řetězec.
+Všimněte si oddělovačů bloku kódu `<#...#>` . Tyto oddělovače oddělují fragment kódu programu, který generuje text. Oddělovače bloků výrazů jsou `<#=...#>` v závorkách výrazu, který lze vyhodnotit na řetězec.
 
-Když píšete šablonu, která generuje zdrojový kód pro vaši aplikaci, pracujete se dvěma samostatnými texty programu. Program uvnitř oddělovačů bloků kódu se spouští při každém uložení šablony nebo přesunutí fokusu do jiného okna. Text, který generuje, který se zobrazí mimo oddělovače, je zkopírován do generovaného souboru a bude se jednat o část kódu vaší aplikace.
+Při psaní šablony, která generuje zdrojový kód pro vaši aplikaci, se zabýváte dvěma samostatnými texty programu. Program uvnitř oddělovačů bloku kódu se spustí pokaždé, když šablonu uložíte nebo přesunete fokus do jiného okna. Text, který generuje, který se zobrazí mimo oddělovače, se zkopíruje do vygenerovaného souboru a stane se součástí kódu vaší aplikace.
 
-`<#@assembly#>`Direktiva se chová jako odkaz, takže sestavení je k dispozici pro kód šablony. Seznam sestavení, která jsou vidět šablonou, je oddělený od seznamu odkazů v projektu aplikace.
+Direktiva `<#@assembly#>` se chová jako odkaz, takže sestavení je k dispozici pro kód šablony. Seznam sestavení, která šablona používá, je oddělený od seznamu odkazů v projektu aplikace.
 
-`<#@import#>`Direktiva funguje jako `using` příkaz, který umožňuje používat krátké názvy tříd v importovaném oboru názvů.
+Direktiva funguje jako příkaz , který umožňuje používat krátké názvy tříd v `<#@import#>` `using` importovaného oboru názvů.
 
-I když tato šablona generuje kód, vytvoří deklaraci třídy pro každý uzel v ukázkovém souboru XML, aby v případě, že existuje několik instancí `<song>` uzlu, se zobrazí několik deklarací skladby třídy.
+I když tato šablona generuje kód, vytvoří deklaraci třídy pro každý uzel v příkladu souboru XML, takže pokud existuje několik instancí uzlu, objeví se několik deklarací skladby `<song>` třídy.
 
-### <a name="read-the-model-file-then-generate-the-code"></a>Přečtěte si soubor modelu a potom kód vygenerujte.
+### <a name="read-the-model-file-then-generate-the-code"></a>Čtení souboru modelu a vygenerování kódu
 
-Mnoho textových šablon se řídí vzorem, ve kterém první část šablony čte zdrojový soubor a druhá část šablonu vygeneruje. Musíme načíst celý vzorový soubor pro shrnutí typů uzlů, které obsahuje, a pak vygenerovat deklarace třídy. `<#@import#>`K tomu je potřeba další, aby bylo možné použít`Dictionary<>:`
+Mnoho textových šablon dodržuje vzor, ve kterém první část šablony přečte zdrojový soubor a druhá část vygeneruje šablonu. Potřebujeme přečíst všechny příklady souborů, které shrnují typy uzlů, které obsahuje, a poté vygenerovat deklarace třídy. Další `<#@import#>` je potřeba, abychom mohli použít `Dictionary<>:`
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -239,11 +239,11 @@ Mnoho textových šablon se řídí vzorem, ve kterém první část šablony č
 #>
 ```
 
-### <a name="add-an-auxiliary-method"></a>Přidat pomocnou metodu
+### <a name="add-an-auxiliary-method"></a>Přidání pomocné metody
 
-Řídicí blok funkce třídy je blok, ve kterém můžete definovat pomocné metody. Blok je oddělený `<#+...#>` a musí se nacházet jako poslední blok v souboru.
+Řídicí blok funkce třídy je blok, ve kterém můžete definovat pomocné metody. Blok je oddělen hodnotou a `<#+...#>` musí se zobrazit jako poslední blok v souboru.
 
-Pokud upřednostňujete názvy tříd, které začínají velkým písmenem, můžete poslední část šablony nahradit následujícím kódem šablony:
+Pokud dáváte přednost názvům tříd, aby začínat velkým písmenem, můžete poslední část šablony nahradit následujícím kódem šablony:
 
 ```
 // Generate the code
@@ -260,7 +260,7 @@ Pokud upřednostňujete názvy tříd, které začínají velkým písmenem, mů
 #>
 ```
 
-V této fázi obsahuje generovaný soubor *. cs* následující deklarace:
+V této fázi obsahuje vygenerovaný *soubor .cs* následující deklarace:
 
 ```csharp
 public partial class Catalog {}
@@ -268,11 +268,11 @@ public partial class Artist {}
 public partial class Song {}
 ```
 
-Další podrobnosti, jako jsou vlastnosti podřízených uzlů, atributů a vnitřního textu, lze přidat pomocí stejného přístupu.
+Další podrobnosti, jako jsou vlastnosti podřízených uzlů, atributů a vnitřního textu, je možné přidat stejným způsobem.
 
-### <a name="access-the-visual-studio-api"></a>Přístup k rozhraní API sady Visual Studio
+### <a name="access-the-visual-studio-api"></a>Přístup k rozhraní VISUAL STUDIO API
 
-Nastavení `hostspecific` atributu `<#@template#>` direktivy umožňuje šabloně získat přístup k rozhraní API sady Visual Studio. Šablona může použít k získání umístění souborů projektu, aby nedocházelo k použití absolutní cesty k souboru v kódu šablony.
+Nastavení `hostspecific` atributu `<#@template#>` direktivy umožňuje šabloně získat přístup k rozhraní VISUAL STUDIO API. Šablona může použít k získání umístění souborů projektu, aby se zabránilo použití absolutní cesty k souboru v kódu šablony.
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>

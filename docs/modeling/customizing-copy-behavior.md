@@ -4,17 +4,17 @@ description: Přečtěte si, že v DSL vytvořené pomocí sady Visual Studio vi
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 93a32ed2bb4f375e8938c9a3b9ff34c7af47e0e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2e5ffbc7dde0bd1274756d1721088b18ea6ec34
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935596"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389407"
 ---
 # <a name="customizing-copy-behavior"></a>Přizpůsobení chování kopírování
 V sadě DSL (Domain-Specific Language) vytvořené pomocí sady Visual Studio vizualizace and modeling SDK můžete změnit, co se stane, když uživatel zkopíruje a vloží prvky.
@@ -293,7 +293,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 ### <a name="canmerge"></a>CanMerge()
  `CanMerge()` je volána k určení zpětné vazby, která by měla být dána uživateli, když se ukazatel myši pohybuje v diagramu. Parametry metody jsou prvek, nad nímž je ukazatel myši umístěn, a data o zdroji, ze kterého byla operace přetažení provedena. Uživatel může přetáhnout z libovolného místa na obrazovce. Proto může být zdrojový objekt v mnoha různých typech a může být serializován v různých formátech. Pokud je zdrojem DSL nebo model UML, je datovým parametrem serializace <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> . Operace přetažení, kopírování a sady nástrojů používají ElementGroupPrototypes k vyjádření fragmentů modelů.
 
- Prototyp skupiny elementů může obsahovat libovolný počet prvků a odkazů. Typy prvků mohou být identifikovány pomocí identifikátorů GUID. Identifikátor GUID je tvar, který byl přetažen, nikoli podkladový prvek modelu. V následujícím příkladu `CanMerge()` vrátí hodnotu true, pokud je obrazec třídy z diagramu UML přetažen do tohoto diagramu.
+ Prototyp skupiny elementů může obsahovat libovolný počet prvků a odkazů. Typy elementů je možné identifikovat podle identifikátorů GUID. Identifikátor GUID má tvar, který se přetáhl, nikoli základního prvku modelu. V následujícím příkladu vrátí hodnotu true, pokud je do tohoto `CanMerge()` diagramu přetažen tvar třídy z diagramu UML.
 
 ```csharp
 public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDataObject data)
@@ -311,7 +311,7 @@ public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDa
 ```
 
 ## <a name="mergeelementgroupprototype"></a>MergeElementGroupPrototype()
- Tato metoda je volána, když uživatel přetáhne prvek do diagramu, tvaru nebo spojnice. Měl by sloučit přetažený obsah do cílového prvku. V tomto příkladu kód určuje, zda rozpozná kombinaci typů Target a Prototype; Pokud ano, metoda převede přetažené prvky na prototyp prvků, které by měly být přidány do modelu. Základní metoda je volána pro provedení sloučení, buď převedených nebo nepřeváděných prvků.
+ Tato metoda se volá, když uživatel zahodí prvek do diagramu, tvaru nebo konektoru. Přetáhlý obsah by se měl sloučit do cílového elementu. V tomto příkladu kód určuje, jestli rozpozná kombinaci cílových a prototypových typů. Pokud ano, metoda převádí přetažená elementy do prototypu prvků, které by měly být přidány do modelu. Základní metoda je volána ke sloučení, a to buď převedených, nebo nekonvertovaných prvků.
 
 ```csharp
 public override void MergeElementGroupPrototype(ModelElement targetShape, ElementGroupPrototype sourcePrototype)
@@ -327,7 +327,7 @@ public override void MergeElementGroupPrototype(ModelElement targetShape, Elemen
 }
 ```
 
- Tento příklad se zabývá prvky třídy UML přetažené z diagramu tříd UML. DSL není navržená tak, aby přímo ukládala třídy UML, ale místo toho vytvoříme element DSL pro každou přetaženou třídu UML. To je užitečné, například pokud je DSL instancí diagramu instance. Uživatel může přetáhnout třídy do diagramu a vytvořit tak instance těchto tříd.
+ Tento příklad se zabývá prvky třídy UML přetažen z diagramu tříd UML. DSL není navržen pro přímé ukládání tříd UML, ale místo toho vytvoříme prvek DSL pro každou přetáženou třídu UML. To by bylo užitečné například v případě, že DSL je diagram instance. Uživatel může přetáhnout třídy do diagramu a vytvořit instance těchto tříd.
 
 ```csharp
 
@@ -364,12 +364,12 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
 }
 ```
 
-## <a name="standard-copy-behavior"></a>Standardní chování kopírování
- Kód v této části ukazuje metody, které lze přepsat pro změnu chování kopírování. V této části se dozvíte, jak dosáhnout vlastního nastavení, v této části se zobrazuje kód, který Přepisuje metody spojené s kopírováním, ale nemění standardní chování.
+## <a name="standard-copy-behavior"></a>Standardní chování při kopírování
+ Kód v této části ukazuje metody, které můžete přepsat, aby se změnilo chování kopírování. V této části se zobrazí kód, který přepisuje metody, které jsou součástí kopírování, ale nemění standardní chování, abyste viděli, jak dosáhnout vlastních nastavení.
 
- Když uživatel stiskne kombinaci kláves CTRL + C nebo použije příkaz Kopírovat nabídku, <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> je volána metoda. Můžete vidět, jak se nastavuje v **DslPackage\Generated Code\CommandSet.cs**. Další informace o tom, jak jsou nastaveny příkazy, naleznete v tématu [How to: Add a Command to a příkaz do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
+ Když uživatel stiskne kombinaci kláves CTRL+C nebo použije příkaz nabídky Kopírovat, je <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> volána metoda . Nastavení můžete zjistit v souboru **DslPackage\Generated Code\CommandSet.cs**. Další informace o nastavení příkazů najdete v tématu [Postupy: Přidání příkazu](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)do místní nabídky .
 
- ProcessOnMenuCopyCommand můžete přepsat přidáním částečné třídy definice *MyDsl* `ClipboardCommandSet` v projektu DslPackage.
+ ProcessOnMenuCopyCommand můžete přepsat přidáním částečné definice třídy *MyDsl* `ClipboardCommandSet` do projektu DslPackage.
 
 ```csharp
 using System.Collections.Generic;
@@ -434,7 +434,7 @@ protected override void CopyModelElementsIntoElementGroupPrototype(IDataObject d
 }
 ```
 
- Každý diagram má instanci typu Singleton (ElementOperations). Můžete dodat svůj vlastní derivát. Tento soubor, který může být umístěn v projektu DSL, se bude chovat stejně jako kód, který Přepisuje:
+ Každý diagram má jednu instanci ElementOperations. Můžete zadat vlastní odvozený soubor. Tento soubor, který lze umístit do projektu DSL, by se choval stejně jako kód, který přepisuje:
 
 ```csharp
 using System;
