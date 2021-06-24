@@ -1,6 +1,6 @@
 ---
-title: 'Kurz Docker – část 5: použití připojení vazby'
-description: Popisuje způsob použití připojení BIND k řízení přípojného bodu na hostiteli.
+title: 'Kurz Dockeru – část 5: Použití připojení vazeb'
+description: Popisuje způsob použití vázání připojení k řízení přípojového bodu na hostiteli.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
@@ -9,58 +9,59 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 57cb56d0d9a93d0f11e4047f6e25b64841c47e93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6a4aa7623f69f9b02f9649a1a66ade010a823669
+ms.sourcegitcommit: 98d187abd9352d2255348b84d99d015e65caa0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841676"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112574110"
 ---
-# <a name="use-bind-mounts"></a>Použít připojení vazeb
+# <a name="use-bind-mounts"></a>Použití připojení vazeb
 
-V předchozí kapitole jste se dozvěděli o a použili jste **pojmenovaný svazek** pro zachování dat ve vaší databázi. Pojmenované svazky jsou skvělé, pokud chcete jenom ukládat data, protože se nemusíte starat o *to, kde* se data ukládají.
+V předchozí kapitole jste se dozvěděli o **pojmenovaném** svazku a použili ho k zachování dat v databázi. Pojmenované svazky jsou skvělé, pokud chcete jednoduše ukládat data,  protože si nemusíte dělat starosti s tím, kde jsou data uložená.
 
-S **připojením k vazbám** řídíte přesnou přípojný bod na hostiteli. Tuto možnost můžete použít k uchovávání dat, ale často se používá k poskytnutí dalších dat do kontejnerů. Při práci na aplikaci můžete použít připojení BIND pro připojení zdrojového kódu do kontejneru, aby viděli změny kódu, odpověděli a umožnili vám zobrazit změny hned.
+S **připojeními vazby** řídíte přesný přípojný bod na hostiteli. Můžete ho použít k uchování dat, ale často se používá k poskytování dalších dat do kontejnerů. Při práci s aplikací můžete použít vazbu připojení k připojení zdrojového kódu ke kontejneru, abyste mohli vidět změny kódu, reagovat a okamžitě zobrazit změny.
 
-Pro aplikace založené na uzlech je [nodemon](https://npmjs.com/package/nodemon) skvělým nástrojem ke sledování změn souborů a následnému restartování aplikace. Pro většinu ostatních jazyků a platforem existují ekvivalentní nástroje.
+V případě aplikací založených na Node [je nástroj nodemon](https://npmjs.com/package/nodemon) skvělým nástrojem ke sledování změn souborů a následně restartování aplikace. Ve většině ostatních jazyků a architektur existují ekvivalentní nástroje.
 
-## <a name="quick-volume-type-comparisons"></a>Rychlé porovnávání typů svazků
+## <a name="quick-volume-type-comparisons"></a>Rychlé porovnání typů svazků
 
-Připojení k vazbám a pojmenované svazky jsou dva hlavní typy svazků, které jsou dodávány s modulem Docker. K dispozici jsou ale další ovladače svazků, které podporují jiné případy použití ([SFTP](https://github.com/vieux/docker-volume-sshfs), [CEPH](https://ceph.com/geen-categorie/getting-started-with-the-docker-rbd-volume-plugin/), [NetApp](https://netappdvp.readthedocs.io/en/stable/), [S3](https://github.com/elementar/docker-s3-volume)a další).
+Připojení vazeb a pojmenované svazky jsou dva hlavní typy svazků, které jsou součástí modulu Docker. K dispozici jsou ale další ovladače svazků pro podporu dalších případů použití ([SFTP,](https://github.com/vieux/docker-volume-sshfs) [Ceph,](https://ceph.com/geen-categorie/getting-started-with-the-docker-rbd-volume-plugin/) [NetApp,](https://netappdvp.readthedocs.io/en/stable/) [S3](https://github.com/elementar/docker-s3-volume)a další).
 
 | Vlastnost | Pojmenované svazky | Připojení vazeb |
 | -------- | ------------- | ----------- |
-| Umístění hostitele | Výběry Docker | Řídíte |
-| Příklad připojení (using `-v` ) | můj svazek:/usr/local/data | /path/to/data:/usr/local/data |
-| Naplní nový svazek obsahem kontejneru. | Ano | Ne |
-| Podporuje ovladače svazků | Ano | Ne |
+| Umístění hostitele | Docker chooses | Ovládací prvek |
+| Příklad připojení (pomocí `-v` ) | my-volume:/usr/local/data | /path/to/data:/usr/local/data |
+| Naplní nový svazek obsahem kontejneru. | Yes | No |
+| Podporuje ovladače svazků. | Yes | No |
 
-## <a name="start-a-dev-mode-container"></a>Spuštění kontejneru vývojového režimu
+## <a name="start-a-dev-mode-container"></a>Spuštění kontejneru v režimu pro vývoj
 
-Pokud chcete svůj kontejner spustit pro podporu vývojového pracovního postupu, proveďte následující:
+Pokud chcete kontejner spustit pro podporu vývojového pracovního postupu, proveďte následující:
 
-- Připojit zdrojový kód do kontejneru
-- Nainstalovat všechny závislosti, včetně závislostí pro vývoj
-- Spusťte nodemon a sledujte změny systému souborů.
+- Připojení zdrojového kódu ke kontejneru
+- Instalace všech závislostí, včetně závislostí pro vývoj
+- Spusťte nástroj nodemon, abyste sledovali změny systému souborů.
 
 1. Ujistěte se, že nemáte spuštěné žádné předchozí `getting-started` kontejnery.
 
-1. Spusťte následující příkaz (nahraďte ` \ ` znaky `` ` `` ve Windows PowerShellu). Dozvíte se, co se stane dál:
+1. Spusťte následující příkaz (nahraďte ` \ ` znaky v `` ` `` souboru Windows PowerShell). Potom se dozvíte, co se děje:
 
     ```bash
     docker run -dp 3000:3000 \
-        -w /app -v ${PWD}:/app \
+        -w /app \
+        -v "%cd%:/app" \
         node:12-alpine \
         sh -c "yarn install && yarn run dev"
     ```
 
-    - `-dp 3000:3000` – stejné jako předtím. Spustit v odpojeném režimu (na pozadí) a vytvořit mapování portů
-    - `-w /app` -Nastaví "pracovní adresář" nebo aktuální adresář, ze kterého bude příkaz spuštěn.
-    - `-v ${PWD}:/app` -BIND připojí aktuální adresář od hostitele v kontejneru do `/app` adresáře.
-    - `node:12-alpine` – obrázek, který se má použít Všimněte si, že toto je základní image vaší aplikace z souboru Dockerfile.
-    - `sh -c "yarn install && yarn run dev"` – příkaz. Spouštíme prostředí pomocí `sh` (Alpine není `bash` ) a běží `yarn install` na instalaci *všech* závislostí a následném spuštění `yarn run dev` . Pokud se podíváte na `package.json` , uvidíme, že se `dev` skript spouští `nodemon` .
+    - `-dp 3000:3000` – stejné jako předtím. Spuštění v odpojeném režimu (na pozadí) a vytvoření mapování portů
+    - `-w /app` – nastaví "pracovní adresář" nebo aktuální adresář, ze které se příkaz spustí.
+    - `-v "%cd%:/app"` – vytvořte vazbu na připojení aktuálního adresáře z hostitele v kontejneru k `/app` adresáři .
+    - `node:12-alpine` – image, která se má použít. Všimněte si, že se jedná o základní image vaší aplikace ze souboru Dockerfile.
+    - `sh -c "yarn install && yarn run dev"` – příkaz . Spouštíme prostředí pomocí příkazu (alpine nemá ) a spuštěním příkazu nainstalujeme všechny závislosti a `sh` `bash` pak `yarn install` spouštíme  `yarn run dev` . Pokud se podíváte do `package.json` , uvidíme, že `dev` skript spouští `nodemon` .
 
-1. Protokoly můžete sledovat pomocí `docker logs -f <container-id>` . Víte, že jste připraveni přejít na toto:
+1. Protokoly můžete sledovat pomocí `docker logs -f <container-id>` příkazu . Až uvidíte toto, budete vědět, že jste připraveni na to:
 
     ```bash
     docker logs -f <container-id>
@@ -73,34 +74,34 @@ Pokud chcete svůj kontejner spustit pro podporu vývojového pracovního postup
     Listening on port 3000
     ```
 
-    Až budete s sledováním protokolů hotovi, ukončete činnost `Ctrl` + `C` .
+    Až budete se sledováním protokolů hotovi, ukončete ho kliknutím na `Ctrl` + `C` .
 
-1. Nyní proveďte v aplikaci změnu. V `src/static/js/app.js` souboru změňte tlačítko **Přidat položku** tak, aby jednoduše vyslovení příkazu **Přidat**. Tato změna bude na řádku 109.
+1. Teď v aplikaci proveďte změnu. V souboru `src/static/js/app.js` změňte tlačítko **Přidat** položku tak, aby jednoduše řeklo **Přidat**. Tato změna bude na řádku 109.
 
     ```diff
     -                         {submitting ? 'Adding...' : 'Add Item'}
     +                         {submitting ? 'Adding...' : 'Add'}
     ```
 
-1. Jednoduše aktualizujte stránku (nebo ji otevřete) a měli byste vidět, že se změna v prohlížeči projeví téměř okamžitě. Restartování serveru Node může trvat několik sekund, takže pokud se zobrazí chyba, stačí zkusit aktualizaci po několika sekundách.
+1. Stačí stránku aktualizovat (nebo ji otevřít) a tato změna by se měla projevit téměř okamžitě v prohlížeči. Restartování serveru Node může trvat několik sekund, takže pokud se zobrazí chyba, zkuste aktualizaci za několik sekund.
 
-    ![Snímek obrazovky s aktualizovaným popiskem pro tlačítko Přidat](media/updated-add-button.png)
+    ![Snímek obrazovky s aktualizovaným popiskem tlačítka Přidat](media/updated-add-button.png)
 
-1. Nebojte se udělat jakékoli další změny, které byste chtěli udělat. Až skončíte, zastavte kontejner a sestavte novou image pomocí `docker build -t getting-started .` .
+1. Klidně proveďte všechny další změny, které byste chtěli udělat. Až budete hotovi, zastavte kontejner a sestavte novou image pomocí `docker build -t getting-started .` .
 
-Použití připojení BIND je *velmi* běžné pro místní vývojové nastavení. Výhodou je, že vývojového počítače nemusí mít nainstalované všechny nástroje sestavení a prostředí. Jediným `docker run` příkazem je vývojové prostředí vyžádáno a připraveno k použití. Dozvíte se o Docker Compose v budoucím kroku, protože to pomůže zjednodušit příkazy (už se vám zobrazuje spousta příznaků).
+Použití připojení vazeb je *u místních* vývojových nastavení velmi běžné. Výhodou je, že vývojový počítač nemusí mít nainstalované všechny nástroje a prostředí sestavení. Jediným `docker run` příkazem se vývojové prostředí vyžádá a je připravené k vypravování. O těchto příkazech Docker Compose v dalším kroku, protože vám to pomůže zjednodušit příkazy (už máte spoustu příznaků).
 
 ## <a name="recap"></a>Rekapitulace
 
-V tuto chvíli můžete databázi uchovávat a rychle reagovat na potřeby a požadavky vašich investorů a nalezených uživatelů. Radostných! Ale odhadujte, co? Dostali jsme skvělé novinky!
+V tuto chvíli můžete databázi zachovat a rychle reagovat na potřeby a požadavky vašich investoři a zakladatelů. Hurá! Ale co? Obdrželi jste skvělé zprávy!
 
-**Váš projekt byl vybrán pro budoucí vývoj.**
+**Váš projekt byl vybrán pro budoucí vývoj!**
 
-Aby bylo možné připravit se na produkční prostředí, je nutné migrovat databázi z práce v SQLite na něco, co může škálovat trochu lépe. V zájmu jednoduchosti zůstanete v relační databázi a přepněte svou aplikaci, aby používala MySQL. Ale jak byste měli používat MySQL? Jak umožníte, aby kontejnery navzájem komunikovaly? Dozvíte se o této další službě!
+Abyste se mohli připravit na produkci, musíte databázi migrovat z práce v SQLite na něco, co dokáže škálovat o něco lépe. Kvůli zjednodušení budete používat relační databázi a přepnete aplikaci na mySQL. Jak byste ale mySQL měli spustit? Jak můžete kontejnerům umožnit vzájemnou vzájemnou rozhovory? O tom se dozvíte dále!
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokračujte v tomto kurzu.
+Pokračujte kurzem!
 
 > [!div class="nextstepaction"]
 > [Vícekontejnerové aplikace](multi-container-apps.md)
