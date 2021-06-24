@@ -12,26 +12,25 @@ f1_keywords:
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: cc15c7ac377899ddb8660782e6015cfc975aa8dc
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 7e8051c058018a3c433972cfdf19bb091685a482
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390565"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602162"
 ---
 # <a name="oops-no-f1-help-match-was-found"></a>Oops! `F1`Nenašla se žádná shoda s vaší pomocí.
-
-Je nám líto, ale Vypadá to, že se nám nepovedlo najít, co jste hledali. 
 
 :::image type="content" source="../media/search-error-page-sm.png" alt-text="Je nám líto, ale nenašli jsme shodu." border="false":::
 
 ## <a name="now-what"></a>Jaký je další postup?
 
+Je nám líto, ale Vypadá to, že se nám nepovedlo najít, co jste hledali. 
+
 **Hledáte `F1` nápovědu pro okno, klíčové slovo nebo název rozhraní API?**
 - Vyzkoušejte si oblíbený vyhledávací modul **[doporučeno]**
 - Použití panelu nástrojů [docs.Microsoft.com](/) k hledání 
-- Podívejte se na naši referenční dokumentaci k [rozhraní .NET API Browser](/dotnet/api/)
-- Získat nápovědu k [editoru kódu textu](../../ide/writing-code-in-the-code-and-text-editor.md)
+- Vyhledejte v [prohlížeči rozhraní .NET API](/dotnet/api/) nebo si přečtěte náš [Editor kódu textu. Přehled](../../ide/writing-code-in-the-code-and-text-editor.md)
 - Projděte si znalostní bázi Knowledge Base pro [Visual Studio – řešení potíží](/troubleshoot/visualstudio/welcome-visual-studio/)
 
 

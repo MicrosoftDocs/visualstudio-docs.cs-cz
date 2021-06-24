@@ -9,12 +9,12 @@ manager: jmartens
 monikerRange: vs-2022
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8df7c20e93073ab2fc6a727e29f738a4313fd1d7
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 12bbc159884c16ea89849e5c97a4b87292f7089d
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308770"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602224"
 ---
 # <a name="imageoptimizer---update-a-visual-studio-extension-step-by-step"></a>ImageOptimizer – aktualizace rozšíření sady Visual Studio krok za krokem
 
@@ -23,7 +23,7 @@ ms.locfileid: "112308770"
 V této příručce se zobrazí všechny kroky nutné pro přidání podpory sady Visual Studio 2022 a podpora sady Visual Studio 2019 pomocí rozšíření pro optimalizaci imagí jako případovou studii.  
 To je, že se jedná o důkladnou příručku s odkazy na potvrzení Git pro každý krok, ale tu můžete zdarma vidět tady: [https://github.com/madskristensen/ImageOptimizer/pull/46](https://github.com/madskristensen/ImageOptimizer/pull/46) .
 
-Na konci tohoto průvodce máme také [Další ukázky](https://github.com/microsoft/VSExtensibility/wiki/Samples#other-samples) .
+Na konci tohoto průvodce máme také [Další ukázky](#other-samples) .
 
 ## <a name="step-1---modernize-the-project"></a>Krok 1 – modernizovat projektu
 

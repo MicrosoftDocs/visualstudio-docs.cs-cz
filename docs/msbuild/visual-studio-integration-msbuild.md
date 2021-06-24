@@ -1,7 +1,7 @@
 ---
 title: Integrace sady Visual Studio (MSBuild)
 titleSuffix: ''
-description: Přečtěte si, jak může Visual Studio hostovat projekty ve formátu MSBuild, i když byly vytvořené pomocí různých nástrojů a vlastní procesy sestavení.
+description: Zjistěte, Visual Studio můžete hostovat projekty ve formátu MSBuild, i když byly autory různými nástroji a měly přizpůsobené procesy sestavení.
 ms.custom: seodec18, SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -21,34 +21,34 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ff8f195b6d77aeab9a01a6f3f6262f4024de1153
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 63e78d935d515ccafda461a8f7af77623387940b
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951651"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602152"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Integrace sady Visual Studio (MSBuild)
 
-Visual Studio hostuje nástroj MSBuild za účelem načtení a sestavení spravovaných projektů. Vzhledem k tomu, že nástroj MSBuild zodpovídá za projekt, téměř jakýkoli projekt ve formátu MSBuild lze v aplikaci Visual Studio úspěšně použít, i v případě, že projekt byl vytvořen jiným nástrojem a má přizpůsobený proces sestavení.
+Visual Studio msBuild k načtení a sestavení spravovaných projektů. Vzhledem k tomu, že nástroj MSBuild zodpovídá za projekt, lze v nástroji Visual Studio úspěšně použít téměř jakýkoli projekt ve formátu MSBuild, a to i v případě, že byl projekt vytvořen jiným nástrojem a má přizpůsobený proces sestavení.
 
- Tento článek popisuje konkrétní aspekty hostování MSBuild sady Visual Studio, které byste měli vzít v úvahu při přizpůsobení projektů a *. cílící* na soubory, které chcete načíst a sestavit v aplikaci Visual Studio. Ty vám pomůžou zajistit, aby funkce Visual studia jako IntelliSense a ladění fungovaly pro váš vlastní projekt.
+ Tento článek popisuje konkrétní aspekty hostování Visual Studio MSBuild, které je třeba zvážit při přizpůsobování projektů a *souborů .targets,* které chcete načíst a sestavit v Visual Studio. Pomohou vám zajistit, aby Visual Studio, jako je IntelliSense a ladění, fungovaly pro váš vlastní projekt.
 
- Další informace o projektech jazyka C++ naleznete v tématu [Project Files](/cpp/build/reference/project-files).
+ Informace o projektech C++ najdete v tématu [Soubory projektu](/cpp/build/reference/project-files).
 
 ## <a name="project-file-name-extensions"></a>Přípony názvů souborů projektu
 
- *MSBuild.exe* rozpozná všechny přípony názvů souborů projektu, které odpovídají vzoru *. \* PROJ*. Sada Visual Studio však rozpoznává pouze podmnožinu těchto přípon názvů souborů projektu, které určují systém projektu pro konkrétní jazyk, který načte projekt. Visual Studio nemá jazykově neutrální systém projektů založený na MSBuildu.
+ *MSBuild.exe* rozpozná jakoukoli příponu názvu souboru projektu odpovídající vzoru *. \* proj*. Ale Visual Studio pouze podmnožinu těchto přípon názvů souborů projektu, které určují systém projektu specifický pro jazyk, který projekt načte. Visual Studio nemá jazykově neutrální systém projektů založený na MSBuildu.
 
- Například systém projektu C# načítá soubory *. csproj* , ale Visual Studio nemůže načíst soubor *. xxproj* . Soubor projektu pro zdrojové soubory v libovolném jazyce musí používat stejnou příponu jako soubory projektu Visual Basic nebo C#, které mají být načteny v aplikaci Visual Studio.
+ Například systém projektu C# načte soubory *.csproj,* ale Visual Studio nemůže načíst *soubor .xxproj.* Soubor projektu pro zdrojové soubory v libovolném jazyce musí používat stejnou příponu jako soubory projektu Visual Basic nebo C#, které se mají načíst do Visual Studio.
 
 ## <a name="well-known-target-names"></a>Známé názvy cílů
 
- Kliknutím na příkaz **sestavit** v aplikaci Visual Studio se spustí výchozí cíl v projektu. Tento cíl je často také pojmenován `Build` . Výběrem příkazu **znovu sestavit** nebo **vyčistit** se pokusíte spustit cíl se stejným názvem v projektu. Kliknutím na **publikovat** se spustí cíl s názvem `PublishOnly` v projektu.
+ Kliknutím na **příkaz** Build Visual Studio spustíte výchozí cíl v projektu. Tento cíl má často také název `Build` . Výběrem příkazu **Rebuild** (Znovu sestavit) nebo **Clean (Vyčistit)** se v projektu pokusíte spustit cíl se stejným názvem. Kliknutím **na** Publikovat spustíte cíl s `PublishOnly` názvem v projektu.
 
 ## <a name="configurations-and-platforms"></a>Konfigurace a platformy
 
- Konfigurace jsou reprezentovány v projektech nástroje MSBuild podle vlastností seskupených v `PropertyGroup` prvku, který obsahuje `Condition` atribut. Pokud chcete vytvořit seznam konfigurací projektu a platforem pro zobrazení, Visual Studio si tyto podmínky vyhledá. Chcete-li úspěšně extrahovat tento seznam, podmínky musí mít formát podobný následujícímu:
+ Konfigurace jsou reprezentovány v projektech MSBuild podle vlastností seskupených `PropertyGroup` v elementu, který obsahuje `Condition` atribut. Visual Studio se na tyto podmínky podíváte, abyste vytvořili seznam konfigurací projektu a platforem, které se mají zobrazit. Pro úspěšné extrahování tohoto seznamu musí mít podmínky formát podobný následujícímu:
 
 ```xml
 Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "
@@ -56,11 +56,11 @@ Condition=" '$(Configuration)' == 'Release' "
 Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' "
 ```
 
- Visual Studio hledá v `PropertyGroup` tomto účelu podmínky pro `ItemGroup` prvky,, `Import` , vlastnosti a položky.
+ Visual Studio pro tento účel se podíváte na podmínky u `PropertyGroup` elementů , `ItemGroup` , , `Import` vlastností a položek.
 
 ## <a name="additional-build-actions"></a>Další akce sestavení
 
- Visual Studio umožňuje změnit název typu položky souboru v projektu pomocí vlastnosti **Akce sestavení** okna **vlastností souboru** . Názvy typů položek **kompilovat**, **EmbeddedResource**, **Content** a **none** jsou vždy uvedeny v této nabídce společně s jinými názvy typů položek, které jsou již v projektu. Aby bylo zajištěno, že všechny vlastní názvy typů položek jsou v této nabídce vždy k dispozici, můžete názvy přidat k typu položky s názvem `AvailableItemName` . Například přidáním následujícího do souboru projektu se přidá vlastní typ **JScript** do této nabídky pro všechny projekty, které je naimportují:
+ Visual Studio umožňuje změnit název typu položky souboru v projektu pomocí vlastnosti **Akce** sestavení v **okně Vlastnosti** souboru. **V** této nabídce jsou vždy uvedené názvy typů položek Compile , **EmbeddedResource,** **Content** a **None** a také všechny ostatní názvy typů položek, které už v projektu máte. Pokud chcete zajistit, aby v této nabídce byly vždy dostupné všechny vlastní názvy typů položek, můžete je přidat do typu položky s názvem `AvailableItemName` . Například přidáním následujícího kódu do souboru projektu přidáte do této nabídky vlastní typ **JScript** pro všechny projekty, které ho importuje:
 
 ```xml
 <ItemGroup>
@@ -68,50 +68,52 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 </ItemGroup>
 ```
 
+Přidání názvů typů položek do typu položky způsobí, že se položky tohoto typu zobrazí `AvailableItemName` **Průzkumník řešení**.
+
 > [!NOTE]
 > Některé názvy typů položek jsou pro Visual Studio speciální, ale nejsou uvedené v tomto rozevíracím seznamu.
 
-## <a name="in-process-compilers"></a>Vnitroprocesové kompilátory
+## <a name="in-process-compilers"></a>Kompilátory v procesu
 
- Pokud je to možné, Visual Studio se pokusí o zvýšení výkonu pomocí vnitroprocesové verze kompilátoru Visual Basic. (Neplatí pro C#.) Aby to fungovalo správně, musí se splnit následující podmínky:
+ Pokud je Visual Studio, nástroj se pokusí použít verzi v procesu nástroje Visual Basic pro zvýšení výkonu. (Nelze použít pro jazyk C#.) Aby to fungovalo správně, musí být splněny následující podmínky:
 
-- V cíli projektu musí existovat úkol s názvem `Vbc` pro Visual Basic projekty.
+- V cíli projektu musí být úkol s názvem pro Visual Basic `Vbc` projekty.
 
-- `UseHostCompilerIfAvailable`Parametr úlohy musí být nastaven na hodnotu true.
+- Parametr `UseHostCompilerIfAvailable` úlohy musí být nastaven na hodnotu true.
 
 ## <a name="design-time-intellisense"></a>Technologie IntelliSense v době návrhu
 
- Chcete-li získat podporu technologie IntelliSense v aplikaci Visual Studio předtím, než sestavení vygeneruje výstupní sestavení, musí být splněny následující podmínky:
+ Pokud chcete získat podporu Technologie IntelliSense Visual Studio, než sestavení vygeneruje výstupní sestavení, musí být splněny následující podmínky:
 
-- Musí existovat cíl s názvem `Compile` .
+- Musí být cíl s názvem `Compile` .
 
-- Buď `Compile` cíl nebo jedna z jeho závislostí musí volat úlohu kompilátoru pro projekt, například `Csc` nebo `Vbc` .
+- Cíl `Compile` nebo jedna z jeho závislostí musí volat úlohu kompilátoru pro projekt, například `Csc` nebo `Vbc` .
 
-- Buď `Compile` cíl nebo jedna z jeho závislostí musí způsobit, že kompilátor obdrží všechny nezbytné parametry pro technologii IntelliSense, zejména všechny odkazy.
+- Cíl nebo jedna z jeho závislostí musí způsobit, že kompilátor obdrží všechny potřebné parametry `Compile` pro IntelliSense, zejména všechny odkazy.
 
-- Podmínky uvedené v části [kompilátory v rámci procesu](#in-process-compilers) musí být splněné.
+- Podmínky uvedené v [části Kompilátory v procesu](#in-process-compilers) musí být splněny.
 
 ## <a name="build-solutions"></a>Vytváření řešení
 
- V sadě Visual Studio je řazení souborů řešení a sestavení projektu řízeno samotným systémem Visual Studio. Při sestavování řešení pomocí *msbuild.exe* na příkazovém řádku nástroj MSBuild analyzuje soubor řešení a seřadí sestavení projektu. V obou případech jsou projekty sestaveny jednotlivě v pořadí závislosti a odkazy z projektu na projekt nejsou procházeny. Na rozdíl od toho, když jsou jednotlivé projekty sestaveny s *msbuild.exe*, jsou odkazy z projektu na projekt procházeny.
+ V Visual Studio se pořadí sestavení projektu a souboru řešení řídí pomocí Visual Studio projektu. Při sestavování řešení *pomocímsbuild.exe* na příkazovém řádku nástroj MSBuild analyzuje soubor řešení a sesoudí sestavení projektu. V obou případech jsou projekty sestaveny jednotlivě v pořadí závislostí a odkazy mezi projekty nejsou procházené. Naopak při sestavení jednotlivých projektů pomocí *msbuild.exe* se prochádí odkazy mezi projekty.
 
- Při sestavování v sadě Visual Studio `$(BuildingInsideVisualStudio)` je vlastnost nastavena na `true` . To lze použít ve vašem projektu nebo souborech *. targets* , aby se sestavení mohlo chovat jinak.
+ Při sestavování uvnitř Visual Studio je vlastnost `$(BuildingInsideVisualStudio)` nastavená na `true` . To lze použít v projektu nebo *v souborech .targets,* aby se sestavení chovalo jinak.
 
 ## <a name="display-properties-and-items"></a>Zobrazení vlastností a položek
 
- Visual Studio rozpoznává určité názvy vlastností a jejich hodnoty. Například následující vlastnost v projektu způsobí, že se **aplikace systému Windows** zobrazí v poli **Typ aplikace** v **Návrháři projektu**.
+ Visual Studio rozpoznává určité názvy a hodnoty vlastností. Například následující vlastnost v projektu způsobí, že se  aplikace **systému Windows** zobrazí v poli Typ aplikace v **Návrháři projektů**.
 
 ```xml
 <OutputType>WinExe</OutputType>
 ```
 
- Hodnotu vlastnosti lze upravit v **Návrháři projektu** a Uložit do souboru projektu. Pokud je takové vlastnosti předána neplatnou hodnotou ruční úpravou, Visual Studio zobrazí upozornění, když je projekt načtený, a nahradí neplatnou hodnotu výchozí hodnotou.
+ Hodnotu vlastnosti lze upravit v Návrháři **projektu** a uložit do souboru projektu. Pokud je této vlastnosti dána neplatná hodnota ručními úpravami, Visual Studio zobrazí při načtení projektu upozornění a nahradí neplatnou hodnotu výchozí hodnotou.
 
- Visual Studio rozumí výchozím nastavením pro některé vlastnosti. Tyto vlastnosti nebudou uchovány do souboru projektu, pokud nemají hodnoty, které nejsou výchozími hodnotami.
+ Visual Studio výchozím hodnotám některých vlastností. Tyto vlastnosti se neuchová v souboru projektu, pokud nemají jiné než výchozí hodnoty.
 
- Vlastnosti s libovolnými názvy nejsou v aplikaci Visual Studio zobrazeny. Chcete-li upravit libovolné vlastnosti v aplikaci Visual Studio, je nutné otevřít soubor projektu v editoru XML a upravit je ručně. Další informace naleznete v části [Úpravy souborů projektu v aplikaci Visual Studio](#edit-project-files-in-visual-studio) dále v tomto tématu.
+ Vlastnosti s libovolnými názvy se v seznamu Visual Studio. Chcete-li upravit libovolné vlastnosti Visual Studio, musíte otevřít soubor projektu v editoru XML a ručně je upravit. Další informace najdete v části [Úprava souborů projektu v Visual Studio](#edit-project-files-in-visual-studio) dále v tomto tématu.
 
- Položky definované v projektu s libovolnými názvy typů položek jsou ve výchozím nastavení zobrazeny v **Průzkumník řešení** pod jejich uzlem projektu. Chcete-li skrýt položku ze zobrazení, nastavte `Visible` metadata na `false` . Například následující položka se bude účastnit procesu sestavení, ale nebude se zobrazovat v **Průzkumník řešení**.
+ Položky definované v projektu s libovolnými názvy typů položek se ve výchozím nastavení zobrazují **v Průzkumník řešení** pod jejich uzlem projektu. Pokud chcete položku skrýt před zobrazením, nastavte `Visible` metadata na `false` . Například následující položka se bude účastnit procesu sestavení, ale nebude zobrazena v **Průzkumník řešení**.
 
 ```xml
 <ItemGroup>
@@ -122,53 +124,53 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 ```
 
 > [!NOTE]
-> `Visible`Metadata jsou ignorována **Průzkumník řešení** pro projekty v jazyce C++. Položky budou vždy zobrazeny, i když `Visible` je nastavena na hodnotu false.
+> Metadata `Visible` jsou ignorována  Průzkumník řešení pro projekty C++. Položky se vždy zobrazí, i když `Visible` je nastavená hodnota false.
 
- Položky deklarované v souborech importovaných do projektu se ve výchozím nastavení nezobrazují. Položky vytvořené během procesu sestavení nejsou nikdy zobrazeny v **Průzkumník řešení**.
+ Položky deklarované v souborech importovaných do projektu se ve výchozím nastavení nezobrazí. Položky vytvořené během procesu sestavení se nikdy nezobrazí v **Průzkumník řešení**.
 
 ## <a name="conditions-on-items-and-properties"></a>Podmínky pro položky a vlastnosti
 
- Během sestavení jsou všechny podmínky plně dodržovány.
+ Během sestavování jsou všechny podmínky plně respektovány.
 
- Při určování hodnot vlastností, které se mají zobrazit, se vlastnosti, které Visual Studio považují za závislé na konfiguraci, vyhodnotí jinak než vlastnosti, které považují Pro vlastnosti, které považuje za závislé na konfiguraci, sada Visual Studio `Configuration` správně nastaví vlastnosti a a `Platform` instruuje nástroj MSBuild, aby projekt znovu vyhodnotil. U vlastností, které považuje za nezávislé na konfiguraci, je neurčité, jak budou podmínky vyhodnoceny.
+ Při určování hodnot vlastností, které se mají zobrazit, se vlastnosti, které Visual Studio konfigurace, vyhodnotí jinak než vlastnosti, které považuje za nezávislé na konfiguraci. U vlastností, které považuje za závislé na konfiguraci, Visual Studio a odpovídajícím způsobem nastaví vlastnosti a a instruuje nástroj MSBuild, aby projekt znovu `Configuration` `Platform` vyhodnotil. U vlastností, které považuje za nezávislé na konfiguraci, je neurčité, jak se budou podmínky vyhodnocovat.
 
- Podmíněné výrazy u položek se vždycky ignorují pro účely rozhodování o tom, jestli se má položka zobrazit v **Průzkumník řešení**.
+ Podmíněné výrazy u položek se vždy ignorují pro účely rozhodování, jestli se má položka zobrazit **v Průzkumník řešení**.
 
 ## <a name="debugging"></a>Ladění
 
- Aby bylo možné najít a spustit výstupní sestavení a připojit ladicí program, Visual Studio potřebuje vlastnosti `OutputPath` , `AssemblyName` a `OutputType` správně definované. Ladicí program se nepodaří připojit, pokud proces sestavení nezpůsobil, že kompilátor vygeneroval soubor *. pdb* .
+ Aby bylo možné najít a spustit výstupní sestavení a připojit ladicí program, Visual Studio vlastnosti , a správně `OutputPath` `AssemblyName` `OutputType` definované. Ladicí program se nepodaří připojit, pokud proces sestavení nezpůsobí vygenerování souboru *.pdb* kompilátorem.
 
-## <a name="design-time-target-execution"></a>Provádění cílů v době návrhu
+## <a name="design-time-target-execution"></a>Provedení cíle v době návrhu
 
- Visual Studio se pokusí provést cíle s určitými názvy při načtení projektu. Mezi tyto cíle patří,,, `Compile` `ResolveAssemblyReferences` `ResolveCOMReferences` `GetFrameworkPaths` a `CopyRunEnvironmentFiles` . Visual Studio spouští tyto cíle, aby bylo možné inicializovat kompilátor pro poskytování technologie IntelliSense, ladicí program lze inicializovat a odkazy zobrazené v Průzkumník řešení lze vyřešit. Pokud tyto cíle nejsou k dispozici, projekt se načte a sestaví správně, ale prostředí pro dobu návrhu v aplikaci Visual Studio nebude plně funkční.
+ Visual Studio se při načítání projektu pokusí spustit cíle s určitými názvy. Mezi tyto cíle `Compile` patří , , , a `ResolveAssemblyReferences` `ResolveCOMReferences` `GetFrameworkPaths` `CopyRunEnvironmentFiles` . Visual Studio tyto cíle spouští tak, aby kompilátor mohl být inicializován pro poskytnutí technologie IntelliSense, lze inicializovat ladicí program a odkazy zobrazené v Průzkumník řešení lze vyřešit. Pokud tyto cíle nejsou k dispozici, projekt se načte a sestaví správně, ale prostředí při návrhu Visual Studio nebude plně funkční.
 
-## <a name="edit-project-files-in-visual-studio"></a>Úpravy souborů projektu v aplikaci Visual Studio
+## <a name="edit-project-files-in-visual-studio"></a>Úprava souborů projektu v Visual Studio
 
- Chcete-li upravit projekt MSBuild přímo, můžete otevřít soubor projektu v editoru XML sady Visual Studio.
+ Chcete-li upravit projekt MSBuild přímo, můžete otevřít soubor projektu v Visual Studio XML.
 
 #### <a name="to-unload-and-edit-a-project-file-in-visual-studio"></a>Uvolnění projektu a jeho úprava v sadě Visual Studio
 
 1. V **Průzkumník řešení** otevřete místní nabídku pro projekt a pak zvolte **Uvolnit projekt**.
 
-     Projekt je označený **(není k dispozici)**.
+     Projekt je označený **jako (nedostupný).**
 
 2. V **Průzkumník řešení** otevřete místní nabídku pro nedostupný projekt a pak zvolte **Upravit \<Project File>**.
 
-     Soubor projektu se otevře v editoru XML sady Visual Studio.
+     Soubor projektu se otevře v editoru Visual Studio XML.
 
 3. Upravte, uložte a zavřete soubor projektu.
 
-4. V **Průzkumník řešení** otevřete místní nabídku pro nedostupný projekt a pak zvolte **znovu načíst projekt**.
+4. V **Průzkumník řešení** otevřete místní nabídku pro nedostupný projekt a pak zvolte **Znovu načíst projekt.**
 
 ## <a name="intellisense-and-validation"></a>IntelliSense a ověřování
 
- Při použití editoru XML k úpravám souborů projektu je technologie IntelliSense a ověřování ovládána pomocí souborů schématu MSBuild. Ty jsou nainstalované v mezipaměti schématu, které najdete v *\<Visual Studio installation directory> \Xml\Schemas\1033\MSBuild*.
+ Při použití editoru XML k úpravám souborů projektu je technologie IntelliSense a ověřování řízena soubory schématu nástroje MSBuild. Ty se instaluje do mezipaměti schématu, kterou najdete ve složce *\<Visual Studio installation directory> \Xml\Schemas\1033\MSBuild*.
 
- Základní typy nástroje MSBuild jsou definovány v *Microsoft. Build. Core. xsd* a běžné typy používané v aplikaci Visual Studio jsou definovány v *Microsoft. Build. CommonTypes. xsd*. Chcete-li přizpůsobit schémata, abyste měli IntelliSense a ověřování pro vlastní názvy typů položek, vlastnosti a úkoly, můžete buď upravit *Microsoft. Build. xsd*, nebo vytvořit vlastní schéma, které obsahuje schémata CommonTypes nebo Core. Pokud vytvoříte vlastní schéma, budete muset nasměrovat editor XML, abyste ho našli pomocí okna **vlastnosti** .
+ Základní typy MSBuild jsou definovány v *souboru Microsoft.Build.Core.xsd* a běžné typy používané službou Visual Studio jsou definovány v souboru *Microsoft.Build.CommonTypes.xsd.* Pokud chcete schémata přizpůsobit tak, abyste měli technologii IntelliSense a ověřování pro názvy, vlastnosti a úkoly vlastních položek, můžete buď upravit *soubor Microsoft.Build.xsd,* nebo vytvořit vlastní schéma, které zahrnuje schémata CommonTypes nebo Core. Pokud vytvoříte vlastní schéma, budete muset nasměrovejte editor XML, aby ho našel pomocí **okna** Vlastnosti.
 
-## <a name="edit-loaded-project-files"></a>Upravit načtené soubory projektu
+## <a name="edit-loaded-project-files"></a>Úprava načtených souborů projektu
 
- Visual Studio ukládá do mezipaměti obsah souborů projektu a souborů importovaných soubory projektu. Pokud upravíte načtený soubor projektu, Visual Studio vás automaticky vyzve k opětovnému načtení projektu, aby se změny projevily. Pokud však upravíte soubor importovaný načteným projektem, nezobrazí se výzva k opakovanému načtení a je nutné znovu načíst a znovu načíst projekt, aby se změny projevily.
+ Visual Studio ukládá do mezipaměti obsah souborů projektu a souborů importovaných soubory projektu. Pokud upravíte načtený soubor projektu, Visual Studio automaticky zobrazí výzvu k opětovnému načtení projektu, aby se změny projeví. Pokud ale upravíte soubor importovaný načteným projektem, nebude k dispozici žádná výzva k opětovnému načtení a musíte projekt uvolnit a znovu ručně načíst, aby se změny projeví.
 
 ## <a name="output-groups"></a>Výstupní skupiny
 

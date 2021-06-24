@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: edb257f6e5e0b74ef7f60a8447b7c89053a04e24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e9579e4969cb53ed2f1bcf749e8114386af85d0
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896483"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602146"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Sdělte ladicímu programu, co se má zobrazit pomocí atributu DebuggerDisplay (C#, Visual Basic, F #, C++/CLI).
 
@@ -51,9 +51,9 @@ V následující tabulce jsou uvedeny některé možné způsoby použití `Debu
 |`Name`, `Type`|Tyto parametry ovlivňují sloupce **název** a **typ** v oknech proměnných. (Mohou být nastaveny na řetězce pomocí stejné syntaxe jako konstruktor.) Tyto parametry jsou převedené nebo nesprávně používané, můžou způsobit matoucí výstup.|
 |`Target`, `TargetTypeName`|Určuje cílový typ, pokud je atribut použit na úrovni sestavení.|
 
-Soubor autoexp.cs používá atribut DebuggerDisplay na úrovni sestavení. Soubor autoexp.cs určuje výchozí rozšíření, které Visual Studio používá pro objekty .NET. Můžete si prohlédnout soubor autoexp.cs, kde najdete příklady použití atributu DebuggerDisplay, nebo můžete upravit a zkompilovat soubor autoexp.cs pro změnu výchozích rozšíření. Nezapomeňte soubor autoexp.cs před úpravou zálohovat.
+Soubor autoexp. cs používá atribut DebuggerDisplay na úrovni sestavení. Soubor autoexp. cs určuje výchozí rozšíření, které Visual Studio používá pro objekty .NET. Můžete si prohlédnout soubor autoexp. cs, kde najdete příklady použití atributu DebuggerDisplay, nebo můžete upravit a zkompilovat soubor autoexp. cs pro změnu výchozích rozšíření. Před úpravou souboru autoexp. cs nezapomeňte zálohovat.
 
-Pokud chcete sestavit autoexp.cs, otevřete Developer Command Prompt pro VS2015 a spusťte následující příkazy.
+Pokud chcete sestavit autoexp. cs, otevřete Developer Command Prompt pro VS2015 a spusťte následující příkazy.
 
 ```cmd
 cd <directory containing autoexp.cs>
@@ -96,7 +96,7 @@ public sealed class MyClass
 Přípona ", NQ" oznamuje vyhodnocení výrazu, aby při zobrazení konečné hodnoty (NQ = bez uvozovek) odebrala uvozovky.
 
 ## <a name="example"></a>Příklad
-Následující příklad kódu ukazuje, jak použít `DebuggerDisplay` spolu s `DebuggerBrowseable` a `DebuggerTypeProxy` . Při zobrazení v okně proměnných ladicího programu, jako je například okno **kukátka** , vytvoří rozšíření, které vypadá takto:
+Následující příklad kódu ukazuje, jak použít `DebuggerDisplay` spolu s `DebuggerBrowsable` a `DebuggerTypeProxy` . Při zobrazení v okně proměnných ladicího programu, jako je například okno **kukátka** , vytvoří rozšíření, které vypadá takto:
 
 |**Název**|**Hodnota**|**Typ**|
 |--------------|---------------|--------------|

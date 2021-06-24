@@ -9,12 +9,12 @@ ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b2637703e068a98e20f209d5de51a6003a4dd7f4
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 2ae488056986afbe35763be1eebb500ff0eab9a8
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386732"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602265"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>Začínáme s jazyky specifickými pro doménu
 
@@ -45,8 +45,8 @@ K definování DSL musíte mít nainstalované následující součásti:
 
 | Komponenta | Odkaz |
 |-|-|
-| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
-| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com) |
+| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [https://go.microsoft.com/fwlink/?linkid=2166172](../extensibility/visual-studio-sdk.md) |
 | Sada Modeling SDK pro Visual Studio | |
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
@@ -281,81 +281,81 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
    ![Diagram stromu rodiny, panel nástrojů a Průzkumník](../modeling/media/familyt_instance.png)
 
 ### <a name="define-new-classes"></a>Definovat nové třídy
- Do modelu můžete přidat doménové třídy a relace. Můžete například vytvořit novou třídu, která bude představovat města, a nový vztah, který bude představovat osobu, která žije ve městě.
+ Do modelu můžete přidat doménové třídy a vztahy. Můžete například vytvořit novou třídu reprezentující města a novou relaci, která bude představovat, že osoba žila ve městě.
 
- Pokud chcete, aby se různé typy v diagramu modelu liché, můžete mapovat třídy domény na různé druhy tvarů nebo na tvary s různou geometrií a barvami.
+ Chcete-li, aby byly různé typy jedinečné v diagramu modelu, můžete mapovat třídy domény na různé druhy tvarů nebo na tvary s jinou geometrií a barvami.
 
-##### <a name="to-add-and-display-a-new-domain-class"></a>Přidání a zobrazení nové třídy domény
+##### <a name="to-add-and-display-a-new-domain-class"></a>Přidání a zobrazení nové doménové třídy
 
-1. Přidejte třídu domény a udělejte z ní podřízený objekt kořenového adresáře modelu.
+1. Přidejte doménovou třídu a nastavte ji jako podřízenou položku modelu kořene.
 
-    1. V diagramu definice DSL klikněte na nástroj **Vztahu** vkládání, klikněte na kořenovou třídu **FamilyTreeModel** a potom klikněte na prázdnou část diagramu.
+    1. V diagramu definice DSL klikněte na nástroj pro **vložení vztahu** , klikněte na kořenovou třídu **FamilyTreeModel** a pak klikněte do prázdné části diagramu.
 
-         Zobrazí se nová třída domény, která je připojená k modelu FamilyTreeModel pomocí vztahu vkládání.
+         Zobrazí se Nová doménová třída, která je připojena k FamilyTreeModel pomocí vztahu vložení.
 
-         Nastavte jeho název, například **Město**.
-
-        > [!NOTE]
-        > Každá třída domény s výjimkou kořenu modelu musí být cílem alespoň jedné relace vkládání, nebo musí dědit z třídy, která je cílem vkládání. Z tohoto důvodu je často vhodné vytvořit třídu domény pomocí nástroje Vztahu vkládání.
-
-    2. Do nové třídy přidejte vlastnost domény, například **Název**.
-
-2. Přidejte referenční relaci mezi Person (Osoba) a Town (Město).
-
-    1. Klikněte na **nástroj Referenční vztah,** klikněte na Osoba a pak klikněte na Město.
-
-         ![Fragment definice DSL: kořen stromové struktury rodiny](../modeling/media/familyt_root.png)
+         Nastavte jeho název, například **město**.
 
         > [!NOTE]
-        > Relace odkazů představují křížové odkazy z jedné části stromu modelu do druhé.
+        > Každá doménová třída s výjimkou kořene modelu musí být cílem nejméně jedné relace vložení, nebo musí dědit ze třídy, která je cílem vložení. Z tohoto důvodu je často vhodné vytvořit doménovou třídu pomocí nástroje pro vkládání vztahů.
 
-3. Přidejte tvar, který bude představovat města v diagramech modelu.
+    2. Přidejte do nové třídy doménovou vlastnost, například **název**.
 
-    1. Přetáhněte **tvar geometrie** z panelu nástrojů do diagramu a přejmenujte ho, například **TownShape**.
+2. Přidejte vztah odkazu mezi osobu a město.
 
-    2. V okno Vlastnosti nastavte pole Vzhled nového tvaru, například Barva výplně a Geometrie.
+    1. Klikněte na nástroj **referenčního vztahu** , klikněte na osoba a pak klikněte na město.
 
-    3. Přidejte dekorátor, který zobrazí název města, a přejmenujte ho na NameDecorator. Nastavte jeho vlastnost Position.
+         ![Fragment definice DSL: kořenový adresář stromu rodiny](../modeling/media/familyt_root.png)
 
-4. Namapovat třídu domény Město na TownShape.
+        > [!NOTE]
+        > Referenční vztahy znázorňují křížové odkazy z jedné části stromu modelu do jiného.
 
-    1. Klikněte na **nástroj Diagram Element Map,** pak klikněte na třídu domény Město a pak na třídu obrazce TownShape.
+3. Přidejte tvar, který bude představovat městy v diagramech modelů.
 
-    2. Na kartě **Mapy dekorátoru** v **okně Podrobnosti DSL** s vybraným konektorem mapy zaškrtněte políčko NameDecorator a vlastnost zobrazení **nastavte** na Název.
+    1. Přetáhněte **tvar geometrie** ze sady nástrojů do diagramu a přejmenujte jej, například **TownShape**.
 
-5. Vytvořte konektor pro zobrazení vztahu mezi Person (Osoba) a Towns (Města).
+    2. V okno Vlastnosti nastavte pole vzhled nového tvaru, jako je například barva výplně a geometrie.
 
-    1. Přetáhněte konektor ze sady nástrojů do diagramu. Přejmenujte ho a nastavte jeho vlastnosti vzhledu.
+    3. Přidáním dekoratér zobrazíte název města a přejmenujete ho NameDecorator. Nastavte jeho vlastnost Position.
 
-    2. Pomocí nástroje **Diagram Element Map (Mapa** elementů diagramu) propoojte nový konektor se vztahem mezi Person (Osoba) a Town (Město).
+4. Namapujte třídu města domény na TownShape.
 
-         ![Definice family tree s přidanou mapou obrazce](../modeling/media/familyt_shapemap.png)
+    1. Klikněte na nástroj **Mapa elementu diagramu** , potom klikněte na třídu města domény a potom na třídu TownShape Shape.
+
+    2. Na kartě **mapy dekoratér** okna s **podrobnostmi DSL** s vybraným konektorem mapy ověřte NameDecorator a nastavte **vlastnost Display** na název.
+
+5. Vytvořte konektor pro zobrazení vztahu mezi osobami a městy.
+
+    1. Přetáhněte spojnici z panelu nástrojů do diagramu. Přejmenujte ho a nastavte jeho vlastnosti vzhledu.
+
+    2. Použijte nástroj **Mapa elementu diagramu** k propojení nového konektoru s vztahem mezi osobou a městem.
+
+         ![Definice stromu řady s přidanou mapou obrazce](../modeling/media/familyt_shapemap.png)
 
 6. Vytvořte nástroj elementu pro vytvoření nového města.
 
-    1. V **Průzkumníku DSL** rozbalte **Editor a** pak karty **panelu nástrojů**.
+    1. V **Průzkumníku DSL** rozbalte **Editor** a pak vyberte **karty nástrojů**.
 
-    2. Klikněte pravým tlačítkem *\<your DSL>* a potom klikněte na Přidat nový nástroj **elementu**.
+    2. Klikněte pravým tlačítkem *\<your DSL>* a potom klikněte na tlačítko **Přidat nový prvek nástroje**.
 
-    3. Nastavte **vlastnost** Name nového nástroje a jeho **vlastnost Class** nastavte na Město.
+    3. Nastavte vlastnost **název** nového nástroje a vlastnost **Class** nastavte na město.
 
-    4. Nastavte **vlastnost Ikona panelu** nástrojů. Klikněte **naikony a** **v poli Název souboru** vyberte soubor ikony.
+    4. Nastavte vlastnost **Icon panelu nástrojů** . Klikněte na položku **[...]** a v poli **název souboru** vyberte soubor ikony.
 
-7. Vytvořte nástroj konektoru pro propojení mezi městy a lidmi.
+7. Vytvořte nástroj konektoru pro vytvoření propojení mezi městy a lidmi.
 
-    1. Klikněte pravým tlačítkem *\<your DSL>* a potom klikněte na Přidat nový nástroj **konektoru**.
+    1. Klikněte pravým tlačítkem *\<your DSL>* a pak klikněte na **Přidat nový nástroj konektoru**.
 
-    2. Nastavte vlastnost Name nového nástroje.
+    2. Nastavte vlastnost název nového nástroje.
 
-    3. Ve **vlastnosti ConnectionBuilder** vyberte tvůrce, který obsahuje název Person-Town relace.
+    3. Ve vlastnosti **tvůrci propojení** vyberte Tvůrce, který obsahuje název vztahu Person-Town.
 
     4. Nastavte **ikonu panelu nástrojů**.
 
-8. Uložte definici DSL, klikněte **na Transformovat všechny šablony** a stiskněte klávesu **F5**.
+8. Uložte definici DSL, klikněte na **transformovat všechny šablony** a potom stiskněte klávesu **F5**.
 
-9. V experimentální instanci Visual Studio otevřete soubor testovacího modelu. Pomocí nových nástrojů můžete vytvářet města a propojení mezi městy a osobami. Všimněte si, že můžete vytvořit pouze propojení mezi správnými typy elementu.
+9. V experimentální instanci aplikace Visual Studio otevřete soubor testovacího modelu. Pomocí nových nástrojů můžete vytvářet městy a propojení mezi městy a osobami. Všimněte si, že můžete vytvořit pouze propojení mezi správnými typy elementu.
 
-10. Vytvořte kód, který vypíše město, ve kterém každá osoba žije. Textové šablony jsou jedním z míst, kde můžete takový kód spustit. Můžete například upravit existující soubor Sample.tt v řešení ladění tak, aby měl následující kód:
+10. Vytvořte kód, ve kterém se zobrazí město, ve kterém každý člověk bydlí. Textové šablony jsou jedno z míst, kde můžete spustit takový kód. Můžete například upravit existující soubor Sample.tt v řešení ladění tak, aby obsahoval následující kód:
 
     ```
     <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" debug="true" #>
@@ -380,34 +380,34 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
     ```
 
-     Když soubor *.tt uložíte, vytvoří se soubor pobočky, který bude obsahovat seznam lidí a jejich poboček. Další informace najdete v tématu [Generování kódu z Domain-Specific Language.](../modeling/generating-code-from-a-domain-specific-language.md)
+     Když soubor *. TT uložíte, vytvoří se soubor dceřiné společnosti, který obsahuje seznam lidí a jejich pobytů. Další informace naleznete v tématu [generování kódu z Domain-Specificho jazyka](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ## <a name="validation-and-commands"></a>Ověřování a příkazy
- Tento DSL můžete dále vyvíjet přidáním ověřovacích omezení. Tato omezení jsou metody, které můžete definovat, a zajistit tak, aby byl model ve správném stavu. Můžete například definovat omezení, abyste měli jistotu, že datum narození dítěte je pozdější než datum narození jeho rodičů. Funkce ověřování zobrazí upozornění, pokud se uživatel DSL pokusí uložit model, který poruší jakákoli omezení. Další informace najdete v tématu [Ověřování v jazyce Domain-Specific.](../modeling/validation-in-a-domain-specific-language.md)
+ Tuto DSL můžete vyvinout dále přidáním omezení ověřování. Tato omezení jsou metody, které lze definovat, aby se zajistilo, že model je ve správném stavu. Můžete například definovat omezení, abyste se ujistili, že datum narození dítěte je pozdější než jeho nadřazené položky. Funkce ověřování zobrazí upozornění, pokud se uživatel DSL pokusí uložit model, který zruší některá omezení. Další informace najdete v tématu [ověřování v Domain-Specificm jazyce](../modeling/validation-in-a-domain-specific-language.md).
 
- Můžete také definovat příkazy nabídky, které může uživatel vyvolat. Příkazy mohou model upravit. Mohou také komunikovat s jinými modely v Visual Studio a s externími prostředky. Další informace najdete v tématu [Postupy: Úprava standardního příkazu nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+ Můžete také definovat příkazy nabídky, které může uživatel vyvolat. Příkazy mohou model upravit. Mohou také komunikovat s jinými modely v aplikaci Visual Studio a s externími prostředky. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
 ## <a name="deploying-the-dsl"></a>Nasazení DSL
- Pokud chcete ostatním uživatelům povolit používání jazyka specifického pro doménu, distribuujete soubor Visual Studio Extension (VSIX). Vytvoří se při sestavování řešení DSL.
+ Chcete-li ostatním uživatelům dovolit, aby používali jazyk specifický pro doménu, distribuujete soubor rozšíření aplikace Visual Studio (VSIX). Vytvoří se při vytváření řešení DSL.
 
- Ve složce bin vašeho řešení vyhledejte soubor .vsix. Zkopírujte ho do počítače, na který ho chcete nainstalovat. Na tomto počítači poklikejte na soubor VSIX. DSL lze použít ve všech instancích Visual Studio počítači.
+ Vyhledejte soubor. vsix ve složce Bin vašeho řešení. Zkopírujte ho do počítače, na který ho chcete nainstalovat. V tomto počítači poklikejte na soubor VSIX. DSL lze použít ve všech instancích aplikace Visual Studio na daném počítači.
 
- Stejný postup můžete použít k instalaci DSL do vlastního počítače, takže není nutné používat experimentální instanci Visual Studio.
+ Stejný postup můžete použít k instalaci DSL na vlastní počítač, abyste nemuseli používat experimentální instanci sady Visual Studio.
 
- Další informace najdete v tématu [Nasazení Domain-Specific jazyka](msi-and-vsix-deployment-of-a-dsl.md).
+ Další informace najdete v tématu [nasazení Domain-Specific jazykových řešení](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a> Odebrání starých experimentálních adres DSL
- Pokud jste vytvořili experimentální seznamy DSL, které už nechcete, můžete je z počítače odebrat resetováním instance Visual Studio Experimentální.
+## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a> Odebrání starých experimentálních DSL
+ Pokud jste vytvořili experimentální DSL, které už nechcete, můžete je z počítače odebrat resetováním experimentální instance sady Visual Studio.
 
- Tím se z počítače odeberou všechny experimentální seznamy DSL a další experimentální Visual Studio rozšíření. Jedná se o rozšíření, která byla spuštěna v režimu ladění.
+ Tím se z počítače odebere všechna experimentální DSL a další experimentální rozšíření sady Visual Studio. Jedná se o rozšíření, která byla spuštěna v režimu ladění.
 
- Tento postup neodebere seznamy DSL ani Visual Studio rozšíření, která byla plně nainstalována spuštěním souboru VSIX.
+ Tento postup neodebere DSL nebo jiná rozšíření sady Visual Studio, která byla plně nainstalována spuštěním souboru VSIX.
 
-#### <a name="to-reset-the-visual-studio-experimental-instance"></a>Resetování instance Visual Studio Experimentální instance
+#### <a name="to-reset-the-visual-studio-experimental-instance"></a>Resetování experimentální instance sady Visual Studio
 
-1. Klikněte **na Start,** **klikněte** na Všechny programy, **Microsoft Visual Studio 2010 SDK,** **Nástroje** a potom **na Resetovat Microsoft Visual Studio 2010 Experimentální instance**.
+1. Klikněte na tlačítko **Start**, klikněte na položku **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje** a poté **resetujte experimentální instanci Microsoft Visual Studio 2010**.
 
-2. Znovu sestavte všechny experimentální seznamy DSL nebo Visual Studio rozšíření, která chcete stále používat.
+2. Znovu sestavte všechna experimentální DSL nebo jiná experimentální rozšíření sady Visual Studio, která chcete dál používat.
 
 ## <a name="see-also"></a>Viz také
 

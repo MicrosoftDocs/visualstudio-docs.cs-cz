@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: eef6a8bbdf5afc3aa5f36b0afdb374fd5beac471
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: b10fc1adbb0b4a6e053549749ea90acf3919d0c6
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307489"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602201"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Vytvoření offline instalace sady Visual Studio
 
@@ -184,7 +184,7 @@ Otevřete příkazový řádek a použijte parametry bootstrapperu, jak jsou def
 ::: moniker range=">=vs-2019"
 
    > [!NOTE]
-   > Úplné rozložení Visual Studio vyžaduje minimálně 35 GB místa na disku. Další informace najdete v tématu [Požadavky na systém.](/visualstudio/releases/2019/system-requirements/)
+   > Úplné rozložení Visual Studio vyžaduje minimálně 41 GB místa na disku. Další informace najdete v tématu [Požadavky na systém.](/visualstudio/releases/2019/system-requirements/)
 
 ::: moniker-end
 
@@ -239,8 +239,8 @@ c:\vslayout\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.Mana
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytvoření síťové instalace Visual Studio](../install/create-a-network-installation-of-visual-studio.md)
+- [Vytvoření síťové instalace sady Visual Studio](../install/create-a-network-installation-of-visual-studio.md)
 - [Aktualizace síťové instalace sady Visual Studio](update-a-network-installation-of-visual-studio.md)
-- [Instalace certifikátů požadovaných pro Visual Studio offline instalaci](../install/install-certificates-for-visual-studio-offline.md)
+- [Instalace certifikátů vyžadovaných pro instalaci sady Visual Studio offline](../install/install-certificates-for-visual-studio-offline.md)
 - [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 - [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
