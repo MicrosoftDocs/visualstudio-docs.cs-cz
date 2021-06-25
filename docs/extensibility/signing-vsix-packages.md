@@ -3,7 +3,7 @@ title: Podepisování balíčků VSIX | Microsoft Docs
 description: Přečtěte si o sestaveních rozšíření podepisování. Instalační program VSIX zobrazí zprávu, že je VSIX podepsáno, a informace o samotném podpisu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - signature
 - signing
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2a2c9703eb41c1a3e5baa023d8240b56ccbb13b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d481c75754c7bc49369987d4bf6dc3aa33e96fdc
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056360"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899157"
 ---
 # <a name="signing-vsix-packages"></a>Podepisování balíčků VSIX
 Sestavení rozšíření nemusí být podepsána předtím, než mohou běžet v aplikaci Visual Studio, ale je dobrým zvykem.

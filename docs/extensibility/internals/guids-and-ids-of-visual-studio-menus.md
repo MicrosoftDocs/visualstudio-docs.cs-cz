@@ -3,7 +3,7 @@ title: Identifikátory GUID a ID nabídek sady Visual Studio | Microsoft Docs
 description: Zobrazte seznam hodnot identifikátoru GUID a ID pro nabídky a skupiny v řádku nabídek sady Visual Studio, který je součástí integrovaného vývojového prostředí (IDE) sady Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - visual studio menus
 - visual studio groups
@@ -17,12 +17,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9f5066c5ae5c9fa57517406b8eca388747979c4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bceee5fce8a77ad5169020bd3d21896bdbc71443
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082085"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898068"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Identifikátory GUID a ID nabídek sady Visual Studio
 V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skupin na řádku nabídek sady Visual Studio. Tyto hodnoty jsou definovány v souborech *. vsct* , které jsou nainstalovány jako součást sady Visual Studio SDK. Další informace naleznete v tématu [příkazy, nabídky a skupiny definované rozhraním IDE](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -93,34 +93,34 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 |GoTo|IDG_VS_EDIT_GOTO|
 |Vyhledávání|IDG_VS_EDIT_FIND|
 |Objekty|IDG_VS_EDIT_OBJECTS|
-|Příkazy OLE|IDG_VS_EDIT_OLEVERBS|
-|Well – příkaz|IDG_VS_EDIT_COMMANDWELL|
+|OLE – příkazy|IDG_VS_EDIT_OLEVERBS|
+|Dobře příkazů|IDG_VS_EDIT_COMMANDWELL|
 
-### <a name="refactor-menu-groups"></a>Refaktorovat skupiny nabídek
+### <a name="refactor-menu-groups"></a>Refaktoring skupin nabídek
 
 |Group (Skupina)|ID|
 |-----------|--------|
 |Společné|IDG_REFACTORING_COMMON|
 |Pokročilý|IDG_REFACTORING_ADVANCED|
 
-### <a name="view-menu-groups"></a>Zobrazit skupiny nabídek
+### <a name="view-menu-groups"></a>Zobrazení skupin nabídek
 
 |Group (Skupina)|ID|
 |-----------|--------|
 |Kód formuláře|IDG_VS_VIEW_FORMCODE|
 |Prohlížeč|IDG_VS_VIEW_BROWSER|
-|Definovat zobrazení|IDG_VS_VIEW_DEFINEVIEWS|
+|Definování zobrazení|IDG_VS_VIEW_DEFINEVIEWS|
 |Windows|IDG_VS_VIEW_WINDOWS|
-|Okna architektů|IDG_VS_VIEW_ARCH_WINDOWS|
+|Architekt Windows|IDG_VS_VIEW_ARCH_WINDOWS|
 |Okna organizace|IDG_VS_VIEW_ORG_WINDOWS|
 |Prohlížeč kódu|IDG_VS_VIEW_CODEBROWSENAV_WINDOWS|
-|Vývojové okna|IDG_VS_VIEW_DEV_WINDOWS|
+|Vývoj pro Windows|IDG_VS_VIEW_DEV_WINDOWS|
 |Panely nástrojů|IDG_VS_VIEW_TOOLBARS|
 |Symboly|IDG_VS_VIEW_SYMBOLNAVIGATE|
 |Navigace|IDG_VS_VIEW_NAVIGATE|
-|Malý navig|IDG_VS_VIEW_SMALLNAVIGATE|
+|Small Navigate|IDG_VS_VIEW_SMALLNAVIGATE|
 |prohlížeč objektů|IDG_VS_VIEW_OBJBRWSR|
-|Well – příkaz|IDG_VS_VIEW_COMMANDWELL|
+|Dobře příkazů|IDG_VS_VIEW_COMMANDWELL|
 |Stránky vlastností|IDG_VS_VIEW_PROPPAGES|
 |Aktualizovat|IDG_VS_VIEW_REFRESH|
 
@@ -131,7 +131,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 |Různé přidání|IDG_VS_PROJ_MISCADD|
 |Přidání|IDG_VS_PROJ_ADD|
 |Složka|IDG_VS_PROJ_FOLDER|
-|Uvolnit nebo znovu načíst|IDG_VS_PROJ_UNLOADRELOAD|
+|Uvolnění nebo opětovné načtení|IDG_VS_PROJ_UNLOADRELOAD|
 |Reference|IDG_VS_PROJ_REFERENCE|
 |Možnosti|IDG_VS_PROJ_OPTIONS|
 |Nastavení|IDG_VS_PROJ_SETTINGS|
@@ -146,7 +146,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 |Různé|IDG_VS_BUILD_MISC|
 |Zrušit|IDG_VS_BUILD_CANCEL|
 
-### <a name="tools-menu-groups"></a>Skupiny nabídek nástrojů
+### <a name="tools-menu-groups"></a>Skupiny nabídek Nástroje
 
 |Group (Skupina)|ID|
 |-----------|--------|
@@ -154,7 +154,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 |Fragmenty kódu|IDG_VS_TOOLS_SNIPPETS|
 |Podmnožina objektu|IDG_VS_TOOLS_OBJSUBSET|
 |Možnosti|IDG_VS_TOOLS_OPTIONS|
-|Ostatní 2|IDG_VS_TOOLS_OTHER2|
+|Další 2|IDG_VS_TOOLS_OTHER2|
 |Externí nástroje|IDG_VS_TOOLS_EXT_TOOLS|
 |Externí přizpůsobení|IDG_VS_TOOLS_EXT_CUST|
 

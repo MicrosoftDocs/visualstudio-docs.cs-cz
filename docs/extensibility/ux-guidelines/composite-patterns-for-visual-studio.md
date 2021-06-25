@@ -3,19 +3,19 @@ title: Složené vzory pro Visual Studio | Microsoft Docs
 description: Přečtěte si o důležitých složených vzorech pro konzistenci v aplikaci Visual Studio. Složené vzory kombinují interakce a prvky návrhu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c6f609842f2531fe39158e871a330e136603433
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b8b84baa7be7449b8edb6241e415fc90c9acd594
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090054"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901419"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Složené vzory pro Visual Studio
 Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích. Mezi nejdůležitější složené vzory v aplikaci Visual Studio s ohledem na konzistenci patří:
@@ -115,43 +115,43 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 - **Nikdy** nepoužívejte informace v bodě pozornosti, které uživateli přebírají z hlavního obsahu. Pokud uživatelé potřebují zobrazit podrobný obsah samostatně, vystavte explicitní akci, která uživateli umožní to provést.
 
 #### <a name="design-details"></a>Podrobnosti návrhu
- Jakmile se rozhodnete, že uživatelské rozhraní je správné volbou, existují čtyři hlavní požadavky na návrh:
+ Jakmile určíte, že uživatelské rozhraní v objektu je správnou volbou, je třeba vzít v úvahu čtyři hlavní aspekty návrhu:
 
-1. **Trvalost:** je očekáváno, že je obsah trvalý nebo přechodný?
-   Budou si uživatelé chtít ponechat informace, které se budou zobrazovat, aby mohli odkazovat na nebo pracovat s nimi? Nebo se uživatelé budou chtít rychle podívat na informace a pak pokračovat s hlavní úlohou?
+1. **Trvalost:** Očekává se, že obsah bude trvalý nebo přechodný?
+   Budou uživatelé chtít, aby tyto informace byly viditelné nebo s nimi komunikovat? Nebo budou uživatelé chtít rychle zobrazit informace a pak pokračovat v hlavním úkolu?
 
-2. **Typ obsahu:** bude obsah informativní, napadnutelný nebo navigace?
-   Potřebuje uživatel další podrobnosti o hlavním obsahu? Musí uživatel dokončit úkol, který má vliv na hlavní obsah? Nebo uživatel musí směrovat na jiný prostředek?
+2. **Typ obsahu:** Bude obsah informační, akční nebo navigační?
+   Potřebuje uživatel další podrobnosti o hlavním obsahu? Musí uživatel dokončit úlohu, která má vliv na hlavní obsah? Nebo musí být uživatel přesměrován na jiný prostředek?
 
-3. **Typ indikátoru:** provede okolní indikátor?
-   Mohou být informace užitečné a zobrazeny bez zahlcení hlavního obsahu?
+3. **Typ indikátoru:** Dává okolní indikátor smysl?
+   Je možné informace shrnout užitečným způsobem a zobrazit bez zahlcení hlavního obsahu?
 
-4. **Gesta:** jaká gesta budou použita k vyvolání a zavření uživatelského rozhraní?
-   Jak si uživatel zavolá podrobný obsah a pošle ho hned? Existuje hodnota pro přidání gesta, jako je například připnutí pro přepínání mezi přechodnými a trvalými stavy?
+4. **Gesta: jaká** gesta se budou používat k vyvolání a zavření uživatelského rozhraní?
+   Jak uživatel zobrazí podrobný obsah a odešle ho? Má přidání gesta hodnotu, například připnutí pro přepínání mezi přechodným a trvalým stavem?
 
-   Každý z těchto čtyř rozhodovacích bodů bude mít dopad na hlavní součásti uživatelského rozhraní pro objekty.
+   Každý z těchto čtyř rozhodovacích bodů bude mít vliv na hlavní komponenty uživatelského rozhraní on-object.
 
-### <a name="on-object-ui-components"></a>Komponenty uživatelského rozhraní pro objekty
+### <a name="on-object-ui-components"></a>Komponenty uživatelského rozhraní v objektu
 
-1. Typ kontejneru (předvádějící obsah)
+1. Typ kontejneru (content presenter)
 
-    - Dekadické
+    - Plovoucí
 
     - Přiřazený
 
 2. Typ obsahu
 
-    - Informativní: data, která mohou být statická nebo dynamická
+    - Informační: data, která můžou být statická nebo dynamická
 
-    - Možné akce: příkazy, které mění hlavní obsah
+    - S akcemi: Příkazy, které mění hlavní obsah
 
-    - Navigace: odkazy, které přijímají uživatele do jiného okna nebo aplikace, jako je například MSDN
+    - Navigace: Odkazy, které uživatele převezou do jiného okna nebo aplikace, například MSDN
 
 3. Gesta
 
     - Invocation
 
-    - Zavření
+    - Propuštění
 
     - Připnutí
 
@@ -159,7 +159,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
 4. Model trvalosti a potvrzení
 
-    - Dočasný
+    - Přechodné
 
     - Odolné
 
@@ -167,92 +167,92 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
     - Na vyžádání
 
-5. Okolní indikátory (volitelné)
+5. Ambientní indikátory (volitelné)
 
-    - Podtržení vlnovkou
+    - Podtržení podtržení
 
     - Ikona inteligentní značky
 
-    - Další okolí ukazatelů
+    - Další indikátory okolí
 
-#### <a name="container-content-presenter-type"></a>Typ kontejneru (předvádějící obsah)
- K dispozici jsou dvě hlavní možnosti pro prezentování obsahu v okamžiku pozornosti:
+#### <a name="container-content-presenter-type"></a>Typ kontejneru (content presenter)
+ K dispozici jsou dvě hlavní možnosti prezentace obsahu v bodě pozornosti:
 
-1. **Inline:** vložený předvádějící, jako je náhled zobrazení, který byl představený v editoru kódu Visual Studio 2013, vytváří prostor pro nový obsah posunutím stávajícího obsahu.
+1. **Vložené:** Vložený prezentátor, jako je zobrazení náhledu, které bylo představeno v editoru Visual Studio 2013 Code, vytváří místo pro nový obsah posunutím existujícího obsahu.
 
-    - **Dáváte přednost** vloženému předvádějící, pokud očekáváte, že uživatelé budou chtít strávit významné množství času, který bude odkazovat na obsah, který máte k dispozici, nebo v něm pracovat.
+    - **Pokud** očekáváte, že uživatelé budou chtít věnovat značnou část času odkazování na obsah, který prezentujete, nebo s ním pracovat, dáváte přednost vloženým prezentantům.
 
-    - **Nepoužívejte** vložené prezentující, pokud očekáváte, že uživatelé budou chtít zobrazit informace, které máte k dispozici, a potom pokračovat v hlavním úkolu s minimálním přerušením.
+    - **Vyhněte** se vloženým přednáškům, pokud očekáváte, že uživatelé budou chtít zobrazit informace, které prezentují, a pokračovat v jejich hlavním úkolu s minimálním přerušením.
 
-2. **Floated:** plovoucí předvádějící je umístěn co nejblíže vybranému obsahu, ale nemění rozložení stávajícího obsahu. Můžete použít různé strategie, jako je například zobrazení plovoucího panelu obsahu na nejbližším dostupném prázdném místě pro vybraný symbol.
+2. **Plovoucí desetinná** čárka: Plovoucí prezentátor je umístěný co nejvíce blízko vybraného obsahu, ale nemění rozložení existujícího obsahu. Je možné použít různé strategie, například zobrazení plovoucího panelu obsahu nad nejbližším dostupným bílým znakem k vybranému symbolu.
 
-    - **Preferovat** plovoucí předvádějící, pokud očekáváte, že uživatelé budou chtít zobrazit informace, které jsou k dispozici, a pak pokračovat s hlavním úkolem s minimálním přerušením.
+    - **Pokud** očekáváte, že uživatelé budou chtít zobrazit informace, které prezentujete, upřednostňte plovoucí prezentátory, pokračujte v jejich hlavním úkolu s minimálním přerušením.
 
-    - **Nepoužívejte** plovoucí předvádějící, pokud očekáváte, že uživatelé budou chtít strávit významné množství času, který bude odkazovat na nebo v interakci s obsahem, který máte k dispozici.
+    - **Vyhněte** se plovoucím prezentantům, pokud očekáváte, že uživatelé budou chtít věnovat značnou část času odkazování na obsah, který prezentujete, nebo s ním pracovat.
 
 #### <a name="content-type"></a>Typ obsahu
- Existují tři hlavní typy obsahu, které lze zobrazit v jakémkoli kontejneru uživatelského rozhraní v objektu. Můžete zobrazit jakoukoli kombinaci těchto typů informací. Existují tři typy:
+ Existují tři hlavní typy obsahu, které lze zobrazit v libovolném kontejneru uživatelského rozhraní v objektu. Můžete zobrazit libovolnou kombinaci těchto typů informací. Jsou to tyto tři typy:
 
-1. **Informativní:** Většina kontejnerů uživatelského rozhraní v objektu se zobrazí jako určitý druh informativního obsahu. Obsah může představovat informace o současném stavu prostředí nebo může představovat informace o možném budoucím stavu prostředí. Například lze použít k zobrazení efektu konkrétního příkazu, jako je refaktoring, pro existující kód.
+1. **Informační: Většina** kontejnerů uživatelského rozhraní v objektu bude zobrazovat nějaký druh informačního obsahu. Obsah může představovat informace o současném stavu prostředí nebo může představovat informace o potenciálním budoucím stavu prostředí. Lze ji například použít k zobrazení efektu konkrétního příkazu, například refaktoringu, na existující kód.
 
-    - **Vždy** používejte kanonickou reprezentaci informací, které zobrazíte. Kód by měl například vypadat jako kód, být dokončen s zvýrazňováním syntaxe a měl by respektovat libovolné písmo a další nastavení prostředí, které uživatel nastavil.
+    - **Vždy** používejte kanonické znázornění informací, které zobrazíte. Kód by například měl vypadat jako kód, se zvýrazněnou syntaxí a měl by respektovat jakékoli písmo a další nastavení prostředí, které uživatel nastavil.
 
-    - V případě, že se stejné informace zobrazují jako hlavní obsah, **vždy** zvažte podporu všech akcí nad informačním obsahem. Pokud například prezentujete existující kód v kontejneru uživatelského rozhraní v objektu, důrazně zvažte možnost Procházet a upravovat tento kód.
+    - **Vždy** zvažte podporu všech akcí s informačním obsahem, které by bylo možné v případě, že by se stejné informace prezentoval jako hlavní obsah. Pokud například prezentuje existující kód uvnitř kontejneru uživatelského rozhraní v objektu, důrazně zvažte podporu možnosti procházení a úpravy tohoto kódu.
 
-    - Při prezentování informačního obsahu, který představuje možný budoucí stav, **vždy** zvažte použití jiné barvy pozadí.
+    - **Vždy** zvažte použití jiné barvy pozadí, pokud prezentuje informační obsah, který představuje potenciální budoucí stav.
 
-2. Možné akce: některé kontejnery uživatelského rozhraní v objektech budou mít možnost provádět určitou akci nad hlavním obsahem, například provedení operace refaktoringu.
+2. Použitelné: Některé kontejnery uživatelského rozhraní na objektech poskytují možnost provádět určité akce s hlavním obsahem, jako je například provedení operace refaktoringu.
 
-    - **Vždycky** umístit příkazy, které se mají provést, nezávisle na informativním obsahu.
+    - **Příkazy** s akcemi vždy umístěte odděleně od informačního obsahu.
 
-    - V případě potřeby **vždy** povolte a zakažte akce.
+    - **V případě** potřeby vždy povolte a zakažte akce.
 
-    - **Vždy** Přečtěte si standardní pokyny pro reprezentaci příkazů uvnitř dialogových oken.
+    - **Vždy** si přečtěte standardní pokyny pro reprezentaci příkazů uvnitř dialogových oken.
 
-    - **Vždy** Udržujte počet akcí, které jsou vystaveny v kontejneru uživatelského rozhraní v objektu, do absolutního minima. Interakce s uživatelským rozhraním v uživatelském rozhraní by měla být odlehčené a rychlé prostředí. Uživatel by neměl vyplatit energii při správě samotného kontejneru uživatelského rozhraní v objektu.
+    - **Vždy** udržte počet akcí, které jsou vystavené v kontejneru uživatelského rozhraní na objekt, na absolutní minimum. Interakce s uživatelským rozhraním na objektech by měla být odlehčená a rychlá. Uživatel by neměl vynachálit energii na správu samotného kontejneru uživatelského rozhraní v objektu.
 
-    - **Vždy** Vezměte v úvahu, jak a kdy se kontejner uživatelského rozhraní v objektu bude zavřít nebo zrušit. Osvědčeným postupem je, že všechny akce, které uzavírají dialog mezi hlavním a podrobným obsahem, by měly také při vyvolání této akce Zavřít kontejner uživatelského rozhraní v objektu.
+    - **Vždy** zvažte, jak a kdy se kontejner uživatelského rozhraní v objektu zavře nebo zavře. Osvědčeným postupem je, aby každá akce, která uzavírá dialog mezi hlavním a podrobným obsahem, měla při vyvolání této akce také zavřít kontejner uživatelského rozhraní pro objekty.
 
-3. **Navigace:** některé kontejnery uživatelského rozhraní v objektu obsahují odkazy, které přebírají uživatele do jiného okna nebo aplikace, jako je například otevření článku na webu MSDN v prohlížeči uživatele.
+3. **Navigace:** Některé kontejnery uživatelského rozhraní v objektu obsahují odkazy, které uživatele převezou do jiného okna nebo aplikace, například otevření článku MSDN ve webovém prohlížeči uživatele.
 
-    - **Vždy** předřaďte jakékoli navigační propojení s "otevřený", aby se uživatelé nepřekvapeni pomocí přechodu na jiný obsah.
+    - **Vždy** předejte libovolný navigační odkaz jako "Otevřený", aby uživatelé nepřekvapí tím, že přechádnou k jinému obsahu.
 
-    - **Vždycky** oddělují navigační odkazy z odkazů s akcemi.
+    - **Navigační** odkazy vždy oddělte od odkazů s akcemi.
 
-#### <a name="ambient-indicators-optional"></a>Okolní indikátory (volitelné)
- Okolní indikátory můžou být drobné, včetně textu, který je zobrazený v kontrastní barvě od zbytku kódu nebo zjevně, včetně tickler symbolů, jako jsou vlnovky podtržení a ikony inteligentních značek. Okolní indikátory komunikují dostupnost dalších relevantních informací. V ideálním případě poskytují užitečné informace, a to i bez nutnosti uživatele s nimi pracovat.
+#### <a name="ambient-indicators-optional"></a>Ambientní indikátory (volitelné)
+ Ambientní indikátory mohou být drobné, včetně textu, který se zobrazí v kontrastní barvě od zbytku kódu, nebo zřejmé, včetně symbolů ticklerů, jako jsou podtržení vlnovkou a ikony inteligentních značek. Ambientní indikátory sdělují dostupnost dalších relevantních informací. V ideálním případě poskytují užitečné informace i bez nutnosti, aby s nimi uživatel komunikoval.
 
-- **Vždy** umístěte okolí indikátoru tak, aby se uživatel nenavíc ani nepřezahltí. Pokud není možné umístit indikátor okolí takovým způsobem, zvažte jiné řešení.
+- **Vždy** umístěte indikátor okolí tak, aby uživatele nerušil ani nezahlcuje. Pokud není možné umístit okolní indikátor takovým způsobem, zvažte jiné řešení.
 
-- **Vždy** Umístěte indikátor okolí co nejblíže k obsahu, ke kterému se vztahuje.
+- **Vždy** umístěte indikátor okolí co nejvíce k obsahu, se který souvisí.
 
-- **Vždy** se pokuste vytvořit indikátor, který shrnuje informace, které zpřístupňuje. Zvažte zadání počtu dostupných datových položek (například "3 odkazy" místo jednoduše "odkazy") nebo si můžete představit jiný způsob sumarizace dat.
+- **Vždy** se pokuste vytvořit indikátor, který shrnuje informace, které z něj jsou k dispozici. Zvažte zadání počtu dostupných datových položek (například "3 odkazy" místo pouhého "odkazy") nebo si představte jiný způsob, jak data sumarizovat.
 
-  - V případech, kdy data pro indikátor nelze vždy vypočítat a zobrazit, okamžitě zvažte poskytnutí progresivní zpětné vazby při výpočtu hodnot. Zvažte například animace změn, které odpovídají aktualizacím dostupných dat, podobně jako živá dlaždice e-mailu na Windows Phone aktualizuje se, jak se zvyšuje počet nepřečtených e-mailů.
+  - V případech, kdy data indikátoru nelze vždy vypočítat a zobrazit, zvažte okamžité poskytnutí progresivní zpětné vazby při výpočtu hodnot. Zvažte například animaci změn, které odrážejí aktualizace dostupných dat, podobně jako se dlaždice živého e-mailu na Windows Phone aktualizuje s tím, jak se počet nepřečtených e-mailů zvyšuje.
 
-- **Nikdy** Nepřidávat další indikátory, než uživatel může u daného obsahu rozumně brát v úvahu. Okolní indikátory by měly být užitečné bez nutnosti jakékoliv interakce od uživatele. Indikátory ztratí své Ambience, pokud vyžadují přetečení a jiné ovládací prvky pro správu, aby je bylo možné zobrazit.
+- **Nikdy** nepřidáte další indikátory, než může uživatel přiměřeně využít pro danou část obsahu. Ambientní indikátory by měly být užitečné bez nutnosti zásahu uživatele. Indikátory ztrácejí svoje dech, pokud vyžadují přetečení a další ovládací prvky pro správu, aby je bylo vidět.
 
 #### <a name="gestures"></a>Gesta
- Klíčovým aspektem, který uživateli umožňuje zachovat fokus na hlavním obsahu, je podpora správných gest pro otevření a zavření dalšího obsahu podrobností.
+ Klíčovým aspektem, který uživateli umožňuje soustředit se na hlavní obsah, je podpora správných gest pro otevření a zavření dalšího podrobného obsahu.
 
-- **Vždy** vyžadovat, aby uživatel prováděl nějaký explicitní gesto pro otevření dalšího obsahu. Mezi společná otevřená gesta patří:
+- **Vždy** vyžadovat, aby uživatel k otevření dalšího obsahu explicitně prováděl gesto. Mezi běžná otevřená gesta patří:
 
-  - **Najetí myší:** popisy a neinteraktivní informační obsah
+  - **Najetí myší:** popisy tlačítek nebo neinteraktivní informační obsah
 
-  - **Explicitní příkaz:** vložený předvádějící
+  - **Explicitní příkaz:** inline presenter
 
-  - **Dvakrát klikněte na indikátor okolí:** Automaticky otevírané okno CodeLens
+  - **Poklikejte na indikátor okolí:** Automaticky otevírané okno CodeLens
 
-- **Vždy** zavřít podrobný obsah pokaždé, když uživatel stiskne klávesu ESC.
+- **Obsah** podrobností vždy zavřete vždy, když uživatel stiskne klávesu Esc.
 
-- **Vždy** Vezměte v úvahu kontext uživatelského rozhraní v objektu. Pro předvádějící obsah, který umožňuje interakci v rámci kontejneru, pečlivě zvažte, jestli se mají zobrazit další informace o ukazateli myši, což je pravděpodobně rušivé pro pracovní postup uživatele.
+- **Vždy** zvažte kontext uživatelského rozhraní on-object. U přednášejících obsahu, kteří umožňují interakci v rámci kontejneru, pečlivě zvažte, jestli se při najetí myší zobrazí další informace, což může narušovat pracovní postup uživatele.
 
-- **Nikdy** nezobrazovat obsah při najetí myší, který je možná upravitelný nebo pozve na interakci uživatele Toto chování může frustrovat uživatele, pokud se pokusí přesunout kurzor nad obsah s podrobnostmi, protože standardní chování pro popis tlačítka se okamžitě odvolá, když ukazatel už není nad hlavním obsahem, který ho vytvořil.
+- **Nikdy** nezobrazovat obsah při najetí myší, který se zdá být upravitelný nebo pozve interakci uživatele. Toto chování může uživatele frustrovat, pokud se pokusí přesunout kurzor na obsah podrobností, protože standardním chováním popisu je okamžité zavření, když už kurzor není nad hlavním obsahem, který ho vytvořil.
 
 ## <a name="selection-models"></a><a name="BKMK_SelectionModels"></a> Modely výběru
 
 ### <a name="overview"></a>Přehled
- Model výběru je mechanismus používaný k označení a potvrzení operací na jednom nebo více objektech, které mají zájem v rámci uživatelského rozhraní. Toto téma popisuje vzory interakcí výběru v rámci editorů dokumentů sady Visual Studio: textové editory, návrhové plochy a povrchy modelování.
+ Model výběru je mechanismus, který slouží k indikování a potvrzení operací s jedním nebo více objekty, které vás zajímají v uživatelském rozhraní. Toto téma popisuje vzory interakce výběru v Visual Studio dokumentů: textové editory, návrhové plochy a plochy modelování.
 
  Uživatelé musí mít způsob, jak v aplikaci Visual Studio navýšit, na čem pracují, a Visual Studio musí reagovat na předpověď s názory uživatelů na to, na čem pracuje. Rozdíly nebo nesprávná komunikace mezi uživatelem a uživatelským rozhraním může mít za následek, že uživatel nevšímáte akci, což může mít nezamýšlené důsledky. Často se chyba neprojeví, dokud se uživatel nestane, že nějaká položka chybí nebo se změnila. Modely výběru jsou proto jedním z nejdůležitějších částí návrhu uživatelského rozhraní. I když jsou modely výběru v aplikaci Visual Studio konzistentní s Windows, existují mírné odchylky.
 
@@ -279,17 +279,17 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
  V případě oken dokumentů je aktivní okno označeno na kartě okna dokumentu, které přichází dopředu a mění jeho barvu pozadí:
 
- ![Aktivní výběr karty v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-01_activetab.png "0713 – 01_ActiveTab")
+ ![Aktivní výběr karty v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-01_activetab.png "0713-01_ActiveTab")
 
  **Aktivní výběr karty**
 
  V případě oken nástrojů je aktivní okno označeno změnou barvy oblasti záhlaví okna nástroje:
 
- ![Aktivní výběr okna nástrojů v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-02_activetoolwindow.png "0713 – 02_ActiveToolWindow")
+ ![Aktivní výběr okna nástrojů v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-02_activetoolwindow.png "0713-02_ActiveToolWindow")
 
  **Aktivní okno nástroje znázorňující primární výběr uzlu**
 
- ![Neaktivní výběr okna nástrojů v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-03_inactivetoolwindow.png "0713 – 03_InactiveToolWindow")
+ ![Neaktivní výběr okna nástrojů v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-03_inactivetoolwindow.png "0713-03_InactiveToolWindow")
 
  **Neaktivní okno nástroje, které zobrazuje latentní výběr uzlu**
 
@@ -307,7 +307,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 #### <a name="region-selection-box-selection"></a>Výběr oblasti (výběr pole)
  Visual Studio podporuje výběry oblastí v textovém editoru a tato možnost se nazývá výběr boxu. Výběr pole umožňuje uživateli vybrat oblast textu, která nenásleduje za běžným textovým datovým proudem. Stejně jako u výběru standardního textu musí být výběr souvislý. Výběr pole se iniciuje stisknutím klávesy ALT při přetahování myší. Výběr pole lze také iniciovat tak, že podržíte klávesy ALT a Shift při použití kláves se šipkami k označení oblasti výběru. Výběr pole používá zvýraznění normálního výběru a ukazuje kurzor místa kurzoru na konci oblasti výběru.
 
- ![Oblastní &#40;&#41; výběru v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-04_boxselection.png "0713 – 04_BoxSelection")
+ ![Oblastní &#40;&#41; výběru v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-04_boxselection.png "0713-04_BoxSelection")
 
  **Oblast (box) výběr v aplikaci Visual Studio**
 
@@ -337,81 +337,81 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 |Myší|I v případě, že objekt není dříve vybrán, změní ukazatel na kurzor přesunutí a přesune objekt.|
 |Editor ztratí fokus|Deaktivuje místní režim úprav, i když objekt uchovává obsah a vzhled, který měl během posledního provozu nebo stavu výběru.|
 |Výběr objektu|Označeno ohraničením, tečkovanou čárou nebo jiným vizuálně odlišným způsobem, který zvýrazní hranici objektu.|
-|Změna velikosti vybraného objektu|Označeny popisovači výběru.<br /><br /> Objekt s možností změny velikosti má osm popisovačů, které představují jednotlivé směry, ve kterých se dá změnit její velikost. Pokud je možné změnit velikost objektu pouze v určitých směrech, lze použít méně popisovačů. Když uživatel velikost objektu rozloží na, kde osm popisovačů nebudou interaktivní, mohou být použity čtyři popisovače. Velikosti popisovačů by měly být svázané s metrikami ohraničení a okraje okna s funkcí rozhraní API **GetSystemMetrics** , aby se velikost zobrazovala v poměru k rozlišení obrazovky.<br /><br /> ![Úchyty pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-05_resizehandles.png "0713 – 05_ResizeHandles")|
-|Otočení vybraného objektu|![Úchyty pro otáčení](../../extensibility/ux-guidelines/media/0713-06_rotate.png "0713 – 06_Rotate")|
+|Změna velikosti vybraného objektu|Označeny popisovači výběru.<br /><br /> Objekt s možností změny velikosti má osm popisovačů, které představují jednotlivé směry, ve kterých se dá změnit její velikost. Pokud je možné změnit velikost objektu pouze v určitých směrech, lze použít méně popisovačů. Když uživatel velikost objektu rozloží na, kde osm popisovačů nebudou interaktivní, mohou být použity čtyři popisovače. Velikosti popisovačů by měly být svázané s metrikami ohraničení a okraje okna s funkcí rozhraní API **GetSystemMetrics** , aby se velikost zobrazovala v poměru k rozlišení obrazovky.<br /><br /> ![Úchyty pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-05_resizehandles.png "0713-05_ResizeHandles")|
+|Otočení vybraného objektu|![Otočení úchytů](../../extensibility/ux-guidelines/media/0713-06_rotate.png "0713-06_Rotate")|
 
 #### <a name="keyboard-interaction"></a>Interakce klávesnice
 
 |Vstup|Výsledek|
 |-----------|------------|
-|Karta|Přesune ukazatel fokusu mezi logické pořadí objektů v editoru. To může být zleva doprava nebo shora dolů v závislosti na hodnotě vlastnosti **TabIndex** (nebo ekvivalentní), pořadí vytvoření objektu a celkovém účelu editoru. SHIFT + TAB obrátí směr indikátoru fokusu.|
-|Mezerník|Aktivuje režim posouvání, když se zachová klávesová zkratka. K posunu pozice zobrazení je potřeba další vstup myši.|
-|Ctrl + mezerník|Aktivuje režim lupy při údržbě klávesových zkratek. K navýšení a snížení měřítka lupy je potřeba další vstup myši.|
-|CTRL + ALT + mínus – symbol|Zmenší faktor přiblížení o jednu úroveň.|
-|CTRL + ALT + znaménko plus|Zvětší faktor přiblížení o jednu úroveň.|
-|Shift nebo CTRL|Přidá objekt do skupiny výběru. CTRL také umožňuje odebrat objekty samostatně ze skupiny výběru.|
-|Enter|Provede výchozí příkaz pro objekt (obvykle otevřít nebo upravit).|
-|F2|Aktivuje místní úpravy objektu.|
-|Šipkové klávesy|Přesune vybrané objekty ve směru stisknutí klávesy se šipkou, v malých přírůstcích (například po 1 pixelech v daném čase).|
-|CTRL + klávesy se šipkami|Přesune vybraný objekt (y) ve směru stisknutí klávesy se šipkou, ve větších přírůstcích (například 10 pixelů najednou).|
-|Shift + klávesy se šipkami|Změní velikost vybraných objektů v příslušném směru, a to v malých přírůstcích (například 1 pixel v čase).|
-|CTRL + SHIFT + klávesy se šipkami|Změní velikost vybraných objektů v příslušném směru ve větších přírůstcích (například 10 pixelů najednou).|
+|Karta|Přesune ukazatel fokusu mezi logickým pořadím objektů v editoru. To může být zleva doprava nebo shora dolů v závislosti na hodnotě vlastnosti **TabIndex** (nebo ekvivalentní vlastnosti), pořadí vytváření objektu a celkovém účelu editoru. Shift+Tab obrátí směr ukazatele fokusu.|
+|Mezerník|Aktivuje režim posouvání při zachování stisknutí klávesy. K posouní pozice zobrazení se vyžaduje další vstup myši.|
+|Ctrl + mezerník|Aktivuje režim lupy při zachování stisknutí klávesy. Ke zvýšení a snížení faktoru zvětšení se vyžaduje další vstup myši.|
+|Ctrl+ Alt + znaménko minus|Zmenšuje faktor zvětšení o jednu úroveň.|
+|Ctrl+Alt+znaménko plus|Zvýší faktor přiblížení o jednu úroveň.|
+|Shift OR Ctrl|Přidá objekt do skupiny výběru. Ctrl také umožňuje odebrat objekty jednotlivě ze skupiny výběru.|
+|Enter|Provede výchozí příkaz pro objekt (obvykle Open (Otevřít) nebo Edit (Upravit).|
+|F2|Aktivuje úpravy objektu na místě.|
+|Šipkové klávesy|Přesune vybrané objekty ve směru stisknutí klávesy se šipkou v malých přírůstcích (například po 1 pixelu).|
+|Ctrl + klávesy se šipkami|Přesune vybrané objekty ve směru stisknutí klávesy se šipkou ve větších přírůstcích (například po 10 pixelech).|
+|Shift + klávesy se šipkami|Změní velikost vybraných objektů v příslušném směru v malých přírůstcích (například po 1 pixelu).|
+|Ctrl + Shift + klávesy se šipkami|Změní velikost vybraných objektů v příslušném směru ve větších přírůstcích (například 10 pixelů najednou).|
 
- Když uživatelé upravují ovládací prvky, může být vhodné, aby objekty automaticky měnily velikost pomocí vstupu uživatele. Pokud uživatel například upraví ovládací prvek popisek, měl by popisek zvětšit, aby zobrazil text, který uživatel právě zadal. Pokud to není hotové, uživatel musí změnit velikost ovládacího prvku ručně po úpravě textu. Pokud má uživatel spoustu ovládacích prvků, jedná se o Rote a neproduktivní úkol.
+ Když uživatelé upravují ovládací prvky na místě, může být pro objekty smyslusné automaticky měnit velikost pomocí uživatelského vstupu. Pokud například uživatel upraví ovládací prvek popisek, měl by se popisek zvětšovat a zobrazit text, který uživatel právě na typoval. Pokud to není hotové, uživatel musí po úpravě textu změnit velikost ovládacího prvku ručně. Pokud má uživatel mnoho ovládacích prvků, stane se z něj rote a neproduktivní úkol.
 
 #### <a name="graphical-containers"></a>Grafické kontejnery
- V některých případech grafické editory poskytují kontejnery pro jiné grafické objekty, jako je ovládací prvek panelu model Windows Forms nebo ovládací prvek rozložení mřížky v Návrháři HTML. Pokud editor poskytuje kontejnery pro jiné grafické objekty, měl by se použít následující model výběru pro kontejner (objekty v kontejneru se řídí standardním modelem, jak je popsáno výše):
+ V některých případech grafické editory poskytují kontejnery pro jiné grafické objekty, jako je ovládací model Windows Forms Panel nebo ovládací prvek Rozložení mřížky v návrháři HTML. Pokud editor poskytuje kontejnery pro jiné grafické objekty, měl by se použít následující model výběru pouze pro kontejner (objekty v kontejneru dodržují standardní model, jak je popsáno výše):
 
 |Vstup|Výsledek|
 |-----------|------------|
-|Jediné kliknutí na kontejner|Vybere objekt kontejneru bez přímého výběru některého z obsažených objektů. Kontejner se dá přesunout nebo změnit jeho velikost standardním vstupem myši a klávesnicí (jak je popsáno výše). Obsažené objekty jsou přesunuty ve vztahu ke kontejneru, ale u obsažených objektů se nezmění velikost, pokud nejsou zároveň přímo vybrány.|
-|Najeďte myší na oblast hranice kontejneru|Zapne ukazatel myši na kurzor přesunutí, který označuje, že lze kontejner přesunout.|
-|Přetáhněte oblast hranice kontejneru.|Změní ukazatel myši na kurzor přesunutí a přesune kontejner (a obsažené objekty v rámci). Kontejner nelze přesunout bez předchozího výběru jediným kliknutím.|
-|Jedním kliknutím na objekt v kontejneru|Odškrtne kontejner (Pokud je vybrán) a vybere pouze vybraný objekt.|
-|Shift + kliknutí nebo Ctrl + kliknutí na obsažený objekt a kontejner|Přidá vybraný objekt do existující skupiny výběru nebo výběru. Pokud je vybraný objekt již členem skupiny výběru, je odebrán ze skupiny výběru.|
+|Kliknutí na kontejner jedním kliknutím|Vybere objekt kontejneru bez přímého výběru libovolného z obsažených objektů. Kontejner můžete přesunout nebo změnit jeho velikost standardním vstupem z myši a klávesnice (jak je popsáno výše). Obsažené objekty jsou přesunuty ve vztahu ke kontejneru, ale velikost obsažených objektů není změněna, pokud nejsou také vybrány přímo.|
+|Najeďte myší na hraniční oblast kontejneru.|Změní myš na kurzor, který označuje, že kontejner lze přesunout.|
+|Přetažení hraniční oblasti kontejneru|Změní ukazatel myši na kurzor a přesune kontejner (a obsažené objekty v něm). Kontejner nelze přesunout, aniž by bylo nejprve vybráno jediným kliknutím.|
+|Kliknutí na objekt v rámci kontejneru|Zruší výběr kontejneru (pokud je vybraný) a vybere pouze objekt, na který jste klikli.|
+|Shift + kliknutí NEBO Ctrl + kliknutí na obsažený objekt a/nebo kontejner|Přidá objekt, na který jste klikli, do existujícího výběru nebo skupiny výběrů. Pokud už je objekt, na který jste klikli, členem skupiny výběru, odebere se ze skupiny výběru.|
 
- Obsažené objekty by měly splňovat základní model výběru, jak je popsáno v předchozí části. Z testování použitelnosti návrháře model Windows Forms uživatelé očekávali bezproblémový přístup k objektům, které obsahují, bez nutnosti přecházet k uvedeným krokům (uložené objektem omezení).
+ Obsažené objekty by měly dodržovat základní model výběru, jak je popsáno v předchozí části. Od testování použitelnosti návrháře model Windows Forms uživatelé očekávali bezproblémový přístup k obsaženým objektům bez použití kroků (vynucované objektem pro omezení).
 
-#### <a name="disjoint-and-region-selections"></a>Nesouvislé a výběr oblasti
- Grafické editory objektů by měly podporovat nesouvislé výběry. Uvědomte si prosím, že tento obrázek nezobrazuje vzhled ovládacího prvku pro Visual Studio. Podrobné specifikace vizuálů najdete v tématu [vzhled výběru grafického objektu](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_GraphicalObjectSelectionAppearance) .
+#### <a name="disjoint-and-region-selections"></a>Výběr nesouvislých oblastí a oblastí
+ Editory grafických objektů by měly podporovat nesouvislé výběry. Upozorňujeme, že tento obrázek neobsahuje vzhled ovládacího prvku pro Visual Studio. Podrobné [specifikace vizuálů najdete v tématu](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_GraphicalObjectSelectionAppearance) Vzhled grafického objektu.
 
- ![Nesouvislé a selektory oblastí](../../extensibility/ux-guidelines/media/0713-07_disjointregionselectors.png "0713 – 07_DisjointRegionSelectors")
+ ![Nesouvislé selektory a selektory oblastí](../../extensibility/ux-guidelines/media/0713-07_disjointregionselectors.png "0713-07_DisjointRegionSelectors")
 
  **Nesouvislý výběr**
 
- Grafické editory by měly také nabízet výběry oblastí s indikátorem výběru typu rámečku. Pokud grafický editor podporuje jiné typy objektů (například text), pak výběry oblastí nemusí být možné v závislosti na omezeních těchto jiných typů objektů.
+ Grafické editory by také měly poskytovat výběry oblastí s indikátorem výběru typu náhon. Pokud grafický editor podporuje jiné typy objektů (například text), nemusí být výběr oblastí možný v závislosti na omezeních těchto ostatních typů objektů.
 
- ![Výběr běžícího textu](../../extensibility/ux-guidelines/media/0713-08_marqueeselection.png "0713 – 08_MarqueeSelection")
+ ![Výběr možnosti](../../extensibility/ux-guidelines/media/0713-08_marqueeselection.png "0713-08_MarqueeSelection")
 
- **Výběr běžícího textu**
+ **Výběr možnosti**
 
-#### <a name="primary-and-secondary-selections"></a>Primární a sekundární výběr
- Některé editory grafických objektů umožňují uživateli upravovat nebo zarovnávat objekty ve skupinách. V tomto případě je potřeba zavést koncept primárního a sekundárního výběru. Primární výběr je objekt, na který všechny ostatní objekty reagují na operace skupiny. Objekt, který uživatel vybere jako první, se stane primárním ovládacím prvkem a následné výběry se stanou sekundárními výběry. Primární výběr má odlišné vizuální zpracování ze sekundárních výběrů k označení, který objekt je primární:
+#### <a name="primary-and-secondary-selections"></a>Primární a sekundární výběry
+ Některé editory grafických objektů umožňují uživateli upravovat nebo zarovnat objekty ve skupinách. V tomto případě je potřeba zavést koncept primárního a sekundárního výběru. Primární výběr je objekt, na který všechny ostatní objekty reagují na operace skupin. Objekt, který uživatel vybere jako první, se stane primárním ovládacím prvku a následné výběry se stanou sekundárními výběry. Primární výběr má odlišné vizuální zpracování ze sekundárních výběrů, které označuje, který objekt je primární:
 
- ![Primární a sekundární výběr](../../extensibility/ux-guidelines/media/0713-09_primarysecondary.png "0713 – 09_PrimarySecondary")
+ ![Primární a sekundární výběr](../../extensibility/ux-guidelines/media/0713-09_primarysecondary.png "0713-09_PrimarySecondary")
 
  **Primární výběr se dvěma sekundárními výběry**
 
-#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Vzhled výběru grafického objektu
- Popisovače výběru jsou čtverce vykreslené v obdélníkovém vzoru kolem ohraničujícího rámečku objektu. Následující graf ukazuje příklady různých stavů, které může grafický objekt mít s popisovačem, velikostí a místním zobrazením úprav. Velikost popisovačů by měla být svázaná s metrikami ohraničení a okraje okna pomocí rozhraní API **GetSystemMetrics** .
+#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Vzhled grafického objektu
+ Úchyty výběru jsou čtverce nakreslené v obdélníkovém vzoru kolem ohraničovacího rámečku objektu. Následující graf ukazuje příklady různých stavů, které může grafický objekt mít s úchytem, velikostí a vzhledem úprav na místě. Velikost popisovačů by měla být svázaná s metrikami ohraničení okna a hraniční metriky pomocí rozhraní **API GetSystemMetrics.**
 
-| Stav | Příznaky | Podrobnosti vizuálu |
+| Stav | Vzhled | Podrobnosti vizuálu |
 |-------------------------|---------------| - |
-| **Nevybrané** | Výchozí | ![Výchozí stav tlačítka](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713 – 10_DefaultState") |
-| **Primární výběr** | Možností změny velikosti | ![Primární výběr s úchyty pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713 – 11_PrimaryResize") |
-| **Primární výběr** | Nelze měnit velikost | ![Primární výběr bez úchytů pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713 – 13_PrimaryNoResize") |
-| **Primární výběr** | Uzamčeno | ![Primární výběr uzamčen](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713 – 15_PrimaryLocked") |
-| **Sekundární výběr** | Možností změny velikosti | ![Sekundární výběr s úchyty pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713 – 17_SecondaryResize") |
-| **Sekundární výběr** | Nelze měnit velikost | ![Sekundární výběr bez úchytů pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713 – 19_SecondaryNoResize") |
-| **Sekundární výběr** | Uzamčeno | ![Sekundární výběr uzamčen](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713 – 21_SecondaryLocked") |
-| **Uživatelské rozhraní aktivní** | Výchozí | ![Aktivní stav uživatelského rozhraní](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713 – 23_UIActive") |
+| **Nevybrané** | Výchozí | ![Výchozí stav tlačítka](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713-10_DefaultState") |
+| **Primární výběr** | Resizable | ![Primární výběr s úchyty pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713-11_PrimaryResize") |
+| **Primární výběr** | Nelze upravit velikost | ![Primární výběr bez úchytů pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713-13_PrimaryNoResize") |
+| **Primární výběr** | Uzamčeno | ![Uzamčený primární výběr](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713-15_PrimaryLocked") |
+| **Sekundární výběr** | Resizable | ![Sekundární výběr s úchyty pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713-17_SecondaryResize") |
+| **Sekundární výběr** | Nelze měnit velikost | ![Sekundární výběr bez úchytů pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713-19_SecondaryNoResize") |
+| **Sekundární výběr** | Uzamčeno | ![Sekundární výběr uzamčen](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713-21_SecondaryLocked") |
+| **Uživatelské rozhraní aktivní** | Výchozí | ![Aktivní stav uživatelského rozhraní](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713-23_UIActive") |
 
 ### <a name="view-selection-models"></a>Zobrazit modely výběru
 
 #### <a name="tree-view"></a>Stromové zobrazení
  Výběr ve stromovém zobrazení se zobrazí s jednoduchým zvýrazněním. Pokud uživatel klikne na název uzlu nebo na ikonu uzlu, uzel se vybere. Trojúhelníkové glyfy nalevo od uzlu rozbalí nebo nařídí stromovou strukturu, ale neovlivňují výběr uživatele, s jednou výjimkou: Při sbalení nadřazeného uzlu, pokud je výběr na podřízeném uzlu, výběr se přesune na nadřazenou položku.
 
- ![Typické stromové zobrazení v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-25_treeview.png "0713 – 25_TreeView")
+ ![Typické stromové zobrazení v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0713-25_treeview.png "0713-25_TreeView")
 
  **Typické stromové zobrazení v aplikaci Visual Studio**
 

@@ -1,79 +1,79 @@
 ---
 title: Nabídky a příkazy pro Visual Studio | Microsoft Docs
-description: Přečtěte si, jak panely příkazů umožňují flexibilitu v uživatelském rozhraní při vytváření nových funkcí sady Visual Studio.
+description: Přečtěte si, jak panely příkazů umožňují flexibilitu uživatelského rozhraní při vytváření nových funkcí pro Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0a1ed675-2bd1-4603-ba3a-f40dfb5cfb69
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1061de343ae24dce163dd0a7665d58ec7aac3a3a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ef66123e1a4d62f89fc1c69b81bcb780d0b294f0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068385"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902095"
 ---
 # <a name="menus-and-commands-for-visual-studio"></a>Nabídky a příkazy pro Visual Studio
-## <a name="command-usage"></a>Použití příkazu
+## <a name="command-usage"></a>Použití příkazů
 
 ### <a name="overview"></a>Přehled
- Na rozdíl od systém Microsoft Office, což je sada, která zahrnuje mnoho samostatných produktů, sada Visual Studio obsahuje mnoho produktů, které každý přispívá ke svým sadám příkazů globálnímu integrovanému vývojovém prostředí sady Visual Studio. Rozhraní IDE spravuje složitost tisíc příkazů filtrováním funkcí dostupných uživateli na základě kontextu.
+ Na systém Microsoft Office, což je sada, která se skládá z mnoha samostatných produktů, obsahuje Visual Studio mnoho produktů, z nichž každý přispívá svými sadami příkazů do globálního Visual Studio IDE. Integrované vývojové prostředí (IDE) spravuje složitost tisíců příkazů filtrováním funkcí dostupných pro uživatele na základě kontextu.
 
- Když se změní kontext uživatele – například přepnutí z okna návrhu na okno pro úpravu kódu – funkce nesouvisející s novým kontextem zmizí. Současně nové funkční plochy společně se souvisejícími dynamickými informacemi, jako jsou vlastnosti a možnosti sady nástrojů. Uživatel by neměl poznamenat záměnu dostupné sady příkazů. Pokud je uživatel odvolán nebo zaměněno pomocí příkazů, které se zobrazují nebo zmizí, pak návrh uživatelského rozhraní vyžaduje úpravu. Aktuální kontext uživatele je vždy označen jedním nebo více způsoby, například v záhlaví IDE, okno Vlastnosti nebo dialogovém okně vlastností stránky.
+ Když se kontext uživatele změní – například přepnutí z okna návrhu na okno pro úpravy kódu – funkce, které nesouvisejí s novým kontextem, zmizí. Zároveň se zobrazí nové funkce společně se souvisejícími dynamickými informacemi, jako jsou vlastnosti a možnosti panelu nástrojů. Uživatel by si neměl všimnout prohození dostupné sady příkazů. Pokud je uživatel rušivých nebo zaměněn zobrazením nebo zmizením příkazů, je potřeba návrh uživatelského rozhraní upravit. Aktuální kontext uživatele je vždy označen jedním nebo více způsoby, například v záhlaví integrovaného vývojového prostředí (IDE), okno Vlastnosti nebo v dialogovém okně Stránky vlastností.
 
- Panely příkazů umožňují flexibilitu v uživatelském rozhraní. Jedinou strukturou příkazu, která je součástí prostředí sady Visual Studio, jsou hlavní nabídka a hlavní panel příkazů, které lze přizpůsobit i dokonce skrýt. Další panely příkazů se zobrazí a zmizí na základě stavu aplikace. Okna nástrojů a editory dokumentů mohou také obsahovat vložené panely nástrojů v rámci jejich okrajů oken.
+ Panely příkazů umožňují flexibilitu v uživatelském rozhraní. Jediné struktury příkazů, které jsou Visual Studio prostředí, jsou hlavní nabídka a hlavní panel příkazů, které lze přizpůsobit i dokonce skrýt. Další panely příkazů se zobrazí a zmizí v závislosti na stavu aplikace. Okna nástrojů a editory dokumentů mohou také obsahovat vložené panely nástrojů v rámci jejich okrajů.
 
 #### <a name="basic-guidelines"></a>Základní pokyny
 
 ##### <a name="use-existing-shared-commands-command-groups-and-menus-whenever-possible"></a>Pokud je to možné, používejte existující sdílené příkazy, skupiny příkazů a nabídky.
- Vzhledem k tomu, že jsou příkazy obvykle zobrazeny v závislosti na kontextu, použití stávajících sdílených nabídek a skupin příkazů zajistí, že struktura příkazu zůstane relativně stabilní mezi změnami v kontextu. Opětovné použití sdílených příkazů a umístění nových příkazů blízko k souvisejícím sdíleným příkazům také snižuje složitost IDE a vytváří uživatelsky přívětivé prostředí. Pokud je potřeba definovat nový příkaz, zkuste ho umístit do existující skupiny sdílených příkazů. Pokud je potřeba definovat novou skupinu, umístěte ji do existující sdílené nabídky blízko k související skupině příkazů před vytvořením nové nabídky na nejvyšší úrovni.
+ Vzhledem k tomu, že se příkazy obvykle zobrazují na základě kontextu, použití existujících sdílených nabídek a skupin příkazů zajišťuje, že struktura příkazů zůstává mezi změnami v kontextu relativně stabilní. Opětovné použití sdílených příkazů a umístění nových příkazů blízko souvisejících sdílených příkazů také snižuje složitost integrovaného vývojového prostředí (IDE) a vytváří uživatelsky přívětivější prostředí. Pokud je potřeba definovat nový příkaz, zkuste ho umístit do existující sdílené skupiny příkazů. Pokud je potřeba definovat novou skupinu, před vytvořením nové nabídky nejvyšší úrovně ji umístěte do existující sdílené nabídky blízko související skupiny příkazů.
 
 ##### <a name="do-not-create-icons-for-every-command"></a>Nevytvářejte ikony pro každý příkaz.
- Před vytvořením ikony příkazu si pečlivě promyslete. Ikony by se měly vytvářet jenom pro příkazy, které:
+ Než vytvoříte ikonu příkazu, pečlivě si to rozmyslete. Ikony by se měly vytvářet jenom pro příkazy, které:
 
-- zobrazí se na výchozím panelu nástrojů.
+- se zobrazí na výchozím panelu nástrojů.
 
-- budou pravděpodobně přidány uživateli do panelu nástrojů v dialogovém okně **přizpůsobit...** .
+- budou uživatelé pravděpodobně přidáni na panel nástrojů prostřednictvím **dialogového okna** Přizpůsobit.
 
-- mít ikonu přidruženou ke stejné akci v jiném produktu společnosti Microsoft.
+- Mít ikonu přidruženou ke stejné akci v jiném produktu Microsoftu.
 
-##### <a name="limit-the-addition-of-keyboard-shortcuts"></a>Omezení přidání klávesových zkratek
- Velká většina uživatelů používá malý zlomek všech dostupných klávesových zkratek. V případě nejistých funkcí nevytvářejte vazby na klávesovou zkratku. Než přidáte nové zástupce, pracujte s týmem uživatelského prostředí.
+##### <a name="limit-the-addition-of-keyboard-shortcuts"></a>Omezení přidávání klávesových zkratek
+ Velká většina uživatelů využívá malý zlomek všech dostupných zástupců. Pokud nemáte pochybnosti, nevážete funkci na klávesovou zkratku. Než přidáte nové klávesové zkratky, pracujte s týmem uživatelského prostředí.
 
-##### <a name="give-commands-a-default-menu-placement"></a>Zadejte příkazy pro výchozí umístění nabídky.
- Mějte na paměti, že vaše příkazy se přizpůsobují ostatním uživatelům a budou je navrhovat odpovídajícím způsobem. Neexistuje žádná taková věc jako skrytý příkaz. Všechny příkazy sady Visual Studio se zobrazí v dialogovém okně **nástroje > přizpůsobení** , příkazového okna, automatické dokončování, **nástrojích > možnosti >** dialogové okno klávesnice a vývojové nástroje prostředí (DTE). Nezapomeňte zadat název a popis tlačítka v souboru. CTC, aby je uživatelé mohli snadno najít.
+##### <a name="give-commands-a-default-menu-placement"></a>Dejte příkazům výchozí umístění nabídky.
+ Je třeba mít na paměti, že vaše příkazy budou přizpůsobeny ostatními uživateli a navrhovat je odpovídajícím způsobem. Nic takového jako skrytý příkaz neexistuje. Všechny Visual Studio se zobrazí v dialogovém okně Nástroje **>** Přizpůsobit, v příkazovém okně, v automatickém dokončení, v dialogovém okně Nástroje > Možnosti > Klávesnice **a** v prostředí Vývojových nástrojů (DTE). Nezapomeňte dejte příkazům název a popis v souboru .ctc, aby je uživatelé snadno našli.
 
-##### <a name="do-not-duplicate-shared-commands-on-an-embedded-toolbar"></a>Neduplikujte sdílené příkazy na vložený panel nástrojů.
- Je vhodné umístit příkazy do blízkosti oblasti fokusu uživatele. Jedním ze způsobů, jak to provést, je vytvořit vložený panel nástrojů v horní části okna nástrojů nebo editoru dokumentů. Příkazy, které jsou umístěny na panelu nástrojů, by měly být specifické pro oblast obsahu v rámci okna. Na těchto panelech nástrojů Neduplikujte sdílené příkazy. Například nikdy neumísťujete ikonu Uložit v rámci vloženého panelu nástrojů.
+##### <a name="do-not-duplicate-shared-commands-on-an-embedded-toolbar"></a>Na vloženém panelu nástrojů neduplikujte sdílené příkazy.
+ Příkazy je vhodné umístit v těsné blízkosti oblasti, na které se uživatel zaměřuje. Jedním ze způsobů, jak to provést, je vytvořit vložený panel nástrojů v horní části okna nástroje nebo editoru dokumentů. Příkazy umístěné na panelu nástrojů by měly být specifické pro oblast obsahu v rámci okna. Na těchto panelech nástrojů neduplikujte sdílené příkazy. Na vložený panel nástrojů například nikdy neumiste ikonu Uložit.
 
-### <a name="content-and-command-visibility"></a>Viditelnost obsahu a příkazu
- Příkazy existují v následujících oborech: **prostředí**, **hierarchie** a **dokument**. Každý obor si poznáte, abyste měli jistotu při umísťování příkazů.
+### <a name="content-and-command-visibility"></a>Obsah a viditelnost příkazů
+ Příkazy existují v následujících oborech: **Environment (Prostředí),** **Hierarchy**(Hierarchie) **a Document (Dokument).** Znát každý obor, aby měl jistotu při umísťování příkazů.
 
- Příkazy v oboru **prostředí** vytvářejí primární kontext a jsou sdíleny mezi více kontexty. Mění viditelnost nebo uspořádání dokumentů a nástrojů v oknech. Mezi příkazy v rozsahu prostředí patří **Nový projekt**, **připojení k serveru**, **připojení procesu**, **vyjmutí**, **kopírování**, **vložení**, **hledání**, **Možnosti**, **přizpůsobení**, **nové okno** a **zobrazení pomocníka**.
+ Příkazy v oboru **prostředí vytvoří** primární kontext a jsou sdíleny mezi více kontexty. Mění viditelnost nebo uspořádání dokumentů a oken nástrojů. Mezi příkazy v oboru prostředí patří New **Project**(Nový projekt), **Connect to Server**(Připojit k serveru), Attach **Process**(Připojit proces), **Cut**(Vyjmout), **Copy**(Kopírovat), **Paste**(Vložit), Find (Najít), **Options**(Možnosti), **Customize**(Přizpůsobit), **New Window**(Nové okno) a **View Help (Zobrazit nápovědu).** 
 
- Příkazy v oboru **hierarchie** spravují hierarchie v aplikaci Visual Studio, včetně **projektů**, **týmů** a **dat**. Vztahují se k podkontextu projektu, například **ladit**, **sestavovat**, **testovat**, **architekturu** nebo **analyzovat**. Mezi příkazy v oboru hierarchie patří **Přidat novou položku**, **Nový dotaz**, **nastavení projektu**, **Přidat nový zdroj dat**, **Spustit Průvodce výkonem** a **Nový diagram**.
+ Příkazy v oboru **Hierarchie** spravují hierarchie v Visual Studio, **včetně projektů,** **týmů** a **dat**. Souvisí s dílčím kontextem projektu– například **Ladění,** **Sestavení,** **Testování,** **Architektura** nebo **Analýza**. Mezi příkazy v oboru hierarchie patří Přidání nové **položky,** Nový **dotaz,** **Nastavení projektu,** Přidání nového zdroje **dat,** Průvodce spuštěním **výkonu** a **Nový diagram.**
 
- Příkazy v oboru **dokumentu** fungují na obsahu dokumentu, jako je například kód, návrh nebo dotaz na pracovní položku (wiq). Také pracují se zobrazením okna nástroje nebo jsou jinak specifické pro toto okno nástroje. Příkazy oboru dokumentu také fungují s objekty souborů, které jsou specifické pro konkrétní hierarchii, jako je například **Odebrat z projektu**. Mezi příkazy v oboru dokumentu se **refaktoruje > přejmenovat**, **vytvořit kopii pracovní položky**, **Rozbalit** vše, **Sbalit vše** a **vytvořit uživatelskou úlohu**.
+ Příkazy v **oboru dokumentu** pracují s obsahem dokumentu, jako je kód, návrh nebo dotaz na pracovní položku (WIQ). Slouží také k zobrazení okna nástroje nebo jsou pro toto okno nástroje jinak specifické. Příkazy oboru dokumentu také působí na objekty souborů, které jsou samy specifické pro hierarchii, například **Odebrat z projektu**. Mezi příkazy v oboru dokumentu patří **refaktoring >,** vytvoření **kopie** pracovní **položky,** rozbalení všech, **sbalení** všech a **vytvoření uživatelské úlohy**.
 
 ### <a name="command-placement-decisions"></a>Rozhodnutí o umístění příkazů
- Jakmile se rozhodnete vytvořit příkaz, budete muset určit jeho vhodné umístění a vytvořit klávesovou zkratku. Podle této rozhodovací cesty určete, kam se má příkaz umístit:
+ Jakmile se rozhodli vytvořit příkaz, budete muset určit jeho vhodné umístění a to, jestli chcete vytvořit klávesovou zkratku. Postupujte podle této rozhodovací cesty a vytvořte, kam příkaz umístit:
 
- ![Graf rozhodování o umístění příkazu](../../extensibility/ux-guidelines/media/0501-a_commandplacement.png "0501 – a_CommandPlacement")
+ ![Rozhodovací graf umístění příkazů](../../extensibility/ux-guidelines/media/0501-a_commandplacement.png "0501-a_CommandPlacement")
 
- **Rozhodovací cesta k umístění příkazu v aplikaci Visual Studio**
+ **Rozhodovací cesta pro umístění příkazu v Visual Studio**
 
 ### <a name="command-placement-in-menus"></a>Umístění příkazů v nabídkách
 
-#### <a name="main-menu-bar"></a>Hlavní panel nabídek
- Hlavní panel nabídek by měl být standardní umístění pro příkazy všech balíčků nabídek specifických pro konkrétní kontext, které přispívají k uživatelskému rozhraní. Hlavní panel nabídek se liší od ostatních struktur příkazů v tom, že ho prostředí používá k řízení, které příkazy jsou viditelné. Všechny ostatní panely příkazů jednoduše zakazují příkazy, které jsou mimo kontext bez ohledu na to, jestli jsou umístěné v nabídce nebo na panelu nástrojů.
+#### <a name="main-menu-bar"></a>Hlavní řádek nabídek
+ Hlavní řádek nabídek by měl být standardním umístěním pro příkazy všech balíčků místní nabídky, které přispívají do uživatelského rozhraní. Hlavní řádek nabídek se od ostatních struktur příkazů liší tím, že ho prostředí používá k řízení, které příkazy jsou viditelné. Všechny ostatní panely příkazů jednoduše zaknuly příkazy, které nejsou kontextové, ať už jsou umístěné v nabídce nebo na panelu nástrojů.
 
- Prostředí definuje sadu příkazů integrovaných do hlavního řádku nabídek, které jsou společné napříč celým prostředím IDE a více doménami úloh. Tyto příkazy jsou vždy viditelné bez ohledu na to, které sady VSPackage jsou načteny do prostředí. I když VSPackage mohou tuto sadu příkazů zvětšit, sada příkazů z každého produktu a umístění jejich příkazů je zodpovědností každého týmu.
+ Prostředí definuje sadu příkazů integrovaných do hlavního řádku nabídek, které jsou společné v celém integrovaném vývojovém prostředí (IDE) a několika doménách úloh. Tyto příkazy jsou vždy viditelné bez ohledu na to, které balíčky VSPackage jsou načteny do prostředí. I když balíčky VSPackage rozšiřují tuto sadu příkazů, příkaz nastavený z každého produktu a umístění jejich příkazů je zodpovědností každého týmu.
 
- Strukturu hlavní nabídky sady Visual Studio lze rozdělit do následujících kategorií nabídky:
+ Strukturu hlavní nabídky Visual Studio rozdělit do následujících kategorií nabídek:
 
 ##### <a name="core-menus"></a>Základní nabídky
 
@@ -97,7 +97,7 @@ ms.locfileid: "105068385"
 
 - Ladění
 
-##### <a name="context-specific-menus"></a>Konkrétní kontextové nabídky
+##### <a name="context-specific-menus"></a>Místní nabídky
 
 - Tým
 
@@ -115,23 +115,23 @@ ms.locfileid: "105068385"
 
 - Tabulka
 
-##### <a name="when-designing-main-menus-adhere-to-these-rules"></a>Při navrhování hlavních nabídek dodržovat tato pravidla:
+##### <a name="when-designing-main-menus-adhere-to-these-rules"></a>Při navrhování hlavních nabídek dodržujte tato pravidla:
 
-- Nepřekračuje 25 položek nejvyšší úrovně v daném kontextu.
+- Nepřekračujte 25 položek nejvyšší úrovně v daném kontextu.
 
-- Nabídky by nikdy neměly překročit 600 pixelů na výšku.
+- Nabídky by nikdy neměly být větší než 600 pixelů.
 
-- Vyhodnoťte hlavní nabídku v několika kontextech, jako je například v položce Ultimate SKU a obecného profilu.
+- Vyhodnoťte hlavní nabídku ve více kontextech, například v ultimate SKU a obecném profilu.
 
-- Jsou přijatelné rozevírací nabídky.
+- Kontextové nabídky jsou přijatelné.
 
-- Vyskakovací nabídky by měly obsahovat alespoň tři položky a nesmí být větší než sedm.
+- Kontextové nabídky by měly obsahovat alespoň tři položky a nesmí být delší než sedm.
 
-- Místní nabídky by měly jít jenom o jednu úroveň hluboko – některé položky nabídky sady Visual Studio mají kaskádové podnabídky, ale tento model se nedoporučuje.
+- Kontextové nabídky by měly jít jen o jednu úroveň hluboko – některé Visual Studio kaskádové podnabídky mají kaskádové podnabídky, ale tento model se doporučuje.
 
-- Nepoužívejte více než šest oddělovačů. Seskupení by mělo splňovat následující ilustrace:
+- Nepoužívejte více než šest oddělovačů. Seskupení by měla splňovat následující obrázek:
 
-     ![Pokyny pro seskupování hlavních nabídek](../../extensibility/ux-guidelines/media/0501-b_mainmenus.png "0501 – b_MainMenus")
+     ![Pokyny pro seskupování hlavní nabídky](../../extensibility/ux-guidelines/media/0501-b_mainmenus.png "0501-b_MainMenus")
 
 - I když není nutné mít každé seskupení na obrázku, přidání dalších seskupení je omezeno.
 
@@ -172,7 +172,7 @@ ms.locfileid: "105068385"
 
 - Pokud kvalifikátory způsobí více užitečných příkazů, použijte tlačítko rozdělení, které ukládá poslední nastavení:
 
-     ![Rozdělit tlačítka v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0501-c_splitbuttons.png "0501 – c_SplitButtons")
+     ![Rozdělit tlačítka v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0501-c_splitbuttons.png "0501-c_SplitButtons")
 
      **Příklad tlačítka rozdělení Šest příkazů na levé straně se dá přizpůsobit jednomu tlačítku.**
 
@@ -215,7 +215,7 @@ ms.locfileid: "105068385"
 
  Nabídka sdíleného **formátu** , která se obvykle zobrazuje v kontextu oken dokumentu ve stylu návrháře, je znázorněna na následujícím obrázku:
 
- ![Nabídka Formát sady Visual Studio s popisky](../../extensibility/ux-guidelines/media/0501-d_formatmenu.png "0501 – d_FormatMenu")
+ ![Nabídka Formát sady Visual Studio s popisky](../../extensibility/ux-guidelines/media/0501-d_formatmenu.png "0501-d_FormatMenu")
 
  **Skupiny nabídek v aplikaci Visual Studio**
 
@@ -239,7 +239,7 @@ ms.locfileid: "105068385"
 
 - Vezměte v úvahu, kde bude příkaz umístěn. Je to v nabídce nejvyšší úrovně nebo v informačním rámečku? Například při seskupování příkazů v informačním rámečku, by měl být příkaz nejvyšší úrovně "align" a příkazy pro informační rámeček by měly být "Left", "Right", "Center", "Zarovnat do bloku" atd. Pro pojmenování příkazů v informačním rámečku "Zarovnat doleva" nebo "Zarovnat vpravo" by bylo nadbytečné.
 
-     ![Nabídka Formát sady Visual Studio](../../extensibility/ux-guidelines/media/0502-a_formatmenu.png "0502 – a_FormatMenu")
+     ![Nabídka Formát sady Visual Studio](../../extensibility/ux-guidelines/media/0502-a_formatmenu.png "0502-a_FormatMenu")
 
 ### <a name="using-icons-with-commands"></a>Použití ikon s příkazy
  Používejte v příkazech párování ikon s příkazy, které jsou omezené. I když přidružíte k jedinečné imagi příkaz Hastens, aby uživatel identifikoval tento příkaz, nedocházelo k tomu, že dojde k nadměrnému využití obrázků a k neefektivitě. Následující pravidla vám pomůžou při rozhodování, zda má být vytvořena ikona příkazu.
@@ -259,34 +259,34 @@ ms.locfileid: "105068385"
 
 - **Přístupové klíče** (označované také jako akcelerátory) umožňují přístup k klávesnici prostřednictvím nabídek pro příkazy a pro každý popisek v uživatelském rozhraní dialogového okna. Přístupové klíče jsou většinou pro účely usnadnění, jsou přiřazeny ke všem nabídkám a většině ovládacích prvků dialogového okna, nejsou určeny k zapamatovaných, ovlivnění pouze aktuálního okna a jsou lokalizovány.
 
-- **Klávesové zkratky** většinou používají řízení (CTRL) a funkce (FN) Key Sequence. Jsou určené pro pokročilé uživatele a pomáhají při produktivitě. Jsou přiřazeny pouze k nejčastěji používaným příkazům a umožňují rychlý přístup při obejít hlavní nabídku. Klávesové zkratky mají být zapamatovaných a z tohoto důvodu musí být přiřazeny v souladu se schématem profilu. Schémata klávesových zkratek se můžou lišit od profilu k profilování. Uživatel může přizpůsobovat klávesové zkratky prostřednictvím **nástrojů > možností > klávesnice**.
+- **Klávesové zkratky** většinou používají sekvence kláves Ctrl (Ctrl) a Funkce (Fn). Jsou navržené více pro pokročilé uživatele a zvyšují produktivitu. Přiřazují se jenom k nejčastěji používaným příkazům a umožňují rychlý přístup při obejití hlavní nabídky. Klávesové zkratky se mají zapamatovat a z tohoto důvodu musí být přiřazeny v souladu se schématem profilu. Schémata klávesových zkratek se mohou v jednotlivých profilech lišit. Uživatel může klávesové zkratky přizpůsobit pomocí nástrojů **> Options > Keyboard**.
 
-### <a name="assigning-access-keys"></a>Přiřazování přístupových klíčů
- Přístupové klíče se skládají z ALT plus alfanumerických kláves (y). Přiřaďte přístupový klíč k jednotlivým položkám nabídky bez výjimky. Při přiřazování přístupových klíčů použijte Windows a běžné konvence. například přístupová klávesa pro **soubor > New** by měla být vždy **ALT, F, N**.
+### <a name="assigning-access-keys"></a>Přiřazení přístupových klíčů
+ Přístupové klíče se skládají z alt a alfanumerických klíčů. Přiřaďte přístupový klíč ke každé položce nabídky bez výjimky. Při přiřazování přístupových klíčů dodržujte windows a běžné konvence. Například přístupový klíč pro File **(Soubor) > New (Nový) by** měl být **vždy Alt, F, N**.
 
- Nepoužívejte písmena s jednou šířkou písmen, jako je i (velkými písmeny nebo malými písmeny) nebo malé písmeno l, a vyhněte se použití znaků se spodními body (g, j, p, q a y), protože je obtížné je odlišit.
+ Nepoužívejte písmena s jednou šířkou pixelů, například "i" (velkými nebo malými písmeny) nebo malými písmeny "l", a nepoužívejte znaky se znaky (g, j, p, q a y), protože se obtížně rozlišují.
 
- Vyhněte se použití duplicitních klíčů, pokud je to možné. V případech, kdy je duplikování duplicit nevyhnutelné, systém nabídek zpracovává konflikty cyklicky pomocí všech příkazů, které používají klíč. Příkladem pro hypotetický příkaz "Number" v nabídce soubor, který duplikuje přístupový klíč "N **", vytvoří** nový soubor a **ALT, f, n, n,** provede příkaz "Number".
+ Pokud je to možné, nepoužívejte duplicitní klíče. V případech, kdy je duplikace nevyhnutelná, zpracovává systém nabídek konflikty tím, že projde všemi příkazy, které klíč používají. Například pro hypotetický příkaz "Number" v nabídce Soubor, který duplikuje přístupovou klávesu "N", **by Alt, F, N** vytvořil nový soubor a **Alt, F, N, N** by příkaz "Number".
 
-### <a name="assigning-shortcut-keys"></a>Přiřazování klávesových zkratek
- Vyhněte se přiřazování nových klávesových zkratek, protože nejsou vyžadovány pro každý příkaz a daň systému (a paměť uživatelů), pokud je tato funkce přepoužívána. Data z program Zlepšování softwaru a služeb na základě zkušeností uživatelů (CEIP) označují, že uživatelé sady Visual Studio používají pouze malou podmnožinu integrovaných zástupců.
+### <a name="assigning-shortcut-keys"></a>Přiřazení klávesových zkratek
+ Vyhněte se přiřazování nových klávesových zkratek, protože nejsou vyžadovány pro každý příkaz a zdaní systém (a paměť uživatele), pokud jsou přeuovány. Data z program Zlepšování softwaru a služeb na základě zkušeností uživatelů (CEIP) značí, Visual Studio uživatelé používají pouze malou podmnožinu integrovaných zástupců.
 
- Při definování klávesových zkratek použijte tato pravidla:
+ Při definování zástupců postupujte podle těchto pravidel:
 
-- **Použijte řídicí sekvence (CTRL) a Function (FN).**
+- **Použijte sekvence kláves Ovládací prvek (Ctrl) a Funkce (Fn).**
 
-- **Zachovat často používané zkratky** Udržujte nejoblíbenější zkratky.
+- **Zachovat často používané klávesové zkratky** Udržujte nejoblíbenější klávesové zkratky.
 
-- **Snadnější psaní klávesových zkratek editoru** Připojte se k příkazům, které vývojáři potřebují při psaní kódu, snadno typové zkratky. Například **Edit. InvokeSmartTag** musí mít rychlou klávesovou zkratku, jako je CTRL +/a NOT ALT + SHIFT + F10.
+- **Usnadňuje psaní klávesových zkratek v editoru.** Vytvořte vazbu snadno na typových zkratek k příkazům, které vývojáři při psaní kódu nejvíce potřebují. Například **Edit.InvokeSmartTag** musí mít rychlou klávesovou zkratku, jako je Ctrl+/, a ne Alt+Shift+F10.
 
-- **Snažte se používat konzistentní zkratky motivů.**
+- **Snažte se o trvale zamyšlené klávesové zkratky.**
 
-- **Podle pokynů pro Windows určete, které modifikační klávesy se mají použít.** Použijte kombinaci kláves CTRL pro příkazy, které mají rozsáhlé efekty, například příkazy, které se vztahují na celý dokument. Použijte kombinaci kláves SHIFT pro příkazy, které rozšíří nebo doplňují akce standardní klávesové zkratky. Nepoužívejte kombinace CTRL + ALT.
+- **Postupujte podle pokynů pro Windows a určete, které modifikační klíče se mají použít.** Pro příkazy, které mají rozsáhlé efekty, jako jsou příkazy, které platí pro celý dokument, použijte kombinace kláves Ctrl. Pro příkazy, které rozšiřují nebo doplňují akce standardní klávesové zkratky, použijte kombinace kláves Shift. Nepoužívejte kombinace Ctrl+Alt.
 
-- **Odeberte nadbytečné zkratky.** Pokud máte starší verzi funkce, zvažte odebrání klávesových zkratek, které jsou používány s extrémními nemožnostmi (méně než desetkrát z dat programu CEIP), nebo střední nečetnost (méně než 100 časů z dat programu CEIP), pokud přístupová klávesa poskytuje rychlý přístup ke stejnému příkazu. Například: ALT, H, C otevře nápovědu/obsah.
+- **Odeberte zástupce, které jsou mimo aplikaci.** Pokud máte starší verzi funkce, zvažte odebrání zástupců, které se používají s extrémně málo častým obdobím (méně než 10krát z dat programu CEIP) nebo střední málo časté události (méně než 100krát z dat programu CEIP), pokud přístupový klíč poskytuje rychlý přístup ke stejnému příkazu. Příklad: Alt, H, C otevře nápovědu nebo obsah.
 
-  Není k dispozici jednoduchý způsob, jak kontrolovat dostupnost klávesových zkratek. Chcete-li přidat zástupce, postupujte podle následujících kroků:
+  Neexistuje jednoduchý způsob, jak zkontrolovat dostupnost zástupce. Pokud chcete přidat zástupce, postupujte takto:
 
-1. Podívejte se na seznam [zástupců Visual Studio 2013](http://visualstudioshortcuts.com/2013/) , abyste zjistili, jestli jsou k dispozici podobné příkazy pro seskupení.
+1. Zkontrolujte seznam klávesových [zkratek Visual Studio 2013,](http://visualstudioshortcuts.com/2013/) abyste zjistili, jestli existují podobné příkazy pro seskupení vašich příkazů.
 
-2. V **nabídce nástroje > možnosti > prostředí > klávesnice** a otestujte zástupce. Zaškrtněte u každého schématu mapování klávesnice uvedené v části "použít následující další schéma mapování klávesnice". V profilech obecné, C#, VB a C++ se podívejte na tyto jedinečné zkratky pro sdílení. Zástupce je k dispozici, pokud není namapován v žádném z těchto umístění.
+2. Přejděte na **Nástroje > možnosti > prostředí > klávesnice** a otestujte zástupce. Zkontrolujte každé schéma mapování klávesnice uvedené v části Použít následující další schéma mapování klávesnice. Zkontrolujte profily Obecné, C#, VB a C++, protože tyto profily sdílejí jedinečné zástupce. Zástupce je dostupný, pokud není na žádném z těchto míst namapovaný.

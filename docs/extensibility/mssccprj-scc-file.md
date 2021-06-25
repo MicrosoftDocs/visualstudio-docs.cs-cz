@@ -3,7 +3,7 @@ title: MSSCCPRJ. Soubor SCC | Microsoft Docs
 description: Přečtěte si o MSSCCPRJ. Soubor SCC, což je místní soubor na straně klienta používaný modulem plug-in pro správu zdrojového kódu, který spolupracuje se sadou Visual Studio SDK.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, MSSCCPRJ.SCC file
 - MSSCCPRJ.SCC file
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 945d1a4d1acde0ac3fef9918123f963cf27127f1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e006e4462522f4c464f40e0656dcef4d32c85fb7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090548"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899248"
 ---
 # <a name="mssccprjscc-file"></a>MSSCCPRJ. Soubor SCC
 Při umístění řešení nebo projektu sady Visual Studio pod správu zdrojového kódu pomocí integrovaného vývojového prostředí (IDE) obdrží dva klíčové části informací. Informace pocházejí z modulu plug-in správy zdrojových kódů ve formě řetězců. Tyto řetězce "AuxPath" a "ProjName" jsou neprůhledné na integrované vývojové prostředí (IDE), ale jsou používány modulem plug-in k vyhledání řešení nebo projektu ve správě verzí. Rozhraní IDE obvykle tyto řetězce načítá při volání [SccGetProjPath](../extensibility/sccgetprojpath-function.md)a pak je uloží do souboru řešení nebo projektu pro budoucí volání [SccOpenProject](../extensibility/sccopenproject-function.md). Při vložení do souborů řešení a projektu se řetězce "AuxPath" a "ProjName" automaticky neaktualizují, pokud je uživatel větví, rozvětvení nebo kopíruje řešení a soubory projektu, které jsou ve správě verzí. Chcete-li zajistit, aby soubory řešení a projektu odkazovaly na správné místo v řízení verze, uživatelé musí ručně aktualizovat řetězce. Vzhledem k tomu, že jsou řetězce určeny jako neprůhledné, nemusí vždy být jasné, jak by se měly aktualizovat.

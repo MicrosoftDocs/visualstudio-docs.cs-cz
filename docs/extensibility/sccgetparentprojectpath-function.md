@@ -1,8 +1,8 @@
 ---
-description: Tato funkce Určuje nadřazenou cestu projektu zadaného projektu.
-title: Funkce SccGetParentProjectPath | Microsoft Docs
+description: Tato funkce určuje cestu nadřazeného projektu zadaného projektu.
+title: SccGetParentProjectPath – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetParentProjectPath
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 305f226117bbb9cf906231a0b9bbaa24c1d87a8e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 13a0a77808004c7bc8f408bbf34a3ed4f0715b36
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063978"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900132"
 ---
-# <a name="sccgetparentprojectpath-function"></a>SccGetParentProjectPath – funkce
-Tato funkce Určuje nadřazenou cestu projektu zadaného projektu. Tato funkce se volá, když uživatel přidá projekt sady Visual Studio do správy zdrojových kódů.
+# <a name="sccgetparentprojectpath-function"></a>Funkce SccGetParentProjectPath
+Tato funkce určuje cestu nadřazeného projektu zadaného projektu. Tato funkce se volá, když uživatel přidává projekt Visual Studio do správy zdrojového kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,65 +39,65 @@ SCCRTN SccGetParentProjectPath(
 ### <a name="parameters"></a>Parametry
  pContext
 
-pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
+[v] Ukazatel kontextu modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
+[v] Popisovač okna integrovaného vývojového prostředí, který může modul plug-in správy zdrojového kódu použít jako nadřazený prvek pro všechna dialogová okna, která poskytuje.
 
  lpUser
 
-[in, out] Uživatelské jméno (až do SCC_USER_SIZE, včetně ukončovacího znaku NULL).
+[in, out] Uživatelské jméno (až do SCC_USER_SIZE, včetně ukončovací znak NULL).
 
  lpProjPath
 
-pro Řetězec identifikující cestu k projektu (až do SCC_PRJPATH_SIZE, včetně ukončovacího znaku NULL).
+[v] Řetězec identifikující cestu projektu (až do SCC_PRJPATH_SIZE včetně ukončovací znaky NULL).
 
- lpAuxProjPath
+ lpUProjPath
 
-[in, out] Pomocný řetězec identifikující projekt (až do SCC_PRJPATH_SIZE, včetně ukončovacího znaku NULL).
+[in, out] Pomocný řetězec identifikující projekt (až SCC_PRJPATH_SIZE včetně ukončovací funkce NULL).
 
  lpParentProjPath
 
-[in, out] Výstupní řetězec identifikující cestu nadřazeného projektu (až do SCC_PRJPATH_SIZE, včetně ukončovacího znaku NULL).
+[in, out] Výstupní řetězec identifikující cestu nadřazeného projektu (až SCC_PRJPATH_SIZE včetně ukončovací znaky NULL).
 
 ## <a name="return-value"></a>Vrácená hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Cesta k nadřazenému projektu se úspěšně získala.|
-|SCC_E_INITIALIZEFAILED|Projekt se nepovedlo inicializovat.|
-|SCC_E_INVALIDUSER|Uživatel se nemohl přihlásit do modulu plug-in správy zdrojových kódů.|
-|SCC_E_UNKNOWNPROJECT|Projekt není pro modul plug-in správy zdrojových kódů známý.|
+|SCC_OK|Cesta k nadřazenému projektu byla úspěšně získána.|
+|SCC_E_INITIALIZEFAILED|Projekt se neinicializoval.|
+|SCC_E_INVALIDUSER|Uživatel se nemohl přihlásit k modulu plug-in správy zdrojového kódu.|
+|SCC_E_UNKNOWNPROJECT|Modul plug-in správy zdrojového kódu nezná projekt.|
 |SCC_E_INVALIDFILEPATH|Neplatná nebo nepoužitelná cesta k souboru.|
-|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
-|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemůže tuto operaci provést.|
+|SCC_E_ACCESSFAILURE|Došlo k problému s přístupem k systému správy zdrojového kódu, pravděpodobně kvůli problémům se sítí nebo záležitostimi vyřešit. Doporučuje se opakování.|
 |SCC_E_PROJSYNTAXERR|Neplatná syntaxe projektu.|
-|SCC_E_CONNECTIONFAILURE|Potíže s připojením k úložišti|
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nespecifická chyba.|
+|SCC_E_CONNECTIONFAILURE|Problém s připojením k obchodu.|
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nespecikátní selhání.|
 
 ## <a name="remarks"></a>Poznámky
- Tato funkce vrací kód úspěchu nebo selhání a v případě úspěchu vyplní proměnnou `lpParentProjPath` úplnou cestou projektu k určenému projektu.
+ Tato funkce vrátí kód úspěchu nebo neúspěchu a v případě úspěchu vyplní proměnnou úplnou cestou projektu `lpParentProjPath` k zadanému projektu.
 
- Tato funkce vrací nadřazenou cestu projektu existujícího projektu. U kořenového projektu funkce vrátí cestu k projektu, který byl předán (tj. stejná cesta kořenového projektu). Všimněte si, že cesta projektu je řetězec, který je smysluplný pouze pro modul plug-in správy zdrojových kódů.
+ Tato funkce vrátí cestu nadřazeného projektu existujícího projektu. Pro kořenový projekt vrátí funkce cestu projektu, která byla předána (to znamená stejná cesta ke kořenovému projektu). Všimněte si, že cesta k projektu je řetězec, který má smysl pouze pro modul plug-in správy zdrojového kódu.
 
- Integrované vývojové prostředí (IDE) je připravené také pro příjem změn `lpUser` `lpAuxProjPath` parametrů a. Rozhraní IDE zachová tyto řetězce a předá je [SccOpenProject](../extensibility/sccopenproject-function.md) , když uživatel otevře tento projekt v budoucnu. Tyto řetězce proto poskytují způsob, jak modul plug-in správy zdrojových kódů sleduje informace, které potřebuje k přidružení k projektu.
+ Integrované vývojové prostředí (IDE) je připravené přijímat také `lpUser` změny `lpAuxProjPath` parametrů a . Integrované vývojové prostředí tyto řetězce zachová a předá je projektu [SccOpenProject,](../extensibility/sccopenproject-function.md) když uživatel tento projekt otevře v budoucnu. Tyto řetězce proto poskytují způsob, jak může modul plug-in správy zdrojového kódu sledovat informace, které potřebuje k projektu přidružit.
 
- Tato funkce je podobná [SccGetProjPath](../extensibility/sccgetprojpath-function.md), s tím rozdílem, že nevyzve uživatele k výběru projektu. Nikdy také nevytvoří nový projekt, ale funguje pouze s existujícím projektem.
+ Tato funkce se podobá [SccGetProjPath](../extensibility/sccgetprojpath-function.md)s tím rozdílem, že nevyzýlí uživatele k výběru projektu. Také nikdy nevytváří nový projekt, ale funguje pouze s existujícím projektem.
 
- Při `SccGetParentProjectPath` volání hodnoty `lpProjPath` a nebude `lpAuxProjPath` prázdné a bude odpovídat platnému projektu. Tyto řetězce jsou obvykle přijímány rozhraním IDE z předchozího volání `SccGetProjPath` funkce.
+ Když je volána hodnota a `SccGetParentProjectPath` nebude `lpProjPath` `lpAuxProjPath` prázdná a bude odpovídat platnému projektu. Tyto řetězce obvykle přijímá integrované vývojové prostředí (IDE) z předchozího volání `SccGetProjPath` funkce.
 
- `lpUser`Argument je uživatelské jméno. Rozhraní IDE předáte stejné uživatelské jméno, které dříve přijalo z `SccGetProjPath` funkce, a modul plug-in správy zdrojových kódů by měl použít název jako výchozí. Pokud už uživatel má otevřené připojení s modulem plug-in, pak se modul plug-in pokusí odstranit všechny výzvy a ujistit se, že funkce funguje tiše. Pokud se ale přihlášení nepovede, musí modul plug-in uživateli požádat o přihlášení a při přijetí platného přihlašovacího jména předat jméno zpátky `lpUser` . Vzhledem k tomu, že modul plug-in může tento řetězec změnit, rozhraní IDE vždy přidělí velikost vyrovnávací paměti ( `SCC_USER_LEN` + 1). Pokud je řetězec změněn, musí být nový řetězec platným přihlašovacím jménem (alespoň jako starý řetězec).
+ Argumentem `lpUser` je uživatelské jméno. Integrované vývojové prostředí předá stejné uživatelské jméno, které dříve přijalo z funkce, a modul plug-in správy zdrojového kódu by měl jako výchozí `SccGetProjPath` název používat. Pokud už má uživatel otevřené připojení k modulu plug-in, měl by se modul plug-in pokusit o odstranění všech výtek, aby se ujistil, že funkce funguje bezobslužně. Pokud se ale přihlášení nezdaří, měl by modul plug-in vyzvat uživatele k přihlášení a po přijetí platného přihlášení předat jméno zpět do `lpUser` . Vzhledem k tomu, že modul plug-in může tento řetězec změnit, integrované vývojové prostředí vždy přidělí vyrovnávací paměť o velikosti ( `SCC_USER_LEN` +1). Pokud se řetězec změní, nový řetězec musí být platným přihlašovacím jménem (alespoň tak platným jako starý řetězec).
 
-## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>Technické poznámky k SccCreateSubProject a SccGetParentProjectPath
- Přidání řešení a projektů do správy zdrojových kódů bylo zjednodušeno v aplikaci Visual Studio, aby bylo možné minimalizovat počet výzev uživatele k výběru umístění v systému správy zdrojů. Tyto změny jsou aktivovány v aplikaci Visual Studio, pokud modul plug-in správy zdrojových kódů podporuje obě nové funkce, [SccCreateSubProject](../extensibility/scccreatesubproject-function.md) a `SccGetParentProjectPath` funkci. Následující položku registru lze však použít k zakázání těchto změn a návratu k předchozímu chování sady Visual Studio (modul plug-in správy zdrojových kódů rozhraní API verze 1,1):
+## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>Technické poznámky pro SccCreateSubProject a SccGetParentProjectPath
+ Přidávání řešení a projektů do správy zdrojového kódu bylo Visual Studio, aby se minimalizoval počet výtek uživatele k výběru umístění v systému správy zdrojového kódu. Tyto změny jsou aktivovány Visual Studio, pokud modul plug-in správy zdrojového kódu podporuje obě nové funkce, [SccCreateSubProject](../extensibility/scccreatesubproject-function.md) a `SccGetParentProjectPath` funkci . Následující položku registru ale můžete použít k zakázání těchto změn a návratu k předchozímu chování rozhraní VISUAL STUDIO (rozhraní API modulu plug-in správy zdrojového kódu verze 1.1):
 
- **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl" = DWORD: 00000001**
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl"=dword:00000001**
 
- Pokud tato položka registru neexistuje nebo je nastavená na DWORD: 00000000, Visual Studio se pokusí použít nové funkce `SccCreateSubProject` a `SccGetParentProjectPath` .
+ Pokud tato položka registru neexistuje nebo je nastavená na hodnotu dword:00000000, Visual Studio pokusí použít nové funkce a `SccCreateSubProject` `SccGetParentProjectPath` .
 
- Pokud je položka registru nastavena na hodnotu DWORD: 00000001, sada Visual Studio se nepokouší používat tyto nové funkce a operace přidávání do správy zdrojových kódů stejně jako v předchozích verzích sady Visual Studio.
+ Pokud je položka registru nastavená na dword:00000001, Visual Studio se nepokusí použít tyto nové funkce a operace přidání do správy zdrojového kódu fungují stejně jako v předchozích verzích Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)
