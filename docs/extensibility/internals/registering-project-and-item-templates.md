@@ -3,7 +3,7 @@ title: Registrace šablon projektů a položek | Microsoft Docs
 description: Přečtěte si, jak Visual Studio používá registrační informace pro typy projektů k určení toho, co se má zobrazit v dialogových oknech Přidat nový projekt a přidat novou položku.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding items
 - registry, Add New Item dialog box
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6f4abe3a8632f4fe9208922aee1ccd92da3dab5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8b60022c6adf65d0b0d60d32b4ad7ae72067726d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062691"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905628"
 ---
 # <a name="registering-project-and-item-templates"></a>Registrace šablon projektů a položek
 Typy projektů musí registrovat adresáře, ve kterých se nacházejí šablony projektů a položek projektů. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pomocí registračních informací přidružených k vašim typům projektů určuje, co se má zobrazit v dialogových oknech **Přidat nový projekt** a **Přidat novou položku** .

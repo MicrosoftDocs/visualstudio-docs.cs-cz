@@ -4,7 +4,7 @@ titleSuffix: ''
 description: Přečtěte si o rozhraních týkajících se správy zdrojového kódu v sadě Visual Studio SDK. Balíček implementuje některá rozhraní a používá jiné pro správu zdrojového kódu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control packages, interfaces
 - interfaces, source control packages
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f35a11c801a8535c2b903909e2514b9879d3347c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6385307c91541204d58228b489160888f79dec85
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095027"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903330"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>Související služby a rozhraní (balíček VSPackage správy zdrojového kódu)
 

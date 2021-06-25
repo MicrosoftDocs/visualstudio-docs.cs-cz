@@ -3,7 +3,7 @@ title: Ladicí stroj | Microsoft Docs
 description: Přečtěte si, jak ladicí stroj spolupracuje s překladačem nebo operačním systémem k poskytování služeb, jako je například řízení spouštění, zarážky a vyhodnocení výrazu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines
 ms.assetid: 148b1efc-ca07-4d8e-bdfc-c723a760c620
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c13dd7165a5f85dc0122f97aaee838c528207f96
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 87c4648ed37ef4fad0d79b7048593ff0c5b7d6d0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067943"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905706"
 ---
 # <a name="debug-engine"></a>Ladicí stroj
 Ladicí stroj (DE) spolupracuje s překladačem nebo operačním systémem, aby poskytoval služby ladění, jako je například řízení spouštění, zarážky a vyhodnocení výrazu. DE je zodpovědná za monitorování stavu programu, který se právě ladí. K tomuto účelu DE použije jakékoli metody, které jsou k dispozici v podporovaném modulu runtime, ať už z procesoru, nebo z rozhraní API dodaných modulem runtime.

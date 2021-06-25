@@ -1,9 +1,9 @@
 ---
 title: Vlákna | Microsoft Docs
-description: Tento článek popisuje definice a roli vlákna v architektuře ladicího programu v aplikaci Visual Studio.
+description: Tento článek popisuje definici a roli vlákna v architektuře ladicího programu v Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], threads
 - threading [Debugging SDK]
@@ -13,25 +13,25 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 168d29b8306ec58233f426b48c3ab0adfacb2bd5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: dc745a4361c0935896048bbf72a4084f007ecf7b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057842"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905732"
 ---
 # <a name="threads"></a>Vlákna
-V architektuře ladicího programu, *vlákno*:
+V architektuře ladicího programu *vlákno*:
 
-- Je základní jednotkou výpočtu. Vlákno postupně provede své pokyny v rámci kontextu jediného zásobníku volání, přechod z jednoho kontextu kódu na další.
+- Je základní výpočetní jednotkou. Vlákno postupně provádí své instrukce v kontextu jednoho zásobníku volání a přecházuje z jednoho kontextu kódu na další.
 
-- Může identifikovat sebe sama a program, ve kterém je spuštěný. Vlákna mohou být pojmenována, pozastavena a obnovena. Vlákno může také vytvořit výčet přidružených rámců zásobníku a za určitých podmínek lze přesunout do jiného rámce zásobníku. Vzhledem k kontextu bloku zásobníku může vlákno vracet své přidružené logické vlákno, pokud existuje. Vlákno má vlastnosti, jako je například počet pozastavení, které lze zobrazit v okně **vláken** rozhraní IDE.
+- Dokáže identifikovat sebe a program, ve které běží. Vlákna mohou být pojmenována, pozastavena a obnovena. Vlákno může také vytvořit výčet přidružených rámců zásobníku a za určitých podmínek může být přesunuto do jiného rámce zásobníku. Vzhledem k kontextu rámce zásobníku může vlákno vrátit přidružené logické vlákno, pokud je k dispozici. Vlákno má vlastnosti, například počet pozastavení, které lze zobrazit v **okně Vlákna** integrovaného vývojového prostředí.
 
-- Je reprezentován rozhraním [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md) , obvykle vytvořené modulem ladění (de) nebo virtuálním počítačem jako v důsledku provádění programu.
+- Je reprezentováno [rozhraním IDebugThread2,](../../extensibility/debugger/reference/idebugthread2.md) obvykle vytvořeným ladicím strojem (DE) nebo virtuálním strojem v důsledku spuštění programu.
 
 ## <a name="see-also"></a>Viz také
 - [Programy](../../extensibility/debugger/programs.md)
 - [Rámce zásobníku](../../extensibility/debugger/stack-frames.md)
-- [Ladicí stroj](../../extensibility/debugger/debug-engine.md)
+- [Ladicí modul](../../extensibility/debugger/debug-engine.md)
 - [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)
-- [Správce ladění relace](../../extensibility/debugger/session-debug-manager.md)
+- [Správce ladění relací](../../extensibility/debugger/session-debug-manager.md)

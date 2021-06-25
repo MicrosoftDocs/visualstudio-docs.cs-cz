@@ -3,7 +3,7 @@ title: Referenční informace k sadě Visual Studio SDK | Microsoft Docs
 description: Tyto články obsahují informace o oborech názvů sady Visual Studio, souvisejících oborech názvů a dalších oblastech zájmu pro vývojáře, kteří používají sadu Visual Studio SDK.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Visual Studio SDK, reference
 - reference, Visual Studio SDK
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d07a1148911347d4ff8bdb94e1de4625877872d3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 72ee3a1567f2f0c3de3a266af04e20d1354b96a7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062535"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905394"
 ---
 # <a name="visual-studio-sdk-reference"></a>Referenční informace k sadě Visual Studio SDK
 

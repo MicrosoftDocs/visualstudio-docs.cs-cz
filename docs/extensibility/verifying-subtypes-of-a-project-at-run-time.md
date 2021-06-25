@@ -1,9 +1,9 @@
 ---
-title: Ověřování podtypů projektu v době běhu | Microsoft Docs
-description: Naučte se, jak vaše VSPackage ověří přítomnost zadaného vlastního podtypu projektu, na kterém závisí.
+title: Ověření podtypů projektu za běhu | Microsoft Docs
+description: Zjistěte, jak můžete pomocí balíčku VSPackage ověřit přítomnost zadaného podtypu vlastního projektu, na které závisí.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - project subtypes
 - check subtypes
@@ -13,19 +13,19 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c52d3297ce4903cb8f8e7cb2f9ab5169d21ac94e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 621a40e1857d7c78ec4c5be08a3b7c3808a0d48b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062600"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905470"
 ---
-# <a name="verify-subtypes-of-a-project-at-run-time"></a>Ověření podtypů projektu v době běhu
-VSPackage, který závisí na vlastním podtypu projektu, by měl obsahovat logiku pro vyhledání tohoto podtypu, aby mohl být řádně neúspěšný, pokud podtyp není k dispozici. Následující postup ukazuje, jak ověřit přítomnost zadaného podtypu.
+# <a name="verify-subtypes-of-a-project-at-run-time"></a>Ověření podtypů projektu za běhu
+Balíček VSPackage, který závisí na podtypu vlastního projektu, by měl zahrnovat logiku pro vyhledávání tohoto podtypu, aby mohl bez selhání selhat, pokud podtyp není k dispozici. Následující postup ukazuje, jak ověřit přítomnost zadaného podtypu.
 
 ### <a name="to-verify-the-presence-of-a-subtype"></a>Ověření přítomnosti podtypu
 
-1. Získejte hierarchii projektu z projektu a objektů řešení jako <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objekt přidáním následujícího kódu do VSPackage.
+1. Získejte hierarchii projektu z objektů projektu a řešení jako objekt přidáním následujícího kódu <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> do balíčku VSPackage.
 
     ```csharp
     EnvDTE.DTE dte;
@@ -42,7 +42,7 @@ VSPackage, který závisí na vlastním podtypu projektu, by měl obsahovat logi
 
     ```
 
-2. Přetypujte hierarchii na <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected> rozhraní.
+2. Přetypování hierarchie na <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected> rozhraní.
 
     ```csharp
     IVsAggregatableProjectCorrected AP;
@@ -50,14 +50,14 @@ VSPackage, který závisí na vlastním podtypu projektu, by měl obsahovat logi
 
     ```
 
-3. Získání seznamu identifikátorů GUID typu projektu vyvoláním metody <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected.GetAggregateProjectTypeGuids%2A> .
+3. Seznam identifikátorů GUID typu projektu získáte vyvoláním <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected.GetAggregateProjectTypeGuids%2A> .
 
     ```csharp
     string projTypeGuids = AP.GetAggregateProjectTypeGuids().ToUpper();
 
     ```
 
-4. V seznamu vyhledejte identifikátor GUID zadaného podtypu.
+4. V seznamu zkontrolujte identifikátor GUID zadaného podtypu.
 
     ```csharp
     // Replace the string "MyGUID" with the GUID of the subtype.
@@ -69,6 +69,6 @@ VSPackage, který závisí na vlastním podtypu projektu, by měl obsahovat logi
     ```
 
 ## <a name="see-also"></a>Viz také
-- [Podtypy projektu](../extensibility/internals/project-subtypes.md)
-- [Návrh podtypů projektu](../extensibility/internals/project-subtypes-design.md)
+- [Podtypy projektů](../extensibility/internals/project-subtypes.md)
+- [Návrh podtypů projektů](../extensibility/internals/project-subtypes-design.md)
 - [Vlastnosti a metody rozšířené podtypy projektu](../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)
