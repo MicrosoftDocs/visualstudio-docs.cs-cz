@@ -1,9 +1,9 @@
 ---
-title: Rozšiřovací body služby jazyka a editoru | Microsoft Docs
-description: Přečtěte si o rozšiřujících bodech v editoru kódu sady Visual Studio, které můžete rozšířit, včetně většiny funkcí jazykové služby.
+title: Rozšíření služby jazyka a editoru | Microsoft Docs
+description: Seznamte se s rozšiřovacími body v Visual Studio kódu, které můžete rozšířit, včetně většiny funkcí služby jazyka.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extension points
 ms.assetid: 91a6417e-a6fe-4bc2-9d9f-5173c634a99b
@@ -12,15 +12,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8d71e6c7cd7569c9e73134345584a8237337bc7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 293851f1f3e72508a9bc119fb7551b0118ab2a9b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073297"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903144"
 ---
-# <a name="language-service-and-editor-extension-points"></a>Rozšiřovací body služby jazyka a editoru
-Editor poskytuje Rozšiřovací body, které lze rozšířit jako součásti součásti Managed Extensibility Framework (MEF), včetně většiny funkcí jazykové služby. Jedná se o hlavní kategorie rozšiřovacích bodů:
+# <a name="language-service-and-editor-extension-points"></a>Nápěvné body služby jazyka a editoru
+Editor poskytuje rozšiřovací body, které můžete rozšířit jako Managed Extensibility Framework komponent (MEF), včetně většiny funkcí služby jazyka. Toto jsou hlavní kategorie ná příponových bodů:
 
 - Typy obsahu
 
@@ -30,26 +30,26 @@ Editor poskytuje Rozšiřovací body, které lze rozšířit jako součásti sou
 
 - Značky
 
-- Grafických doplňků
+- Ozdoby
 
 - Procesory myši
 
-- Obslužné rutiny drop
+- Obslužné rutiny pro zahodí
 
 - Možnosti
 
 - IntelliSense
 
-## <a name="extend-content-types"></a>Rozšířené typy obsahu
- Typy obsahu jsou definice druhů textu zpracovávaných editorem, například "text", "Code" nebo "CSharp". Definujte nový typ obsahu deklarováním proměnné typu <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> a přidělením nového typu obsahu pro jedinečný název. Chcete-li zaregistrovat typ obsahu v editoru, exportujte jej společně s následujícími atributy:
+## <a name="extend-content-types"></a>Rozšíření typů obsahu
+ Typy obsahu jsou definice druhů textu, které editor zpracovává, například "text", "code" nebo "CSharp". Nový typ obsahu definujete deklarováním proměnné typu a poskytnutím jedinečného názvu nového <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> typu obsahu. Pokud chcete zaregistrovat typ obsahu v editoru, exportujte ho společně s následujícími atributy:
 
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute> je název typu obsahu.
 
-- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute> je název typu obsahu, ze kterého je tento typ obsahu odvozený. Typ obsahu může dědit z více dalších typů obsahu.
+- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute> je název typu obsahu, ze kterého je tento typ obsahu odvozen. Typ obsahu může dědit z několika dalších typů obsahu.
 
-  Vzhledem k tomu <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> , že třída je zapečetěná, můžete ji exportovat bez parametru typu.
+  Vzhledem k <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> tomu, že třída je zapečetěná, můžete ji exportovat bez parametru typu.
 
-  Následující příklad ukazuje atributy exportu v definici typu obsahu.
+  Následující příklad ukazuje atributy exportu pro definici typu obsahu.
 
 ```
 [Export]
@@ -59,27 +59,27 @@ Editor poskytuje Rozšiřovací body, které lze rozšířit jako součásti sou
 internal static ContentTypeDefinition TestContentTypeDefinition;
 ```
 
- Typy obsahu můžou být založené na nule nebo několika současných typech obsahu. Jedná se o předdefinované typy:
+ Typy obsahu mohou být založené na žádných nebo více existujících typech obsahu. Toto jsou předdefinové typy:
 
-- Libovolný: základní typ obsahu. Nadřazený objekt všech ostatních typů obsahu.
+- Libovolný: základní typ obsahu. Nadřazený prvek všech ostatních typů obsahu.
 
-- Text: základní typ pro obsah bez projekce. Dědí z "any".
+- Text: Základní typ pro obsah mimo projekci. Dědí z "any".
 
 - Prostý text: pro text bez kódu. Dědí z "text".
 
 - Kód: pro kód všech druhů. Dědí z "text".
 
-- Inertní: vyloučí text z jakéhokoli druhu manipulace. U textu tohoto typu obsahu nebude nikdy k dispozici žádné rozšíření.
+- Inert: Vyloučí text z jakéhokoli druhu zpracování. U textu tohoto typu obsahu se nikdy nebude aplikovat žádné rozšíření.
 
 - Projekce: pro obsah vyrovnávacích pamětí projekce. Dědí z "any".
 
-- IntelliSense: pro obsah technologie IntelliSense. Dědí z "text".
+- Intellisense: pro obsah IntelliSense. Dědí z "text".
 
-- Sighelp: podpisová help. Dědí z "IntelliSense".
+- Sighelp: podpisová nápověda. Dědí z intellisense.
 
-- Sighelp-doc: signatura Help Documentation. Dědí z "IntelliSense".
+- Sighelp-doc: dokumentace k nápovědě k signaturě. Dědí z intellisense.
 
-  Jedná se o některé typy obsahu, které jsou definovány v aplikaci Visual Studio, a některé jazyky, které jsou hostovány v aplikaci Visual Studio:
+  Toto jsou některé typy obsahu, které jsou definovány Visual Studio a některé jazyky, které jsou hostovány v Visual Studio:
 
 - Basic
 
@@ -87,13 +87,13 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
 
 - ConsoleOutput
 
-- CSharp
+- Csharp
 
 - Šablony stylů CSS
 
-- ENC
+- Enc
 
-- FindResults
+- FindResults (Výsledky hledání)
 
 - F#
 
@@ -105,27 +105,27 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
 
 - XML
 
-  Chcete-li zjistit seznam dostupných typů obsahu, importujte <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService> , a udržujte kolekci typů obsahu pro Editor. Následující kód importuje tuto službu jako vlastnost.
+  Pokud chcete zjistit seznam dostupných typů obsahu, naimportujte soubor , který udržuje kolekci typů <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService> obsahu pro editor. Následující kód naimportuje tuto službu jako vlastnost.
 
 ```
 [Import]
 internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }
 ```
 
- K přidružení typu obsahu s příponou názvu souboru použijte <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> .
+ Pokud chcete přidružit typ obsahu k příponě názvu souboru, použijte <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> .
 
 > [!NOTE]
-> V aplikaci Visual Studio jsou přípony názvů souborů zaregistrovány pomocí <xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute> balíčku na jazykové službě. <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition>Přidruží typ obsahu MEF s příponou názvu souboru, který byl registrován tímto způsobem.
+> V Visual Studio jsou přípony názvů souborů registrované pomocí v <xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute> balíčku služby jazyka. Přidruží <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> typ obsahu MEF k příponě názvu souboru, která byla zaregistrována tímto způsobem.
 
- Chcete-li exportovat příponu názvu souboru do definice typu obsahu, je nutné použít následující atributy:
+ Pokud chcete exportovat příponu názvu souboru do definice typu obsahu, musíte zahrnout následující atributy:
 
 - <xref:Microsoft.VisualStudio.Utilities.FileExtensionAttribute>: Určuje příponu názvu souboru.
 
 - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: Určuje typ obsahu.
 
-  Vzhledem k tomu <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> , že třída je zapečetěná, můžete ji exportovat bez parametru typu.
+  Vzhledem k <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> tomu, že třída je zapečetěná, můžete ji exportovat bez parametru typu.
 
-  Následující příklad ukazuje atributy exportu u přípony názvu souboru do definice typu obsahu.
+  Následující příklad ukazuje export atributů pro příponu názvu souboru do definice typu obsahu.
 
 ```
 [Export]
@@ -134,20 +134,20 @@ internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }
 internal static FileExtensionToContentTypeDefinition TestFileExtensionDefinition;
 ```
 
- <xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService>Spravuje přidružení mezi příponami názvů souborů a typy obsahu.
+ Spravuje přidružení mezi příponami názvů souborů a <xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService> typy obsahu.
 
-## <a name="extend-classification-types-and-classification-formats"></a>Rozšiřování typů klasifikace a formátů klasifikace
- Typy klasifikace lze použít k definování druhů textu, pro které chcete zajistit jiné zpracování (například barevné označení "klíčové slovo" modrou a "text" "comment" text zeleně). Definujte nový typ klasifikace tím, že deklarujete proměnnou typu <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> a udělíte jí jedinečný název.
+## <a name="extend-classification-types-and-classification-formats"></a>Rozšíření typů klasifikace a formátů klasifikace
+ Typy klasifikace můžete použít k definování druhů textu, pro který chcete zajistit různé zpracování (například obarvení "klíčového slova" textu modře a "komentář" textu zeleně). Definujte nový typ klasifikace deklarováním proměnné typu <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> a poskytnutím jedinečného názvu.
 
- Chcete-li zaregistrovat typ klasifikace v editoru, exportujte jej společně s následujícími atributy:
+ Pokud chcete zaregistrovat typ klasifikace v editoru, exportujte ho společně s následujícími atributy:
 
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název typu klasifikace.
 
-- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>: název typu klasifikace, ze kterého dědí tento typ klasifikace. Všechny typy klasifikace dědí z "text" a typ klasifikace může dědit z více dalších typů klasifikace.
+- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>: Název typu klasifikace, ze kterého tento typ klasifikace dědí. Všechny typy klasifikace dědí z textu a typ klasifikace může dědit z několika dalších typů klasifikace.
 
-  Vzhledem k tomu <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> , že třída je zapečetěná, můžete ji exportovat bez parametru typu.
+  Vzhledem k <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> tomu, že třída je zapečetěná, můžete ji exportovat bez parametru typu.
 
-  Následující příklad ukazuje atributy exportu v definici typu klasifikace.
+  Následující příklad ukazuje atributy exportu u definice typu klasifikace.
 
 ```
 [Export]
@@ -156,48 +156,48 @@ internal static FileExtensionToContentTypeDefinition TestFileExtensionDefinition
 internal static ClassificationTypeDefinition CSharpTestDefinition;
 ```
 
- <xref:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService>Poskytuje přístup ke standardním klasifikacím. Mezi předdefinované typy klasifikace patří:
+ Poskytuje <xref:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService> přístup ke standardním klasifikacím. Mezi předdefinové typy klasifikace patří:
 
-- textové
+- "text"
 
-- "přirozený jazyk" (odvozený od "text")
+- "natural language" (odvozeno od "text")
 
-- "formální jazyk" (odvozený od "text")
+- "formal language" (odvozený od "text")
 
-- "String" (je odvozen z "Literal")
+- "string" (odvozeno od "literálu")
 
-- "znak" (odvozený od "literálu")
+- "character" (odvozeno od "literálu")
 
-- "numerické" (odvoditelné z "literálu")
+- "numerické" (odvozeno od "literálu")
 
   Sada různých typů chyb dědí z <xref:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition> . Zahrnují následující typy chyb:
 
-- "Chyba syntaxe"
+- "chyba syntaxe"
 
-- "Chyba kompilátoru"
+- Chyba kompilátoru
 
-- "jiná chyba"
+- "other error" (jiná chyba)
 
-- Upozornění
+- "warning" (upozornění)
 
-  Chcete-li zjistit seznam dostupných typů klasifikace, importujte <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService> , a udržujte kolekci typů klasifikace pro Editor. Následující kód importuje tuto službu jako vlastnost.
+  Pokud chcete zjistit seznam dostupných typů klasifikace, naimportujte soubor , který udržuje kolekci typů klasifikace <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService> pro editor. Následující kód naimportuje tuto službu jako vlastnost.
 
 ```
 [Import]
 internal IClassificationTypeRegistryService ClassificationTypeRegistryService { get; set; }
 ```
 
- Můžete definovat definici formátu klasifikace pro nový typ klasifikace. Odvodit třídu z <xref:Microsoft.VisualStudio.Text.Classification.ClassificationFormatDefinition> a exportovat pomocí typu <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition> společně s následujícími atributy:
+ Pro nový typ klasifikace můžete definovat definici formátu klasifikace. Odvodit třídu z a <xref:Microsoft.VisualStudio.Text.Classification.ClassificationFormatDefinition> exportovat ji s <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition> typem , společně s následujícími atributy:
 
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název formátu.
 
 - <xref:Microsoft.VisualStudio.Utilities.DisplayNameAttribute>: zobrazovaný název formátu.
 
-- <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: Určuje, zda se formát zobrazí na stránce **písma a barvy** dialogového okna **Možnosti** .
+- <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: Určuje, jestli se formát zobrazí na **stránce Písma** a barvy **dialogového okna** Možnosti.
 
 - <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: priorita formátu. Platné hodnoty jsou z <xref:Microsoft.VisualStudio.Text.Classification.Priority> .
 
-- <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeAttribute>: název typu klasifikace, ke kterému je tento formát namapován.
+- <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeAttribute>: název typu klasifikace, na který je tento formát mapován.
 
   Následující příklad ukazuje atributy exportu v definici formátu klasifikace.
 

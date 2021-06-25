@@ -1,8 +1,8 @@
 ---
-description: Tato funkce vrátí předchozí operaci rezervace a obnoví tak obsah vybraného souboru nebo souborů do stavu před rezervací.
-title: Funkce SccUncheckout | Microsoft Docs
+description: Tato funkce vrátí zpět předchozí operaci pokladny, čímž obnoví obsah vybraného souboru nebo souborů do stavu před pokladnou.
+title: SccUncheckout – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccUncheckout
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0144755d18bbabee47f7aad25337e3c41588ebe5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3a382a112b5a11acc36c52735c949ebef71052ec
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090158"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904084"
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout – funkce
-Tato funkce vrátí předchozí operaci rezervace a obnoví tak obsah vybraného souboru nebo souborů do stavu před rezervací. Všechny změny provedené v souboru od rezervace jsou ztraceny.
+Tato funkce vrátí zpět předchozí operaci pokladny, čímž obnoví obsah vybraného souboru nebo souborů do stavu před pokladnou. Všechny změny provedené v souboru, protože se při pokladně ztratí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,44 +39,44 @@ SCCRTN SccUncheckout (
 #### <a name="parameters"></a>Parametry
  pvContext
 
-pro Struktura kontextu modulu plug-in správy zdrojových kódů.
+[v] Kontextová struktura modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
+[v] Popisovač okna integrovaného vývojového prostředí, který může modul plug-in správy zdrojového kódu použít jako nadřazený prvek pro všechna dialogová okna, která poskytuje.
 
  nFiles
 
-pro Počet souborů, které jsou zadány v `lpFileNames` poli.
+[v] Počet souborů zadaných v `lpFileNames` poli
 
  lpFileNames
 
-pro Pole plně kvalifikovaných názvů místních cest souborů, pro které se má vrátit rezervace
+[v] Pole plně kvalifikovaných názvů místních cest souborů, pro které se má vrátit zpět k pokladně.
 
- fOptions
+ Možnosti fOptions
 
-pro Příznaky příkazu (nepoužívá se)
+[v] Příznaky příkazů (nepouží se)
 
  pvOptions
 
-pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
+[v] Možnosti modulu plug-in správy zdrojového kódu
 
 ## <a name="return-value"></a>Návratová hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Zrušení rezervace bylo úspěšné.|
-|SCC_E_FILENOTCONTROLLED|Vybraný soubor není v rámci správy zdrojového kódu.|
-|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|
-|SCC_E_NONSPECIFICERROR|Nespecifická chyba. Zrušení rezervace nebylo úspěšné.|
+|SCC_OK|Vrácení zpět k pokladně bylo úspěšné.|
+|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod svládem zdrojového kódu.|
+|SCC_E_ACCESSFAILURE|Došlo k problému s přístupem k systému správy zdrojového kódu, pravděpodobně kvůli problémům se sítí nebo záležitostimi vyřešit. Doporučuje se opakování.|
+|SCC_E_NONSPECIFICERROR|Nespecikátní selhání. Vrácení zpět k pokladně nebylo úspěšné.|
 |SCC_E_NOTCHECKEDOUT|Uživatel nemá soubor rezervován.|
-|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemůže tuto operaci provést.|
 |SCC_E_PROJNOTOPEN|Projekt nebyl otevřen ze správy zdrojového kódu.|
-|SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|
+|SCC_I_OPERATIONCANCELED|Operace se před dokončením zrušila.|
 
 ## <a name="remarks"></a>Poznámky
- Po provedení této operace `SCC_STATUS_CHECKEDOUT` `SCC_STATUS_MODIFIED` budou pro soubory, na kterých bylo provedeno zrušení rezervace, vymazány příznaky a.
+ Po této operaci se u souborů, u kterých byla provedena kontrola vrácení zpět, vynuluje příznak `SCC_STATUS_CHECKEDOUT` `SCC_STATUS_MODIFIED` a .
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

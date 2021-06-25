@@ -1,9 +1,9 @@
 ---
 title: Provozní režimy | Microsoft Docs
-description: Přečtěte si o třech režimech, ve kterých může IDE fungovat, což jsou režim návrhu, režim běhu a režim přerušení.
+description: Seznamte se se třemi režimy, ve kterých může integrované vývojové prostředí fungovat, což jsou režim návrhu, režim spuštění a režim přerušení.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines, modes
 ms.assetid: f69972d0-809d-40df-9da3-04738791391c
@@ -12,15 +12,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 563db644069731c5d74088dadf296933c36b0cc1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 559df92545f4c14eb0575e7ef758e73028349b76
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067839"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899105"
 ---
 # <a name="operational-modes"></a>Provozní režimy
-Existují tři režimy, ve kterých může IDE pracovat, následovně:
+Existují tři režimy, ve kterých může integrované vývojové prostředí fungovat:
 
 - [Režim návrhu](#vsconoperationalmodesanchor1)
 
@@ -28,22 +28,22 @@ Existují tři režimy, ve kterých může IDE pracovat, následovně:
 
 - [Režim přerušení](#vsconoperationalmodesanchor3)
 
-  Způsob, jakým vaše vlastní moduly ladění (DE) mění mezi těmito režimy, je rozhodnutí o implementaci, které vyžaduje, abyste se seznámili s mechanismy přechodu. DE květen nebo nemusí přímo implementovat tyto režimy. Tyto režimy jsou opravdu ladit režimy balíčku, které se přepínají na základě akce uživatele nebo událostí z DE. Například přechod z režimu spuštění do režimu přerušení je podněcována událostí zastavení z DE. Přechod z přerušení na režim spuštění nebo krok je nápomocen uživatel, který provádí operace, jako je krok nebo provedení. Další informace o zrušení přechodů naleznete v tématu [řízení provádění](../../extensibility/debugger/control-of-execution.md).
+  Způsob, jakým vlastní ladicí modul (DE) přechází mezi těmito režimy, je rozhodnutí o implementaci, které vyžaduje, abyste znají mechanismy přechodu. De může nebo nemusí tyto režimy implementovat přímo. Tyto režimy jsou ve skutečnosti režimy ladění balíčků, které se přepíná na základě akce uživatele nebo událostí z DE. Například přechod z režimu spuštění do režimu přerušení je zmírněn zastavením události z DE. Přechod z režimu break do režimu spuštění nebo krokového režimu je zmírněn tím, že uživatel provádí operace, jako je krok nebo spuštění. Další informace o přechodech DE najdete v tématu [Řízení provádění](../../extensibility/debugger/control-of-execution.md).
 
 ## <a name="design-mode"></a><a name="vsconoperationalmodesanchor1"></a> Režim návrhu
- Režim návrhu je nespuštěný stav ladění sady Visual Studio, během kterého lze v aplikaci nastavit funkce ladění.
+ Režim návrhu je nerušovací stav ladění Visual Studio, během kterého můžete v aplikaci nastavit funkce ladění.
 
- V režimu návrhu se používá jenom několik funkcí ladění. Vývojář se může rozhodnout pro nastavování zarážek nebo vytváření výrazů kukátka. DE není nikdy načtena nebo volána, když je IDE v režimu návrhu. Interakce s nástrojem DE probíhá pouze v režimu spuštění a přerušení.
+ Během režimu návrhu se používá pouze několik funkcí ladění. Vývojář se může rozhodnout nastavit zarážky nebo vytvořit výrazy hodinek. De se nikdy nenačítá ani nevolal, když je integrované vývojové prostředí (IDE) v režimu návrhu. Interakce s DE probíhá pouze v režimu spuštění a přerušení.
 
 ## <a name="run-mode"></a><a name="vsconoperationalmodesanchor2"></a> Režim spuštění
- Režim spuštění nastane, když se program spustí v ladicí relaci v integrovaném vývojovém prostředí. Aplikace se spustí do ukončení, dokud není dosaženo zarážky nebo dokud není vyvolána výjimka. Když aplikace běží na ukončení, DE přejde do režimu návrhu. Když je dosaženo zarážky nebo je vyvolána výjimka, příkaz DE přejde do režimu přerušení.
+ Režim spuštění nastane, když program běží v ladicí relaci v integrovaném vývojovém prostředí (IDE). Aplikace běží až do ukončení, dokud se nedosáhne zarážky, nebo dokud není vyvolána výjimka. Když se aplikace spustí k ukončení, destrukce přechází do režimu návrhu. Když dojde k zarážce nebo dojde k výjimce, destrukce přechází do režimu přerušení.
 
 ## <a name="break-mode"></a><a name="vsconoperationalmodesanchor3"></a> Režim přerušení
- Režim přerušení nastane, pokud je spuštění ladicího programu pozastaveno. Režim přerušení nabízí vývojářům snímek aplikace v době přerušení a umožňuje vývojářům analyzovat stav aplikace a změnit způsob, jakým se aplikace spustí. Vývojář může zobrazit a upravit kód, kontrolovat nebo upravovat data, restartovat aplikaci, ukončit provádění nebo pokračovat v provádění ze stejného bodu.
+ Režim přerušení nastane, když je spuštění ladicího programu pozastavené. Režim přerušení nabízí vývojáři snímek aplikace v době přerušení a umožňuje vývojáři analyzovat stav aplikace a změnit způsob spuštění aplikace. Vývojář může zobrazit a upravovat kód, zkoumat nebo upravovat data, restartovat aplikaci, ukončit provádění nebo pokračovat v provádění od stejného bodu.
 
- Režim přerušení je zadán, když DE odešle synchronní událost zastavení. Synchronní zastavení událostí, označovaných také jako zastavování událostí, upozorní správce ladění relace (SDM) a rozhraní IDE, které aplikace Laděna, zastavila provádění kódu. Rozhraní [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) a [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md) jsou příklady událostí zastavení.
+ Režim přerušení se zadá, když DE odešle synchronní událost zastavení. Synchronní události zastavení, také nazývané události zastavení, upozorní správce ladění relace (SDM) a integrované vývojové prostředí (IDE), že laditá aplikace zastavila provádění kódu. Rozhraní [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) a [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md) jsou příklady zastavení událostí.
 
- Zastavení událostí pokračuje voláním jedné z následujících metod, které převedou ladicí program z režimu přerušení na spuštění nebo krokový režim:
+ Zastavení událostí pokračuje voláním jedné z následujících metod, která ladicí program přechází z režimu přerušení do režimu spuštění nebo kroku:
 
 - [Spuštěním](../../extensibility/debugger/reference/idebugprocess3-execute.md)
 
@@ -51,10 +51,10 @@ Existují tři režimy, ve kterých může IDE pracovat, následovně:
 
 - [Pokračovat](../../extensibility/debugger/reference/idebugprocess3-continue.md)
 
-### <a name="step-mode"></a><a name="vsconoperationalmodesanchor4"></a> Režim kroku
- Krokový režim nastane, pokud program provede kroky na další řádek kódu, nebo do, nad nebo mimo funkci. Krok je proveden voláním [kroku](../../extensibility/debugger/reference/idebugprocess3-step.md)metody. Tato metoda vyžaduje `DWORD` s, aby jako vstupní parametry určovala výčty [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) a [STEPKIND](../../extensibility/debugger/reference/stepkind.md) .
+### <a name="step-mode"></a><a name="vsconoperationalmodesanchor4"></a> Krokový režim
+ Režim krokování nastane, když program postupuje na další řádek kódu nebo do funkce, přehodí ji nebo ji vystupuje. Krok se provádí voláním metody [Step](../../extensibility/debugger/reference/idebugprocess3-step.md). Tato metoda vyžaduje, aby jako vstupní parametry specifikoval výčty `DWORD` [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) a [STEPKIND.](../../extensibility/debugger/reference/stepkind.md)
 
- Když se program úspěšně doplní na další řádek kódu nebo do funkce nebo se spustí na kurzor nebo na nastavenou zarážku, příkaz DE automaticky přejde zpět do režimu přerušení.
+ Když program úspěšně prochází další řádek kódu nebo do funkce, nebo se spustí na kurzor nebo na nastavenou zarážku, DE automaticky přechází zpět do režimu přerušení.
 
 ## <a name="see-also"></a>Viz také
 - [Řízení provádění](../../extensibility/debugger/control-of-execution.md)

@@ -1,9 +1,9 @@
 ---
-title: Groups – element | Microsoft Docs
-description: Element Groups obsahuje položky, které definují skupiny příkazů VSPackage. Tento článek obsahuje příklad.
+title: Groups – | Microsoft Docs
+description: Element Groups obsahuje položky, které definují skupiny příkazů balíčku VSPackage. Tento článek obsahuje příklad.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, Groups
 - Groups element (VSCT XML schema)
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab9ca0a55d8d07aa2541e8884ee92c1c308cabe9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4f20e19e19539e71a4dbed74a0dd5bb9af62a15f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057569"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902823"
 ---
 # <a name="groups-element"></a>Groups – element
-Obsahuje položky, které definují skupiny příkazů VSPackage.
+Obsahuje položky, které definují skupiny příkazů balíčku VSPackage.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ Obsahuje položky, které definují skupiny příkazů VSPackage.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Element|Popis|
 |-------------|-----------------|
 |[Group – element](../extensibility/group-element.md)|Představuje jednu skupinu příkazů.|
-|[Groups – element](../extensibility/groups-element.md)|Obsahuje položky, které definují skupiny příkazů VSPackage.|
+|[Groups – element](../extensibility/groups-element.md)|Obsahuje položky, které definují skupiny příkazů balíčku VSPackage.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Command – element](../extensibility/commands-element.md)|Představuje kolekci příkazů na panelu nástrojů VSPackage.|
+|[Commands – element](../extensibility/commands-element.md)|Představuje kolekci příkazů na panelu nástrojů VSPackage.|
 
 ## <a name="example"></a>Příklad
 
@@ -65,5 +65,5 @@ Obsahuje položky, které definují skupiny příkazů VSPackage.
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Jak balíčky VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

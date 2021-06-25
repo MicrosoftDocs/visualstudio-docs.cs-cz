@@ -3,7 +3,7 @@ title: Komponenty ladicího programu | Microsoft Docs
 description: Seznamte se s prvky, které tvoří relaci ladění, kterou spravuje ladicí program sady Visual Studio, implementovaný jako VSPackage.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Visual Studio], components
 - components [Visual Studio SDK], debugging
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7c558d20d24acd65ece4c4df43eb8f474c20447
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8c246bc00ee4f6fcead8404b3174da39f7b5ca2d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094949"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903980"
 ---
 # <a name="debugger-components"></a>Komponenty ladicího programu
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Ladicí program je implementován jako VSPackage a spravuje celou relaci ladění. Ladicí relace zahrnuje následující prvky:

@@ -1,8 +1,8 @@
 ---
-description: Tato funkce uzavře dávku operací správy zdrojového kódu.
-title: Funkce SccEndBatch | Microsoft Docs
+description: Tato funkce uzavírá dávku operací správy zdrojového kódu.
+title: SccEndBatch – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccEndBatch
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3bad3604c57661d0e0e091299cef127d9215d56
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 11ff596f19d3a98b929f9346bbf579e0ad1258c5
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090210"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904588"
 ---
-# <a name="sccendbatch-function"></a>SccEndBatch – funkce
-Tato funkce uzavře dávku operací správy zdrojového kódu. Tyto dávky nemůžou být vnořené.
+# <a name="sccendbatch-function"></a>Funkce SccEndBatch
+Tato funkce uzavírá dávku operací správy zdrojového kódu. Tyto dávky nemusí být vnořené.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,15 +33,15 @@ SCCRTN SccEndBatch(void);
  Žádné
 
 ## <a name="return-value"></a>Vrácená hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Dávka operací se úspěšně uzavřela.|
-|SCC_E_UNKNOWNERROR|Nespecifická chyba.|
+|SCC_OK|Dávka operací se úspěšně dokončila.|
+|SCC_E_UNKNOWNERROR|Nespecikátní selhání.|
 
 ## <a name="remarks"></a>Poznámky
- Dávky správy zdrojového kódu se používají ke spouštění stejných operací správy zdrojových kódů napříč více projekty nebo několika kontexty. Dávky lze použít k vyloučení redundantních dialogových oken z uživatelského prostředí během dávkové operace. [SccBeginBatch](../extensibility/sccbeginbatch-function.md) a `SccEndBatch` funkce slouží jako dvojice k označení začátku a konce operace. Nemohou být vnořené.
+ Dávky správy zdrojového kódu slouží k provádění stejných operací správy zdrojového kódu napříč více projekty nebo více kontexty. Dávky lze použít k vyloučení redundantních dialogových oken z uživatelského prostředí během dávkové operace. [SccBeginBatch](../extensibility/sccbeginbatch-function.md) a funkce se používají jako pár k označení začátku `SccEndBatch` a konce operace. Nelze je vnořit.
 
 ## <a name="see-also"></a>Viz také
 - [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

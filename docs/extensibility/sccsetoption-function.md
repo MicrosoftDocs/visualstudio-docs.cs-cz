@@ -2,7 +2,7 @@
 description: Tato funkce nastavuje možnosti, které řídí chování modulu plug-in správy zdrojových kódů.
 title: Funkce SccSetOption | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccSetOption
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 031de256b231bbd95e7535af80448db5140cba7e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 18e33cbb8dbee9b332456826ed33e46e4d2e76de
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090145"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904097"
 ---
 # <a name="sccsetoption-function"></a>SccSetOption – funkce
 Tato funkce nastavuje možnosti, které řídí chování modulu plug-in správy zdrojových kódů.

@@ -1,8 +1,8 @@
 ---
-description: Tato funkce načte kopii jednoho nebo více souborů pro zobrazení a kompilování, ale nikoli pro úpravy.
-title: Funkce SccGet | Microsoft Docs
+description: Tato funkce načte kopii jednoho nebo více souborů pro zobrazení a kompilaci, ale ne pro úpravy.
+title: SccGet – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGet
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 172e0ec5fdba4b91c3cf86ea964b4a98a23a5fa8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 805c19b0c326e8389b4e1905edf370ad042aac92
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060338"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904549"
 ---
-# <a name="sccget-function"></a>SccGet – funkce
-Tato funkce načte kopii jednoho nebo více souborů pro zobrazení a kompilování, ale nikoli pro úpravy. Ve většině systémů jsou soubory označeny jako jen pro čtení.
+# <a name="sccget-function"></a>Funkce SccGet
+Tato funkce načte kopii jednoho nebo více souborů pro zobrazení a kompilaci, ale ne pro úpravy. Ve většině systémů jsou soubory označené jako jen pro čtení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,74 +39,74 @@ SCCRTN SccGet(
 ### <a name="parameters"></a>Parametry
  pvContext
 
-pro Struktura kontextu modulu plug-in správy zdrojových kódů.
+[v] Kontextová struktura modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
+[v] Popisovač okna integrovaného vývojového prostředí, který může modul plug-in správy zdrojového kódu použít jako nadřazený prvek pro všechna dialogová okna, která poskytuje.
 
  nFiles
 
-pro Počet souborů, které jsou zadány v `lpFileNames` poli.
+[v] Počet souborů zadaných v `lpFileNames` poli
 
  lpFileNames
 
-pro Pole plně kvalifikovaných názvů souborů, které mají být načteny.
+[v] Pole plně kvalifikovaných názvů souborů, které se mají načíst.
 
- fOptions
+ Možnosti fOptions
 
-pro Příznaky příkazu ( `SCC_GET_ALL` , `SCC_GET_RECURSIVE` ).
+[v] Příznaky příkazů ( `SCC_GET_ALL` , `SCC_GET_RECURSIVE` ).
 
  pvOptions
 
-pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
+[v] Možnosti modulu plug-in správy zdrojového kódu
 
 ## <a name="return-value"></a>Vrácená hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Úspěch operace Get|
-|SCC_E_FILENOTCONTROLLED|Soubor není pod správou zdrojových kódů.|
+|SCC_OK|Úspěch operace získání|
+|SCC_E_FILENOTCONTROLLED|Soubor není ve zdrojovém kódu.|
 |SCC_E_OPNOTSUPPORTED|Systém správy zdrojového kódu tuto operaci nepodporuje.|
-|SCC_E_FILEISCHECKEDOUT|Nelze získat soubor, který aktuálně rezervoval uživatel.|
-|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|
-|SCC_E_NOSPECIFIEDVERSION|Zadali jste neplatnou verzi nebo datum/čas.|
-|SCC_E_NONSPECIFICERROR|Nespecifická chyba; soubor nebyl synchronizován.|
-|SCC_I_OPERATIONCANCELED|Operace se zrušila před dokončením.|
+|SCC_E_FILEISCHECKEDOUT|Nelze získat soubor, který uživatel právě vyhlásil.|
+|SCC_E_ACCESSFAILURE|Došlo k problému s přístupem k systému správy zdrojového kódu, pravděpodobně kvůli problémům se sítí nebo záležitostimi vyřešit. Doporučuje se opakování.|
+|SCC_E_NOSPECIFIEDVERSION|Zadali jste neplatnou verzi nebo datum a čas.|
+|SCC_E_NONSPECIFICERROR|Nespecikátní selhání; soubor nebyl synchronizovaný.|
+|SCC_I_OPERATIONCANCELED|Operace se před dokončením zrušila.|
 |SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
 
 ## <a name="remarks"></a>Poznámky
- Tato funkce je volána s počtem a polem názvů souborů, které mají být načteny. Pokud rozhraní IDE předává příznak `SCC_GET_ALL` , znamená to, že položky v `lpFileNames` nejsou soubory, ale adresáře a že mají být načteny všechny soubory pod správou zdrojových kódů v daných adresářích.
+ Tato funkce se volá s count a polem názvů souborů, které se mají načíst. Pokud integrované vývojové prostředí (IDE) předá příznak , znamená to, že položky v souboru nejsou soubory kromě adresářů a že se mají načíst všechny soubory v rámci správy zdrojového kódu v těchto `SCC_GET_ALL` `lpFileNames` adresářích.
 
- `SCC_GET_ALL`Příznak lze kombinovat s `SCC_GET_RECURSIVE` příznakem pro načtení všech souborů v daných adresářích a také ve všech podadresářích.
+ Příznak lze zkombinovat s příznakem a načíst tak všechny soubory v daném adresáři a také ve všech `SCC_GET_ALL` `SCC_GET_RECURSIVE` podadresářích.
 
 > [!NOTE]
-> `SCC_GET_RECURSIVE` Nikdy by neměl být předán bez `SCC_GET_ALL` . Všimněte si také, že pokud se adresáře *C:\a* a *C:\A\B* předávají na rekurzivní Get, *C:\A\B* a všechny jeho podadresáře budou skutečně načteny dvakrát. Je to zodpovědnost IDE – a ne modul plug-in správy zdrojového kódu, aby se zajistilo, že tyto duplicitní hodnoty jsou z pole zachované.
+> `SCC_GET_RECURSIVE` By nikdy neměly být předány bez `SCC_GET_ALL` . Všimněte si také, že pokud jsou adresáře *C:\A* a *C:\A\B* předány rekurzivnímu získání, *C:\A\B* a všechny jeho podadresáře se ve skutečnosti načtou dvakrát. Je zodpovědností integrovaného vývojového prostředí (a ne modulů plug-in správy zdrojového kódu) zajistit, aby takové duplicity byly mimo pole.
 
- Nakonec i v případě, že modul plug-in správy zdrojových kódů zadal `SCC_CAP_GET_NOUI` příznak při inicializaci, což značí, že nemá uživatelské rozhraní pro příkaz Get, může být tato funkce stále volána rozhraním IDE pro načtení souborů. Příznak jednoduše znamená, že rozhraní IDE nezobrazuje položku nabídky získat a že modul plug-in neočekává, že by poskytoval žádné uživatelské rozhraní.
+ A konečně, i když modul plug-in správy zdrojového kódu specifikuje příznak při inicializaci, který indikuje, že nemá uživatelské rozhraní pro příkaz Get, může integrované vývojové prostředí tuto funkci stále volat pro načtení `SCC_CAP_GET_NOUI` souborů. Příznak jednoduše znamená, že integrované vývojové prostředí (IDE) nezobrazí položku nabídky Získat a že modul plug-in neposkytuje žádné uživatelské rozhraní.
 
 ## <a name="rename-files-and-sccget"></a>Přejmenování souborů a SccGet
- Situace: uživatel rezervuje soubor, například *a.txt*, a upraví ho. Než bude možné *a.txt* vrátit se změnami, druhý uživatel přejmenuje *a.txt* na *b.txt* v databázi správy zdrojů, zkontroluje *b.txt*, provede některé úpravy souboru a zkontroluje soubor v. První uživatel požaduje změny provedené druhým uživatelem, aby první uživatel přejmenoval svou místní verzi *a.txt* souboru na *b.txt* a soubor získá. Místní mezipaměť, která uchovává údaje o číslech verzí, však stále popřemýšleje o tom, že první verze *a.txt* je uložená místně, takže Správa zdrojového kódu nemůže tyto rozdíly vyřešit.
+ Situace: Uživatel si rezervuje soubor, například *a.txt*, a upraví ho. Před *a.txt* se změnami druhý uživatel přejmenuje a.txtna *b.txt* v databázi správy zdrojového kódu, zkontroluje *b.txt,* provede v souboru nějaké úpravy a zkontroluje soubor v . První uživatel chce, aby změny provedené druhým uživatelem byly provedeny, takže první  uživatel přejmenuje místní verzi souboru *a.txt* nab.txta dostane se k souboru. Místní mezipaměť, která uchovává informace o číslech verzí, si ale pořád myslí, že první verze *a.txt* je uložená místně, a proto nemůže řízení zdrojového kódu tyto rozdíly vyřešit.
 
- Existují dva způsoby, jak tuto situaci vyřešit, protože místní mezipaměť verzí správy zdrojového kódu se nesynchronizuje s databází správy zdrojů:
+ Existují dva způsoby, jak tuto situaci vyřešit, když se místní mezipaměť verzí správy zdrojového kódu přestane synchronizovat s databází správy zdrojového kódu:
 
-1. Nepovolujte přejmenování souboru v databázi správy zdrojů, která je aktuálně rezervována.
+1. Nepovoluje přejmenování souboru v databázi správy zdrojového kódu, který je aktuálně rezervován.
 
-2. Proveďte ekvivalent příkazu "odstranit starý" následovaný výrazem "Přidat nový". To lze provést jedním z následujících způsobů:
+2. Proveďte ekvivalent "delete old" a "add new". Jedním ze způsobů, jak toho dosáhnout, je následující algoritmus.
 
-    1. Voláním funkce [SccQueryChanges](../extensibility/sccquerychanges-function.md) se dozvíte, jak přejmenovat *a.txt* na *b.txt* v databázi správy zdrojů.
+    1. Voláním [funkce SccQueryChanges](../extensibility/sccquerychanges-function.md) získáte informace o  přejmenovánía.txt, *b.txt* v databázi správy zdrojového kódu.
 
     2. Přejmenujte místní *a.txt* na *b.txt*.
 
-    3. Zavolejte `SccGet` funkci pro *a.txt* i *b.txt*.
+    3. Volání `SccGet` funkce pro *a.txt* i *b.txt*.
 
-    4. Vzhledem k tomu, že *a.txt* neexistuje v databázi správy zdrojových kódů, je mezipaměť místní verze vyprázdněna z informací o chybějících *a.txtch* verzích.
+    4. Protože *a.txt* v databázi správy zdrojového kódu neexistuje, místní mezipaměť verzí se vyprázdní z chybějícícha.txt *verzí.*
 
-    5. Soubor *b.txt* , který je rezervován, je sloučen s obsahem místního souboru *b.txt* .
+    5. Soubor *b.txt* se sloučí s obsahem místního souborub.txt *souboru.*
 
-    6. Aktualizovaný soubor *b.txt* se teď dá vrátit se změnami.
+    6. Aktualizovaný *souborb.txt* je teď možné se ohlásil.
 
 ## <a name="see-also"></a>Viz také
 - [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)
-- [Bitflags používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md)
+- [Bitflagy používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md)

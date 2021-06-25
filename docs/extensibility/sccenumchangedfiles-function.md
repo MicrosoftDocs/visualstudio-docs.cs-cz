@@ -1,8 +1,8 @@
 ---
-description: Vzhledem k seznamu místních souborů Tato funkce určuje, které soubory se liší od odpovídajících verzí v databázi správy zdrojového kódu.
-title: Funkce SccEnumChangedFiles | Microsoft Docs
+description: Vzhledem k seznamu místních souborů tato funkce určuje, které soubory se liší od odpovídajících verzí v databázi správy zdrojového kódu.
+title: SccEnumChangedFiles – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccEnumChangedFiles
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10f14fb915d461255eddbd4a00747dfbdf59cde4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2b0707c049013fd3a0272d1f024e4fdbc342bab1
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085556"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904536"
 ---
-# <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles – funkce
-Vzhledem k seznamu místních souborů Tato funkce určuje, které soubory se liší od odpovídajících verzí v databázi správy zdrojového kódu.
+# <a name="sccenumchangedfiles-function"></a>Funkce SccEnumChangedFiles
+Vzhledem k seznamu místních souborů tato funkce určuje, které soubory se liší od odpovídajících verzí v databázi správy zdrojového kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,31 +38,31 @@ SCCRTN SccEnumChangedFiles(
 ### <a name="parameters"></a>Parametry
  pContext
 
-pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
+[v] Ukazatel na kontext modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
+[v] Popisovač okna integrovaného vývojového prostředí, který může modul plug-in správy zdrojového kódu použít jako nadřazený prvek pro všechna dialogová okna, která poskytuje.
 
  cFiles
 
-pro Počet názvů souborů zadaných v `lpFileNames` poli Určuje také velikost `plIsFileDifferent` pole.
+[v] Počet názvů souborů zadaných v `lpFileNames` poli Určuje také velikost `plIsFileDifferent` pole.
 
  lpFileNames
 
-pro Pole místních názvů souborů, které chcete kontrolovat.
+[v] Pole místních názvů souborů, které se mají zkontrolovat.
 
  plIsFileDifferent
 
-[in, out] Pole hodnot, které označují stav rozdílů jednotlivých souborů (pole musí obsahovat alespoň `cFiles` položky). Nenulové znamená, že soubor je jiný.
+[in, out] Pole hodnot označující stav rozdílu každého souboru (pole musí mít alespoň `cFiles` položky). Nenulové znamená, že se soubor liší.
 
 ## <a name="return-value"></a>Vrácená hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
 |SCC_OK|Operace se úspěšně dokončila.|
-|SCC_UNSPECIFIEDERROR|Obecná chyba|
+|SCC_UNSPECIFIEDERROR|Obecná chyba.|
 
 ## <a name="see-also"></a>Viz také
 - [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

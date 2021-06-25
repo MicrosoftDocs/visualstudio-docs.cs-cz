@@ -3,28 +3,28 @@ title: Editor barev VSIX | Microsoft Docs
 description: Přečtěte si o nástroji Editor barev rozšíření sady Visual Studio, který umožňuje vytvářet a upravovat vlastní barvy pro Visual Studio a generovat klíče prostředků motivu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 70879c5d-e0f0-4845-993c-2f4229869706
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bfd6ff388119d829c2e5994c0fa78d01958326bc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 95fec01beabb66180089a75e772b40788a1f7f0d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069280"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898937"
 ---
 # <a name="vsix-color-editor"></a>Editor barev VSIX
-Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a upravovat vlastní barvy pro Visual Studio. Nástroj může také generovat klíče prostředků motivu, aby bylo možné použít barvy v kódu. Tento nástroj je užitečný pro vytváření barev pro rozšíření sady Visual Studio, které podporuje. Tento nástroj může otevřít soubory. pkgdef a. XML. Motivy sady Visual Studio (soubory. vstheme) lze použít s editorem barev rozšíření sady Visual Studio změnou přípony souboru na. XML. Soubory. vstheme lze navíc importovat do aktuálního souboru. XML.
+Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a upravovat vlastní barvy pro Visual Studio. Nástroj může také generovat klíče prostředků motivu, aby bylo možné použít barvy v kódu. Tento nástroj je užitečný pro vytváření barev pro rozšíření sady Visual Studio, které podporuje. Tento nástroj může otevřít soubory. pkgdef a .xml. Motivy sady Visual Studio (soubory. vstheme) lze použít s editorem barev rozšíření sady Visual Studio změnou přípony souboru na .xml. Soubory. vstheme lze navíc importovat do aktuálního souboru .xml.
 
  ![Editor barev VSIX Hero](../../extensibility/internals/media/vsix-color-editor-hero.png "Editor barev VSIX Hero")
 
  **Definiční soubory balíčků**
 
- Soubory definice balíčku (. pkgdef) jsou soubory, které definují motivy. Barvy samotné jsou uloženy v souborech Color. XML motivu, které jsou zkompilovány do souboru. pkgdef. Soubory. pkgdef jsou nasazeny do vyhledávacích umístění sady Visual Studio, zpracované v době běhu a sloučeny dohromady pro definování motivů.
+ Soubory definice balíčku (. pkgdef) jsou soubory, které definují motivy. Barvy jsou uloženy v motivu .xml soubory, které jsou zkompilovány do souboru. pkgdef. Soubory. pkgdef jsou nasazeny do vyhledávacích umístění sady Visual Studio, zpracované v době běhu a sloučeny dohromady pro definování motivů.
 
  **Barevné tokeny**
 
@@ -103,7 +103,7 @@ Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a uprav
 
   **Krok 3: pomocí editoru barev vytvořte nové barevné tokeny.**
 
-  Spusťte Editor barev a otevřete nebo vytvořte nový soubor. XML barvy vlastního motivu. V nabídce vyberte **upravit > novou barvu** . Tím se otevře dialogové okno pro zadání kategorie a jednoho nebo více názvů pro položky barev v rámci této kategorie:
+  Spusťte Editor barev a otevřete nebo vytvořte nové barvy vlastního motivu .xml souboru. V nabídce vyberte **upravit > novou barvu** . Tím se otevře dialogové okno pro zadání kategorie a jednoho nebo více názvů pro položky barev v rámci této kategorie:
 
   ![Nová barva editoru barev VSIX](../../extensibility/internals/media/vsix-color-editor-new-color.png "Nová barva editoru barev VSIX")
 
@@ -129,7 +129,7 @@ Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a uprav
 
   Při zadávání hodnot pro Vysoký kontrast zadejte platné názvy barev systému Windows. Nezadávejte hodnoty pevně zakódované ARGB. Seznam platných systémových barev můžete zobrazit tak, že v rozevíracích nabídkách hodnota barvy vyberete "Background: System" nebo "popředí: systém". Při vytváření prvků, které mají textové komponenty, použijte správný dvojici barev pozadí/textu nebo je možné, že text nebude čitelný.
 
-  Až dokončíte vytváření, nastavování a upravování barevných tokenů, uložte je do požadovaného formátu. XML nebo. pkgdef. Tokeny barev bez nastaveného pozadí ani sady popředí budou uloženy jako prázdné barvy ve formátu. XML, ale byly zahozeny ve formátu. pkgdef. Pokud se pokusíte uložit prázdné barvy do souboru. pkgdef, zobrazí se dialogové okno s upozorněním na potenciální ztrátu barev.
+  Až dokončíte vytváření, nastavování a upravování barevných tokenů, uložte je do požadovaného formátu .xml nebo. pkgdef. Tokeny barev bez nastaveného pozadí ani sady popředí budou uloženy jako prázdné barvy ve formátu .xml, ale byly zahozeny ve formátu. pkgdef. Pokud se pokusíte uložit prázdné barvy do souboru. pkgdef, zobrazí se dialogové okno s upozorněním na potenciální ztrátu barev.
 
   **Krok 4: použijte barvy v rozšíření sady Visual Studio.**
 
@@ -195,7 +195,7 @@ namespace MyCustomColors
 ## <a name="sample-output"></a>Vzorový výstup
  **Výstup barvy XML**
 
- Soubor. XML generovaný nástrojem bude vypadat přibližně takto:
+ .xml soubor generovaný nástrojem bude vypadat přibližně takto:
 
 ```xml
 <Themes>

@@ -1,8 +1,8 @@
 ---
-description: Představuje inicializovaný objekt laxně vytvářená, který ladicí program používá k jednoznačné identifikaci tohoto tvůrce.
+description: Představuje laxně inicializované objekt, který ladicí program používá k jednoznačné identifikaci tohoto tvůrce.
 title: AsyncVoidMethodBuilder.m_objectIdForDebugger pole | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - m_objectIdForDebugger field, AsyncVoidMethodBuilder structure [.NET Framework debug engines]
 ms.assetid: 81331a7b-6bec-46e4-a53e-515d0fad2400
@@ -11,21 +11,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8d85e2bfde83e84080be18cba10ad5bef810ddb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5a555bb2138bdeb28e5155709b516739fa85fa9f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055476"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903707"
 ---
 # <a name="asyncvoidmethodbuilderm_objectidfordebugger-field"></a>AsyncVoidMethodBuilder.m_objectIdForDebugger pole
-Představuje inicializovaný objekt laxně vytvářená, který ladicí program používá k jednoznačné identifikaci tohoto tvůrce.
+Představuje laxně inicializované objekt, který ladicí program používá k jednoznačné identifikaci tohoto tvůrce.
 
  **Obor názvů:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
  **Sestavení:** mscorlib (v mscorlib.dll)
 
- Vzhledem k tomu, že nemůžete získat přístup k tomuto internímu členovi z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
+ Vzhledem k tomu, že k tomuto internímu členu .NET Framework, je následující syntaxe k dispozici v souboru Common Intermediate Language (CIL).
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,4 +35,4 @@ Představuje inicializovaný objekt laxně vytvářená, který ladicí program 
 
 ## <a name="see-also"></a>Viz také
 - <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>
-- [Vnitřní rozšíření pro .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [Interní informace o paralelním rozšíření pro .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

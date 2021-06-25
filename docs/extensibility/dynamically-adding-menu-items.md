@@ -3,7 +3,7 @@ title: Dynamické přidávání položek nabídky | Microsoft Docs
 description: Naučte se používat příznak příkazu DynamicItemStart k přidávání položek nabídky za běhu. Tento článek ukazuje, jak nastavit projekt po spuštění v řešení sady Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - DYNAMICITEMSTART
 - menu items, adding dynamically
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa85d5b5cf4b99840e181fb24b5913ff72a3fee0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6867baafa45ca794f65b4cb0cc365dbebfbd4219
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070333"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898354"
 ---
 # <a name="dynamically-add-menu-items"></a>Dynamické přidávání položek nabídky
 Můžete přidat položky nabídky za běhu zadáním `DynamicItemStart` příznaku pro zástupný symbol v definici tlačítka v souboru Command-Table (*. vsct*) sady Visual Studio a následným definováním (v kódu) počet položek nabídky k zobrazení a manipulaci s příkazy. Po načtení rozhraní VSPackage je zástupný symbol nahrazen dynamickými položkami nabídky.

@@ -1,9 +1,9 @@
 ---
-title: Kontext vyhodnocení | Microsoft Docs
-description: 'Když ladicí stroj volá vyhodnocovací filtr výrazů, argumenty určují kontext pro hledání a vyhodnocení symbolů: pSymbolProvider, pAddress a pBinder.'
+title: Kontextová | Microsoft Docs
+description: 'Když ladicí modul volá vyhodnocovač výrazů, argumenty určují kontext pro vyhledání a vyhodnocení symbolů: pSymbolProvider, pAddress a pBinder.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, context
@@ -13,32 +13,32 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35ccfc921f8175a92b0a082798ce8ccc44990d2e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6c3ab6fe53ad288089dc88587e06547573d80cb9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096977"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898575"
 ---
 # <a name="evaluation-context"></a>Kontext vyhodnocení
 > [!IMPORTANT]
-> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V Visual Studio 2015 je tento způsob implementace vyhodnocovače výrazů zastaralý. Informace o implementaci vyhodnocovačů výrazů CLR najdete v tématu Vyhodnocovače [výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovače spravovaných výrazů](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Když ladicí stroj (DE) volá vyhodnocovací filtr výrazů (EE), tři argumenty předané do [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) určují kontext pro hledání a vyhodnocení symbolů, jak je znázorněno v následující tabulce.
+ Když ladicí modul (DE) volá vyhodnocovač výrazů (EE), tři argumenty, které jsou předány [evaluateSync,](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) určují kontext pro vyhledání a vyhodnocení symbolů, jak je znázorněno v následující tabulce.
 
 ## <a name="arguments"></a>Argumenty
 
 |Argument|Description|
 |--------------|-----------------|
-|`pSymbolProvider`|Rozhraní [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md) , které určuje obslužnou rutinu symbolu (SH), která se má použít k identifikaci symbolu.|
-|`pAddress`|Rozhraní [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) , které určuje aktuální bod provádění. Toto rozhraní najde metodu, která obsahuje prováděný kód.|
-|`pBinder`|Rozhraní [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) , které najde hodnotu a typ symbolu daného názvu.|
+|`pSymbolProvider`|Rozhraní [IDebugSymbolProvider,](../../extensibility/debugger/reference/idebugsymbolprovider.md) které určuje obslužnou rutinu symbolů (SH), která se má použít k identifikaci symbolu.|
+|`pAddress`|Rozhraní [IDebugAddress,](../../extensibility/debugger/reference/idebugaddress.md) které určuje aktuální bod provádění. Toto rozhraní vyhledá metodu , která obsahuje spuštěný kód.|
+|`pBinder`|Rozhraní [IDebugBinder,](../../extensibility/debugger/reference/idebugbinder.md) které najde hodnotu a typ symbolu s daným názvem.|
 
- `IDebugParsedExpression::EvaluateSync` Vrátí rozhraní [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) představující výslednou hodnotu a její typ.
+ `IDebugParsedExpression::EvaluateSync` vrací [rozhraní IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) představující výslednou hodnotu a její typ.
 
 ## <a name="see-also"></a>Viz také
-- [Rozhraní vyhodnocovacích výrazů výrazu Key](../../extensibility/debugger/key-expression-evaluator-interfaces.md)
-- [Zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md)
+- [Rozhraní vyhodnocovače klíčových výrazů](../../extensibility/debugger/key-expression-evaluator-interfaces.md)
+- [Zobrazení místních hodnoty](../../extensibility/debugger/displaying-locals.md)
 - [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)
 - [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)
 - [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)

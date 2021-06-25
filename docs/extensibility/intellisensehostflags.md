@@ -1,9 +1,9 @@
 ---
-title: IntelliSenseHostFlags | Microsoft Docs
-description: Výčet IntelliSenseHostFlags Určuje příznaky hostitele technologie IntelliSense. Tento článek popisuje hodnoty výčtu.
+title: IntelliSenseHostFlags – | Microsoft Docs
+description: Výčet IntelliSenseHostFlags určuje příznaky hostitele Technologie IntelliSense. Tento článek popisuje výčtové hodnoty.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - IntellisenseHostFlags
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83a3911670a10710ad6ae5cd6496fb76af6c27bb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 33345f86c69d0faeaa5863534e21eca5ecc176cc
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079134"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902615"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
-Určuje příznaky hostitele technologie IntelliSense.
+Určuje příznaky hostitele Technologie IntelliSense.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ enum IntellisenseHostFlags
 |Členové|Description|
 |-------------|-----------------|
 |`IHF_READONLYCONTEXT`|Kontextová vyrovnávací paměť je jen pro čtení.|
-|`IHF_NOSEPARATESUBJECT`|Text předmětu není k dispozici. Kontextová vyrovnávací paměť obsahuje IntelliSense – cíl (implikuje `!IHF_READONLYCONTEXT` ).|
-|`IHF_SINGLELINESUBJECT`|Text předmětu neumožňuje více řádků.|
-|`IHF_FORCECOMMITTOCONTEXT`|Stejné jako `CanCommitIntoReadOnlyBuffer` .|
-|`IHF_OVERTYPE`|Úpravy (v předmětu nebo kontextu) by se měly provádět v režimu přepisování.|
+|`IHF_NOSEPARATESUBJECT`|Žádný text předmětu. Kontextová vyrovnávací paměť obsahuje cíl IntelliSense (implikuje `!IHF_READONLYCONTEXT` ).|
+|`IHF_SINGLELINESUBJECT`|Text předmětu není schopen více řádků.|
+|`IHF_FORCECOMMITTOCONTEXT`|Stejné jako `CanCommitIntoReadOnlyBuffer` u .|
+|`IHF_OVERTYPE`|Úpravy (v předmětu nebo kontextu) by se měly dělat v režimu přetypování.|
 
 ## <a name="requirements"></a>Požadavky
- SingleFileeditor. idl
+ SingleFileeditor.idl
 
 ## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.TextManager.Interop>

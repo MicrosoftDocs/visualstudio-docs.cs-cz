@@ -3,7 +3,7 @@ title: Přidávání položek do dialogových oken Přidat novou položku | Micr
 description: Naučte se, jak přidat položky do dialogového okna Přidat novou položku v aplikaci Visual Studio, abyste mohli zobrazit šablony a prvky projektu pro použití ve vašich projektech.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Add New Item dialog box, adding items
 ms.assetid: 2f70863b-425b-4e65-86b4-d6a898e29dc7
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 574cc5384018d14fdc05a834876002bbcbdbaaf7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 70bc1a0c4d90d8cab0b2193550773745fc2dd47e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079095"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904406"
 ---
 # <a name="add-items-to-the-add-new-item-dialog-box"></a>Přidání položek do dialogového okna Přidat novou položku
 Proces přidávání položek do dialogového okna **Přidat novou položku** začíná klíči registru. Jak je znázorněno v následujících položkách registru, část **AddItemTemplates** obsahuje cestu a název adresáře, ve kterém jsou položky zpřístupněny v dialogovém okně **Přidat novou položku** .

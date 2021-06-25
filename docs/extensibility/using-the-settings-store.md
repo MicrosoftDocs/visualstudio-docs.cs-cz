@@ -1,9 +1,9 @@
 ---
-title: Použití úložiště nastavení | Microsoft Docs
-description: Naučte se číst data z úložiště nastavení konfigurace, která jsou jenom pro čtení a nastavení sady Visual Studio a VSPackage.
+title: Použití nastavení úložiště | Microsoft Docs
+description: Zjistěte, jak číst data z úložiště nastavení konfigurace, které je jen pro čtení Visual Studio a VSPackage.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Settings Store, using
 ms.assetid: 447ec08a-eca5-40b8-89b0-f98fdf3d39a4
@@ -12,33 +12,33 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a84fa551a4a3ea10b212832c0891fb0d7d19b2f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4d7fff5bc3eeeb3b4515e2e47027f5b88fb7807d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060182"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898380"
 ---
 # <a name="using-the-settings-store"></a>Použití úložiště nastavení
 Existují dva druhy úložišť nastavení:
 
-- Nastavení konfigurace, která jsou jen pro čtení a nastavení sady Visual Studio a VSPackage. Visual Studio sloučí nastavení ze všech známých souborů. pkgdef do tohoto úložiště.
+- Nastavení konfigurace, která jsou jen pro čtení Visual Studio a VSPackage. Visual Studio sloučí nastavení ze všech známých souborů .pkgdef do tohoto úložiště.
 
-- Uživatelská nastavení, která jsou zapisovatelná nastavení, jako jsou například ta, která jsou zobrazena na stránkách v dialogovém okně **Možnosti** , stránky vlastností a určitá další dialogová okna. Rozšíření sady Visual Studio je můžou používat pro místní úložiště s malými objemy dat.
+- Uživatelská nastavení, což jsou zapisovatelná nastavení, například  ta, která se zobrazují na stránkách v dialogovém okně Možnosti, na stránkách vlastností a určitých dalších dialogových oknech. Visual Studio rozšíření používejte pro místní úložiště malých objemů dat.
 
-  Tento návod ukazuje, jak číst data z úložiště nastavení konfigurace. Vysvětlení, jak zapisovat do úložiště uživatelských nastavení, najdete v tématu [zápis do úložiště uživatelských nastavení](../extensibility/writing-to-the-user-settings-store.md) .
+  Tento názorný postup ukazuje, jak číst data z úložiště nastavení konfigurace. Vysvětlení [zápisu](../extensibility/writing-to-the-user-settings-store.md) do úložiště uživatelských nastavení najdete v tématu Zápis do úložiště uživatelských nastavení.
 
-## <a name="creating-the-example-project"></a>Vytvoření ukázkového projektu
- V této části se dozvíte, jak vytvořit jednoduchý projekt rozšíření pomocí příkazu nabídky pro ukázku.
+## <a name="creating-the-example-project"></a>Vytvoření příkladu projektu
+ Tato část ukazuje, jak vytvořit jednoduchý projekt rozšíření s příkazem nabídky pro ukázku.
 
-1. Každé rozšíření sady Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt VSIX s názvem `SettingsStoreExtension` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** v části **Visual C#/rozšiřitelnost**.
+1. Každé Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte projekt [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX s názvem `SettingsStoreExtension` . Šablonu projektu VSIX najdete v dialogovém **okně Nový projekt** v části Visual **C# / Rozšiřitelnost**.
 
-2. Nyní přidejte šablonu vlastní položky příkazu s názvem **SettingsStoreCommand**. V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na **SettingsStoreCommand. cs**. Další informace o tom, jak vytvořit vlastní příkaz, najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
+2. Teď přidejte vlastní šablonu položky příkazu s názvem **SettingsStoreCommand**. V dialogovém **okně Přidat novou položku** přejděte na Visual **C# / Rozšiřitelnost** a vyberte **Vlastní příkaz**. V **poli Název** v dolní části okna změňte název souboru příkazu **na SettingsStoreCommand.cs**. Další informace o vytvoření vlastního příkazu najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky.](../extensibility/creating-an-extension-with-a-menu-command.md)
 
 ## <a name="using-the-configuration-settings-store"></a>Použití úložiště nastavení konfigurace
- V této části se dozvíte, jak zjistit a zobrazit nastavení konfigurace.
+ Tato část ukazuje, jak zjistit a zobrazit nastavení konfigurace.
 
-1. V souboru SettingsStorageCommand. cs přidejte následující direktivy using:
+1. Do souboru SettingsStorageCommand.cs přidejte následující direktivy using:
 
    ```
    using System.Collections.Generic;
@@ -47,16 +47,16 @@ Existují dva druhy úložišť nastavení:
    using System.Windows.Forms;
    ```
 
-2. V nástroji `MenuItemCallback` odeberte tělo metody a přidejte tyto řádky do úložiště nastavení konfigurace:
+2. V souboru odeberte tělo metody a přidejte `MenuItemCallback` tyto řádky pro získání úložiště nastavení konfigurace:
 
    ```
    SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);
    SettingsStore configurationSettingsStore = settingsManager.GetReadOnlySettingsStore(SettingsScope.Configuration);
    ```
 
-    <xref:Microsoft.VisualStudio.Shell.Settings.ShellSettingsManager>Je spravovaná pomocná třída přes <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> službu.
+    je <xref:Microsoft.VisualStudio.Shell.Settings.ShellSettingsManager> spravovaná pomocná třída <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> služby.
 
-3. Nyní zjistíte, jestli jsou nainstalované nástroje Windows Phone. Kód by měl vypadat takto:
+3. Teď zjistěte, jestli Windows Phone nástroje nainstalované. Kód by měl vypadat takhle:
 
    ```
    private void MenuItemCallback(object sender, EventArgs e)
@@ -71,19 +71,19 @@ Existují dva druhy úložišť nastavení:
 
 4. Otestujte kód. Sestavte projekt a spusťte ladění.
 
-5. V experimentální instanci v nabídce **nástroje** klikněte na **vyvolat SettingsStoreCommand**.
+5. V experimentální instanci v nabídce Nástroje **klikněte** na **Vyvolat nastaveníStoreCommand.**
 
-    Mělo by se zobrazit okno se zprávou, že **Microsoft Windows Phone vývojářské nástroje:**  následované hodnotou **true** nebo **false**.
+    Mělo by se zobrazit okno se zprávou **Microsoft Windows Phone Vývojářské nástroje:**  a **true** nebo **false**.
 
-   Visual Studio uchovává úložiště nastavení v registru systému.
+   Visual Studio uchovává úložiště nastavení v systémovém registru.
 
-#### <a name="to-use-a-registry-editor-to-verify-configuration-settings"></a>Použití Editoru registru k ověření nastavení konfigurace
+#### <a name="to-use-a-registry-editor-to-verify-configuration-settings"></a>Ověření nastavení konfigurace pomocí editoru registru
 
 1. Otevřete Regedit.exe.
 
 2. Přejděte na HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp_Config\InstalledProducts\\ .
 
     > [!NOTE]
-    > Ujistěte se, že se díváte na klíč, který obsahuje \ 14.0Exp_Config \ a ne \ 14.0_Config \\ . Při spuštění experimentální instance sady Visual Studio se konfigurační nastavení nachází v podregistru "14.0Exp_Config".
+    > Ujistěte se, že se díváte na klíč, který obsahuje \14.0Exp_Config\, a ne \14.0_Config \\ . Když spustíte experimentální instanci Visual Studio, nastavení konfigurace se nachází v podregistru registru "14.0Exp_Config".
 
-3. Rozbalte uzel \Installed Products \. Pokud je zpráva v předchozích krocích **Microsoft Windows Phone vývojářské nástroje nainstalovaná: true**, pak \Installed Products \ by měla obsahovat uzel Microsoft Windows Phone vývojářské nástroje. Pokud je zpráva **Microsoft Windows Phone vývojářské nástroje nainstalovaná: false**, pak \Installed Products \ nesmí obsahovat uzel Microsoft Windows Phone vývojářské nástroje.
+3. Rozbalte uzel \Installed Products\. Pokud je zpráva v předchozích krocích nastavená na **Microsoft Windows Phone Vývojářské nástroje Nainstalováno: True**, pak by složka \Installed Products\ měla obsahovat uzel Windows Phone Vývojářské nástroje Microsoftu. Pokud se zobrazí zpráva **Microsoft Windows Phone Vývojářské nástroje Nainstalováno: False**, pak by složka \Installed Products\ neměla obsahovat Windows Phone Vývojářské nástroje Microsoftu.

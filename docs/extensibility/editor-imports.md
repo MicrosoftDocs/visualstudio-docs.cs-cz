@@ -1,9 +1,9 @@
 ---
-title: Importovat editory | Microsoft Docs
-description: Naučte se, jak importovat služby editoru, továrny a zprostředkovatele, které poskytují vaše rozšíření s různými druhy přístupu k základnímu editoru.
+title: Importy editoru | Microsoft Docs
+description: Naučte se importovat editorské služby, továrny a zprostředkovatele, které poskytují vašemu rozšíření různé druhy přístupu k základnímu editoru.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - services
 ms.assetid: 8d096de3-33b4-427a-a122-4aeff8a72da0
@@ -12,20 +12,20 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0587ed6487ec3a1bb833a804bb5ffa76cbc101f9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7f2fa91b41017512b3f38ad61b800b293e0abaa1
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070151"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898341"
 ---
 # <a name="editor-imports"></a>Importy editoru
-Můžete importovat řadu služeb editoru, továrn a zprostředkovatelů, které poskytují vaše rozšíření s různými druhy přístupu k základnímu editoru. Například můžete importovat <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> a poskytnout vám <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> pro daný typ obsahu. (Tento navigátor umožňuje provádět různé druhy hledání v textové vyrovnávací paměti.)
+Můžete importovat řadu služeb editoru, továren a zprostředkovatelů, které poskytují vašemu rozšíření různé druhy přístupu k základnímu editoru. Můžete například importovat a <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> poskytnout vám hodnotu pro daný typ <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> obsahu. (Tento navigátor umožňuje provádět různé druhy hledání ve vyrovnávací paměti textu.)
 
- Chcete-li použít Import editoru, importujte jej jako pole nebo vlastnost třídy, která exportuje součást Managed Extensibility Framework součásti.
+ Pokud chcete použít import editoru, naimportujte ho jako pole nebo vlastnost třídy, která exportuje Managed Extensibility Framework součást.
 
 > [!NOTE]
-> Další informace o Managed Extensibility Framework naleznete v tématu [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
+> Další informace o tomto Managed Extensibility Framework v tématu [Managed Extensibility Framework (MEF).](/dotnet/framework/mef/index)
 
 ## <a name="import-syntax"></a>Syntaxe importu
  Následující příklad ukazuje, jak importovat službu pro vytváření možností editoru.
@@ -35,92 +35,92 @@ Můžete importovat řadu služeb editoru, továrn a zprostředkovatelů, které
 internal IEditorOptionsFactoryService EditorOptions { get; set; }
 ```
 
- Pokud chcete službu importovat jako pole a ne jako vlastnost, měli byste ji nastavit na `null` v deklaraci, aby nedošlo k upozorněním kompilátoru o přiřazení k proměnné:
+ Pokud chcete službu importovat jako pole, a ne jako vlastnost, měli byste ji v deklaraci nastavit na , abyste se vyhnuli upozorněním kompilátoru na nepřiřazování `null` proměnné:
 
 ```
 [Import]
 internal IEditorOptionsFactoryService m_editorOptions = null;
 ```
 
- Další příklady použití importu najdete v následujících návodech:
+ Další příklady použití importů najdete v následujících názorném postupu:
 
-- [Návod: vytvoření glyfu marže](../extensibility/walkthrough-creating-a-margin-glyph.md)
+- [Návod: Vytvoření piktogramu okrajů](../extensibility/walkthrough-creating-a-margin-glyph.md)
 
-- [Návod: přizpůsobení zobrazení textu](../extensibility/walkthrough-customizing-the-text-view.md)
+- [Návod: Přizpůsobení textového zobrazení](../extensibility/walkthrough-customizing-the-text-view.md)
 
-- [Návod: zvýraznění textu](../extensibility/walkthrough-highlighting-text.md)
+- [Návod: Zvýraznění textu](../extensibility/walkthrough-highlighting-text.md)
 
-- [Návod: zobrazení QuickInfoch popisků](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)
+- [Návod: Zobrazení popisů rychlých informací](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)
 
-- [Návod: zobrazení podpisu – Help](../extensibility/walkthrough-displaying-signature-help.md)
+- [Návod: Zobrazení nápovědy k signaturě](../extensibility/walkthrough-displaying-signature-help.md)
 
-- [Návod: dokončování příkazů zobrazení](../extensibility/walkthrough-displaying-statement-completion.md)
+- [Návod: Zobrazení dokončování příkazů](../extensibility/walkthrough-displaying-statement-completion.md)
 
-- [Návod: zobrazení návrhů žárovky](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)
+- [Návod: Zobrazení návrhů žárovky](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)
 
 ## <a name="import-the-service-provider"></a>Import poskytovatele služeb
- Můžete také importovat <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> (nalezeno v sestavení Microsoft. VisualStudio. Shell. unmutable. 10.0) stejným způsobem, jak získat přístup ke službám sady Visual Studio:
+ Můžete také importovat (nachází se v sestavení <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> Microsoft.VisualStudio.Shell.Immutable.10.0) stejným způsobem, abyste měli přístup k Visual Studio službám:
 
 ```csharp
 [Import]
 internal SVsServiceProvider ServiceProvider = null;
 ```
 
- Další informace najdete v tématu [Návod: přístup k objektu DTE z rozšíření editoru](../extensibility/walkthrough-accessing-the-dte-object-from-an-editor-extension.md) .
+ Další [informace najdete v tématu Návod:](../extensibility/walkthrough-accessing-the-dte-object-from-an-editor-extension.md) Přístup k objektu DTE z rozšíření editoru.
 
 ## <a name="services"></a>Služby
- Služby editoru jsou všeobecně samostatné entity, které poskytují službu a jsou sdíleny napříč více komponentami.
+ Služby editoru jsou obecně jednotlivé entity, které poskytují službu a jsou sdíleny napříč několika komponentami.
 
-|Import|Zde|
+|Import|Poskytuje|
 |------------|--------------|
 |<xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService>|Vztah mezi příponami souborů a <xref:Microsoft.VisualStudio.Utilities.IContentType> objekty.|
 |<xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService>|Kolekce <xref:Microsoft.VisualStudio.Utilities.IContentType> objektů.|
-|<xref:Microsoft.VisualStudio.Editor.IVsFontsAndColorsInformationService>|<xref:Microsoft.VisualStudio.Editor.IVsFontsAndColorsInformation> objekty.|
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>|Mnoho objektů adaptérů editoru:<br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|
-|<xref:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearchFactoryService>|<xref:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch>Objekt pro dané zobrazení textu.|
-|<xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>|A <xref:Microsoft.VisualStudio.Text.ITextBuffer> .|
-|<xref:Microsoft.VisualStudio.Text.ITextDocumentFactoryService>|A <xref:Microsoft.VisualStudio.Text.ITextDocument> .|
-|<xref:Microsoft.VisualStudio.Text.Differencing.IDifferenceService>|<xref:Microsoft.VisualStudio.Text.Differencing.IDifferenceCollection%601>Rozdíly.|
-|<xref:Microsoft.VisualStudio.Text.Differencing.IHierarchicalStringDifferenceService>|<xref:Microsoft.VisualStudio.Text.Differencing.IHierarchicalDifferenceCollection>Rozdíly.|
-|<xref:Microsoft.VisualStudio.Text.Projection.IProjectionBufferFactoryService>|<xref:Microsoft.VisualStudio.Text.Projection.IProjectionBuffer>Nebo <xref:Microsoft.VisualStudio.Text.Projection.IElisionBuffer> .|
-|<xref:Microsoft.VisualStudio.Text.Projection.IBufferGraphFactoryService>|<xref:Microsoft.VisualStudio.Text.Projection.IBufferGraph>Pro sadu <xref:Microsoft.VisualStudio.Text.ITextBuffer> objektů.|
-|<xref:Microsoft.VisualStudio.Text.Classification.IClassifierAggregatorService>|<xref:Microsoft.VisualStudio.Text.Classification.IClassifier>Pro <xref:Microsoft.VisualStudio.Text.ITextBuffer> .|
-|<xref:Microsoft.VisualStudio.Text.Classification.IViewClassifierAggregatorService>|<xref:Microsoft.VisualStudio.Text.Classification.IClassifier>Pro <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
-|<xref:Microsoft.VisualStudio.Text.Classification.IClassificationFormatMapService>|<xref:Microsoft.VisualStudio.Text.Classification.IClassificationFormatMap>Pro <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
-|<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>|<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap>Pro <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
+|<xref:Microsoft.VisualStudio.Editor.IVsFontsAndColorsInformationService>|<xref:Microsoft.VisualStudio.Editor.IVsFontsAndColorsInformation> Objekty.|
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>|Mnoho objektů adaptéru editoru:<br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|
+|<xref:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearchFactoryService>|Objekt <xref:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch> pro dané textové zobrazení.|
+|<xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>|. <xref:Microsoft.VisualStudio.Text.ITextBuffer>|
+|<xref:Microsoft.VisualStudio.Text.ITextDocumentFactoryService>|. <xref:Microsoft.VisualStudio.Text.ITextDocument>|
+|<xref:Microsoft.VisualStudio.Text.Differencing.IDifferenceService>|Jeden <xref:Microsoft.VisualStudio.Text.Differencing.IDifferenceCollection%601> z rozdílů.|
+|<xref:Microsoft.VisualStudio.Text.Differencing.IHierarchicalStringDifferenceService>|Jeden <xref:Microsoft.VisualStudio.Text.Differencing.IHierarchicalDifferenceCollection> z rozdílů.|
+|<xref:Microsoft.VisualStudio.Text.Projection.IProjectionBufferFactoryService>|Nebo <xref:Microsoft.VisualStudio.Text.Projection.IProjectionBuffer> <xref:Microsoft.VisualStudio.Text.Projection.IElisionBuffer> .|
+|<xref:Microsoft.VisualStudio.Text.Projection.IBufferGraphFactoryService>|Pro <xref:Microsoft.VisualStudio.Text.Projection.IBufferGraph> sadu <xref:Microsoft.VisualStudio.Text.ITextBuffer> objektů.|
+|<xref:Microsoft.VisualStudio.Text.Classification.IClassifierAggregatorService>|Pro <xref:Microsoft.VisualStudio.Text.Classification.IClassifier> <xref:Microsoft.VisualStudio.Text.ITextBuffer> .|
+|<xref:Microsoft.VisualStudio.Text.Classification.IViewClassifierAggregatorService>|Pro <xref:Microsoft.VisualStudio.Text.Classification.IClassifier> <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
+|<xref:Microsoft.VisualStudio.Text.Classification.IClassificationFormatMapService>|Pro <xref:Microsoft.VisualStudio.Text.Classification.IClassificationFormatMap> <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
+|<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>|Pro <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap> <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
 |<xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService>|Udržuje kolekci <xref:Microsoft.VisualStudio.Text.Classification.IClassificationType> objektů.|
-|<xref:Microsoft.VisualStudio.Text.Tagging.IBufferTagAggregatorFactoryService>|<xref:Microsoft.VisualStudio.Text.Tagging.ITagAggregator%601>Pro textovou vyrovnávací paměť.|
-|<xref:Microsoft.VisualStudio.Text.Tagging.IViewTagAggregatorFactoryService>|<xref:Microsoft.VisualStudio.Text.Tagging.ITagAggregator%601>Pro textové zobrazení.|
-|<xref:Microsoft.VisualStudio.Text.Editor.IEditorOptionsFactoryService>|<xref:Microsoft.VisualStudio.Text.Editor.IEditorOptions>Pro zadaný obor.|
-|<xref:Microsoft.VisualStudio.Text.Editor.IScrollMapFactoryService>|<xref:Microsoft.VisualStudio.Text.Editor.IScrollMap>Pro textové zobrazení.|
-|<xref:Microsoft.VisualStudio.Text.Editor.ISmartIndentationService>|<xref:Microsoft.VisualStudio.Text.Editor.ISmartIndent>Pro <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
+|<xref:Microsoft.VisualStudio.Text.Tagging.IBufferTagAggregatorFactoryService>|Pro <xref:Microsoft.VisualStudio.Text.Tagging.ITagAggregator%601> vyrovnávací paměť textu.|
+|<xref:Microsoft.VisualStudio.Text.Tagging.IViewTagAggregatorFactoryService>|Pro <xref:Microsoft.VisualStudio.Text.Tagging.ITagAggregator%601> textové zobrazení.|
+|<xref:Microsoft.VisualStudio.Text.Editor.IEditorOptionsFactoryService>|pro <xref:Microsoft.VisualStudio.Text.Editor.IEditorOptions> zadaný obor.|
+|<xref:Microsoft.VisualStudio.Text.Editor.IScrollMapFactoryService>|Pro <xref:Microsoft.VisualStudio.Text.Editor.IScrollMap> textové zobrazení.|
+|<xref:Microsoft.VisualStudio.Text.Editor.ISmartIndentationService>|Pro <xref:Microsoft.VisualStudio.Text.Editor.ISmartIndent> <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
 |<xref:Microsoft.VisualStudio.Text.Editor.ISmartIndentationService>|Získá automatické odsazení prostřednictvím <xref:Microsoft.VisualStudio.Text.Editor.ISmartIndentProvider> objektů.|
 |<xref:Microsoft.VisualStudio.Text.Editor.ITextEditorFactoryService>|Spravuje <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost> pro <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> .|
-|<xref:Microsoft.VisualStudio.Text.Formatting.IFormattedTextSourceFactoryService>|A <xref:Microsoft.VisualStudio.Text.Formatting.IFormattedLineSource> .|
+|<xref:Microsoft.VisualStudio.Text.Formatting.IFormattedTextSourceFactoryService>|. <xref:Microsoft.VisualStudio.Text.Formatting.IFormattedLineSource>|
 |<xref:Microsoft.VisualStudio.Text.Formatting.IRtfBuilderService>|Generuje text ve formátu RTF ze sady rozsahů snímků.|
-|<xref:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencerFactoryService>|<xref:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer>Pro <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
-|<xref:Microsoft.VisualStudio.Text.Formatting.ITextParagraphPropertiesFactoryService>|<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>Pro formátování textových čar v zobrazení.|
-|<xref:Microsoft.VisualStudio.Text.Operations.IEditorOperationsFactoryService>|<xref:Microsoft.VisualStudio.Text.Operations.IEditorOperations>Objekt pro <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
-|<xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>|Vyhledá textový snímek.|
-|<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>|<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>Pro <xref:Microsoft.VisualStudio.Text.ITextBuffer> <xref:Microsoft.VisualStudio.Utilities.IContentType> .|
-|<xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManagerService>|<xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManager>Pro textové zobrazení.|
-|<xref:Microsoft.VisualStudio.Language.Intellisense.IGlyphService>|Standardní sada glyfů.|
-|<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStackMapService>|<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack>Pro <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
+|<xref:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencerFactoryService>|Pro <xref:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer> <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
+|<xref:Microsoft.VisualStudio.Text.Formatting.ITextParagraphPropertiesFactoryService>|Formátování <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> řádků textu v zobrazení|
+|<xref:Microsoft.VisualStudio.Text.Operations.IEditorOperationsFactoryService>|Objekt <xref:Microsoft.VisualStudio.Text.Operations.IEditorOperations> pro <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
+|<xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>|Prohledá textový snímek.|
+|<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>|Pro <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> pro <xref:Microsoft.VisualStudio.Text.ITextBuffer> podle <xref:Microsoft.VisualStudio.Utilities.IContentType> .|
+|<xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManagerService>|Pro <xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManager> textové zobrazení.|
+|<xref:Microsoft.VisualStudio.Language.Intellisense.IGlyphService>|Standardní sada piktogramů.|
+|<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStackMapService>|Pro <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack> <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
 |<xref:Microsoft.VisualStudio.Language.Intellisense.IWpfKeyboardTrackingService>|Sleduje zpracování klávesnice.|
 |<xref:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService>|Standardní <xref:Microsoft.VisualStudio.Text.Classification.IClassificationType> objekty.|
-|<xref:Microsoft.VisualStudio.Text.Operations.ITextUndoHistoryRegistry>|Udržuje vztah mezi textovými vyrovnávacími paměťmi a  <xref:Microsoft.VisualStudio.Text.Operations.ITextUndoHistory> objekty.|
+|<xref:Microsoft.VisualStudio.Text.Operations.ITextUndoHistoryRegistry>|Udržuje vztah mezi textovou vyrovnávací pamětí a  <xref:Microsoft.VisualStudio.Text.Operations.ITextUndoHistory> objekty.|
 
 ## <a name="other-imports"></a>Další importy
- Továrny a zprostředkovatelé zprostředkovatelů jsou obecně entitami, které mohou mít více instancí ve více součástech.
+ Továren a zprostředkovatelé poskytovatelů jsou obecně entity, které mohou mít více instancí ve více komponentách.
 
-|Import|Zde|
+|Import|Poskytuje|
 |------------|--------------|
-|<xref:Microsoft.VisualStudio.Text.Adornments.IErrorProviderFactory>|<xref:Microsoft.VisualStudio.Text.Tagging.SimpleTagger%601>Typ <xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag> ) pro danou vyrovnávací paměť.|
-|<xref:Microsoft.VisualStudio.Text.Adornments.ITextMarkerProviderFactory>|Textová značka autor značky (a <xref:Microsoft.VisualStudio.Text.Tagging.SimpleTagger%601> typu <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> ).|
-|<xref:Microsoft.VisualStudio.Text.Adornments.IToolTipProviderFactory>|<xref:Microsoft.VisualStudio.Text.Adornments.IToolTipProvider>Pro daný <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
-|<xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>|A <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession> .|
-|<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>|A <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession> .|
-|<xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker>|A <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession> .|
+|<xref:Microsoft.VisualStudio.Text.Adornments.IErrorProviderFactory>|Typ <xref:Microsoft.VisualStudio.Text.Tagging.SimpleTagger%601> ) pro danou vyrovnávací <xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag> paměť.|
+|<xref:Microsoft.VisualStudio.Text.Adornments.ITextMarkerProviderFactory>|A text marker tagger (a <xref:Microsoft.VisualStudio.Text.Tagging.SimpleTagger%601> of type <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> ).|
+|<xref:Microsoft.VisualStudio.Text.Adornments.IToolTipProviderFactory>|pro <xref:Microsoft.VisualStudio.Text.Adornments.IToolTipProvider> danou hodnotu <xref:Microsoft.VisualStudio.Text.Editor.ITextView> .|
+|<xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>|. <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession>|
+|<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>|. <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession>|
+|<xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker>|. <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession>|
 
 ## <a name="see-also"></a>Viz také
-- [Rozšiřovací body služby jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)
+- [Nápěvné body služby jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)

@@ -2,7 +2,7 @@
 description: Úloha byla dokončena z důvodu neošetřené výjimky.
 title: TASK_STATE_FAULTED pole | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - TASK_STATE_FAULTED field, Task class [.NET Framework debug engines]
 ms.assetid: ced826ae-09a9-4acf-af00-a2343d396bb8
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f01c222686ab2c03acc05dcd08beabd305119300
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0a3e1bf4fe6a95bd55cf366d1f5b8f56d7ea9c05
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079251"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902836"
 ---
 # <a name="task_state_faulted-field"></a>TASK_STATE_FAULTED pole
 Úloha byla dokončena z důvodu neošetřené výjimky.
@@ -25,7 +25,7 @@ ms.locfileid: "105079251"
 
  **Sestavení:** mscorlib (v *mscorlib.dll*)
 
- Vzhledem k tomu, že nemůžete získat přístup k tomuto internímu členovi z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
+ Vzhledem k tomu, že nemůžete získat přístup k tomuto internímu členu z .NET Framework, je následující syntaxe k dispozici v souboru Common Intermediate Language (CIL).
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ ms.locfileid: "105079251"
 ```
 
 ## <a name="remarks"></a>Poznámky
- Pokud pole [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) obsahuje tuto hodnotu, <xref:System.Threading.Tasks.Task.Status%2A> vlastnost vrátí hodnotu <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> .
+ Pokud [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) pole obsahuje tuto hodnotu, <xref:System.Threading.Tasks.Task.Status%2A> vrátí vlastnost <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> .
 
 ## <a name="see-also"></a>Viz také
 - [Task – třída](../../extensibility/debugger/task-class-internal-members.md)

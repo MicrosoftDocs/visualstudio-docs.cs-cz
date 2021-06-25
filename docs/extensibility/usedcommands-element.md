@@ -1,9 +1,9 @@
 ---
-title: Element UsedCommands | Microsoft Docs
-description: Element UsedCommands seskupuje elementy UsedCommand a další seskupení UsedCommands. Element UsedCommands je nepovinný.
+title: UsedCommands – | Microsoft Docs
+description: Element UsedCommands seskupuje prvky UsedCommand a další seskupení UsedCommands. Element UsedCommands je volitelný.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - UsedCommands
 helpviewer_keywords:
@@ -15,17 +15,17 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b05c9571c0ca8252789f0e07ebfce66926fb19ff
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 21233527c9fcfb97fd45a8eeed60c04927df8ba1
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060208"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903031"
 ---
 # <a name="usedcommands-element"></a>UsedCommands – element
-Element UsedCommands seskupuje elementy UsedCommand a další seskupení UsedCommands.
+Element UsedCommands seskupuje prvky UsedCommand a další seskupení UsedCommands.
 
- Element UsedCommands je nepovinný. Pokud nevoláte příkazy definované mimo váš balíček, nemusíte tento oddíl zahrnout do souboru. vsct.
+ Element UsedCommands je volitelný. Pokud nevoláte příkazy definované mimo váš balíček, není možné zahrnout tuto část do souboru .vsct.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Element UsedCommands seskupuje elementy UsedCommand a další seskupení UsedCom
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené elementy
 
@@ -54,7 +54,7 @@ Element UsedCommands seskupuje elementy UsedCommand a další seskupení UsedCom
 
 |Element|Popis|
 |-------------|-----------------|
-|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy (například položky nabídky, nabídky, panely nástrojů a pole se seznamem), které rozhraní VSPackage poskytuje integrovanému vývojovému prostředí (IDE).|
+|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy (například položky nabídky, nabídky, panely nástrojů a pole se seznamem), které balíček VSPackage poskytuje integrovanému vývojovému prostředí (IDE).|
 
 ## <a name="example"></a>Příklad
 

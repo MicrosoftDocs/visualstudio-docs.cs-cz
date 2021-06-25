@@ -3,7 +3,7 @@ title: Šablony podpory webu | Microsoft Docs
 description: Seznamte se se šablonami podpory webu. Šablony projektů a položek webu sady Visual Studio poskytují opakovaně použitelný a přizpůsobitelný webový projekt a zástupné procedury položek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - we site projects, templates
 ms.assetid: 37173c97-486b-4b3c-8ed3-cf5890c4de23
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c39e900bbdddd1d558bd0604f16924d2536cb98
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a1bd391d13a6d650cb4d23ce78789a66ef50c2e3
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069086"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898888"
 ---
 # <a name="web-site-support-templates"></a>Šablony podpory webu
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Šablony projektů a položek webu poskytují opakovaně použitelný a přizpůsobitelný projekt webu a položky, které urychlují proces vývoje odebráním nutnosti vytvářet nové webové projekty a položky od začátku. Další informace o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] šablonách naleznete v tématu [vytváření šablon projektů a položek](../../ide/creating-project-and-item-templates.md).
@@ -151,40 +151,40 @@ ms.locfileid: "105069086"
 
 - CodeBehind. *klapk*
 
-     Závislý soubor, který implementuje třídu WebForm. Jazyk CodeBehind Určuje *rozšíření* tohoto souboru.
+     Závislý soubor, který implementuje třídu WebForm. Jazyk souboru codebehind určuje *příponu* tohoto souboru.
 
-- ContentPage. aspx
+- ContentPage.aspx
 
-     Počáteční obsah webové stránky jako stránka obsahu. K této webové stránce není přidružen žádný soubor závislý na CodeBehind.
+     Počáteční obsah webové stránky jako stránka obsahu. Tato webová stránka nemá žádný přidružený závislý soubor s kódem.
 
-- ContentPage_cb. aspx
+- ContentPage_cb.aspx
 
-     Počáteční obsah webové stránky jako stránka obsahu. Tato webová stránka má přidružený soubor závislý na CodeBehind.
+     Počáteční obsah webové stránky jako stránka obsahu. Tato webová stránka má přidružený závislý soubor kódu.
 
-- WebForm. vstemplate
+- WebForm.vstemplate
 
-     Soubor šablony, který určuje obsah nové webové stránky a jejího závislého souboru (pokud nějaký existuje).
+     Soubor šablony, který určuje obsah nové webové stránky a jeho závislý soubor, pokud je k nějakému dojde.
 
 ### <a name="new-master-page"></a>Nová stránka předlohy
- Tato šablona vytvoří novou stránku předlohy v reakci na příkaz **Přidat novou vzorovou stránku** .
+ Tato šablona vytvoří novou stránku předlohy v reakci na **příkaz Přidat novou stránku předlohy.**
 
- Chcete-li vytvořit závislý zdrojový soubor codebehind, vyberte možnost **umístit kód do samostatného souboru**. V opačném případě je vytvořena jedna webová stránka, která má prázdný skriptovací blok a žádné \<% Page %> direktivy pro připojení závislého souboru.
+ Pokud chcete vytvořit závislý zdrojový soubor kódu, vyberte **Umístit kód do samostatného souboru**. V opačném případě je vytvořena jedna webová stránka s prázdným blokem skriptování a bez direktiv pro \<% Page %> připojování závislého souboru.
 
-- MasterPage. Master
+- MasterPage.master
 
-     Počáteční obsah stránky předlohy Tato stránka předlohy nemá přidružený soubor závislý na CodeBehind.
+     Počáteční obsah stránky předlohy. Tato stránka předlohy nemá žádný přidružený závislý soubor kódu.
 
-- MasterPage_cb. Master
+- MasterPage_cb.master
 
-     Počáteční obsah stránky předlohy Tato stránka předlohy má přidružený soubor závislý na CodeBehind.
+     Počáteční obsah stránky předlohy. Tato stránka předlohy má přidružený závislý soubor kódu.
 
-- CodeBehind. *rozšíření*
+- Codebehind. *rozšíření*
 
-     Závislý soubor, který implementuje třídu hlavní stránky. Jazyk CodeBehind Určuje *rozšíření* tohoto souboru.
+     Závislý soubor, který implementuje třídu stránky předlohy. Jazyk souboru codebehind určuje *příponu* tohoto souboru.
 
-- MasterPage. vstemplate
+- MasterPage.vstemplate
 
-     Soubor šablony, který určuje obsah nové stránky předlohy a jejího závislého souboru, pokud existuje.
+     Soubor šablony, který určuje obsah nové stránky předlohy a jeho závislý soubor, pokud je k nějakému dojde.
 
 ## <a name="see-also"></a>Viz také
 - [Podpora webu](../../extensibility/internals/web-site-support.md)

@@ -1,8 +1,8 @@
 ---
-description: Tato funkce zobrazuje vlastnosti správy zdrojového kódu pro soubor nebo projekt.
-title: Funkce SccProperties | Microsoft Docs
+description: Tato funkce zobrazí vlastnosti správy zdrojového kódu pro soubor nebo projekt.
+title: SccProperties – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccProperties
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56306bb7c248ea500e16964c0929f34a27187298
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cd50353ab29c05e5e5db2dc2b3f363af46ca8aa7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056516"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904188"
 ---
 # <a name="sccproperties-function"></a>SccProperties – funkce
-Tato funkce zobrazuje vlastnosti správy zdrojového kódu pro soubor nebo projekt.
+Tato funkce zobrazí vlastnosti správy zdrojového kódu pro soubor nebo projekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,34 +34,34 @@ SCCRTN SccProperties (
 ```
 
 #### <a name="parameters"></a>Parametry
- pvContext
+ pvContext (Kontext pv)
 
-pro Struktura kontextu modulu plug-in správy zdrojových kódů.
+[v] Kontextová struktura modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
+[v] Popisovač okna integrovaného vývojového prostředí, který může modul plug-in správy zdrojového kódu použít jako nadřazený prvek pro všechna dialogová okna, která poskytuje.
 
  lpFileName
 
-pro Plně kvalifikovaný název cesty souboru nebo projektu.
+[v] Plně kvalifikovaný název cesty k souboru nebo projektu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Vlastnosti se úspěšně zobrazily.|
-|SCC_I_RELOADFILE|Systém správy verzí změnil vlastnosti souboru, takže IDE by měl tento soubor znovu načíst.|
-|SCC_E_PROJNOTOPEN|Zadaný projekt nebyl otevřen ve správě zdrojového kódu.|
+|SCC_OK|Vlastnosti se úspěšně zobrazují.|
+|SCC_I_RELOADFILE|Systém pro řízení verzí změnil vlastnosti souboru, takže integrované vývojové prostředí by mělo tento soubor znovu načíst.|
+|SCC_E_PROJNOTOPEN|Zadaný projekt nebyl otevřen ve zdrojovém kódu.|
 |SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k zobrazení vlastností tohoto souboru nebo projektu.|
-|SCC_E_FILENOTCONTROLLED|Zadaný soubor nebo projekt není pod správou zdrojových kódů.|
+|SCC_E_FILENOTCONTROLLED|Zadaný soubor nebo projekt se nenachová ve zdrojovém kódu.|
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Došlo k neznámé nebo obecné chybě.|
 
 ## <a name="remarks"></a>Poznámky
- Modul plug-in správy zdrojových kódů zobrazuje vlastnosti ve vlastním dialogovém okně.
+ Modul plug-in správy zdrojového kódu zobrazí vlastnosti ve vlastním dialogovém okně.
 
- Vlastnosti jsou definovány modulem plug-in správy zdrojových kódů a mohou se lišit od modulu plug-in s modulem plug-in. Pokud modul plug-in umožní uživateli změnit vlastnosti správy zdrojového kódu souboru, měl by se vrátit `SCC_I_RELOAD` k signalizaci rozhraní IDE, že je nutné znovu načíst soubor nebo projekt.
+ Vlastnosti jsou definovány modul plug-in správy zdrojového kódu a mohou se lišit od modulu plug-in k modulu plug-in. Pokud modul plug-in umožňuje uživateli změnit vlastnosti správy zdrojového kódu souboru, měl by se vrátit k signálu integrovaného vývojového prostředí (IDE), že tento soubor nebo projekt je potřeba `SCC_I_RELOAD` znovu načíst.
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

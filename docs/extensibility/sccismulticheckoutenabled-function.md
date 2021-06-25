@@ -1,8 +1,8 @@
 ---
-description: Tato funkce kontroluje, zda modul plug-in správy zdrojových kódů umožňuje více rezervací souboru.
-title: Funkce SccIsMultiCheckoutEnabled | Microsoft Docs
+description: Tato funkce zkontroluje, jestli modul plug-in správy zdrojového kódu umožňuje vícenásobné pokladny v souboru.
+title: SccIsMultiCheckoutEnabled – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccIsMultiCheckoutEnabled
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3ff3943524c37d2150adb0607f62be9b8ddef95
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7b9fc81a20e3a8078a2d4cebbc6a8db10c2e2e49
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063796"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902511"
 ---
 # <a name="sccismulticheckoutenabled-function"></a>SccIsMultiCheckoutEnabled – funkce
-Tato funkce kontroluje, zda modul plug-in správy zdrojových kódů umožňuje více rezervací souboru.
+Tato funkce zkontroluje, jestli modul plug-in správy zdrojového kódu umožňuje vícenásobné pokladny v souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,22 +35,22 @@ SCCRTN SccIsMultiCheckoutEnabled(
 #### <a name="parameters"></a>Parametry
  pContext
 
-pro Struktura kontextu modulu plug-in správy zdrojových kódů.
+[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
 
  pbMultiCheckout
 
-mimo Určuje, zda je pro tento projekt povoleno více rezervací (nenulové znamená, že je podporováno více rezervací).
+[out] Určuje, jestli je pro tento projekt povoleno více pokladny (nenulové znamená, že se podporuje více pokladn).
 
 ## <a name="return-value"></a>Návratová hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Ověření proběhlo úspěšně.|
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nespecifická chyba.|
+|SCC_OK|Kontrola byla úspěšná.|
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nespecikátní selhání.|
 
 ## <a name="remarks"></a>Poznámky
- Rozhraní IDE umožňuje pomocí dvou kontrol zjistit, zda lze soubory rezervovat současně více než jedním uživatelem. Nejprve musí systém správy zdrojů podporovat více rezervací. Modul plug-in správy zdrojových kódů může tuto schopnost zadat při inicializaci zadáním `SCC_CAP_MULTICHECKOUT` . Pak při druhé kontrole rozhraní IDE volá tuto funkci, aby určila, jestli aktuální projekt podporuje více rezervací. Pokud je pro vybraný projekt podporováno více rezervací, modul plug-in vrátí kód úspěšnosti a nastaví `pbMultiCheckout` nenulovou hodnotu ( `TRUE` ) nebo `FALSE` .
+ Integrované vývojové prostředí (IDE) provádí dvě kontroly, aby bylo možné určit, jestli soubory může současně rezervuje více než jeden uživatel. Systém správy zdrojového kódu musí nejprve podporovat více pokladn. Modul plug-in správy zdrojového kódu může tuto možnost zadat během inicializace zadáním `SCC_CAP_MULTICHECKOUT` . Poté při druhé kontrole volá integrované vývojové prostředí tuto funkci, aby určilo, jestli aktuální projekt podporuje více pokladny. Pokud je pro vybraný projekt podporováno více pokladny, vrátí modul plug-in kód úspěchu a nastaví se na nenulovou `pbMultiCheckout` hodnotu ( ) nebo `TRUE` `FALSE` .
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

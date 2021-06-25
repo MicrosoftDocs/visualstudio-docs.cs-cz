@@ -1,8 +1,8 @@
 ---
-description: Představuje objekt obecného tvůrce, ke kterému nepatří tato neobecná instance.
+description: Představuje obecný objekt tvůrce, na který tato neobecná instance deleguje.
 title: AsyncTaskMethodBuilder.m_builder pole | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - m_builder field, AsyncTaskMethodBuilder structure [.NET Framework debug engines]
 ms.assetid: bfaf25a2-0f08-413f-b474-9ce0d97c0eeb
@@ -11,21 +11,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2f870b6c2544c57aeced28692d7be8728b641d9c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 56407d5a46ea314e06d77a4743728ab4531bce24
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055554"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903863"
 ---
 # <a name="asynctaskmethodbuilderm_builder-field"></a>AsyncTaskMethodBuilder.m_builder pole
-Představuje objekt obecného tvůrce, ke kterému nepatří tato neobecná instance.
+Představuje obecný objekt tvůrce, na který tato neobecná instance deleguje.
 
  **Obor názvů:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
  **Sestavení:** mscorlib (v mscorlib.dll)
 
- Vzhledem k tomu, že nemůžete získat přístup k tomuto internímu členovi z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
+ Vzhledem k tomu, že k tomuto internímu členu .NET Framework, je následující syntaxe k dispozici v souboru Common Intermediate Language (CIL).
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,4 +37,4 @@ Představuje objekt obecného tvůrce, ke kterému nepatří tato neobecná inst
 
 ## <a name="see-also"></a>Viz také
 - <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>
-- [Vnitřní rozšíření pro .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [Interní informace o paralelním rozšíření pro .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

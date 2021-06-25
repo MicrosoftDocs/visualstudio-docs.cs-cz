@@ -1,9 +1,9 @@
 ---
 title: Nástroj CreatePkgDef | Microsoft Docs
-description: Přečtěte si o nástroji CreatePkgDef, který přebírá soubor DLL pro rozšíření sady Visual Studio jako parametr a vytvoří soubor. pkgdef, který se doprovází k souboru. dll.
+description: Přečtěte si o nástroji CreatePkgDef, který přebírá soubor .dll pro rozšíření sady Visual Studio jako parametr a vytvoří soubor. pkgdef, který se doprovází k souboru .dll.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - package definition
 - create pkgdef
@@ -15,15 +15,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 519cc251a245e1eeb65ddb1fcd34b0fa1af8f686
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bfbd4b42d9ceddd40e08c28926a59aecba719fe9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056880"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898120"
 ---
 # <a name="createpkgdef-utility"></a>Nástroj CreatePkgDef
-Převezme soubor DLL pro rozšíření sady Visual Studio jako parametr a vytvoří soubor *. pkgdef* , který se doprovází k souboru *. dll* . Soubor *. pkgdef* obsahuje všechny informace, které by jinak byly zapsány do systémového registru při instalaci rozšíření.
+Převezme soubor .dll pro rozšíření sady Visual Studio jako parametr a vytvoří soubor *. pkgdef* , který bude provázet soubor *.dll* . Soubor *. pkgdef* obsahuje všechny informace, které by jinak byly zapsány do systémového registru při instalaci rozšíření.
 
 > [!NOTE]
 > Většina šablon projektů, které jsou součástí sady Visual Studio SDK, automaticky vytvoří soubory *. pkgdef* jako součást procesu sestavení. Tento dokument je určený pro uživatele, kteří chtějí balíčky vytvořit ručně, nebo převeďte stávající balíčky na použití nasazení *. pkgdef*  .
@@ -45,7 +45,7 @@ Nepovinný parametr. Vynutí registraci pomocí nástroje **codebase** .
 Vynutí registraci pomocí nástroje **Assembly** .
 
 **&lt;AssemblyPath&gt;**\
-Cesta k souboru *. dll* , ze kterého chcete generovat soubor *. pkgdef*.
+Cesta k souboru *.dll* , ze kterého chcete generovat soubor *. pkgdef*.
 
 ## <a name="remarks"></a>Poznámky
 Nasazení rozšíření pomocí souborů *. pkgdef* nahrazuje požadavky v registru dřívějších verzí sady Visual Studio.

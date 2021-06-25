@@ -1,44 +1,44 @@
 ---
-title: Prohlížeč knihovny obrázků | Microsoft Docs
-description: Přečtěte si o nástroji Prohlížeč knihovny obrázků sady Visual Studio, který načte a vyhledá manifesty obrázků, což vám umožní zobrazit a manipulovat s atributy obrázku.
+title: Image Library Viewer | Microsoft Docs
+description: Přečtěte si o nástroji Visual Studio Image Library Viewer, který načítá a prohledá manifesty obrázků a umožňuje zobrazit atributy obrázků a manipulovat s nimi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d60443e97bc557bc964d59750417b2662e4c3c8f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 02e7c5d5ed45b7a6c19c248e949e667ec0a1bdc0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085972"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898707"
 ---
 # <a name="image-library-viewer"></a>Prohlížeč knihovny obrázků
-Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vyhledat manifesty obrázků a umožnit tak uživateli manipulovat stejným způsobem jako v aplikaci Visual Studio. Uživatel může měnit pozadí, velikosti, DPI, vysoký kontrast a další nastavení. Nástroj také zobrazí informace o načítání pro každý manifest obrázku a zobrazí informace o zdroji pro každý obrázek v manifestu obrázku. Tento nástroj je užitečný pro:
+Nástroj Visual Studio Image Library Viewer může načítat a prohledávat manifesty obrázků, což uživateli umožňuje pracovat s nimi stejným způsobem jako Visual Studio. Uživatel může měnit pozadí, velikosti, dpi, vysoký kontrast a další nastavení. Nástroj také zobrazí informace o načítání pro každý manifest image a zdrojové informace pro každou image v manifestu image. Tento nástroj je užitečný pro:
 
-1. Diagnostikování chyb
+1. Diagnostika chyb
 
-2. Zajištění správného nastavení atributů v manifestech vlastních imagí
+2. Zajištění vlastního nastavení atributů v manifestech vlastních i image
 
-3. Hledání imagí v katalogu imagí sady Visual Studio tak, aby rozšíření sady Visual Studio mohlo používat obrázky, které odpovídají stylu sady Visual Studio
+3. Hledání obrázků v katalogu Visual Studio Image Catalog, aby rozšíření Visual Studio mohli používat obrázky, které se vejdou do stylu Visual Studio
 
-   ![Prohlížeč knihovny obrázků Hero](../../extensibility/internals/media/image-library-viewer-hero.png "Prohlížeč knihovny obrázků Hero")
+   ![Image Library Viewer Hero](../../extensibility/internals/media/image-library-viewer-hero.png "Image Library Viewer Hero")
 
-   **Moniker bitové kopie**
+   **Moniker obrázku**
 
-   Moniker obrázku (neboli moniker pro krátký) je identifikátor GUID: ID, který jedinečně identifikuje prostředek obrázku nebo prostředek seznamu obrázků v knihovně imagí.
+   Moniker obrázku (nebo zkráceně moniker) je pár GUID:ID, který jedinečně identifikuje asset obrázku nebo asset seznamu obrázků v knihovně obrázků.
 
-   **Image – soubory manifestu**
+   **Soubory manifestu obrázku**
 
-   Soubory manifestu obrázků (. imagemanifest) jsou soubory XML, které definují sadu prostředků obrázků, monikery, které tyto prostředky představují, a skutečný obrázek nebo obrázky, které představují jednotlivé assety. Manifesty obrázků mohou definovat samostatné obrázky nebo seznamy obrázků pro podporu starší verze uživatelského rozhraní. Kromě toho existují atributy, které lze nastavit buď na Asset, nebo na jednotlivých obrázcích za každým Assetem, aby se změnily, kdy a jak se tyto prostředky zobrazují.
+   Soubory manifestu obrázku (.imagemanifest) jsou soubory XML, které definují sadu prostředků obrázku, monikery, které představují tyto prostředky, a skutečné obrázky nebo obrázky, které představují jednotlivé prostředky. Manifesty obrázků mohou definovat samostatné image nebo seznamy obrázků pro podporu starší verze uživatelského rozhraní. Kromě toho existují atributy, které je možné nastavit pro prostředek nebo na jednotlivých obrázcích za každým assetem, aby se změnily, kdy a jak se tyto prostředky zobrazují.
 
    **Schéma manifestu obrázku**
 
-   Úplný manifest obrázku vypadá takto:
+   Kompletní manifest obrázku vypadá asi takhle:
 
 ```xml
 <ImageManifest>
@@ -59,7 +59,7 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 
  **Symboly**
 
- V rámci podpory čitelnosti a údržby může manifest obrázku používat symboly pro hodnoty atributů. Symboly jsou definovány takto:
+ Manifest obrázku může jako čitelnost a údržbu používat symboly pro hodnoty atributů. Symboly jsou definovány tímto kódem:
 
 ```xml
 <Symbols>
@@ -70,14 +70,14 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 </Symbols>
 ```
 
-|**Dílčí element**|**Definition**|
+|**Dílčím**|**Definition**|
 |-|-|
 |Import|Importuje symboly daného souboru manifestu pro použití v aktuálním manifestu.|
-|Identifikátor GUID|Symbol představuje identifikátor GUID a musí odpovídat formátování identifikátoru GUID.|
-|ID|Symbol představuje ID a musí být nezáporné celé číslo.|
+|Identifikátor GUID|Symbol představuje identifikátor GUID a musí odpovídat formátování GUID.|
+|ID|Symbol představuje ID a musí to být negativní celé číslo.|
 |Řetězec|Symbol představuje libovolnou řetězcovou hodnotu.|
 
- V symbolech rozlišuje velká a malá písmena a jsou odkazovány pomocí syntaxe $ (symbol-Name):
+ Symboly rozlišují malá a velká písmena a odkazují se na ně pomocí syntaxe $(název-symbolu):
 
 ```xml
 <Image Guid="$(ShellCommandGuid)" ID="$(cmdidSaveAll)" >
@@ -85,23 +85,23 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 </Image>
 ```
 
- Některé symboly jsou předdefinované pro všechny manifesty. Ty lze použít v atributu identifikátoru URI \<Source> \<Import> prvku nebo na odkazování cest v místním počítači.
+ Některé symboly jsou předdefinované pro všechny manifesty. Ty lze použít v atributu Uri elementu \<Source> nebo \<Import> k odkazování na cesty v místním počítači.
 
 |**Symbol**|**Popis**|
 |-|-|
-|CommonProgramFiles|Hodnota proměnné prostředí% CommonProgramFiles%|
-|LocalAppData|Hodnota proměnné prostředí% LocalAppData%|
+|CommonProgramFiles|Hodnota proměnné prostředí %CommonProgramFiles%|
+|LocalAppData|Hodnota proměnné prostředí %LocalAppData%|
 |ManifestFolder|Složka obsahující soubor manifestu|
-|Dokumenty|Úplná cesta ke složce dokumenty aktuálního uživatele|
-|ProgramFiles|Hodnota proměnné prostředí% ProgramFiles%|
-|Systém|Složka Windows\System32|
-|Adresář|Hodnota proměnné prostředí% WinDir%|
+|Mydocuments|Úplná cesta ke Dokumenty složky aktuálního uživatele|
+|ProgramFiles|Hodnota proměnné prostředí %ProgramFiles%|
+|Systémový|Složka Windows\System32|
+|Windir|Hodnota proměnné prostředí %WinDir%|
 
  **Obrázek**
 
- \<Image>Prvek definuje obrázek, na který může odkazovat moniker. Identifikátor GUID a ID, které se přijímají společně tvoří moniker bitové kopie. Moniker obrázku musí být v celé knihovně imagí jedinečný. Pokud má více než jeden obrázek daný moniker, při sestavování knihovny je ten, který se zachovává.
+ Element \<Image> definuje image, na kterou lze odkazovat pomocí monikeru. Identifikátor GUID a ID společně tvoří moniker image. Moniker pro image musí být jedinečný v celé knihovně obrázků. Pokud má daný moniker více než jeden obrázek, první obrázek se při vytváření knihovny setká s tím, který se uchovává.
 
- Musí obsahovat alespoň jeden zdroj. I když zdroje s neutrální velikostí poskytnou nejlepší výsledky napříč širokou škálou velikostí, nejsou nutné. Pokud je služba požádána o obrázek velikosti, která není definována v \<Image> elementu a neexistuje žádný neutrální zdroj, služba vybere zdroj, který je pro konkrétní velikost specifický, a bude ho škálovat na požadovanou velikost.
+ Musí obsahovat alespoň jeden zdroj. I když zdroje neutrální velikosti poskytují nejlepší výsledky v široké škále velikostí, nejsou vyžadovány. Pokud je služba vyzvána k zobrazení obrázku o velikosti, která není definovaná v elementu a neexistuje žádný zdroj neutrální velikosti, služba zvolí zdroj s nejlepší velikostí a škáluje ji na \<Image> požadovanou velikost.
 
 ```xml
 <Image Guid="guid" ID="int" AllowColorInversion="true/false">
@@ -112,13 +112,13 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 
 |**Atribut**|**Definition**|
 |-|-|
-|Identifikátor GUID|Požadovanou Část GUID monikeru image|
-|ID|Požadovanou Část ID monikeru bitové kopie|
-|AllowColorInversion|[Volitelné, výchozí hodnota true] Určuje, zda může být barva obrázku při použití na tmavém pozadí převrácena prostřednictvím kódu programu.|
+|Identifikátor GUID|[Povinné] Část GUID monikeru image|
+|ID|[Povinné] Část ID monikeru obrázku|
+|AllowColorInversion|[Volitelné, výchozí hodnota true] Určuje, jestli může být obrázek při použití na tmavém pozadí invertován prostřednictvím kódu programu.|
 
  **Zdroj**
 
- \<Source>Prvek definuje jeden prostředek zdroje obrázku (XAML a PNG).
+ Element \<Source> definuje jeden prostředek zdroje obrázku (XAML a PNG).
 
 ```xml
 <Source Uri="uri" Background="background">
@@ -128,19 +128,19 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 
 |**Atribut**|**Definition**|
 |-|-|
-|Identifikátor URI|Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může se zobrazit některý z následujících:<br /><br /> – [Identifikátor URI balíčku](/dotnet/framework/wpf/app-development/pack-uris-in-wpf) pomocí autority Application:///<br /><br /> – Odkaz na prostředek absolutní součásti<br /><br /> – Cesta k souboru, který obsahuje nativní prostředek|
-|Pozadí|Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může se zobrazit některý z následujících:<br /><br /> - *Světlý*: zdroj lze použít na světlém pozadí.<br /><br /> - *Tmavě*: zdroj lze použít na tmavém pozadí.<br /><br /> - *HighContrast*: zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> - *HighContrastLight*: zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> -*HighContrastDark*: zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut **Background** vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud  je pozadí *světlé*, *tmavé*, *HighContrastLight* nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je **pozadí** vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku.|
+|Uri|[Povinné] Identifikátor URI, který definuje, odkud lze image načíst. Může se zobrazit některý z následujících:<br /><br /> – Identifikátor [URI balíčku](/dotnet/framework/wpf/app-development/pack-uris-in-wpf) s využitím application:/// autority<br /><br /> – Absolutní odkaz na prostředek komponenty<br /><br /> – Cesta k souboru obsahujícímu nativní prostředek|
+|Pozadí|[Volitelné] Určuje, jaký druh pozadí má být zdroj použit.<br /><br /> Může se zobrazit některý z následujících:<br /><br /> - *Light*(Světlo): Zdroj lze použít na světlém pozadí.<br /><br /> - *Dark*(Tmavý): Zdroj lze použít na tmavém pozadí.<br /><br /> - *HighContrast:* Zdroj lze použít na libovolném pozadí v Vysoký kontrast režimu.<br /><br /> - *HighContrastLight:* Zdroj lze použít na světlém pozadí v Vysoký kontrast režimu.<br /><br /> -*HighContrastDark:* Zdroj lze použít na tmavém pozadí v Vysoký kontrast režimu.<br /><br /> Pokud je **atribut Background** vynechán, zdroj lze použít na libovolném pozadí.<br /><br /> Pokud **je pozadí** *Světlý,* *Tmavý,* *HighContrastLight* nebo *HighContrastDark,* barvy zdroje se nikdy nepřevrátí. Pokud **je vlastnost Background** vynechána nebo nastavena na hodnotu *HighContrast,* je inverze barev zdroje řízena atributem **AllowColorInversion obrázku.**|
 
- \<Source>Element může mít přesně jeden z následujících volitelných dílčích elementů:
+ Element \<Source> může mít přesně jeden z následujících volitelných dílčích elementů:
 
 |**Prvek**|**Atributy (všechny povinné)**|**Definition**|
 |-|-|-|
 |\<Size>|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|
-|\<SizeRange>|MinSize, MaxSize|Zdroj bude použit pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|
-|\<Dimensions>|Šířka, Výška|Zdroj se použije pro obrázky zadané šířky a výšky (v jednotkách zařízení).|
-|\<DimensionRange>|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Zdroj bude použit pro obrázky z minimální šířky a výšky až po maximální šířku a výšku (v jednotkách zařízení) včetně.|
+|\<SizeRange>|MinSize, MaxSize|Zdroj se použije pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|
+|\<Dimensions>|Width(Šířka), Height (Výška)|Zdroj se použije pro obrázky dané šířky a výšky (v jednotkách zařízení).|
+|\<DimensionRange>|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Zdroj se použije pro obrázky od minimální šířky/výšky po maximální šířku/výšku (v jednotkách zařízení) včetně.|
 
- \<Source>Element může mít také volitelný \<NativeResource> dílčí element, který definuje \<Source> , který je načten z nativního sestavení namísto spravovaného sestavení.
+ Prvek může mít také volitelný dílčí prvek, který definuje , který je načten z nativního sestavení, \<Source> \<NativeResource> nikoli ze \<Source> spravovaného sestavení.
 
 ```xml
 <NativeResource Type="type" ID="int" />
@@ -148,12 +148,12 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 
 |**Atribut**|**Definition**|
 |-|-|
-|Typ|Požadovanou Typ nativního prostředku, buď XAML, nebo PNG|
-|ID|Požadovanou Část celého čísla ID nativního prostředku|
+|Typ|[Povinné] Typ nativního prostředku, XAML nebo PNG|
+|ID|[Povinné] Celočíselná část ID nativního prostředku|
 
- **Obrázků**
+ **Imagelist**
 
- \<ImageList>Prvek definuje kolekci obrázků, které mohou být vráceny v jednom pruhu. Pruh je podle potřeby založený na vyžádání.
+ Element \<ImageList> definuje kolekci obrázků, které mohou být vráceny v jednom pruhu. Pruh je podle potřeby sestavený na vyžádání.
 
 ```xml
 <ImageList>
@@ -164,64 +164,64 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 
 |**Atribut**|**Definition**|
 |-|-|
-|Identifikátor GUID|Požadovanou Část GUID monikeru image|
-|ID|Požadovanou Část ID monikeru bitové kopie|
-|Externí|[Volitelné, výchozí hodnota false] Určuje, zda moniker image odkazuje na obrázek v aktuálním manifestu.|
+|Identifikátor GUID|[Povinné] Část GUID monikeru image|
+|ID|[Povinné] Část ID monikeru obrázku|
+|Externí|[Volitelné, výchozí hodnota false] Určuje, jestli moniker obrázku odkazuje na obrázek v aktuálním manifestu.|
 
- Moniker pro obsažený obrázek nemusí odkazovat na obrázek definovaný v aktuálním manifestu. Pokud v knihovně obrázků není nalezen obsažený obrázek, bude na svém místě použit prázdný zástupný obrázek.
+ Moniker obsažené image nemusí odkazovat na image definovanou v aktuálním manifestu. Pokud se obsažený obrázek v knihovně obrázků nenašel, použije se místo ní prázdný zástupný obrázek.
 
 ## <a name="how-to-use-the-tool"></a>Jak používat nástroj
- **Ověření manifestu vlastního obrázku**
+ **Ověření vlastního manifestu image**
 
- Chcete-li vytvořit vlastní manifest, doporučujeme použít nástroj ManifestFromResources k vygenerování manifestu. Chcete-li ověřit vlastní manifest, spusťte prohlížeč knihovny obrázků a vyberte soubor > nastavit cesty... Otevřete dialogové okno Hledat adresáře. Nástroj bude používat adresáře hledání k načtení manifestů obrázků, ale bude ho také používat k nalezení souborů. dll, které obsahují obrázky v manifestu, takže nezapomeňte do tohoto dialogu zahrnout adresáře manifest i DLL.
+ Pokud chcete vytvořit vlastní manifest, doporučujeme k automatickém vygenerování manifestu použít nástroj ManifestFromResources. Pokud chcete vlastní manifest ověřit, spusťte Prohlížeč knihovny obrázků a vyberte Soubor > Nastavit cesty... otevřete dialogové okno Adresáře vyhledávání. Nástroj použije vyhledávací adresáře k načtení manifestů obrázků, ale použije je také k vyhledání souborů .dll, které obsahují obrázky v manifestu, takže nezapomeňte do tohoto dialogového okna zahrnout adresáře manifestu i knihovny DLL.
 
- ![Hledání v prohlížeči knihovny obrázků](../../extensibility/internals/media/image-library-viewer-search.png "Hledání v prohlížeči knihovny obrázků")
+ ![Vyhledávání v prohlížeči knihovny obrázků](../../extensibility/internals/media/image-library-viewer-search.png "Vyhledávání v prohlížeči knihovny obrázků")
 
- Klikněte na tlačítko **Přidat...** a vyberte nové adresáře hledání, ve kterých budou hledány manifesty a jejich odpovídající knihovny DLL. Tento nástroj si tyto adresáře hledání zapamatuje a bude možné ho zapnout nebo vypnout zaškrtnutím nebo zrušením zaškrtnutí tohoto adresáře.
+ Kliknutím **na Přidat...** vyberte nové adresáře hledání a vyhledejte manifesty a jejich odpovídající knihovny DLL. Nástroj si tyto vyhledávací adresáře zapamatuje a můžete je zapnout nebo vypnout zaškrtnutím nebo zrušením zaškrtnutí adresáře.
 
- Ve výchozím nastavení se nástroj pokusí najít instalační adresář sady Visual Studio a přidat tyto adresáře do seznamu adresáře hledání. Můžete ručně přidat adresáře, které nástroj nenalezne.
+ Ve výchozím nastavení se nástroj pokusí najít adresář Visual Studio a přidat tyto adresáře do seznamu adresářů hledání. Adresáře, které nástroj nenajde, můžete přidat ručně.
 
- Po načtení všech manifestů se dá nástroj použít k přepnutí barev **pozadí** , **rozlišení DPI**, **vysokého kontrastu** nebo **grayscaling** obrázků, aby uživatel mohl vizuálně kontrolovat prostředky imagí, aby ověřil, že jsou vygenerovány správně pro různá nastavení.
+ Po načtení všech manifestů je možné pomocí tohoto  nástroje přepínat barvy pozadí,  **DPI,** vysoký kontrast nebo šedé škálování obrázků, aby uživatel mohl vizuálně zkontrolovat prostředky obrázků a ověřit, že se správně vykreslují z různých nastavení.
 
  ![Pozadí prohlížeče knihovny obrázků](../../extensibility/internals/media/image-library-viewer-background.png "Pozadí prohlížeče knihovny obrázků")
 
- Barva pozadí může být nastavena na hodnotu světlá, tmavě nebo vlastní. Když vyberete vlastní barvu, otevře se dialogové okno pro výběr barvy a tato vlastní barva se přidá do dolní části pole se seznamem na pozadí pro snadné odvolání později.
+ Barvu pozadí můžete nastavit na Světlý, Tmavý nebo na vlastní hodnotu. Výběrem možnosti Vlastní barva se otevře dialogové okno pro výběr barvy a přidání této vlastní barvy do dolní části pole se seznamem pozadí pro pozdější snadné odvolání.
 
  ![Vlastní barva prohlížeče knihovny obrázků](../../extensibility/internals/media/image-library-viewer-custom-color.png "Vlastní barva prohlížeče knihovny obrázků")
 
- Po výběru monikeru image se zobrazí informace pro každý skutečný obraz na daném monikeru v podokně podrobností obrázku na pravé straně. Podokno také umožňuje uživatelům kopírovat moniker podle názvu nebo pomocí nepůvodní hodnoty GUID: ID.
+ Když vyberete moniker obrázku, zobrazí se informace o každém skutečném obrázku za monikerem v podokně Podrobnosti obrázku na pravé straně. Podokno také umožňuje uživatelům zkopírovat moniker podle názvu nebo nezpracované hodnoty GUID:ID.
 
- ![Podrobnosti obrázku prohlížeče knihovny obrázků](../../extensibility/internals/media/image-library-viewer-image-details.png "Podrobnosti obrázku prohlížeče knihovny obrázků")
+ ![Podrobnosti o obrázku v prohlížeči knihovny obrázků](../../extensibility/internals/media/image-library-viewer-image-details.png "Podrobnosti o obrázku v prohlížeči knihovny obrázků")
 
- Informace zobrazené pro každý zdroj obrázku obsahují typ pozadí, na kterém se má zobrazit, zda může být motivem nebo podporuje Vysoký kontrast, jaké velikosti jsou platné pro nebo zda je velikost neutrální a zda je obrázek z nativního sestavení.
+ Informace zobrazené pro každý zdroj bitové kopie zahrnují, na jaký druh pozadí se má zobrazit, jestli je možné je zacílí nebo podporuje Vysoký kontrast, jaké velikosti jsou platné nebo jestli je velikost neutrální a jestli image pochází z nativního sestavení.
 
- ![Prohlížeč knihovny obrázků může motivovat](../../extensibility/internals/media/image-library-viewer-can-theme.png "Prohlížeč knihovny obrázků může motivovat")
+ ![Motiv Lze zobrazit v prohlížeči knihovny obrázků](../../extensibility/internals/media/image-library-viewer-can-theme.png "Motiv Lze zobrazit v prohlížeči knihovny obrázků")
 
- Při ověřování manifestu bitové kopie doporučujeme nasadit manifest a image DLL v umístěních reálného světa. Tím ověříte, zda všechny relativní cesty fungují správně a zda knihovna imagí může najít a načíst manifest a image DLL.
+ Při ověřování manifestu image doporučujeme nasadit manifest a knihovnu DLL image v jejich reálných umístěních. Tím se ověří, že všechny relativní cesty fungují správně a že knihovna obrázků může najít a načíst manifest a knihovnu DLL image.
 
- **Hledání katalogu imagí KnownMonikers**
+ **Hledání známých monikerů v katalogu obrázků**
 
- Aby lépe odpovídaly stylům sady Visual Studio, může rozšíření sady Visual Studio používat obrázky v katalogu imagí sady Visual Studio, nikoli vytvářet a používat vlastní. To má za následek, že tyto image nemusíte uchovávat a zaručuje, že obrázek bude mít image s vysokým rozlišením DPI, takže by měl vypadat správně ve všech nastaveních DPI, které podporuje Visual Studio.
+ Aby bylo možné Visual Studio styly, rozšíření Visual Studio může místo vytváření a používání vlastního Visual Studio použít obrázky v katalogu Visual Studio Image Catalog. To má výhodu, že tyto obrázky nemusíme udržovat, a zaručuje, že obrázek bude mít zálohovací obrázek s vysokým rozlišením DPI, takže by měl vypadat správně ve všech nastaveních DPI, která Visual Studio podporuje.
 
- Prohlížeč knihovny imagí umožňuje vyhledat manifest, aby uživatel mohl najít moniker reprezentující prostředek obrázku a použít tento moniker v kódu. Chcete-li vyhledat obrázky, zadejte požadovaný hledaný termín do vyhledávacího pole a stiskněte klávesu ENTER. Na stavovém řádku v dolní části se zobrazí počet nalezených shod z celkového počtu imagí ve všech manifestech.
+ Prohlížeč knihovny obrázků umožňuje prohledávat manifest, aby uživatel mohl najít moniker představující asset obrázku a použít tento moniker v kódu. Pokud chcete hledat obrázky, zadejte do vyhledávacího pole požadovaný hledaný termín a stiskněte Klávesu Enter. Na stavovém řádku v dolní části se zobrazí, kolik shod bylo nalezeno z celkového počtu obrázků ve všech manifestech.
 
  ![Filtr prohlížeče knihovny obrázků](../../extensibility/internals/media/image-library-viewer-filter.png "Filtr prohlížeče knihovny obrázků")
 
- Při hledání monikerů imagí v existujících manifestech doporučujeme vyhledat a použít pouze monikery katalogu imagí sady Visual Studio, jiné záměrně veřejně přístupné monikery nebo vlastní monikery. Pokud používáte monikery NonPublic, může být vlastní uživatelské rozhraní přerušeno nebo se jeho image změnily neočekávaným způsobem, pokud nebo dojde ke změně nebo aktualizaci těchto zástupných názvů a imagí NonPublic.
+ Při hledání monikerů obrázků v existujících manifestech doporučujeme vyhledat a používat pouze monikery katalogu obrázků Visual Studio, jiné záměrně veřejně přístupné monikery nebo vlastní monikery. Pokud používáte neveřejné monikery, může dojít k poruše vlastního uživatelského rozhraní nebo neočekávaným způsobem změnit jeho obrázky, pokud se tyto neveřejné monikery a obrázky změní nebo aktualizují.
 
- Kromě toho je možné hledat podle identifikátoru GUID. Tento typ hledání je vhodný pro filtrování dolů v seznamu do jednoho manifestu nebo jednoho dílčího oddílu manifestu, pokud tento manifest obsahuje více identifikátorů GUID.
+ Kromě toho je možné vyhledávat podle identifikátoru GUID. Tento typ vyhledávání je užitečný pro filtrování seznamu do jednoho manifestu nebo jednoho pododdílu manifestu, pokud tento manifest obsahuje více identifikátorů GUID.
 
- ![Identifikátor GUID filtru prohlížeče knihovny obrázků](../../extensibility/internals/media/image-library-viewer-filter-guid.png "Identifikátor GUID filtru prohlížeče knihovny obrázků")
+ ![Guid filtru prohlížeče knihovny obrázků](../../extensibility/internals/media/image-library-viewer-filter-guid.png "Guid filtru prohlížeče knihovny obrázků")
 
- Nakonec je možné také prohledávat podle ID.
+ A konečně je také možné vyhledávat podle ID.
 
  ![ID filtru prohlížeče knihovny obrázků](../../extensibility/internals/media/image-library-viewer-filter-id.png "ID filtru prohlížeče knihovny obrázků")
 
 ## <a name="notes"></a>Poznámky
 
-- Ve výchozím nastavení se nástroj vyžádá v několika manifestech obrázků, které jsou k dispozici v instalačním adresáři sady Visual Studio. Jediným názvem, který má veřejné přístupnosti, je manifest **Microsoft. VisualStudio. ImageCatalog** . GUID: ae27a6b0-e345-4288-96df-5eaf394ee369 ( **Nepřepisovat** tento identifikátor GUID ve vlastním manifestu): KnownMonikers
+- Ve výchozím nastavení nástroj nastáhne několik manifestů image přítomných v adresáři Visual Studio instalace. Jediný, který má veřejně použitelné monikery, je manifest **Microsoft.VisualStudio.ImageCatalog.** GUID: ae27a6b0-e345-4288-96df-5eaf394ee369  (nepřepište tento identifikátor GUID ve vlastním manifestu) Typ: KnownMonikers
 
-- Nástroj se při spuštění pokusí načíst všechny manifesty obrázků, které najde, takže může trvat několik sekund, než se aplikace skutečně zobrazí. Při načítání manifestů může být také pomalé nebo nereagující.
+- Nástroj se pokusí při spuštění načíst všechny manifesty obrázků, které najde, takže může trvat několik sekund, než se aplikace skutečně zobrazí. Může také být pomalý nebo nereagující při načítání manifestů.
 
 ## <a name="sample-output"></a>Vzorový výstup
  Tento nástroj negeneruje žádný výstup.
