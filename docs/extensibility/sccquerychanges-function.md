@@ -1,8 +1,8 @@
 ---
-description: Tato funkce vypíše daný seznam souborů a poskytuje informace o změnách názvů jednotlivých souborů prostřednictvím funkce zpětného volání.
-title: Funkce SccQueryChanges | Microsoft Docs
+description: Tato funkce vytvoří výčet daného seznamu souborů a poskytne informace o změnách názvů jednotlivých souborů prostřednictvím funkce zpětného volání.
+title: SccQueryChanges – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccQueryChanges
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c821453642a3632c98fac153a367e8ba41495adc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f93ed14671995502356ae4a19664b14bbd32ce7b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073934"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900470"
 ---
 # <a name="sccquerychanges-function"></a>SccQueryChanges – funkce
-Tato funkce vypíše daný seznam souborů a poskytuje informace o změnách názvů jednotlivých souborů prostřednictvím funkce zpětného volání.
+Tato funkce vytvoří výčet daného seznamu souborů a poskytne informace o změnách názvů jednotlivých souborů prostřednictvím funkce zpětného volání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,36 +38,36 @@ SCCRTN SccQueryChanges(
 #### <a name="parameters"></a>Parametry
  pContext
 
-pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
+[v] Ukazatel kontextu modulu plug-in správy zdrojového kódu.
 
  nFiles
 
-pro Počet souborů v `lpFileNames` poli
+[v] Počet souborů v `lpFileNames` poli
 
  lpFileNames
 
-pro Pole názvů souborů, o kterých se mají získat informace
+[v] Pole názvů souborů, o které chcete získat informace.
 
  pfnCallback
 
-pro Funkce zpětného volání, která se má volat pro každý název souboru v seznamu (podrobnosti najdete v [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) )
+[v] Funkce zpětného volání pro volání pro každý název souboru v seznamu (podrobnosti najdete v [části QUERYCHANGESFUNC).](../extensibility/querychangesfunc.md)
 
  pvCallerData
 
-pro Hodnota, která bude předána beze změny funkci zpětného volání.
+[v] Hodnota, která bude předána beze změny funkci zpětného volání.
 
 ## <a name="return-value"></a>Návratová hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Proces dotazu byl úspěšně dokončen.|
-|SCC_E_PROJNOTOPEN|Projekt nebyl otevřen ve správě zdrojového kódu.|
-|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize.|
-|SCC_E_NONSPECIFICERROR|Došlo k nespecifikované nebo obecné chybě.|
+|SCC_OK|Proces dotazu se úspěšně dokončil.|
+|SCC_E_PROJNOTOPEN|Projekt nebyl otevřen ve zdrojovém kódu.|
+|SCC_E_ACCESSFAILURE|Došlo k problému s přístupem k systému správy zdrojového kódu, pravděpodobně kvůli problémům se sítí nebo záležitostimi vyřešit.|
+|SCC_E_NONSPECIFICERROR|Došlo k neurčené nebo obecné chybě.|
 
 ## <a name="remarks"></a>Poznámky
- Dotazy na změny jsou v oboru názvů: konkrétně, přejmenování, přidání a odebrání souboru.
+ Dotazované změny jsou v oboru názvů : konkrétně přejmenování, přidání a odebrání souboru.
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

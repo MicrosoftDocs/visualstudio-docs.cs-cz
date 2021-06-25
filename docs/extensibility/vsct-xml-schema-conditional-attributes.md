@@ -1,9 +1,9 @@
 ---
 title: Podmíněné atributy schématu XML VSCT | Microsoft Docs
-description: Naučte se, jak použít podmíněné atributy pro VSCT seznamů schémat XML a položek. Atributy se vyhodnotí jako true nebo false a řídí výsledný výstup.
+description: Zjistěte, jak použít podmíněné atributy na seznamy a položky schématu XML VSCT. Atributy se vyhodnotí jako true nebo false a řídí výsledný výstup.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, conditional attributes
 - conditional attributes (VSCT XML schema)
@@ -13,24 +13,24 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bc1bcb9d80474b467e90de6262e797087589065
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e91207016ed6e1baab80b323680d10a40e0331d8
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062353"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905251"
 ---
-# <a name="vsct-xml-schema-conditional-attributes"></a>Podmíněné atributy schématu VSCT XML
-U všech seznamů a položek můžete použít podmíněné atributy. Logické operátory a rozšiřovací výrazy se vyhodnotí jako true nebo false. Pokud je nastaveno na true, je přidružený seznam nebo položka součástí výsledného výstupu.
+# <a name="vsct-xml-schema-conditional-attributes"></a>Podmíněné atributy schématu XML VSCT
+Podmíněné atributy můžete použít u všech seznamů a položek. Logické operátory a výrazy rozšíření symbolů se vyhodnotí jako true nebo false. Pokud je true, přidružený seznam nebo položka je součástí výsledného výstupu.
 
- Můžete testovat rozšíření tokenů s jinými rozšířeními tokenů nebo konstantami. Funkce `Defined()` testuje, zda byl zadán konkrétní název, a to i v případě, že nemá žádnou hodnotu.
+ Rozšíření tokenu můžete testovat proti ostatním rozšířením tokenů nebo konstantám. Funkce `Defined()` testuje, zda byl definován konkrétní název, i když nemá žádnou hodnotu.
 
- Při použití atributu Condition na seznam se podmínka použije na všechny podřízené prvky v seznamu. Pokud podřízený element sám obsahuje atribut podmínky, pak je jeho podmínka kombinována s nadřazeným výrazem operací a.
+ Když se na seznam použije atribut Podmínky, podmínka se použije na každý podřízený prvek v seznamu. Pokud samotný podřízený prvek obsahuje atribut Condition, zkombinuje se jeho podmínka s nadřazeným výrazem pomocí operace AND.
 
  Hodnoty 1, 1 a true se vyhodnotí jako true a 0, 0 a false se vyhodnotí jako false.
 
 ## <a name="operators"></a>Operátory
- Pomocí následujících operátorů můžete vyhodnotit podmíněné výrazy.
+ K vyhodnocení podmíněných výrazů použijte následující operátory.
 
 |Operátor|Definice|
 |--------------|----------------|
@@ -72,4 +72,4 @@ and !Defined(DEBUG)">
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Příkazová tabulka sady Visual Studio (. Soubory vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio příkazové tabulky (. Vsct) – soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

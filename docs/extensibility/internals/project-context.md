@@ -3,7 +3,7 @@ title: Kontext projektu | Microsoft Docs
 description: Přečtěte si, jak Visual Studio IDE používá kontext projektu k určení, jak provádět operace, když uživatel přidá nebo pracuje s projekty a položkami projektu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - projects [Visual Studio SDK], opening items
 ms.assetid: d1803f4a-24eb-44b0-b5d2-cb40c15534be
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 38571b51c31b20bd38e50dd32644be4c262e0702
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 73e3c8a94607e7e0b31bacddac8e7f19b6139328
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062860"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899820"
 ---
 # <a name="project-context"></a>Kontext projektu
 Když uživatel přidá nebo funguje s projekty a položkami projektu, rozhraní IDE použije pojem kontext projektu k určení, jak se mají provádět různé operace.

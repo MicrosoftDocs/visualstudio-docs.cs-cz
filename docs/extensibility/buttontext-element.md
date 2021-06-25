@@ -3,7 +3,7 @@ title: Element ButtonText | Microsoft Docs
 description: Element ButtonText umožňuje určit text, který se zobrazí v různých nabídkách. Element ButtonText nemůže být prázdný ani v případě, že jsou zadána jiná textová pole.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ButtonText element (VSCT XML schema)
 - VSCT XML schema elements, ButtonText
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4fa9ad6aab9d42113f3e01760e191184e168b62d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cf20a6876dd7ba52413a11f30a3d0130b32e535d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068112"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900708"
 ---
 # <a name="buttontext-element"></a>Element ButtonText
 Toto pole umožňuje určit text, který se zobrazí v různých nabídkách. Ve výchozím nastavení se `ButtonText` prvek zobrazuje v řadičích nabídek. `ButtonText`Element se také stal výchozím nastavením, pokud jsou ostatní textová pole prázdná. `ButtonText`Element nemůže být prázdný, i když jsou uvedena další textová pole.

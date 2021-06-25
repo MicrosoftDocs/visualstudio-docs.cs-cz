@@ -1,9 +1,9 @@
 ---
-title: Element Button | Microsoft Docs
-description: 'Element Button definuje prvek, se kterým může uživatel pracovat. Tlačítka mohou být různá druh: Button, MenuButton a SplitDropDown.'
+title: Button – | Microsoft Docs
+description: 'Element Button definuje prvek, se kterými může uživatel pracovat. Tlačítka mohou být různého druhu: Button (Tlačítko), MenuButton (Tlačítko nabídky) a SplitDropDown (Rozevírací seznam rozdělení).'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Buttons element (VSCT XML schema)
 - VSCT XML schema elements, Buttons
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec0640313195d6a15599d1a765081557c0c1a75a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 630d848c40b13a929c3dd91b47e1c35529efaa50
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068139"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901744"
 ---
-# <a name="button-element"></a>Element Button
-Definuje prvek, se kterým může uživatel pracovat. Tlačítka mohou mít různé druhy: Button, MenuButton a SplitDropDown.
+# <a name="button-element"></a>Button – element
+Definuje prvek, se kterými může uživatel pracovat. Tlačítka mohou být různých druhů: Button (Tlačítko), MenuButton (Tlačítko Nabídky) a SplitDropDown (Rozevírací seznam).
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ Definuje prvek, se kterým může uživatel pracovat. Tlačítka mohou mít růz
 
 |Atribut|Popis|
 |---------------|-----------------|
-|guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID|
-|id|Povinná hodnota. ID identifikátoru příkazu GUID/ID|
-|upřednostněn|Nepovinný parametr. Číselná hodnota, která určuje prioritu.|
-|typ|Nepovinný parametr. Hodnota výčtu, která určuje druh tlačítka.<br /><br /> Pokud není zadaný, použije se tlačítko.<br /><br /> Tlačítko<br /> Standardní příkaz, který se zobrazí na panelech nástrojů (obvykle jako tlačítko ikonickým), v nabídkách a místních nabídkách.<br /><br /> MenuButton<br /> Položka nabídky, která nespustí příkaz, ale vytvoří jinou nabídku.<br /><br /> SplitDropDown<br /> Ovládací prvky, jako jsou tlačítka zpět a znovu na standardním panelu nástrojů v aplikaci Microsoft Word.|
-|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID.|
+|id|Povinná hodnota. ID identifikátoru příkazu GUID/ID.|
+|Prioritou|Nepovinný parametr. Číselná hodnota, která určuje prioritu.|
+|typ|Nepovinný parametr. Výčtová hodnota, která určuje druh tlačítka.<br /><br /> Pokud není daný, použije Button.<br /><br /> Tlačítko<br /> Standardní příkaz, který se zobrazí na panelech nástrojů (obvykle jako ikonické tlačítko), nabídkách a kontextových nabídkách.<br /><br /> Tlačítko nabídky<br /> Položka nabídky, která nes spustí příkaz, ale vytvoří další nabídku.<br /><br /> Rozevírací seznam SplitDropDown<br /> Ovládací prvky, jako jsou tlačítka Zpět a Znovu na standardním panelu nástrojů v Microsoft Wordu.|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[Nadřazený element](../extensibility/parent-element.md)|Nepovinný parametr. Nadřazený element tlačítka|
-|[Element Icon](../extensibility/icon-element.md)|Nepovinný parametr. Ikona přidružená k tlačítku|
-|[Element příznak příkazu](../extensibility/command-flag-element.md)|Povinná hodnota. Platné hodnoty CommandFlag pro tlačítko jsou následující.<br /><br /> - AllowParams<br /><br /> - CommandWellOnly<br /><br /> - DefaultDisabled<br /><br /> - DefaultInvisible<br /><br /> - DontCache<br /><br /> - DynamicItemStart<br /><br /> - DynamicVisibility<br /><br /> - FixMenuController<br /><br /> - IconAndText<br /><br /> - NoButtonCustomize<br /><br /> -Upravit<br /><br /> - NoKeyCustomize<br /><br /> - NoShowOnMenuController<br /><br /> – PICT<br /><br /> - PostExec<br /><br /> - ProfferedCmd<br /><br /> - RouteToDocs<br /><br /> - TextCascadeUseBtn<br /><br /> - TextMenuUseButton<br /><br /> - TextChanges<br /><br /> - TextChangesButton<br /><br /> - TextContextUseButton<br /><br /> - TextMenuCtrlUseMenu<br /><br /> - TextMenuUseButton<br /><br /> -TextOnly|
-|[Řetězec – element](../extensibility/strings-element.md)|Povinná hodnota. Musí být definován podřízený [element ButtonText](../extensibility/buttontext-element.md) .|
+|[Nadřazený element](../extensibility/parent-element.md)|Nepovinný parametr. Nadřazený prvek tlačítka.|
+|[Icon – element](../extensibility/icon-element.md)|Nepovinný parametr. Ikona přidružená k tlačítku|
+|[Element příznaku příkazu](../extensibility/command-flag-element.md)|Povinná hodnota. Platné hodnoty CommandFlag pro Tlačítko jsou následující.<br /><br /> – AllowParams<br /><br /> – CommandWellOnly<br /><br /> – DefaultDisabled<br /><br /> – DefaultInvisible<br /><br /> – DontCache<br /><br /> – DynamicItemStart<br /><br /> – Dynamickávisitelnost<br /><br /> – FixMenuController<br /><br /> - IconAndText<br /><br /> - NoButtonCustomize<br /><br /> – NoCustomize<br /><br /> – NoKeyCustomize<br /><br /> – NoShowOnMenuController<br /><br /> - Pict<br /><br /> – PostExec<br /><br /> – ProfferedCmd<br /><br /> – RouteToDocs<br /><br /> – TextCascadeUseBtn<br /><br /> - TextMenuUseButton<br /><br /> – TextChanges<br /><br /> – TextChangesButton<br /><br /> – TextContextUseButton<br /><br /> - TextMenuCtrlUseMenu<br /><br /> - TextMenuUseButton<br /><br /> – TextOnly|
+|[Strings – element](../extensibility/strings-element.md)|Povinná hodnota. Musí být [definován podřízený element ButtonText.](../extensibility/buttontext-element.md)|
 |Poznámka|Volitelný komentář.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Buttons – Element](../extensibility/buttons-element.md)|Prvky tlačítka skupiny|
+|[Buttons – element](../extensibility/buttons-element.md)|Seskupí prvky Tlačítka.|
 
 ## <a name="example"></a>Příklad
- Následující příklad definuje tlačítko v souboru *. vsct* .
+ Následující příklad definuje tlačítko v *souboru .vsct.*
 
  ```xml
 <Button guid="guidMenuTextCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">
@@ -79,4 +79,4 @@ Definuje prvek, se kterým může uživatel pracovat. Tlačítka mohou mít růz
  ```
 
 ## <a name="see-also"></a>Viz také
-- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio souborů tabulky příkazů (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

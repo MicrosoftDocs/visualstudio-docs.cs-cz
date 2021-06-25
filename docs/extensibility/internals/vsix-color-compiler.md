@@ -3,19 +3,19 @@ title: Kompilátor barev VSIX | Microsoft Docs
 description: Přečtěte si o nástroji kompilátor barev rozšíření sady Visual Studio, což je Konzolová aplikace, která převede barvy v motivech sady Visual Studio na soubor. pkgdef.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92914703ea4b293ac054c841251b37886bbc1d5a
-ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
+ms.openlocfilehash: 2f7277299d3cedd2ea0db49a44109d8a0441ebd0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2021
-ms.locfileid: "111588459"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901757"
 ---
 # <a name="vsix-color-compiler"></a>Kompilátor barev VSIX
 Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová aplikace, která přebírá .xml soubor reprezentující barvy pro existující motivy sady Visual Studio a převede ho na soubor. pkgdef, aby se tyto barvy mohly použít v aplikaci Visual Studio. Vzhledem k tomu, že je snadné porovnat rozdíly mezi soubory .xml, je tento nástroj užitečný pro správu vlastních barev ve správě zdrojového kódu. Dá se taky připojit do prostředí pro Build, aby výstup buildu byl platný soubor. pkgdef.

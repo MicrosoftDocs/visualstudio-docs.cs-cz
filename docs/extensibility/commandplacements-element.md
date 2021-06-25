@@ -1,9 +1,9 @@
 ---
-title: Element CommandPlacements | Microsoft Docs
-description: Element CommandPlacements seskupuje elementy CommandPlacement a další seskupení CommandPlacements. Element CommandPlacements je nepovinný.
+title: CommandPlacements – | Microsoft Docs
+description: Element CommandPlacements seskupuje elementy CommandPlacement a další seskupení CommandPlacements. Element CommandPlacements je volitelný.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - CommandPlacements
 helpviewer_keywords:
@@ -15,17 +15,17 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3547d1c5b94285ce113b3a3c112568aa5a9a5f65
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 21e0feb3913b148b4320e69461bc5035655a392d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089599"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901887"
 ---
-# <a name="commandplacements-element"></a>Element CommandPlacements
+# <a name="commandplacements-element"></a>CommandPlacements – element
 Element CommandPlacements seskupuje elementy CommandPlacement a další seskupení CommandPlacements.
 
- Element CommandPlacements je nepovinný. Pokud žádné příkazy, skupiny nebo nabídky nesmí být zahrnuté do sekundárního umístění, nemusíte tento oddíl zahrnout do souboru *. vsct* .
+ Element CommandPlacements je volitelný. Pokud sekundární umístění nesmí obsahovat žádné příkazy, skupiny ani nabídky, není nutné zahrnout tuto část do souboru *.vsct.*
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ Element CommandPlacements seskupuje elementy CommandPlacement a další seskupen
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|CommandPlacements|Seskupí prvky CommandPlacement a další skupiny CommandPlacements.|
-|[Element CommandPlacement](../extensibility/commandplacement-element.md)|Povoluje zahrnutí tlačítek, skupin a nabídek do více než jedné skupiny nebo nabídky.|
+|CommandPlacements|Seskupuje prvky CommandPlacement a další seskupení CommandPlacements.|
+|[CommandPlacement – element](../extensibility/commandplacement-element.md)|Umožňuje zahrnout tlačítka, skupiny a nabídky do více skupin nebo nabídek.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Element v příkazu](../extensibility/commandtable-element.md)|Definuje všechny prvky, které reprezentují příkazy.|
+|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy.|
 
 ## <a name="example"></a>Příklad
 
@@ -70,5 +70,5 @@ Element CommandPlacements seskupuje elementy CommandPlacement a další seskupen
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Element CommandPlacement](../extensibility/commandplacement-element.md)
-- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [CommandPlacement – element](../extensibility/commandplacement-element.md)
+- [Visual Studio souborů tabulky příkazů (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

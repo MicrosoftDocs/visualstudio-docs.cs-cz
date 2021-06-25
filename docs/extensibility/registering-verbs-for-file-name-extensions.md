@@ -3,7 +3,7 @@ title: Registrace operací pro přípony názvů souborů | Microsoft Docs
 description: Naučte se, jak registrovat příkaz, který je přidružený k programovému identifikátoru pro příponu názvu souboru pomocí klíče prostředí.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - verbs, registering
 ms.assetid: 81a58e40-7cd0-4ef4-a475-c4e1e84d6e06
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9936efc2e01c0d82d5cc9fce140d543eb95247ad
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c223dea7e265d8d040d502c99ded09380e89690f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068476"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901224"
 ---
 # <a name="register-verbs-for-file-name-extensions"></a>Registrovat operace pro přípony názvů souborů
 Přidružení přípony názvu souboru k aplikaci má obecně upřednostňovanou akci, která nastane, když uživatel dvakrát klikne na soubor. Tato upřednostňovaná akce je propojena s operací, například otevřít, která odpovídá akci.
@@ -37,7 +37,7 @@ Přidružení přípony názvu souboru k aplikaci má obecně upřednostňovanou
 
 - Preview
 
-  Kdykoli je to možné, zaregistrujte standardní příkaz. Nejběžnější volbou je otevřená operace. Příkaz Edit použijte pouze v případě, že existuje jasný rozdíl mezi otevřením souboru a úpravou souboru. Například otevření souboru *. htm* se zobrazí v prohlížeči, zatímco úprava souboru *. htm* spustí editor HTML. Standardní příkazy jsou lokalizovány do národního prostředí operačního systému.
+  Kdykoli je to možné, zaregistrujte standardní příkaz. Nejběžnější volbou je otevřená operace. Příkaz Edit použijte pouze v případě, že existuje jasný rozdíl mezi otevřením souboru a úpravou souboru. Například otevřením souboru *.htm* se zobrazí v prohlížeči, zatímco úprava *.htm* souboru spustí editor HTML. Standardní příkazy jsou lokalizovány do národního prostředí operačního systému.
 
 > [!NOTE]
 > Při registraci standardního slovesa Nenastavujte výchozí hodnotu pro otevřený klíč. Výchozí hodnota obsahuje řetězec zobrazení v nabídce. Operační systém dodává tento řetězec pro standardní slovesa.

@@ -3,7 +3,7 @@ title: Element příznaku příkazu | Microsoft Docs
 description: Element příznak příkazu upraví jeho nadřazený element. Zkontrolujte své nadřazené prvky a podřízené prvky.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CommandFlag element (VSCT XML schema)
 - VSCT XML schema elements, CommandFlag
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f9f9db3d7a8146bd7b44cf779fd62fd75803d86
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6356fd02c8045aee9dc48ebc9d30a346159080bb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089638"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902030"
 ---
 # <a name="command-flag-eelement"></a>Příznak příkazu Eelement
 Upraví jeho nadřazený element.
@@ -61,20 +61,20 @@ Upraví jeho nadřazený element.
 |PICT|Zobrazit pouze ikonu na panelu nástrojů, ale pouze text v nabídce Pokud není zadaná žádná ikona, zobrazí na panelu nástrojů prázdné místo.<br /><br /> Platí pro: `Button`|
 |PostExec|Neprovede příkaz, který není blokující. Vývojové prostředí odloží provádění, dokud nejsou dokončeny všechny dotazy před zpracováním.<br /><br /> Platí pro: `Button`|
 |RouteToDocs|Příkaz se směruje do aktivního dokumentu.<br /><br /> Platí pro: `Button`|
-|StretchHorizontally|Pokud je tento příznak nastaven, Šířka se nastaví jako minimální šířka pole se seznamem, a pokud je na panelu nástrojů nějaká místnost, pole se seznamem se roztáhne na výplň dostupného místa. K tomu dojde pouze v případě, že panel nástrojů je vodorovně ukotven a pouze jedno pole se seznamem na panelu nástrojů může používat příznak (příznak je ignorován u všech kromě prvního pole se seznamem).<br /><br /> Platí pro: `Combo`|
-|TextChanges|Text příkazu nebo nabídky lze změnit za běhu, obvykle prostřednictvím `QueryStatus` metody.<br /><br /> Platí pro: `Button` , `Menu`|
+|StretchHorizontally|Při nastavení tohoto příznaku se šířka stane minimální šířkou pole se seznamem, a pokud je na panelu nástrojů místo, pole se seznamem se roztáhne, aby vyplnilo dostupné místo. K tomu dochází pouze v případě, že je panel nástrojů vodorovně ukotvený a příznak může používat pouze jedno pole se seznamem na panelu nástrojů (příznak se ignoruje u všech kromě prvního pole se seznamem).<br /><br /> Platí pro: `Combo`|
+|Změny textu|Text příkazu nebo nabídky je možné změnit za běhu, obvykle prostřednictvím `QueryStatus` metody .<br /><br /> Platné pro: `Button` , `Menu`|
 |TextChangesButton|Platí pro: `Button`|
-|TextIsAnchorCommand|V případě řadiče nabídky je text nabídky proveden z výchozího příkazu (Anchor). Příkaz kotvy je poslední vybraný nebo západkou příkazem. Pokud tento příznak není nastaven, řadič nabídky používá vlastní `MenuText` pole. Nicméně po kliknutí na kontroler nabídek se stále povoluje poslední vybraný příkaz z tohoto kontroleru.<br /><br /> Tento příznak doporučujeme kombinovat s `TextChanges` příznakem.<br /><br /> Tento příznak platí pouze pro nabídky typu MenuController nebo MenuControllerLatched.<br /><br /> Platí pro: `Menu`|
-|TextMenuCtrlUseMenu|Použijte `MenuText` pole na řadičích nabídek. Výchozí pole je `ButtonText` .<br /><br /> Platí pro: `Button`|
-|TextMenuUseButton|Použijte `ButtonText` pole pro nabídky. Výchozí pole je v `MenuText` případě, že je zadáno.<br /><br /> Platí pro: `Button`|
-|Typu textOnly|Zobrazit pouze text na panelu nástrojů nebo v nabídce, ale bez ikony, i když je ikona zadána.<br /><br /> Platí pro: `Button`|
+|Příkaz TextIsAnchorCommand|U kontroleru nabídek se text nabídky používá z výchozího příkazu (anchor). Příkaz ukotvení je poslední vybraný nebo blokovaný příkaz. Pokud tento příznak není nastavený, použije kontroler nabídek vlastní `MenuText` pole. Po kliknutí na kontroler nabídky se ale stále povolí poslední vybraný příkaz z tohoto kontroleru.<br /><br /> Doporučujeme tento příznak zkombinovat s `TextChanges` příznakem .<br /><br /> Tento příznak platí jenom pro nabídky typu MenuController nebo MenuControllerLatched.<br /><br /> Platí pro: `Menu`|
+|TextMenuCtrlUseMenu|Použijte pole `MenuText` v kontrolerů nabídek. Výchozí pole je `ButtonText` .<br /><br /> Platí pro: `Button`|
+|TextMenuUseButton|Pole `ButtonText` použijte pro nabídky. Výchozí pole je `MenuText` , pokud je zadané.<br /><br /> Platí pro: `Button`|
+|Jenom text|Zobrazit jenom text na panelu nástrojů nebo v nabídce, ale bez ikony, i když je ikona zadaná.<br /><br /> Platí pro: `Button`|
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[Buttons – Element](../extensibility/buttons-element.md)|Poskytuje skupinu pro prvky [elementu Button](../extensibility/button-element.md) .|
-|[Menu – element](../extensibility/menus-element.md)|Definuje všechny nabídky, které implementuje VSPackage.|
+|[Buttons – element](../extensibility/buttons-element.md)|Poskytuje skupinu pro [elementy elementu](../extensibility/button-element.md) Button.|
+|[Menus – element](../extensibility/menus-element.md)|Definuje všechny nabídky, které implementuje balíček VSPackage.|
 
 ## <a name="see-also"></a>Viz také
-- [Příkazová tabulka sady Visual Studio (. Soubory vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio příkazové tabulky (. Vsct) Soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

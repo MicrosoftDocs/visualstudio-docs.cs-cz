@@ -1,8 +1,8 @@
 ---
-description: Tato funkce načítá ze správy zdrojového kódu každý ze zadaných souborů bez zásahu uživatele.
-title: Funkce SccBackgroundGet | Microsoft Docs
+description: Tato funkce načte ze správy zdrojového kódu každý ze zadaných souborů bez zásahu uživatele.
+title: SccBackgroundGet – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccBackgroundGet
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d850b1f8493f3118cb4d3e49915361daa1e4837
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 316a02e84b4d51f309aecdd98d0409c85ccbdbef
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060455"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901237"
 ---
-# <a name="sccbackgroundget-function"></a>SccBackgroundGet – funkce
-Tato funkce načítá ze správy zdrojového kódu každý ze zadaných souborů bez zásahu uživatele.
+# <a name="sccbackgroundget-function"></a>Funkce SccBackgroundGet
+Tato funkce načte ze správy zdrojového kódu každý ze zadaných souborů bez zásahu uživatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,40 +38,40 @@ SCCRTN SccBackgroundGet(
 ### <a name="parameters"></a>Parametry
  pContext
 
-pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
+[v] Ukazatel kontextu modulu plug-in správy zdrojového kódu.
 
  nFiles
 
-pro Počet souborů, které jsou zadány v `lpFileNames` poli.
+[v] Počet souborů zadaných v `lpFileNames` poli
 
  lpFileNames
 
-[in, out] Pole názvů souborů, které mají být načteny.
+[in, out] Pole názvů souborů, které se mají načíst.
 
 > [!NOTE]
 > Názvy musí být plně kvalifikované místní názvy souborů.
 
  dwFlags
 
-pro Příznaky příkazu ( `SCC_GET_ALL` , `SCC_GET_RECURSIVE` ).
+[v] Příznaky příkazů ( `SCC_GET_ALL` , `SCC_GET_RECURSIVE` ).
 
  dwBackgroundOperationID
 
-pro Jedinečná hodnota přidružená k této operaci.
+[v] Jedinečná hodnota přidružená k této operaci.
 
 ## <a name="return-value"></a>Vrácená hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
 |SCC_OK|Operace se úspěšně dokončila.|
-|SCC_E_BACKGROUNDGETINPROGRESS|Načítání na pozadí již probíhá (modul plug-in správy zdrojových kódů by měl vrátit tuto hodnotu pouze v případě, že nepodporuje souběžné operace s dávkou).|
-|SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|
+|SCC_E_BACKGROUNDGETINPROGRESS|Načítání na pozadí už probíhá (modul plug-in správy zdrojového kódu by ho měl vrátit pouze v případě, že nepodporuje souběžné dávkové operace).|
+|SCC_I_OPERATIONCANCELED|Operace se před dokončením zrušila.|
 
 ## <a name="remarks"></a>Poznámky
- Tato funkce je vždy volána v jiném vlákně než ta, která načetla modul plug-in správy zdrojových kódů. U této funkce se neočekává, že se vrátí, dokud se nedokončí. dá se ale volat víckrát s více seznamy souborů, a to všechno současně.
+ Tato funkce se vždy volá ve vlákně jiném než ve vlákně, které načetl modul plug-in správy zdrojového kódu. Tato funkce se neočekává, že se vrátí, dokud není hotová. Lze ji ale volat vícekrát s více seznamy souborů najednou.
 
- Použití `dwFlags` argumentu je stejné jako [SccGet](../extensibility/sccget-function.md).
+ Použití `dwFlags` argumentu je stejné jako u [SccGet](../extensibility/sccget-function.md).
 
 ## <a name="see-also"></a>Viz také
 - [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

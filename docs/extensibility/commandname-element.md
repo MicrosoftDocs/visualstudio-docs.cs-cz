@@ -1,9 +1,9 @@
 ---
-title: Element příkazu | Microsoft Docs
-description: Element Command Určuje text, který se zobrazí v kategorii klávesnice v dialogovém okně Možnosti a v seznamu příkazy v dialogovém okně přizpůsobit.
+title: CommandName – | Microsoft Docs
+description: Element CommandName určuje text, který se zobrazí v kategorii klávesnice v dialogovém okně Možnosti a v seznamu Příkazy v dialogovém okně Přizpůsobit.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CommandName element (VSCT XML schema)
 - VSCT XML schema elements, CommandName
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba74c0a61ddf01407f2af6ebb8053e2f1e4fe6ac
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 193e97880fbc543568636e1979a847877e42db14
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089625"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902004"
 ---
-# <a name="commandname-element"></a>Element Command
-`CommandName`Prvek určuje text, který se zobrazí v kategorii klávesnice v dialogovém okně **Možnosti** , a v seznamu **příkazy** v dialogovém okně **přizpůsobit** .
+# <a name="commandname-element"></a>CommandName – element
+Element určuje text, který se zobrazí v kategorii klávesnice v dialogovém okně Možnosti, a v seznamu `CommandName` **Příkazy** v **dialogovém okně** Přizpůsobit. 
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ ms.locfileid: "105089625"
 
 |Element|Popis|
 |-------------|-----------------|
-|[Řetězec – element](../extensibility/strings-element.md)|Seskupuje textové prvky, například `ButtonText` a `CommandName` .|
+|[Strings – element](../extensibility/strings-element.md)|Seskupí textové prvky, například `ButtonText` a `CommandName` .|
 
 ## <a name="see-also"></a>Viz také
-- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio souborů tabulky příkazů (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -2,19 +2,19 @@
 title: Text uživatelského rozhraní a nápovědu pro Visual Studio | Microsoft Docs
 description: Přečtěte si o textu uživatelského rozhraní a terminologii používané v informacích o nápovědě pro Visual Studio.
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8635907b5c0190165855378fa692fb9abca4b0ec
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 40b128c5e95c70457d92843e620b4aa072c409ba
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105052655"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899430"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>Text uživatelského rozhraní a nápověda pro Visual Studio
 ## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a> Text uživatelského rozhraní a terminologie
@@ -156,7 +156,7 @@ ms.locfileid: "105052655"
 
 ### <a name="common-terminology"></a>Společná terminologie
 
-|Označení|Vysvětlení|Komentář|
+|Pojem|Vysvětlení|Komentář|
 |----------|-----------------|-------------|
 |Přihlášení nebo odhlášení|Příkazy používané jako synonymaem na webu pro reprezentaci ověřování do webové vlastnosti. V rámci klientů používáme tuto možnost jednou jako pojem nejvyšší úrovně pro přihlašování a odhlašování pomocí uživatelského připojení IDE, které představuje identitu nejvyšší úrovně, která poskytuje funkce vyšší úrovně, jako je například roaming a licencování, které nejsou k dispozici u všech ostatních připojení.|Jenom uživatel IDE je jedinou funkcí, která by měla představovat operaci přihlášení nebo odhlášení, protože představuje uživatele integrovaného vývojového prostředí (IDE) nejvyšší úrovně.|
 |Připojit nebo odpojit|Použijte v místech, kde funkce zachovává jedno připojení k online službě.|Průzkumník serveru, kde můžete mít v jednom okamžiku aktivní připojení k Azure, je příkladem připojení nebo odpojení.|

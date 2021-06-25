@@ -1,8 +1,8 @@
 ---
-description: Když se zobrazí seznam plně kvalifikovaných názvů souborů, tato funkce je vrátí na místní disk.
-title: Funkce SccCheckout | Microsoft Docs
+description: Vzhledem k seznamu plně kvalifikovaných názvů souborů je tato funkce zkontroluje na místní jednotce.
+title: SccCheckout – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccCheckout
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f93052ebe255cddb4703a8246b7e89c744548a7f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 72d36ccaf5c6dcddb6730f52b0ce1c3074c605a7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060377"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904718"
 ---
-# <a name="scccheckout-function"></a>SccCheckout – funkce
-Když se zobrazí seznam plně kvalifikovaných názvů souborů, tato funkce je vrátí na místní disk. Komentář se vztahuje na všechny rezervované soubory. Argument komentáře může být `null` řetězec.
+# <a name="scccheckout-function"></a>Funkce SccCheckout
+Vzhledem k seznamu plně kvalifikovaných názvů souborů je tato funkce zkontroluje na místní jednotce. Komentář platí pro všechny soubory, které jsou rezervovány. Argumentem komentáře může být `null` řetězec.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,47 +40,47 @@ SCCRTN SccCheckout (
 ### <a name="parameters"></a>Parametry
  pvContext
 
-pro Struktura kontextu modulu plug-in správy zdrojových kódů.
+[v] Kontextová struktura modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
+[v] Popisovač okna integrovaného vývojového prostředí, který může modul plug-in správy zdrojového kódu použít jako nadřazený prvek pro všechna dialogová okna, která poskytuje.
 
  nFiles
 
-pro Počet souborů vybraných k rezervaci.
+[v] Počet souborů vybraných k rezervování
 
  lpFileNames
 
-pro Pole plně kvalifikovaných názvů místních cest souborů, které mají být rezervovány.
+[v] Pole plně kvalifikovaných názvů místních cest k souborům, které se mají rezervováno.
 
  lpComment
 
-pro Komentář, který se má použít u všech vybraných souborů, které jsou rezervovány.
+[v] Komentář, který se má použít u každého vybraného souboru, který se má rezervován.
 
- fOptions
+ Možnosti fOptions
 
-pro Příznaky příkazu (viz [Bitflags používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md)).
+[v] Příznaky příkazů (viz [Bitflags used by specific commands](../extensibility/bitflags-used-by-specific-commands.md)).
 
  pvOptions
 
-pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
+[v] Možnosti modulu plug-in správy zdrojového kódu
 
 ## <a name="return-value"></a>Vrácená hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Rezervace byla úspěšná.|
-|SCC_E_FILENOTCONTROLLED|Vybraný soubor není v rámci správy zdrojového kódu.|
-|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|
-|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
-|SCC_E_NONSPECIFICERROR|Nespecifická chyba. Soubor nebyl zaregistrován.|
-|SCC_E_ALREADYCHECKEDOUT|Uživatel už soubor rezervoval.|
-|SCC_E_FILEISLOCKED|Soubor je uzamčen a je zakázán vytváření nových verzí.|
-|SCC_E_FILEOUTEXCLUSIVE|Jiný uživatel provedl exkluzivní rezervaci na tomto souboru.|
-|SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|
+|SCC_OK|Kontrola byla úspěšná.|
+|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod svládem zdrojového kódu.|
+|SCC_E_ACCESSFAILURE|Došlo k problému s přístupem k systému správy zdrojového kódu, pravděpodobně kvůli problémům se sítí nebo záležitostimi vyřešit. Doporučuje se opakování.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemůže tuto operaci provést.|
+|SCC_E_NONSPECIFICERROR|Nespecikátní selhání. Soubor nebyl rezervován.|
+|SCC_E_ALREADYCHECKEDOUT|Uživatel už má soubor rezervován.|
+|SCC_E_FILEISLOCKED|Soubor je uzamčený a zakazuje vytváření nových verzí.|
+|SCC_E_FILEOUTEXCLUSIVE|Jiný uživatel provedl u tohoto souboru výhradní pokladnu.|
+|SCC_I_OPERATIONCANCELED|Operace se před dokončením zrušila.|
 
 ## <a name="see-also"></a>Viz také
 - [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)
-- [Bitflags používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md)
+- [Bitflagy používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md)

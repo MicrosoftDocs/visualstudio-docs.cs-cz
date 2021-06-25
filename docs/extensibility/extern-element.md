@@ -1,9 +1,9 @@
 ---
-title: Extern – element | Microsoft Docs
-description: Element extern odkazuje na všechny soubory externích hlaviček (. h), které se mají sloučit se souborem. vsct v době kompilace.
+title: Extern – | Microsoft Docs
+description: Element Extern odkazuje na všechny soubory externí hlavičky (.h), které se mají sloučit se souborem .vsct v době kompilace.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - Extern
 helpviewer_keywords:
@@ -15,19 +15,19 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5771dbc1c6b17b0f488d42c30a036ff1d90a5a18
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 502b93f18aacfed26d3ea440c017e6de5281a35d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074987"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900184"
 ---
 # <a name="extern-element"></a>Extern – element
-Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které se mají sloučit se souborem *. vsct* v době kompilace. Soubory, které mají být sloučeny, musí být v cestě include zadané kompilátoru VSCT nebo odkazované [elementem include](../extensibility/include-element.md). Soubory mohou být jiné soubory *. vsct* nebo soubory hlaviček jazyka C++.
+Element Extern odkazuje na všechny soubory externí hlavičky (*.h*), které se mají sloučit se *souborem .vsct* v době kompilace. Soubory, které se mají sloučit, musí být na cestě Include předáné kompilátoru VSCT nebo odkazované [elementem Include](../extensibility/include-element.md). Soubory mohou být jiné *soubory .vsct* nebo hlavičkové soubory jazyka C++.
 
- Definice v hlavičkových souborech musí mít formát "#define [symbol] [hodnota]" hodnota může být jiný symbol, pokud je dříve definovaný. Definice mohou být použity v podmíněných příkazech položek příkazů. Libovolný symbol, který se ve skutečnosti nepoužívá, se zahodí.
+ Definice v souborech hlaviček musí mít tvar "#define [symbol] [hodnota]", hodnota může být dalším symbolem, pokud je definována dříve. Definice lze použít v podmíněných příkazových příkazových položkách. Jakýkoli symbol, který se ve skutečnosti nepouží, se zahodí.
 
- Element příkazu extern – element
+ CommandTable Element Extern Element
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,9 +42,9 @@ Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které
 
 |Atribut|Popis|
 |---------------|-----------------|
-|odkaz|Povinná hodnota. Cesta k souboru hlaviček:<br /><br /> href = "Stdidcmd. h"|
-|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
-|language|Nepovinný parametr. Výchozí jazyk všech [\<Strings>](../extensibility/strings-element.md) prvků v tabulce příkazů:<br /><br /> Language = "en-US"|
+|Href|Povinná hodnota. Cesta k souboru hlaviček:<br /><br /> href="stdidcmd.h"|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|language|Nepovinný parametr. Výchozí jazyk všech [\<Strings>](../extensibility/strings-element.md) prvků v tabulce příkazů:<br /><br /> language="en-us"|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
@@ -56,7 +56,7 @@ Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které
 
 |Element|Popis|
 |-------------|-----------------|
-|[Element v příkazu](../extensibility/commandtable-element.md)|Definuje všechny prvky, které reprezentují příkazy, tj. položky nabídky, nabídky, panely nástrojů a pole se seznamem – to, že rozhraní VSPackage poskytuje integrované vývojové prostředí (IDE).|
+|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy – to znamená položky nabídky, nabídky, panely nástrojů a pole se seznamem – které balíček VSPackage poskytuje integrovanému vývojovému prostředí (IDE).|
 
 ## <a name="example"></a>Příklad
 
@@ -71,6 +71,6 @@ Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Visual Studio souborů tabulky příkazů (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Jak balíčky VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

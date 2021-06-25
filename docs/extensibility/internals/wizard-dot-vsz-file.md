@@ -3,7 +3,7 @@ title: Průvodce (. Vsz) | Microsoft Docs
 description: Přečtěte si o souborech. vsz, které IDE používá ke spouštění průvodců. Soubory obsahují informace o tom, který průvodce má zavolat a co má průvodce předat.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - .vsz files
 - vsz files
@@ -14,18 +14,18 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2663a6b05780b16d05b419c00aba904ded848796
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: de687dae79fa1613090fb400f73ab658ee5d66cb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074233"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900651"
 ---
 # <a name="wizard-vsz-file"></a>Soubor průvodce (.Vsz)
 
 Integrované vývojové prostředí (IDE) používá k zahájení průvodců soubory. vsz. Tyto soubory. vsz obsahují informace, které rozhraní IDE používá k určení, který průvodce má zavolat a jaké informace mají předat průvodce.
 
-Soubor. vsz je verze textového souboru ve formátu. ini, který neobsahuje žádné oddíly. Informace známé rozhraním IDE jsou uloženy na začátku souboru. To poskytuje odkaz mezi průvodcem, který rozhraní IDE volá, a parametry, které jsou v souboru. vsz, které mají být předány do rozhraní IDE. Zbytek souboru poskytuje parametry, které jsou specifické pro průvodce a které mají být shromažďovány rozhraním IDE a předány do konkrétního průvodce.
+Soubor. vsz je verze textového souboru ve formátu .ini, který neobsahuje žádné oddíly. Informace známé rozhraním IDE jsou uloženy na začátku souboru. To poskytuje odkaz mezi průvodcem, který rozhraní IDE volá, a parametry, které jsou v souboru. vsz, které mají být předány do rozhraní IDE. Zbytek souboru poskytuje parametry, které jsou specifické pro průvodce a které mají být shromažďovány rozhraním IDE a předány do konkrétního průvodce.
 
 Následující příklad ukazuje obsah souboru. vsz.
 

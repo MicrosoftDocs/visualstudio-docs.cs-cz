@@ -1,9 +1,9 @@
 ---
 title: Zarážky (Visual Studio SDK) | Microsoft Docs
-description: 'Přečtěte si o třech typech zarážek: nevyřízené, vázané a chybové. Tento článek obsahuje seznam rozhraní použitých k implementaci typů.'
+description: 'Seznamte se se třemi typy zarážek: čekající, vázané a chybové. Tento článek uvádí rozhraní používaná k implementaci typů.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - breakpoints
 ms.assetid: acfcabed-9f2f-436c-ad18-7ca2f45d631b
@@ -12,39 +12,39 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b834d9b80d8abca12ea9230d3b451fb4e251859e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1fce472faf95aa77f87ab02d78a3da640b6bd3bf
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055203"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901484"
 ---
 # <a name="breakpoints-visual-studio-sdk"></a>Zarážky (Visual Studio SDK)
-Existují tři typy zarážek: nevyřízené, vázané a chybové.
+Existují tři typy zarážek: čekající, vázané a chybové.
 
- **Nevyřízená zarážka:**
+ **Čekající zarážka:**
 
-- Je abstrakcí, která obsahuje všechny informace potřebné k navázání zarážky na jeden nebo více kontextů kódu v jednom nebo více programech. Pokaždé, když je program, který se ladí, načetl kód příčiny, modul ladění zkontroluje všechny probíhající zarážky a zjistí, jestli se dají svázat.
+- Je abstrakce, která obsahuje všechny informace potřebné k vytvoření vazby zarážky k jednomu nebo více kontextům kódu v jednom nebo více programech. Pokaždé, když laděné programy způsobí načtení kódu, ladicí modul zkontroluje všechny čekající zarážky a zjistí, jestli je možné je svázané.
 
-   Nevyřízená zarážka sama o sobě nikdy neváže na kód, ale místo toho shromažďuje a je označována tak, aby obsahovala všechny vázané zarážky, které generuje.
+   Samotná čekající zarážka se nikdy neváže na kód, ale spíše shromažďuje a je říká se, že obsahuje všechny vázané zarážky, které generuje.
 
-- Je reprezentován rozhraním [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) .
+- Je reprezentováno [rozhraním IDebugPendingBreakpoint2.](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 
-  **Vázaná zarážka:**
+  **Vázané zarážky:**
 
-- Je abstrakcí pro zarážku, která je přidružena k jednomu kontextu kódu nebo svázána s nimi. Každá vázaná zarážka je vygenerována v reakci na nevyřízenou zarážku. Nevyřízená zarážka může však generovat více než jednu vázanou zarážku.
+- Je abstrakcí pro zarážku přidruženou k jednomu kontextu kódu nebo s ním spojený. Každá vázaný zarážka se generuje v reakci na čekající zarážku. Čekající zarážka však může generovat více než jednu vázané zarážky.
 
-   Když je kód uvolněný, může být vázaná zarážka nevázaná a zahozena.
+   Při uvolnění kódu může být vázané zarážky nevázané a zahozené.
 
-- Je reprezentován rozhraním [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) .
+- Je reprezentováno [rozhraním IDebugBoundBreakpoint2.](../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 
-  **Zarážka chyby:**
+  **Chybová zarážka:**
 
-- Je abstrakcí pro popis chyby při pokusu o vytvoření vazby na nevyřízenou zarážku na kontext kódu. Chybná zarážka popisuje buď chybu v umístění, nebo samotný výraz zarážky. Další informace naleznete v tématu [vázání zarážek](../../extensibility/debugger/binding-breakpoints.md).
+- Je abstrakcí pro popis chyby při pokusu o vytvoření vazby čekající zarážky k kontextu kódu. Chybová zarážka popisuje chybu v umístění nebo v samotném výrazu zarážky. Další informace najdete v tématu [Vytváření vazeb zarážek](../../extensibility/debugger/binding-breakpoints.md).
 
    Chyba zarážky může být buď chyba, nebo upozornění.
 
-- Je reprezentován rozhraním [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) .
+- Je reprezentováno [rozhraním IDebugErrorBreakpoint2.](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)
 
 ## <a name="see-also"></a>Viz také
 - [Programy](../../extensibility/debugger/programs.md)

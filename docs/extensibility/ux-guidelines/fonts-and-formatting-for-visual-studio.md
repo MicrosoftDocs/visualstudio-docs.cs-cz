@@ -3,19 +3,19 @@ title: Písma a formátování pro Visual Studio | Microsoft Docs
 description: Přečtěte si o písmech a formátování pro nové funkce, které navrhujete pro Visual Studio, včetně toho, jak používat písmo prostředí.
 ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a55ad867e91a79689a1983837f5ba0030e10a35
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e6e26b18c838fc240d7fab398f8626890eed0d31
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089924"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901679"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Písma a formátování pro Visual Studio
 ## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a> Písmo prostředí

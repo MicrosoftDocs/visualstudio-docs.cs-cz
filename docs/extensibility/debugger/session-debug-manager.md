@@ -1,9 +1,9 @@
 ---
-title: Správce ladění relace | Microsoft Docs
-description: Přečtěte si o Správci ladění relací, který spravuje více ladicích modulů ladění programů ve více procesech napříč libovolným počtem počítačů.
+title: Správce ladění relací | Microsoft Docs
+description: Seznamte se se správcem ladění relací, který spravuje více ladicích modulů a ladí programy ve více procesech napříč libovolným počtem počítačů.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - session debug manager, unifying session views
 - session debug manager, broadcasting
@@ -17,28 +17,28 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e5a206b8ece21b14758dfeb02563d4d323dcf60
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 217a2d401e61c58a58d958bb754265a19a2a367d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079459"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902082"
 ---
-# <a name="session-debug-manager"></a>Správce ladění relace
-Správce ladění relace (SDM) spravuje libovolný počet ladicích modulů (DE), které ladí libovolný počet programů ve více procesech napříč libovolným počtem počítačů. Kromě toho, že se jedná o multiplexor ladicího stroje, model SDM poskytuje jednotný přehled o relaci ladění IDE.
+# <a name="session-debug-manager"></a>Správce ladění relací
+Správce ladění relací (SDM) spravuje libovolný počet ladicích modulů (DE), které ladí libovolný počet programů ve více procesech napříč libovolným počtem počítačů. Kromě multiplexeru ladicího stroje poskytuje SDM jednotné zobrazení ladicí relace k integrovanému vývojovému prostředí( IDE).
 
-## <a name="session-debug-manager-operation"></a>Operace Správce ladění relace
- Správce ladění relace (SDM) spravuje DE. V počítači může být spuštěno více než jeden ladicí modul současně. Pro multiplexování algoritmu DEs zalomí model SDM mnoho rozhraní z algoritmu DEs a zpřístupňuje je rozhraní IDE jako jediné rozhraní.
+## <a name="session-debug-manager-operation"></a>Operace správce ladění relace
+ DE spravuje správce ladění relací (SDM). Současně může na počítači běžet více než jeden ladicí modul. Pro multiplexování prostředí IDE zabalí SDM několik rozhraní z prostředí IDE a zpřístupní je v integrovaném vývojovém prostředí jako jedno rozhraní.
 
- Aby se zvýšil výkon, některá rozhraní se nemultiplexují. Místo toho se používají přímo z DE a volání do těchto rozhraní neprojde přes SDM. Například rozhraní používaná s kontexty paměti, kódu a dokumentu nejsou multiplexovaná, protože odkazují na konkrétní instrukci, paměť nebo dokument v určitém programu, který ladit konkrétní DE. V této úrovni komunikace není potřeba žádný jiný DE.
+ Pro zvýšení výkonu nejsou některá rozhraní multiplexní. Místo toho se používají přímo z DE a volání těchto rozhraní prochádí přes SDM. Například rozhraní používaná s kontexty paměti, kódu a dokumentu nejsou multiplexní, protože odkazují na konkrétní instrukci, paměť nebo dokument v určitém programu laděném konkrétním de. Na této úrovni komunikace není potřeba zapojit žádné jiné destrukce.
 
- To není pravdivé u všech kontextů. Volání rozhraní kontextu vyhodnocení výrazu procházejí přes SDM. Během vyhodnocování výrazu model SDM zabalí rozhraní [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) , které poskytuje rozhraní IDE, protože při vyhodnocování tohoto výrazu může zahrnovat několik des, které ladí programy ve stejném procesu, který může být spuštěn ve stejném vlákně.
+ To není pravdivé pro všechny kontexty. Volání rozhraní kontextu vyhodnocení výrazu prochádí přes SDM. Během vyhodnocování výrazu SDM zabalí rozhraní [IDebugExpression2,](../../extensibility/debugger/reference/idebugexpression2.md) které poskytuje integrovanému vývojovému prostředí, protože při vyhodnocení tohoto výrazu může zahrnovat více edcí, které ladí programy ve stejném procesu, který může být spuštěn ve stejném vlákně.
 
- SDM obvykle funguje jako mechanismus delegování, ale může působit jako mechanismus vysílání. Například při vyhodnocování výrazu model SDM funguje jako mechanismus vysílání pro oznamování všech DEs, které mohou spustit kód v zadaném vlákně. Podobně platí, že když SDM přijme událost zastavení, vysílá do programů, které by měly přestat běžet. Při volání tohoto kroku se všesměrové vysílání SDM do programů, které můžou dál používat. Zarážky se také vysílá do každé DE.
+ SDM obvykle funguje jako mechanismus delegování, ale může fungovat jako mechanismus všesměrového vysílání. Například během vyhodnocování výrazu funguje SDM jako mechanismus všesměrového vysílání, který upozorní všechny objekty DE, že mohou spouštět kód v zadaném vlákně. Podobně když SDM obdrží událost zastavení, všesměrově vysílá do programů, které by měly přestat běžet. Když se volá krok, SDM všesměrově vysílá programům, které mohou pokračovat v provozu. Zarážky se také vysílá do každého DE.
 
- Model SDM nesleduje aktuální program, vlákno nebo blok zásobníku. Informace o procesu, programu a vlákně jsou odesílány do SDM ve spojení s konkrétními událostmi ladění.
+ SDM nesleduje aktuální program, vlákno nebo rámec zásobníku. Informace o procesu, programu a vláknu se posílají do SDM ve spojení s konkrétními událostmi ladění.
 
 ## <a name="see-also"></a>Viz také
-- [Ladicí stroj](../../extensibility/debugger/debug-engine.md)
+- [Ladicí modul](../../extensibility/debugger/debug-engine.md)
 - [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md)
 - [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md)

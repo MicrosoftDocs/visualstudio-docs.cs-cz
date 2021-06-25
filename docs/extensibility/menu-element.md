@@ -3,7 +3,7 @@ title: Element nabídky | Microsoft Docs
 description: Prvek nabídky definuje jednu položku nabídky. Typy nabídek jsou kontext, nabídka, MenuController, MenuControllerLatched, panel nástrojů a ToolWindowToolbar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, Menus
 - Menus element (VSCT XML schema)
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7427b826249bd29c73c928630eed0941c57b997d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a2ffa029dd05e7fe3d32a9df4a1d06c90c8b9c6b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064043"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901536"
 ---
 # <a name="menu-element"></a>Element menu
 Definuje jednu položku nabídky. Jedná se o šest druhů nabídek: kontext, nabídka, MenuController, MenuControllerLatched, panel nástrojů a ToolWindowToolbar.

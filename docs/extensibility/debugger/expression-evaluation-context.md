@@ -1,9 +1,9 @@
 ---
-title: Kontext vyhodnocení výrazu | Microsoft Docs
-description: Přečtěte si o kontextu vyhodnocení výrazu, který představuje kontext pro vyhodnocení výrazu a existuje při zastavení programu na zarážce.
+title: Kontextová | Microsoft Docs
+description: Přečtěte si o kontextu vyhodnocení výrazu, který představuje kontext pro vyhodnocení výrazu a existuje, když se program zastaví na zarážce.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - expression evaluation, context
 ms.assetid: a2fd3758-09bd-45ae-8ecc-2d276c0036ba
@@ -12,24 +12,24 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 249510349d831f4f00578e36200f0d236d83ef59
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 73eeafb95c7e4d52f69109c5eb7c06eb48bd8d88
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096834"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901211"
 ---
 # <a name="expression-evaluation-context"></a>Kontext vyhodnocení výrazu
-V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění je **kontext vyhodnocení výrazu**:
+Při [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění kontext vyhodnocení **výrazu**:
 
-- Představuje kontext pro vyhodnocení výrazu. Obecně platí, že kontext vyhodnocení odpovídá lexikálnímu oboru, ve kterém chcete vyhodnotit proměnné, parametry, funkce a metody. Například kontext vyhodnocení výrazu spojený s rámcem zásobníku poskytne kontext pro vyhodnocení místních proměnných, parametrů metody a členů třídy (Pokud je k dispozici).
+- Představuje kontext pro vyhodnocení výrazu. Obecně platí, že kontext vyhodnocení odpovídá lexikální oboru, ve kterém se mají vyhodnotit proměnné, parametry, funkce a metody. Například kontext vyhodnocení výrazu přidružený k rámu zásobníku poskytne kontext pro vyhodnocení místních proměnných, parametrů metody a členů třídy (pokud jsou k dispozici).
 
-- Existuje, pokud se program zastavil na zarážce. Samotný výraz je datová struktura představující analyzovaný výraz, který je připravený pro vazbu a vyhodnocení v rámci daného kontextu.
+- Existuje, když se program zastaví na zarážce. Samotný výraz je datová struktura představující parsovaný výraz, který je připravený k vytvoření vazby a vyhodnocení v daném kontextu.
 
-     Podrobněji jsou výrazy vytvořeny pomocí metody [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) . Při vyhodnocování výrazu vygeneruje tisknutelné řetězec obsahující název a typ proměnné nebo argumentu a jeho hodnotu. Tento řetězec se zobrazí v okno Kukátko nebo v okně místních hodnot v integrovaném vývojovém prostředí (IDE).
+     Výrazy se podrobněji vytvářejí pomocí metody [ParseText.](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) Při vyhodnocení výrazu vygeneruje tisknutelný řetězec obsahující název a typ proměnné nebo argumentu a jeho hodnotu. Tento řetězec se zobrazí v okně okno Kukátko nebo v okně Místní hodnoty integrovaného vývojového prostředí.)
 
-     V případě `BSTR` rozhraní a rozhraní [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) může ladicí stroj (de) vytvořit rozhraní [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) pomocí analýzy výrazu. `IDebugExpression2`Rozhraní de může získat hodnotu prostřednictvím synchronního nebo asynchronního vyhodnocení výrazu. Tato hodnota, společně s názvem a typem proměnné nebo argumentu, se pošle na IDE pro zobrazení.
+     Vzhledem k `BSTR` rozhraní [a IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) může ladicí modul (DE) vytvořit rozhraní [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) parsací výrazu. Vzhledem k `IDebugExpression2` rozhraní může DE získat hodnotu prostřednictvím synchronního nebo asynchronního vyhodnocení výrazu. Tato hodnota spolu s názvem a typem proměnné nebo argumentu se odesílá do integrovaného vývojového prostředí (IDE) k zobrazení.
 
 ## <a name="see-also"></a>Viz také
-- [Rozhraní pro vyhodnocení výrazu](../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
+- [Rozhraní pro vyhodnocení výrazů](../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 - [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md)

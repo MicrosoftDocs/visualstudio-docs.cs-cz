@@ -1,8 +1,8 @@
 ---
 description: Tato funkce přidá nové soubory do systému správy zdrojového kódu.
-title: Funkce SccAdd | Microsoft Docs
+title: SccAdd – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccAdd
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c577bd865a7534a5c4e13253e921ef188e7f0ac
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7f73a91f7f801ca89a633f1722e0c4d1183fb3dc
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085686"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904848"
 ---
 # <a name="sccadd-function"></a>SccAdd – funkce
 Tato funkce přidá nové soubory do systému správy zdrojového kódu.
@@ -38,68 +38,68 @@ SCCRTN SccAdd(
 ```
 
 ### <a name="parameters"></a>Parametry
- pvContext
+ pvContext (Kontext pv)
 
-pro Struktura kontextu modulu plug-in správy zdrojových kódů.
+[v] Kontextová struktura modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
+[v] Popisovač okna integrovaného vývojového prostředí, který může modul plug-in správy zdrojového kódu použít jako nadřazený prvek pro všechna dialogová okna, která poskytuje.
 
  nFiles
 
-pro Počet souborů vybraných k přidání do aktuálního projektu, které jsou uvedeny v poli `lpFileNames` .
+[v] Počet souborů vybraných k přidání do aktuálního projektu, jak je uveden v `lpFileNames` poli
 
  lpFileNames
 
-pro Pole plně kvalifikovaných místních názvů souborů, které mají být přidány.
+[v] Pole plně kvalifikovaných místních názvů souborů, které se mají přidat.
 
  lpComment
 
-pro Komentář, který má být použit pro všechny přidávané soubory.
+[v] Komentář, který se má použít u všech přidaných souborů.
 
  pfOptions
 
-pro Pole příznaků příkazů, které jsou k dispozici na jednotlivých souborech.
+[v] Pole příznaků příkazů, které se poskytují pro každý soubor
 
  pvOptions
 
-pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
+[v] Možnosti modulu plug-in správy zdrojového kódu
 
 ## <a name="return-value"></a>Vrácená hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
 |SCC_OK|Operace přidání byla úspěšná.|
-|SCC_E_FILEALREADYEXISTS|Vybraný soubor je již pod správou zdrojových kódů.|
-|SCC_E_TYPENOTSUPPORTED|Typ souboru (například Binary) není podporován systémem správy zdrojového kódu.|
+|SCC_E_FILEALREADYEXISTS|Vybraný soubor je již ve zdrojovém kódu.|
+|SCC_E_TYPENOTSUPPORTED|Systém správy zdrojového kódu nepodporuje typ souboru (například binární soubor).|
 |SCC_E_OPNOTSUPPORTED|Systém správy zdrojového kódu tuto operaci nepodporuje.|
-|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|
-|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
-|SCC_E_NONSPECIFICERROR|Nespecifická chyba; Přidání není provedeno.|
-|SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|
-|SCC_I_RELOADFILE|Soubor nebo projekt je třeba znovu načíst.|
+|SCC_E_ACCESSFAILURE|Došlo k problému s přístupem k systému správy zdrojového kódu, pravděpodobně kvůli problémům se sítí nebo záležitostimi vyřešit. Doporučuje se opakování.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemůže tuto operaci provést.|
+|SCC_E_NONSPECIFICERROR|Nespecikátní selhání; nepřidá se.|
+|SCC_I_OPERATIONCANCELED|Operace se před dokončením zrušila.|
+|SCC_I_RELOADFILE|Soubor nebo projekt je potřeba znovu načíst.|
 |SCC_E_FILENOTEXIST|Místní soubor se nenašel.|
 
 ## <a name="remarks"></a>Poznámky
- Obvykle `fOptions` jsou zde nahrazeny polem `pfOptions` s jednou `LONG` specifikací možnosti na soubor. Důvodem je to, že typ souboru se může lišit od souboru k souboru.
+ Obvykle `fOptions` se zde nahradí polem s jednou specifikací možností `pfOptions` na `LONG` soubor. Je to proto, že se typ souboru může u jednotlivých souborů lišit.
 
 > [!NOTE]
-> Je neplatné zadat současně i `SCC_FILETYPE_TEXT` `SCC_FILETYPE_BINARY` Možnosti pro stejný soubor, ale je platný, pokud nechcete zadat ani jednu z možností. Nastavení není stejné jako nastavení `SCC_FILETYPE_AUTO` . v takovém případě modul plug-in správy zdrojových kódů automaticky detekuje typ souboru.
+> Není možné zadat možnosti i pro stejný soubor, ale je platné `SCC_FILETYPE_TEXT` `SCC_FILETYPE_BINARY` zadat ani jedno. Nastavení ani jedno z nich není stejné jako nastavení . V takovém případě modul plug-in správy zdrojového kódu automaticky detekuje `SCC_FILETYPE_AUTO` typ souboru.
 
- Níže je uveden seznam příznaků použitých v `pfOptions` poli:
+ Níže je seznam příznaků použitých v `pfOptions` poli:
 
 |Možnost|Hodnota|Význam|
 |------------|-----------|-------------|
-|SCC_FILETYPE_AUTO|0x00|Modul plug-in správy zdrojových kódů by měl detekovat typ souboru.|
+|SCC_FILETYPE_AUTO|0x00|Modul plug-in správy zdrojového kódu by měl rozpoznat typ souboru.|
 |SCC_FILETYPE_TEXT|0x01|Označuje textový soubor ASCII.|
-|SCC_FILETYPE_BINARY|0x02|Označuje jiný typ souboru než ASCII text.|
-|SCC_ADD_STORELATEST|0x04|Ukládá pouze poslední kopii souboru, žádné rozdíly.|
-|SCC_FILETYPE_TEXT_ANSI|0x08|Soubor považuje za text ANSI.|
-|SCC_FILETYPE_UTF8|0x10|Soubor považuje za text v kódování Unicode ve formátu UTF8.|
-|SCC_FILETYPE_UTF16LE|0x20|Soubor považuje za text v kódu Unicode ve formátu UTF16 Little endian.|
-|SCC_FILETYPE_UTF16BE|0x40|Soubor považuje za text v kódu Unicode ve formátu UTF16 big endian.|
+|SCC_FILETYPE_BINARY|0x02|Označuje jiný typ souboru než text ASCII.|
+|SCC_ADD_STORELATEST|0x04|Ukládá pouze nejnovější kopii souboru, žádné rozdílové položky.|
+|SCC_FILETYPE_TEXT_ANSI|0x08|Považuje soubor za text ANSI.|
+|SCC_FILETYPE_UTF8|0x10|Považuje soubor za text Unicode ve formátu UTF8.|
+|SCC_FILETYPE_UTF16LE|0x20|Považuje soubor za text Unicode ve formátu UTF16 Little Endian.|
+|SCC_FILETYPE_UTF16BE|0x40|Považuje soubor za text Unicode ve formátu UTF16 Big Endian.|
 
 ## <a name="see-also"></a>Viz také
 - [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

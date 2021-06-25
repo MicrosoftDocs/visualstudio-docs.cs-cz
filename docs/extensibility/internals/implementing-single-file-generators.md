@@ -1,9 +1,9 @@
 ---
-title: Implementace generátorů Single-File | Microsoft Docs
-description: Naučte se používat vlastní nástroj, který implementuje rozhraní IVsSingleFileGenerator pro rozšiřování Visual Basic a systémů projektů Visual C# v aplikaci Visual Studio.
+title: Implementace Single-File generátorů | Microsoft Docs
+description: Naučte se používat vlastní nástroj, který implementuje rozhraní IVsSingleFileGenerator k rozšíření systémů projektů Visual Basic a Visual C# v Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - custom tools, implementing
 - projects [Visual Studio SDK], extensibility
@@ -14,21 +14,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a46ebce9a554c90e23f9ce5f29680fc3ef86b337
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 11ce8a69841d18d383e9d8e12c14d7af652d9cb8
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085829"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900028"
 ---
 # <a name="implementing-single-file-generators"></a>Implementace generátorů tvořených jedním souborem
-Vlastní nástroj (někdy označovaný jako generátor jediného souboru) lze použít k rozšiřování [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] systémů a systémů projektů v nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Vlastní nástroj je komponenta modelu COM, která implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní. Pomocí tohoto rozhraní vlastní nástroj transformuje jeden vstupní soubor do jednoho výstupního souboru. Výsledkem transformace může být zdrojový kód nebo jakýkoli jiný výstup, který je užitečný. Dva příklady souborů kódu generovaných vlastním nástrojem jsou generovány v reakci na změny ve vizuálním návrháři a v souborech vygenerovaných pomocí jazyka WSDL (Web Services Description Language).
+K rozšíření systémů projektů a v nástroji lze použít vlastní nástroj , někdy označový jako generátor [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] jediného [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] souboru. Vlastní nástroj je komponenta modelu COM, která implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní. Pomocí tohoto rozhraní vlastní nástroj transformuje jeden vstupní soubor do jednoho výstupního souboru. Výsledkem transformace může být zdrojový kód nebo jakýkoli jiný výstup, který je užitečný. Dvěma příklady vlastních souborů kódu generovaných nástrojem je kód vygenerovaný v reakci na změny ve vizuálním návrháři a soubory generované pomocí jazyka WSDL (Web Services Description Language).
 
- Když je načten vlastní nástroj nebo je uložen vstupní soubor, systém projektu zavolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> metodu a předá odkaz na <xref:Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress> rozhraní zpětného volání, které může nástroj nahlásit svůj průběh uživateli.
+ Při načtení vlastního nástroje nebo uložení vstupního souboru volá systém projektu metodu a předá odkaz do rozhraní zpětného volání, kde nástroj může uživateli nahlásit <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress> průběh.
 
- Výstupní soubor, který vlastní nástroj generuje, je přidán do projektu se závislostí na vstupním souboru. Systém projektu automaticky určí název výstupního souboru na základě řetězce vráceného implementací vlastního nástroje <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> .
+ Výstupní soubor, který vlastní nástroj vygeneruje, se přidá do projektu se závislostí na vstupním souboru. Systém projektu automaticky určí název výstupního souboru na základě řetězce vráceného implementací vlastního nástroje <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> .
 
- Vlastní nástroj musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní. Volitelně vlastní nástroje podporují <xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite> rozhraní k načítání informací z jiných zdrojů než vstupního souboru. V každém případě je třeba před použitím vlastního nástroje ho zaregistrovat v systému nebo v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] místním registru. Další informace o registraci vlastních nástrojů naleznete v tématu [Registering Single File generátors](../../extensibility/internals/registering-single-file-generators.md).
+ Vlastní nástroj musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní . Volitelně vlastní nástroje podporují rozhraní <xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite> pro načtení informací z jiných zdrojů než ze vstupního souboru. Před použitím vlastního nástroje ho musíte v každém případě zaregistrovat v systému nebo v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] místním registru. Další informace o registraci vlastních nástrojů najdete v tématu [Registrace generátorů jednoduchých souborů.](../../extensibility/internals/registering-single-file-generators.md)
 
 ## <a name="see-also"></a>Viz také
 - [Zveřejnění typů pro vizuální návrháře](../../extensibility/internals/exposing-types-to-visual-designers.md)

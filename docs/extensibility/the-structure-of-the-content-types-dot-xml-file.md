@@ -1,9 +1,9 @@
 ---
-title: Struktura souboru [Content_types]. XML | Microsoft Docs
-description: Přečtěte si o struktuře souboru typů obsahu, který obsahuje informace o typech obsahu v balíčku VSIX.
+title: Struktura souboru [Content_types].xml | Microsoft Docs
+description: Seznamte se se strukturou souboru typů obsahu, který obsahuje informace o typech obsahu v balíčku VSIX.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - content_types
 - content types
@@ -15,18 +15,18 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5dea58176269536ae7f0e5857c938c60f76c5c6b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 96d4d0eeea34300894674a2105d080e8a6abb607
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055892"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900418"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>Struktura souboru [Content_types].xml
-Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio používá soubor [Content_Types]. XML k instalaci balíčku, ale neinstaluje samotný soubor.
+Obsahuje informace o typech obsahu v balíčku VSIX. Visual Studio balíček .xml pomocí souboru [Content_Types], ale neinstaluje samotný soubor.
 
 > [!NOTE]
-> I když toto téma se týká pouze souborů [Content_Type]. XML, které se používají v balíčcích VSIX, typ souboru [Content_Types]. XML je součástí standardu *OPC (Open Package Conventions)* . Další informace najdete v tématu [OPC: nový standard pro balení dat](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data) na webu MSDN.
+> I když se toto téma týká pouze souborů [Content_Type].xml, které se používají v balíčcích VSIX, typ souboru [Content_Types].xml je součástí standardu *OPC (Open Packaging Conventions).* Další informace najdete v tématu [OPC: Nový standard pro balení dat](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data) na webu MSDN.
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují kořenový prvek a jeho atributy a podřízené prvky.
@@ -35,26 +35,26 @@ Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio použív
 
 |Element|Popis|
 |-------------|-----------------|
-|`Types`|Obsahuje podřízené prvky, které vyčíslují typy souborů v balíčku VSIX.|
+|`Types`|Obsahuje podřízené elementy, které vyčíslí typy souborů v balíčku VSIX.|
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Xmlns`|(Povinné.) Umístění schématu používaného pro tento soubor [Content_Types]. XML.|
+|`Xmlns`|(Povinné.) Umístění schématu použitého pro tento soubor [Content_Types].xml.|
 
-### <a name="attribute-name-attribute"></a>{Název atributu} Přidělen
+### <a name="attribute-name-attribute"></a>{Název atributu} Atribut
 
 | Hodnota | Popis |
 | - | - |
 | `http://schemas.openformats.org/package/2006/content-types` | Umístění schématu typů obsahu. |
 
 ### <a name="child-elements"></a>Podřízené elementy
- `Types`Element může obsahovat libovolný počet `Default` prvků.
+ Element `Types` může obsahovat libovolný počet `Default` prvků.
 
 |Element|Popis|
 |-------------|-----------------|
-|`Default`|Popisuje typ obsahu v balíčku VSIX. Každý typ souboru v balíčku musí mít svůj vlastní `Default` element.|
+|`Default`|Popisuje typ obsahu v balíčku VSIX. Každý typ souboru v balíčku musí mít svůj vlastní `Default` prvek.|
 
 ### <a name="attributes"></a>Atributy
 
@@ -63,30 +63,30 @@ Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio použív
 |`Extension`|Přípona názvu souboru v balíčku VSIX.|
 |`ContentType`|Popisuje druh obsahu, který je přidružen k příponě názvu souboru.|
 
-### <a name="attribute-name-attribute"></a>{Název atributu} Přidělen
- Visual Studio rozpoznává následující `ContentType` hodnoty pro přidružené `Extension` typy.
+### <a name="attribute-name-attribute"></a>{Název atributu} Atribut
+ Visual Studio přidružené typy rozpozná `ContentType` následující `Extension` hodnoty.
 
-|Linka|Třída|
+|Linka|Contenttype|
 |---------------|-----------------|
-|txt|Text/prostý|
-|pkgdef|Text/prostý|
-|xml|text/XML|
-|vsixmanifest|text/XML|
-|htm nebo HTML|text/html|
-|připojeny|aplikace/RTF|
-|formátu|aplikace/PDF|
-|ve|obrázek/GIF|
-|jpg nebo JPEG|Obrázek/jpg|
-|tiff|obrázek/TIFF|
-|vsix|aplikace/zip|
-|věřitel|aplikace/zip|
-|DLL|aplikace/oktet – Stream|
-|všechny ostatní typy souborů|aplikace/oktet – Stream|
+|Txt|text / prostý text|
+|pkgdef|text / prostý text|
+|xml|text/xml|
+|vsixmanifest|text/xml|
+|html nebo html|text/html|
+|rtf (rtf)|application/rtf|
+|Pdf|application/pdf|
+|Gif|obrázek/gif|
+|jpg nebo jpeg|image/jpg|
+|tiff|image/tiff|
+|vsix|application/zip|
+|Zip|application/zip|
+|Knihovny dll|application/octet-stream|
+|všechny ostatní typy souborů|application/octet-stream|
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Description
- Následující soubor [Content_Types]. XML popisuje typický balíček VSIX.
+ Následující soubor [Content_Types].xml popisuje typický balíček VSIX.
 
 ### <a name="code"></a>Kód
 
@@ -103,5 +103,5 @@ Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio použív
 
 ## <a name="see-also"></a>Viz také
 - [Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)
-- [Referenční dokumentace schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110))
-- [OPC: nový standard pro vytváření balíčků dat](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data)
+- [Referenční informace k rozšíření VSIX Schema 1.0](/previous-versions/dd393700(v=vs.110))
+- [OPC: Nový standard pro balení dat](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data)

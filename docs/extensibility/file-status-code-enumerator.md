@@ -1,9 +1,9 @@
 ---
-title: Enumerátor kódu stavu souboru | Microsoft Docs
-description: Enumerátor SccStatus obsahuje konstantní hodnoty, které určují stav souboru v systému správy zdrojového kódu a používají je SccQueryInfo a POPLISTFUNC.
+title: Enumerátor kódu stavu | Microsoft Docs
+description: Enumerátor SccStatus obsahuje konstantní hodnoty, které určují stav souboru v systému správy zdrojového kódu a používají ho SccQueryInfo a POPLISTFUNC.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - named constants, SccStatus enumerator
 - source control plug-ins, file status enumeration
@@ -15,15 +15,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: af2ff3293a55dc76925aedd7a029e1bfdd367186
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 95de8a29efcd56880cdaf452c9f21b90bba1c5c9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074948"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900964"
 ---
-# <a name="file-status-code-enumerator"></a>Výčet stavových kódů souborů
-`SccStatus`Enumerátor obsahuje pojmenované konstantní hodnoty, které určují stav souboru v systému správy zdrojového kódu. Tento výčet používá [SccQueryInfo](../extensibility/sccqueryinfo-function.md) a `POPLISTFUNC` funkci zpětného volání (podrobnosti viz [POPLISTFUNC](../extensibility/poplistfunc.md) ).
+# <a name="file-status-code-enumerator"></a>Enumerátor kódu stavu souboru
+`SccStatus`Enumerátor obsahuje pojmenované konstantní hodnoty, které určují stav souboru v systému správy zdrojového kódu. Tento výčet používá [SccQueryInfo](../extensibility/sccqueryinfo-function.md) a funkce zpětného volání (podrobnosti najdete v tématu `POPLISTFUNC` [POPLISTFUNC).](../extensibility/poplistfunc.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,41 +51,41 @@ enum SccStatus {
 ```
 
 ## <a name="members"></a>Členové
- Nelze získat SCC_STATUS_INVALID stav; nespoléhá na ni.
+ SCC_STATUS_INVALID stav se nepokusí získat. Nespoléhejte na to.
 
- SCC_STATUS_NOTCONTROLLED soubor není pod správou zdrojových kódů.
+ SCC_STATUS_NOTCONTROLLED soubor není ve zdrojovém kódu.
 
- SCC_STATUS_CONTROLLED soubor je pod správou zdrojového kódu.
+ SCC_STATUS_CONTROLLED File (Soubor) je pod ssíní zdrojového kódu.
 
- SCC_STATUS_CHECKEDOUT zaregistrováno aktuálním uživatelem na místním disku.
+ SCC_STATUS_CHECKEDOUT rezervováno aktuálním uživatelem na místním disku.
 
- Soubor SCC_STATUS_OUTOTHER je rezervován jiným uživatelem.
+ SCC_STATUS_OUTOTHER soubor je rezervován jiným uživatelem.
 
- Soubor SCC_STATUS_OUTEXCLUSIVE je exkluzivně zaregistrován.
+ SCC_STATUS_OUTEXCLUSIVE soubor je vyhrazený výhradně.
 
  SCC_STATUS_OUTMULTIPLE soubor je rezervován více než jedním uživatelem.
 
- SCC_STATUS_OUTOFDATE soubor není poslední.
+ SCC_STATUS_OUTOFDATE Soubor není nejnovější.
 
- SCC_STATUS_DELETED soubor byl odstraněn z projektu.
+ SCC_STATUS_DELETED soubor byl z projektu odstraněn.
 
- Soubor SCC_STATUS_LOCKED je zamčený. nejsou povoleny žádné další verze.
+ SCC_STATUS_LOCKED soubor je uzamčený. nejsou povoleny žádné další verze.
 
- SCC_STATUS_MERGED soubor byl sloučen, ale ještě nebyl opraven/ověřen.
+ SCC_STATUS_MERGED soubor byl sloučen, ale ještě nebyl opraven nebo ověřen.
 
  SCC_STATUS_SHARED soubor se sdílí mezi projekty.
 
- Soubor SCC_STATUS_PINNED se sdílí s explicitní verzí.
+ SCC_STATUS_PINNED file se sdílí s explicitní verzí.
 
- Soubor SCC_STATUS_MODIFIED byl změněn/přerušen nebo porušen.
+ SCC_STATUS_MODIFIED soubor se změnil, porušoval nebo porušoval.
 
- Soubor SCC_STATUS_OUTBYUSER je rezervován aktuálním uživatelem.
+ SCC_STATUS_OUTBYUSER soubor je rezervován aktuálním uživatelem.
 
- Soubor SCC_STATUS_NOMERGE nelze nikdy sloučit s a nemusí být před ZÍSKÁNÍm uložen.
+ SCC_STATUS_NOMERGE soubor nelze nikdy sloučit s a není nutné ho uložit před GET.
 
- SCC_STATUS_RESERVED_1 vyhrazena pro interní použití.
+ SCC_STATUS_RESERVED_1 vyhrazeno pro interní použití.
 
- SCC_STATUS_RESERVED_2 vyhrazena pro interní použití.
+ SCC_STATUS_RESERVED_2 vyhrazeno pro interní použití.
 
 ## <a name="see-also"></a>Viz také
 - [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)

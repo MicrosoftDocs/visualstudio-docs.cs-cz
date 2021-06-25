@@ -1,9 +1,9 @@
 ---
-title: Konfigurace projektu pro výstup | Microsoft Docs
-description: Přečtěte si o procesech sestavení, které může každá konfigurace podporovat, a o rozhraních a metodách, pomocí kterých lze zpřístupnit výstupní položky.
+title: Konfigurace projektu pro výstupní | Microsoft Docs
+description: Seznamte se s procesy sestavení, které může každá konfigurace podporovat, a o rozhraních a metodách, pomocí kterých lze výstupní položky získejte.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project configurations, output
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
@@ -12,38 +12,38 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 13e37999ad9f3bada375c1897207e1e4c15546e8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8b718e70bac0d9e09936daf743420acc04a1c4ad
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082007"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899872"
 ---
 # <a name="project-configuration-for-output"></a>Konfigurace projektu pro výstup
-Každá konfigurace může podporovat sadu procesů sestavení, které vytvářejí výstupní položky, jako jsou spustitelné soubory nebo soubory prostředků. Tyto výstupní položky jsou pro uživatele soukromé a lze je umístit do skupin, které odkazují na související typy výstupu, jako jsou spustitelné soubory (. exe,. dll,. lib) a zdrojové soubory (. idl,. h soubory).
+Každá konfigurace může podporovat sadu procesů sestavení, které vytvářejí výstupní položky, jako jsou spustitelné soubory nebo soubory prostředků. Tyto výstupní položky jsou pro uživatele soukromé a mohou být umístěny ve skupinách, které propojují související typy výstupu, jako jsou spustitelné soubory (.exe, .dll, .lib) a zdrojové soubory (soubory .idl, .h).
 
- Výstupní položky mohou být zpřístupněny prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2> metod a výčty s <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs> metodami. Pokud chcete seskupit výstupní položky, váš projekt by měl také implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> rozhraní.
+ Výstupní položky mohou být k dispozici prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2> metod a výčtu s <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs> metodami. Pokud chcete seskupit výstupní položky, měl by projekt také implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> rozhraní.
 
- Konstrukce vyvinutá implementací `IVsOutputGroup` umožňuje projektům seskupovat výstupy podle využití. Například knihovna DLL může být seskupena s jeho programovou databází (PDB).
+ Konstruktor vyvinutý implementací `IVsOutputGroup` umožňuje projektům seskupit výstupy podle použití. Knihovna DLL může být například seskupená s programovou databází (PDB).
 
 > [!NOTE]
-> Soubor PDB obsahuje ladicí informace a je vytvořen při zadání možnosti generovat informace o ladění při vytváření souboru. dll nebo. exe. Soubor. pdb je obvykle generován pouze pro ladění konfigurace projektu.
+> Soubor PDB obsahuje informace o ladění a vytvoří se, když je při sestavování souboru .dll nebo .exe. Soubor .pdb se obvykle generuje pouze pro konfiguraci projektu ladění.
 
- Projekt musí vracet stejný počet skupin pro každou konfiguraci, kterou podporuje, a to i v případě, že se počet výstupů obsažených v rámci skupiny může lišit od konfigurace až po konfiguraci. Například knihovna DLL podkladu projektu může zahrnovat mattd.dll a matného souboru PDB v konfiguraci ladění, ale zahrne matt.dll pouze v maloobchodní konfiguraci.
+ Projekt musí vrátit stejný počet skupin pro každou konfiguraci, kterou podporuje, i když se počet výstupů obsažených ve skupině může lišit od konfigurace po konfiguraci. Například Dll od Uživatele projektu Může obsahovat soubory mattd.dll a <9>d.pdb v konfiguraci ladění, ale zahrnout pouze matt.dll v konfiguraci maloobchodního prodeje.
 
- Skupiny mají také stejné informace o identifikátoru, jako je kanonický název, zobrazovaný název a informace o skupině, od konfigurace po konfiguraci v rámci projektu. Tato konzistence umožňuje nasazení a balení i v případě změny konfigurace.
+ Skupiny mají také stejné informace o identifikátorech, jako je kanonický název, zobrazovaný název a informace o skupině, od konfigurace po konfiguraci v rámci projektu. Tato konzistence umožňuje, aby nasazení a balení pokračovalo v provozu i v případě, že se konfigurace změní.
 
- Skupiny mohou mít také výstup klíče, který umožňuje, aby zástupci balení odkazovali na něco smysluplného. Libovolná skupina může být v dané konfiguraci prázdná, takže nemusíte mít k dispozici žádné předpoklady o velikosti skupiny. Velikost (počet výstupů) každé skupiny v libovolné konfiguraci může být jiná než velikost jiné skupiny ve stejné konfiguraci. Může se také lišit od velikosti stejné skupiny v jiné konfiguraci.
+ Skupiny mohou mít také klíčový výstup, který umožňuje, aby zástupci balení odkazovat na něco smysluplného. V dané konfiguraci může být libovolná skupina prázdná, takže byste neměli předpokládat velikost skupiny. Velikost (počet výstupů) každé skupiny v jakékoli konfiguraci se může lišit od velikosti jiné skupiny ve stejné konfiguraci. Může se také lišit od velikosti stejné skupiny v jiné konfiguraci.
 
- ![Grafika výstupních skupin](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups") Výstupní skupiny
+ ![Grafické znázornění výstupních skupin](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups") Výstupní skupiny
 
- Primárním použitím <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> rozhraní je poskytnutí přístupu k sestavování, nasazování a ladění objektů správy a umožňuje projektům volnost ve seskupování výstupů. Další informace o použití tohoto rozhraní naleznete v tématu [objekt konfigurace projektu](../../extensibility/internals/project-configuration-object.md).
+ Primárním použitím rozhraní je poskytnout přístup k sestavení, nasazení a ladění objektů správy a umožnit projektům volnost <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> seskupování výstupů. Další informace o použití tohoto rozhraní najdete v tématu [Objekt konfigurace projektu](../../extensibility/internals/project-configuration-object.md).
 
- V předchozím diagramu má skupina sestavený výstup v různých konfiguracích (bD.exe nebo b.exe), takže uživatel může vytvořit zástupce, který se vytvoří a zjistí, že zástupce bude fungovat bez ohledu na nasazenou konfiguraci. Zdroj skupiny nemá výstup klíče, takže uživatel nemůže pro něj vytvořit zástupce. Pokud má skupina ladění sestavený výstup klíče, ale maloobchodní skupina sestavena nemá, jedná se o nesprávnou implementaci. Následuje, to znamená, že pokud má kterákoli z konfigurací skupinu, která neobsahuje žádné výstupy, a v důsledku toho nebude mít žádný soubor klíče ani jiné konfigurace s touto skupinou, které obsahují výstupy, soubory klíčů. Editory instalačního programu předpokládají, že kanonické názvy a zobrazované názvy skupin a také existenci souboru klíče se nemění v závislosti na konfiguracích.
+ V předchozím diagramu má sestavená skupina klíčový výstup napříč konfiguracemi (bD.exe nebo b.exe), aby uživatel mohl vytvořit zástupce built a vědět, že zástupce bude fungovat bez ohledu na nasazenou konfiguraci. Zdroj skupiny nemá výstup klíče, takže uživatel nemůže vytvořit jeho zástupce. Pokud sestavená skupina ladění má klíčový výstup, ale sestavená maloobchodní skupina ho nemá, byla by to nesprávná implementace. Pak se dozvíte, že pokud nějaká konfigurace obsahuje skupinu, která neobsahuje žádné výstupy, a v důsledku toho žádný soubor klíče, pak ostatní konfigurace této skupiny, které obsahují výstupy, nemohou mít soubory klíčů. Editory instalačního programu předpokládají, že kanonické názvy a zobrazované názvy skupin a existence souboru klíčů se nemění na základě konfigurací.
 
- Všimněte si, že pokud má projekt `IVsOutputGroup` , který nechce zabalit nebo nasadit, stačí tento výstup vložit do skupiny. Výstup může být v normálním výčtu, protože implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A> metodu, která vrátí všechny výstupy konfigurace bez ohledu na seskupení.
+ Všimněte si, že pokud projekt obsahuje objekt , který nechce zabalit ani nasadit, stačí, když tento výstup `IVsOutputGroup` neumisníte do skupiny. Výstup lze přesto zobrazit normálně implementací metody, která vrací všechny výstupy konfigurace bez ohledu <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A> na seskupení.
 
- Další informace naleznete v tématu implementace `IVsOutputGroup` v ukázce vlastního projektu v souboru [MPF pro projekty](https://github.com/tunnelvisionlabs/MPFProj10).
+ Další informace najdete v implementaci v ukázce `IVsOutputGroup` vlastního projektu v [MPF for Projects](https://github.com/tunnelvisionlabs/MPFProj10).
 
 ## <a name="see-also"></a>Viz také
 - [Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md)

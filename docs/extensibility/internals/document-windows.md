@@ -1,9 +1,9 @@
 ---
-title: Dokumentovat okna | Microsoft Docs
-description: Přečtěte si o oknech dokumentů v aplikaci Visual Studio, včetně způsobu jejich implementace a způsobu, jakým běžící tabulka dokumentů (RDT) sleduje svůj stav.
+title: Dokumentovat windows | Microsoft Docs
+description: Přečtěte si o oknech dokumentů v Visual Studio, včetně toho, jak je implementovat a jak tabulka Spuštěný dokument sleduje jejich stav.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Visual Studio SDK, document windows
 ms.assetid: 50081d48-987f-43db-8bf9-51b7cf76e9c0
@@ -12,36 +12,36 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 79706c98e98be55e69aaeeed7320c8b13bfd2a9c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: df7a797c0b4587698197412f49eef6bfab183a7a
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061274"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899911"
 ---
 # <a name="document-windows"></a>Okna dokumentů
-V aplikaci Visual Studio je *okno dokumentu* rámcové podřízené okno, které je spojeno s oknem MDI (Multiple Document Interface). Okna dokumentů se obvykle používají pro zobrazení a úpravy zdrojového kódu nebo textu, ale mohou také hostovat jiné funkční typy. Okna dokumentů:
+V Visual Studio je okno *dokumentu* orámované podřízené okno, které je přidruženo k oknu mdi (multiple-document interface). Okna dokumentů se obvykle používají k zobrazení a úpravám zdrojového kódu nebo textu, ale mohou hostovat i jiné funkční typy. Okna dokumentů:
 
-- Lze uspořádat do samostatných vodorovných nebo svislých skupin karet v nadřazeném MDI, aby bylo možné zobrazit současně více souborů.
+- Může být uspořádaný do samostatných skupin s vodorovnými nebo svislými tabulátory v nadřazené MDI, aby bylo možné zobrazit více souborů současně.
 
-- Může být ukotven v libovolném pořadí v nadřazeném MDI.
+- Lze ukotvit v libovolném pořadí v nadřazené mdi.
 
-- Dá se volně uvolnit.
+- Může být volně plovoucí.
 
-- Jsou propojeny v pořadí prvků do jiných oken MDI.
+- Jsou propojeny v pořadí podle karet s jinými okny MDI.
 
-  Příkazy pro seskupování, ukotvení a plovoucí lze nalézt v místní nabídce karty okno dokumentu.
+  Příkazy pro seskupení, ukotvení a plovoucí desetinnou čárku najdete na kartě okna dokumentu v místní nabídce.
 
-  Další informace o chování okna v aplikaci Visual Studio naleznete v tématu [přizpůsobení rozložení oken](../../ide/customizing-window-layouts-in-visual-studio.md).
+  Další informace o chování okna v Visual Studio najdete v tématu [Přizpůsobení rozložení oken.](../../ide/customizing-window-layouts-in-visual-studio.md)
 
 ## <a name="document-window-implementation"></a>Implementace okna dokumentu
- Okna dokumentů jsou vytvořena implementací editoru. <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>Rozhraní vytváří okna dokumentů jako součást vytváření instancí editoru. Další informace naleznete v tématu [starší rozhraní v editoru](/previous-versions/visualstudio/visual-studio-2015/extensibility/legacy-interfaces-in-the-editor?preserve-view=true&view=vs-2015).
+ Okna dokumentů se vytvářejí implementací editoru. Rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> vytvoří okna dokumentů jako součást vytváření instancí editoru. Další informace najdete v tématu [Starší verze rozhraní v editoru](/previous-versions/visualstudio/visual-studio-2015/extensibility/legacy-interfaces-in-the-editor?preserve-view=true&view=vs-2015).
 
 > [!NOTE]
-> Chcete-li v okně poskytnout zpětné a předávací navigační body, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsBackForwardNavigation> rozhraní. Textový editor používá textové značky k identifikaci navigačních bodů v dokumentu.
+> Pokud chcete poskytnout navigační body zpět a vpřed v okně, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsBackForwardNavigation> rozhraní . Textový editor používá k identifikaci navigačních bodů v dokumentu textové značky.
 
-## <a name="the-running-document-table"></a>Spuštěná tabulka dokumentů
- Rozhraní IDE používá spuštěnou tabulku dokumentů (RDT) ke sledování stavu každého okna dokumentu. RDT je mechanismus, pomocí kterého se okna dokumentů upozorní na události, například když je řešení uzavřeno nebo když byl soubor upravován. Další informace najdete v tématu [Spuštění tabulky dokumentů](../../extensibility/internals/running-document-table.md).
+## <a name="the-running-document-table"></a>Tabulka Spuštěný dokument
+ Integrované vývojové prostředí (IDE) používá ke sledování stavu každého okna dokumentu spuštěnou tabulku dokumentů (RDT). RDT je mechanismus, pomocí kterého jsou okna dokumentů upozorňována na události, například při zavření řešení nebo úpravě souboru. Další informace najdete v tématu [Spuštění tabulky dokumentů.](../../extensibility/internals/running-document-table.md)
 
 ## <a name="see-also"></a>Viz také
-- [Zpožděné načítání dokumentu](../../extensibility/internals/delayed-document-loading.md)
+- [Zpožděné načítání dokumentů](../../extensibility/internals/delayed-document-loading.md)

@@ -2,7 +2,7 @@
 description: Tato funkce zkontroluje dříve rezervované soubory do systému správy zdrojového kódu, uloží změny a vytvoří novou verzi.
 title: Funkce SccCheckin | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccCheckin
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6864549c6825092b6ad26be199f8c7b5ea6bab6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d324c03096df5178decd6f6954928df3f2c6b9aa
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060429"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904744"
 ---
 # <a name="scccheckin-function"></a>SccCheckin – funkce
 Tato funkce zkontroluje dříve rezervované soubory do systému správy zdrojového kódu, uloží změny a vytvoří novou verzi. Tato funkce je volána s počtem a polem názvů souborů, které mají být vráceny se změnami.

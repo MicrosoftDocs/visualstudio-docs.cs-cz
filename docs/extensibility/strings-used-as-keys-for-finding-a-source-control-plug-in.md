@@ -1,9 +1,9 @@
 ---
 title: Řetězce používané jako klíče k vyhledání modulu plug-in správy zdrojového kódu
-description: Přečtěte si o řetězcích klíčů, které jsou klíčem pro přístup k registru, aby bylo možné najít informace o modulu plug-in správy zdrojových kódů.
+description: Přečtěte si o řetězcích, které jsou klíči pro přístup k registru, abyste našli informace o modulu plug-in správy zdrojového kódu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, strings used for finding
 ms.assetid: c1e31f76-42a1-4c3d-afb2-664044ef12fd
@@ -12,21 +12,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b61c13973ac6668814fbc3ba076b373d6e0b1e44
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f25a105c442fa4a1ff8ed0f95b9c49272d751932
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056295"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899379"
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>Řetězce, které slouží jako klíče pro vyhledání modulu plug-in pro správu zdrojového kódu
-Následující řetězce jsou klíče pro přístup k registru, aby bylo možné najít informace o modulu plug-in správy zdrojových kódů.
+Následující řetězce jsou klíče pro přístup k registru pro vyhledání informací o modulu plug-in správy zdrojového kódu.
 
- `STR_SCC_PROVIDER_REG_LOCATION`, `STR_PROVIDERREGKEY` , `STR_SCCPROVIDERPATH` a `STR_SCCPROVIDERNAME` jsou klíče registru nebo hodnoty používané k registraci DLL jako modul plug-in správy zdrojového kódu pro Visual Studio.
+ `STR_SCC_PROVIDER_REG_LOCATION`, , a jsou klíče nebo hodnoty registru používané k registraci knihovny DLL jako `STR_PROVIDERREGKEY` modulu plug-in správy zdrojového kódu `STR_SCCPROVIDERPATH` `STR_SCCPROVIDERNAME` pro Visual Studio.
 
- `SCC_PROJECTNAME_KEY`, `SCC_PROJECTAUX_KEY` , `SCC_KEY, SCC_FILE_SIGNATURE` , a `SCC_STATUS_FILE` se používají k popisu formátu MSSCCPRJ. Soubor SCC
+ `SCC_PROJECTNAME_KEY`, `SCC_PROJECTAUX_KEY` `SCC_KEY, SCC_FILE_SIGNATURE` , a se používají k popisu `SCC_STATUS_FILE` formátu MSSCCPRJ. Soubor SCC.
 
-## <a name="string-keys-and-values"></a>Klíče a hodnoty řetězců
+## <a name="string-keys-and-values"></a>Řetězcové klíče a hodnoty
 
 |Klíč|Hodnota|
 |---------|-----------|
@@ -34,18 +34,18 @@ Následující řetězce jsou klíče pro přístup k registru, aby bylo možné
 |`STR_PROVIDERREGKEY`|ProviderRegKey|
 |`STR_SCCPROVIDERPATH`|SCCServerPath|
 |`STR_SCCPROVIDERNAME`|SCCServerName|
-|`STR_SCC_INI_SECTION`|Správa zdrojového kódu|
+|`STR_SCC_INI_SECTION`|Řízení zdrojového kódu|
 |`STR_SCC_INI_KEY`|SourceCodeControlProvider|
 |`SCC_PROJECTNAME_KEY`|SCC_Project_Name|
 |`SCC_PROJECTAUX_KEY`|SCC_Aux_Path|
-|`SCC_STATUS_FILE`|MSSCCPRJ. SCC|
-|`SCC_KEY`|SCC|
-|`SCC_FILE_SIGNATURE`|Soubor řízení zdrojového kódu|
+|`SCC_STATUS_FILE`|MSSCCPRJ. Scc|
+|`SCC_KEY`|Scc|
+|`SCC_FILE_SIGNATURE`|Řídicí soubor zdrojového kódu|
 |`SCC_NSE`|Rozšíření oboru názvů|
-|`SCC_NSE_PREFIX`|Protokolem předpona|
+|`SCC_NSE_PREFIX`|Protocal Prefix|
 |`SCC_NSE_DisableOpenSCC`|DisableOpenFromSourceControl|
-|`STR_SCCHELPCOLLECTION`|Helpcollection|
-|`STR_UI_LANGUAGE`|UILanguage|
+|`STR_SCCHELPCOLLECTION`|Kolekce nápovědy|
+|`STR_UI_LANGUAGE`|UiLanguage|
 |`STR_SRCSAFE_ROOT_KEY`|Software\Microsoft\SourceSafe|
 
 ## <a name="see-also"></a>Viz také

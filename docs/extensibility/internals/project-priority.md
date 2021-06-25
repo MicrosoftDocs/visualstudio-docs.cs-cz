@@ -1,9 +1,9 @@
 ---
-title: Priorita projektu | Microsoft Docs
-description: Přečtěte si o schématu priority, které používá integrované vývojové prostředí (IDE) sady Visual Studio k určení nejlepšího projektu pro otevření položky, pokud je položka členem více než jednoho projektu.
+title: Project Priority | Microsoft Docs
+description: Přečtěte si o schématu priority, které integrované vývojové Visual Studio používá k určení nejlepšího projektu pro otevření položky, pokud je položka členem více než jednoho projektu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - projects [Visual Studio SDK], opening items
 ms.assetid: 9f707592-2fb6-4f75-9269-f6d4700a998e
@@ -12,27 +12,27 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6aefb6b1670da812a36efcc1baa3cb23f23e2561
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2ac0556e63b25f0f2a0df399cb23d5e2e9473008
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064485"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899638"
 ---
 # <a name="project-priority"></a>Priorita projektu
-Položka projektu je obvykle členem pouze jednoho projektu v řešení. Proto může rozhraní IDE snadno určit, který projekt se má použít k otevření položky. Pokud je však položka členem více než jednoho projektu, rozhraní IDE používá schéma priority k určení nejvhodnějšího projektu pro otevření položky.
+Položka projektu je obvykle členem pouze jednoho projektu v řešení. Integrované vývojové prostředí proto může snadno určit, který projekt se použije k otevření položky. Pokud je však položka členem více než jednoho projektu, integrované vývojové prostředí (IDE) používá schéma priority k určení nejlepšího projektu pro otevření položky.
 
- Následující seznam uvádí schéma priority projektu:
+ Následující seznam ukazuje schéma priority projektu:
 
-- Rozhraní IDE volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> metodu pro každý projekt v řešení a určí, zda je dokument členem daného projektu.
+- Integrované vývojové prostředí volá metodu pro každý projekt v řešení, aby určilo, zda je dokument <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> členem tohoto projektu.
 
-- Pokud je dokument členem projektu, projekt reaguje na prioritu, kterou projekt přiřadí podle jeho manipulace s tímto dokumentem. Například jazykový projekt reaguje s vysokou prioritou pro své jazykové zdrojové soubory, ale reaguje s nižší prioritou pro nerozpoznaný typ souboru, který se nepoužívá jako součást procesu sestavení.
+- Pokud je dokument členem projektu, projekt odpoví prioritou, kterou projekt přiřadí na základě zpracování tohoto dokumentu. Například projekt jazyka odpovídá se zdrojovými soubory jazyka s vysokou prioritou, ale má nižší prioritu pro nerozpoznaný typ souboru, který se v rámci procesu sestavení nepouží.
 
-- Projekty, které poskytují vlastní editory nebo návrháře specifické pro projekt pro dokument, také dostanou vysokou prioritu.
+- Projekty, které poskytují vlastní editory nebo návrháře pro dokument, mají také vysokou prioritu.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>Výčet poskytuje hodnoty priority dokumentu.
+- Výčet <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> poskytuje hodnoty priority dokumentu.
 
-- Projekt, který určuje nejvyšší prioritu, je dán kontextem pro otevření dokumentu. Pokud dva projekty vrací stejné prioritní hodnoty, je upřednostňován aktivní projekt. Pokud žádný projekt v řešení nereaguje na to, že může otevřít dokument, rozhraní IDE vloží dokument do projektu různé soubory. Další informace naleznete v tématu [různé soubory projektu](../../extensibility/internals/miscellaneous-files-project.md).
+- Projektu, který určuje nejvyšší prioritu, je dán kontext pro otevření dokumentu. Pokud dva projekty vrátí stejnou hodnotu priority, upřednostní se aktivní projekt. Pokud žádný projekt v řešení nereaguje na to, že dokument může otevřít, integrované vývojové prostředí (IDE) dokument vložilo do projektu Různé soubory. Další informace najdete v tématu [Různé soubory – projekt](../../extensibility/internals/miscellaneous-files-project.md).
 
 ## <a name="see-also"></a>Viz také
 - [Projekt Ostatní soubory](../../extensibility/internals/miscellaneous-files-project.md)

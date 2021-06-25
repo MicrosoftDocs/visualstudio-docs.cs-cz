@@ -1,9 +1,9 @@
 ---
-title: Symbol – element | Microsoft Docs
-description: Element Symbols definuje identifikátory GUID a ID, které používají jiné elementy VSCT. Tento článek obsahuje příklad.
+title: Symbols – | Microsoft Docs
+description: Element Symbols definuje identifikátory GUID a ID, které jsou používány jinými prvky VSCT. Tento článek obsahuje příklad.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Symbols element (VSCT XML schema)
 - VSCT XML schema elements, Symbols
@@ -13,19 +13,19 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a013bbe438d1e4dd1f6b5149dcb7da78835fd09
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b593f353714f2fbb6f5b726fa2bbc0da449043ea
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056048"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901731"
 ---
 # <a name="symbols-element"></a>Symbols – element
-Definuje identifikátory GUID a ID, které používají jiné elementy VSCT. Pro nespravovaný kód tyto informace obvykle pocházejí ze hlavičkových souborů, které jsou určeny [extern element](../extensibility/extern-element.md). Spravovaný kód používá podřízené prvky elementu Symbols k definování těchto informací.
+Definuje identifikátory GUID a ID používané jinými prvky VSCT. U nespravovaného kódu tyto informace obvykle pochází ze souborů hlaviček, které jsou určeny [externím elementem](../extensibility/extern-element.md). Spravovaný kód používá podřízené prvky elementu Symbols k definování těchto informací.
 
- Vytvoříte-li soubor. vsct z existujícího souboru. technický ředitel, symboly budou vygenerovány jako podřízené prvky elementu Symbols. Další informace naleznete v tématu [How to: Create a. Soubor vsct ze stávajícího souboru. Soubor technický ředitel](../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file)
+ Pokud vytvoříte soubor .vsct z existujícího souboru .cto, symboly se vygenerují jako podřízený prvek elementu Symbols. Další informace najdete v [tématu Postupy: Vytvoření . Soubor Vsct z existujícího souboru . Soubor Cto](../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file).
 
- Element Symbols by neměl být zaměněn pomocí [elementu define](../extensibility/define-element.md), který definuje páry název-hodnota pro použití preprocesorem.
+ Element Symbols by neměl být zaměňován s elementem [Define,](../extensibility/define-element.md)který definuje dvojice název-hodnota pro použití preprocesorem.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,14 +49,14 @@ Definuje identifikátory GUID a ID, které používají jiné elementy VSCT. Pro
 
 |Element|Popis|
 |-------------|-----------------|
-|GuidSymbol|Definuje symbol identifikátoru GUID. GuidSymbol má dva povinné atributy: název a hodnota. Název je název symbolu a hodnota je hodnota identifikátoru GUID jako řetězec.<br /><br /> Například:\<GuidSymbol name="guidVsPackage1Pkg"   value="{c5f54698-101a-4846-84d3-dc748f9cd848}" />|
-|IDSymbol|Definuje symbol. IDSymbol má dva povinné atributy: název a hodnota. Název je název symbolu a hodnota je hodnota symbolu jako řetězec.<br /><br /> Například:\<IDSymbol name="MyMenuGroup" value="0x1020" />|
+|GuidSymbol|Definuje symbol GUID. GuidSymbol má dva povinné atributy: name a value. Název je název symbolu a hodnota je hodnota identifikátoru GUID jako řetězec.<br /><br /> Příklad:\<GuidSymbol name="guidVsPackage1Pkg"   value="{c5f54698-101a-4846-84d3-dc748f9cd848}" />|
+|IDSymbol|Definuje symbol. IDSymbol má dva povinné atributy: name a value. Název je název symbolu a hodnota je hodnota symbolu jako řetězec.<br /><br /> Příklad:\<IDSymbol name="MyMenuGroup" value="0x1020" />|
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[CommandTable – element](../extensibility/commandtable-element.md)|Kořenový element souboru. vsct.|
+|[CommandTable – element](../extensibility/commandtable-element.md)|Kořenový element souboru .vsct.|
 
 ## <a name="example"></a>Příklad
 

@@ -1,9 +1,9 @@
 ---
 title: Implementace zpracování příkazů pro vnořené projekty | Microsoft Docs
-description: Naučte se implementovat zpracování příkazů pro vnořené projekty v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+description: Naučte se implementovat zpracování příkazů pro vnořené projekty v integrovaném vývojovém Visual Studio (IDE).
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - nested projects, implementing command handling
 ms.assetid: 48a9d66e-d51c-4376-a95a-15796643a9f2
@@ -12,18 +12,18 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fad154fd3739369b0ccf7e5d896d1b9f1728c68e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4324e207d7b424295137f9523ed0bed538b3d806
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085777"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899983"
 ---
 # <a name="implementing-command-handling-for-nested-projects"></a>Implementace zpracování příkazů pro vnořené projekty
-Rozhraní IDE může předat příkazy, které jsou předány prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní a pro vnořené projekty, nebo nadřazené projekty mohou příkazy filtrovat nebo přepsat.
+Integrované vývojové prostředí (IDE) může předávat příkazy, které jsou předány prostřednictvím rozhraní a vnořeným projektům, nebo nadřazené projekty mohou příkazy filtrovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> nebo přepisovat.
 
 > [!NOTE]
-> Filtrovat lze pouze příkazy běžně zpracovávané nadřazeným projektem. Příkazy, jako je **sestavení** a **nasazení** , které jsou zpracovávány rozhraním IDE, nelze filtrovat.
+> Filtrovat je možné pouze příkazy obvykle zpracované nadřazeným projektem. Příkazy, jako **je sestavení** a **nasazení,** které zpracovává integrované vývojové prostředí (IDE), není možné filtrovat.
 
  Následující kroky popisují proces implementace zpracování příkazů.
 
@@ -33,13 +33,13 @@ Rozhraní IDE může předat příkazy, které jsou předány prostřednictvím 
 
 1. Když uživatel vybere vnořený projekt nebo uzel ve vnořeném projektu:
 
-   1. Rozhraní IDE volá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu.
+   1. Integrované vývojové prostředí (IDE) volá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu .
 
-      ani
+      — or —
 
-   2. Pokud příkaz vznikl v okně hierarchie, jako je například příkaz místní nabídky v Průzkumník řešení, rozhraní IDE volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> metodu v nadřazeném projektu.
+   2. Pokud příkaz vznikl v okně hierarchie, například příkaz místní nabídky v Průzkumník řešení, volá integrované vývojové prostředí metodu v <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> nadřazeném projektu.
 
-2. Nadřazený projekt může prošetřit parametry, které mají být předány `QueryStatus` , například `pguidCmdGroup` a `prgCmds` , aby bylo možné určit, zda nadřazený projekt má filtrovat příkazy. Pokud je nadřazený projekt implementován pro filtrování příkazů, měl by být nastaven:
+2. Nadřazený projekt může prozkoumat parametry, které se mají předat do , jako je a , a určit, jestli má nadřazený `QueryStatus` `pguidCmdGroup` projekt filtrovat `prgCmds` příkazy. Pokud je nadřazený projekt implementován pro filtrování příkazů, měl by nastavit:
 
    ```
    prgCmds[0].cmdf = OLECMDF_SUPPORTED;
@@ -47,11 +47,11 @@ Rozhraní IDE může předat příkazy, které jsou předány prostřednictvím 
    prgCmds[0].cmdf &= ~MSOCMDF_ENABLED;
    ```
 
-    Pak by měl nadřazený projekt vracet `S_OK` .
+    Potom by nadřazený projekt měl vrátit `S_OK` .
 
-    Pokud nadřazený projekt nefiltruje příkaz, měl by se vrátit pouze `S_OK` . V tomto případě rozhraní IDE automaticky směruje příkaz do podřízeného projektu.
+    Pokud nadřazený projekt příkaz nefiltruje, měl by vrátit hodnotu `S_OK` . V takovém případě integrované vývojové prostředí (IDE) automaticky směruje příkaz do podřízeného projektu.
 
-    Nadřazený projekt není nutné směrovat příkaz do podřízeného projektu. Rozhraní IDE tuto úlohu provede..
+    Nadřazený projekt nemusí směrovat příkaz na podřízený projekt. Integrované vývojové prostředí (IDE) provádí tuto úlohu..
 
 ## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>

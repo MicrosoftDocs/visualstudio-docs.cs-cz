@@ -1,8 +1,8 @@
 ---
-description: Tato funkce načte celou řadu možností specifických pro uživatele.
-title: Funkce SccGetUserOption | Microsoft Docs
+description: Tato funkce načte různé možnosti specifické pro uživatele.
+title: SccGetUserOption – funkce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetUserOption
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 262a15069f840c048f574396d5a7ec076760d77e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 622abc04609edf410214af6b8acf795f969e2fbc
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063952"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901107"
 ---
 # <a name="sccgetuseroption-function"></a>SccGetUserOption – funkce
-Tato funkce načte celou řadu možností specifických pro uživatele.
+Tato funkce načte různé možnosti specifické pro uživatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,23 +36,23 @@ SCCRTN SccGetUserOption(
 #### <a name="parameters"></a>Parametry
  pContext
 
-pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
+[v] Ukazatel kontextu modulu plug-in správy zdrojového kódu.
 
  nOption
 
-pro Možnost, která se má načíst (možné možnosti viz poznámky)
+[v] Možnost načtení (možné možnosti najdete v části Poznámky).
 
  lpVal
 
-mimo Hodnota přidružená k možnosti
+[out] Hodnota přidružená k možnosti .
 
 ## <a name="return-value"></a>Návratová hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Možnost byla úspěšně načtena.|
-|SCC_E_OPNOTSUPPORTED|Možnost není podporována.|
+|SCC_OK|Možnost se úspěšně načítá.|
+|SCC_E_OPNOTSUPPORTED|Možnost se nepodporuje.|
 |SCC_E_NONSPECIFICERROR|Došlo k neurčené chybě.|
 
 ## <a name="remarks"></a>Poznámky
@@ -60,7 +60,7 @@ mimo Hodnota přidružená k možnosti
 
 |Možnost uživatele|Description|
 |-----------------|-----------------|
-|`SCC_USEROPT_CHECKOUT_LOCALVER`|Určuje, jestli chce uživatel rezervovat místní verzi souborů. `lpVal` je přiřazen `SCC_USEROPT_COLV_YES` (uživatel chce rezervovat místní soubory) nebo `SCC_USEROPT_COLV_NO` .|
+|`SCC_USEROPT_CHECKOUT_LOCALVER`|Určuje, jestli chce uživatel zkontrolovat místní verzi souborů. `lpVal` je `SCC_USEROPT_COLV_YES` přiřazený (uživatel chce si vyhánět místní soubory) nebo `SCC_USEROPT_COLV_NO` .|
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

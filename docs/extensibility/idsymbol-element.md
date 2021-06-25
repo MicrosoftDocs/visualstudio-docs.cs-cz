@@ -1,9 +1,9 @@
 ---
-title: Element IDSymbol | Microsoft Docs
-description: 'Element IDSymbol obsahuje ID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz.'
+title: IDSymbol – element | Microsoft Docs
+description: Element IDSymbol obsahuje ID páru GUID:ID, který představuje nabídku, skupinu nebo příkaz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IDSymbol element (VSCT XML schema)
 - VSCT XML schema elements, IDSymbol
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f59089ab981bc97100386b3e1907ef903ede3bd0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e5158b16fb2d12a7d1a93c0296126e915a138269
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069839"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904939"
 ---
-# <a name="idsymbol-element"></a>Element IDSymbol
-`IDSymbol`Element obsahuje ID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz. Identifikátor GUID pochází z nadřazeného `GuidSymbol` elementu. `IDSymbol`Element má `name` atribut, který poskytuje popisný název pro ID, který je obsažen v `value` atributu.
+# <a name="idsymbol-element"></a>IDSymbol – element
+Element `IDSymbol` obsahuje ID dvojice GUID:ID, která představuje nabídku, skupinu nebo příkaz. Identifikátor GUID pochází z nadřazeného `GuidSymbol` elementu. Element `IDSymbol` má atribut , který poskytuje `name` popisný název ID, který je obsažen v `value` atributu .
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,8 +36,8 @@ ms.locfileid: "105069839"
 
 |Atribut|Popis|
 |---------------|-----------------|
-|name|Povinná hodnota. Název symbolu ID.|
-|hodnota|Povinná hodnota. Hodnota číselného ID symbolu ID.|
+|name|Povinná hodnota. Název symbolu ID|
+|hodnota|Povinná hodnota. Číselná hodnota ID symbolu ID|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné
@@ -46,10 +46,10 @@ ms.locfileid: "105069839"
 
 |Element|Popis|
 |-------------|-----------------|
-|[Element GuidSymbol](../extensibility/guidsymbol-element.md)|Obsahuje identifikátor GUID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz. Seskupuje `IDSymbol` prvky.|
+|[GuidSymbol – element](../extensibility/guidsymbol-element.md)|Obsahuje identifikátor GUID páru GUID:ID, který představuje nabídku, skupinu nebo příkaz. `IDSymbol`Seskupí prvky.|
 
 ## <a name="remarks"></a>Poznámky
- Každý `IDSymbol` prvek v daném `GuidSymbol` elementu musí mít jedinečný `value` . Nicméně `IDSymbol` prvky, které mají stejné hodnoty, mohou existovat v balíčku, pokud mají různé nadřazené položky.
+ Každý `IDSymbol` prvek v daném prvku musí mít `GuidSymbol` jedinečnou hodnotu `value` . Prvky, které mají identické hodnoty, však mohou v balíčku existovat, pokud `IDSymbol` mají různé podřízené prvky.
 
 ## <a name="see-also"></a>Viz také
-- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio souborů tabulky příkazů (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

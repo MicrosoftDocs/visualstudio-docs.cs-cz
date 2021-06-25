@@ -3,7 +3,7 @@ title: Správce ladění procesů | Microsoft Docs
 description: Přečtěte si informace o programu Správce ladění procesů, který je součástí sady Visual Studio a zpřístupňuje programy pro správce ladění relace a moduly ladění.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - machine debug manager
 - debugging [Debugging SDK], Machine Debug Manager
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c332b28e48b24065b5e359332df65c61365f1763
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 04fb89f4b009640760d624f1efa197cdaa56bda7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067721"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900743"
 ---
 # <a name="process-debug-manager"></a>Správce ladění procesů
 Správce procesu ladění (PDM) je součástí sady Visual Studio, která spravuje programy a procesy a zpřístupňuje je správci ladění relací a ladicích modulů.

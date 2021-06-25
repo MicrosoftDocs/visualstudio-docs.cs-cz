@@ -3,7 +3,7 @@ title: Vytvoření balíčku rozšíření
 description: Informace o tom, jak vytvořit balíček rozšíření pomocí šablony položky balíčku rozšíření
 ms.custom: SEO-VS-2020
 ms.date: 07/27/2018
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
 ms.assetid: 5388EEBA-211D-4114-8CD9-70C899919F7E
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: 57b447be3ee411b737c1aea5b0a4be5ef966c8c6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 213e3e71503ebea8074594bbc88a06980e3e64b4
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062145"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905134"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>Návod: Vytvoření balíčku rozšíření
 
