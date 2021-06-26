@@ -5,8 +5,6 @@ description: Přečtěte si, jak nainstalovat Visual Studio, krok za krokem.
 ms.date: 12/13/2019
 ms.custom: vs-acquisition
 ms.topic: conceptual
-f1_keywords:
-- vs.about
 helpviewer_keywords:
 - install Visual Studio
 - dev15
@@ -20,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 692989d5bf8979752757fb5630a78d55426f85b9
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 7bf44f9333a65ea821c0cd9936ee1f3fa051d4fe
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387070"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925082"
 ---
 # <a name="install-visual-studio"></a>Instalace sady Visual Studio
 
@@ -161,7 +159,7 @@ Spuštěním souboru zaváděcího nástroje nainstalujte Instalační program p
 
 2. Požádáme vás o potvrzení [licenčních podmínek](https://visualstudio.microsoft.com/license-terms/) společnosti Microsoft a [prohlášení o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement)společnosti Microsoft. Zvolte **Pokračovat**.
 
-   ![Licenční smlouvy a prohlášení o zásadách ochrany osobních údajů](media/privacy-and-license-terms.png "Licenční podmínky a prohlášení o zásadách ochrany osobních údajů společnosti Microsoft")
+   ![Licenční smlouvy a prohlášení o zásadách ochrany osobních údajů](media/privacy-and-license-terms.png "Licenční smlouvy společnosti Microsoft a prohlášení o zásadách ochrany osobních údajů")
 
 ## <a name="step-4---choose-workloads"></a>Krok 4 – Výběr úloh
 
@@ -204,13 +202,13 @@ Pokud nechcete použít funkci úlohy k přizpůsobení instalace sady Visual St
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017 – instalace jednotlivých komponent](media/vs-installer-installing-components.png "Instalace Visual Studio jednotlivých komponent")
+  ![Visual Studio 2017 – instalace jednotlivých komponent](media/vs-installer-installing-components.png "Instalovat jednotlivé součásti sady Visual Studio")
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-  ![Visual Studio 2019 – instalace jednotlivých komponent](media/vs-2019/vs-installer-individual-components.png "Instalace Visual Studio jednotlivých komponent")
+  ![Visual Studio 2019 – instalace jednotlivých komponent](media/vs-2019/vs-installer-individual-components.png "Instalovat jednotlivé součásti sady Visual Studio")
 
 ::: moniker-end
 
@@ -220,25 +218,25 @@ Ve výchozím nastavení se instalační program při prvním spuštění pokus�
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017 – instalace jazykových sad](media/vs-installer-installing-language-packs.png "Instalace Visual Studio jazykových sad")
+  ![Visual Studio 2017 – instalace jazykových sad](media/vs-installer-installing-language-packs.png "Nainstalovat jazykové sady pro Visual Studio")
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-  ![Visual Studio 2019 – instalace jazykových sad](media/vs-2019/vs-installer-language-packs.png "Instalace Visual Studio jazykových sad")
+  ![Visual Studio 2019 – instalace jazykových sad](media/vs-2019/vs-installer-language-packs.png "Nainstalovat jazykové sady pro Visual Studio")
 
 ::: moniker-end
 
 ### <a name="change-the-installer-language-from-the-command-line"></a>Změna jazyka instalačního programu z příkazového řádku
 
-Dalším způsobem, jak můžete změnit výchozí jazyk, je spuštění instalačního programu z příkazového řádku. Například můžete vynutit, aby se instalační program spouštěl v angličtině, a to pomocí následujícího příkazu: `vs_installer.exe --locale en-US` . Instalační program si toto nastavení zapamatuje při příštím spuštění. Instalační program podporuje následující jazykové tokeny: zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-it, ja-jp, ko-kr, pl-pl, pt-br, ru-ru a tr-tr.
+Dalším způsobem, jak můžete změnit výchozí jazyk, je spuštění instalačního programu z příkazového řádku. Například můžete vynutit, aby se instalační program spouštěl v angličtině, a to pomocí následujícího příkazu: `vs_installer.exe --locale en-US` . Instalační program si toto nastavení zapamatuje při příštím spuštění. Instalační program podporuje následující jazykové tokeny: zh-CN, zh-TW, cs-cz, en-US, ES-ES, fr-FR, de-de, IT-IT, ja-JP, ko-KR, pl-pl, pt-BR, ru-ru a TR-tr.
 
 ## <a name="step-7---select-the-installation-location-optional"></a>Krok 7 – výběr umístění instalace (volitelné)
 
 ::: moniker range="vs-2017"
 
-**Novinka ve windows 15.7:** Teď můžete snížit nároky na instalaci Visual Studio na systémové jednotce. Mezipaměť pro stahování, sdílené komponenty, sady SDK a nástroje můžete přesunout na různé jednotky a ponechat Visual Studio na jednotce, na které běží nejrychleji.
+**Novinka v 15,7**: teď můžete snížit nároky na instalaci sady Visual Studio na systémovou jednotku. Můžete se rozhodnout přesunout mezipaměť pro stahování, sdílené součásti, sady SDK a nástroje na různé jednotky a nechat Visual Studio na disku, na kterém je spuštěný, nejrychlejší.
 
   ![Visual Studio 2017 – Změna umístění instalace](media/installation-options-by-location.png "Změna umístění instalace")
 
@@ -246,44 +244,44 @@ Dalším způsobem, jak můžete změnit výchozí jazyk, je spuštění instala
 
 ::: moniker range=">=vs-2019"
 
-Můžete snížit nároky na instalaci Visual Studio na systémové jednotce. Mezipaměť pro stahování, sdílené komponenty, sady SDK a nástroje můžete přesunout na různé jednotky a ponechat Visual Studio na jednotce, na které běží nejrychleji.
+Nároky na instalaci sady Visual Studio můžete snížit na systémové jednotce. Můžete se rozhodnout přesunout mezipaměť pro stahování, sdílené součásti, sady SDK a nástroje na různé jednotky a nechat Visual Studio na disku, na kterém je spuštěný, nejrychlejší.
 
-  ![Visual Studio 2019 – Výběr umístění instalace](media/vs-2019/vs-installer-installation-locations.png "Vyberte umístění instalace.")
+  ![Visual Studio 2019 – výběr umístění instalace](media/vs-2019/vs-installer-installation-locations.png "Vybrat umístění instalace")
 
 ::: moniker-end
 
 > [!IMPORTANT]
-> Jinou jednotku můžete vybrat jenom při první instalaci Visual Studio. Pokud jste ho už nainstalovali a chcete změnit jednotky, musíte odinstalovat Visual Studio ho znovu nainstalovat.
+> Můžete vybrat jinou jednotku pouze při první instalaci sady Visual Studio. Pokud jste ho už nainstalovali a chcete změnit jednotky, musíte odinstalovat sadu Visual Studio a pak ji znovu nainstalovat.
 
-Další informace najdete na stránce [Výběr umístění](change-installation-locations.md) instalace.
+Další informace najdete na stránce [Výběr umístění instalace](change-installation-locations.md) .
 
-## <a name="step-8---start-developing"></a>Krok 8 : Zahájení vývoje
+## <a name="step-8---start-developing"></a>Krok 8 – zahájení vývoje
 
 ::: moniker range="vs-2017"
 
-1. Po Visual Studio instalace vyberte tlačítko **Spustit** a můžete začít s vývojem pomocí Visual Studio.
+1. Po dokončení instalace sady Visual Studio klikněte na tlačítko **Spustit** a začněte s vývojem v aplikaci Visual Studio.
 
-2. Zvolte **File (Soubor)** a pak **zvolte New Project (Nový projekt).**
+2. Zvolte **soubor** a pak zvolte **Nový projekt**.
 
 3. Vyberte typ projektu.
 
-   Pokud chcete například [sestavit aplikaci C++,](/cpp/get-started/tutorial-console-cpp)zvolte Nainstalováno, rozbalte **Visual C++** a pak zvolte typ projektu C++, který chcete sestavit.
+   Chcete-li například [sestavit aplikaci C++](/cpp/get-started/tutorial-console-cpp), zvolte možnost **nainstalováno**, rozbalte položku **Visual C++** a pak zvolte typ projektu jazyka c++, který chcete sestavit.
 
-   Pokud [chcete sestavit aplikaci v jazyce C#,](../get-started/csharp/tutorial-console.md)zvolte Nainstalováno, rozbalte Visual **C#** a pak zvolte typ projektu C#, který chcete sestavit. 
+   Chcete-li [sestavit aplikaci v jazyce c#](../get-started/csharp/tutorial-console.md), zvolte možnost **nainstalováno**, rozbalte položku **Visual C#** a poté zvolte typ projektu jazyka c#, který chcete sestavit.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Po Visual Studio instalace vyberte tlačítko **Spustit** a můžete začít s vývojem pomocí Visual Studio.
+1. Po dokončení instalace sady Visual Studio klikněte na tlačítko **Spustit** a začněte s vývojem v aplikaci Visual Studio.
 
-1. V úvodním okně zvolte **Vytvořit nový projekt.**
+1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-1. Do vyhledávacího pole zadejte typ aplikace, kterou chcete vytvořit. Zobrazí se seznam dostupných šablon. Seznam šablon závisí na úlohách, které jste zvolili během instalace. Pokud chcete zobrazit různé šablony, zvolte různé úlohy.
+1. Do vyhledávacího pole zadejte typ aplikace, kterou chcete vytvořit, aby se zobrazil seznam dostupných šablon. Seznam šablon závisí na úlohách, které jste si zvolili během instalace. Pokud chcete zobrazit různé šablony, vyberte jiné úlohy.
 
-   Pomocí rozevíracího seznamu Jazyk můžete také filtrovat  hledání konkrétního programovacího jazyka. Můžete filtrovat také pomocí **seznamu Platforma** a **typu** projektu.
+   Hledání konkrétního programovacího jazyka můžete filtrovat také pomocí rozevíracího seznamu **jazyk** . Filtrovat můžete také pomocí seznamu **platforem** a seznamu **typ projektu** .
 
-1. Visual Studio nový projekt a jste připraveni kódovat!
+1. Visual Studio otevře nový projekt a Vy jste připravení na kód!
 
 ::: moniker-end
 

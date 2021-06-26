@@ -6,7 +6,6 @@ ms.date: 09/19/2019
 ms.topic: reference
 f1_keywords:
 - vs.documentoutline.window
-- vs.objectbrowser
 - vs.classview
 - VS.CodeDefinitionView
 - VS.CodeDefinitionWindow
@@ -27,12 +26,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 63344b28026579e4b3e99b513a99c99d14617a64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 41c11025e22c1288387862fa138b35efbbca8557
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902771"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924952"
 ---
 # <a name="view-the-structure-of-code-by-using-different-tool-windows"></a>Zobrazení struktury kódu pomocí různých oken nástrojů
 
@@ -110,121 +109,121 @@ Pomocí rozevíracího seznamu na panelu nástrojů můžete zadat rozsah hierar
 
 V hlavním podokně se zobrazí volání a z metody a v podokně **volat weby** se zobrazí umístění vybraného volání. Pro členy, kteří jsou virtuální nebo abstraktní, se zobrazí uzel **název metody přepsání** . Pro členy rozhraní se zobrazí uzel **implementující název metody** .
 
-Okno **hierarchie volání** nenalezne odkazy na skupiny metod, které obsahují místo, kde je metoda přidána jako obslužná rutina události nebo je přiřazena delegátovi. K vyhledání těchto odkazů použijte příkaz **Najít všechny odkazy** .
+Okno **hierarchie volání** nenalezne odkazy na skupiny metod, které obsahují místo, kde je metoda přidána jako obslužná rutina události nebo je přiřazena delegátovi. K vyhledání těchto odkazů použijte příkaz **Najít všechny** odkazy.
 
-Místní nabídka v okně **hierarchie volání** obsahuje následující příkazy:
+Místní nabídka v okně **Hierarchie volání** obsahuje následující příkazy:
 
 |Název|Description|
 |-|-|
 |**Přidat jako nový kořen**|Přidá vybraný uzel jako nový kořenový uzel.|
-|**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu.|
-|**Přejít k definici**|Přejde k původní definici metody.|
-|**Najít všechny odkazy**|Najde v projektu všechny odkazy na vybranou metodu.|
-|**Kopírovat**|Zkopíruje vybraný uzel (ale ne jeho poduzely).|
+|**Odebrání kořenového adresáře**|Odebere vybraný kořenový uzel z podokna stromového zobrazení.|
+|**Přejít k definici**|Přejde na původní definici metody.|
+|**Najít všechny odkazy**|Vyhledá v projektu všechny odkazy na vybranou metodu.|
+|**Kopírovat**|Zkopíruje vybraný uzel (ale ne jeho dílčí uzly).|
 |**Aktualizovat**|Aktualizuje informace.|
 
 ## <a name="object-browser"></a><a name="BKMK_ObjectBrowser"></a> Prohlížeč objektů
 
-V okně **Prohlížeč objektů** se zobrazí popisy kódu v projektech.
+V **okně Prohlížeče** objektů se zobrazí popisy kódu v projektech.
 
-Pomocí rozevíracího seznamu v horní části okna můžete filtrovat komponenty, které chcete zobrazit. Vlastní komponenty mohou zahrnovat spustitelné soubory spravovaného kódu, sestavení knihoven, knihovny typů a soubory *. ocx* . Není možné přidat vlastní součásti C++.
+Součásti, které chcete zobrazit, můžete filtrovat pomocí rozevíracího seznamu v horní části okna. Vlastní komponenty mohou zahrnovat spustitelné soubory spravovaného kódu, sestavení knihoven, knihovny typů a *soubory .ocx.* Vlastní komponenty jazyka C++ není možné přidat.
 
 ::: moniker range="vs-2017"
 
-Vlastní nastavení se ukládají v adresáři aplikace Visual Studio User, *%AppData%\Microsoft\VisualStudio\15.0\ObjBrowEX.dat*.
+Vlastní nastavení se ukládají v adresáři aplikace uživatele Visual Studio, *%APPDATA%\Microsoft\VisualStudio\15.0\ObjBrowEX.dat.*
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Vlastní nastavení se ukládají v adresáři aplikace Visual Studio User, *%AppData%\Microsoft\VisualStudio\16.0\ObjBrowEX.dat*.
+Vlastní nastavení se ukládají v adresáři aplikace uživatele Visual Studio, *%APPDATA%\Microsoft\VisualStudio\16.0\ObjBrowEX.dat.*
 
 ::: moniker-end
 
-V levém podokně **Prohlížeč objektů** se zobrazují sestavení. Rozbalením sestavení můžete zobrazit obory názvů, které obsahují, a poté rozšířit obory názvů tak, aby se zobrazily typy, které obsahují. Když vyberete typ, jeho členové (například vlastnosti a metody) jsou uvedeny v pravém podokně. V pravém dolním podokně se zobrazí podrobné informace o vybrané položce.
+V levém podokně Prohlížeče **objektů se** zobrazují sestavení. Můžete rozbalit sestavení a zobrazit obory názvů, které obsahují, a poté rozbalit obory názvů, aby se zobrazí typy, které obsahují. Když vyberete typ, jeho členy (například vlastnosti a metody) se zobrazí v pravém podokně. V pravém dolním podokně se zobrazí podrobné informace o vybrané položce.
 
-Konkrétní položku můžete vyhledat pomocí **vyhledávacího** pole v horní části okna. Při hledání se nerozlišují malá a velká písmena. Výsledky hledání se zobrazí v levém podokně. Hledání vymažete tak, že kliknete na tlačítko **Vymazat vyhledávání** (**X**) vedle pole **hledání** .
+Konkrétní položku můžete vyhledat pomocí **vyhledávacího** pole v horní části okna. Při hledání se malá a velká písmena nerozlišovat. Výsledky hledání se zobrazí v levém podokně. Pokud chcete hledání vymazat, zvolte **tlačítko Vymazat hledání** (**X**) vedle **vyhledávacího** pole.
 
-**Prohlížeč objektů** sleduje výběry, které jste provedli, a můžete přecházet mezi jednotlivými výběry pomocí tlačítek **vpřed** a **zpět** na panelu nástrojů.
+Prohlížeč **objektů sleduje** výběry, které jste provedli, a můžete mezi  nimi  procházet pomocí tlačítek Vpřed a Zpět na panelu nástrojů.
 
-Můžete použít **Prohlížeč objektů** pro přidání odkazu na sestavení do otevřeného řešení tak, že vyberete položku (sestavení, obor názvů, typ nebo člen) a kliknete na tlačítko **Přidat odkaz** na panelu nástrojů.
+Prohlížeč objektů  můžete použít k přidání odkazu na sestavení do otevřeného řešení tak, že vyberete  položku (sestavení, obor názvů, typ nebo člen) a zvolíte tlačítko Přidat odkaz na panelu nástrojů.
 
-### <a name="object-browser-settings"></a>Nastavení Prohlížeč objektů
+### <a name="object-browser-settings"></a>Nastavení prohlížeče objektů
 
-Pomocí tlačítka **Prohlížeč objektů nastavení** na panelu nástrojů můžete zadat jedno z následujících zobrazení:
+Pomocí tlačítka **Nastavení prohlížeče objektů** na panelu nástrojů můžete zadat jedno z následujících zobrazení:
 
 |Název|Description|
 |-|-|
-|**Zobrazit obory názvů**|Zobrazuje obory názvů místo fyzických kontejnerů v levém podokně. Obory názvů uložené ve více fyzických kontejnerech jsou sloučeny.|
-|**Zobrazit kontejnery**|Zobrazí v levém podokně fyzické kontejnery, nikoli obory názvů. **Zobrazit obory názvů** a **kontejnery zobrazení** se vzájemně exkluzivním nastavením.|
-|**Zobrazit základní typy**|Zobrazí základní typy.|
-|**Zobrazit skryté typy a členy**|Zobrazí skryté typy a členy (nejsou určeny pro klienty), v světle šedého textu.|
+|**Zobrazení oborů názvů**|Zobrazí v levém podokně obory názvů místo fyzických kontejnerů. Sloučí se obory názvů uložené ve více fyzických kontejnerech.|
+|**Zobrazení kontejnerů**|V levém podokně se zobrazí fyzické kontejnery místo oborů názvů. **Zobrazení oborů názvů** **a kontejnerů zobrazení** se vzájemně vylučují.|
+|**Zobrazení základních typů**|Zobrazí základní typy.|
+|**Zobrazení skrytých typů a členů**|Zobrazí skryté typy a členy (nezamýšlené pro klienty) ve světle šedém textu.|
 |**Zobrazit veřejné členy**|Zobrazí veřejné členy.|
-|**Zobrazit chráněné členy**|Zobrazí chráněné členy.|
-|**Zobrazit soukromé členy**|Zobrazí soukromé členy.|
-|**Zobrazit ostatní členy**|Zobrazí další typy členů, včetně interních členů (nebo přítele v Visual Basic).|
-|**Zobrazit zděděné členy**|Zobrazí zděděné členy.|
-|**Zobrazit metody rozšíření**|Zobrazí metody rozšíření.|
+|**Zobrazení chráněných členů**|Zobrazí chráněné členy.|
+|**Zobrazit soukromé členy**|Zobrazí privátní členy.|
+|**Zobrazit ostatní členy**|Zobrazí další typy členů, včetně interních členů (nebo přátel v Visual Basic členů).|
+|**Zobrazení zděděných členů**|Zobrazí zděděné členy.|
+|**Zobrazení rozšiřujících metod**|Zobrazí rozšiřující metody.|
 
-### <a name="object-browser-shortcut-menu-commands"></a>Příkazy místní nabídky Prohlížeč objektů
+### <a name="object-browser-shortcut-menu-commands"></a>Příkazy místní nabídky prohlížeče objektů
 
-Místní nabídka (nebo kliknutí pravým tlačítkem myši) v **Prohlížeč objektů** může obsahovat následující příkazy v závislosti na zvoleném typu položky:
+Místní nabídka (nebo kliknutí pravým tlačítkem) v **Prohlížeči** objektů může obsahovat následující příkazy v závislosti na typu vybrané položky:
 
 |Název|Description|
 |-|-|
-|**Procházet definici**|Zobrazuje primární uzel pro vybranou položku.|
-|**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
-|**Filtrovat podle typu**|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat tak, že kliknete na tlačítko **Vymazat hledání** .|
+|**Definice procházení**|Zobrazuje primární uzel pro vybranou položku.|
+|**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v **okně Najít** výsledky.|
+|**Filtrovat na typ**|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat výběrem tlačítka **Vymazat** hledání.|
 |**Kopírovat**|Zkopíruje plně kvalifikovaný název položky.|
-|**Odebrat**|Pokud je oborem vlastní sada komponent, aplikace Odebere vybranou komponentu z oboru.|
-|**Seřadit abecedně**|Zobrazí seznam typů a členů abecedně podle názvu.|
-|**Seřadit podle typu objektu**|Seznam typů a členů v pořadí podle typu (takové třídy předcházejí rozhraní, rozhraní před delegáty a metody předcházejí vlastností).|
-|**Seřadit podle přístupu k objektům**|Zobrazí seznam typů a členů v pořadí podle typu přístupu, jako je například Public nebo Private.|
+|**Odebrat**|Pokud je oborem sada vlastních komponent, odebere vybranou komponentu z oboru.|
+|**Seřadit abecedně**|Vypíše typy a členy abecedně podle názvu.|
+|**Seřadit podle typu objektu**|Vypíše typy a členy v pořadí podle typu (tak, aby třídy předcházely rozhraním, rozhraním předcházely delegátům a metody předcházely vlastnostem).|
+|**Řazení podle přístupu k objektům**|Vypíše typy a členy v pořadí podle typu přístupu, například veřejné nebo soukromé.|
 |**Seskupit podle typu objektu**|Seřadí typy a členy do skupin podle typu objektu.|
-|**Přejít k deklaraci** (jenom projekty C++)|Zobrazí deklaraci typu nebo člena ve zdrojovém kódu, pokud je k dispozici.|
+|**Přejít na deklaraci** (pouze projekty C++)|Zobrazí deklaraci typu nebo členu ve zdrojovém kódu, pokud je k dispozici.|
 |**Přejít k definici**|Zobrazí definici typu nebo členu ve zdrojovém kódu, pokud je k dispozici.|
-|**Přejít na odkaz**|Zobrazí odkaz na typ nebo člen ve zdrojovém kódu, pokud je k dispozici.|
-|**Zobrazit hierarchii volání**|Zobrazí vybranou metodu v okně **hierarchie volání** .|
+|**Přejít na referenční informace**|Zobrazí odkaz na typ nebo člen ve zdrojovém kódu, pokud je k dispozici.|
+|**Zobrazení hierarchie volání**|Zobrazí vybranou metodu v **okně Hierarchie** volání.|
 
-## <a name="code-definition-window-c"></a>Okno Definice kódu (C++)
+## <a name="code-definition-window-c"></a>okno Definice kódu (C++)
 
-V okně **definice kódu** se zobrazí definice vybraného typu nebo členu jazyka C++ v aktivním projektu. Typ nebo člen může být vybrán v editoru kódu nebo v okně zobrazení kódu.
+V **okně Definice** kódu se zobrazí definice vybraného typu nebo člena C++ v aktivním projektu. Typ nebo člen lze vybrat v editoru kódu nebo v okně zobrazení kódu.
 
-I když je toto okno jen pro čtení, můžete v něm nastavit zarážky nebo záložky. Chcete-li změnit zobrazenou definici, v místní nabídce vyberte možnost **Upravit definici** . Tím se otevře zdrojový soubor v editoru kódu a přesune se kurzor na řádek, kde začíná definice.
+I když je toto okno jen pro čtení, můžete v tomto okně nastavit zarážky nebo záložky. Pokud chcete upravit zobrazenou definici, zvolte **v** místní nabídce Upravit definici. Tím se zdrojový soubor otevře v editoru kódu a přesune se kurzor na řádek, kde začíná definice.
 
 > [!NOTE]
-> Počínaje sadou Visual Studio 2015 lze okno **definice kódu** použít pouze s kódem jazyka C++.
+> Počínaje Visual Studio 2015 lze okno **Definice kódu** použít pouze s kódem C++.
 
 ### <a name="code-definition-shortcut-menu"></a>Místní nabídka definice kódu
 
-Místní nabídka (nebo kliknutí pravým tlačítkem myši) v okně **definice kódu** může obsahovat následující příkazy:
+Místní nabídka (nebo kliknutí pravým tlačítkem) v **okně Definice kódu** může obsahovat následující příkazy:
 
 |Název|Description|
 |-|-|
 |**Rychlé akce a refaktoringy**||
 |**Přejmenovat**||
-|**Generovat graf souborů zahrnutí**||
+|**Generování grafu zahrnutých souborů**||
 |**Náhled definice**||
-|**Přejít k definici**|Najde definici (nebo definice) pro částečné třídy a zobrazí je v okně **výsledků hledání** .|
-|**Přejít k deklaraci**||
-|**Najít všechny odkazy**|Najde odkazy na typ nebo člena v řešení.|
-|**Zobrazit hierarchii volání**|Zobrazí metodu v okně **hierarchie volání** .|
-|**Přepnout hlavičku/soubor s kódem**||
-|**Spustit testy**|Pokud v projektu existují testy jednotek, spustí testy pro vybraný kód.|
-|**Ladit testy**||
-|**Bodu**|Vloží zarážku (nebo zarážka s trasováním).|
-|**Spustit ke kurzoru**|Spustí program v režimu ladění do umístění kurzoru.|
+|**Přejít k definici**|Vyhledá definici (nebo definice pro částečné třídy) a zobrazí je v **okně Najít** výsledky.|
+|**Přejít na deklaraci**||
+|**Najít všechny odkazy**|Vyhledá odkazy na typ nebo člen v řešení.|
+|**Zobrazení hierarchie volání**|Zobrazí metodu v **okně Hierarchie** volání.|
+|**Přepnout hlavičku / soubor kódu**||
+|**Spouštění testů**|Pokud jsou v projektu testy jednotek, spustí testy pro vybraný kód.|
+|**Ladění testů**||
+|**Zarážka**|Vloží zarážku (nebo trasovací bod).|
+|**Spuštění na kurzor**|Spustí program v režimu ladění do umístění kurzoru.|
 |**Fragment kódu**||
-|**Vyjmutí**, **zkopírování** a **vložení**||
+|**Vyjmutí,** **kopírování,** **vložení**||
 |**Poznámka**||
-|**Sbalování**|Standardní příkazy pro sbalení.|
-|**Prohledat znovu**||
-|**Upravit definici**|Přesune kurzor do definice v okně Code (kód).|
-|**Zvolit kódování**|Otevře okno **kódování** , aby bylo možné nastavit kódování souboru.|
+|**Sbalování**|Standardní příkazy osnovy.|
+|**Prohledat**||
+|**Upravit definici**|Přesune kurzor na definici v okně kódu.|
+|**Volba kódování**|Otevře **okno Kódování,** abyste mohli nastavit kódování souboru.|
 
 ## <a name="document-outline-window"></a>Okno Osnova dokumentu
 
-Můžete použít okno **Osnova dokumentu** ve spojení s zobrazeními návrháře, jako je například Návrhář pro stránku XAML nebo Návrhář formuláře Windows nebo se stránkami HTML. V tomto okně se zobrazí prvky ve stromovém zobrazení, takže můžete zobrazit logickou strukturu formuláře nebo stránky a vyhledat ovládací prvky, které jsou hluboko vložené nebo skryté.
+Okno Osnova dokumentu můžete **použít** ve spojení se zobrazeními návrháře, například návrhářem pro stránku XAML nebo návrhářem formulářů Windows nebo se stránkami HTML. Toto okno zobrazí prvky ve stromovém zobrazení, abyste mohli zobrazit logickou strukturu formuláře nebo stránky a najít ovládací prvky, které jsou hluboko vložené nebo skryté.
 
 ## <a name="see-also"></a>Viz také
 

@@ -3,88 +3,93 @@ title: Použití účtů, které vyžadují vícefaktorové ověřování
 ms.date: 05/27/2020
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
-description: Naučte se používat Visual Studio s účty, které vyžadují službu Multi-Factor Authentication.
+description: Naučte se používat Visual Studio s účty, které vyžadují vícefaktorové ověřování.
 author: j-martens
 ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 6935c2f37f75f0318ec9402c3fcd0ff763555032
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 9ac42ccff8c7bffcc22c453002aad1caf6935d28
+ms.sourcegitcommit: e4630a3bb89b4d606fe2cbd709bc773c5b538b78
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296011"
+ms.lasthandoff: 06/26/2021
+ms.locfileid: "112975674"
 ---
-# <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Jak používat Visual Studio s účty, které vyžadují Multi-Factor Authentication
+# <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Jak používat Visual Studio s účty, které vyžadují vícefaktorové ověřování
 
-Při spolupráci s externími uživateli typu Host je vhodné chránit aplikace a data pomocí zásad **podmíněného přístupu (CA)** , jako je **VÍCEFAKTOROVÉ ověřování (MFA)**.  
+Při spolupráci s externími uživateli guest je vhodné chránit vaše aplikace a data pomocí zásad podmíněného **přístupu,** jako je vícefaktorové ověřování **(MFA).**  
 
-Po povolení budou uživatelé typu Host potřebovat k přístupu k prostředkům více než jenom uživatelské jméno a heslo a musí splňovat další požadavky na zabezpečení. Zásady vícefaktorového ověřování je možné vynucovat na úrovni tenanta, aplikace nebo jednotlivých uživatelů typu host úplně stejným způsobem, jako když se používají u členů vaší organizace. 
+Po povolení budou uživatelé hosta potřebovat více než jen uživatelské jméno a heslo pro přístup k vašim prostředkům a musí splňovat další požadavky na zabezpečení. Zásady vícefaktorového ověřování je možné vynucovat na úrovni tenanta, aplikace nebo jednotlivých uživatelů typu host úplně stejným způsobem, jako když se používají u členů vaší organizace. 
 
-## <a name="how-is-the-visual-studio-experience-affected-by-mfa-policies"></a>Jak se v prostředí sady Visual Studio ovlivňují zásady MFA?
-Verze sady Visual Studio starší než 16,6 mohou mít degradované ověřování při použití s účty, které mají povolené zásady certifikační autority, jako je MFA, a jsou přidruženy ke dvěma nebo více klientům.
+## <a name="how-is-the-visual-studio-experience-affected-by-mfa-policies"></a>Jak jsou Visual Studio prostředí ovlivněné zásadami MFA?
+Verze Visual Studio starší než 16.6 mohou mít možnosti degradování ověřování při použití s účty, které mají povolené zásady certifikační autority, jako je MFA, a jsou přidružené ke dvěma nebo více tenantům.
 
-Tyto problémy mohou způsobit, že vaše instance aplikace Visual Studio bude opakovaně zobrazovat výzvu k opakovanému ověření za den. Možná budete muset znovu zadat svoje přihlašovací údaje pro dřív ověřené klienty, a to i v průběhu stejné relace sady Visual Studio.
+Tyto problémy mohou způsobit, že vaše instance Visual Studio několikrát denně znovu vyzvat k opakovaného ověření. Je možné, že budete muset znovu zadat přihlašovací údaje pro dříve ověřené tenanty, a to i v průběhu Visual Studio relace.
 
-## <a name="using-visual-studio-with-mfa-policies"></a>Používání sady Visual Studio se zásadami vícefaktorového ověřování
-Ve vydané verzi 16,6 jsme do sady Visual Studio 2019 přidali nové funkce, které zjednodušují přístup uživatelů k prostředkům zabezpečeným prostřednictvím zásad certifikační autority, jako je MFA. Pokud chcete použít tento rozšířený pracovní postup, musíte se přihlásit k používání výchozího webového prohlížeče vašeho systému jako mechanismu pro přidání a opětovné ověření účtů sady Visual Studio.  
+## <a name="using-visual-studio-with-mfa-policies"></a>Použití Visual Studio se zásadami MFA
+Ve verzi 16.6 jsme do Visual Studio 2019 přidali nové možnosti, které zjednodušují přístup uživatelů k prostředkům zabezpečeným prostřednictvím zásad certifikační autority, jako je MFA. Pokud chcete tento vylepšený pracovní postup použít, budete se muset přihlásit k používání výchozího webového prohlížeče systému jako mechanismu pro přidání a opětovné ověření Visual Studio účtů.  
 
 > [!WARNING]
-> Nepoužíváte-li tento pracovní postup, může dojít k tomu, že při přidávání nebo opětovném ověřování účtů sady Visual Studio dojde k vyvolání omezeného prostředí s výzvou k dalšímu ověřování. 
+> Pokud tento pracovní postup nepoužít, může to aktivovat degradované prostředí, které vede k několika dalším výzvám k ověření při přidávání nebo opětovném ověřování Visual Studio účtů. 
 
-### <a name="enabling-system-web-browser"></a>Povoluje se webový prohlížeč systému.
+### <a name="enabling-system-web-browser"></a>Povolení systémového webového prohlížeče
 
 > [!NOTE] 
-> Pro dosažení co nejlepších výsledků doporučujeme, abyste před pokračováním v tomto pracovním postupu vymazali výchozí data webového prohlížeče v systému. Pokud navíc máte pracovní nebo školní účty v nastavení Windows 10 v části přístup do **práce nebo do školy**, ověřte prosím, jestli jsou správně ověřené.
+> Pro co nejlepší prostředí doporučujeme před pokračováním v tomto pracovním postupu vymazat výchozí data webového prohlížeče vašeho systému. Kromě toho, pokud máte pracovní nebo školní účty v nastavení Windows 10 v části Přístup do práce nebo do školy **,** ověřte, že jsou správně ověřené.
 
-Chcete-li povolit tento pracovní postup, v dialogovém okně Možnosti sady Visual Studio **(nástroje > možnosti...)** vyberte kartu **účty** a v části **Přidat a znovu ověřit účty pomocí:** rozevírací seznam vyberte **systém webový prohlížeč** . 
+Pokud chcete tento pracovní postup povolit, přejděte do dialogového okna Možnosti Visual Studio **(Nástroje > Možnosti...),** vyberte kartu Účty a v rozevíracím seznamu Přidat a znovu ověřovat účty **pomocí:** vyberte Systémový webový prohlížeč.   
 
 :::image type="content" source="media/select-system-web-browser.png" alt-text="V nabídce vyberte systémový webový prohlížeč.":::
 
-### <a name="sign-into-additional-accounts-with-mfapolicies"></a>Přihlášení k dalším účtům se zásadami vícefaktorového ověřování 
-Až bude pracovní postup webového prohlížeče zapnutý, můžete se v dialogovém okně nastavení účtu **(soubor > nastavení účtu)** přihlásit nebo přidat účty do sady Visual Studio obvyklým způsobem.   
+### <a name="sign-into-additional-accounts-with-mfapolicies"></a>Přihlášení k dalším účtům pomocí zásad MFA 
+Po povolení pracovního postupu systémového webového prohlížeče se můžete přihlásit nebo přidat účty do služby Visual Studio běžným způsobem prostřednictvím dialogového okna Nastavení účtu **(Soubor > Nastavení účtu...).**   
 </br>
-:::image type="content" source="media/add-personalization-account.png" alt-text="Přidejte nový účet přizpůsobení do sady Visual Studio." border="false":::
+:::image type="content" source="media/add-personalization-account.png" alt-text="Přidejte nový účet přizpůsobení do Visual Studio." border="false":::
 
-Tato akce otevře výchozí webový prohlížeč vašeho systému, požádá vás, abyste se přihlásili ke svému účtu a ověřili všechny požadované zásady vícefaktorového ověřování.
+Tato akce otevře výchozí webový prohlížeč vašeho systému, požádá vás o přihlášení ke svému účtu a ověření všech požadovaných zásad MFA.
 
-Během procesu přihlašování se může zobrazit další výzva s výzvou, abyste si mohli zůstat přihlášeni. Tato výzva se nejspíš zobrazí při druhém použití účtu k přihlášení. Chcete-li minimalizovat nutnost opětovného zadání přihlašovacích údajů, doporučujeme vybrat možnost **Ano**, protože tím zajistíte, aby se vaše přihlašovací údaje zachovaly napříč relacemi prohlížeče.
+Během procesu přihlašování se může zobrazit další výzva s výzvou, abyste zůstali přihlášeni. Tato výzva se pravděpodobně zobrazí při druhém přihlášení účtu. Pokud chcete minimalizovat potřebu znovu zadávat přihlašovací údaje, doporučujeme vybrat **Ano,** protože tím zajistíte, že se vaše přihlašovací údaje zachovají napříč relacemi prohlížeče.
 
-:::image type="content" source="media/kmsi.png" alt-text="Máte zůstat přihlášeni?":::
+:::image type="content" source="media/kmsi.png" alt-text="Zůstat přihlášeni?":::
 
-V závislosti na vašich vývojářských aktivitách a konfiguraci prostředků se může při vaší relaci stále zobrazovat výzva k zadání přihlašovacích údajů. K tomu může dojít, když přidáte nový prostředek, nebo se pokusíte získat přístup k prostředku, aniž jste předtím splnili požadavky na autorizaci CA nebo MFA.
+Na základě vašich vývojových aktivit a konfigurace prostředků se může během relace zobrazit výzva k opětovnému zadání přihlašovacích údajů. K tomu může dojít při přidání nového prostředku nebo pokusu o přístup k prostředku bez předchozího splnění požadavků na autorizaci certifikační autority nebo MFA.
 
 ## <a name="reauthenticating-an-account"></a>Opětovné ověření účtu  
-Pokud dojde k potížím s vaším účtem, může Visual Studio požádat o znovu zadání přihlašovacích údajů k účtu.  
+Pokud dojde k problému s vaším účtem, Visual Studio požádat o opětovné zadání přihlašovacích údajů k účtu.  
 
-:::image type="content" source="media/reauthenticate-account.png" alt-text="Znovu ověřte svůj účet sady Visual Studio.":::
+:::image type="content" source="media/reauthenticate-account.png" alt-text="Znovu Visual Studio účet.":::
 
-Po kliknutí na znovu **zadat přihlašovací údaje** se otevře výchozí webový prohlížeč vašeho systému a pokusí se automaticky aktualizovat vaše přihlašovací údaje. Pokud to neproběhne úspěšně, zobrazí se výzva, abyste se přihlásili ke svému účtu a ověřili všechny požadované zásady CA/MFA.
+Kliknutím na **Znovu zadat přihlašovací údaje** otevřete výchozí webový prohlížeč vašeho systému a pokuste se přihlašovací údaje automaticky aktualizovat. V případě neúspěchu budete požádáni o přihlášení ke svému účtu a ověření všech požadovaných zásad ca/MFA.
 
 > [!NOTE] 
-> Pro dosažení co nejlepších výsledků Udržujte prohlížeč otevřený, dokud nebudou pro vaše prostředky ověřeny všechny zásady certifikační autority nebo ověřování. Zavření prohlížeče může mít za následek ztrátu dříve vytvořeného stavu MFA a může vyžadovat další výzvy k autorizaci.
+> Pokud chcete mít nejlepší prostředí, nechte prohlížeč otevřený, dokud se pro vaše prostředky neověřují všechny zásady CA/MFA. Zavřením prohlížeče může dojít ke ztrátě dříve vytvořeného stavu MFA a může se zobrazit výzva k další autorizaci.
 
-## <a name="how-to-opt-out-of-using-a-specific-azure-active-directory-tenant-in-visual-studio"></a>Odhlášení od použití konkrétního tenanta Azure Active Directory v aplikaci Visual Studio
+## <a name="how-to-opt-out-of-using-a-specific-azure-active-directory-tenant-in-visual-studio"></a>Jak vyjádřit výslovný nesouhlas s používáním konkrétního tenanta Azure Active Directory v Visual Studio
 
-Visual Studio 2019 verze 16,6 nabízí flexibilitu pro vyfiltrování konkrétních klientů, které je skrývá ze sady Visual Studio. Filtrování eliminuje nutnost ověřování u tohoto tenanta, ale také znamená, že nebudete mít přístup k žádným přidruženým prostředkům. 
+Visual Studio 2019 verze 16.6 nabízí flexibilitu odfiltrovat tenanty jednotlivě nebo globálně a efektivně je schovávat od Visual Studio. Filtrování eliminuje potřebu ověřování u tohoto tenanta, ale také to znamená, že nebudete mít přístup k žádným přidruženým prostředkům.
 
-Tato funkce je užitečná v případě, že máte více tenantů, ale chcete optimalizovat vývojové prostředí tím, že zacílíte na určitou podmnožinu. Může také pomáhat v případech, kdy nemůžete ověřit konkrétní zásadu certifikační autority nebo MFA, protože je možné vyfiltrovat problematického klienta. 
+Tato funkce je užitečná, když máte více tenantů, ale chcete optimalizovat vývojové prostředí cílením na konkrétní podmnožinu. Může vám to také pomoct v případech, kdy nemůžete ověřit konkrétní zásady CA/MFA, protože můžete odfiltrovat urážejícího tenanta. 
 
-### <a name="how-to-filter-out-a-tenant"></a>Jak odfiltrovat tenanta
-Chcete-li filtrovat klienty přidružené k vašemu účtu aplikace Visual Studio, otevřete dialogové okno nastavení účtu **(soubor > nastavení účtu...)** a klikněte na tlačítko **použít filtr**. 
+### <a name="how-to-filter-out-all-tenants"></a>Jak odfiltrovat všechny tenanty
+Pokud chcete globálně odfiltrovat všechny tenanty, otevřete dialogové okno Nastavení účtu (Nastavení účtu **>...)** a zrušte zaškrtnutí políčka Ověřit ve všech **adresářích Azure Active** Directory.
+
+Zrušením výběru této možnosti zajistíte, že se budete ověřovat jenom u výchozího tenanta účtu. Také to znamená, že nebudete mít přístup k žádným prostředkům přidruženým k jiným tenantům, na které váš účet může být host.
+
+### <a name="how-to-filter-out-individual-tenants"></a>Jak odfiltrovat jednotlivé tenanty
+Pokud chcete filtrovat tenanty přidružené k vašemu Visual Studio, otevřete dialogové okno Nastavení účtu (Nastavení účtu **>...)** a klikněte na **Použít filtr**. 
 </br>
 </br>
 
-:::image type="content" source="media/apply-filter.png" alt-text="Použít filtr" border="false":::
+:::image type="content" source="media/apply-filter.png" alt-text="Použijte filtr." border="false":::
 
-Zobrazí se dialogové okno **účtu filtru** , ve kterém můžete vybrat klienty, které chcete používat s vaším účtem. 
+Zobrazí **se dialogové** okno Filtrovat účet, ve kterém můžete vybrat tenanty, které chcete se svým účtem používat. 
 
 :::image type="content" source="media/select-filter-account.png" alt-text="Vyberte účet, který chcete filtrovat.":::
 
 ## <a name="see-also"></a>Viz také
 
 - [Přihlášení k sadě Visual Studio](signing-in-to-visual-studio.md)
-- [Přihlášení k Visual Studio pro Mac](/visualstudio/mac/signing-in)
+- [Přihlaste se k Visual Studio pro Mac](/visualstudio/mac/signing-in)
 - [Práce s několika uživatelskými účty](work-with-multiple-user-accounts.md)

@@ -1,40 +1,38 @@
 ---
 title: Spouštění testů částí pomocí Průzkumníka testů
-description: Naučte se spouštět testy pomocí Průzkumníka testů v aplikaci Visual Studio. V tomto tématu se dozvíte, jak povolit automatické testovací běhy po sestavení, zobrazení výsledků testů, seskupení a filtrování seznamu testů, vytvoření seznamů a používání testovacích zástupců.
+description: Naučte se spouštět testy pomocí Průzkumníka testů v Visual Studio. Toto téma popisuje, jak povolit automatické testovací běhy po sestavení, zobrazit výsledky testů, seskupit a filtrovat seznam testů, vytvářet seznamy stop a používat klávesové zkratky pro testy.
 ms.date: 07/14/2020
 ms.topic: how-to
-f1_keywords:
-- vs.unittesting.testexplorer.overview
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 05a850b0c88a39366805ff892fb698f637b3bbe1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26dbed25f42f40614597075ad26c855398b56025
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836329"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925121"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
-Pomocí Průzkumníka testů spusťte testy jednotek ze sady Visual Studio nebo projektů testování částí třetích stran. Můžete také použít Průzkumníka testů k seskupení testů do kategorií, filtrování seznamu testů a vytváření, ukládání a spouštění seznamů testů. Můžete také analyzovat pokrytí kódu a [ladit testy jednotek](../test/debug-unit-tests-with-test-explorer.md).
+Pomocí Průzkumníka testů můžete spouštět testy jednotek Visual Studio nebo jiných projektů testů jednotek. Pomocí Průzkumníka testů můžete také seskupit testy do kategorií, filtrovat seznam testů a vytvářet, ukládat a spouštět seznamy testů. Můžete také analyzovat pokrytí kódu a [ladit testy jednotek](../test/debug-unit-tests-with-test-explorer.md).
 
-**Průzkumník testů** může spustit testy z více projektů testů v řešení a z testovacích tříd, které jsou součástí projektů produkčního kódu. Testovací projekty mohou používat různé architektury testování částí. Při zápisu testovaného kódu pro rozhraní .NET může být testovací projekt napsán v jakémkoli jazyce, který také cílí na rozhraní .NET bez ohledu na jazyk cílového kódu. Nativní projekty kódu C/C++ musí být testovány pomocí rozhraní pro testování částí v jazyce C++.
+**Průzkumník testů** může spouštět testy z více projektů testů v řešení a z testovacích tříd, které jsou součástí projektů produkčního kódu. Projekty testů mohou používat různé architektury testování částí. Když je kód v rámci testu napsán pro .NET, projekt testů může být napsán v libovolném jazyce, který také cílí na .NET, bez ohledu na jazyk cílového kódu. Nativní projekty kódu C/C++ se musí testovat pomocí architektury testování částí jazyka C++.
 
 ## <a name="build-your-test-project"></a>Sestavení testovacího projektu
 
-Pokud ještě nemáte projekt testů nastavený v řešení sady Visual Studio, musíte nejprve vytvořit a sestavit testovací projekt.
+Pokud ještě nemáte ve svém testovacím řešení nastavený projekt Visual Studio, musíte nejprve vytvořit a sestavit testovací projekt.
 
-- [Začínáme s testováním částí (.NET)](../test/getting-started-with-unit-testing.md)
+- [Začínáme s testováním jednotek (.NET)](../test/getting-started-with-unit-testing.md)
 - [Zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md)
 
-Visual Studio obsahuje rozhraní pro testování částí společnosti Microsoft pro spravovaný i nativní kód. Nicméně Průzkumník testů může také spustit libovolné rozhraní testování částí, které implementovalo adaptér Průzkumníka testů. Další informace o instalaci rozhraní pro testování částí třetích stran najdete v tématu [instalace rozhraní pro testování částí třetích stran](../test/install-third-party-unit-test-frameworks.md) .
+Visual Studio obsahuje rozhraní Microsoftu pro testování částí pro spravovaný i nativní kód. Průzkumník testů ale může také spustit libovolné rozhraní testování částí, které má implementované adaptéry Průzkumníka testů. Další informace o instalaci testovacích architektur jednotek třetích stran najdete v tématu Instalace rozhraní testování částí [třetích stran.](../test/install-third-party-unit-test-frameworks.md)
 
-## <a name="run-tests-in-test-explorer"></a>Spustit testy v Průzkumníku testů
+## <a name="run-tests-in-test-explorer"></a>Spouštění testů v Průzkumníku testů
 
-Při sestavování testovacího projektu se testy zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **okna** a zvolte možnost **Průzkumník testů** (nebo stiskněte klávesovou **zkratku CTRL**  +  **E**, **T**).
+Když sestavíte projekt testů, zobrazí se testy v Průzkumníku testů. Pokud průzkumník testů není  viditelný, v nabídce Visual Studio vyberte Test, zvolte **Windows** a pak zvolte **Průzkumník** testů (nebo stiskněte **Ctrl**  +  **E,** **T).**
 
 ::: moniker range="vs-2017"
 ![Průzkumník testů jednotek](../test/media/ute_failedpassednotrunsummary.png)
@@ -44,19 +42,19 @@ Při sestavování testovacího projektu se testy zobrazí v Průzkumníku test�
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-Při spuštění, zápisu a opětovném spuštění testů se v Průzkumníku testů zobrazí výsledky ve výchozích skupinách **neúspěšných testů**, **Úspěšné testy**, **přeskočené testy** a **nespouštějí se testy**. Můžete změnit způsob, jakým Průzkumník testů seskupí testy.
+Když testy spustíte, napíšete a znovu spustíte, Průzkumník testů zobrazí výsledky  ve výchozích skupinách neúspěšných testů **,** úspěšně provedených **testů,** přeskočení testů a nespouštěných **testů.** Můžete změnit způsob, jakým Průzkumník testů seskupuje testy.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Při spuštění, zápisu a opětovném spuštění testů zobrazuje Průzkumník testů výsledky ve výchozím seskupení **projektu**, **oboru názvů** a **třídy**. Můžete změnit způsob, jakým Průzkumník testů seskupí testy.
+Při spouštění, zápisu a opětovném spouštění testů zobrazí Průzkumník testů výsledky ve výchozím seskupení **projektů,** oborů **názvů** a **třídy**. Můžete změnit způsob, jakým Průzkumník testů seskupuje testy.
 ::: moniker-end
 
-Na panelu nástrojů **Průzkumníka testů** můžete provádět spoustu práce při hledání, organizování a spouštění testů.
+Velkou část práce při hledání, uspořádání a spouštění testů můžete provádět na panelu nástrojů **Průzkumníka** testů.
 
 ::: moniker range="vs-2017"
-![Spustit testy z panelu nástrojů Průzkumníka testů](../test/media/ute_toolbar.png)
+![Spouštění testů z panelu nástrojů Průzkumníka testů](../test/media/ute_toolbar.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Spustit testy z panelu nástrojů Průzkumníka testů](../test/media/vs-2019/test-explorer-toolbar-diagram-16-2.png)
+![Spouštění testů z panelu nástrojů Průzkumníka testů](../test/media/vs-2019/test-explorer-toolbar-diagram-16-2.png)
 ::: moniker-end
 
 ### <a name="run-tests"></a>Spouštění testů
@@ -64,93 +62,93 @@ Na panelu nástrojů **Průzkumníka testů** můžete provádět spoustu práce
 ::: moniker range="vs-2017"
 Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte některou z následujících akcí:
 
-- Chcete-li spustit všechny testy v řešení, zvolte možnost **Spustit vše** (nebo stiskněte klávesovou **zkratku CTRL** + **R**, **V**).
+- Pokud chcete spustit všechny testy v řešení, zvolte **Spustit vše** (nebo stiskněte **Ctrl** + **R**, **V).**
 
-- Chcete-li spustit všechny testy ve výchozí skupině, zvolte možnost **Spustit** a poté vyberte skupinu v nabídce.
+- Pokud chcete spustit všechny testy ve výchozí skupině, zvolte **Spustit** a pak v nabídce zvolte skupinu.
 
-- Vyberte jednotlivé testy, které chcete spustit, otevřete nabídku kliknutím pravým tlačítkem pro vybraný test a pak zvolte možnost **Spustit vybrané testy** (nebo stiskněte klávesovou **zkratku CTRL** + **R**, **T**).
+- Vyberte jednotlivé testy, které chcete spustit, otevřete nabídku po kliknutí pravým tlačítkem pro vybraný test a pak zvolte Spustit **vybrané** testy (nebo stiskněte **Ctrl** + **R,** **T).**
 
-- Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![Snímek obrazovky s přepínačem paralelního spuštění testu na panelu nástrojů Visual Studio Test Explorer. Pokud je vybráno toto tlačítko, testy budou spuštěny paralelně.](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+- Pokud jednotlivé testy nemají žádné závislosti, které by zabránily jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů pomocí ![Snímek obrazovky s přepínacím tlačítkem Paralelní provádění testů na Visual Studio panelu nástrojů Průzkumníka testů Když je toto tlačítko vybrané, testy poběží paralelně.](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může znatelně zkrátit dobu, po které se spustí všechny testy.
 
-V horní části okna **Průzkumníka testů** je animovaný **řádek Pass/selhat** , protože testy jsou spouštěny. Při uzavírání testovacího běhu se **pruh úspěch/selhání** změní na zelený, pokud všechny testy proběhly úspěšně, nebo pokud dojde k selhání testu na červenou.
+Panel **pro průchod/selhání** v horní části okna **Průzkumníka testů** je při spuštění testů animovaný. V závěru testovacího běhu se barva pruhu **pro průchod/selhání** změní na zelenou, pokud všechny testy proběhly úspěšně nebo zčervena, pokud některý test selhal.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte některou z následujících akcí:
 
-- Chcete-li spustit všechny testy v řešení, zvolte ikonu **Spustit vše** (nebo stiskněte klávesu **CTRL** + **R**, **V**).
+- Pokud chcete spustit všechny testy v řešení, zvolte ikonu **Spustit vše** (nebo stiskněte **Ctrl** + **R**, **V).**
 
-- Chcete-li spustit všechny testy ve výchozí skupině, zvolte ikonu **spuštění** a pak zvolte skupinu v nabídce.
+- Pokud chcete spustit všechny testy ve výchozí skupině, zvolte **ikonu Spustit** a pak v nabídce zvolte skupinu.
 
-- Vyberte jednotlivé testy, které chcete spustit, otevřete nabídku kliknutím pravým tlačítkem pro vybraný test a pak zvolte možnost **Spustit vybrané testy** (nebo stiskněte klávesovou **zkratku CTRL** + **R**, **T**).
+- Vyberte jednotlivé testy, které chcete spustit, otevřete nabídku po kliknutí pravým tlačítkem pro vybraný test a pak zvolte Spustit **vybrané** testy (nebo stiskněte **Ctrl** + **R,** **T).**
 
-- Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní spuštění testů v nabídce nastavení na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+- Pokud jednotlivé testy nemají žádné závislosti, které by zabránily jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů v nabídce nastavení na panelu nástrojů. To může znatelně zkrátit dobu, po které se spustí všechny testy.
 ::: moniker-end
 
-### <a name="run-tests-after-every-build"></a>Spustit testy po každém sestavení
+### <a name="run-tests-after-every-build"></a>Spouštění testů po každém sestavení
 ::: moniker range="vs-2017"
 |Tlačítko|Description|
 |-|-|
-|![Spustit po sestavení](../test/media/ute_runafterbuild_btn.png)|Chcete-li spustit testy jednotek po každém místním sestavení, zvolte možnost **test** v nabídce Standard a pak zvolte možnost **Spustit testy po sestavení** na panelu nástrojů **Průzkumníka testů** .|
+|![Spuštění po sestavení](../test/media/ute_runafterbuild_btn.png)|Pokud chcete testy jednotek spustit po každém místním sestavení, zvolte  **Test** ve standardní nabídce a pak na panelu nástrojů **Průzkumník** testů zvolte Spustit testy po sestavení.|
 
 > [!NOTE]
-> Spuštění testů jednotek po každém sestavení vyžaduje Visual Studio 2017 Enterprise nebo Visual Studio 2019. V aplikaci Visual Studio 2019 je součástí komunity a Professional i Enterprise.
+> Spouštění testů jednotek po každém sestavení vyžaduje Visual Studio 2017 Enterprise nebo Visual Studio 2019. V Visual Studio 2019 je součástí Community a Professional i Enterprise.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Chcete-li spustit testy jednotek po každém místním sestavení, otevřete ikonu nastavení na panelu nástrojů Průzkumníka testů a vyberte možnost **Spustit testy po sestavení**.
+Pokud chcete testy jednotek spustit po každém místním sestavení, otevřete ikonu nastavení na panelu nástrojů Průzkumníka testů a vyberte **Spustit testy po sestavení**.
 ::: moniker-end
 
-## <a name="view-test-results"></a>Zobrazit výsledky testu
+## <a name="view-test-results"></a>Zobrazení výsledků testů
 
-Když spouštíte, píšete a znovu spustíte testy, Průzkumník testů zobrazí výsledky ve skupinách **neúspěšných testů**, **úspěšných testů**, **přeskočených testů** a **nespustí testy**. Podokno podrobností v dolní nebo boční části Průzkumníka testů zobrazuje souhrn testovacího běhu.
+Když testy spustíte, napíšete a znovu spustíte, Průzkumník testů zobrazí výsledky  ve skupinách neúspěšných **testů,** úspěšně provedených **testů,** přeskočení testů a nespouštěných **testů.** V podokně podrobností v dolní nebo boční části Průzkumníka testů se zobrazí souhrn testovacího běhu.
 
-### <a name="view-test-details"></a>Zobrazit podrobnosti testu
+### <a name="view-test-details"></a>Zobrazení podrobností testu
 
-Chcete-li zobrazit podrobnosti o jednotlivých testech, vyberte test.
+Pokud chcete zobrazit podrobnosti o jednotlivém testu, vyberte test.
 
 ::: moniker range="vs-2017"
-![Podrobnosti spuštění testu](../test/media/ute_testdetails.png)
+![Podrobnosti o spuštění testu](../test/media/ute_testdetails.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Podrobnosti spuštění testu](../test/media/vs-2019/test-explorer-detail.png)
+![Podrobnosti o spuštění testu](../test/media/vs-2019/test-explorer-detail.png)
 ::: moniker-end
 
 V podokně podrobností testu se zobrazí následující informace:
 
 - Název zdrojového souboru a číslo řádku testovací metody.
 
-- Stav testu.
+- Stav testu
 
-- Uplynulý čas, po který trvalo spuštění testovací metody.
+- Uplynulý čas, který testovací metoda trvala ke spuštění.
 
-Pokud se test nezdařil, podokno podrobností také obsahuje:
+Pokud test selže, zobrazí se v podokně podrobností také:
 
-- Zpráva vrácená jednotkou testu jednotek pro test.
+- Zpráva vrácená architekturou testování částí pro test.
 
-- Trasování zásobníku v době, kdy se test nezdařil.
+- Trasování zásobníku v době, kdy test selhal.
 
-### <a name="view-the-source-code-of-a-test-method"></a>Zobrazit zdrojový kód testovací metody
+### <a name="view-the-source-code-of-a-test-method"></a>Zobrazení zdrojového kódu testovací metody
 
-Chcete-li zobrazit zdrojový kód testovací metody v editoru sady Visual Studio, vyberte test a pak zvolte možnost **Otevřít test** v nabídce klepněte pravým tlačítkem myši (nebo stiskněte klávesu **F12**).
+Pokud chcete zobrazit zdrojový kód testovací metody v editoru Visual Studio, vyberte  test a pak v nabídce po kliknutí pravým tlačítkem zvolte Otevřít test (nebo stiskněte **F12).**
 
 ## <a name="group-and-filter-the-test-list"></a>Seskupení a filtrování seznamu testů
 
-Průzkumník testů umožňuje seskupit testy do předdefinovaných kategorií. Většina rozhraní testů jednotek, která běží v Průzkumníku testů, vám umožní definovat vlastní kategorie a páry kategorií a hodnot pro seskupení testů. Můžete také filtrovat seznam testů porovnáním řetězců s vlastnostmi testu.
+Průzkumník testů umožňuje seskupit testy do předdefinovaných kategorií. Většina architektur testování částí, které běží v Průzkumníku testů, umožňuje definovat vlastní kategorie a páry kategorií a hodnot pro seskupení testů. Seznam testů můžete také filtrovat porovnáním řetězců s vlastnostmi testu.
 
-### <a name="group-tests-in-the-test-list"></a>Seskupit testy v seznamu testů
+### <a name="group-tests-in-the-test-list"></a>Seskupení testů v seznamu testů
 
 ::: moniker range="vs-2017"
-Chcete-li změnit způsob, jakým jsou testy uspořádány, zvolte šipku dolů vedle **tlačítka skupina pro tlačítko** ![ test Průzkumníka ](../test/media/ute_groupby_btn.png) a vyberte Nová kritéria seskupení.
+Pokud chcete změnit způsob uspořádání testů, zvolte šipku dolů vedle tlačítka Seskupit podle Tlačítko skupiny Průzkumník testů a vyberte nová  ![ ](../test/media/ute_groupby_btn.png) kritéria seskupení.
 
-![Seskupit testy podle kategorie v Průzkumníku testů](../test/media/ute_groupbycategory.png)
+![Seskupení testů podle kategorie v Průzkumníku testů](../test/media/ute_groupbycategory.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Průzkumník testů umožňuje seskupit testy do hierarchie. Výchozím seskupením hierarchie je **projekt**, **obor názvů** a **Třída**. Chcete-li změnit způsob, jakým jsou testy uspořádány, zvolte tlačítko **Seskupit v** ![ Průzkumníku testu ](../test/media/ute_groupby_btn.png) a vyberte Nová kritéria seskupení.
+Průzkumník testů umožňuje seskupit testy do hierarchie. Výchozí seskupení hierarchií je **Projekt,** **Obor názvů** a **třída**. Pokud chcete změnit způsob uspořádání testů, zvolte tlačítko Seskupit podle Skupina Průzkumníka testů a vyberte nová  ![ ](../test/media/ute_groupby_btn.png) kritéria seskupení.
 
-![Seskupit testy podle kategorie v Průzkumníku testů](../test/media/vs-2019/test-explorer-groupby-162.png)
+![Seskupení testů podle kategorie v Průzkumníku testů](../test/media/vs-2019/test-explorer-groupby-162.png)
 
-Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak **třídou** , například výběrem možnosti Seskupit podle v upřednostňovaném pořadí.
+Můžete definovat vlastní úrovně hierarchie a seskupit podle **State** a pak třída, například výběrem možnosti Seskupit podle v upřednostňovaném pořadí. 
 
-![Snímek obrazovky s Průzkumníkem testů sady Visual Studio zobrazující hierarchii testů v jednom podokně a v nabídce Seskupit podle v druhé s vybranými možnostmi třídy a stavu.](../test/media/vs-2019/test-explorer-groupby-state-16-2.png)
+![Snímek obrazovky Visual Studio s hierarchií testů v jednom podokně a s nabídkou Seskupit podle v druhém s zaškrtnutou možností Třída a Stav](../test/media/vs-2019/test-explorer-groupby-state-16-2.png)
 ::: moniker-end
 
 ### <a name="test-explorer-groups"></a>Skupiny Průzkumníka testů
@@ -158,16 +156,16 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 ::: moniker range="vs-2017"
 |Skupina|Popis|
 |-|-----------------|
-|**Doba trvání**|Seskupuje test podle doby spuštění: **rychlá**, **střední** a **pomalá**.|
-|**Zaznamenaný**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
-|**Traits**|Seskupí testy podle párů kategorií/hodnot, které definujete. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
-|**Projekt**|Seskupí testy podle názvu projektů.|
+|**Doba trvání**|Seskupuje test podle doby **provádění: Rychlá,** **Střední** a **Pomalá.**|
+|**Výsledek**|Seskupí testy podle výsledků spuštění: **Neúspěšné testy,** **Přeskočené testy,** **Úspěšně prošly testy.**|
+|**Vlastnosti**|Seskupí test podle párů kategorií a hodnot, které definujete. Syntaxe pro určení kategorií vlastností a hodnot je definována architekturou testování částí.|
+|**Projekt**|Skupiny testuje podle názvu projektů.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 |Skupina|Popis|
 |-|-----------------|
 |**Doba trvání**|Seskupí testy podle doby spuštění: **rychlá**, **střední** a **pomalá**.|
-|**State**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
+|**Stav**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
 |**Cílová architektura** | Seskupí testy podle cíle v rámci svých projektů. |
 |**Obor názvů**|Seskupí testy podle obsahujícího oboru názvů.|
 |**Projekt**|Seskupí testy podle obsahujícího projektu.|
@@ -318,7 +316,7 @@ Filtrování podle různých kritérií:
 ::: moniker range=">=vs-2019"
 |Kvalifikátor|Description|
 |-|-----------------|
-|**State**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**Stav**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
 |**Projekt**|Vyhledá shody v názvech projektů testů.|

@@ -1,11 +1,9 @@
 ---
 title: Přechod na řádek
-description: Přečtěte si o dialogovém okně Přejít na řádek a o tom, jak vám umožňuje přejít na konkrétní řádek v aktivním dokumentu.
+description: Přečtěte si o dialogovém okně Přejít na řádek a o tom, jak můžete přejít na konkrétní řádek v aktivním dokumentu.
 ms.custom: SEO-VS-2020
 ms.date: 05/18/2018
 ms.topic: reference
-f1_keywords:
-- vs.gotoline
 helpviewer_keywords:
 - code, locating lines
 - Go To Line dialog box
@@ -15,22 +13,22 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fa2cc2555f87d1781712e60463401a38f843635e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4fffe6f453dc179d363e9f3aaba0f6582d821750
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889925"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925199"
 ---
 # <a name="go-to-line-dialog-box"></a>Přejít na řádek – dialogové okno
 
-Dialogové okno **Přejít na řádek** umožňuje přejít na konkrétní řádek v aktivním dokumentu. Pokud chcete získat přístup k tomuto dialogovému oknu, otevřete dokument pro úpravy a potom vyberte **Upravit**  >  **Přejít na**  >  **řádek** nebo stiskněte **kombinaci kláves CTRL +** + **G**.
+Dialogové **okno Přejít** na řádek umožňuje přejít na konkrétní řádek v aktivním dokumentu. Pokud chcete toto dialogové okno otevřít, otevřete dokument pro úpravy a pak vyberte Upravit Přejít na řádek  >    >   nebo stiskněte **Ctrl** + **G.**
 
-![Dialogové okno Přejít na řádek v aplikaci Visual Studio](media/go-to-line-dialog-box.png)
+![Dialogové okno Přejít na řádek v Visual Studio](media/go-to-line-dialog-box.png)
 
-## <a name="line-number-1---n"></a>Číslo řádku (1- \<n> )
+## <a name="line-number-1---n"></a>Číslo řádku (1 – \<n> )
 
-Do pole **číslo řádku (1 – \<n> )** zadejte číslo řádku v aktivním dokumentu, na který chcete přejít. Zadané číslo musí být v aktuálním dokumentu v rozmezí 1 až poslední číslo řádku.
+Do **pole Číslo řádku (1 – \<n> )** zadejte číslo řádku v aktivním dokumentu, na který chcete přejít. Zadané číslo musí spadat mezi 1 a posledním číslem řádku v aktuálním dokumentu.
 
 ## <a name="see-also"></a>Viz také
 
