@@ -1,7 +1,10 @@
 ---
 title: Prostředí příkazového řádku & výzvy pro vývojáře
 description: Začněte z nabídky nástroje > nabídce příkazového řádku. Visual Studio Developer Command Prompt, vývojové prostředí PowerShell a terminál vám umožní snadněji používat nástroje .NET a C++.
-ms.date: 04/11/2021
+author: TerryGLee
+ms.author: tglee
+ms.date: 06/11/2021
+ms.topic: reference
 ms.custom: contperf-fy21q4
 helpviewer_keywords:
 - Visual Studio command prompt
@@ -11,12 +14,12 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: 57cbc93f4b6e8cf64dd5149462788e0cde833350
-ms.sourcegitcommit: 52b093e000334f53d87c6165d1418347e4f45dec
+ms.openlocfilehash: 858845ca5629f64e282e3864daa0201935316062
+ms.sourcegitcommit: b4cc3dee59421f7089112becf128a369acadaf61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "107221728"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "112990516"
 ---
 # <a name="visual-studio-developer-command-prompt-and-developer-powershell"></a>Visual Studio Developer Command Prompt a vývojové prostředí PowerShell
 
