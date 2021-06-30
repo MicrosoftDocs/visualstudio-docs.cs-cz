@@ -1,31 +1,40 @@
 ---
-title: Použití přemostění na Kubernetes s využitím sady Visual Studio
-titleSuffix: ''
+title: 'Kurz: propojení vývojových počítačů s mostem do Kubernetes'
 ms.technology: vs-azure
 ms.date: 03/24/2021
-ms.topic: quickstart
-description: Naučte se, jak pomocí mostu Kubernetes se sadou Visual Studio připojit váš vývojový počítač k clusteru Kubernetes.
+ms.topic: tutorial
+description: Připojte svůj vývojový počítač k Kubernetes clusteru s mostem na Kubernetes se sadou Visual Studio.
 keywords: Přemostění do Kubernetes, Azure Dev Spaces, vývojových prostorů, Docker, Kubernetes, Azure, Containers
 monikerRange: '>=vs-2019'
 ms.author: ghogen
 author: ghogen
 manager: jmartens
-ms.openlocfilehash: fdcf31d062fe2be72709979f0892e6a7f535024a
-ms.sourcegitcommit: 2049ec99f1439ec91d002853226934b067b1ee70
+ms.openlocfilehash: b8d6c98d2e2146ad57871b74cd2d522ed2b04259
+ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105635030"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113046115"
 ---
-# <a name="use-bridge-to-kubernetes"></a>Použití mostu na Kubernetes
+# <a name="tutorial-use-bridge-to-kubernetes-to-connect-your-clusters-and-your-development-computers"></a>Kurz: použití přemostění k Kubernetes k připojení clusterů a vašich vývojových počítačů
 
-Pomocí mostu pro Kubernetes můžete přesměrovat provoz mezi clusterem Kubernetes a kódem běžícím na vašem vývojovém počítači. Tato příručka také poskytuje skript pro nasazení rozsáhlé ukázkové aplikace s více mikroslužbami v clusteru Kubernetes.
+V tomto kurzu se naučíte, jak pomocí mostu pro Kubernetes přesměrovat provoz mezi clusterem Kubernetes a kódem běžícím na vašem vývojovém počítači. 
 
-## <a name="before-you-begin"></a>Než začnete
+Tato příručka také poskytuje skript pro nasazení rozsáhlé ukázkové aplikace s více mikroslužbami v clusteru Kubernetes.
 
-Tato příručka používá [ukázkovou aplikaci TODO][todo-app-github] k předvedení připojení vývojového počítače ke clusteru Kubernetes. Pokud už máte svoji vlastní aplikaci spuštěnou v clusteru Kubernetes, můžete postupovat podle následujících kroků a používat i názvy vlastních služeb.
+Přečtěte si další informace o mostu pro Kubernetes s článkem, [Jak funguje most na Kubernetes](overview-bridge-to-kubernetes.md).
 
-Tato ukázka předvádí, jak se dá přemostění na Kubernetes použít k vývoji verze mikroslužby jednoduché aplikace TODO v jakémkoli clusteru Kubernetes. Tato ukázka, pomocí sady Visual Studio, byla přizpůsobena z kódu poskytnutého pomocí [TodoMVC](http://todomvc.com). Tyto kroky by měly fungovat s jakýmkoli clusterem Kubernetes.
+## <a name="prerequisites"></a>Požadavky
+
+- Cluster Kubernetes
+- [Visual Studio 2019][visual-studio] verze 16,7 Preview 4 nebo novější běžící ve Windows 10.
+- [Přemostění do nainstalovaného rozšíření Kubernetes][btk-extension]
+
+## <a name="about-the-data"></a>Informace o datech
+
+V tomto kurzu se používá most k Kubernetes k vývoji verze mikroslužeb jednoduché ukázkové aplikace TODO v jakémkoli clusteru Kubernetes. Tato [ukázková aplikace TODO][todo-app-github]s použitím sady Visual Studio byla přizpůsobena z kódu poskytovaného pomocí [TodoMVC](http://todomvc.com). 
+
+ Tyto kroky by měly fungovat s jakýmkoli clusterem Kubernetes. Takže pokud už máte svoji vlastní aplikaci spuštěnou v clusteru Kubernetes, můžete postupovat podle následujících kroků a používat i názvy vlastních služeb.
 
 Ukázka aplikace TODO se skládá z front-endu a back-endu, který zajišťuje trvalé úložiště. Tato rozšířená ukázka přidá komponentu statistiky a ukončí aplikaci na několik mikroslužeb, konkrétně:
 
@@ -37,15 +46,10 @@ Ukázka aplikace TODO se skládá z front-endu a back-endu, který zajišťuje t
 
 U všech se tato rozšířená aplikace TODO skládá ze šesti vzájemně souvisejících komponent.
 
-### <a name="prerequisites"></a>Požadavky
-
-- cluster Kubernetes
-- [Visual Studio 2019][visual-studio] verze 16,7 Preview 4 nebo novější běžící ve Windows 10.
-- Byl [nainstalován most do rozšíření Kubernetes][btk-extension].
 
 ## <a name="check-the-cluster"></a>Ověřit cluster
 
-Otevřete příkazový řádek a ověřte, že je kubectl nainstalovaný a v cestě je cluster, který chcete použít, dostupný a připravený a nastavte kontext na tento cluster.
+Otevřete příkazový řádek a ověřte, že `kubectl` je nainstalovaný a v cestě je cluster, který chcete použít, dostupný a připravený a nastavte kontext na tento cluster.
 
 ```cmd
 kubectl cluster-info

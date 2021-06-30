@@ -1,6 +1,6 @@
 ---
 title: Spuštění sady Visual Studio pomocí DTE
-description: Naučte se spouštět Visual Studio pomocí DTE pro podporu souběžných instalací hlavních verzí. Tento článek obsahuje příklad kódu.
+description: Zjistěte, jak Visual Studio používat DTE k podpoře vedlejších instalací hlavních verzí. Tento článek obsahuje příklad kódu.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 04/26/2019
@@ -10,32 +10,32 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 253c7f106f1d139f694fea3d469385f200c84029
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: b3f5aa141d73879e61a06e7a2b19f03bd53243a7
+ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903109"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113046024"
 ---
 # <a name="launch-visual-studio-using-dte"></a>Spuštění sady Visual Studio pomocí DTE
 
-Počínaje sadou Visual Studio 2017 se mechanismus pro spuštění sady Visual Studio pomocí DTE liší od spuštění předchozích verzí sady Visual Studio. Tato změna je nezbytná, protože Visual Studio 2017 a novější podporuje souběžné instalace hlavních verzí (například můžete mít nainstalovanou verzi Preview a prodejní verzi nainstalovanou vedle sebe).
+Od Visual Studio 2017 se mechanismus spuštění Visual Studio pomocí DTE liší od spuštění předchozích verzí Visual Studio. Tato změna je nezbytná, protože Visual Studio 2017 a novější podporuje vedle sebe instalace hlavních verzí (například můžete mít nainstalovanou verzi Preview a verzi vedle sebe).
 
-Zbývající část tohoto článku ukazuje kód, který můžete použít ke spuštění sady Visual Studio 2019 pomocí DTE.
+Zbývající část tohoto článku ukazuje kód, který můžete použít ke spuštění Visual Studio 2019 pomocí DTE.
 
 ## <a name="set-up-the-project"></a>Nastavení projektu
 
-Chcete-li zobrazit kód spuštění v akci, vytvořte projekt pomocí následujících kroků.
+Pokud chcete zobrazit spouštěcí kód v akci, vytvořte projekt pomocí těchto kroků.
 
-1. Vytvoří nový projekt **konzolové aplikace** pro .NET Framework.
+1. Vytvořte nový projekt **Konzolová** aplikace pro .NET Framework.
 
-2. Nainstalujte [Microsoft.VisualStudio.Setup.Configuration. ](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) Balíček NuGet pro spolupráci a přidejte odkaz na sestavení.
+2. Nainstalujte [Microsoft.VisualStudio.Setup.Configuration. Zprostředkovatele](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) komunikace s balíčkem NuGet a přidání odkazu na sestavení
 
 3. Přidejte odkaz na EnvDTE.
 
-4. Vložte [vzorový kód](#example-code) , který následuje do souboru *program. cs* .
+4. Do [souboru](#example-code) *Program.cs* vložte následující příklad kódu.
 
-5. Stisknutím klávesy **F5** program spusťte. Před ukončením programu by se měla zobrazit aplikace Visual Studio 2019 Open.
+5. Stisknutím **klávesy F5** spusťte program. Před ukončením Visual Studio 2019 by se měl zobrazit otevřený soubor 2019.
 
 ## <a name="example-code"></a>Příklad kódu
 
@@ -158,10 +158,7 @@ namespace ConsoleLauncherApp
             {
                 ISetupInstance[] setupInstances = new ISetupInstance[1];
                 enumerator.Next(1, setupInstances, out count);
-                if (count == 1 &&
-                    setupInstances != null &&
-                    setupInstances.Length == 1 &&
-                    setupInstances[0] != null)
+                if (count == 1 && setupInstances[0] != null)
                 {
                     yield return setupInstances[0];
                 }
@@ -179,9 +176,6 @@ namespace ConsoleLauncherApp
         {
             [DllImport("ole32.dll")]
             public static extern int CreateBindCtx(uint reserved, out IBindCtx ppbc);
-
-            [DllImport("ole32.dll")]
-            public static extern void GetRunningObjectTable(int reserved, out IRunningObjectTable prot);
         }
     }
 }
@@ -190,4 +184,4 @@ namespace ConsoleLauncherApp
 ## <a name="see-also"></a>Viz také
 
 - [Vyhledání sady Visual Studio](locating-visual-studio.md)
-- [Návod: přístup k objektu DTE z rozšíření editoru](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)
+- [Návod: Přístup k objektu DTE z rozšíření editoru](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)

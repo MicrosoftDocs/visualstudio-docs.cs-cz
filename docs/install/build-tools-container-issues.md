@@ -5,19 +5,19 @@ ms.date: 02/18/2020
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 140083f1-05bc-4014-949e-fb5802397c7a
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 338d7a19bf613ee2b2432fba6b635cf0c46eb008
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a56d820805fa97f3672480c063ebfcc0fdc96fb6
+ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868644"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113046089"
 ---
 # <a name="known-issues-for-containers"></a>Známé problémy pro kontejnery
 
@@ -29,7 +29,7 @@ Při instalaci Visual Studio Build Tools do kontejneru Windows dochází k násl
 
 ::: moniker range="vs-2017"
 
-* Nejde nainstalovat Visual Studio do kontejneru založeného na Image Microsoft/windowsservercore: 10.0.14393.1593. Obrázky označené verzemi Windows před nebo po 10.0.14393 by měly fungovat.
+* Visual Studio se nedá nainstalovat do kontejneru založeného na mcr.microsoft.com/windows/servercore:10.0.14393.1593 imagí. Obrázky označené verzemi Windows před nebo po 10.0.14393 by měly fungovat.
 
 * Nemůžete nainstalovat Windows SDK verze 10.0.14393 nebo starší. Některé balíčky se nedaří nainstalovat a úlohy, které na těchto balíčcích závisejí, nebudou fungovat.
 
@@ -38,7 +38,7 @@ Při instalaci Visual Studio Build Tools do kontejneru Windows dochází k násl
 * Předat `-m 2GB` (nebo další) při sestavování obrázku. Některé úlohy vyžadují při instalaci více paměti, než je výchozí 1 GB.
 * Nakonfigurujte Docker tak, aby používal disky větší než výchozí 20 GB.
 * Předat `--norestart` na příkazovém řádku. V rámci tohoto psaní se při pokusu o restartování kontejneru Windows z kontejneru vrátí `ERROR_TOO_MANY_OPEN_FILES` do hostitele.
-* Pokud bitovou kopii založíte přímo na Microsoft/windowsservercore, .NET Framework se nemusí správně nainstalovat a nebude se naznačit žádná chyba instalace. Spravovaný kód se po dokončení instalace nemusí spustit. Místo toho použijte obrázek na bázi [Microsoft/DotNET-Framework: 4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Jako příklad se může zobrazit chyba při sestavování s nástrojem MSBuild, který je podobný následujícímu:
+* Pokud image založíte přímo na mcr.microsoft.com/windows/servercore, .NET Framework se nemusí správně nainstalovat a nebude k dispozici žádná chyba instalace. Spravovaný kód se po dokončení instalace nemusí spustit. Místo toho použijte obrázek na bázi [Microsoft/DotNET-Framework: 4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Jako příklad se může zobrazit chyba při sestavování s nástrojem MSBuild, který je podobný následujícímu:
 
   > C:\BuildTools\MSBuild\15.0\bin\Roslyn\Microsoft.CSharp.Core.targets (84, 5): Chyba MSB6003: nelze spustit zadaný spustitelný soubor úlohy csc.exe. Nelze načíst soubor nebo sestavení System. IO. FileSystem, verze = 4.0.1.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a ' nebo jedna z jeho závislostí. Systém nemůže najít zadaný soubor.
 
