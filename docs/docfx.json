@@ -68,18 +68,14 @@
       "feedback_system": "None",
       "feedback_product_url": "https://developercommunity2.visualstudio.com/search?space=8",
       "breadcrumb_path": "/visualstudio/_breadcrumb/toc.json",
-      "bilingual_type": "hover over",
       "extendBreadcrumb": "true",
-      "manager": "jillfra",
-      "author": "jillre",
-      "ms.author": "jillfra",
-      "ms.date": "11/16/2016",
+      "manager": "jmartens",
       "ms.topic": "conceptual",
       "audience": "developer",
       "defaultDevLang": "csharp",
       "ms.prod": "visual-studio-windows",
       "uhfHeaderId": "MSDocsHeader-VisualStudio",
-      "titleSuffix": "Visual Studio",
+      "titleSuffix": "Visual Studio (Windows)",
       "toc_preview": true,
       "searchScope": [
         "VS IDE"
@@ -88,6 +84,7 @@
         "enable_uhf_ppe"
       ],
       "archive_url": "/previous-versions/visualstudio",
+      "bilingual_type": "hover over"
     },
     "fileMetadata": {
       "open_to_public_contributors": {
