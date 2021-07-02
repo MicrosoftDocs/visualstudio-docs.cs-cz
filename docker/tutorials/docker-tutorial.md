@@ -1,29 +1,28 @@
 ---
-title: Kurz Docker – Začínáme s Docker
-description: Podrobný kurz, který se zabývá základy práce s Docker a Visual Studio Code.
+title: 'Kurz: Začínáme s Docker & Visual Studio Code'
+description: Vícekroový kurz, který se zabývá základy práce s Dockerem s Visual Studio Code.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
-ms.topic: conceptual
+ms.topic: tutorial
 ms.workload:
 - azure
 next_page: app.md
-ms.openlocfilehash: 554badf01122b6c41d89c00b740574d28185e35e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 75a51f478e4e58700f6025dd6a87fcc38439ed87
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837967"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222653"
 ---
-# <a name="tutorial-get-started-with-docker"></a>Kurz: Začínáme s Docker
+# <a name="tutorial-get-started-with-docker"></a>Kurz: Začínáme s Dockerem
 
-V tomto kurzu se naučíte vytvářet a nasazovat aplikace v Docker, včetně použití více kontejnerů s databází, a používání Docker Compose. Do Azure nasadíte také svou kontejnerovou aplikaci.
+V tomto kurzu se dozvíte o vytváření a nasazování aplikací Dockeru, včetně použití více kontejnerů s databází a použití Docker Compose. Kontejnerizovanou aplikaci také nasadíte do Azure.
 
 ## <a name="start-the-tutorial"></a>Zahájení kurzu
 
-Pokud jste již spustili příkaz, abyste mohli začít s kurzem, Blahopřejeme!  V takovém případě otevřete příkazový řádek nebo okno bash a spusťte příkaz:
+Pokud jste už s tímto kurzem začali, blahopřejeme!  Pokud ne, otevřete příkazový řádek nebo okno Bash a spusťte příkaz:
 
 ```cli
 docker run -d -p 80:80 docker/getting-started
@@ -31,13 +30,13 @@ docker run -d -p 80:80 docker/getting-started
 
 Všimněte si, že se používá několik příznaků. Tady je několik dalších informací:
 
-- `-d` -spustit kontejner v odpojeném režimu (na pozadí)
-- `-p 80:80` – mapování portu 80 hostitele na port 80 v kontejneru
-- `docker/getting-started` – obrázek, který se má použít
+- `-d` – spuštění kontejneru v odpojeném režimu (na pozadí)
+- `-p 80:80` – namapování portu 80 hostitele na port 80 v kontejneru
+- `docker/getting-started` – image, která se má použít
 
 > [!TIP]
-> Pro zkrácení celého příkazu můžete kombinovat příznaky s jedním znakem.
-> Jako příklad můžete zapsat výše uvedený příkaz jako:
+> Pokud chcete zkrátit celý příkaz, můžete kombinovat příznaky s jedním znakem.
+> Například výše uvedený příkaz by mohl být napsán takto:
 >
 > ```cli
 > docker run -dp 80:80 docker/getting-started
@@ -45,33 +44,33 @@ Všimněte si, že se používá několik příznaků. Tady je několik dalšíc
 
 ## <a name="the-vs-code-extension"></a>Rozšíření VS Code
 
-Než bude příliš daleko, chceme zvýraznit rozšíření Docker VS Code, které vám poskytne rychlý přehled o kontejnerech spuštěných na vašem počítači. Poskytuje rychlý přístup k protokolům kontejnerů, umožňuje získat prostředí uvnitř kontejneru a umožňuje snadno spravovat životní cyklus kontejnerů (zastavit, odebrat atd.).
+Než zajdeme příliš daleko, chceme zvýraznit rozšíření Docker VS Code, které poskytuje rychlý přehled o kontejnerech spuštěných na vašem počítači. Poskytuje rychlý přístup k protokolům kontejnerů, umožňuje získat prostředí uvnitř kontejneru a umožňuje snadno spravovat životní cyklus kontejneru (zastavit, odebrat atd.).
 
-Pokud chcete získat přístup k rozšíření, postupujte podle pokynů uvedených [tady](https://code.visualstudio.com/docs/containers/overview). Pomocí ikony Docker na levé straně otevřete zobrazení Docker. Pokud teď rozšíření otevřete, zobrazí se tento kurz. Název kontejneru ( `angry_taussig` níže) je náhodně vytvořený název. To znamená, že budete mít pravděpodobně jiný název.
+Pokud chcete získat přístup k rozšíření, postupujte podle [těchto pokynů.](https://code.visualstudio.com/docs/containers/overview) Zobrazení Dockeru otevřete pomocí ikony Dockeru na levé straně. Pokud teď rozšíření otevřete, uvidíte, že tento kurz je spuštěný. Název kontejneru `angry_taussig` (níže) je náhodně vytvořený název. Pravděpodobně budete mít jiný název.
 
-![Kontejner kurzu běžící v rozšíření Docker](media/vs-tutorial-in-extension.png)
+![Kurz kontejneru spuštěného v rozšíření Dockeru](media/vs-tutorial-in-extension.png)
 
 ## <a name="what-is-a-container"></a>Co je kontejner
 
-Teď, když jste spustili kontejner, co *je* kontejner? Jednoduše řečeno, kontejner je v počítači jednoduše jiný proces, který je izolovaný od všech ostatních procesů na hostitelském počítači. Tato izolace využívá [obory názvů kernel a cgroups](https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504), funkce, které byly v systému Linux po dlouhou dobu. Docker pracoval za účelem zajištění přístupu k těmto funkcím a jejich snadnému používání.
+Když jste teď spouštěi kontejner, co *je* kontejner? Jednoduše řečeno, kontejner je jednoduše jiný proces na vašem počítači, který je izolovaný od všech ostatních procesů na hostitelském počítači. Tato izolace využívá [obory názvů jádra](https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504)a skupiny cgroup , funkce, které jsou v Linuxu už dlouhou dobu. Docker pracuje na tom, aby tyto možnosti byly přístupné a snadno použitelné.
 
 > [!NOTE]
-> **Vytváření kontejnerů od začátku** Pokud se chcete podívat, jak jsou kontejnery sestavené od začátku, má Lizá rýže z nástroje azurová Security video, ve kterém se vytvoří kontejner úplně od začátku v rámci služby přejděte:
+> **Vytváření kontejnerů od nuly** Pokud se chcete podívat, jak se kontejnery vytvářejí od nuly, Liz Sean ze společnosti Aqua Security obsahuje video, ve kterém v Go vytvoří kontejner od nuly:
 >
 > [!VIDEO https://www.youtube-nocookie.com/embed/8fi7uSYlOdc]
 
 ## <a name="what-is-a-container-image"></a>Co je image kontejneru
 
-Při spuštění kontejneru používá izolovaný systém souborů. Tento vlastní systém souborů je poskytován **imagí kontejneru**. Vzhledem k tomu, že bitová kopie obsahuje systém souborů kontejneru, musí obsahovat vše potřebné ke spuštění aplikace – všechny závislosti, konfigurace, skripty, binární soubory a tak dále. Obrázek obsahuje také další konfiguraci kontejneru, například proměnné prostředí, výchozí příkaz ke spuštění a další metadata.
+Při spuštění kontejneru používá izolovaný systém souborů. Tento vlastní systém souborů poskytuje image **kontejneru**. Vzhledem k tomu, že image obsahuje systém souborů kontejneru, musí obsahovat vše potřebné ke spuštění aplikace – všechny závislosti, konfigurace, skripty, binární soubory atd. Image obsahuje také další konfiguraci kontejneru, například proměnné prostředí, výchozí příkaz ke spuštění a další metadata.
 
-Budeme podrobně hlouběji na obrázky, a to i na témata, jako je vrstvení, osvědčené postupy a další.
+Obrázky se budeme hlouběji ponořit do dalších témat, jako jsou vrstvení, osvědčené postupy a další.
 
 > [!NOTE]
-> Pokud jste obeznámeni s `chroot` , můžete si kontejner představit jako rozšířenou verzi nástroje `chroot` . Systém souborů jednoduše přichází z obrázku. Kontejner ale přidává další izolaci, která není k dispozici, když jednoduše použijete chroot.
+> Pokud jste obeznámeni s , kontejner si `chroot` představte jako rozšířenou verzi `chroot` . Systém souborů jednoduše pochází z image. Kontejner ale přidá další izolaci, která není dostupná, když jednoduše použijete chroot.
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokračujte v tomto kurzu.
+Pokračujte kurzem!
 
 > [!div class="nextstepaction"]
 > [Aplikace](your-application.md)

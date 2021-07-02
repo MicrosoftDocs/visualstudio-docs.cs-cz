@@ -1,44 +1,43 @@
 ---
-title: 'Kurz Docker – část 3: sdílení vaší aplikace'
-description: Popisuje, jak sdílet image Docker pomocí registru Docker Hub.
+title: 'Kurz Dockeru – Část 3: Sdílení aplikace'
+description: Popisuje, jak sdílet image Dockeru pomocí Docker Hub registru.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: ad9f7d329bf00e3fadd665cefea22a2301fdf695
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d64d10c7abefc14f31c39c3b8397e95cec67e9f4
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061781"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222783"
 ---
 # <a name="share-your-app"></a>Sdílení aplikace
 
-Teď, když jsme sestavili image, můžeme se dát do sdílení! Pokud chcete sdílet image Docker, musíte použít registr Docker. Výchozím registrem je Docker Hub a tam, kde všechny image, které jsme použili, pochází.
+Když jsme teď image sestavili, můžeme ji sdílet. Ke sdílení imagí Dockeru musíte použít registr Dockeru. Výchozí registr je Docker Hub odkud pocházejí všechny image, které jsme použili.
 
-## <a name="create-a-repo"></a>Vytvoření úložiště
+## <a name="create-a-repo"></a>Vytvoření repo
 
-Pro nahrání obrázku nejdřív musíte vytvořit úložiště v Docker Hub.
+Abyste image nasadili, musíte nejprve ve virtuálním počítači vytvořit Docker Hub.
 
-1. Pokud potřebujete, můžete přejít do [centra Docker](https://hub.docker.com/signup/msftedge?utm_source=msftedge) a přihlásit se.
+1. Přejděte na [Docker Hub](https://hub.docker.com/signup/msftedge?utm_source=msftedge) a v případě potřeby se přihlaste.
 
-1. Klikněte na tlačítko **vytvořit úložiště** .
+1. Klikněte na **tlačítko Create Repository (Vytvořit** úložiště).
 
-1. Pro název úložiště použijte `getting-started` . Ujistěte se, že je viditelnost `Public` .
+1. Jako název repo použijte `getting-started` . Ujistěte se, že viditelnost je `Public` .
 
-1. Klikněte na tlačítko **vytvořit** .
+1. Klikněte na **tlačítko** Vytvořit.
 
-Pokud se podíváte na pravou stranu stránky, zobrazí se část s názvem **příkazy Docker**. To poskytuje příklad příkazu, který budete muset spustit pro vložení do tohoto úložiště.
+Pokud se podíváte na pravé straně stránky, uvidíte oddíl s názvem **Příkazy Dockeru.** Získáte tak příklad příkazu, který budete muset spustit, aby se do tohoto repo nasa udává.
 
-![Příkaz Docker s příkladem push](media/push-command.png)
+![Příklad příkazu Dockeru s nabízeným oznámením](media/push-command.png)
 
 ## <a name="push-the-image"></a>Nasdílení image
 
-1. V příkazovém řádku zkuste spustit příkaz push, který vidíte v Docker Hub. Všimněte si, že váš příkaz bude používat váš obor názvů, nikoli "Docker".
+1. Na příkazovém řádku zkuste spustit příkaz push, který vidíte na Docker Hub. Všimněte si, že váš příkaz bude používat váš obor názvů, ne docker.
 
     ```plaintext
     $ docker push docker/getting-started
@@ -46,57 +45,57 @@ Pokud se podíváte na pravou stranu stránky, zobrazí se část s názvem **p�
     An image does not exist locally with the tag: docker/getting-started
     ```
 
-    Proč to nebylo úspěšné? Příkaz push hledal obrázek s názvem Docker/Začínáme, ale nenašel ho. Pokud spustíte `docker image ls` , nezobrazí se žádné.
+    Proč se to nepovede? Příkaz push hledal image s názvem docker/getting-started, ale nepodařilo se ji najít. Pokud spustíte `docker image ls` , neuvidíte ani jedno.
 
-    Pokud to chcete opravit, musíte si "označit" svou stávající image, kterou jsme vytvořili, abychom jí poskytli jiný název.
+    Pokud chcete tento problém vyřešit, musíte stávající image, kterou jsme si právě sestavěli, označit tak, aby ji pojmechla jiným názvem.
 
-1. Přihlaste se k centru Docker pomocí příkazu `docker login -u <username>` .
+1. Přihlaste se k Docker Hub pomocí příkazu `docker login -u <username>` .
 
-1. Pomocí `docker tag` příkazu dejte `getting-started` obrázku nový název. Nezapomeňte se zaměňovat `<username>` s ID Docker.
+1. Pomocí `docker tag` příkazu dejte `getting-started` bitové kopii nový název. Nezapomeňte provést prohození `<username>` s ID Dockeru.
 
     ```bash
     docker tag getting-started <username>/getting-started
     ```
 
-1. Nyní zkuste znovu spustit příkaz pro vložení. Pokud kopírujete hodnotu z Docker Hub, můžete ji vyřadit `tagname` , protože jste do názvu image nepřidali značku. Pokud nezadáte značku, Docker použije značku s názvem `latest` .
+1. Teď zkuste příkaz push zopakovat. Pokud kopírujete hodnotu z Docker Hub, můžete část vypustit, protože jste k názvu image `tagname` nepřidáte značku. Pokud nezadáte značku, Docker použije značku s názvem `latest` .
 
     ```bash
     docker push <username>/getting-started
     ```
 
-    Místo příkazového řádku můžete také kliknout pravým tlačítkem myši na značku image v části **Image** zobrazení Docker **a zvolit příkaz** **připojit registr...** a pak **Docker Hub**.
+    Místo příkazového řádku můžete také kliknout pravým tlačítkem  na značku image v části Image v zobrazení Dockeru, zvolit **Push...**(Na push...), pak zvolit **Připojení registry... Docker Hub** **.**
 
-## <a name="run-the-image-on-a-new-instance"></a>Spustit image na nové instanci
+## <a name="run-the-image-on-a-new-instance"></a>Spuštění image v nové instanci
 
-Teď, když je image vytvořená a vložená do registru, zkuste aplikaci spustit na nové instanci, která tuto image kontejneru nikdy neviděla! K tomu budete používat Play s Docker.
+Teď, když je vaše image sestavená a naslaná do registru, zkuste aplikaci běžet na úplně nové instanci, která tuto image kontejneru nikdy neviděla. K tomu použijete Play s Dockerem.
 
-1. Otevřete prohlížeč a [začněte používat Docker](http://play-with-docker.com).
+1. Otevřete prohlížeč a [hrajte s Dockerem.](http://play-with-docker.com)
 
-1. Přihlaste se pomocí účtu Docker Hub.
+1. Přihlaste se pomocí Docker Hub účtu.
 
-1. Až budete přihlášeni, klikněte na odkaz "+ Přidat novou instanci" na levém panelu. (Pokud ho nevidíte, udělejte si prohlížeč trochu širším.) Po několika sekundách se v prohlížeči otevře okno terminálu.
+1. Po přihlášení klikněte na levém bočním panelu na odkaz + PŘIDAT NOVOU INSTANCI. (Pokud ji nevidíte, zohlédněte prohlížeč.) Po několika sekundách se v prohlížeči otevře okno terminálu.
 
-    ![Přehrát pomocí Docker Add New instance](media/pwd-add-new-instance.png)
+    ![Přehrávání s přidáním nové instance Dockeru](media/pwd-add-new-instance.png)
 
-1. V terminálu spusťte aplikaci čerstvou vloženou.
+1. V terminálu spusťte novou aplikaci.
 
     ```bash
     docker run -dp 3000:3000 <username>/getting-started
     ```
 
-    Měli byste vidět, že se image vypnula a nakonec začít.
+    Měli byste vidět, jak se obrázek stahuje a nakonec se spustí.
 
-1. Po zobrazení výzvy klikněte na označení 3000 a aplikaci byste měli vidět s vašimi změnami. Radostných! Pokud se nezobrazí znak 3000, můžete kliknout na tlačítko **otevřít port** a zadat 3000.
+1. Až se zobrazí, klikněte na odznčku 3000 a měli byste vidět aplikaci se svými úpravami. Hurá! Pokud se odznek 3000 neotevře, můžete kliknout na tlačítko **Otevřít port** a zadat text 3000.
 
 ## <a name="recap"></a>Rekapitulace
 
-V této části jste zjistili, jak sdílet image jejich vložením do registru. Pak jste přešli na značku nové instance a mohli jste spustit čerstvou vloženou image. To je poměrně běžné v kanálech CI, kde kanál vytvoří image a nahraje ji do registru a v produkčním prostředí může použít nejnovější verzi image.
+V této části jste zjistili, jak sdílet image jejich nasdílením do registru. Pak jste se vrátili k úplně nové instanci a mohli jste spustit nově naslané image. To je poměrně běžné v kanálech CI, kde kanál vytvoří image a nasoudí ji do registru a produkční prostředí pak může používat nejnovější verzi image.
 
-Teď, když jste tuto aplikaci restartovali, odvoláte ji na konci poslední části, ztratíte všechny položky seznamu úkolů. To je zjevně Skvělé uživatelské prostředí, takže se dozvíte další informace o tom, jak můžete uchovávat data v rámci restartování.
+Teď, když jste to zjistili, vzpomeňte si, že na konci poslední části jste při restartování aplikace ztratili všechny položky seznamu úkolů. To samozřejmě není skvělé uživatelské prostředí, takže se dále dozvíte, jak můžete data zachovat po restartech.
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokračujte v tomto kurzu.
+Pokračujte kurzem!
 
 > [!div class="nextstepaction"]
-> [Uchování databáze](persist-your-data.md)
+> [Zachování databáze](persist-your-data.md)

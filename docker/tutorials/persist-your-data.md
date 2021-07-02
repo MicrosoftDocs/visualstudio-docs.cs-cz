@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 9ee4109c888888d2dee36804a178f7db8d41753f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c9408e099caaef097be3fc4eea26cee2b1889e8e
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841767"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222900"
 ---
 # <a name="persist-your-data"></a>Uchování dat
 
@@ -36,9 +35,9 @@ Pokud to chcete vidět v akci, budete moct začít vytvářet dva kontejnery a v
 
     V případě, že jste zajímái o příkazu, spouštíte prostředí bash a vyvolali jste dva příkazy (proč má `&&` ). První část vybere jedno náhodné číslo a zapíše ho do `/data.txt` . Druhý příkaz jednoduše sleduje soubor, aby se zajistilo, že je kontejner spuštěný.
 
-1. Ověření: výstup můžete zobrazit pomocí `exec` , abyste se dostali do kontejneru. Provedete to tak, že otevřete rozšíření VS Code a kliknete na možnost **připojit prostředí** . Tato akce slouží `exec` k otevření prostředí v kontejneru v rámci vs Code terminálu.
+1. Ověření: výstup můžete zobrazit pomocí `exec` , abyste se dostali do kontejneru. provedete to tak, že otevřete rozšíření VS Code a kliknete na možnost **připojit prostředí** . tato akce slouží `exec` k otevření prostředí v kontejneru v rámci VS Code terminálu.
 
-    ![VS Code otevřít CLI do kontejneru Ubuntu](media/attach_shell.png)
+    ![VS Code otevřít CLI do kontejneru ubuntu](media/attach_shell.png)
 
     V kontejneru Ubuntu se zobrazí terminál, na kterém běží prostředí. Spusťte následující příkaz, který zobrazí obsah `/data.txt` souboru. Zavřete tento terminál později.
 

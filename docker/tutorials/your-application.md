@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 00eb3a7cff3ffeaac783b929a000d9258fae7e63
-ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
+ms.openlocfilehash: 9229c3717b686a3f08ef49e7912ac0515864d793
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2021
-ms.locfileid: "112042938"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222809"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Sestavení a spuštění ukázkové aplikace todo
 
@@ -28,15 +27,15 @@ V tomto okamžiku je váš vývojový tým poměrně malý a Vy jednoduše vytv�
 
 Než budete moct aplikaci spustit, musíte na svém počítači získat zdrojový kód aplikace. Pro skutečné projekty budete obvykle klonovat úložiště. Pro tento kurz ale jsme vytvořili soubor ZIP obsahující aplikaci.
 
-1. Ujistěte se, že na místním počítači máte nainstalovanou Docker for Windows nebo Docker Community Edition. Další informace najdete v [dokumentaci k instalaci Docker for Windows](https://docs.docker.com/docker-for-windows/install/). Proces instalace zpřístupňuje soubor ZIP obsahující ukázku, která je k dispozici na adrese localhost.
+1. ujistěte se, že na místním počítači máte nainstalovanou Docker for Windows nebo docker Community Edition. další informace najdete v [dokumentaci k instalaci Docker for Windows](https://docs.docker.com/docker-for-windows/install/). Proces instalace zpřístupňuje soubor ZIP obsahující ukázku, která je k dispozici na adrese localhost.
 
 1. Stáhněte si zdroj aplikace z úložiště [Docker](https://github.com/docker/getting-started) . Můžete si stáhnout soubor ZIP pro úložiště. Chcete-li stáhnout soubor ZIP, použijte zelený **kód** a klikněte na tlačítko **Stáhnout ZIP**. Otevřete soubor ZIP a extrahujte vše a extrahujte zdroj aplikace ze složky *aplikace* do složky na pevném disku.
 
    ![Snímek obrazovky s tlačítkem zeleného kódu a stažením možnosti ZIP](media/download-zip.png)
 
-1. Po extrakci otevřete projekt pomocí svého oblíbeného editoru kódu. Pokud budete potřebovat editor, můžete použít [Visual Studio Code](https://code.visualstudio.com/). Měli byste vidět `package.json` a dva podadresáře ( `src` a `spec` ).
+1. Po extrakci otevřete projekt pomocí svého oblíbeného editoru kódu. pokud budete potřebovat editor, můžete použít [Visual Studio Code](https://code.visualstudio.com/). Měli byste vidět `package.json` a dva podadresáře ( `src` a `spec` ).
 
-    ![Snímek obrazovky s Visual Studio Code otevřeli v načtené aplikaci](media/ide-screenshot.png)
+    ![snímek obrazovky s Visual Studio Code otevřeli v načtené aplikaci](media/ide-screenshot.png)
 
 ## <a name="building-the-apps-container-image"></a>Sestavení image kontejneru aplikace
 
@@ -91,7 +90,7 @@ Teď, když máte image, spusťte aplikaci! K tomu použijte `docker run` přík
 
 V tomto okamžiku byste měli mít spuštěného správce seznamu úkolů s několika položkami, které jste vytvořili. Teď provedeme několik změn a naučíte se spravovat vaše kontejnery.
 
-Pokud se podíváte na rozšíření VS Code, měli byste vidět vaše dva kontejnery teď (Tento kurz a váš nově spuštěný kontejner aplikací)!
+pokud se podíváte na rozšíření VS Code, měli byste vidět vaše dva kontejnery teď (tento kurz a váš nově spuštěný kontejner aplikací)!
 
 ![Rozšíření Docker s kurzem a kontejnery aplikací se systémem](media/vs-two-containers.png)
 

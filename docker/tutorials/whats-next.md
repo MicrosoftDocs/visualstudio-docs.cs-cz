@@ -1,44 +1,43 @@
 ---
-title: Kurz Docker – co dál
-description: Popisuje možnosti rozšíření aplikací Docker s orchestrací pomocí cloudových projektů Native Computing.
+title: Kurz Dockeru – Co dál
+description: Popisuje možnosti rozšíření aplikací Dockeru pomocí orchestrace pomocí projektů Cloud Native Computing Foundation.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 8ca68b2eba710037535b4bd76c744e7c029a53e9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e777d80f44c9a11e4d2a893c968d33e348ca442a
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841650"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222692"
 ---
 # <a name="whats-next"></a>Kam dál
 
-I když jste s vaším kurzem hotovi, máme ještě SPOUSTu dalších informací o kontejnerech.
-Nebudete se tady podrobně, ale tady je několik dalších oblastí, které byste si měli projít.
+I když jste s kurzem hotovi, je toho ještě mnohem víc, co se o kontejnerech dozvíte!
+Tady se do hloubky nezadáte, ale tady je několik dalších oblastí, na které se můžete podívat v další části.
 
 ## <a name="container-orchestration"></a>Orchestrace kontejnerů
 
-Spouštění kontejnerů v produkčním prostředí je obtížné. Nechcete se přihlásit k počítači a stačí spustit `docker run` nebo `docker-compose up` . Proč ne? A co se stane, když se kontejnery zásobníkí? Jak můžete škálovat mezi několika počítači? Orchestrace kontejnerů tento problém vyřeší. Pomocí nástrojů, jako jsou Kubernetes, Swarm, Nomad a AKS, se tento problém vyřeší trochu různými způsoby.
+Spouštění kontejnerů v produkčním prostředí je obtížné. Nechcete se přihlašovat k počítači a jednoduše spustit `docker run` nebo `docker-compose up` . Proč ne? Co se stane, když kontejnery umřou? Jak můžete škálovat napříč několika počítači? Tento problém řeší orchestrace kontejnerů. Tento problém pomáhají vyřešit nástroje, jako je Kubernetes, Swarm, Nomad a AKS, a to vše trochu různými způsoby.
 
-Hlavním nápadem je, že máte "manažeři", kteří dostanou **očekávaný stav**. Tento stav může být "chci spustit dvě instance webové aplikace a vystavit port 80." Manažeři si pak Prohlédněte všechny počítače v clusteru a delegujete práci na uzlech Worker. Manažeři budou sledovat změny (například ukončení kontejneru) a pak pracovat, aby **skutečný stav** odpovídal očekávanému stavu.
+Obecným nápadem je, že máte "manažery", kteří obdrží **očekávaný stav**. Tento stav může být "Chci spustit dvě instance webové aplikace a zveřejnit port 80". Manažeři pak prohlédněte všechny počítače v clusteru a delegovat práci na pracovní uzly. Manažeři sledují změny (například ukončují kontejner)  a pak pracují na skutečném stavu, který odráží očekávaný stav.
 
-## <a name="cloud-native-computing-foundation-projects"></a>Základní projekty Cloud Computing Native
+## <a name="cloud-native-computing-foundation-projects"></a>Základní projekty nativní pro cloud computing
 
-CNCF je dodavatelově neutrální domů pro různé open-source projekty, včetně Kubernetes, Prometheus, zástupné, linkerů, zařízení NAT a dalších. Zde můžete zobrazit [odstupňované a inkubovatelné projekty zde](https://www.cncf.io/projects/) a celou [CNCF na šířku](https://landscape.cncf.io/). Existuje SPOUSTa projektů, které vám pomohou vyřešit problémy s monitorováním, protokolováním, zabezpečením, Registry imagí, zasíláním zpráv a dalšími.
+TENTO PROGRAMF je neutrální dodavatelský domov pro různé open source projekty, včetně Kubernetes, Prometheus, Envoy, Linkerd, NATS a dalších! Odstupňované a [inkubované](https://www.cncf.io/projects/) projekty si můžete prohlédnout tady a celou oblast [NCF tady.](https://landscape.cncf.io/) Existuje mnoho projektů, které vám pomůžou řešit problémy související s monitorováním, protokolováním, zabezpečením, registry obrázků, zasíláním zpráv a prováděním dalších věcí.
 
-Takže pokud začínáte s vývojem na šířku kontejneru a nativním vývojem aplikací v cloudu, Vítá vás! Připojte se prosím ke komunitě, položte otázky a zajistěte si učení! Rádi vám to máme!
+Takže pokud s vývojem aplikací nativních pro cloud a prostředí kontejnerů ještě ne, vítá vás! Připojte se ke komunitě, ptejte se a pokračujte v učení. Jsme rádi, že vás máme!
 
-## <a name="working-with-docker-in-vs-code"></a>Práce s Docker v VS Code
+## <a name="working-with-docker-in-vs-code"></a>Práce s Dockerem v VS Code
 
-Další informace o používání rozšíření Docker VS Code:
+Další informace o používání rozšíření VS Code Docker:
 
-- [Přehled rozšíření Docker VS Code](https://code.visualstudio.com/docs/containers/overview)
+- [VS Code Přehled rozšíření Dockeru](https://code.visualstudio.com/docs/containers/overview)
 - [Začínáme s Node.js](https://code.visualstudio.com/docs/containers/quickstart-node)
 - [Začínáme s Pythonem](https://code.visualstudio.com/docs/containers/quickstart-python)
 - [Začínáme s .NET Core](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)
-- [Ladění kontejnerových aplikací](https://code.visualstudio.com/docs/containers/debug-common)
+- [Ladění kontejnerizovaných aplikací](https://code.visualstudio.com/docs/containers/debug-common)

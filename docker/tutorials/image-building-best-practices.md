@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 8913c558c2860599fbfaaba03fa466d11931a528
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8f669baf6f3275f54c7e4a6ff2b31f9c260b2bb9
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837954"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222666"
 ---
 # <a name="image-layering"></a>Vrstvení obrázků
 
@@ -178,9 +177,9 @@ COPY --from=build /app/target/file.war /usr/local/tomcat/webapps
 
 Tento příklad používá jednu fázi (volanou `build` ) k provedení skutečného sestavení Java pomocí Maven. Druhá fáze (počínaje verzí `FROM tomcat` ) kopíruje soubory ze `build` fáze. Finální obrázek je pouze poslední vytvořenou fází (kterou lze přepsat pomocí `--target` příznaku).
 
-### <a name="react-example"></a>Příklad reakce
+### <a name="react-example"></a>příklad React
 
-Při sestavování reagujících aplikací potřebujete prostředí uzlů pro zkompilování kódu JS (obvykle JSX), SASS stylů a dalších do statických HTML, JS a CSS. Pokud neprovádíte vykreslování na straně serveru, nemusíte ani prostředí uzlů pro produkční sestavení. Proč se statické prostředky nedávají do statického kontejneru Nginx?
+při sestavování React aplikací potřebujete prostředí uzlů pro zkompilování kódu JS (obvykle JSX), SASS šablon stylů a dalších do statických HTML, JS a CSS. Pokud neprovádíte vykreslování na straně serveru, nemusíte ani prostředí uzlů pro produkční sestavení. Proč se statické prostředky nedávají do statického kontejneru Nginx?
 
 ```dockerfile
 FROM node:12 AS build
