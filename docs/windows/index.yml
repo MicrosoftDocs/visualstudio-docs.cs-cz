@@ -12,6 +12,7 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
     - MSDNSTART
+    - vs.about
 highlightedContent:
   items:
     - title: Nastavení a instalace
@@ -180,7 +181,7 @@ additionalContent:
           summary: 'Sdílení aplikací a kódu pomocí nástrojů Nasazení webu, InstallShield, NuGet, Kontinuální integrace a dalších'
           url: ../deployment/index.yml
         - title: Správa verzí
-          summary: 'Sdílejte kód pomocí technologií pro řízení verzí, jako je git a GitHub.'
+          summary: 'Sdílejte kód pomocí technologií pro řízení verzí, jako je Git a GitHub.'
           url: ../version-control/index.yml
         - title: DevOps
           summary: Průběžné sestavování a vydávání aplikací v cloudu a implementace agilních postupů pomocí Azure DevOps Services

@@ -13,7 +13,7 @@
             - name: Přehled
               href: vscloud-overview.md
             - name: Časté otázky k fakturaci
-              href: vscloud-billing-faq.md
+              href: vscloud-billing-faq.yml
             - name: Nákup pro poskytovatele CSP
               href: vscloud-csp.md
         - name: Microsoft Partner Network
@@ -48,7 +48,7 @@
       href: subscription-expiration.md
     - name: Změny na úrovni předplatného
       href: subscription-level-changes.md
-    - name: Odebraná předplatná
+    - name: Odebrané odběry
       href: subscription-removed.md
     - name: Kontaktování správce předplatných
       href: contact-my-admin.md
@@ -56,16 +56,22 @@
       items:
         - name: O výhodách
           href: about-benefits.md
-        - name: Nástroje
+        - name: Nabídky Azure pro vývoj a testování
           items:
-            - name: Individuální kredit v Azure DevTest
-              href: vs-azure.md
+            - name: Pro jednotlivce (kredity)
+              items:
+                - name: Individuální kredit v Azure DevTest
+                  href: vs-azure.md
+            - name: Pro organizace
+              items:
+                - name: Průběžné platby za Azure DevTest
+                  href: vs-azure-payg.md
+                - name: Azure EA DevTest
+                  href: azure-ea-devtest.md
+        - name: nástroje
+          items:
             - name: Azure DevOps
               href: vs-azure-devops.md
-            - name: Průběžné platby za Azure DevTest
-              href: vs-azure-payg.md
-            - name: Azure EA DevTest
-              href: azure-ea-devtest.md
             - name: CAST Highlight
               href: vs-cast.md
             - name: CloudPilot

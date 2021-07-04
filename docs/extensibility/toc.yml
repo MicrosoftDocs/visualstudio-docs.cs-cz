@@ -9,6 +9,20 @@
       href: starting-to-develop-visual-studio-extensions.md
     - name: 'Vytváření prvního rozšíření: Hello World'
       href: extensibility-hello-world.md
+    - name: aktualizace rozšíření pro Visual Studio 2022 (Preview)
+      items:
+        - name: Aktualizace rozšíření
+          href: migration/update-visual-studio-extension.md
+        - name: 'Příklad: ImageOptimizer'
+          href: migration/samples.md
+        - name: Cílení na předchozí verze
+          href: migration/target-previous-versions.md
+        - name: Přerušující seznam rozhraní API
+          href: migration/breaking-api-list.md
+        - name: Seznam odebraných rozhraní API
+          href: migration/removed-api-list.md
+        - name: Migrované PIA
+          href: migration/migrated-assemblies.md
     - name: Novinky – Visual Studio 2019 SDK
       items:
         - name: Novinky – Visual Studio 2019 SDK

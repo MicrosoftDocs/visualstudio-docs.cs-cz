@@ -26,7 +26,7 @@
           href: deploy-app-service.md
         - name: Nasazení do Docker Hubu
           href: deploy-docker-hub.md
-        - name: Správa spouštěcích profilů (Preview)
+        - name: Spravovat spouštěcí profily
           href: launch-profiles.md
         - name: Zobrazení a diagnostika kontejnerů a imagí
           href: view-and-diagnose-containers.md
@@ -54,5 +54,5 @@
       href: overview-bridge-to-kubernetes.md
     - name: Konfigurace Přemostění na Kubernetes
       href: configure-bridge-to-kubernetes.md
-    - name: Použití spravovaných identit Azure AD s Bridge to Kubernetes
+    - name: Použití identit spravovaných službou Azure AD s mostem na Kubernetes
       href: managed-identity.md

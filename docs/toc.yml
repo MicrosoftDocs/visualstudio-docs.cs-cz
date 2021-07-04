@@ -63,9 +63,9 @@
                   href: install/troubleshooting-network-related-errors-in-visual-studio.md
         - name: Nasazení v podniku
           items:
-            - name: Použití aktualizací správců
+            - name: Instalace aktualizací správce
               href: install/applying-administrator-updates.md
-            - name: Povolení aktualizací správců
+            - name: Povolení aktualizací pro správce
               href: install/enabling-administrator-updates.md
             - name: Automatizace instalace sady Visual Studio souborem odpovědí
               href: install/automated-installation-with-response-file.md
@@ -151,32 +151,33 @@
       href: ide/quickstart-ide-orientation.md
     - name: 'C++: Vytvoření konzolové aplikace'
       href: /cpp/get-started/tutorial-console-cpp
-    - name: 'Python: Vytvoření webové aplikace'
-      href: ide/quickstart-python.md
-    - name: 'Node.js: Vytvoření webové aplikace'
-      href: ide/quickstart-nodejs.md
-    - name: 'F#: Vytvoření webové služby'
-      href: ide/quickstart-fsharp.md
     - name: 'C#: Vytvoření webové aplikace'
       href: ide/quickstart-aspnet-core.md
     - name: 'C#: Vytvoření konzolové aplikace'
       href: ide/quickstart-csharp-console.md
     - name: 'Visual Basic: Vytvoření konzolové aplikace'
       href: ide/quickstart-visual-basic-console.md
+    - name: 'Node.js: Vytvoření webové aplikace'
+      href: ide/quickstart-nodejs.md
+    - name: 'Python: Vytvoření webové aplikace'
+      href: ide/quickstart-python.md
+    - name: 'F#: Vytvoření webové služby'
+      href: ide/quickstart-fsharp.md
 - name: Kurzy
+  expanded: true
   items:
-    - name: C#
-      href: get-started/csharp/
-    - name: F#
-      href: /dotnet/fsharp/
-    - name: Visual Basic
-      href: get-started/visual-basic/
-    - name: C++
+    - name: C++ – >>
       href: /cpp/get-started/tutorial-console-cpp
-    - name: Python
-      href: python/
-    - name: Node.js
+    - name: C#  >>
+      href: get-started/csharp/
+    - name: Visual Basic  >>
+      href: get-started/visual-basic/
+    - name: Node.js  >>
       href: javascript/
+    - name: Python  >>
+      href: python/
+    - name: F#  >>
+      href: /dotnet/fsharp/
 - name: Vývoj
   items:
     - name: Organizování kódu a jeho úpravy
@@ -193,12 +194,14 @@
           href: ide/create-new-project.md
         - name: Práce s řešeními a projekty
           href: ide/creating-solutions-and-projects.md
-        - name: Otevření projektu z úložiště v aplikaci Visual Studio 2017
+        - name: Otevření projektu z Visual Studio 2017
           href: get-started/tutorial-open-project-from-repo-visual-studio-2017.md
-        - name: Otevření projektu z úložiště v aplikaci Visual Studio 2019
+        - name: Otevření projektu z Visual Studio 2019
           href: get-started/tutorial-open-project-from-repo-visual-studio-2019.md
         - name: 'Přenos, migrace a upgrade projektů'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
+        - name: Použití okna Průzkumník řešení nástroje
+          href: ide/use-solution-explorer.md
         - name: Správa vlastností projektu a řešení
           href: ide/managing-project-and-solution-properties.md
         - name: Odkazy na projekty
@@ -443,6 +446,8 @@
                   href: ide/reference/regex-completion-through-intellisense.md
                 - name: Odebrání nedosažitelného kódu
                   href: ide/reference/remove-unreachable-code.md
+                - name: Odebrání nepoužívaných odkazů
+                  href: ide/reference/remove-unused-references.md
                 - name: přejmenování
                   href: ide/reference/rename.md
                 - name: Zjednodušení logických výrazů
@@ -896,7 +901,8 @@
       href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
 - name: Ladění >>
   href: debugger/index.yml
-- name: ' >> správy verzí'
+- name: Řízení verzí >>
+  displayName: 'git, github, source control, source, versioning, clone, integrate, release'
   href: version-control/index.yml
 - name: Test >>
   displayName: Unit testing
@@ -977,14 +983,9 @@
       href: ide/reference/accessibility-products-and-services-from-microsoft.md
 - name: Referenční informace
   items:
-    - name: Klávesové zkratky
-      items:
-        - name: Oblíbené příkazy
-          displayName: keyboard shortcuts
-          href: ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md
-        - name: Všechny příkazy
-          displayName: keyboard commands
-          href: ide/default-keyboard-shortcuts-in-visual-studio.md
+    - name: Klávesové zkratky & příkazy
+      displayName: 'keyboard, shortcuts, short cuts, ctrl, short-cut'
+      href: ide/default-keyboard-shortcuts-in-visual-studio.md
     - name: Příkazy sady Visual Studio
       items:
         - name: Odkaz
@@ -1065,7 +1066,7 @@
       items:
         - name: Hierarchie volání
           href: ide/reference/call-hierarchy.md
-        - name: Vývojové prostředí PowerShell pro Developer Command Prompt &
+        - name: Developer Command Prompt & Developer PowerShell
           href: ide/reference/command-prompt-powershell.md
         - name: Náhled změn
           href: ide/preview-changes.md
@@ -1426,36 +1427,36 @@
 - name: Prostředky
   expanded: true
   items:
-    - name: Novinky v sadě Visual Studio 2017
+    - name: 'Visual Studio 2017: co je nového'
       href: ide/whats-new-visual-studio-2017.md
-    - name: Novinky v sadě Visual Studio 2019
+    - name: 'Visual Studio 2019: co je nového'
       href: ide/whats-new-visual-studio-2019.md
-    - name: Co je nového v dokumentaci
+    - name: Co je nového v Docs
       href: ide/whats-new-visual-studio-docs.md
-    - name: Historie novinek v dokumentaci
-      href: ide/whats-new-visual-studio-docs-history.md
     - name: "Poznámky k\_verzi"
       items:
         - name: Frekvence vydávání nových verzí
           href: /visualstudio/productinfo/release-rhythm/
-        - name: Poznámky k Visual Studiu 2019
+        - name: poznámky k Visual Studio 2019
           href: /visualstudio/releases/2019/release-notes/
-        - name: Poznámky k Visual Studiu 2017
+        - name: poznámky k Visual Studio 2017
           href: /visualstudio/releasenotes/vs2017-relnotes/
-        - name: Dokumentace k Visual Studiu 2015
+        - name: dokumentace k Visual Studio 2015
           href: vs-2015-archive.md
         - name: Licenční podmínky
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: Životní cyklus podpory a aktualizace
           href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Program Zlepšování softwaru a služeb na základě zkušeností uživatelů
+    - name: Zlepšování služeb na základě zkušeností uživatelů
       items:
-        - name: Přehled
+        - name: Informace o programu
           displayName: Customer Experience Improvement Program
           href: ide/visual-studio-experience-improvement-program.md
         - name: Protokoly generované systémem
           href: ide/diagnostic-data-collection.md
-    - name: Prostředky pro odstraňování chyb integrovaného vývojového prostředí (IDE)
+    - name: Propojená prostředí v Visual Studio
+      href: ide/reference/connected-experiences.md
+    - name: Řešení chyb integrovaného vývojového prostředí (IDE)
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
 - name: Váš názor
   items:
@@ -1463,7 +1464,7 @@
       href: ide/feedback-options.md
     - name: Nahlášení problému
       items:
-        - name: Jak nahlásit problém
+        - name: Nahlášení problému
           href: ide/how-to-report-a-problem-with-visual-studio.md
         - name: Nahlášení problémových stavů a nejčastější dotazy
           href: ide/report-a-problem.md

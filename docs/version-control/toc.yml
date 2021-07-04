@@ -2,19 +2,21 @@
   href: index.yml
 - name: Přehled
   items:
-    - name: Prostředí Git v aplikaci Visual Studio
+    - name: Prostředí Git v Visual Studio
       href: git-with-visual-studio.md
-    - name: Jak Visual Studio usnadňuje správu zdrojového kódu
+    - name: Nastavení a předvolby Gitu
+      href: git-settings.md
+    - name: jak Visual Studio usnadňuje správu zdrojového kódu
       href: git-visual-studio-source-control.md
 - name: Začínáme
   items:
-    - name: Začínáme s Git a GitHubem v aplikaci Visual Studio
+    - name: začínáme s Git a GitHub v Visual Studio
       href: /learn/modules/visual-studio-github-push/
     - name: Porovnání Gitu a Team Explorer vedle sebe
       href: git-team-explorer-feature-comparison.md
 - name: Novinky
   items:
-    - name: Zlepšení produktivity pomocí Gitu v aplikaci Visual Studio (Preview)
+    - name: zlepšení produktivity pomocí gitu v Visual Studio (Preview)
       href: 'https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/'
-    - name: Zpráva k vydání verze pro Visual Studio 2019
+    - name: zpráva k vydání verze Visual Studio 2019
       href: /visualstudio/releases/2019/release-notes/
