@@ -22,6 +22,8 @@
       href: debugging-or-disabling-project-code-in-xaml-designer.md
     - name: Data při návrhu XAML
       href: xaml-designtime-data.md
+    - name: Ukázková data pro čas návrhu XAML
+      href: xaml-design-time-sample-data.md
     - name: Blend for Visual Studio
       items:
         - name: Přehled

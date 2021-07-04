@@ -2,13 +2,15 @@
   href: analyze-and-model-your-architecture.md
 - name: Novinky pro programátory v sadě Visual Studio 2017
   href: what-s-new-for-design-in-visual-studio.md
+- name: Instalace nástrojů architektury
+  href: install-architecture-tools.md
 - name: Změna návrhu pomocí vizualizace a modelování
   href: scenario-change-your-design-using-visualization-and-modeling.md
 - name: Mapy kódu a diagramy závislostí
   items:
     - name: Vizualizace kódu
       href: visualize-code.md
-    - name: Použití map kódu k mapování závislostí
+    - name: Mapování závislostí s mapami kódu
       href: map-dependencies-across-your-solutions.md
     - name: Sdílení map kódu
       href: share-code-maps.md
@@ -58,8 +60,6 @@
       href: generate-and-configure-your-app-from-models.md
     - name: Strukturujte svá řešení modelování
       href: structure-your-modeling-solution.md
-    - name: "Pokyny k\_nástrojům architektury Visual Studio"
-      href: visual-studio-architecture-tooling-guidance.md
 - name: Ověřování systému během vývoje
   items:
     - name: Ověřování úloh a prostředků
