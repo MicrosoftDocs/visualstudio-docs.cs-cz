@@ -1,8 +1,8 @@
 ---
 title: Nainstalovat Vizualizér | Microsoft Docs
-description: Seznamte se s postupem, jak nainstalovat vizualizér, aby byl k dispozici pro ladění použití v aplikaci Visual Studio.
+description: Seznamte se s postupem, jak nainstalovat vizualizér, aby byl dostupný pro účely ladění v Visual Studio.
 ms.custom: SEO-VS-2020
-ms.date: 06/10/2020
+ms.date: 07/02/2021
 ms.topic: how-to
 dev_langs:
 - CSharp
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2521983a797b676b9136ca14b733eb7afd054e27
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 611347acfe48e561653d644097d56d029b6a4fa6
+ms.sourcegitcommit: 4cd3eb514e9fa48e586279e38fe7c2e111ebb304
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904267"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "113298254"
 ---
 # <a name="how-to-install-a-visualizer"></a>Postupy: Instalace vizualizéru
 Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný v nástroji [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Instalace Vizualizátoru je jednoduchý proces.
@@ -33,11 +33,14 @@ Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný
 > V aplikacích pro UWP jsou podporované jenom standardní vizualizace textu, HTML, XML a JSON. Vlastní (uživatelsky vytvořené) vizualizace se nepodporují.
 
 ::: moniker range=">=vs-2019"
-### <a name="to-install-a-visualizer-for-visual-studio-2019"></a>Instalace Vizualizér pro Visual Studio 2019
+### <a name="to-install-a-visualizer-for-visual-studio-2019"></a>instalace vizualizér pro Visual Studio 2019
 
 1. Vyhledejte knihovnu DLL, která obsahuje vámi sestavený Vizualizér.
 
-   Obvykle je nejvhodnější, pokud knihovna DLL na straně ladicího programu a laděného procesu knihovna DLL jako cílovou platformu určují **Libovolný procesor** . Knihovna DLL na straně ladicího programu musí být buď **Libovolný procesor** , nebo **32**. Cílová platforma pro laděného procesu knihovnu DLL by měla odpovídat procesu laděného objektu.
+   Obvykle je nejvhodnější, pokud knihovna DLL na straně ladicího programu a laděného procesu knihovna DLL jako cílovou platformu určují **Libovolný procesor** . Knihovna DLL na straně ladicího programu musí být buď **Libovolný procesor** , nebo **32**. Cílová platforma pro laděného procesu knihovnu DLL by měla odpovídat procesu laděného procesu.
+
+   >[!NOTE]
+   > vizualizér na straně ladicího programu je načten v procesu Visual Studio, takže musí být .NET Framework DLL. laděného procesu může být buď .NET Framework, nebo .NET Standard v závislosti na tom, jaký proces se v Visual Studio má ladit.
 
 2. Zkopírujte soubor DLL na [straně ladicího programu](create-custom-visualizers-of-data.md#to-create-the-debugger-side) (a všechny knihovny DLL, na kterých závisí) do některého z následujících umístění:
 
@@ -63,14 +66,14 @@ Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný
 4. Restartujte ladicí relaci.
 
 > [!NOTE]
-> Postup se liší v aplikaci Visual Studio 2017 a starších. Viz [předchozí verze](how-to-install-a-visualizer.md?view=vs-2017&preserve-view=true) tohoto článku.
+> postup se liší v Visual Studio 2017 a starších. Viz [předchozí verze](how-to-install-a-visualizer.md?view=vs-2017&preserve-view=true) tohoto článku.
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-### <a name="to-install-a-visualizer-for-visual-studio-2017-and-older"></a>Instalace Vizualizér pro Visual Studio 2017 a starší
+### <a name="to-install-a-visualizer-for-visual-studio-2017-and-older"></a>instalace vizualizér pro Visual Studio 2017 a starší
 
 > [!IMPORTANT]
-> V aplikaci Visual Studio 2017 a starší jsou podporovány pouze .NET Framework vizualizace.
+> v Visual Studio 2017 a starších se podporují jenom .NET Framework vizualizace.
 
 1. Vyhledejte knihovnu DLL, která obsahuje vámi sestavený Vizualizér.
 

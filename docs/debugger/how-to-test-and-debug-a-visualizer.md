@@ -1,8 +1,8 @@
 ---
-title: Testování a ladění Vizualizér | Microsoft Docs
-description: Otestujte a ladit Vizualizér tím, že ho spustíte z ovladače testu (vývojový hostitel pro Vizualizér) nebo když nainstalujete v aplikaci Visual Studio a zavoláte ho z okna ladicího programu.
+title: Testování a ladění vizualizéru | Microsoft Docs
+description: Testovat a ladit vizualizér jeho spuštěním z testovacího ovladače (vývojový hostitel vizualizéru) nebo instalací v Visual Studio a jeho voláním z okna ladicího programu.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 07/02/2021
 ms.topic: how-to
 dev_langs:
 - CSharp
@@ -19,23 +19,26 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b01c97c0ee72a3d29052d98d8a37cdc746c26d27
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa97453d08650b78a02eda873a01afe9e376caec
+ms.sourcegitcommit: 4cd3eb514e9fa48e586279e38fe7c2e111ebb304
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923279"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "113298241"
 ---
 # <a name="how-to-test-and-debug-a-visualizer"></a>Postupy: Testování a ladění vizualizéru
-Jakmile napíšete vizualizér, budete ho muset ladit a testovat.
+Po napsání vizualizéru ho musíte ladit a testovat.
 
-Jedním ze způsobů, jak testovat vizualizér, je jeho instalace v aplikaci Visual Studio a jeho volání z okna ladicího programu. (Viz [Postup: instalace Vizualizátoru](../debugger/how-to-install-a-visualizer.md).) Pokud to uděláte, budete muset použít druhou instanci sady Visual Studio k připojení a ladění vizualizér, který je spuštěn v první instanci ladicího programu.
+Jedním ze způsob, jak testovat vizualizér, je jeho Visual Studio a voláním z okna ladicího programu. (Viz [Postupy: Instalace vizualizéru](../debugger/how-to-install-a-visualizer.md).) Pokud to chcete udělat, budete muset použít druhou instanci Visual Studio k připojení a ladění vizualizéru, který je spuštěný v první instanci ladicího programu.
 
-Jednodušší způsob, jak ladit vizualizér, je spustit Vizualizér z testovacího ovladače. Rozhraní API pro Vizualizér usnadňují tvorbu takového ovladače, který se nazývá *vývojový hostitel pro Vizualizér*.
+Jednodušším způsobem ladění vizualizéru je spuštění vizualizéru z testovacího ovladače. Rozhraní API vizualizéru usnadňuje vytvoření takového ovladače, který se nazývá *vývojový hostitel vizualizéru.*
 
-### <a name="to-create-a-visualizer-development-host"></a>Vytvoření hostitelského vývojového prostředí Vizualizér
+>[!NOTE]
+> V současné době je testovací ovladač podporován pouze při volání vizualizéru z .NET Framework aplikace.
 
-1. Do třídy na straně ladicího programu zahrňte statickou metodu, která vytvoří <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost> objekt a zavolá jeho metodu show:
+### <a name="to-create-a-visualizer-development-host"></a>Vytvoření vývojového hostitele vizualizéru
+
+1. Do třídy na straně ladicího programu zahrpište statickou metodu, která vytvoří objekt a <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost> zavolá jeho metodu show:
 
     ```csharp
     public static void TestShowVisualizer(object objectToVisualize)
@@ -45,17 +48,17 @@ Jednodušší způsob, jak ladit vizualizér, je spustit Vizualizér z testovac�
     }
     ```
 
-    Parametry použité k sestavení hostitele jsou datový objekt, který bude zobrazen v Vizualizér ( `objectToVisualize` ) a typu třídy na straně ladicího programu.
+    Parametry použité k vytvoření hostitele jsou datový objekt, který se zobrazí ve vizualizéru ( ) a typ třídy na `objectToVisualize` straně ladicího programu.
 
-2. Přidejte následující příkaz pro volání `TestShowVisualizer` . Pokud jste vytvořili Vizualizér v knihovně tříd, je nutné vytvořit spustitelný soubor pro volání knihovny tříd a umístit tento příkaz do spustitelného souboru:
+2. Přidejte následující příkaz pro volání `TestShowVisualizer` . Pokud jste vizualizér vytvořili v knihovně tříd, musíte vytvořit spustitelný soubor pro volání knihovny tříd a umístit tento příkaz do spustitelného souboru:
 
     ```csharp
     DebuggerSide.TestShowVisualizer(myString);
     ```
 
-    Úplnější příklad najdete v tématu [Návod: zápis Vizualizér v jazyce C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md).
+    Úplnější příklad najdete v tématu [Návod: Zápis vizualizéru v jazyce C#.](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
 
 ## <a name="see-also"></a>Viz také
 - [Návod: Zápis vizualizéru v jazyce C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
-- [Postupy: instalace Vizualizátoru](../debugger/how-to-install-a-visualizer.md)
+- [Postupy: Instalace vizualizéru](../debugger/how-to-install-a-visualizer.md)
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)
