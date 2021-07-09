@@ -1,5 +1,5 @@
 ---
-title: Nasazení aplikace sady Visual Studio do složky, služby IIS, Azure nebo jiného cíle
+title: Nasazení Visual Studio aplikace do složky, služby IIS, Azure nebo jiného cíle
 titleSuffix: ''
 description: Přečtěte si další informace o možnostech publikování aplikace pomocí nástroje Publikovat.
 ms.custom:
@@ -7,6 +7,8 @@ ms.custom:
 - contperf-fy21q1
 ms.date: 08/21/2020
 ms.topic: troubleshooting
+f1_keywords:
+- vs.publish
 dev_langs:
 - FSharp
 - VB
@@ -17,99 +19,99 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e0a8e8a313e351d175822e2427378fb89703444
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 099bd2c6cc47895c913b3f852835d2fd09d0f9c3
+ms.sourcegitcommit: 4e09130bcd55bb9cb8ad157507c23b67aa209fad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879225"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113549482"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Nasazení aplikace do složky, služby IIS, Azure nebo jiného cíle
 
 Nasazením aplikace, služby nebo komponenty ji budete distribuovat pro instalaci na dalších počítačích, zařízeních, serverech nebo v cloudu. V sadě Visual Studio můžete zvolit vhodnou metodu pro potřebný typ nasazení.
 
-Získejte nápovědu pro úlohu nasazení:
+Získejte pomoc s úlohou nasazení:
 
-- Nejste si jisti, jakou možnost nasazení zvolit? Podívejte [se, jaké možnosti publikování jsou pro mě nejvhodnější?](#what-publishing-options-are-right-for-me)
-- Nápovědu k potížím s nasazením Azure App Service nebo IIS najdete v tématu věnovaném [řešení potíží ASP.NET Core na Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
-- Nápovědu ke konfiguraci nastavení nasazení rozhraní .NET najdete v tématu [Konfigurace nastavení nasazení rozhraní .NET](#configure-net-deployment-settings).
-- Pokud chcete nasadit nový cíl, pokud jste předtím vytvořili profil publikování, vyberte v okně **publikovat** pro nakonfigurovaný profil **Nový** .
+- Nejste si jistí, jakou možnost nasazení zvolit? Viz [Jaké možnosti publikování jsou pro mě správné?](#what-publishing-options-are-right-for-me)
+- Nápovědu k problémům s nasazením pro Azure App Service nebo IIS najdete v tématu Řešení [ASP.NET Core na Azure App Service a IIS.](/aspnet/core/test/troubleshoot-azure-iis)
+- Nápovědu ke konfiguraci nastavení nasazení .NET najdete v tématu [Konfigurace nastavení nasazení .NET.](#configure-net-deployment-settings)
+- Pokud chcete profil publikování nasadit do nového cíle,  vyberte v  okně Publikovat pro nakonfigurovaný profil možnost Nový.
 
-   ![Vytvořit nový profil publikování](../deployment/media/create-a-new-publish-profile.png)
+   ![Vytvoření nového profilu publikování](../deployment/media/create-a-new-publish-profile.png)
 
-   Pak zvolte možnost nasazení v okně Publikovat. Informace o možnostech publikování najdete v následujících oddílech.
+   Potom v okně Publikovat zvolte možnost nasazení. Informace o možnostech publikování najdete v následujících částech.
 
-## <a name="what-publishing-options-are-right-for-me"></a>Jaké možnosti publikování jsou pro mě nejvhodnější?
+## <a name="what-publishing-options-are-right-for-me"></a>Jaké možnosti publikování jsou pro mě správné?
 
-V rámci sady Visual Studio lze aplikace publikovat přímo do následujících cílů:
+V rámci Visual Studio lze aplikace publikovat přímo do následujících cílů:
 
 ::: moniker range=">=vs-2019"
 - [Azure](#azure)
-- [Container Registry Docker](#docker-container-registry)
+- [Docker Container Registry](#docker-container-registry)
 - [Složka](#folder)
 - [Server FTP/FTPS](#ftpftps-server)
 - [Webový server (IIS)](#web-server-iis)
-- [Importovat profil](#import-profile)
+- [Import profilu](#import-profile)
 ::: moniker-end
 ::: moniker range="vs-2017"
 - [App Service](#azure-app-service)
 - [App Service Linux](#azure-app-service)
-- [IIS (výběr služby IIS, FTP atd.)](#web-server-iis)
-- [FTP/FTPS (výběr služby IIS, FTP atd.)](#ftpftps-server)
+- [SLUŽBA IIS (zvolte IIS, FTP atd.)](#web-server-iis)
+- [FTP/FTPS (zvolte IIS, FTP atd.)](#ftpftps-server)
 - [Složka](#folder)
-- [Importovat profil](#import-profile)
+- [Import profilu](#import-profile)
 ::: moniker-end
 
 Předchozí možnosti se zobrazí, jak je znázorněno na následujícím obrázku při vytváření nového profilu publikování.
 
 ::: moniker range=">=vs-2019"
-![Zvolit možnost publikování](../deployment/media/quickstart-publish-dialog.png)
+![Volba možnosti publikování](../deployment/media/quickstart-publish-dialog.png)
 ::: moniker-end
 ::: moniker range="vs-2017"
-![Zvolit možnost publikování](../deployment/media/quickstart-publish-dialog-vs-2017.png)
+![Volba možnosti publikování](../deployment/media/quickstart-publish-dialog-vs-2017.png)
 ::: moniker-end
 
-Rychlou prohlídku obecnější možností nasazení aplikací najdete v tématu [první pohled na nasazení](../deployment/deploying-applications-services-and-components.md).
+Stručný přehled obecných možností nasazení aplikací najdete v tématu [První pohled na nasazení.](../deployment/deploying-applications-services-and-components.md)
 
 ## <a name="azure"></a>Azure 
 
 Když zvolíte Azure, můžete si vybrat mezi:
 
-- [Azure App Service](#azure-app-service) spuštěný v systému Windows, Linux nebo jako image Docker
-- Image Docker nasazená do [Azure Container Registry](#azure-container-registry)
-- [Virtuální počítač Azure](#azure-virtual-machine)
+- [Azure App Service](#azure-app-service) běžící na Windows, Linuxu nebo jako image Dockeru
+- Image Dockeru nasazená do [Azure Container Registry](#azure-container-registry)
+- Virtuální [počítač Azure](#azure-virtual-machine)
 
-![Zvolit službu Azure](../deployment/media/quickstart-choose-azure-service.png)
+![Volba služby Azure](../deployment/media/quickstart-choose-azure-service.png)
 
 ### <a name="azure-app-service"></a>Azure App Service
 
-[Azure App Service](/azure/app-service/app-service-web-overview) pomáhá vývojářům rychle vytvářet škálovatelné webové aplikace a služby bez zachování infrastruktury. App Service běží na virtuálních počítačích hostovaných v cloudu v Azure, ale tyto virtuální počítače se spravují za vás. Každé aplikaci v App Service bude přiřazená jedinečná \* Adresa URL azurewebsites.NET; všechny cenové úrovně jiné než Free umožňují přiřazení vlastních názvů domén k lokalitě.
+[Azure App Service](/azure/app-service/app-service-web-overview) pomáhá vývojářům rychle vytvářet škálovatelné webové aplikace a služby bez nutnosti udržovat infrastrukturu. Aplikace App Service běží na virtuálních počítačích hostovaných v cloudu v Azure, ale tyto virtuální počítače se spravují za vás. Každé aplikaci v App Service bude přiřazena jedinečná adresa URL .azurewebsites.net. Všechny cenové úrovně kromě úrovně Free umožňují přiřazovat k webu \* vlastní názvy domén.
 
-Určíte, kolik výpočetní síly má App Service, výběrem [cenové úrovně nebo plánu](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview) pro obsahující App Service. Můžete mít více webových aplikací (a jiných typů aplikací) stejné App Service bez změny cenové úrovně. Můžete například hostovat webové aplikace pro vývoj, přípravu a provoz společně na stejném App Service.
+Pokud zvolíte cenovou úroveň nebo plán pro [](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview) App Service, zjistíte, jaký výpočetní výkon má App Service. Můžete mít několik webových aplikací (a jiných typů aplikací) sdílet stejné App Service beze změny cenové úrovně. Můžete například hostovat vývojové, pracovní a produkční webové aplikace společně ve stejné App Service.
 
 #### <a name="when-to-choose-azure-app-service"></a>Kdy zvolit Azure App Service
 
-- Chcete nasadit webovou aplikaci, která je přístupná prostřednictvím Internetu.
-- Chcete automaticky škálovat webovou aplikaci podle požadavků, aniž byste museli znovu nasazovat.
-- Nechcete spravovat serverovou infrastrukturu (včetně aktualizací softwaru).
-- Nepotřebujete žádné vlastní nastavení na úrovni počítače na serverech, které hostují vaši webovou aplikaci.
+- Chcete nasadit webovou aplikaci, která je přístupná přes internet.
+- Chcete automaticky škálovat webovou aplikaci podle poptávky bez nutnosti opětovného nasazení.
+- Nechcete udržovat serverovou infrastrukturu (včetně aktualizací softwaru).
+- Na serverech, které hostí vaši webovou aplikaci, nepotřebujete žádná přizpůsobení na úrovni počítače.
 
-> Pokud chcete použít Azure App Service ve vlastním datovém centru nebo jiných místních počítačích, můžete to udělat pomocí [Azure Stack](https://azure.microsoft.com/overview/azure-stack/).
+> Pokud chcete použít Azure App Service ve vlastním datacentru nebo jiných místních počítačích, můžete to udělat pomocí [Azure Stack](https://azure.microsoft.com/overview/azure-stack/).
 
-Další informace o publikování do App Service najdete v tématech:
-- [Rychlý Start – publikování do Azure App Service](quickstart-deploy-to-azure.md)
-- [Rychlý Start – publikování ASP.NET Core do systému Linux](quickstart-deploy-to-linux.md).
-- [Publikování aplikace ASP.NET Core pro Azure App Service](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
-- [Řešení potíží s ASP.NET Core v Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
+Další informace o publikování do App Service najdete v těchto tématu:
+- [Rychlý start – Publikování do Azure App Service](quickstart-deploy-to-azure.md)
+- [Rychlý start – Publikování ASP.NET Core do Linuxu](quickstart-deploy-to-linux.md)
+- [Publikování ASP.NET Core aplikace do Azure App Service](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
+- Řešení ASP.NET Core potíží s Azure App Service a [službou IIS.](/aspnet/core/test/troubleshoot-azure-iis)
 
 ### <a name="azure-container-registry"></a>Azure Container Registry
 
-[Azure Container Registry](/azure/container-registry/) umožňuje sestavovat, ukládat a spravovat image kontejnerů Docker a artefakty v privátním registru pro všechny typy kontejnerových nasazení.
+[Azure Container Registry](/azure/container-registry/) umožňuje sestavovat, ukládat a spravovat image a artefakty kontejnerů Dockeru v privátním registru pro všechny typy kontejnerových nasazení.
 
 #### <a name="when-to-choose-azure-container-registry"></a>Kdy zvolit Azure Container Registry
 
-- Pokud máte existující kanál pro vývoj a nasazení kontejnerů Docker.
-- Když chcete vytvořit image kontejneru Docker v Azure.
+- Když máte existující kanál vývoje a nasazení kontejneru Dockeru.
+- Když chcete sestavit image kontejneru Dockeru v Azure.
 
 Další informace najdete tady:
 
@@ -117,28 +119,28 @@ Další informace najdete tady:
 
 ### <a name="azure-virtual-machine"></a>Virtuální počítač Azure
 
-[Azure Virtual Machines (virtuální počítače)](https://azure.microsoft.com/documentation/services/virtual-machines/) umožňují vytvářet a spravovat libovolný počet výpočetních prostředků v cloudu. Pokud předpokládáte zodpovědnost za veškerý software a aktualizace virtuálních počítačů, můžete je přizpůsobit podle požadavků vaší aplikace. K virtuálním počítačům můžete přistupovat přímo prostřednictvím vzdálené plochy a každá z nich bude mít přiřazenou IP adresu tak dlouho, jak je potřeba.
+[Azure Virtual Machines umožňuje](https://azure.microsoft.com/documentation/services/virtual-machines/) vytvářet a spravovat libovolný počet výpočetních prostředků v cloudu. Když budete mít na virtuálních počítači odpovědnost za veškerý software a aktualizace, můžete si je podle potřeby přizpůsobit podle potřeby vaší aplikace. K virtuálním počítačům můžete přistupovat přímo přes Vzdálenou plochu a každý z nich bude mít přiřazenou IP adresu tak dlouho, jak je to žádoucí.
 
-Škálování aplikace, která je hostována na virtuálních počítačích, zahrnuje i další virtuální počítače podle požadavků a následné nasazení potřebného softwaru. Tato dodatečná úroveň řízení umožňuje škálovat odlišně v různých globálních oblastech. Pokud vaše aplikace například obsluhuje zaměstnance v celé řadě regionálních poboček, můžete škálovat virtuální počítače podle počtu zaměstnanců v těchto oblastech, což může snižovat náklady.
+Škálování aplikace hostované na virtuálních počítačích zahrnuje roztáčení dalších virtuálních počítačů podle poptávky a nasazení potřebného softwaru. Tato další úroveň řízení umožňuje různě škálovat v různých globálních oblastech. Pokud například vaše aplikace obsluhuuje zaměstnance v různých regionálních pobočkách, můžete virtuální počítače škálovat podle počtu zaměstnanců v těchto oblastech a potenciálně tak snížit náklady.
 
-Další informace najdete v [podrobném porovnání](/azure/architecture/guide/technology-choices/compute-decision-tree) mezi Azure App Service, Azure Virtual Machines a dalšími službami Azure, které můžete použít jako cíl nasazení pomocí vlastní možnosti v aplikaci Visual Studio.
+Další informace najdete [](/azure/architecture/guide/technology-choices/compute-decision-tree) v podrobném porovnání služeb Azure App Service, Azure Virtual Machines a dalších služeb Azure, které můžete použít jako cíl nasazení pomocí možnosti Vlastní v Visual Studio.
 
 #### <a name="when-to-choose-azure-virtual-machines"></a>Kdy zvolit Azure Virtual Machines
 
-- Chcete nasadit webovou aplikaci, která je přístupná přes Internet, s plnou kontrolou po dobu života přiřazených IP adres.
-- Na vašich serverech potřebujete přizpůsobení na úrovni počítače, což zahrnuje další software, jako je specializovaný databázový systém, konkrétní síťové konfigurace, oddíly disku a tak dále.
-- Požadujete jemnou úroveň kontroly nad škálováním webové aplikace.
-- Potřebujete přímý přístup k serverům hostujícím aplikaci z jakéhokoli jiného důvodu.
+- Chcete nasadit webovou aplikaci, která je přístupná přes internet a má plnou kontrolu nad životností přiřazených IP adres.
+- Na serverech potřebujete přizpůsobení na úrovni počítače, která zahrnují další software, jako je specializovaný databázový systém, konkrétní síťové konfigurace, diskové oddíly atd.
+- Chcete mít přesnou úroveň kontroly nad škálováním webové aplikace.
+- Z jakéhokoli jiného důvodu potřebujete přímý přístup k serverům hostující vaši aplikaci.
 
-> Pokud chcete používat Azure Virtual Machines ve vlastním datovém centru nebo jiných místních počítačích, můžete to udělat pomocí [Azure Stack](https://azure.microsoft.com/overview/azure-stack/).
+> Pokud chcete azure Virtual Machines ve vlastním datacentru nebo jiných místních počítačích, můžete to udělat pomocí Azure Stack [.](https://azure.microsoft.com/overview/azure-stack/)
 
 ## <a name="docker-container-registry"></a>Registr kontejneru Dockeru
 
-Pokud vaše aplikace používá Docker, můžete svoji aplikaci publikovat do registru kontejneru Docker.
+Pokud vaše aplikace používá Docker, můžete kontejnerizovanou aplikaci publikovat do registru kontejnerů Dockeru.
 
-### <a name="when-to-choose-docker-container-registry"></a>Kdy zvolit Docker Container Registry
+### <a name="when-to-choose-docker-container-registry"></a>Kdy zvolit docker Container Registry
 
-- Chcete nasadit kontejnerové aplikace
+- Chcete nasadit kontejnerizovanou aplikaci
 
 Další informace najdete v následujících článcích:
 
@@ -147,28 +149,28 @@ Další informace najdete v následujících článcích:
 
 ## <a name="folder"></a>Složka
 
-Nasazení do systému souborů znamená kopírování souborů aplikace do konkrétní složky na vašem počítači. Nasazení do složky se nejčastěji používá pro účely testování nebo pro nasazení aplikace pro použití v omezeném počtu lidí, pokud počítač používá taky Server. Pokud je cílová složka sdílena v síti, pak nasazení do systému souborů může zpřístupnit soubory webové aplikace ostatním uživatelům, kteří je pak mohli nasadit na konkrétní servery.
+Nasazení do systému souborů znamená zkopírování souborů aplikace do konkrétní složky ve vašem počítači. Nasazení do složky se nejčastěji používá pro účely testování nebo k nasazení aplikace pro použití omezeným počtem lidí, pokud počítač také používá server. Pokud je cílová složka sdílená v síti, pak nasazení do systému souborů může z dostupných souborů webové aplikace udělat pro ostatní, kteří ji pak můžou nasadit na konkrétní servery.
 ::: moniker range=">=vs-2019"
-Počínaje sadou Visual Studio 2019 16,8 obsahuje cíl složky možnost publikování aplikace .NET pro Windows pomocí technologie ClickOnce.
+Od verze Visual Studio 2019 16.8 cíl složky zahrnuje možnost publikovat aplikaci .NET Windows pomocí ClickOnce.
 
-Pokud chcete publikovat rozhraní .NET Core 3,1 nebo novější, aplikace pro Windows s ClickOnce, přečtěte si téma [nasazení aplikace .NET pro Windows pomocí technologie ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+Pokud chcete publikovat .NET Core 3.1 nebo novější, Windows s ClickOnce, podívejte se na nasazení aplikace [.NET Windows pomocí ClickOnce](quickstart-deploy-using-clickonce-folder.md).
 ::: moniker-end
-Všechny místní počítače, na kterých běží server, můžou aplikaci zpřístupnit přes Internet nebo intranet v závislosti na tom, jak je nakonfigurovaná, a sítích, ke kterým jsou připojené. (Pokud počítač připojujete přímo k Internetu, buďte obzvláště opatrní při ochraně před externími bezpečnostními hrozbami.) Vzhledem k tomu, že tyto počítače spravujete, budete mít plnou kontrolu nad tím, jak softwarové, tak hardwarové konfigurace.
+Všechny místní počítače, na kterých běží server, mohou vaši aplikaci z internetu nebo intranetu získat v závislosti na tom, jak je nakonfigurovaná, a v sítích, ke kterým je připojená. (Pokud počítač připojíte přímo k internetu, buďte obzvláště opatrní, abyste ho ochránili před externími bezpečnostními hrozbami.) Protože tyto počítače spravujete, máte úplnou kontrolu nad konfigurací softwaru a hardwaru.
 
-Pokud z nějakého důvodu (například přístup k počítači) nemůžete používat cloudové služby, jako je Azure App Service nebo Azure Virtual Machines, můžete [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) použít ve svém vlastním datovém centru. Azure Stack umožňuje spravovat a používat výpočetní prostředky prostřednictvím Azure App Service a Azure Virtual Machines, a přitom přitom udržuje vše v místním prostředí.
+Pokud z nějakého důvodu (například přístup k počítači) nemůžete používat cloudové služby, jako je Azure App Service [](https://azure.microsoft.com/overview/azure-stack/) nebo Azure Virtual Machines, můžete použít Azure Stack ve vlastním datacentru. Tento Azure Stack umožňuje spravovat a používat výpočetní prostředky prostřednictvím služeb Azure App Service a Azure Virtual Machines a přitom zachovat vše v místním prostředí.
 
 ### <a name="when-to-choose-file-system-deployment"></a>Kdy zvolit nasazení systému souborů
 
-- Aplikaci musíte nasadit jenom do sdílené složky, ze které ji ostatní nasadí na různé servery.
+- Aplikaci je potřeba nasadit jenom do sdílené složky, ze které ji ostatní nasadí na různé servery.
 ::: moniker range=">=vs-2019"
-- Chcete nasadit aplikaci .NET pro Windows pomocí technologie ClickOnce
+- Chcete nasadit aplikaci .NET Windows pomocí ClickOnce
 ::: moniker-end
-- Potřebujete pouze místní testovací nasazení.
-- Chcete prošetřit a potenciálně upravit soubory aplikace nezávisle, než je odešlete do jiného cíle nasazení.
+- Potřebujete jenom místní testovací nasazení.
+- Chcete prověřit a potenciálně upravit soubory aplikace nezávisle před jejich odesláním do jiného cíle nasazení.
 
-Další informace najdete v tématu [rychlý Start – nasazení do místní složky](quickstart-deploy-to-local-folder.md).
+Další informace najdete v tématu [Rychlý start – nasazení do místní složky](quickstart-deploy-to-local-folder.md).
 ::: moniker range=">=vs-2019"
-Další informace o nasazení aplikace .NET pro Windows pomocí technologie ClickOnce naleznete v tématu [nasazení aplikace .NET pro Windows pomocí technologie ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+další informace o nasazení aplikace Windows .net pomocí ClickOnce najdete v tématu [nasazení aplikace .net Windows pomocí ClickOnce](quickstart-deploy-using-clickonce-folder.md).
 ::: moniker-end
 
 Další nápovědu k výběru nastavení najdete v následujících tématech:
@@ -179,49 +181,49 @@ Další nápovědu k výběru nastavení najdete v následujících tématech:
 
 ## <a name="ftpftps-server"></a>Server FTP/FTPS
 
-Server FTP/FTPS umožňuje nasazení aplikace na jiný server než Azure. Může se nasadit na systém souborů nebo na jiný server (Internet nebo intranet), ke kterému máte přístup, včetně těch, které jsou k dispozici v jiných cloudových službách. Může pracovat s nasazením webu (soubory nebo. ZIP) a FTP.
+Server FTP/FTPS umožňuje nasazení aplikace na jiný server než Azure. Může se nasadit na systém souborů nebo na jiný server (Internet nebo intranet), ke kterému máte přístup, včetně těch, které jsou k dispozici v jiných cloudových službách. Může pracovat s nasazením webu (soubory nebo .ZIP) a FTP.
 
-Při volbě serveru FTP/FTPS vás Visual Studio vyzve k zadání názvu profilu a pak shromáždí další informace o **připojení** , včetně cílového serveru nebo umístění, názvu lokality a přihlašovacích údajů. Na kartě **Nastavení** můžete řídit následující chování:
+při volbě serveru FTP/FTPS vás Visual Studio vyzve k zadání názvu profilu a pak shromáždí další informace o **připojení** , včetně cílového serveru nebo umístění, názvu lokality a přihlašovacích údajů. na kartě **Nastavení** můžete řídit následující chování:
 
 - Konfigurace, kterou chcete nasadit.
 - Zda odebrat existující soubory z cílového umístění.
 - Určuje, zda má být během publikování předkompilována.
 - Určuje, zda mají být vyloučeny soubory z App_Data složky z nasazení.
 
-V aplikaci Visual Studio můžete vytvořit libovolný počet profilů nasazení FTP/FTPS, aby bylo možné spravovat profily s různými nastaveními.
+v Visual Studio můžete vytvořit libovolný počet profilů nasazení FTP/FTPS, což umožňuje spravovat profily s různými nastaveními.
 
 ### <a name="when-to-choose-ftpftps-server-deployment"></a>Kdy zvolit nasazení serveru FTP/FTPS
 
 - Cloudové služby používáte na jiném poskytovateli než Azure, ke kterému se dá přistup prostřednictvím adres URL.
-- Chcete nasadit pomocí jiných přihlašovacích údajů, než jsou ty, které používáte v rámci sady Visual Studio, nebo které se vztahují přímo k vašim účtům Azure.
+- chcete nasadit pomocí jiných přihlašovacích údajů, než jsou ty, které používáte v rámci Visual Studio, nebo je můžete přivázat přímo na vaše účty Azure.
 - Chcete odstranit soubory z cíle při každém nasazení.
 
 ## <a name="web-server-iis"></a>Webový server (IIS)
 
 Webový server služby IIS umožňuje nasazení aplikace na jiný webový server než Azure. Může se nasadit na server IIS (Internet nebo intranet), ke kterému máte přístup, včetně těch, které jsou k dispozici v jiných cloudových službách. Může pracovat s Nasazení webu nebo balíčkem Nasazení webu.
 
-Při výběru webového serveru služby IIS vás aplikace Visual Studio vyzve k zadání názvu profilu a následnému shromažďování dalších informací o **připojení** , včetně cílového serveru nebo umístění, názvu lokality a přihlašovacích údajů. Na kartě **Nastavení** můžete řídit následující chování:
+když zvolíte webový server služby IIS, Visual Studio vás vyzve k zadání názvu profilu a pak shromáždí další informace o **připojení** , včetně cílového serveru nebo umístění, názvu lokality a přihlašovacích údajů. na kartě **Nastavení** můžete řídit následující chování:
 
 - Konfigurace, kterou chcete nasadit.
 - Zda odebrat existující soubory z cílového umístění.
 - Určuje, zda má být během publikování předkompilována.
 - Určuje, zda mají být vyloučeny soubory z App_Data složky z nasazení.
 
-V aplikaci Visual Studio můžete vytvořit libovolný počet profilů nasazení webového serveru služby IIS, aby bylo možné spravovat profily s různými nastaveními.
+v Visual Studio můžete vytvořit libovolný počet profilů nasazení webového serveru služby IIS, což umožňuje spravovat profily s různými nastaveními.
 
 ### <a name="when-to-choose-web-server-iis-deployment"></a>Kdy zvolit nasazení webového serveru (IIS)
 
 - Službu IIS používáte k publikování webu nebo služby, ke které je možné přistupovat prostřednictvím adres URL.
-- Chcete nasadit pomocí jiných přihlašovacích údajů, než jsou ty, které používáte v rámci sady Visual Studio, nebo které se vztahují přímo k vašim účtům Azure.
+- chcete nasadit pomocí jiných přihlašovacích údajů, než jsou ty, které používáte v rámci Visual Studio, nebo je můžete přivázat přímo na vaše účty Azure.
 - Chcete odstranit soubory z cíle při každém nasazení.
 
 Další informace najdete v tématu [rychlý Start – nasazení na web](quickstart-deploy-to-a-web-site.md).
 
-Nápovědu k řešení potíží ASP.NET Core ve službě IIS najdete v tématu věnovaném [řešení potíží ASP.NET Core na Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
+nápovědu k řešení potíží ASP.NET Core ve službě iis najdete v tématu věnovaném [řešení potíží ASP.NET Core na Azure App Service a iis](/aspnet/core/test/troubleshoot-azure-iis).
 
 ## <a name="import-profile"></a>Importovat profil
 
-Profil můžete importovat při publikování do služby IIS nebo Azure App Service. Nasazení můžete nakonfigurovat pomocí *souboru nastavení publikování* (*\* . publishsettings*). Soubor nastavení publikování se vytvoří prostřednictvím služby IIS nebo Azure App Service, nebo se dá vytvořit ručně a pak ho můžete importovat do sady Visual Studio.
+Profil můžete importovat při publikování do služby IIS nebo Azure App Service. Nasazení můžete nakonfigurovat pomocí *souboru nastavení publikování* (*\* . publishsettings*). Soubor nastavení publikování se vytvoří prostřednictvím služby IIS nebo Azure App Service, nebo se dá vytvořit ručně a pak ho můžete importovat do Visual Studio.
 
 Použití souboru nastavení publikování může zjednodušit konfiguraci nasazení a funguje lépe v týmovém prostředí, a to v případě ruční konfigurace jednotlivých profilů nasazení.
 
@@ -248,7 +250,7 @@ Další nápovědu k výběru nastavení najdete v následujících tématech:
 Kurzy:
 
 - [Nasazení aplikace .NET Core pomocí nástroje Publikovat](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- [Publikování aplikace ASP.NET Core do Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [publikování aplikace ASP.NET core do Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [Nasazení ve Visual C++](/cpp/windows/deployment-in-visual-cpp)
 - [Nasazení aplikací pro UWP](/windows/uwp/packaging/packaging-uwp-apps?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [Publikování aplikace Node.js do Azure pomocí Nasazení webu](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)

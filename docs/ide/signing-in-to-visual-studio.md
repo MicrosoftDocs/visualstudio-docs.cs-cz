@@ -1,6 +1,6 @@
 ---
 title: Přihlásit se
-description: Přečtěte si, jak se přihlásit k Visual Studio.
+description: přihlaste se k Visual Studio a prodlužte Visual Studio zkušební období, odemkněte Visual Studio a další
 ms.custom: contperf-fy21q1
 ms.date: 09/11/2020
 ms.topic: how-to
@@ -10,16 +10,16 @@ ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1335ab3d8f679f00fb7f52420d378baa1f2bd905
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: 4b4c91a2ff4693b62ce8ac4d40d493995c52b81b
+ms.sourcegitcommit: 4e09130bcd55bb9cb8ad157507c23b67aa209fad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113222991"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113549469"
 ---
-# <a name="sign-in-to-visual-studio-on-windows"></a>přihlášení k Visual Studio v Windows
+# <a name="sign-in-to-visual-studio-on-windows"></a>přihlášení k Visual Studio v Windows 
 
-I když se nemusíte přihlašovat, máte k dispozici mnoho výhod. když se přihlásíte, můžete přizpůsobit, optimalizovat a rozšířit možnosti Visual Studio. 
+I když se nemusíte přihlašovat, máte k dispozici mnoho výhod. v tomto článku se dozvíte, [jak se přihlásit](#how-to-sign-in), jak [aktualizovat profil](#update-your-profile)a jaké výhody má vaše prostředí Visual Studio. 
 
 > [!NOTE]
 > toto téma se týká Visual Studio Windows. Visual Studio pro Mac najdete v tématu [přihlášení k Visual Studio pro Mac](/visualstudio/mac/signing-in).
@@ -31,8 +31,6 @@ I když se nemusíte přihlašovat, máte k dispozici mnoho výhod. když se př
 > použití Visual Studio 2017 pro přístup k prostředkům nakonfigurovaným pro podmíněný přístup může aktivovat omezené možnosti ověřování a vyzvat opakované ověřování několikrát v rámci stejné relace Visual Studio. 
 > 
 ::: moniker-end
-
-## <a name="benefits"></a>Výhody
 
 Tady je úplný seznam toho, co můžete očekávat a co můžete udělat po přihlášení:
 
@@ -75,6 +73,6 @@ pokud se odhlásíte, budete automaticky přihlášeni k Visual Studio vždy, kd
 
 1. Až skončíte, klikněte na **Uložit změny**.
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Poradce při potížích
 
 Nápovědu získáte na stránce [podpory předplatného](https://visualstudio.microsoft.com/subscriptions/support/) .
