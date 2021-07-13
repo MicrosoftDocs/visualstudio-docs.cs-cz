@@ -1,6 +1,6 @@
 ---
-title: 'Kurz: roztažení jednoduché konzolové aplikace v jazyce C#'
-description: naučte se vyvíjet konzolovou aplikaci v jazyce C# v Visual Studio, krok za krokem.
+title: 'Kurz 2: Rozšíření konzolové aplikace jazyka C#'
+description: Naučte se vyvíjet konzolovou aplikaci v jazyce C# Visual Studio krok za krokem.
 ms.custom: vs-acquisition, get-started
 ms.date: 04/15/2021
 ms.technology: vs-ide-general
@@ -16,50 +16,63 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84a79015dc4b1147f078b0a970df52c553189c92
-ms.sourcegitcommit: 4e09130bcd55bb9cb8ad157507c23b67aa209fad
+ms.openlocfilehash: f7d1ae7d0d5f045c0772243c7fc4011a9f31088e
+ms.sourcegitcommit: e7629e132a4d2fad6bb5869e4d68d9dbeeae9631
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113549495"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113649159"
 ---
-# <a name="tutorial-extend-a-simple-c-console-app"></a>Kurz: roztažení jednoduché konzolové aplikace v jazyce C#
+# <a name="tutorial-extend-c-console-app-and-debug-in-visual-studio-part-2-of-2"></a>Kurz: Rozšíření konzolové aplikace c# a ladění v Visual Studio (část 2 ze 2)
 
-v tomto kurzu se naučíte, jak pomocí Visual Studio roztáhnout konzolovou aplikaci, kterou jste vytvořili v první části. seznámíte se s některými funkcemi v Visual Studio, které budete potřebovat pro každodenní vývoj, jako je správa více projektů a odkazování na balíčky třetích stran.
+Ve druhé části této série kurzů se trochu ponoříte do funkcí sestavení a ladění v Visual Studio, které budete potřebovat pro každodenní vývoj, jako je správa více projektů, ladění a odkazování na balíčky třetích stran. Spustíte konzolovou aplikaci jazyka C#, kterou jste vytvořili v [1. části tohoto kurzu (tutorial-console.md) , Visual Studio prozkoumáte některé funkce integrovaného vývojového prostředí (IDE) Visual Studio. Tento kurz je 2. částí dvousekunové série kurzů.
 
-Pokud jste právě dokončili [první část](tutorial-console.md) této série, už máte konzolovou aplikaci kalkulačky.  chcete-li přeskočit část 1, můžete začít otevřením projektu z GitHub úložiště. Aplikace kalkulačky pro C# je v [úložišti vs-tutorial-Samples](https://github.com/MicrosoftDocs/vs-tutorial-samples), takže můžete postupovat podle kroků v [kurzu: otevření projektu z úložiště](../tutorial-open-project-from-repo.md) a zahájení práce.
+V tomto kurzu:
 
-## <a name="add-a-new-project"></a>Přidat nový projekt
+> [!div class="checklist"]
+> * Přidejte do prvního projektu další projekt.
+> * Referenční knihovny a přidání balíčků
+> * Další ladění.
+> * Prohlédněte si celý kód.
 
-Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. Teď přidáme do aplikace kalkulačky další projekt. To bude knihovna tříd, která poskytuje některé funkce kalkulačky.
 
-1. v Visual Studio můžete použít **soubor** příkazů nabídky nejvyšší úrovně  >  **add**  >  **new Project** k přidání nového projektu, ale můžete také kliknout pravým tlačítkem na existující název projektu (nazývaný "uzel projektu") a otevřít místní nabídku projektu (nebo místní nabídka). Tato místní nabídka obsahuje mnoho způsobů, jak přidat funkce do projektů. v **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **přidat**  >  **nové Project**.
+## <a name="prerequisites"></a>Požadavky
 
-1. Vyberte knihovnu tříd šablony projektu C# **(.NET Standard)**.
+Musíte:
++ Použití [konzolové aplikace Kalkulačka z první části této série kurzů](tutorial-console.md) 
++ Použijte aplikaci Kalkulačka jazyka C# v repo [vs-tutorial-samples,](https://github.com/MicrosoftDocs/vs-tutorial-samples) kterou můžete otevřít [z repo, abyste](../tutorial-open-project-from-repo.md) mohli začít.
+
+## <a name="add-another-project"></a>Přidání dalšího projektu
+
+Kód z reálného světa zahrnuje mnoho projektů, které spolupracují v řešení. Teď do aplikace Calculator přidáme další projekt. Bude to knihovna tříd, která poskytuje některé funkce kalkulačky.
+
+1. V Visual Studio můžete použít příkaz nabídky nejvyšší úrovně Soubor Přidat nový Project a přidat nový projekt, ale můžete také kliknout pravým tlačítkem na název existujícího projektu (nazývaný "uzel projektu") a otevřít místní nabídku projektu (nebo místní  >    >   nabídku). Tato místní nabídka obsahuje mnoho způsobů, jak do projektů přidat funkce. Proto klikněte pravým tlačítkem na uzel projektu v **Průzkumník řešení** a zvolte **Přidat**  >  **nový Project**.
+
+1. Zvolte knihovnu tříd šablony projektu C# **(.NET Standard).**
 
    ![Snímek obrazovky s výběrem šablony projektu knihovny tříd](media/vs-2019/calculator2-add-project-dark.png)
 
-1. Zadejte název projektu **CalculatorLibrary** a klikněte na **vytvořit**. Po zobrazení výzvy vyberte možnost .NET 3,1. Visual Studio vytvoří nový projekt a přidá ho do řešení.
+1. Zadejte název projektu **CalculatorLibrary** a zvolte **Vytvořit.** Po zobrazení otázky znovu zvolte .NET 3.1. Visual Studio vytvoří nový projekt a přidá ho do řešení.
 
    ![Snímek obrazovky Průzkumník řešení s přidaným projektem knihovny tříd CalculatorLibrary](media/vs-2019/calculator2-solution-explorer-with-class-library-dark2.png)
 
-1. Místo souboru *Class1. cs* přejmenujte soubor **CalculatorLibrary. cs**. Můžete kliknout na název v **Průzkumník řešení** pro přejmenování, nebo kliknout pravým tlačítkem myši a vybrat **Přejmenovat** nebo stisknout klávesu **F2** .
+1. Místo souboru *Class1.cs* přejmenujte soubor **CalculatorLibrary.cs.** Můžete kliknout na název v **Průzkumník řešení** ho přejmenovat, nebo kliknout pravým tlačítkem a zvolit **Přejmenovat** nebo stisknout **klávesu F2.**
 
-   Může se zobrazit výzva, pokud chcete přejmenovat všechny odkazy na `Class1` v souboru. Nezáleží na tom, jak jste odpověděli, protože v budoucím kroku nahradíte kód.
+   Může se zobrazit dotaz, jestli chcete v souboru přejmenovat nějaké `Class1` odkazy na . Nezáleží na tom, jak na to odpovíte, protože v budoucím kroku budete kód nahrazovat.
 
-1. Nyní je nutné přidat odkaz na projekt, aby první projekt mohl používat rozhraní API vystavené novou knihovnou tříd.  klikněte pravým tlačítkem myši na uzel **závislosti** v prvním projektu a vyberte možnost **přidat Project odkaz**.
+1. Teď musíme přidat odkaz na projekt, aby první projekt mohl používat rozhraní API vystavená novou knihovnou tříd.  Klikněte pravým tlačítkem na **uzel Závislosti** v prvním projektu a zvolte **Přidat odkaz Project projektu.**
 
-   ![snímek obrazovky s položkou nabídky přidat Project odkaz](media/vs-2019/calculator2-add-project-reference-dark.png)
+   ![Snímek obrazovky s položkou Project přidat odkaz na nový](media/vs-2019/calculator2-add-project-reference-dark.png)
 
-   Zobrazí se dialogové okno **Správce odkazů** . Toto dialogové okno umožňuje přidat odkazy na jiné projekty, stejně jako sestavení a knihovny DLL modelu COM, které vaše projekty potřebují.
+   Zobrazí **se dialogové okno Správce** odkazů. Toto dialogové okno umožňuje přidat odkazy na jiné projekty, stejně jako sestavení a knihovny DLL modelu COM, které vaše projekty potřebují.
 
-   ![Snímek obrazovky s dialogovým oknem Správce odkazů](media/vs-2019/calculator2-ref-manager-dark.png)
+   ![Snímek obrazovky s dialogem Správce odkazů](media/vs-2019/calculator2-ref-manager-dark.png)
 
-1. V dialogovém okně **Správce odkazů** zaškrtněte políčko u projektu **CalculatorLibrary** a klikněte na **tlačítko OK**.  Odkaz na projekt se zobrazí v uzlu **projekty** v **Průzkumník řešení**.
+1. V dialogovém **okně Správce** odkazů zaškrtněte políčko u projektu **CalculatorLibrary** a zvolte **OK.**  Odkaz na projekt se zobrazí v **uzlu Projekty** v **Průzkumník řešení**.
 
-   ![Snímek obrazovky s Průzkumník řešení s odkazem na projekt](media/vs-2019/calculator2-solution-explorer-with-project-reference-dark2.png)
+   ![Snímek obrazovky Průzkumník řešení s referenčními odkazy na projekt](media/vs-2019/calculator2-solution-explorer-with-project-reference-dark2.png)
 
-1. V *programu program. cs* vyberte `Calculator` třídu a veškerý její kód a stisknutím **kombinace kláves CTRL + X** ho vyjměte z programu program. cs. Pak v **CalculatorLibrary** v *CalculatorLibrary. cs* vložte kód do `CalculatorLibrary` oboru názvů. Pak vytvořte třídu kalkulačky, `public` aby ji vystavila mimo knihovnu. Kód v *CalculatorLibrary. cs* by teď měl vypadat jako v následujícím kódu:
+1. V *souboru Program.cs* vyberte třídu a veškerý její kód a stisknutím kombinace kláves `Calculator` **CTRL+X** ji vyjmout ze souboru Program.cs. Potom v **souboru CalculatorLibrary** v *souboru CalculatorLibrary.cs* vložte kód do oboru `CalculatorLibrary` názvů . Potom nastavujte třídu Calculator tak, `public` aby ji vystavěla mimo knihovnu. Kód v *souboru CalculatorLibrary.cs* by teď měl vypadat podobně jako následující kód:
 
    ```csharp
    using System;
@@ -101,34 +114,34 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
     }
    ```
 
-1. První projekt obsahuje odkaz, ale zobrazí se chyba, že volání kalkulačky. DoOperation nebude vyřešeno. Důvodem je, že CalculatorLibrary je v jiném oboru názvů, proto přidejte `CalculatorLibrary` obor názvů pro plně kvalifikovaný odkaz.
+1. První projekt obsahuje odkaz, ale zobrazí se chyba, že se volání Calculator.DoOperation nevyřeší. Je to proto, že CalculatorLibrary se nachází v jiném oboru názvů, proto pro plně kvalifikovaný odkaz přidejte `CalculatorLibrary` obor názvů.
 
    ```csharp
    result = CalculatorLibrary.Calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-   Zkuste místo toho přidat direktivu using na začátek souboru:
+   Zkuste místo toho na začátek souboru přidat direktivu using:
 
    ```csharp
    using CalculatorLibrary;
    ```
 
-   Tato změna by měla umožnit odebrat obor názvů CalculatorLibrary z webu volání, ale nyní je nejednoznačnost. Je `Calculator` Třída v CalculatorLibrary nebo je Kalkulačka oboru názvů?  Chcete-li vyřešit nejednoznačnost, přejmenujte obor názvů `CalculatorProgram` .
+   Tato změna by vám měla z webu volání odebrat obor názvů CalculatorLibrary, ale teď je tu nejednoznačnost. Je `Calculator` třída v CalculatorLibrary, nebo je obor názvů Kalkulačka?  Pokud chcete vyřešit nejednoznačnost, přejmenujte obor názvů `CalculatorProgram` .
 
    ```csharp
    namespace CalculatorProgram
    ```
 
-## <a name="reference-net-libraries-write-to-a-log"></a>Odkazy na knihovny .NET: zápis do protokolu
+## <a name="reference-net-libraries-write-to-a-log"></a>Referenční knihovny .NET: zápis do protokolu
 
-1. Předpokládejme, že teď chcete přidat protokol všech operací a zapsat ho do textového souboru. `Trace`Tato funkce poskytuje třídu .NET. (Je užitečné také pro základní techniky tisku a ladění.)  Třída Trace je v System. Diagnostics a budeme potřebovat třídy System.IO `StreamWriter` , jako tak začít přidáním direktiv using v horní části *CalculatorLibrary. cs*:
+1. Předpokládejme, že teď chcete přidat protokol všech operací a zapsat ho do textového souboru. Tuto funkci `Trace` poskytuje třída .NET. (Je užitečná také pro základní techniky ladění tisku.)  Třída Trace je ve třídě System.Diagnostics System.IO třídy, jako je , takže začněte přidáním direktiv using na začátek `StreamWriter` *souboru CalculatorLibrary.cs:*
 
    ```csharp
    using System.IO;
    using System.Diagnostics;
    ```
 
-1. Prohlížíte-li se, jak je třída trasování používána, je nutné umístit na odkaz pro třídu, která je přidružena k FileStream. To znamená, že Kalkulačka bude lépe fungovat jako objekt, takže pojďme přidat konstruktor na začátek třídy kalkulačky v *CalculatorLibrary. cs*.
+1. Když se podíváme na to, jak se třída Trace používá, musíte uchovat odkaz na třídu , která je přidružena k streamu filestream. To znamená, že kalkulačka by fungovala lépe jako objekt, takže přidáme konstruktor na začátek třídy Calculator v *souboru CalculatorLibrary.cs*.
 
    ```csharp
    public Calculator()
@@ -144,7 +157,7 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
         {
    ```
 
-1. A musíme změnit statickou `DoOperation` metodu na členskou metodu, proto `static` klíčová slova odeberte.  Pojďme také do každého výpočtu protokolu přidat výstup, aby DoOperation vypadal jako následující kód:
+1. A musíme změnit statickou `DoOperation` metodu na členské metody, proto odeberte klíčové `static` slovo .  Pojďme také do každého výpočtu pro protokol přidat výstup, aby DoOperation vypadal jako následující kód:
 
    ```csharp
    public double DoOperation(double num1, double num2, string op)
@@ -182,19 +195,19 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
     }
    ```
 
-1. Nyní zpět v *programu program. cs* je statické volání označeno červenou vlnovkou. Pokud ho chcete opravit, vytvořte `calculator` proměnnou přidáním následujícího řádku těsně před `while (!endApp)` smyčku:
+1. V souboru *Program.cs je teď* statické volání označeno červenouquiggly. Pokud ji chcete opravit, vytvořte `calculator` proměnnou přidáním následujícího řádku těsně před `while (!endApp)` smyčku:
 
    ```csharp
    Calculator calculator = new Calculator();
    ```
 
-   A upravte web volání `DoOperation` následujícím způsobem tak, aby odkazoval na objekt s názvem `calculator` malými písmeny, čímž provede tuto členskou vyvolání, nikoli voláním statické metody:
+   A upravte lokalitu volání pro následujícím způsobem tak, aby odkaz na objekt s názvem malými písmeny, čímž se z tohoto volání členu místo volání statické `DoOperation` metody vyvolalo: `calculator`
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-1. Spusťte program znovu a po dokončení klikněte pravým tlačítkem myši na uzel projektu a zvolte možnost **Otevřít složku v Průzkumníku souborů** a pak přejděte dolů v Průzkumníkovi souborů do výstupní složky. Může to být *bin/Debug/netcoreapp 3.1* a otevře se soubor *kalkulačky. log* .
+1. Spusťte program znovu a až to bude hotové, klikněte pravým tlačítkem na uzel projektu, zvolte Otevřít složku v **Průzkumník souborů** a pak přejděte dolů Průzkumník souborů výstupní složce. Může to být *bin/Debug/netcoreapp3.1* a otevřete soubor *calculator.log.*
 
     ```output
     Starting Calculator Log
@@ -203,7 +216,7 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
     3 * 3 = 9
     ```
 
-V tomto okamžiku by *CalculatorLibrary. cs* měl vypadat nějak takto:
+V tuto chvíli by *soubor CalculatorLibrary.cs* měl vypadat nějak takhle:
 
 ```csharp
 using System;
@@ -262,7 +275,7 @@ namespace CalculatorLibrary
 }
 ```
 
-A *program. cs* by měl vypadat přibližně takto:
+Soubor *Program.cs* by měl vypadat takto:
 
 ```csharp
 using System;
@@ -348,29 +361,29 @@ namespace CalculatorProgram
 }
 ```
 
-## <a name="add-a-nuget-package-write-to-a-json-file"></a>přidat balíček NuGet: zapsat do souboru JSON
+## <a name="add-a-nuget-package-write-to-a-json-file"></a>Přidání balíčku NuGet: zápis do souboru JSON
 
-1. Nyní předpokládejme, že chceme výstupovat operace ve formátu JSON, což je oblíbený a přenosný formát pro ukládání dat objektů. aby bylo možné implementovat tuto funkci, bude nutné odkazovat na balíček NuGet Newtonsoft.Jsna. balíčky NuGet představují primární vozidlo pro distribuci knihoven tříd .net. v **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **závislosti** pro projekt CalculatorLibrary a vyberte možnost **spravovat balíčky NuGet**.
+1. Teď předpokládejme, že chceme výstup operací ve formátu JSON, oblíbeném a přenosném formátu pro ukládání dat objektů. K implementaci této funkce budeme muset odkazovat na NuGet, Newtonsoft.Jsna. NuGet jsou primárním vozidla pro distribuci knihoven tříd .NET. V Průzkumník řešení klikněte pravým tlačítkem na **uzel Závislosti** pro projekt CalculatorLibrary **a** zvolte Spravovat NuGet **balíčky.**
 
-   ![snímek obrazovky s balíčky pro správu NuGet v místní nabídce](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
+   ![Snímek obrazovky NuGet s balíčky NuGet v místní nabídce](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
 
-   otevře se NuGet Správce balíčků.
+   Otevře NuGet Správce balíčků okno.
 
-   ![snímek obrazovky NuGet Správce balíčků](media/vs-2019/calculator2-nuget-package-manager-dark.png)
+   ![Snímek obrazovky NuGet Správce balíčků](media/vs-2019/calculator2-nuget-package-manager-dark.png)
 
-1. Vyhledejte Newtonsoft.Jsna balíčku a vyberte **nainstalovat**.
+1. Vyhledejte Newtonsoft.Jsbalíčku a zvolte **Nainstalovat.**
 
-   ![snímek obrazovky s informacemi o balíčku NuGet Newtonsoft](media/vs-2019/calculator2-nuget-newtonsoft-json-dark2.png)
+   ![Snímek obrazovky s informacemi NuGet o balíčku od Společnosti Microsoft](media/vs-2019/calculator2-nuget-newtonsoft-json-dark2.png)
 
-   Balíček je stažen a přidán do projektu a nová položka se zobrazí v uzlu odkazy v **Průzkumník řešení**.
+   Balíček se stáhne a přidá se do projektu a v uzlu Odkazy v souboru se **zobrazí Průzkumník řešení**.
 
-1. Přidejte direktivu using pro System.IO a Newtonsoft.Jsna balíčku na začátku *CalculatorLibrary. cs*.
+1. Přidejte direktivu using pro System.IO a Newtonsoft.Jsna začátek souboru *CalculatorLibrary.cs*.
 
    ```csharp
    using Newtonsoft.Json;
    ```
 
-1. Nyní nahraďte konstruktor pro kalkulačku následujícím kódem a vytvořte objekt členské JsonWriter:
+1. Teď nahraďte konstruktor pro Calculator následujícím kódem a vytvořte členský objekt JsonWriter:
 
    ```csharp
         JsonWriter writer;
@@ -387,7 +400,7 @@ namespace CalculatorProgram
         }
    ```
 
-1. Upravte `DoOperation` metodu pro přidání kódu zapisovače JSON:
+1. Upravte `DoOperation` metodu a přidejte kód JSON pro zápis:
 
    ```csharp
         public double DoOperation(double num1, double num2, string op)
@@ -434,7 +447,7 @@ namespace CalculatorProgram
         }
    ```
 
-1. Jakmile se uživatel stane vstupem do data operace, budete muset přidat metodu pro dokončení syntaxe JSON.
+1. Jakmile uživatel dokončí zadávání provozních dat, budete muset přidat metodu , která dokončí syntaxi JSON.
 
    ```csharp
     public void Finish()
@@ -445,7 +458,7 @@ namespace CalculatorProgram
     }
    ```
 
-1. A v *programu program. cs* přidejte volání pro dokončení na konci.
+1. V *souboru Program.cs* přidejte na konec volání Finish (Dokončit).
 
    ```csharp
             // And call to close the JSON writer before return
@@ -454,7 +467,7 @@ namespace CalculatorProgram
         }
    ```
 
-1. Sestavte a spusťte aplikaci a po dokončení zadávání několika operací aplikaci zavřete správně pomocí příkazu n.  Nyní otevřete calculatorlog.jsv souboru a měli byste vidět podobný následujícímu:
+1. Sestavte a spusťte aplikaci. Až budete hotovi se zadáváním několika operací, pomocí příkazu n aplikaci správně zavřete.  Teď otevřete soubor calculatorlog.jsa měli byste vidět něco podobného:
 
    ```json
    {
@@ -475,29 +488,29 @@ namespace CalculatorProgram
    }
    ```
 
-## <a name="debug-set-and-hit-a-breakpoint"></a>Ladění: nastavte a stiskněte zarážku.
+## <a name="debug-set-and-hit-a-breakpoint"></a>Ladění: nastavení zarážky a přístup k zarážce
 
-ladicí program Visual Studio je výkonný nástroj, který umožňuje spuštění kódu krok za krokem, aby bylo možné najít přesný bod, ve kterém jste provedli programové chyby. Pak poznáte, jaké opravy potřebujete ve svém kódu dělat. Visual Studio umožňuje provádět dočasné změny, abyste mohli pokračovat v používání programu.
+Ladicí Visual Studio je výkonný nástroj, který umožňuje krok za krokem spouštět kód a najít přesný bod, kdy jste udělali chybu v programování. Pak pochopíte, jaké opravy je potřeba provést v kódu. Visual Studio umožňuje provádět dočasné změny, abyste mohli program dále spustit.
 
-1. V *programu program. cs* klikněte na okraj nalevo od následujícího kódu (nebo otevřete místní nabídku a zvolte **zarážku**  >  **Vložit zarážku** nebo stiskněte **F9**):
+1. V *souboru Program.cs* klikněte na okraj nalevo od následujícího kódu (nebo otevřete místní nabídku a zvolte **Breakpoint**  >  **Insert Breakpoint**(Vložit zarážku) nebo stiskněte klávesu **F9**):
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-   Červený kroužek, který se zobrazí, označuje zarážku. Zarážky můžete použít k pozastavení aplikace a kontrole kódu. Zarážku můžete nastavit na jakémkoli spustitelném řádku kódu.
+   Červený kruh, který se zobrazí, označuje zarážku. Zarážky můžete použít k pozastavení aplikace a kontrole kódu. Zarážku můžete nastavit na libovolném spustitelném řádku kódu.
 
    ![Snímek obrazovky s nastavením zarážky](media/vs-2019/calculator-2-debug-set-breakpoint.png)
 
 1. Sestavte a spusťte aplikaci.
 
-1. Ve spuštěné aplikaci zadejte některé hodnoty pro výpočet:
+1. Ve spuštěné aplikaci zadejte pro výpočet některé hodnoty:
 
-   - Pro první číslo zadejte hodnotu **8** a zadejte ji.
+   - Jako první číslo zadejte **8** a zadejte ho.
    - Pro druhé číslo zadejte **0** a zadejte ho.
-   - Pro operátora máme zábavu. Zadejte **d** a zadejte ho.
+   - Pro operátor se bavte. zadejte **d** a zadejte ho.
 
-   Aplikace pozastaví, kde jste vytvořili zarážku, která je označena žlutým ukazatelem vlevo a zvýrazněným kódem. Zvýrazněný kód ještě nebyl proveden.
+   Aplikace pozastaví místo, kde jste vytvořili zarážku, což je označeno žlutým ukazatelem vlevo a zvýrazněný kód. Zvýrazněný kód se ještě nespouštěl.
 
    ![Snímek obrazovky se zarážkou](media/vs-2019/calculator-2-debug-hit-breakpoint.png)
 
@@ -749,15 +762,12 @@ namespace CalculatorProgram
 
 ## <a name="next-steps"></a>Další kroky
 
-Blahopřejeme k dokončení tohoto kurzu! Pokud se chcete dozvědět ještě víc, pokračujte v následujících kurzech.
+Blahopřejeme k dokončení tohoto kurzu! Další informace získáte, když budete pokračovat s následujícím obsahem:
 
-> [!div class="nextstepaction"]
-> [Pokračovat s dalšími kurzy C#](/dotnet/csharp/tutorials/)
-
-> [!div class="nextstepaction"]
-> [pokračovat s Visual Studio přehled rozhraní IDE](/../visual-studio-ide.md)
-
-## <a name="see-also"></a>Viz také
-
-- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+- [Pokračovat s dalšími kurzy C#](/dotnet/csharp/tutorials/)
+- [rychlý start: vytvoření webové aplikace v ASP.NET Core](../../ide/quickstart-aspnet-core.md)
 - [Naučte se ladit kód C# v Visual Studio](tutorial-debugger.md)
+- Návod, jak [vytvořit a spustit testy jednotek](../../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+- [Spuštění programu v jazyce C#](run-program.md)
+- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+- [pokračovat s Visual Studio přehled rozhraní IDE](/../visual-studio-ide.md)
