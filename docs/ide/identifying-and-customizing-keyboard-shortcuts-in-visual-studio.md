@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a1a3aa2ace6279211c27847b8b9cc46d71b0d9ad
-ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
+ms.openlocfilehash: cc9b38b27df28d551fc33e9a23bdad8276a422a4
+ms.sourcegitcommit: 15821c790d6498210f30b3268402ffad6bb70c7c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "113038600"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "113725544"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Identifikace a přizpůsobení klávesových zkratek v Visual Studio
 
@@ -33,9 +33,9 @@ Můžete určit klávesové zkratky pro příkazy sady Visual Studio, tyto zkrat
 
 - Zda jste přizpůsobili chování zkratky.
 
-- Kontext použitý při výběru zástupce. Klávesová zkratka **F2** například vyvolá příkaz , pokud používáte Návrháře `Edit.EditCell`  `File.Rename` **nastavení,** a vyvolá příkaz , pokud používáte Team Explorer .
+- Kontext použitý při výběru zástupce. Klávesová zkratka **F2** například vyvolá příkaz , pokud používáte `Edit.EditCell` **návrhář Nastavení,** a pokud používáte Team Explorer `File.Rename` . 
 
-Bez ohledu na nastavení, přizpůsobení a kontext můžete vždy najít a změnit klávesovou zkratku v **dialogovém okně** Možnosti. V části Oblíbené klávesové zkratky můžete také hledat výchozí klávesové zkratky pro několik desítek [příkazů.](../ide/default-keyboard-shortcuts-in-visual-studio.md#most-popular-keyboard-shortcuts) Úplný seznam všech výchozích klávesových zkratek (na základě nastavení **Obecné vývojové** prostředí) najdete v tématu Všechny [klávesové zkratky](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Bez ohledu na nastavení, přizpůsobení a kontext můžete vždy najít a změnit klávesovou zkratku v **dialogovém okně** Možnosti. V části Oblíbené klávesové zkratky můžete také hledat výchozí klávesové zkratky pro několik desítek [příkazů.](../ide/default-keyboard-shortcuts-in-visual-studio.md#popular) Úplný seznam všech výchozích klávesových zkratek (na základě nastavení **Obecné vývojové** prostředí) najdete v tématu Všechny [klávesové zkratky](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
 Pokud je zástupce přiřazen k příkazu v *globálním* kontextu a žádné jiné kontexty, tato zkratka tento příkaz vždy vyvolá. Klávesová zkratka může být však přiřazena k jednomu příkazu v globálním kontextu a k jinému příkazu ve specifickém kontextu. Používáte-li takovou klávesovou zkratku v konkrétním kontextu, tato zkratka vyvolá příkaz pro konkrétní kontext, nikoli pro globální kontext.
 
@@ -68,7 +68,7 @@ Pokud je zástupce přiřazen k příkazu v *globálním* kontextu a žádné ji
 
 2. Rozbalte **Prostředí** a pak zvolte **Klávesnice.**
 
-3. Volitelné: Vyfiltrujte seznam příkazů tak, že do pole **Zobrazit** příkazy obsahující zadáte celý název příkazu nebo jeho část bez mezer.
+3. Volitelné: Vyfiltrujte seznam příkazů tak, že do pole **Zobrazit příkazy** obsahující zadáte celý název příkazu nebo jeho část bez mezer.
 
 4. V seznamu vyberte příkaz, ke kterému chcete přiřadit klávesovou zkratku.
 
@@ -82,7 +82,7 @@ Pokud je zástupce přiřazen k příkazu v *globálním* kontextu a žádné ji
    > - Enter, Tab, Caps Lock
    > - Print Scrn/Sys Rq, Scroll Lock, Pause/Break
    > - Insert, Home, End, Page Up, Page Down
-   > - Klíč loga Windows, klíč aplikace, libovolná klávesa se šipkami
+   > - Klávesa Windows loga, klíč aplikace, libovolná klávesa se šipkami.
    > - Num Lock, Delete nebo Clear na číselné klávesnici
    > - Kombinace kláves Ctrl+Alt+Delete
 
@@ -106,11 +106,11 @@ Vlastní klávesové zkratky je možné sdílet exportováním do souboru a pře
 
 ### <a name="to-export-only-keyboard-shortcuts"></a>Export pouze klávesových zkratek
 
-1. V řádku nabídek zvolte Nástroje  >  **Nastavení importu a exportu.**
+1. V řádku nabídek zvolte **Nástroje** Import a  >  **export Nastavení**.
 
 2. Zvolte **Exportovat vybrané nastavení prostředí** a pak zvolte **Další.**
 
-3. V **části Jaká nastavení chcete exportovat?** zrušte zaškrtnutí políčka **Všechna** nastavení, rozbalte **Možnosti** a pak rozbalte **Prostředí**.
+3. V **části Jaká nastavení chcete exportovat?** zrušte zaškrtnutí políčka Všechny  **Nastavení,** rozbalte Možnosti a pak rozbalte **Prostředí**.
 
 4. Zaškrtněte políčko **Klávesnice** a pak zvolte **Další.**
 
@@ -120,29 +120,29 @@ Vlastní klávesové zkratky je možné sdílet exportováním do souboru a pře
 
 ::: moniker range="vs-2017"
 
-Ve výchozím nastavení se klávesové zkratky ukládají do souboru ve složce *%USERPROFILE%\Documents\Visual Studio 2017\Settings.* Název souboru odráží datum exportu nastavení a přípona *je .vssettings*.
+Ve výchozím nastavení se klávesové zkratky ukládají do souboru ve složce *%USERPROFILE%\Documents\Visual Studio 2017\Nastavení.* Název souboru odráží datum exportu nastavení a přípona je *.vssettings*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Ve výchozím nastavení se klávesové zkratky ukládají do souboru ve složce *%USERPROFILE%\Documents\Visual Studio 2019\Settings.* Název souboru odráží datum exportu nastavení a přípona *je .vssettings*.
+Ve výchozím nastavení se klávesové zkratky ukládají do souboru ve složce *%USERPROFILE%\Documents\Visual Studio 2019\Nastavení.* Název souboru odráží datum exportu nastavení a přípona je *.vssettings*.
 
 ::: moniker-end
 
 ### <a name="to-import-only-keyboard-shortcuts"></a>Import pouze klávesových zkratek
 
-1. V řádku nabídek zvolte Nástroje  >  **Nastavení importu a exportu.**
+1. V řádku nabídek zvolte **Nástroje** Import a  >  **export Nastavení**.
 
-2. Zvolte **tlačítko Importovat vybrané nastavení** prostředí a pak zvolte **Další.**
+2. Zvolte tlačítko **Importovat vybrané nastavení** prostředí a pak zvolte **Další.**
 
 3. Zvolte tlačítko **ne, stačí importovat nová nastavení,** přepsat aktuální nastavení a pak zvolit **Další.**
 
-4. V **části Moje** nastavení zvolte soubor obsahující zástupce, které chcete  importovat, nebo zvolte tlačítko Procházet a vyhledejte správný soubor.
+4. V **části Nastavení** vyberte soubor obsahující zástupce, které chcete importovat, nebo  pomocí tlačítka Procházet vyhledejte správný soubor.
 
 5. Zvolte **Další**.
 
-6. V **části Která nastavení chcete importovat?** zrušte zaškrtnutí políčka Všechna nastavení, rozbalte **Možnosti** a pak rozbalte **Prostředí**. 
+6. V **části Která nastavení chcete importovat?** zrušte zaškrtnutí políčka Všechny  **Nastavení,** rozbalte Možnosti a pak rozbalte **Prostředí**.
 
 7. Zaškrtněte políčko **Klávesnice** a pak zvolte **Dokončit.**
 
