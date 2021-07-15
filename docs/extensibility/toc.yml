@@ -9,7 +9,7 @@
       href: starting-to-develop-visual-studio-extensions.md
     - name: 'Vytváření prvního rozšíření: Hello World'
       href: extensibility-hello-world.md
-    - name: aktualizace rozšíření pro Visual Studio 2022 (Preview)
+    - name: Aktualizace rozšíření pro Visual Studio 2022 (Preview)
       items:
         - name: Aktualizace rozšíření
           href: migration/update-visual-studio-extension.md
@@ -17,11 +17,11 @@
           href: migration/samples.md
         - name: Cílení na předchozí verze
           href: migration/target-previous-versions.md
-        - name: Přerušující seznam rozhraní API
+        - name: Seznam rozhraní API pro rozbíjení
           href: migration/breaking-api-list.md
-        - name: Seznam odebraných rozhraní API
+        - name: Odebrání seznamu rozhraní API
           href: migration/removed-api-list.md
-        - name: Migrované PIA
+        - name: Migrovaný OBJEKT PRO migraci
           href: migration/migrated-assemblies.md
     - name: Novinky – Visual Studio 2019 SDK
       items:
@@ -42,7 +42,7 @@
         - name: Migrace registrace ladicího programu modelu COM
           href: migrate-debugger-com-registration.md
         - name: Nejčastější dotazy
-          href: faq-2017.md
+          href: faq-2017.yml
     - name: Migrace projektů rozšíření do sady Visual Studio 2017
       href: how-to-migrate-extensibility-projects-to-visual-studio-2017.md
     - name: Zpětná rozšíření pro Visual Studio

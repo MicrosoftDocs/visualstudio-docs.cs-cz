@@ -1,0 +1,140 @@
+### YamlMime:FAQ
+metadata:
+  title: 'Nahlášení problému: Stavy a nejčastější dotazy'
+  description: Poskytuje přehled nástroje pro hlášení problémů a obsahuje stavy a definice problémů.
+  ms.date: 11/15/2018
+  ms.custom: seodec18
+  ms.topic: conceptual
+  author: madskristensen
+  ms.author: madsk
+  manager: jmartens
+  ms.workload:
+  - multiple
+  ms.openlocfilehash: b2c69f0335cb4cb2ffa16b821a8798bdf2ca010f
+  ms.sourcegitcommit: 3c6c263a1c0b20f084290ce45295a46027da33b6
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 07/14/2021
+  ms.locfileid: "113757541"
+title: 'Nahlášení problému: Stavy a nejčastější dotazy'
+summary: >
+  Nástroj Nahlásit problém umožňuje Visual Studio komunity vývojářů odesílat problémy. Každá z vašich zpráv o problémech se stává pracovní položkou v našem základním technickém systému a umožňuje vám přímo spolupracovat na našich produktových týmech, abyste nám pomohli identifikovat a vyřešit problémy, které mají dopad. Vaše zpětná vazba odeslaná s bohatými diagnostickými informacemi je zásadní pro Visual Studio produktové skupiny. Velmi si vážíme toho, že si vezměme čas na hlášení problémů.
+
+
+  Kromě toho můžete hlasovat o zpětné vazbě od jiných členů komunity, abyste přitáili větší pozornost k problému a pomohli ho rychleji vyřešit.
+
+
+  ## <a name="problem-status"></a>Stav problému
+
+
+  Po nahlášení problému se v stavech uvádí, kde jsou vaše odeslání v jejich životním cyklu. Když týmy Microsoftu vaši zpětnou vazbu prošestaví, nastaví je s odpovídajícím stavem.  Sledujte průběh hlášení problémů odkazováním na níže uvedené stavy spolu s jejich významem a indikátory barev.
+
+
+  ![Nový stav hlášení problémů na webu Developer Community](../ide/media/ProblemStates/New.jpg)
+
+
+  **Nová** značí, že se chyba nebo problém nově nahlásil a zatím se s ní neskončila žádná akce.
+
+
+  ![Triaged state for problem reporting on Developer Community](../ide/media/ProblemStates/Triaged.jpg)
+
+
+  **Posouzení označuje,** že předběžné kroky, jako je moderování, překlad a počáteční kontrola duplicit, jsou dokončené. Váš lístek byl k posouzení směrován příslušnému technickému týmu.
+
+
+  ![V části Stav posouzení pro hlášení problémů na webu Developer Community](../ide/media/ProblemStates/UnderConsideration.jpg)
+
+
+  **V části** Důležité informace je, že Microsoft váš problém z hlediska dopadu na komunitu poohledňuje a podle toho ho upřednostňuje. Pokud dopad na komunitu ještě není jasný nebo významný, budeme problém dál monitorovat v tomto stavu.
+
+
+  ![Stav šetření pro hlášení problémů na webu Developer Community](../ide/media/ProblemStates/UnderInvestigation.jpg)
+
+
+  **Z vyšetřování** vyplývá, že technici aktivně prošetřují váš problém, aby našli řešení.
+
+
+  ![Potřebuji další informace o stavu hlášení problémů na webu Developer Community](../ide/media/ProblemStates/NeedMoreInfo.jpg)
+
+
+  **Potřeba dalších informací** znamená, že od vás potřebujeme další diagnostické informace, abychom mohli pokračovat v šetření.  [Přečtěte si, jak reagovat na žádosti o další informace.](./how-to-report-a-problem-with-visual-studio.md#when-further-information-is-needed)
+
+
+  ![Opraveno – stav čeká na vyřízení verze pro hlášení problémů na webu Developer Community](../ide/media/ProblemStates/FixedPendingRelease.jpg)
+
+
+  **Opraveno – Nevyřízená** verze značí, že máme problém opravený a bude k dispozici v nadcházející verzi Preview nebo ve verzi Preview.  Jakmile bude oprava dostupná ve verzi Preview, problém se označí značkou "fixed in" určující verzi Preview.
+
+
+  ![Uzavřeno – oprava stavu pro hlášení problémů ve vývojářských Community](../ide/media/ProblemStates/ClosedFixed.jpg)
+
+
+  **Uzavřeno – opraveno** značí, že jsme vydali opravu problému. Problém je teď také označený značkou "fixed in:" určující verzi verze.
+
+
+  ![Uzavřeno – duplicitní stav pro hlášení problémů na webu Developer Community](../ide/media/ProblemStates/ClosedDuplicate.jpg)
+
+
+  **Uzavřeno – Duplicity** značí, že váš problém už je nahlášený prostřednictvím jiné zpětné vazby. Poskytneme vám odkaz, kde můžete sledovat původní zprávu o problému.
+
+
+  ![Uzavřeno – stav nižší priority pro hlášení problémů na webu Developer Community](../ide/media/ProblemStates/ClosedLowerPriority.jpg)
+
+
+  **Uzavřeno – nižší priorita** Pokud se chcete zaměřit na to, aby každý z vás v naší komunitě vývojářů měl nejlepší hodnotu, upřednostňujeme problémy s nejvyšším dopadem na zákazníky. I když v tuto chvíli nemůžeme tento konkrétní problém vyřešit, buďte si jistí, že veškerá vaše zpětná vazba je cenná a pomáhá Visual Studio.
+
+
+  ![Uzavřeno – Není stav chyby pro hlášení problémů na webu Developer Community](../ide/media/ProblemStates/ClosedNotABug.jpg)
+
+
+  **Uzavřeno – Není chyba značí,**  že jsme zjistili, že hlášená funkce je v současné době navržená.
+
+
+  ![Uzavřeno – Stav Není dostatek informací pro hlášení problémů na webu Developer Community](../ide/media/ProblemStates/ClosedNotEnoughInfo.jpg)
+
+
+  **Uzavřeno – Není k dispozici** dostatek informací značí, že nemáme dostatek informací k tomu, abychom to prošetřili. Jakmile budou k dispozici potřebné informace, budeme rádi znovu zvážit zpětnou vazbu.
+
+
+  ![Uzavřeno – jiný stav produktu pro hlášení problémů na webu Developer Community](../ide/media/ProblemStates/ClosedOtherProduct.jpg)
+
+
+  **Uzavřeno – Jiný produkt** znamená, že jsme zjistili, že váš problém se týká jiného produktu. Podívejte se na komentář Microsoftu, ke kterému externímu produktu a souvisejícím odkazům.
+
+
+  ## <a name="faq"></a>Časté otázky
+sections:
+- name: Časté otázky
+  questions:
+  - question: >
+      Jak můžu rychle zvýšit pravděpodobnost, že se můj problém vyřeší?
+    answer: >
+      Doporučujeme použít vyhledávání, abyste zajistili, že problém, který chcete nahlásit, ještě nebyl nahlášen. Pokud najdete existující položku, která odpovídá vašemu problému, postupujte podle pokynů a hlasujte pro tento lístek.
+
+
+      Uveďte všechny informace, které můžou pomoct našemu týmu reprodukovat, co se vám potýká.  Tyto informace zahrnují nezbytné kroky pro reprodukci, fragmenty kódu, snímky obrazovky, záznamy pro reprodukci, soubory protokolů a další artefakty.  Tady je [postup nahlášení problému v Visual Studio](./how-to-report-a-problem-with-visual-studio.md).
+  - question: >
+      Jak se upřednostňuje moje zpětná vazba?
+    answer: >
+      Od našich zákazníků dostáváme velký počet cenných problémů. Aby bylo zajištěno, že každému z vás v naší komunitě vývojářů přineseme nejlepší hodnotu, upřednostňujeme akci na základě zpětné vazby, která má největší dopad na komunitu.
+
+
+      Pokud na vaši zpětnou vazbu nemůžeme reagovat osobně, vězte, že si vašeho vstupu plně vážíme. Buďte si jistí, že veškerá vaše zpětná vazba se dostane ke správnému týmu.
+
+
+      Skutečně si nárošíme času, který investujete do Visual Studio lepšího.
+  - question: >
+      Jaké akce můžu udělat, když s tímto vyřešením nejste spokojeni?
+    answer: >
+      Naše týmy dělají to nejlepší, aby diagnostikovali a opravili případné problémy, ale může dojít k tomu, že nejste s našimi doporučeními plně spokojeni. Zakomentování zpětné vazby a dejte nám přesně vědět, s čím nejste spokojeni, a my se pokusíme co nejlépe zajistit, abychom splňovali vaše potřeby.
+  - question: >
+      Jak se upozorní na průběh své zpětné vazby?
+    answer: >
+      Technické týmy Microsoftu s vámi budou komunikovat komentování lístku zpětné vazby a změnou stavu lístku v průběhu. Sledujte e-mailová oznámení, která se posílají při změně stavu lístku nebo při odeslání komentáře.  Četnost oznámení můžete spravovat v nastavení Profil a Předvolby na webu Community vývojáře.
+  - question: >
+      Proč na webu Developer Visual Studio nemůžu přidat problém s Community IDE?
+    answer: >-
+      Nahlášení problému prostřednictvím Visual Studio umožňuje automatické zahrnování diagnostických informací do sestavy. Jsou to základní informace, které našim technikům dávají kontext, který potřebují k tomu, aby plně porozuměli vašemu problému a pracovali na jeho řešení.
+
+
+      Když budete reportovat přes Visual Studio, můžete s námi snadno sdílet bohaté diagnostické informace, jako jsou velké soubory protokolů, informace o chybě, snímky obrazovky, záznam reprodukování a další artefakty, které nám pomáhají rychleji poskytovat vysoce kvalitní rozlišení.

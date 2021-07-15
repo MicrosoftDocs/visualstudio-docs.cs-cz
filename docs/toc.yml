@@ -63,9 +63,9 @@
                   href: install/troubleshooting-network-related-errors-in-visual-studio.md
         - name: Nasazení v podniku
           items:
-            - name: Instalace aktualizací správce
+            - name: Použití aktualizací správců
               href: install/applying-administrator-updates.md
-            - name: Povolení aktualizací pro správce
+            - name: Povolení aktualizací správců
               href: install/enabling-administrator-updates.md
             - name: Automatizace instalace sady Visual Studio souborem odpovědí
               href: install/automated-installation-with-response-file.md
@@ -166,17 +166,17 @@
 - name: Kurzy
   expanded: true
   items:
-    - name: C++ – >>
+    - name: ' >> C++'
       href: /cpp/get-started/tutorial-console-cpp
-    - name: C#  >>
+    - name: '  >> C#'
       href: get-started/csharp/
     - name: Visual Basic  >>
       href: get-started/visual-basic/
     - name: Node.js  >>
       href: javascript/
-    - name: Python  >>
+    - name: '  >> Pythonu'
       href: python/
-    - name: F#  >>
+    - name: '  >> JAZYKA F #'
       href: /dotnet/fsharp/
 - name: Vývoj
   items:
@@ -194,13 +194,13 @@
           href: ide/create-new-project.md
         - name: Práce s řešeními a projekty
           href: ide/creating-solutions-and-projects.md
-        - name: Otevření projektu z Visual Studio 2017
+        - name: otevření projektu z úložiště v Visual Studio 2017
           href: get-started/tutorial-open-project-from-repo-visual-studio-2017.md
-        - name: Otevření projektu z Visual Studio 2019
+        - name: otevření projektu z úložiště v Visual Studio 2019
           href: get-started/tutorial-open-project-from-repo-visual-studio-2019.md
         - name: 'Přenos, migrace a upgrade projektů'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
-        - name: Použití okna Průzkumník řešení nástroje
+        - name: Použití okna Průzkumník řešení Tool
           href: ide/use-solution-explorer.md
         - name: Správa vlastností projektu a řešení
           href: ide/managing-project-and-solution-properties.md
@@ -901,7 +901,7 @@
       href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
 - name: Ladění >>
   href: debugger/index.yml
-- name: Řízení verzí >>
+- name: ' >> správy verzí'
   displayName: 'git, github, source control, source, versioning, clone, integrate, release'
   href: version-control/index.yml
 - name: Test >>
@@ -1467,7 +1467,7 @@
         - name: Nahlášení problému
           href: ide/how-to-report-a-problem-with-visual-studio.md
         - name: Nahlášení problémových stavů a nejčastější dotazy
-          href: ide/report-a-problem.md
+          href: ide/report-a-problem.yml
         - name: Urychlení opravy problémů s výkonem
           href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
         - name: Vytváření minimálních výpisů pomocí zásobníku volání

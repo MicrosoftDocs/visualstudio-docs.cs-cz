@@ -26,12 +26,12 @@ f1_keywords:
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 980da41ea60a4627b08488318095e46e9d5a2cbc
-ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
+ms.openlocfilehash: c3251b38d75545ec1ccf2843382dff17676284ee
+ms.sourcegitcommit: d0061f62c8543ff0db500972d9402a7f00e017c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2021
-ms.locfileid: "113280445"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114201790"
 ---
 # <a name="oops-no-f1-help-match-was-found"></a>Oops! `F1`Nenašla se žádná shoda s vaší pomocí.
 
@@ -53,5 +53,7 @@ Je nám líto, ale Vypadá to, že se nám nepovedlo najít, co jste hledali.
 
 ## <a name="help-us-serve-you-better"></a>Pomozte nám zajistit lepší
 
-Řekněte nám, kde jste v produktu a co potřebujete.   
-<br/>Použijte `This Page` tlačítko zpětná vazba v dolní části této stránky. 
+Rádi vám poskytneme váš názor na to, jak poskytnout pomoc, kterou potřebujete.
+
+> [!div class="nextstepaction"]
+> [Sdílení vašeho názoru (šetření za 5 minut)](https://www.surveymonkey.com/r/F1_Help_Visual_Studio)

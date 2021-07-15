@@ -1,0 +1,128 @@
+### YamlMime:FAQ
+metadata:
+  title: Nejčastější dotazy k rozšíření
+  description: tento článek obsahuje odpovědi na některé nejčastější dotazy týkající se rozšiřitelnosti Visual Studio 2017.
+  ms.custom: SEO-VS-2020
+  ms.date: 11/09/2016
+  ms.topic: conceptual
+  ms.assetid: 345855db-0cc3-45aa-8c57-bb18d9789772
+  author: kevinfansler
+  ms.author: madsk
+  manager: jmartens
+  monikerRange: vs-2017
+  ms.openlocfilehash: 31f536c99c0a050ebb3b315b8209a32c4a1d9130
+  ms.sourcegitcommit: 3c6c263a1c0b20f084290ce45295a46027da33b6
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 07/14/2021
+  ms.locfileid: "113757544"
+title: nejčastější dotazy k rozšíření Visual Studio 2017
+summary: tady jsou některé nejčastější dotazy týkající se rozšiřitelnosti Visual Studio 2017.
+sections:
+- name: Ignorováno
+  questions:
+  - question: >
+      Co je zpětně kompatibilní příběh pro rozšíření?
+    answer: >
+      nový formát vsix v3 je zpětně kompatibilní s VSIX v2, takže stále budete mít k dispozici jeden vsix s jedním ID vsix, který podporuje Visual Studio 2012 a novější. Nový formát VSIX V3 nepodporuje Visual 2010 a starší. aby bylo možné podporovat Visual Studio 2010, budete muset vytvořit samostatnou příponu (se samostatným ID VSIX). jak Visual Studio 2010 je teď malé procento uživatelské základny, doporučujeme, abyste použili existující id vsix pro rozšíření, které podporuje Visual Studio 2012 nebo novější, a přiřadit nové id vsix k verzi Visual Studio 2010.
+  - question: >
+      proč potřebuji deklarovat požadavky s Visual Studio 2017?
+    answer: >
+      Visual Studio 2017 umožňuje rychlejší a jednodušší instalaci Visual Studio, která nabízí uživatelům větší kontrolu nad úlohami a součástmi, které jsou nainstalovány. aby bylo zajištěno, že součásti požadované vaším rozšířením jsou nainstalovány s VSIX v3 a Visual Studio 2017, je nutné deklarovat komponenty, které vaše rozšíření závisí na požadavcích. Pokud některý z požadovaných součástí není v počítači uživatele k dispozici, uživatel nebude moci rozšíření spustit. pokud ale Visual Studio zjistí, že se uživatel pokouší nainstalovat rozšíření, které vyžaduje chybějící komponenty, vyzve uživatele k instalaci požadovaných součástí. Pokud máte volitelné komponenty, není nutné je vypisovat jako požadované součásti. za předpokladu, že provedete správnou detekci funkcí za běhu. Všechna rozšíření musí jako závislost určovat základní komponentu editoru `Microsoft.VisualStudio.Component.CoreEditor` .
+  - question: >
+      Když říkáte předpoklady, jakou úroveň členitosti má znamenat?
+    answer: >
+      Požadavky deklarujete na úrovni komponenty, to znamená jednotlivé možnosti, které lze vybrat v uživatelském rozhraní. Nedeklarujte požadavky na úlohy nebo jednotlivé knihovny DLL.
+  - question: >
+      Kde najdu seznam ID součástí, abychom mohli deklarovat závislosti?
+    answer: >
+      pokud chcete najít seznam identifikátorů součástí, podívejte se na [úlohy Visual Studio 2017 a id součástí](../install/workload-and-component-ids.md?view=vs-2019&preserve-view=true). Pokud si nejste jistí, která součást obsahuje konkrétní binární soubor, můžete si stáhnout [tabulku mapování binárních souborů Component->](https://aka.ms/vs2017componentid-binaries). další informace o používání tabulky najdete v části **hledání id součástí** v tématu [postup: migrace rozšiřujících projektů na Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
+  - question: >
+      moje rozšíření vyžaduje Visual Studio 15,3, jak vynutím tento požadavek?
+    answer: >
+      pokud vaše rozšíření vyžaduje konkrétní verzi Visual Studio 2017, může například záviset na funkci vydané v 15,3, můžete zadat číslo sestavení v souboru VSIX **InstallationTarget**. Například verze 15,3 má číslo buildu "15.0.26730.3". [Tady](../install/visual-studio-build-numbers-and-release-dates.md)vidíte mapování verzí k sestavování čísel. Všimněte si, že použití čísla vydané verze 15,3 nebude fungovat správně.
+
+
+      Pokud vaše rozšíření vyžaduje 15,3 nebo vyšší, deklarujete **verzi InstallationTarget** jako [15.0.26730.3, 16,0):
+
+
+      ```xml
+
+      <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0.26730.3, 16.0)" />
+      </Installation>
+
+      ```
+
+
+      VSIXInstaller detekuje starší verze Visual Studio a informuje uživatele o tom, že je požadována pozdější aktualizace.
+  - question: >
+      Při pokusu o nahrání rozšíření se mi zobrazuje chyba.
+    answer: >
+      Je možné, že používáte starou verzi manifestu VSIX. pokud je vaše rozšíření označené jako podpora Visual Studio 2017, ale nepoužívá nový formát manifestu VSIX v3, nebudete ho moct nahrát.
+  - question: >
+      Používám vlastní instalační program. Můžu to dál dělat?
+    answer: >
+      u Visual Studio 2017 bude minimální instalace Visual Studio výrazně menší než u předchozích verzí.
+
+
+      Rozšířili jsme formát manifestu VSIX tak, aby podporoval změny, které jsou nezbytné pro instalaci s nižší váhou. Co nejvíce vám doporučujeme poskytnout rozšíření ve formátu VSIX v3. Může být nutné zachovat existující instalační program pro určité scénáře, například pokud instalujete součásti mimo Visual Studio.
+
+
+      například pokud potřebujete MSBuild, je třeba určit, že jako požadavek v manifestu VSIX. když nainstalujete VSIX, instalační program zajistí, že bude k dispozici MSBuild.
+
+
+      instalační program potom vyvolá VSIXInstaller k instalaci VSIX s komponentami Visual Studio 2017.
+  - question: >
+      Můžu mi dát další pokyny k migraci?
+    answer: >
+      další informace najdete v tématu [postupy: migrace rozšiřujících projektů na Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md). kromě toho je k dispozici skvělý blogový příspěvek, [který se změní Visual Studio instalaci](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/).
+  - question: >
+      Návody provést registraci balíčku?
+    answer: >
+      Registraci balíčku provedete stejným způsobem jako v minulosti s položkami registru. Jediným změnou je, že registr se teď právě depracuje a musíte deklarovat položky registru ze souboru *. pkgdef* .
+
+
+      Použijete-li `PackageRegistrationAttribute` , by k tomu mělo dojít automaticky.
+  - question: >
+      potřebuji novou položku galerie pro verzi Visual Studio 2017 mého rozšíření?
+    answer: >
+      ne, v galerii Visual Studio pro aktualizovaný VSIX nebudete potřebovat novou položku, pokud jsou vaše změny plně zpětně kompatibilní se všemi podporovanými verzemi. Pokud vaše rozšíření není zpětně kompatibilní, doporučujeme rozdělit rozšíření do více VSIX (i když je dočasně), z nichž každá má vlastní ID VSIX a položku v galerii.
+  - question: >
+      co mám dělat s rozšířením, které v současné době podporuje Visual Studio 2010 a novější?
+    answer: >
+      přidejte podporu pro Visual Studio 2017 k aktuálnímu VSIX a udržujte podporu pro Visual Studio 2012 a novější. kromě toho vytvořte nový VSIX (s novým identifikátorem GUID a položky galerie) s podporou Visual Studio 2010.
+  - question: >
+      můžu vytvořit VSIX v3 s Visual Studio 2015?
+    answer: >
+      Ano. k dispozici je balíček NuGet, který obsahuje potřebné nástroje a úlohy pro sestavení manifestů formátu VSIX v3 v Visual Studio 2015. do projektu rozšiřitelnosti přidejte odkaz na balíček NuGet `Microsoft.VisualStudio.Sdk.BuildTasks.14.0` . Také budete muset přidat `VsixType` element určující `v3` do souboru projektu:
+
+
+      ```xml
+        <VsixType>v3</VsixType>
+      ```
+  - question: >
+      Můžu VSIXInstaller spustit v tichém režimu?
+    answer: >
+      VSIXInstaller teď budete muset předat další parametry, pokud je nainstalovaná potenciálně více instancí Visual Studio 2017.
+
+
+      ```bash
+
+      vsixinstaller.exe /q /appidinstallpath:"c:\program files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe" /appidname:"Visual Studio" /logFile:<path to log file> /skuName:Enterprise /skuVersion:15.0.25810.0 "KendoUI.Mvc.VSPackage.vsix"
+
+      ```
+  - question: >
+      Proč VSIXInstaller nyní čekat na ukončení procesů před instalací VSIX?
+    answer: >
+      VSIXInstaller nyní používá instalační modul Visual Studio k instalaci všech požadavků definovaných VSIX. instalační modul vyžaduje, aby všechny procesy související s VS. byly ukončeny předtím, než může aktualizovat instalaci Visual Studio.
+  - question: >
+      Můžu teď nainstalovat svoje prostředky rozšíření do libovolného umístění s VSIX V3?
+    answer: >-
+      ne, vlastnost VSIX v3 `InstallRoot` vám neumožňuje nainstalovat nic mimo Visual Studio strukturu instalačních složek. Podporovaná umístění najdete v tématu věnovaném [instalaci mimo složku rozšíření](set-install-root.md) .
+
+
+      komponenty rozšíření, které nejsou součástí Visual Studio, jsou pravděpodobně typu singleton v počítači a jsou nainstalovány jednou pro všechny instance Visual Studio 2017.
+
+
+      doporučením pro tento scénář by bylo vytvořit soubor MSI pro součásti, které nejsou Visual Studio a instalační služba msi vyvolá VSIXInstaller k instalaci Visual Studio specifických součástí.
