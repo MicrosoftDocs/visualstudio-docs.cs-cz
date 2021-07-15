@@ -901,7 +901,7 @@
       href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
 - name: Ladění >>
   href: debugger/index.yml
-- name: ' >> správy verzí'
+- name: Řízení verzí >>
   displayName: 'git, github, source control, source, versioning, clone, integrate, release'
   href: version-control/index.yml
 - name: Test >>
@@ -1427,10 +1427,12 @@
 - name: Prostředky
   expanded: true
   items:
-    - name: 'Visual Studio 2017: co je nového'
-      href: ide/whats-new-visual-studio-2017.md
+    - name: 'Visual Studio 2022: co je nového'
+      href: ide/whats-new-visual-studio-2022.md
     - name: 'Visual Studio 2019: co je nového'
       href: ide/whats-new-visual-studio-2019.md
+    - name: 'Visual Studio 2017: co je nového'
+      href: ide/whats-new-visual-studio-2017.md
     - name: Co je nového v Docs
       href: ide/whats-new-visual-studio-docs.md
     - name: "Poznámky k\_verzi"
