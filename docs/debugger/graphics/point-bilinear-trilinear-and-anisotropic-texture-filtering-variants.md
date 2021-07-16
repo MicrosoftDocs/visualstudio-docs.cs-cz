@@ -3,19 +3,19 @@ title: Varianty filtru textury Point/varianty/trilineárního/anisotropního
 description: V případě, že náklady na výkon pro variantu filtru Point, varianty, trilineárního nebo anisotropního texturu jsou významné, můžete zvážit, zda je cena za její použití.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 57d14fc9-b5f7-45ee-9717-48086886742d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7de150064ee493795bdeed579715dbf1370573a2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0d89db195b94bcf31d2ce2c7482c5b7315a979e9
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905069"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232645"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Varianty bodového, bilineárního, trilineárního a anisotropního filtrování textur
 Přepíše režim filtrování na příslušných vzorkovačích textury.
@@ -61,7 +61,7 @@ Přepíše režim filtrování na příslušných vzorkovačích textury.
   V variantě **filtrování Anisotropního textury** je režim filtrování poskytovaný aplikací nahrazen hodnotou `D3D11_FILTER_ANISOTROPIC` a maximální Anisotropy je nastaven na 16.
 
 ## <a name="restrictions-and-limitations"></a>Omezení a limity
- V rozhraní Direct3D úroveň funkce 9,1 určuje maximální anisotropy hodnotu 2x. Vzhledem k tomu, že se varianta **Anisotropního textur filtrování** pokusí použít výhradně 16x anisotropy, přehrávání se nezdařilo, když je analýza snímků spuštěna na zařízení 9,1 na úrovni funkce. Mezi moderní zařízení ovlivněná tímto omezením patří zařízení s platformou RT a Surface 2 pro tablety na bázi ARM. Starší grafické procesory, které by se mohly v některých počítačích pořád najít, můžou mít vliv i na zastaralé a pořád stále neobvyklá.
+ V rozhraní Direct3D úroveň funkce 9,1 určuje maximální anisotropy hodnotu 2x. Vzhledem k tomu, že se varianta **Anisotropního textur filtrování** pokusí použít výhradně 16x anisotropy, přehrávání se nezdařilo, když je analýza snímků spuštěna na zařízení 9,1 na úrovni funkce. mezi moderní zařízení ovlivněná tímto omezením patří surface RT a surface 2 na bázi ARM Windows tablety. Starší grafické procesory, které by se mohly v některých počítačích pořád najít, můžou mít vliv i na zastaralé a pořád stále neobvyklá.
 
 ## <a name="example-1"></a>Příklad 1
  Variantu **filtrování pro texturu bodu** je možné reprodukovat pomocí kódu, jako je tato:

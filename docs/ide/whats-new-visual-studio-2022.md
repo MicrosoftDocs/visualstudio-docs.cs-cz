@@ -2,7 +2,7 @@
 title: Co je nového v Visual Studio 2022 (Preview)
 titleSuffix: ''
 description: Seznamte se s novými funkcemi ve verzi Preview Visual Studio 2022.
-ms.date: 07/14/2021
+ms.date: 07/15/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 613ae74a00ecfc9a8c9caf827fbdcd68ad07e3ad
-ms.sourcegitcommit: d0061f62c8543ff0db500972d9402a7f00e017c6
+ms.openlocfilehash: 7540a418bbe4e36c1fa01be715fa272282db9daa
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/15/2021
-ms.locfileid: "114205517"
+ms.locfileid: "114232892"
 ---
 # <a name="whats-new-in-visual-studio-2022-preview"></a>Co je nového v Visual Studio 2022 (Preview)
 
@@ -28,7 +28,7 @@ ms.locfileid: "114205517"
 >[!div class="button"]
 >[Stáhnout Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022/)
 
-Díky Visual Studio vždy získáte nejlepší nástroje a služby dostupné pro všechny vývojáře, aplikace a platformy. Tady je přehled novinek v naší další verzi, Visual Studio 2022, aktuálně ve verzi Preview!
+Díky Visual Studio vždy získáte nejlepší nástroje a služby dostupné pro všechny vývojáře, aplikace a platformy. Ať už používáte Visual Studio poprvé, nebo ho už roky používáte, v naší nejnovější verzi, aktuálně ve verzi Preview, se vám to hodně líbí.
 
 ## <a name="visual-studio-2022-is-64-bit"></a>Visual Studio 2022 je 64 bitů
 
@@ -36,7 +36,7 @@ Visual Studio 2022 v Windows je teď 64bitová aplikace. To znamená, že může
 
 ## <a name="intellicode-includes-whole-line-completion"></a>IntelliCode zahrnuje dokončování celých řádků.
 
-V Visual Studio 2022 teď může funkce [IntelliCode](/visualstudio/intellicode/) automaticky dokončovat kód až do celého řádku najednou. Další informace najdete v blogovém příspěvku [**o dokončování IntelliCode**](https://devblogs.microsoft.com/visualstudio/type-less-code-more-with-intellicode-completions/) v článku o menším typu a psaní kódu.
+V Visual Studio 2022 teď může funkce [IntelliCode](/visualstudio/intellicode/) automaticky dokončovat kód až do celého řádku najednou. Podrobnosti najdete v [**blogovém příspěvku o menším typu a kódu s dokončováním IntelliCode.**](https://devblogs.microsoft.com/visualstudio/type-less-code-more-with-intellicode-completions/)
 
 ## <a name="build-modern-apps-with-improved-tools"></a>Vytváření moderních aplikací s vylepšeným nástroji
 
@@ -52,7 +52,7 @@ Proč posílat zpětnou vazbu Visual Studio týmu? Protože zpětnou vazbu záka
 
 * Pokud chcete navrhnout, jak můžeme vylepšit Visual Studio, můžete to udělat pomocí nástroje [Navrhnout](suggest-a-feature.md) funkci.
 
-* Pokud nastane problém, kdy Visual Studio přestane reagovat, dojde k chybě nebo jiný problém s výkonem, můžete s námi snadno sdílet kroky pro reprodukci a podpůrné soubory pomocí nástroje [pro](how-to-report-a-problem-with-visual-studio.md) nahlášení problému.
+* Pokud nastane problém, kdy Visual Studio přestane reagovat, dojde k chybě nebo jiné problémy s výkonem, můžete s námi snadno sdílet kroky pro reprodukci a podpůrné soubory pomocí nástroje [pro](how-to-report-a-problem-with-visual-studio.md) hlášení problémů.
 
 ## <a name="see-also"></a>Viz také
 

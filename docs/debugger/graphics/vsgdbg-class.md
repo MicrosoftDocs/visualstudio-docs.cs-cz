@@ -1,23 +1,23 @@
 ---
-description: Představuje rozhraní pro programové řízení komponenty v aplikaci diagnostiky grafiky.
-title: Třída VsgDbg | Microsoft Docs
+description: Představuje rozhraní pro programové řízení komponenty diagnostiky grafiky v aplikaci.
+title: VsgDbg – třída | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6722263c-ccef-40c7-a0ae-87a863fbab00
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 24a4847e0d6c72d4de611edc47481477d2862a55
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 2bb3a9009c38da483b0792b89c115c2e8e9908eb
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160457"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232450"
 ---
 # <a name="vsgdbg-class"></a>VsgDbg – třída
-Představuje rozhraní pro programové řízení komponenty v aplikaci diagnostiky grafiky.
+Představuje rozhraní pro programové řízení komponenty diagnostiky grafiky v aplikaci.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,27 +26,27 @@ class VsgDbg;
 ```
 
 ## <a name="members"></a>Členové
- `VsgDbg`Třída podporuje následující členy.
+ Třída `VsgDbg` podporuje následující členy.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
-|[VsgDbg::VsgDbg (konstruktor)](vsgdbg-vsgdbg-constructor.md)|Vytvoří instanci `VsgDbg` třídy a volitelně připraví komponentu v aplikaci diagnostiky grafiky na aktivní zachycování a zaznamenávání informací grafiky.|
-|[VsgDbg::~VsgDbg (destruktor)](vsgdbg-tilde-vsgdbg-destructor.md)|Odstraní instanci `VsgDbg` třídy.|
+|[VsgDbg::VsgDbg (konstruktor)](vsgdbg-vsgdbg-constructor.md)|Vytvoří instanci třídy a volitelně připraví komponentu diagnostiky grafiky v aplikaci k aktivnímu zachycení a `VsgDbg` zaznamenání informací grafiky.|
+|[VsgDbg::~VsgDbg (destruktor)](vsgdbg-tilde-vsgdbg-destructor.md)|Zničí instanci třídy `VsgDbg` .|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
-|[AddMessage](addmessage.md)|Přidá vlastní zprávu do HUD diagnostiky grafiky (zobrazení záhlaví).|
-|[BeginCapture](begincapture.md)|Zahájí interval zachycení, který skončí `EndCapture` .|
-|[CaptureCurrentFrame](capturecurrentframe.md)|Zachycuje zbytek aktuálního rámce do souboru protokolu grafiky.|
-|[Copy (zachytávání prostřednictvím kódu programu)](copy-programmatic-capture.md)|Zkopíruje obsah souboru protokolu Active Graphics (. vsglog) do nového souboru.|
-|[EndCapture](endcapture.md)|Ukončí interval zachycení, který byl spuštěn s `BeginCapture` .|
-|[For](init.md)|Připraví komponentu v aplikaci diagnostiky grafiky na aktivní zachycování a zaznamenávání informací grafiky.|
-|[ToggleHUD](togglehud.md)|Zapne nebo vypne překryv HUD diagnostiky grafiky.|
-|[UnInit](uninit.md)|Dokončí soubor protokolu grafiky, zavře ho a uvolní prostředky, které se použily v době, kdy aplikace aktivně zapisovala informace o grafice.|
+|[AddMessage](addmessage.md)|Přidá vlastní zprávu do diagnostiky grafiky HUD (head-up display).|
+|[BeginCapture](begincapture.md)|Začíná interval zachycení, který bude končovat `EndCapture` na .|
+|[CaptureCurrentFrame](capturecurrentframe.md)|Zachycuje zbývající část aktuálního rámce do souboru protokolu grafiky.|
+|[Copy (zachytávání prostřednictvím kódu programu)](copy-programmatic-capture.md)|Zkopíruje obsah aktivního souboru protokolu grafiky (.vsglog) do nového souboru.|
+|[EndCapture](endcapture.md)|Ukončí interval zachycení, který byl spuštěn pomocí `BeginCapture` .|
+|[Init](init.md)|Připraví komponentu diagnostiky grafiky v aplikaci k aktivnímu zaznamenání a zaznamenání informací grafiky.|
+|[ToggleHUD](togglehud.md)|Přepíná překrytí HUD diagnostiky grafiky zapnout nebo vypnout.|
+|[UnInit](uninit.md)|Finalizuje soubor protokolu grafiky, zavře ho a uchová prostředky, které byly použity při aktivním zaznamenávání informací grafiky aplikací.|
 
 ## <a name="remarks"></a>Poznámky
- `VsgDbg`Třída představuje rozhraní, které lze použít k programovému řízení funkcí diagnostiky grafiky. Některé funkce můžete použít i v případě, že nebudete aktivně zachytíte a zaznamenáte informace grafiky. To zahrnuje `AddMessage` členskou funkci a `ToggleHUD` členskou funkci. Ostatní členské funkce buď připraví komponentu v aplikaci diagnostiky grafiky na spuštění nebo zastavení aktivního zachycení informací grafiky, nebo musí být volány, zatímco aplikace aktivně zachytí a zaznamenává informace grafiky do souboru protokolu grafiky.
+ Třída `VsgDbg` představuje rozhraní, které můžete použít k řízení funkcí diagnostiky grafiky prostřednictvím kódu programu. Některé funkce můžete použít i v případě, že aktivně nezachytávání a zaznamenávání informací grafiky. To zahrnuje `AddMessage` členská funkce `ToggleHUD` a členská funkce. Ostatní členské funkce buď připraví komponentu diagnostiky grafiky v aplikaci na spuštění nebo zastavení aktivního zachycení informací grafiky, nebo musí být volány, když aplikace aktivně zaznamenává a zaznamenává informace grafiky do souboru protokolu grafiky.

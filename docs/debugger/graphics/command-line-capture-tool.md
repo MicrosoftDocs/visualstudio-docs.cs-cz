@@ -3,19 +3,19 @@ title: Nástroj pro zachycení Command-Line | Microsoft Docs
 description: Přečtěte si o DXCap.exe, nástroji příkazového řádku pro zachytávání a přehrávání grafiky, které podporuje Direct3D 10 přes Direct3D 12 na všech úrovních funkcí.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: db75b3a7-80b2-4a74-91d2-fd6e0f73b45d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ee7acfd6256affee7a8204c2e70e18210c5f3dcf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b305d2f2f84d4b3f52d9be40f18fe02c9eb93df2
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877730"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232710"
 ---
 # <a name="command-line-capture-tool"></a>Nástroj příkazového řádku pro zachytávání
 DXCap.exe je nástroj příkazového řádku pro zachytávání a přehrávání grafiky diagnostiky. Podporuje Direct3D 10 přes Direct3D 12 na všech úrovních funkcí.
@@ -80,7 +80,7 @@ DXCap.exe -info
 ## <a name="remarks"></a>Poznámky
  DXCap.exe funguje ve třech režimech:
 
- Režim digitalizace (-c) zachytí informace grafiky ze spuštěné aplikace a zaznamená je do souboru protokolu grafiky. Možnosti zachycení a formát souboru jsou stejné jako u sady Visual Studio.
+ Režim digitalizace (-c) zachytí informace grafiky ze spuštěné aplikace a zaznamená je do souboru protokolu grafiky. Možnosti zachycení a formát souboru jsou stejné jako u Visual Studio.
 
  Režim přehrávání (-p) přehrávání dříve zachycených grafických událostí z existujícího souboru protokolu grafiky. Ve výchozím nastavení se přehrávání objevuje v okně, i když byl soubor protokolu grafiky zachycen z celoobrazovkového aplikace. Přehrávání probíhá na celé obrazovce pouze v případě, že soubor protokolu grafiky byl zachycen z celoobrazovkového aplikace a `-rawmode` je určen.
 
@@ -125,7 +125,7 @@ DXCap.exe -c "C:\Program Files\Internet Explorer\iexplorer.exe" "www.fishgl.com"
 DXCap.exe -c Microsof.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps
 ```
 
- Použití DXCap.exe k zachycení z aplikace pro UWP je podobné jako při zachycení z desktopové aplikace pro Windows, ale místo toho identifikuje desktopovou aplikaci podle jejího názvu souboru, určíte aplikaci UWP podle jejího názvu a názvu nebo ID spustitelného souboru uvnitř tohoto balíčku, ze kterého chcete zachytit. K tomu, aby bylo snazší zjistit, jak identifikovat aplikace pro UWP nainstalované na vašem počítači, použijte `-e` možnost s DXCap.exe pro jejich výčet:
+ použití DXCap.exe k zachycení z aplikace pro UWP se podobá použití pro zachycení z aplikace Windows desktopové aplikace, ale místo toho identifikuje aplikaci klasické pracovní plochy podle jejího názvu a názvu a ID spustitelného souboru v tomto balíčku, ze kterého chcete zachytit. K tomu, aby bylo snazší zjistit, jak identifikovat aplikace pro UWP nainstalované na vašem počítači, použijte `-e` možnost s DXCap.exe pro jejich výčet:
 
 ```cmd
 DXCap.exe -e
@@ -139,7 +139,7 @@ DXCap.exe -e map
 
  Příkaz výše zobrazuje výčet aplikací pro UWP, které odpovídají mapě. Zde je výstup:
 
- **Balíček Microsoft. BingMaps ":** **InstallDirectory: C: \ Program Files \ WindowsApps \ Microsoft. BingMaps_2.1.2914.1734_X64__8wekyb3d8bbwe** **FullName: Microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe** **identifikátor UserSID: S-1-5-21-2127521184-1604012920-1887927527-5603533** **Název: Microsoft. BingMaps** **Publish: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = Washington, C = US** **verze: 2.1.2914.1734** **spouštěné aplikace:** **ID: AppexMaps** **exe: C: \ program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **IsWWA: No** **AppSpec (ke spuštění): DXCap.exe-C Microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe, AppexMaps** poslední řádek výstupu pro každou aplikaci zobrazí příkaz, který můžete použít k zaznamenání grafické informace z ní.
+ **balíček Microsoft. BingMaps ":** **InstallDirectory: C: \ Program Files \ WindowsApps \ Microsoft. BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe** **FullName: microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe** **identifikátor usersid: S-1-5-21-2127521184-1604012920-1887927527-5603533** **název: microsoft. BingMaps** **Publisher: CN = Microsoft corporation, O = microsoft corporation, L = Redmond, S = Washington, C = US** **verze: 2.1.2914.1734** **spouštěné aplikace:** **Id: AppexMaps** **Exe: C: \ Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **IsWWA: No** **AppSpec (ke spuštění): DXCap.exe-C Microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe, AppexMaps** poslední řádek výstupu pro každou aplikaci zobrazí příkaz, který můžete použít k zaznamenání grafické informace z ní.
 
 ### <a name="capture-specific-frames-or-frames-between-specific-times"></a>Zachyťte určité snímky nebo snímky mezi určitými časy.
  Použijte `-frame` k určení snímků, které chcete zachytit pomocí čárky a rozsahů:
@@ -208,7 +208,7 @@ DXCap.exe -v regression_test_12.vsglog -examine present,draw,copy,clear
 ```
 
 ### <a name="convert-a-graphics-log-file-to-pngs"></a>Převod souboru protokolu grafiky na PNGs
- Chcete-li zobrazit nebo analyzovat snímky ze souboru protokolu grafiky, DXCap.exe mohou ukládat zachycené snímky jako soubory obrázků. png (Portable Network Graphics). Pro `-screenshot` výstup zachycených snímků do souborů. png použijte v části režim přehrávání.
+ Chcete-li zobrazit nebo analyzovat snímky ze souboru protokolu grafiky, DXCap.exe mohou ukládat zachycené snímky jako soubory imagí .png (Portable Network Graphics). Pro `-screenshot` výstup zachycených snímků jako souborů .png použijte v části režim přehrávání.
 
 ```cmd
 DXCap.exe -p BasicHLSL11.vsglog -screenshot
@@ -227,7 +227,7 @@ DXCap.exe -p BasicHLSL11.vsglog -screenshot -frame 5, 7-9
 DXCap.exe -p regression_test_12.vsglog -toXML
 ```
 
- Ve výchozím nastavení je výstup XML zapsán do souboru se stejným názvem, jako má protokol grafiky, ale má příponu. XML. V předchozím příkladu bude soubor XML pojmenován **regression_test_12.xml**. Chcete-li zadat jiný název souboru XML, zadejte jej po `-toXML` .
+ Ve výchozím nastavení je výstup XML zapsán do souboru se stejným názvem, jako má protokol grafiky, ale kterému bylo uděleno rozšíření .xml. V předchozím příkladu bude soubor XML pojmenován **regression_test_12.xml**. Chcete-li zadat jiný název souboru XML, zadejte jej po `-toXML` .
 
 ```cmd
 DXCap.exe -p regression_test_12.vsglog -toXML temp.xml

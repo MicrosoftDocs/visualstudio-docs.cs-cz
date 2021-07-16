@@ -1,48 +1,48 @@
 ---
-title: Varianta komprese textury BC | Microsoft Docs
-description: Použijte variantu komprese textury BC, abyste umožnili kompresi bloku (BC) na texturách, které mají formát pixel, který je variantou B8G8R8X8, B8G8R8A8 nebo R8G8B8A8.
+title: Varianta komprese textur BC | Microsoft Docs
+description: Pomocí varianty komprese textury BC povolte kompresi bloků (BC) na texturách ve formátu pixelů, který je variací B8G8R8X8, B8G8R8A8 nebo R8G8B8A8.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 144065c5ee04c75582307440b4cee6242b48bc01
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c1a8699980599a590b6f6e58e14ea504f52db609
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874610"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232749"
 ---
 # <a name="bc-texture-compression-variant"></a>Varianta komprese textur BC
-Povoluje kompresi bloků na texturách, které mají formát pixel, který je variantou B8G8R8X8, B8G8R8A8 nebo R8G8B8A8.
+Umožňuje kompresi bloků u textur ve formátu pixelů, který je variací B8G8R8X8, B8G8R8A8 nebo R8G8B8A8.
 
 ## <a name="interpretation"></a>Interpretace
- Formáty komprese založené na bloku, jako je BC1, BC2 a BC3, zabírají podstatně menší velikost paměti než u nekomprimovaných formátů obrázků, a proto spotřebovávají výrazně menší šířku pásma paměti. V porovnání s nekomprimovaným formátem, který používá 32 bitů na pixel, BC1 (dříve označované jako DXT1) dosahuje 8:1 komprese a BC3 (dříve označované jako DXT5) dosahují 4:1. Rozdíl mezi BC1 a BC3 je, že BC1 nepodporuje alfa kanál, zatímco BC3 podporuje komprimovaný kanál alfa. Navzdory vysokým kompresním poměrům je u typických textur jen menší snížení kvality obrazu. Nicméně zablokovat kompresi určitých druhů textur – například ty, které mají významnou variaci barev v malé oblasti – mohou mít nepřijatelné výsledky.
+ Formáty komprese založené na bloku, jako jsou BC1, BC2 a BC3, zabírají výrazně méně paměti než nekomprimované formáty obrázků, a proto spotřebovávají výrazně menší šířku pásma paměti. V porovnání s nekomprimovaný formát, který používá 32 bitů na pixel, dosahuje BC1 (dříve DXT1) komprese 8:1 a BC3 (dříve DXT5) dosahuje 4:1. Rozdíl mezi BC1 a BC3 spočívá v tom, že BC1 nepodporuje alfa kanál, zatímco BC3 podporuje kanál alfa komprimovaný blokem. I přes vysoké kompresní poměry je u obvyklých textur pouze menší snížení kvality obrázku. Komprese bloků určitých druhů textur – například těch, které mají významnou variaci barev v malé oblasti – ale může mít nepřijatelné výsledky.
 
- Pokud jsou textury vhodné pro kompresi založenou na blocích a nepotřebují dokonalou barevnou věrnost, zvažte použití formátu zkomprimovaného blokem ke snížení využití paměti a využití menší šířky pásma.
+ Pokud jsou textury vhodné pro kompresi založenou na bloku a nepotřebují dokonalou věrnost barev, zvažte použití formátu komprimovaného do bloků, abyste snížili využití paměti a spotřebovávají menší šířku pásma.
 
 ## <a name="remarks"></a>Poznámky
- Rozkomprimujete textury pomocí kompresního formátu založeného na bloku při každém volání `ID3DDevice::CreateTexture2D` , které vytvoří zdrojovou texturu. Konkrétně jsou textury komprimovány v těchto případech:
+ Textury se komprimují pomocí kompresního formátu založeného na bloku při každém volání metody `ID3DDevice::CreateTexture2D` , která vytvoří zdrojovou texturu. Konkrétně jsou textury komprimovány v případě, že:
 
-- `D3D11_TEXTURE2D_DESC`Předaný objekt v tomto `pDesc` popisu popisuje nezměněný prostředek shaderu; to je:
+- Objekt `D3D11_TEXTURE2D_DESC` předaný `pDesc` v popisuje neměnný prostředek shaderu, to znamená:
 
-  - Člen BindFlags má pouze nastavený příznak D3D11_BIND_SHADER_RESOURCE.
+  - Člen BindFlags má nastavený pouze D3D11_BIND_SHADER_RESOURCE příznak.
 
-  - Člen použití je nastaven na hodnotu D3D11_USAGE_DEFAULT nebo D3D11_USAGE_IMMUTABLE.
+  - Člen Využití je nastavený na hodnotu D3D11_USAGE_DEFAULT nebo D3D11_USAGE_IMMUTABLE.
 
-  - Člen CPUAccessFlags je nastaven na hodnotu 0 (bez přístupu k procesoru).
+  - Člen CPUAccessFlags je nastavený na hodnotu 0 (bez přístupu k procesoru).
 
-  - Člen SamplerDesc má svůj člen počtu nastavený na hodnotu 1 (žádný vícenásobný ukázkový anti-aliasing).
+  - Člen SamplerDesc má svého člena Count nastavenou na hodnotu 1 (bez multi sample anti-aliasing (MSAA)).
 
 - Počáteční data jsou k dispozici pro volání `CreateTexture2D` .
 
-  Tady jsou podporované zdrojové formáty a jejich formáty komprimované z bloku.
+  Tady jsou podporované zdrojové formáty a jejich formáty komprimované do bloků.
 
-|Původní formát (od)|Komprimovaný formát (do)|
+|Původní formát (z)|Komprimovaný formát (do)|
 |------------------------------|------------------------------|
 |`DXGI_FORMAT_B8G8R8X8_UNORM`|BC1 (dříve DXT1)|
 |`DXGI_FORMAT_B8G8R8X8_UNORM_SRGB`|BC1|
@@ -54,13 +54,13 @@ Povoluje kompresi bloků na texturách, které mají formát pixel, který je va
 |`DXGI_FORMAT_R8G8B8A8_UNORM_SRGB`|BC3|
 |`DXGI_FORMAT_R8G8B8A8_TYPELESS`|BC3|
 
- Pokud vaše textura má formát, který není uveden, textura se neupraví.
+ Pokud má textura formát, který tu není uvedený, textura se neupraví.
 
 ## <a name="restrictions-and-limitations"></a>Omezení a limity
- Někdy textury, které jsou vytvořeny pomocí variace formátů obrázků B8G8R8A8 nebo R8G8B8A8, ve skutečnosti nepoužívají alfa kanál, ale neexistuje žádný způsob, jak variantu zjistit, zda se používá nebo ne. Aby se zachovala správná velikost pro případ, že se používá alfa kanál, tato varianta tyto formáty vždy zakóduje do méně efektivního formátu BC3. Můžete pomoci Analýza grafických snímků lépe porozumět možnému výkonu vykreslování vaší aplikace pomocí této varianty pomocí variace formátu obrázku B8G8R8X8, pokud nepoužíváte kanál alfa, aby varianta mohla používat efektivnější formát BC1.
+ V některých případech textury vytvořené s variací formátů obrázků B8G8R8A8 nebo R8G8B8A8 ve skutečnosti alfa kanál nevyužít, ale neexistuje způsob, jak variantu použít. Aby byla zachována správnost v případě použití alfa kanálu, varianta vždy tyto formáty zakóduje do méně efektivního formátu BC3. S touto variantou můžete lépe porozumět potenciálnímu výkonu vykreslování vaší aplikace, a Analýza grafických snímků použít variantu formátu obrázku B8G8R8X8, pokud kanál alfa nepou3/4íte, aby varianta mohl využívat efektivnější formát BC1.
 
 ## <a name="example"></a>Příklad
- Tento blok variant – komprimuje textury za běhu před voláním `CreateTexture2D` . Doporučujeme před tímto přístupem k produkčnímu kódu, protože nekomprimované textury spotřebují více místa na disku a protože další krok může významně prodloužit dobu načítání ve vaší aplikaci, protože komprese na základě bloků vyžaduje významné výpočetní prostředky ke kódování. Místo toho doporučujeme komprimovat textury offline pomocí editoru obrázků nebo procesoru obrázků, který je součástí vašeho kanálu sestavení. Tyto přístupy omezují požadavky na místo na disku, eliminují režijní náklady za běhu ve vaší aplikaci a poskytují větší dobu zpracování, abyste mohli zachovat nejlepší kvalitu obrazu.
+ Tento variantní blok komprimuje textury za běhu před voláním `CreateTexture2D` metody . Vzhledem k tomu, že nekomprimované textury spotřebovávají více místa na disku a další krok může výrazně zvýšit dobu načítání v aplikaci, protože komprese založená na bloku vyžaduje ke kódování významné výpočetní prostředky. Místo toho doporučujeme komprimovat textury offline pomocí editoru obrázků nebo procesoru obrázků, který je součástí kanálu buildu. Tyto přístupy snižují požadavky na místo na disku, eliminují režii za běhu ve vaší aplikaci a poskytují větší dobu zpracování, abyste mohli zachovat nejlepší kvalitu image.
 
 ## <a name="see-also"></a>Viz také
-- [Varianta rozměrů pro polovinu/čtvrtletí](half-quarter-texture-dimensions-variant.md)
+- [Varianta polovičních/čtvrtinových dimenzí textury](half-quarter-texture-dimensions-variant.md)

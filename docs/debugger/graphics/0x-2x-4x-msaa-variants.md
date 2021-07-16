@@ -3,19 +3,19 @@ title: 0x-2x-4x MSAA – varianty | Microsoft Docs
 description: Naučte se potlačit nastavení Multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování a prohodit řetězce pomocí variant 0x, 2x nebo 4x MSAA.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 661aa4ade7df8279e31e2291dfbbdfc5f6df6e1c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 15cf6c257b54c8998b32213e7abf021b8b8ef816
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874740"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232632"
 ---
 # <a name="0x2x4x-msaa-variants"></a>Varianty 0x/2x/4x MSAA
 Přepíše nastavení rozhraní MSAA (multi-Sample anti-aliasing) na všech cílech vykreslování a prohozených řetězcích.

@@ -3,19 +3,19 @@ title: Varianta velikosti zobrazení 1x1 | Microsoft Docs
 description: Použijte variantu velikosti zobrazení 1x1 a snižte rozměry zobrazení na všech cílech vykreslování na 1x1 pixelů.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3dbc3247-00f5-4644-8ff9-72e9febcf09a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dc96decdc8e61e1d8c1f5b60195d7644222dbd51
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fb8d00d68a61fd2e97740ee46f92433ea34abb65
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874597"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232840"
 ---
 # <a name="1x1-viewport-size-variant"></a>Varianta velikosti oblasti zobrazení 1x1
 Zmenší rozměry zobrazení na všech cílech vykreslování na 1x1 pixelů.
