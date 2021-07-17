@@ -63,9 +63,9 @@
                   href: install/troubleshooting-network-related-errors-in-visual-studio.md
         - name: Nasazení v podniku
           items:
-            - name: Použití aktualizací správců
+            - name: Instalace aktualizací správce
               href: install/applying-administrator-updates.md
-            - name: Povolení aktualizací správců
+            - name: Povolení aktualizací pro správce
               href: install/enabling-administrator-updates.md
             - name: Automatizace instalace sady Visual Studio souborem odpovědí
               href: install/automated-installation-with-response-file.md
@@ -166,17 +166,17 @@
 - name: Kurzy
   expanded: true
   items:
-    - name: ' >> C++'
+    - name: C++ – >>
       href: /cpp/get-started/tutorial-console-cpp
-    - name: '  >> C#'
+    - name: C#  >>
       href: get-started/csharp/
     - name: Visual Basic  >>
       href: get-started/visual-basic/
     - name: Node.js  >>
       href: javascript/
-    - name: '  >> Pythonu'
+    - name: Python  >>
       href: python/
-    - name: '  >> JAZYKA F #'
+    - name: F#  >>
       href: /dotnet/fsharp/
 - name: Vývoj
   items:
@@ -194,13 +194,13 @@
           href: ide/create-new-project.md
         - name: Práce s řešeními a projekty
           href: ide/creating-solutions-and-projects.md
-        - name: otevření projektu z úložiště v Visual Studio 2017
+        - name: Otevření projektu z Visual Studio 2017
           href: get-started/tutorial-open-project-from-repo-visual-studio-2017.md
-        - name: otevření projektu z úložiště v Visual Studio 2019
+        - name: Otevření projektu z Visual Studio 2019
           href: get-started/tutorial-open-project-from-repo-visual-studio-2019.md
         - name: 'Přenos, migrace a upgrade projektů'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
-        - name: Použití okna Průzkumník řešení Tool
+        - name: Použití okna Průzkumník řešení nástroje
           href: ide/use-solution-explorer.md
         - name: Správa vlastností projektu a řešení
           href: ide/managing-project-and-solution-properties.md
@@ -1112,8 +1112,6 @@
                   href: ide/reference/import-and-export-settings-environment-options-dialog-box.md
                 - name: Mezinárodní nastavení
                   href: ide/reference/international-settings-environment-options-dialog-box.md
-                - name: Klávesnice
-                  href: ide/reference/keyboard-environment-options-dialog-box.md
                 - name: Funkce Preview
                   href: ide/reference/environment-preview-features-options.md
                 - name: Oznámení
@@ -1427,11 +1425,11 @@
 - name: Prostředky
   expanded: true
   items:
-    - name: 'Visual Studio 2022: co je nového'
+    - name: 'Visual Studio 2022: Co je nového'
       href: ide/whats-new-visual-studio-2022.md
-    - name: 'Visual Studio 2019: co je nového'
+    - name: 'Visual Studio 2019: Co je nového'
       href: ide/whats-new-visual-studio-2019.md
-    - name: 'Visual Studio 2017: co je nového'
+    - name: 'Visual Studio 2017: Co je nového'
       href: ide/whats-new-visual-studio-2017.md
     - name: Co je nového v Docs
       href: ide/whats-new-visual-studio-docs.md
@@ -1439,26 +1437,26 @@
       items:
         - name: Frekvence vydávání nových verzí
           href: /visualstudio/productinfo/release-rhythm/
-        - name: poznámky k Visual Studio 2019
+        - name: Visual Studio k verzi 2019
           href: /visualstudio/releases/2019/release-notes/
-        - name: poznámky k Visual Studio 2017
+        - name: Visual Studio k verzi 2017
           href: /visualstudio/releasenotes/vs2017-relnotes/
-        - name: dokumentace k Visual Studio 2015
+        - name: dokumentace Visual Studio 2015
           href: vs-2015-archive.md
         - name: Licenční podmínky
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: Životní cyklus podpory a aktualizace
           href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Zlepšování služeb na základě zkušeností uživatelů
+    - name: Zlepšování zkušeností zákazníků
       items:
-        - name: Informace o programu
+        - name: O programu
           displayName: Customer Experience Improvement Program
           href: ide/visual-studio-experience-improvement-program.md
         - name: Protokoly generované systémem
           href: ide/diagnostic-data-collection.md
-    - name: Propojená prostředí v Visual Studio
+    - name: Připojená prostředí v Visual Studio
       href: ide/reference/connected-experiences.md
-    - name: Řešení chyb integrovaného vývojového prostředí (IDE)
+    - name: Řešení potíží s chybami IDE
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
 - name: Váš názor
   items:
