@@ -58,6 +58,7 @@
       "office15.zip"
     ],
     "dest": "scripting-docs",
-    "markdownEngineName": "markdig"
+    "markdownEngineName": "markdig",
+    "fileMetadata": {}
   }
 }
