@@ -36,7 +36,6 @@
       "feedback_system": "None",
       "feedback_product_url": "https://developercommunity2.visualstudio.com/search?space=8",
       "breadcrumb_path": "/visualstudio/subscriptions/_breadcrumb/toc.json",
-      "bilingual_type": "hover over",
       "extendBreadcrumb": true,
       "manager": "lank",
       "ms.topic": "conceptual",
@@ -44,7 +43,8 @@
       "ms.technology": "vs-subscriptions",
       "searchScope": [
         "VS Subscriptions"
-      ]
+      ],
+      "bilingual_type": "hover over"
     },
     "template": [],
     "dest": "subscriptions",
@@ -55,6 +55,7 @@
           "**/*.yml"
         ]
       }
-    }
+    },
+    "fileMetadata": {}
   }
 }
